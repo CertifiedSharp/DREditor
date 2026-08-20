@@ -1,0 +1,987 @@
+### YamlMime:ManagedReference
+items:
+- uid: CSharpVitamins.ShortGuid
+  commentId: T:CSharpVitamins.ShortGuid
+  id: ShortGuid
+  parent: CSharpVitamins
+  children:
+  - CSharpVitamins.ShortGuid.#ctor(System.Guid)
+  - CSharpVitamins.ShortGuid.#ctor(System.String)
+  - CSharpVitamins.ShortGuid.Decode(System.String)
+  - CSharpVitamins.ShortGuid.Empty
+  - CSharpVitamins.ShortGuid.Encode(System.Guid)
+  - CSharpVitamins.ShortGuid.Encode(System.String)
+  - CSharpVitamins.ShortGuid.Equals(System.Object)
+  - CSharpVitamins.ShortGuid.GetHashCode
+  - CSharpVitamins.ShortGuid.Guid
+  - CSharpVitamins.ShortGuid.NewGuid
+  - CSharpVitamins.ShortGuid.ToString
+  - CSharpVitamins.ShortGuid.Value
+  - CSharpVitamins.ShortGuid.op_Equality(CSharpVitamins.ShortGuid,CSharpVitamins.ShortGuid)
+  - CSharpVitamins.ShortGuid.op_Implicit(CSharpVitamins.ShortGuid)~System.Guid
+  - CSharpVitamins.ShortGuid.op_Implicit(CSharpVitamins.ShortGuid)~System.String
+  - CSharpVitamins.ShortGuid.op_Implicit(System.Guid)~CSharpVitamins.ShortGuid
+  - CSharpVitamins.ShortGuid.op_Implicit(System.String)~CSharpVitamins.ShortGuid
+  - CSharpVitamins.ShortGuid.op_Inequality(CSharpVitamins.ShortGuid,CSharpVitamins.ShortGuid)
+  langs:
+  - csharp
+  - vb
+  name: ShortGuid
+  nameWithType: ShortGuid
+  fullName: CSharpVitamins.ShortGuid
+  type: Struct
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: >-
+    Represents a globally unique identifier (GUID) with a 
+
+    shorter string value. Sguid
+  example: []
+  syntax:
+    content: public struct ShortGuid
+    content.vb: Public Structure ShortGuid
+  inheritedMembers:
+  - System.Object.GetType
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: CSharpVitamins.ShortGuid.Empty
+  commentId: F:CSharpVitamins.ShortGuid.Empty
+  id: Empty
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: ShortGuid.Empty
+  fullName: CSharpVitamins.ShortGuid.Empty
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: >-
+    A read-only instance of the ShortGuid class whose value 
+
+    is guaranteed to be all zeroes.
+  example: []
+  syntax:
+    content: public static readonly ShortGuid Empty
+    return:
+      type: CSharpVitamins.ShortGuid
+    content.vb: Public Shared ReadOnly Empty As ShortGuid
+- uid: CSharpVitamins.ShortGuid.#ctor(System.String)
+  commentId: M:CSharpVitamins.ShortGuid.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: ShortGuid(string)
+  nameWithType: ShortGuid.ShortGuid(string)
+  fullName: CSharpVitamins.ShortGuid.ShortGuid(string)
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Creates a ShortGuid from a base64 encoded string
+  example: []
+  syntax:
+    content: public ShortGuid(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: >-
+        The encoded guid as a 
+                    base64 string
+    content.vb: Public Sub New(value As String)
+  overload: CSharpVitamins.ShortGuid.#ctor*
+  nameWithType.vb: ShortGuid.New(String)
+  fullName.vb: CSharpVitamins.ShortGuid.New(String)
+  name.vb: New(String)
+- uid: CSharpVitamins.ShortGuid.#ctor(System.Guid)
+  commentId: M:CSharpVitamins.ShortGuid.#ctor(System.Guid)
+  id: '#ctor(System.Guid)'
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: ShortGuid(Guid)
+  nameWithType: ShortGuid.ShortGuid(Guid)
+  fullName: CSharpVitamins.ShortGuid.ShortGuid(System.Guid)
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Creates a ShortGuid from a Guid
+  example: []
+  syntax:
+    content: public ShortGuid(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+      description: The Guid to encode
+    content.vb: Public Sub New(guid As Guid)
+  overload: CSharpVitamins.ShortGuid.#ctor*
+  nameWithType.vb: ShortGuid.New(Guid)
+  fullName.vb: CSharpVitamins.ShortGuid.New(System.Guid)
+  name.vb: New(Guid)
+- uid: CSharpVitamins.ShortGuid.ToString
+  commentId: M:CSharpVitamins.ShortGuid.ToString
+  id: ToString
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ShortGuid.ToString()
+  fullName: CSharpVitamins.ShortGuid.ToString()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Returns the base64 encoded guid as a string
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: CSharpVitamins.ShortGuid.ToString*
+- uid: CSharpVitamins.ShortGuid.Equals(System.Object)
+  commentId: M:CSharpVitamins.ShortGuid.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: ShortGuid.Equals(object)
+  fullName: CSharpVitamins.ShortGuid.Equals(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: >-
+    Returns a value indicating whether this instance and a 
+
+    specified Object represent the same type and value.
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: CSharpVitamins.ShortGuid.Equals*
+  nameWithType.vb: ShortGuid.Equals(Object)
+  fullName.vb: CSharpVitamins.ShortGuid.Equals(Object)
+  name.vb: Equals(Object)
+- uid: CSharpVitamins.ShortGuid.GetHashCode
+  commentId: M:CSharpVitamins.ShortGuid.GetHashCode
+  id: GetHashCode
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ShortGuid.GetHashCode()
+  fullName: CSharpVitamins.ShortGuid.GetHashCode()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Returns the HashCode for underlying Guid.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: CSharpVitamins.ShortGuid.GetHashCode*
+- uid: CSharpVitamins.ShortGuid.NewGuid
+  commentId: M:CSharpVitamins.ShortGuid.NewGuid
+  id: NewGuid
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: NewGuid()
+  nameWithType: ShortGuid.NewGuid()
+  fullName: CSharpVitamins.ShortGuid.NewGuid()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Initialises a new instance of the ShortGuid class
+  example: []
+  syntax:
+    content: public static ShortGuid NewGuid()
+    return:
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    content.vb: Public Shared Function NewGuid() As ShortGuid
+  overload: CSharpVitamins.ShortGuid.NewGuid*
+- uid: CSharpVitamins.ShortGuid.Encode(System.String)
+  commentId: M:CSharpVitamins.ShortGuid.Encode(System.String)
+  id: Encode(System.String)
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: Encode(string)
+  nameWithType: ShortGuid.Encode(string)
+  fullName: CSharpVitamins.ShortGuid.Encode(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: >-
+    Creates a new instance of a Guid using the string value, 
+
+    then returns the base64 encoded version of the Guid.
+  example: []
+  syntax:
+    content: public static string Encode(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: An actual Guid string (i.e. not a ShortGuid)
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function Encode(value As String) As String
+  overload: CSharpVitamins.ShortGuid.Encode*
+  nameWithType.vb: ShortGuid.Encode(String)
+  fullName.vb: CSharpVitamins.ShortGuid.Encode(String)
+  name.vb: Encode(String)
+- uid: CSharpVitamins.ShortGuid.Encode(System.Guid)
+  commentId: M:CSharpVitamins.ShortGuid.Encode(System.Guid)
+  id: Encode(System.Guid)
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: Encode(Guid)
+  nameWithType: ShortGuid.Encode(Guid)
+  fullName: CSharpVitamins.ShortGuid.Encode(System.Guid)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: >-
+    Encodes the given Guid as a base64 string that is 22 
+
+    characters long.
+  example: []
+  syntax:
+    content: public static string Encode(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+      description: The Guid to encode
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function Encode(guid As Guid) As String
+  overload: CSharpVitamins.ShortGuid.Encode*
+- uid: CSharpVitamins.ShortGuid.Decode(System.String)
+  commentId: M:CSharpVitamins.ShortGuid.Decode(System.String)
+  id: Decode(System.String)
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: Decode(string)
+  nameWithType: ShortGuid.Decode(string)
+  fullName: CSharpVitamins.ShortGuid.Decode(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Decodes the given base64 string
+  example: []
+  syntax:
+    content: public static Guid Decode(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The base64 encoded string of a Guid
+    return:
+      type: System.Guid
+      description: A new Guid
+    content.vb: Public Shared Function Decode(value As String) As Guid
+  overload: CSharpVitamins.ShortGuid.Decode*
+  nameWithType.vb: ShortGuid.Decode(String)
+  fullName.vb: CSharpVitamins.ShortGuid.Decode(String)
+  name.vb: Decode(String)
+- uid: CSharpVitamins.ShortGuid.op_Equality(CSharpVitamins.ShortGuid,CSharpVitamins.ShortGuid)
+  commentId: M:CSharpVitamins.ShortGuid.op_Equality(CSharpVitamins.ShortGuid,CSharpVitamins.ShortGuid)
+  id: op_Equality(CSharpVitamins.ShortGuid,CSharpVitamins.ShortGuid)
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: operator ==(ShortGuid, ShortGuid)
+  nameWithType: ShortGuid.operator ==(ShortGuid, ShortGuid)
+  fullName: CSharpVitamins.ShortGuid.operator ==(CSharpVitamins.ShortGuid, CSharpVitamins.ShortGuid)
+  type: Operator
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: >-
+    Determines if both ShortGuids have the same underlying 
+
+    Guid value.
+  example: []
+  syntax:
+    content: public static bool operator ==(ShortGuid x, ShortGuid y)
+    parameters:
+    - id: x
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    - id: y
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Operator =(x As ShortGuid, y As ShortGuid) As Boolean
+  overload: CSharpVitamins.ShortGuid.op_Equality*
+  nameWithType.vb: ShortGuid.=(ShortGuid, ShortGuid)
+  fullName.vb: CSharpVitamins.ShortGuid.=(CSharpVitamins.ShortGuid, CSharpVitamins.ShortGuid)
+  name.vb: =(ShortGuid, ShortGuid)
+- uid: CSharpVitamins.ShortGuid.op_Inequality(CSharpVitamins.ShortGuid,CSharpVitamins.ShortGuid)
+  commentId: M:CSharpVitamins.ShortGuid.op_Inequality(CSharpVitamins.ShortGuid,CSharpVitamins.ShortGuid)
+  id: op_Inequality(CSharpVitamins.ShortGuid,CSharpVitamins.ShortGuid)
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: operator !=(ShortGuid, ShortGuid)
+  nameWithType: ShortGuid.operator !=(ShortGuid, ShortGuid)
+  fullName: CSharpVitamins.ShortGuid.operator !=(CSharpVitamins.ShortGuid, CSharpVitamins.ShortGuid)
+  type: Operator
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: >-
+    Determines if both ShortGuids do not have the 
+
+    same underlying Guid value.
+  example: []
+  syntax:
+    content: public static bool operator !=(ShortGuid x, ShortGuid y)
+    parameters:
+    - id: x
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    - id: y
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Operator <>(x As ShortGuid, y As ShortGuid) As Boolean
+  overload: CSharpVitamins.ShortGuid.op_Inequality*
+  nameWithType.vb: ShortGuid.<>(ShortGuid, ShortGuid)
+  fullName.vb: CSharpVitamins.ShortGuid.<>(CSharpVitamins.ShortGuid, CSharpVitamins.ShortGuid)
+  name.vb: <>(ShortGuid, ShortGuid)
+- uid: CSharpVitamins.ShortGuid.op_Implicit(CSharpVitamins.ShortGuid)~System.String
+  commentId: M:CSharpVitamins.ShortGuid.op_Implicit(CSharpVitamins.ShortGuid)~System.String
+  id: op_Implicit(CSharpVitamins.ShortGuid)~System.String
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: implicit operator string(ShortGuid)
+  nameWithType: ShortGuid.implicit operator string(ShortGuid)
+  fullName: CSharpVitamins.ShortGuid.implicit operator string(CSharpVitamins.ShortGuid)
+  type: Operator
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Implicitly converts the ShortGuid to it's string equivilent
+  example: []
+  syntax:
+    content: public static implicit operator string(ShortGuid shortGuid)
+    parameters:
+    - id: shortGuid
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Widening Operator CType(shortGuid As ShortGuid) As String
+  overload: CSharpVitamins.ShortGuid.op_Implicit*
+  nameWithType.vb: ShortGuid.CType(ShortGuid)
+  fullName.vb: CSharpVitamins.ShortGuid.CType(CSharpVitamins.ShortGuid)
+  name.vb: CType(ShortGuid)
+- uid: CSharpVitamins.ShortGuid.op_Implicit(CSharpVitamins.ShortGuid)~System.Guid
+  commentId: M:CSharpVitamins.ShortGuid.op_Implicit(CSharpVitamins.ShortGuid)~System.Guid
+  id: op_Implicit(CSharpVitamins.ShortGuid)~System.Guid
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: implicit operator Guid(ShortGuid)
+  nameWithType: ShortGuid.implicit operator Guid(ShortGuid)
+  fullName: CSharpVitamins.ShortGuid.implicit operator System.Guid(CSharpVitamins.ShortGuid)
+  type: Operator
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Implicitly converts the ShortGuid to it's Guid equivilent
+  example: []
+  syntax:
+    content: public static implicit operator Guid(ShortGuid shortGuid)
+    parameters:
+    - id: shortGuid
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    return:
+      type: System.Guid
+      description: ''
+    content.vb: Public Shared Widening Operator CType(shortGuid As ShortGuid) As Guid
+  overload: CSharpVitamins.ShortGuid.op_Implicit*
+  nameWithType.vb: ShortGuid.CType(ShortGuid)
+  fullName.vb: CSharpVitamins.ShortGuid.CType(CSharpVitamins.ShortGuid)
+  name.vb: CType(ShortGuid)
+- uid: CSharpVitamins.ShortGuid.op_Implicit(System.String)~CSharpVitamins.ShortGuid
+  commentId: M:CSharpVitamins.ShortGuid.op_Implicit(System.String)~CSharpVitamins.ShortGuid
+  id: op_Implicit(System.String)~CSharpVitamins.ShortGuid
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: implicit operator ShortGuid(string)
+  nameWithType: ShortGuid.implicit operator ShortGuid(string)
+  fullName: CSharpVitamins.ShortGuid.implicit operator CSharpVitamins.ShortGuid(string)
+  type: Operator
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Implicitly converts the string to a ShortGuid
+  example: []
+  syntax:
+    content: public static implicit operator ShortGuid(string shortGuid)
+    parameters:
+    - id: shortGuid
+      type: System.String
+      description: ''
+    return:
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    content.vb: Public Shared Widening Operator CType(shortGuid As String) As ShortGuid
+  overload: CSharpVitamins.ShortGuid.op_Implicit*
+  nameWithType.vb: ShortGuid.CType(String)
+  fullName.vb: CSharpVitamins.ShortGuid.CType(String)
+  name.vb: CType(String)
+- uid: CSharpVitamins.ShortGuid.op_Implicit(System.Guid)~CSharpVitamins.ShortGuid
+  commentId: M:CSharpVitamins.ShortGuid.op_Implicit(System.Guid)~CSharpVitamins.ShortGuid
+  id: op_Implicit(System.Guid)~CSharpVitamins.ShortGuid
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: implicit operator ShortGuid(Guid)
+  nameWithType: ShortGuid.implicit operator ShortGuid(Guid)
+  fullName: CSharpVitamins.ShortGuid.implicit operator CSharpVitamins.ShortGuid(System.Guid)
+  type: Operator
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Implicitly converts the Guid to a ShortGuid
+  example: []
+  syntax:
+    content: public static implicit operator ShortGuid(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+      description: ''
+    return:
+      type: CSharpVitamins.ShortGuid
+      description: ''
+    content.vb: Public Shared Widening Operator CType(guid As Guid) As ShortGuid
+  overload: CSharpVitamins.ShortGuid.op_Implicit*
+  nameWithType.vb: ShortGuid.CType(Guid)
+  fullName.vb: CSharpVitamins.ShortGuid.CType(System.Guid)
+  name.vb: CType(Guid)
+- uid: CSharpVitamins.ShortGuid.Guid
+  commentId: P:CSharpVitamins.ShortGuid.Guid
+  id: Guid
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: Guid
+  nameWithType: ShortGuid.Guid
+  fullName: CSharpVitamins.ShortGuid.Guid
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Gets/sets the underlying Guid
+  example: []
+  syntax:
+    content: public Guid Guid { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Guid As Guid
+  overload: CSharpVitamins.ShortGuid.Guid*
+- uid: CSharpVitamins.ShortGuid.Value
+  commentId: P:CSharpVitamins.ShortGuid.Value
+  id: Value
+  parent: CSharpVitamins.ShortGuid
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ShortGuid.Value
+  fullName: CSharpVitamins.ShortGuid.Value
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Utility/ShortGuid.cs
+  assemblies:
+  - DREditor
+  namespace: CSharpVitamins
+  summary: Gets/sets the underlying base64 encoded string
+  example: []
+  syntax:
+    content: public string Value { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Value As String
+  overload: CSharpVitamins.ShortGuid.Value*
+references:
+- uid: CSharpVitamins
+  commentId: N:CSharpVitamins
+  isExternal: true
+  href: CSharpVitamins.html
+  name: CSharpVitamins
+  nameWithType: CSharpVitamins
+  fullName: CSharpVitamins
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CSharpVitamins.ShortGuid
+  commentId: T:CSharpVitamins.ShortGuid
+  parent: CSharpVitamins
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html
+  name: ShortGuid
+  nameWithType: ShortGuid
+  fullName: CSharpVitamins.ShortGuid
+- uid: CSharpVitamins.ShortGuid.#ctor*
+  commentId: Overload:CSharpVitamins.ShortGuid.#ctor
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid__ctor_System_String_
+  name: ShortGuid
+  nameWithType: ShortGuid.ShortGuid
+  fullName: CSharpVitamins.ShortGuid.ShortGuid
+  nameWithType.vb: ShortGuid.New
+  fullName.vb: CSharpVitamins.ShortGuid.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: CSharpVitamins.ShortGuid.ToString*
+  commentId: Overload:CSharpVitamins.ShortGuid.ToString
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_ToString
+  name: ToString
+  nameWithType: ShortGuid.ToString
+  fullName: CSharpVitamins.ShortGuid.ToString
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: CSharpVitamins.ShortGuid.Equals*
+  commentId: Overload:CSharpVitamins.ShortGuid.Equals
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_Equals_System_Object_
+  name: Equals
+  nameWithType: ShortGuid.Equals
+  fullName: CSharpVitamins.ShortGuid.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: CSharpVitamins.ShortGuid.GetHashCode*
+  commentId: Overload:CSharpVitamins.ShortGuid.GetHashCode
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_GetHashCode
+  name: GetHashCode
+  nameWithType: ShortGuid.GetHashCode
+  fullName: CSharpVitamins.ShortGuid.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: CSharpVitamins.ShortGuid.NewGuid*
+  commentId: Overload:CSharpVitamins.ShortGuid.NewGuid
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_NewGuid
+  name: NewGuid
+  nameWithType: ShortGuid.NewGuid
+  fullName: CSharpVitamins.ShortGuid.NewGuid
+- uid: CSharpVitamins.ShortGuid.Encode*
+  commentId: Overload:CSharpVitamins.ShortGuid.Encode
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_Encode_System_String_
+  name: Encode
+  nameWithType: ShortGuid.Encode
+  fullName: CSharpVitamins.ShortGuid.Encode
+- uid: CSharpVitamins.ShortGuid.Decode*
+  commentId: Overload:CSharpVitamins.ShortGuid.Decode
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_Decode_System_String_
+  name: Decode
+  nameWithType: ShortGuid.Decode
+  fullName: CSharpVitamins.ShortGuid.Decode
+- uid: CSharpVitamins.ShortGuid.op_Equality*
+  commentId: Overload:CSharpVitamins.ShortGuid.op_Equality
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_op_Equality_CSharpVitamins_ShortGuid_CSharpVitamins_ShortGuid_
+  name: operator ==
+  nameWithType: ShortGuid.operator ==
+  fullName: CSharpVitamins.ShortGuid.operator ==
+  nameWithType.vb: ShortGuid.=
+  fullName.vb: CSharpVitamins.ShortGuid.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: CSharpVitamins.ShortGuid.op_Equality*
+    name: ==
+    isExternal: true
+    href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_op_Equality_CSharpVitamins_ShortGuid_CSharpVitamins_ShortGuid_
+- uid: CSharpVitamins.ShortGuid.op_Inequality*
+  commentId: Overload:CSharpVitamins.ShortGuid.op_Inequality
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_op_Inequality_CSharpVitamins_ShortGuid_CSharpVitamins_ShortGuid_
+  name: operator !=
+  nameWithType: ShortGuid.operator !=
+  fullName: CSharpVitamins.ShortGuid.operator !=
+  nameWithType.vb: ShortGuid.<>
+  fullName.vb: CSharpVitamins.ShortGuid.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: CSharpVitamins.ShortGuid.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_op_Inequality_CSharpVitamins_ShortGuid_CSharpVitamins_ShortGuid_
+- uid: CSharpVitamins.ShortGuid.op_Implicit*
+  commentId: Overload:CSharpVitamins.ShortGuid.op_Implicit
+  name: implicit operator
+  nameWithType: ShortGuid.implicit operator
+  fullName: CSharpVitamins.ShortGuid.implicit operator
+  nameWithType.vb: ShortGuid.CType
+  fullName.vb: CSharpVitamins.ShortGuid.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: CSharpVitamins.ShortGuid.Guid*
+  commentId: Overload:CSharpVitamins.ShortGuid.Guid
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_Guid
+  name: Guid
+  nameWithType: ShortGuid.Guid
+  fullName: CSharpVitamins.ShortGuid.Guid
+- uid: CSharpVitamins.ShortGuid.Value*
+  commentId: Overload:CSharpVitamins.ShortGuid.Value
+  isExternal: true
+  href: CSharpVitamins.ShortGuid.html#CSharpVitamins_ShortGuid_Value
+  name: Value
+  nameWithType: ShortGuid.Value
+  fullName: CSharpVitamins.ShortGuid.Value

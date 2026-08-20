@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../../Temp/bin/Debug",
+          "files": [
+            "*.dll"
+          ],
+      "exclude": [
+            "FMODUnity.dll",
+            "FMODUnityEditor.dll",
+            "FMODUnityResonance.dll",
+            "FMODUnityResonanceEditor.dll",
+        "EG.dll",
+        "EG.AA.dll",
+        "CharTween.dll",
+        "Assembly-CSharp.dll",
+        "Assembly-CSharp-Editor.dll",
+        "DG.Tweening.dll",
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "DREditor API",
+      "_appTitle": "DREditor API",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}
