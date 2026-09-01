@@ -3,6 +3,7 @@ DREditor may not be the tool for _everyone_. So we've compiled a list of alterna
 If you are making a Fangan Tool and would like to be added this list, please email dreditortool@gmail.com or reach out to sweden_gaming on discord!
 <br/><br/>
 
+## DanganMake
 <img src="https://power2015dev.github.io/Danganmake-Engine/assets/img/logo.png" width="25%" alt="DanganMake logo">
 <br/>
 Danganmake is a free program made to create your own Danganronpa without coding anything! Create your own stories, characters, music, stages, and more!
