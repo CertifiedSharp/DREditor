@@ -3,7 +3,7 @@ Danganronpa Editor is an open-source plugin for Unity to create Danganronpa styl
 
 Used in **Project: Eden's Garden**
 
--- **Use Sweden branch for latest features** --
+-- **Use Alpha branch for latest features** --
 
 
 For getting started, guides, and help by the community join our development discord:
