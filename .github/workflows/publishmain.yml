@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - dev
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -30,19 +31,35 @@ jobs:
           DEV_SHA=$(git rev-parse origin/dev)
 
           git checkout -B publish-tmp "$DEV_SHA"
-          if [ -d "Samples" ]; then
-            git mv Samples Samples~
+
+          ls -la
+
+          echo "Searching for any Samples folder (case-insensitive, repo-wide):"
+          FOUND=$(find . -path ./.git -prune -o -type d -iname "Samples" -print)
+
+          if [ -z "$FOUND" ]; then
+            echo "No Samples folders found."
+          else
+            echo "$FOUND"
+            while IFS= read -r dir; do
+              parent=$(dirname "$dir")
+              target="$parent/Samples~"
+              echo "Renaming $dir -> $target"
+              git mv "$dir" "$target"
+            done <<< "$FOUND"
+            git commit -m "Publish: Rename Samples -> Samples~ from ${DEV_SHA:0:7}"
           fi
+
           git add -A
           NEW_TREE=$(git write-tree)
 
           if git show-ref --quiet refs/remotes/origin/main; then
             MAIN_SHA=$(git rev-parse origin/main)
             NEW_COMMIT=$(git commit-tree "$NEW_TREE" -p "$MAIN_SHA" -p "$DEV_SHA" \
-              -m "Publish: merge dev@${DEV_SHA:0:7} into main (rename Samples -> Samples~)")
+              -m "Publish: merge dev@${DEV_SHA:0:7} into main to rename Samples")
           else
             NEW_COMMIT=$(git commit-tree "$NEW_TREE" -p "$DEV_SHA" \
-              -m "Publish: initial main from dev@${DEV_SHA:0:7} (rename Samples -> Samples~)")
+              -m "Publish: initial main from dev@${DEV_SHA:0:7} to rename Samples")
           fi
 
           git push origin "$NEW_COMMIT":refs/heads/main
