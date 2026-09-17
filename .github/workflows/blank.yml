@@ -1,0 +1,48 @@
+name: Publish to main by renaming Samples -> Samples~
+
+on:
+  push:
+    branches:
+      - dev
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: dev
+
+      - name: Configure git identity
+        run: |
+          git config user.name "release-bot"
+          git config user.email "release-bot@users.noreply.github.com"
+
+      - name: Build renamed tree and merge into main
+        run: |
+          set -e
+          git fetch origin dev
+          DEV_SHA=$(git rev-parse origin/dev)
+
+          git checkout -B publish-tmp "$DEV_SHA"
+          if [ -d "Samples" ]; then
+            git mv Samples Samples~
+          fi
+          git add -A
+          NEW_TREE=$(git write-tree)
+
+          if git show-ref --quiet refs/remotes/origin/main; then
+            MAIN_SHA=$(git rev-parse origin/main)
+            NEW_COMMIT=$(git commit-tree "$NEW_TREE" -p "$MAIN_SHA" -p "$DEV_SHA" \
+              -m "Publish: merge dev@${DEV_SHA:0:7} into main (rename Samples -> Samples~)")
+          else
+            NEW_COMMIT=$(git commit-tree "$NEW_TREE" -p "$DEV_SHA" \
+              -m "Publish: initial main from dev@${DEV_SHA:0:7} (rename Samples -> Samples~)")
+          fi
+
+          git push origin "$NEW_COMMIT":refs/heads/main
