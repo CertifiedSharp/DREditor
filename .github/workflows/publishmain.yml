@@ -1,9 +1,9 @@
-name: Publish to main by renaming Samples -> Samples~
+name: Publish to release by renaming Samples -> Samples~
 
 on:
   push:
     branches:
-      - dev
+      - main
   workflow_dispatch: {}
 
 permissions:
@@ -17,49 +17,71 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: dev
+          ref: main
 
       - name: Configure git identity
         run: |
           git config user.name "release-bot"
           git config user.email "release-bot@users.noreply.github.com"
 
-      - name: Build renamed tree and merge into main
+      - name: Build renamed tree and merge into release
         run: |
           set -e
-          git fetch origin dev
-          DEV_SHA=$(git rev-parse origin/dev)
+          git fetch origin main
+          MAIN_SHA=$(git rev-parse origin/main)
 
-          git checkout -B publish-tmp "$DEV_SHA"
+          git checkout -B publish-tmp "$MAIN_SHA"
 
           ls -la
 
-          echo "Searching for any Samples folder (case-insensitive, repo-wide):"
-          FOUND=$(find . -path ./.git -prune -o -type d -iname "Samples" -print)
+          CHANGED=0
 
-          if [ -z "$FOUND" ]; then
+          echo "Searching for any Samples folder (case-insensitive, repo-wide):"
+          FOUND_DIRS=$(find . -path ./.git -prune -o -type d -iname "Samples" -print)
+
+          if [ -z "$FOUND_DIRS" ]; then
             echo "No Samples folders found."
           else
-            echo "$FOUND"
+            echo "$FOUND_DIRS"
             while IFS= read -r dir; do
               parent=$(dirname "$dir")
               target="$parent/Samples~"
               echo "Renaming $dir -> $target"
               git mv "$dir" "$target"
-            done <<< "$FOUND"
-            git commit -m "Publish: Rename Samples -> Samples~ from ${DEV_SHA:0:7}"
+              CHANGED=1
+            done <<< "$FOUND_DIRS"
+          fi
+
+          echo "Searching for any samples.meta files (case-insensitive, repo-wide):"
+          FOUND_META=$(find . -path ./.git -prune -o -type f -iname "samples.meta" -print)
+
+          if [ -z "$FOUND_META" ]; then
+            echo "No samples.meta files found."
+          else
+            echo "$FOUND_META"
+            while IFS= read -r file; do
+              echo "Removing $file"
+              git rm -f "$file"
+              CHANGED=1
+            done <<< "$FOUND_META"
+          fi
+
+          if [ "$CHANGED" -eq 1 ]; then
+            git commit -m "Publish: Rename Samples -> Samples~ and remove samples.meta from ${MAIN_SHA:0:7}"
+          else
+            echo "No changes to commit."
           fi
 
           git add -A
           NEW_TREE=$(git write-tree)
 
-          if git show-ref --quiet refs/remotes/origin/main; then
-            MAIN_SHA=$(git rev-parse origin/main)
-            NEW_COMMIT=$(git commit-tree "$NEW_TREE" -p "$MAIN_SHA" -p "$DEV_SHA" \
-              -m "Publish: merge dev@${DEV_SHA:0:7} into main to rename Samples")
+          if git show-ref --quiet refs/remotes/origin/release; then
+            RELEASE_SHA=$(git rev-parse origin/release)
+            NEW_COMMIT=$(git commit-tree "$NEW_TREE" -p "$RELEASE_SHA" -p "$MAIN_SHA" \
+              -m "Publish: merge main@${MAIN_SHA:0:7} into release to rename Samples and remove samples.meta")
           else
-            NEW_COMMIT=$(git commit-tree "$NEW_TREE" -p "$DEV_SHA" \
-              -m "Publish: initial main from dev@${DEV_SHA:0:7} to rename Samples")
+            NEW_COMMIT=$(git commit-tree "$NEW_TREE" -p "$MAIN_SHA" \
+              -m "Publish: initial release from main@${MAIN_SHA:0:7} to rename Samples and remove samples.meta")
           fi
 
-          git push origin "$NEW_COMMIT":refs/heads/main
+          git push origin "$NEW_COMMIT":refs/heads/release
