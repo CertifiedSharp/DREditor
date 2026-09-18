@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Alternative Fangan Tools | DREditor API </title>
+      <title>Disabled/Edited NDepend Issues | DREditor API </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Alternative Fangan Tools | DREditor API ">
+      <meta name="title" content="Disabled/Edited NDepend Issues | DREditor API ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/CertifiedSharp/DREditor/blob/Github-Pages/docs/docs/alternativefangantools.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/CertifiedSharp/DREditor/blob/Github-Pages/docs/docs/ndependchanges.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,34 +85,35 @@
         </div>
 
         <article data-uid="">
-<h1 id="alternative-fangan-tools">Alternative Fangan Tools</h1>
+<h1 id="disablededited-ndepend-issues">Disabled/Edited NDepend Issues</h1>
 
-<p>DREditor may not be the tool for <em>everyone</em>. So we've compiled a list of alternative tools to use for your fangans!
-If you are making a Fangan Tool and would like to be added this list, please email dreditortool@gmail.com or reach out to sweden_gaming on discord!
-<br><br></p>
-<h2 id="danganmake">DanganMake</h2>
-<img src="https://power2015dev.github.io/Danganmake-Engine/assets/img/logo.png" width="25%" alt="DanganMake logo">
-<br>
-Danganmake is a free program made to create your own Danganronpa without coding anything! Create your own stories, characters, music, stages, and more!
-<ul>
-<li><a href="https://power2015dev.github.io/Danganmake-Engine/">Website</a></li>
-<li><a href="https://www.youtube.com/@Danganmake">Youtube</a></li>
-<li><a href="https://discord.com/invite/nfuBdQRmH8">Discord</a></li>
-</ul>
-<h2 id="fangan-maker">Fangan Maker</h2>
-<img src="https://files.catbox.moe/woeacd.png" width="10%" alt="FanganMaker Icon">
-  
-<p>Fangan Maker, an app made by <a href="https://x.com/2_empty_">2_Empty</a> to make playable fangans in RPG Maker MV without coding.
-Coming soon. <br></p>
-<ul>
-<li><a href="https://x.com/FanganMaker">Twitter</a></li>
-<li><a href="https://discord.com/invite/jEjMTDBK4Z">Discord</a></li>
-</ul>
+<p>NDepend is an expensive piece of developer software I've used during DREditor development to identify architectural issues within the DREditor codebase,
+however, some of the issues the system noticed came with issues, either by not noticing that a problem was fixed or the rule being enforced to begin with or the restraints being reasonably modified.
+Below details which NDepend rules DREditor Violates and are ignored for it's development, and the reason behind the decision.</p>
+<h2 id="turned-off">Turned OFF</h2>
+<p><strong>ND1001</strong> - API Breaking Changes: Types.<br>
+Reason: This system is in it's infancy, API breaking changes are inevitable.</p>
+<p><strong>ND2102</strong> - Avoid defining multiple types in a source file. <br>
+Reason: The Core DREditor is still unreworked and contains multiple types in a source file.
+So this rule was disabled to focus on more real and pressing issues in the codebase.</p>
+<p><strong>ND1207</strong> - Non-static classes should be instantiated or turned to static.<br>
+Reason: Wouldn't notice that classes WERE being used just through the editor either through runtime or editor runtime.</p>
+<p><strong>ND2802</strong> - Assemblies Referenced in Multiple Versions <br>
+Reason: Got this after upgrading the unity version to unity 6 and I couldn't seem to fix it.</p>
+<p><strong>ND3120</strong> - Software Composition Analysis (SCA) - Security<br>
+Reason: I updated to the correct newtonsoft json package it asked for on ndepend but it wouldn't update properly
+after resolving the issue for some reason.</p>
+<h2 id="edited">EDITED</h2>
+<p><strong>ND1202</strong> - Class Shouldnt Be Too Deep In Inheritance Tree <br>
+Edit: Removed the equals sign from the where baseClasses.Count() &gt;= 4 query. <br>
+Reason: After investigating the wikipidea article it links for &quot;Compisition over Inheritence&quot;
+it literally says that it's not a hard rule or law of coding.
+Plus considering that 4 has been the actual max across 1400+ scripts, I'd say we can let this one slide.</p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CertifiedSharp/DREditor/blob/Github-Pages/docs/docs/alternativefangantools.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CertifiedSharp/DREditor/blob/Github-Pages/docs/docs/ndependchanges.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

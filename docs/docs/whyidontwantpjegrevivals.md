@@ -1,0 +1,14 @@
+[Go back](https://dreditor.net/docs/pjegguidelines.html)
+# Why I don't want a PJEG Revival Fan Project
+To get the biggest reason out of the way, it's to protect my portfolio. Making unity games like this has ended up becoming my full time job thanks to the nice portfolio I've made from PJEG. So if people try displaying work that is not representative of mine, this can easily confuse employers on what work is actually mine and what isn't. 
+Therefore, I think it's fair to simply just ask for the name to change and credit. That way if employers search up "Project: Eden's Garden" I know that other peoples work (while I know not completely) will be drastically less likely to show up. This also gives you guys the ability to make stuff for your portfolio to, that way everyone is happy. I get my portfolio. You get your portfolio, _and_ you get your PJEG revival. 
+
+### A lesser reason: Because most PJEG staff working on revivals could be seen as disrespectful. 
+_Beyond this point is more my opinion and are entirely hypothetical and speculative than anything, I'm not looking to debate anyone on these topics, I'm just giving my 2 cents. Please understand that this project was something we've been working on for **4-6 years**, to people like myself this project is like our baby._
+
+I say most here because personally I think myself and the other devs were in the Fangan community long before PJEG was even a thing, and I was in multiple projects as PJEG lived and died. So it'd make sense to still see me around, but if we apply that to the rest of the team, it's a little different. 
+Imagine this, what if someone else started a revival project, and almost every original PJEG developer joined that project? Sure it'd be nice to get the ball rolling again, but what I think what's flying over peoples heads is _if everyone just joined a revival project, then what was the point of everyone leaving in the first place?_ Wouldn't that kinda look disrespectful considering all that's happened? Therefore, it would look poorly upon staff if we as a group just migrated somewhere else, even if some of us _want_ to keep working on PJEG stuff. So to some of us on the staff team, when we see a PJEG revival, it feels as if _**everyone gets to work on PJEG but us.**_
+Which, you can imagine, does not feel fair, especially to those of us that had literally nothing to do with what happened. Which sucks.
+
+But at the end of the day, making fan projects is what got us here in the first place, which just like part of why I made DREditor, is what I'm fully supportive of. Which is why I hope the current guidelines for PJEG revivals with DRE conveys that to you all. I know that what happened really blows,  ;-;
+but despite all this reasoning, I still really want to work on PJEG, so if you'd like me to work on it with you, feel free to reach out to me.
