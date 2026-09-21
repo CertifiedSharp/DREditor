@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Coding Guidelines | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Coding Guidelines | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/CertifiedSharp/DREditor/blob/Github-Pages/docs/docs/codingguidelines.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="coding-guidelines">Coding Guidelines</h1>
+
+<p><code>ALERT: Note that maintainers reserve the right to deny any request regardless of these rules being followed.</code></p>
+<p><code>ALERT: Please do not submit hundreds of requests for &quot;optimization&quot; reasons unless you can present tangible evidence of an impact the project maintainers deem reasonable. Do not request changes just because it's &quot;technically faster&quot;.</code></p>
+<p><code>REPORT: Requests for changes that involve the unity addressables require maintainer level permission at minimum but will likely be denied. Reason being that it would be asinine to expect non programmers to keep track of and attempt to understand the addressables system.</code></p>
+<p>In order to maintain quality and to enforce easy readability for both programmers and non programmers, all non-third party code files must adhere to these rules. If you attempt to contribute code not following these rules, your request will be denied.</p>
+<ul>
+<li><em>&quot;Programmers should not want to blow their head off reading the code&quot;</em>.</li>
+<li><em>&quot;Someone who does not know how to code, should be able to reasonably piece together what your code does&quot;</em>.</li>
+<li>Code must be in the proper namespace based on where it's intended to be located.</li>
+<li>Everything that can, must have XML summaries. (they don't need to be filled out though, the community can do that if they wish)</li>
+<li>All fields visible in the inspector must have tooltips. (they must match the XML summaries)</li>
+<li>The xml /// <inheritdoc></inheritdoc> tag must be used on things like overridden functions and interface implementations. You do not have to follow this rule if you write out the xml summary yourself instead.</li>
+<li>If your script is a monobehaviour that is not abstract, you must use a ClassHeader attribute and use the nameof keyword to list out what the script inherits.</li>
+<li>Code must do their best to follow <a href="https://www.youtube.com/watch?v=7EmboKQH8lM&amp;list=PLmmYSbUCWJ4x1GO839azG_BBw8rkh-zOj"><strong>Uncle Bobs Guide to Clean Code.</strong></a></li>
+<li>Code must do their best to follow <a href="https://www.ndepend.com/default-rules/NDepend-Rules-Explorer.html"><strong>NDepend Rules.</strong></a> However, there are some <a href="https://dreditor.net/docs/ndependchanges.html"><strong>caveats.</strong></a></li>
+<li>Logs must do their best to follow <a href="https://dreditor.net/docs/logdesignations.html"><strong>Log Designations.</strong></a></li>
+<li>Author your code at the top with //Author: how you want to be credited</li>
+<li>You must separate lines of code by a new line, 2 lines to separate between fields and functions. This is also done to separate functions implemented from interfaces.</li>
+<li>Unless a valid reason is given, all properties and functions should be virtual with protected or public. This is to allow easier extensions.</li>
+</ul>
+<p>An example of a valid script can be seen below.</p>
+<pre><code class="lang-cs">//Author: Benjamin &quot;Sweden&quot; Jillson : Discord: sweden_gaming For Project Eden's Garden
+using DREditor.FreeTimeSurfacing;
+using DREditor.ItemRolling;
+using DREditor.Processables;
+using DREditor.Utility;
+using UnityEngine;
+
+namespace DREditor.GachaSurface
+{
+    /// &lt;summary&gt;
+    /// Summary of the class
+    /// &lt;/summary&gt;
+    [ClassHeader(nameof(SubmittableFTESurfaceCollection) + &quot;, &quot; + nameof(SubmittableFTESurfaceComponent) + &quot;, &quot; + 
+        nameof(FTESurfaceComponent) + &quot;, &quot; + nameof(ISubmittable) + &quot;, &quot; + nameof(IComponentsCache) + &quot;, &quot; + 
+        nameof(IRollerContainer) +
+        &quot;\n\nText Matching XML&quot;)]
+    public class Gacha : SubmittableFTESurfaceCollection, IRollerContainer
+    {
+        /// &lt;summary&gt;
+        /// Summary of what the field is/what it's for etc.
+        /// &lt;/summary&gt;
+        [Header(nameof(Gacha) + &quot; Fields&quot;)]
+        [Divider]
+        [Tooltip(&quot;Text Matching XML&quot;)]
+        [SerializeField] protected ItemRollerBase roller;
+
+
+        /// &lt;inheritdoc/&gt;
+        public virtual IItemRoller GetRoller() =&gt; roller;
+
+
+        /// &lt;inheritdoc/&gt;
+        protected override void OnSubmit()
+        {
+            RollItem();
+
+            ProcessRollResult();
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected virtual void RollItem() =&gt; roller.RollForItem();
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected virtual void ProcessRollResult()
+        {
+            if (RollSucceded())
+                OnRollSucceded();
+            else
+                OnRollFailed();
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        protected virtual bool RollSucceded() =&gt; roller.TryGetRolledObject(out object _);
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected virtual void OnRollSucceded()
+        {
+            this.InvokeThisPlusComponents&lt;IItemRollerResponse&gt;((response) =&gt; response?.InitializeForResponse(roller));
+
+            base.OnSubmit();
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected virtual void OnRollFailed()
+        {
+            AlertRollFailed();
+
+            base.InvokeCompleted();
+        }
+
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        protected virtual void AlertRollFailed() =&gt;
+            UnityEngine.Debug.LogWarning($&quot;ALERT: The item roller failed in rolling an item! Forcing process as Complete.&quot;);
+
+        /// &lt;summary&gt;
+        /// Tells the roller to give the rolled item before completing the gacha process.
+        /// &lt;/summary&gt;
+        protected override void InvokeCompleted()
+        {
+            roller.GivePlayerRolledItem();
+
+            base.InvokeCompleted();
+        }
+    }
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DREditor/blob/Github-Pages/docs/docs/codingguidelines.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
