@@ -30,6 +30,9 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
           echo "$HOME/.upm-cli/bin" >> "$GITHUB_PATH"
 
+      - name: Fix Path
+        run: source ~/.zshrc
+
       - name: Verify UPM CLI
         run: upm --version
 
