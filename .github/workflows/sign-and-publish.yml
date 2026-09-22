@@ -1,0 +1,67 @@
+name: Sign and Publish Unity Packages
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Upgrade npm for trusted publishing support
+        run: npm install -g npm@latest  
+
+      - name: Install Unity Package Manager CLI
+        run: |
+          curl -fsSL https://cdn.packages.unity.com/upm-cli/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.upm-cli/bin" >> "$GITHUB_PATH"
+
+      - name: Verify UPM CLI
+        run: upm --version
+
+      - name: Sign and publish changed packages
+        env:
+          UPM_SERVICE_ACCOUNT_KEY_ID: ${{ secrets.UPM_SERVICE_ACCOUNT_KEY_ID }}
+          UPM_SERVICE_ACCOUNT_KEY_SECRET: ${{ secrets.UPM_SERVICE_ACCOUNT_KEY_SECRET }}
+          UPM_ORG_ID: ${{ secrets.UPM_ORG_ID }}
+        run: |
+          set -euo pipefail
+          mkdir -p signed
+          for dir in Packages/*/; do
+            pkg_dir="${dir%/}"
+            [ -f "$pkg_dir/package.json" ] || continue
+
+            name=$(node -p "require('./$pkg_dir/package.json').name")
+            version=$(node -p "require('./$pkg_dir/package.json').version")
+
+            echo "REPORT: Signing and packaging: $name@$version "
+
+            if npm view "$name@$version" version >/dev/null 2>&1; then
+              echo "REPORT: $name@$version already published, skipping"
+              continue
+            fi
+
+            dest="signed/$name"
+            mkdir -p "$dest"
+            upm pack "$pkg_dir" --organization-id "$UPM_ORG_ID" --destination "$dest"
+
+            tarball=$(ls "$dest"/*.tgz | head -n1)
+            echo "REPORT: Succeded Signing Unity Package tarball: $tarball"
+
+            npm publish "$tarball" --access public
+            echo "REPORT: Succeded publishing $name@$version to the registry."
+          done
