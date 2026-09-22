@@ -27,11 +27,22 @@ jobs:
       - name: Install Unity Package Manager CLI
         run: |
           curl -fsSL https://cdn.packages.unity.com/upm-cli/install.sh | bash
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-          echo "$HOME/.upm-cli/bin" >> "$GITHUB_PATH"
-
-      - name: Fix Path
-        run: source ~/.bashrc
+          
+          source ~/.bashrc 2>/dev/null || true
+          
+          source ~/.profile 2>/dev/null || true
+          
+          UPM_BIN=$(command -v upm || find "$HOME" -maxdepth 5 -name upm -type f 2>/dev/null | head -n1)
+          
+          if [ -z "$UPM_BIN" ]; then
+            echo "ALERT: Could not locate the upm binary after install."
+            find "$HOME" -maxdepth 5 -iname "*upm*" 2>/dev/null
+            exit 1
+          fi
+          
+          echo "REPORT: Found upm at: $UPM_BIN"
+          
+          dirname "$UPM_BIN" >> "$GITHUB_PATH"
 
       - name: Verify UPM CLI
         run: upm --version
@@ -49,6 +60,7 @@ jobs:
             [ -f "$pkg_dir/package.json" ] || continue
 
             name=$(node -p "require('./$pkg_dir/package.json').name")
+            
             version=$(node -p "require('./$pkg_dir/package.json').version")
 
             echo "REPORT: Signing and packaging: $name@$version "
@@ -59,12 +71,16 @@ jobs:
             fi
 
             dest="signed/$name"
+            
             mkdir -p "$dest"
+            
             upm pack "$pkg_dir" --organization-id "$UPM_ORG_ID" --destination "$dest"
 
             tarball=$(ls "$dest"/*.tgz | head -n1)
+            
             echo "REPORT: Succeded Signing Unity Package tarball: $tarball"
 
             npm publish "$tarball" --access public
+            
             echo "REPORT: Succeded publishing $name@$version to the registry."
           done
