@@ -16,7 +16,7 @@ This is just a way to honor the developers that came before us.
 - Void ●▲■
 - Aukuras
 - lordscales91
-- PeeboSenpai
+- Peebo
 - TaurusStudios
 - ShadOblivion
 
