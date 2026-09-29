@@ -1,4 +1,4 @@
-# Introduction# Introduction
+# Introduction
 ## What is DREditor?
 The Death Row Editor, or DREditor. Is a Package library for the Unity game engine to allow users to make death-game style games without requiring the need to code. The engine is styled for visual novels/murder mystery investigation, the gameplay similarly found in games like Danganronpa, The Zero Escape series, Your Turn To Die, Ace Attourney, etc. Normally suited for Danganronpa fan games or "Fangans" since a majority of the gameplay possible with this engine can appear extremely true to the originals.
 
