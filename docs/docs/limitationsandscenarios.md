@@ -2,6 +2,7 @@
 These are things that are never directly mentioned within the engine or a tutorial but is relevant enough information that should be stored somewhere.
 
 ## Limitations
+- Localization is currently not supported for DREditor in regards to multi language support in a single build. There's nothing stopping you from creating a github branch for a specific language, and translate the project to export a different language that way. It is _planned_ to add localization tools to DRE in the future. 
 - One of the least flexible UI's in DREditor is the Main Menu. Because of how the system operates, there are 2 menu groups that must be architecturally structured so that the system doesn't break. You can refer to these from the Main Menu Canvas Template.
   * Start Group: The "Press Any Key" Menu Group. While this specific group isn't _required_ it is _highly_ recommended.
   * Title Group: Must contain New Game, and Load Game. 
