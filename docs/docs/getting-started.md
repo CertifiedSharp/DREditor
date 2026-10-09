@@ -83,8 +83,3 @@ Please be sure to follow each section **_in order._**
 - On the left most side, at the bottom you should see "DREditor" Under "My Registries". Click it.
 - Here you can download whatever DRE packages you need, for now, download the DREditor Core.
 - On start up of the core, The Dependency system should walk you through everything.
-- DREditor/Import/Samples via Search and click import. This should import all the samples for all installed DREditor Packages.
-
-## Updating DREditor
-- At the top go to DREditor/Dependencies/Update Package Wizard 
-- Click Update
