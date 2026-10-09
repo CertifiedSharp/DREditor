@@ -1,5 +1,5 @@
 # Contribution Policy
-```ALERT: The policy is always subject to change by the project maintainer. If you complaints or arguments are brought up about aspects of the policy, we will update the policy to be as precise as possible.```
+```ALERT: The policy is always subject to change by the project maintainer. If your complaints or arguments are brought up about aspects of the policy, we will update the policy to be as precise as possible.```
 
 _"If you're one of those people who say "Because the policy doesn't cover xyz, that means I can/can't do xyz" to which the response will be becoming the reason why a new aspect of the policy is created."_
 
