@@ -30,3 +30,9 @@ As an example, here is one of the tallest and one of the shortest characters in 
 Notice how there's a bunch of empty space around Toshiko? This is so that when we paste both characters on the same canvas, their heights in the game will always be scaled correctly to each other, no matter what. 
 
 Otherwise, character sprites should be good to go!
+### Replacing an Imported Sprite
+- Make sure that the new sprite is named THE EXACT SAME AS THE TEMPORARY ONE.
+- Find the sprite you want to replace in your project window. Right Click: Show in Explorer
+- Click and drag your new sprite into the folder that pops up.
+- Your computer will ask you if you want to replace the existing file, confirm this action.
+- Once it's done replacing, you can close the explorer window and go back into unity, it'll recompile, and once it's done, you should see that your sprite has been updated without breaking anything!
