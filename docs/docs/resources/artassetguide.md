@@ -4,12 +4,21 @@ To start, it is highly recommended that **all assets on your project have their 
 ## CG's and Fullscreen Assets
 CG's and Fullscreen assets should be 1920x1080, or whatever the default resolution you plan to have for your project. It is highly recommended though to stay within the 1920x1080 rule though.
 
-## Character Sprites
-It is HIGHLY recommended that your character sprites be dimensions that are 2048x2048, 1024x1024, 512x512, etc. Note that it must stay consistent throughout ALL characters. Otherwise you will have to do much more extra work. 
+## Videos
+Videos are usually considered a full screen asset. Videos shouldn't usually have sound since they can usually synced by adding the audio to FMOD and just calling in normally through dialogue. 
+Note that any audio that is left on will still play in the game, however because it is not passed through FMOD, the volume of the audio for the video cannot be changed so at the very least make sure it is not too loud.
+It should also be noted that if you are wanting a video that contains transparency, it **must be exported as a .webm**. Additionally .webm also appears to be relatively optimized so webm's are highly suggested.
 
+## Character Sprites
+### Naming Convention
+Sprite files should be named appropriately, the best convention being: CharacterFirstName_SpriteCode .
+Examples of this would look like: Damon_1a or Damon_Happy .
+This convention is followed for two reasons: Ensures no additional work needs to be done when writing dialogue syntax, and so that the auto character importer can properly set the sprite codes for the characters sprite.
+Note that while following this convention is not _required_ , be warned that by not doing so you will have to update each sprite's sprite code manually on the character asset.
+### Dimension Size
+It is HIGHLY recommended that your character sprites be dimensions that are 2048x2048, 1024x1024, 512x512, etc. Note that it must stay consistent throughout ALL characters. Otherwise you will have to do much more extra work. 
 The reason is so characters are scaled relative to each other, so that their heights in-game match their actual heights. 
 **Therefore, it is highly recommended to create a height chart so that artists know how to size the characters proportionately to each other.**
-
 As an example, here is one of the tallest and one of the shortest characters in Project: Eden's Garden, Wolfgang and Toshiko.
 
 

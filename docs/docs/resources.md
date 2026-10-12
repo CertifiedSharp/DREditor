@@ -4,6 +4,7 @@ If you would like to assist with making additional tutorials or resources, pleas
 
 ## Site/DREditor Resources
 - [Art Asset Guide](https://dreditor.net/docs/resources/artassetguide.html)
+- [Jargon](https://dreditor.net/docs/resources/jargon.html)
 - [Dialogue Syntax Tutorial](https://docs.google.com/presentation/d/1-9Y3oyE3u_0qBMvLjLzWnJVaLNkj2BKRIzztkY-RjQo/edit?usp=sharing)
 - [Progression Tutorial](https://docs.google.com/presentation/d/1pGXSTy5VOIc1Y8yYOiZzBl4Yyqk3pfI5srHpyu4BHUQ/edit?usp=sharing)
 
