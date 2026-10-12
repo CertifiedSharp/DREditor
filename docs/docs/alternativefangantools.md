@@ -8,7 +8,7 @@ If you are making a Fangan Tool and would like to be added this list, please ema
 Danganmake is a free program made to create your own Danganronpa without coding anything! Create your own stories, characters, music, stages, and more!
 
 * [Website](https://power2015dev.github.io/Danganmake-Engine/)
-* [Youtube](https://www.youtube.com/@Danganmake)
+* [Youtube](https://www.youtube.com/@Danganmake2)
 * [Discord](https://discord.com/invite/nfuBdQRmH8)
 
 
