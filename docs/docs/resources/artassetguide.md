@@ -37,7 +37,7 @@ Otherwise, character sprites should be good to go!
 - Your computer will ask you if you want to replace the existing file, confirm this action.
 - Once it's done replacing, you can close the explorer window and go back into unity, it'll recompile, and once it's done, you should see that your sprite has been updated without breaking anything!
 
-# Nameplates
+## Nameplates
 If you are using image nameplates for your characters, the dimensions size doesn't matter so long as:
 
 - The dimension size is divisible by 4.
