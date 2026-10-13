@@ -45,3 +45,4 @@ If you are using image nameplates for your characters, the dimensions size doesn
 
 To make this easier on artists, it is suggested to **make the nameplate for the character with the longest name first**.
 Whatever the size to the nearest number divisible by 4 is, _that_ will be the dimension size you use for all nameplates.
+A suggested dimension size would be 592x84.
