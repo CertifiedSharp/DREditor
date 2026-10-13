@@ -36,3 +36,12 @@ Otherwise, character sprites should be good to go!
 - Click and drag your new sprite into the folder that pops up.
 - Your computer will ask you if you want to replace the existing file, confirm this action.
 - Once it's done replacing, you can close the explorer window and go back into unity, it'll recompile, and once it's done, you should see that your sprite has been updated without breaking anything!
+
+# Nameplates
+If you are using image nameplates for your characters, the dimensions size doesn't matter so long as:
+
+- The dimension size is divisible by 4.
+- ALL nameplates dimensions sizes are the same.
+
+To make this easier on artists, it is suggested to **make the nameplate for the character with the longest name first**.
+Whatever the size to the nearest number divisible by 4 is, _that_ will be the dimension size you use for all nameplates.
