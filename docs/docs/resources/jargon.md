@@ -9,3 +9,6 @@ In DREditor, there are many common terms and phrases used to describe specific s
 - **RTMM**: Return to Main Menu.
 - **TPFD**: Two-Point-Five D or (2.5D). Relating to the cardboard cutout style of how rooms can be viewed through DREditor.
 - **FTE**: Free-Time Event, or time during the gameplay process that can be treated as a "Free-Roaming" mode.
+- **Shells (Prefab Context)**: The base prefab that DREditor Template Prefab Variants are extensions of. The shells contain very little like the hollowed out state of whatever process it holds. This tends to be scripts the template uses that we know will never change.
+- **Shells (Room Building Context)**: The state of a room the game loads in the event that no room state could be loaded matching the objective/point in time the player is currently at. "The default state of a room, usually by chapter."
+- **Project Prefab Variant**: The name given to a Unity Prefab Variant of a DREditor Template for your specific project. Project prefabs are commonly suffixed with the acronym of the project.
