@@ -1,5 +1,8 @@
 # Getting Started
 Please be sure to follow each section **_in order._**
+
+## ```ALERT: THE DREDITOR SYSTEM HAS NOT BEEN PUBLICLY RELEASED YET, DO NOT FOLLOW THIS GUIDE UNTIL THIS MESSAGE HAS DISAPPEARED!```
+
 ## Downloading Unity
 - Make a Unity Account: <https://login.unity.com/en/sign-up>|
 - Feel free to continue with Email or whatever process it lists.
