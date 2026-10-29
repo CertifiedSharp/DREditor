@@ -73,6 +73,14 @@ Please stay up to date either in the discord or our social media in the event th
 - Look For: class: AnimationEvent, ns: , asm: DREditor
 - Replace With: class: AnimationEvent, ns: DREditor.Dialogues.Events, asm: DREditor
 
+## Fixing CamToPosition Dialogue Events
+All CamToPosition Events on existing dialogues will be broken, to fix this: 
+
+- Select your dialogue asset with this issue, hit ctrl + s to save. 
+- Go to your Github Desktop/source control. There should be a change for your asset.
+- Select it to view what was changed on the asset and scroll all the way down.
+- You should see "objectName:" some where, whatever the object name is, will be what you have to re-input into the CamToPosition Event.
+
 ## Additional Notices
 ### Notice that Dialogue Events in SaveableStateData Assets may be broken, and while this is highly unlikely, if you find this to be the case please contact Sweden for additional support.
 
