@@ -1,0 +1,834 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+  commentId: T:DREditor.UISpriteHandling.ProtagUISpriteHandler
+  id: ProtagUISpriteHandler
+  parent: DREditor.UISpriteHandling
+  children:
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.#ctor
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.LineProcess(DREditor.Dialogues.Line)
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.isProtagSpeaking
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.loadToLineEndEvent
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.spriteLineEvent
+  langs:
+  - csharp
+  - vb
+  name: ProtagUISpriteHandler
+  nameWithType: ProtagUISpriteHandler
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UISpriteHandling/ProtagUISpriteHandler.cs
+  assemblies:
+  - DREditor.UISpriteHandling
+  namespace: DREditor.UISpriteHandling
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueComponent, ILineProcessor, ILoadToLineEnd\n\n")]
+
+      public class ProtagUISpriteHandler : DialogueComponent, ILineProcessor, ILoadToLineEnd
+    content.vb: >-
+      <ClassHeader("DialogueComponent, ILineProcessor, ILoadToLineEnd" & vbLf & vbLf)>
+
+      Public Class ProtagUISpriteHandler Inherits DialogueComponent Implements ILineProcessor, ILoadToLineEnd
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessor
+  - DREditor.Dialogues.Loading.ILoadToLineEnd
+  extensionMethods:
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.UISpriteHandling.ProtagUISpriteHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueComponent, ILineProcessor, ILoadToLineEnd
+
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.isProtagSpeaking
+  commentId: F:DREditor.UISpriteHandling.ProtagUISpriteHandler.isProtagSpeaking
+  id: isProtagSpeaking
+  parent: DREditor.UISpriteHandling.ProtagUISpriteHandler
+  langs:
+  - csharp
+  - vb
+  name: isProtagSpeaking
+  nameWithType: ProtagUISpriteHandler.isProtagSpeaking
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.isProtagSpeaking
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UISpriteHandling/ProtagUISpriteHandler.cs
+  assemblies:
+  - DREditor.UISpriteHandling
+  namespace: DREditor.UISpriteHandling
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent isProtagSpeaking
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected isProtagSpeaking As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.spriteLineEvent
+  commentId: F:DREditor.UISpriteHandling.ProtagUISpriteHandler.spriteLineEvent
+  id: spriteLineEvent
+  parent: DREditor.UISpriteHandling.ProtagUISpriteHandler
+  langs:
+  - csharp
+  - vb
+  name: spriteLineEvent
+  nameWithType: ProtagUISpriteHandler.spriteLineEvent
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.spriteLineEvent
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UISpriteHandling/ProtagUISpriteHandler.cs
+  assemblies:
+  - DREditor.UISpriteHandling
+  namespace: DREditor.UISpriteHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected string spriteLineEvent
+    return:
+      type: System.String
+    content.vb: Protected spriteLineEvent As String
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.loadToLineEndEvent
+  commentId: F:DREditor.UISpriteHandling.ProtagUISpriteHandler.loadToLineEndEvent
+  id: loadToLineEndEvent
+  parent: DREditor.UISpriteHandling.ProtagUISpriteHandler
+  langs:
+  - csharp
+  - vb
+  name: loadToLineEndEvent
+  nameWithType: ProtagUISpriteHandler.loadToLineEndEvent
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.loadToLineEndEvent
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UISpriteHandling/ProtagUISpriteHandler.cs
+  assemblies:
+  - DREditor.UISpriteHandling
+  namespace: DREditor.UISpriteHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected string loadToLineEndEvent
+    return:
+      type: System.String
+    content.vb: Protected loadToLineEndEvent As String
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.LineProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.UISpriteHandling.ProtagUISpriteHandler.LineProcess(DREditor.Dialogues.Line)
+  id: LineProcess(DREditor.Dialogues.Line)
+  parent: DREditor.UISpriteHandling.ProtagUISpriteHandler
+  langs:
+  - csharp
+  - vb
+  name: LineProcess(Line)
+  nameWithType: ProtagUISpriteHandler.LineProcess(Line)
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.LineProcess(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UISpriteHandling/ProtagUISpriteHandler.cs
+  assemblies:
+  - DREditor.UISpriteHandling
+  namespace: DREditor.UISpriteHandling
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LineProcess(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub LineProcess(currentLine As Line)
+  overload: DREditor.UISpriteHandling.ProtagUISpriteHandler.LineProcess*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  commentId: M:DREditor.UISpriteHandling.ProtagUISpriteHandler.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  id: OnLoadToLineEnd(DREditor.Dialogues.Line)
+  parent: DREditor.UISpriteHandling.ProtagUISpriteHandler
+  langs:
+  - csharp
+  - vb
+  name: OnLoadToLineEnd(Line)
+  nameWithType: ProtagUISpriteHandler.OnLoadToLineEnd(Line)
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UISpriteHandling/ProtagUISpriteHandler.cs
+  assemblies:
+  - DREditor.UISpriteHandling
+  namespace: DREditor.UISpriteHandling
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnLoadToLineEnd(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub OnLoadToLineEnd(currentLine As Line)
+  overload: DREditor.UISpriteHandling.ProtagUISpriteHandler.OnLoadToLineEnd*
+  implements:
+  - DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.#ctor
+  commentId: M:DREditor.UISpriteHandling.ProtagUISpriteHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.UISpriteHandling.ProtagUISpriteHandler
+  langs:
+  - csharp
+  - vb
+  name: ProtagUISpriteHandler()
+  nameWithType: ProtagUISpriteHandler.ProtagUISpriteHandler()
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.ProtagUISpriteHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UISpriteHandling/ProtagUISpriteHandler.cs
+  assemblies:
+  - DREditor.UISpriteHandling
+  namespace: DREditor.UISpriteHandling
+  syntax:
+    content: public ProtagUISpriteHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.UISpriteHandling.ProtagUISpriteHandler.#ctor*
+  nameWithType.vb: ProtagUISpriteHandler.New()
+  fullName.vb: DREditor.UISpriteHandling.ProtagUISpriteHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.UISpriteHandling
+  commentId: N:DREditor.UISpriteHandling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.UISpriteHandling
+  nameWithType: DREditor.UISpriteHandling
+  fullName: DREditor.UISpriteHandling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UISpriteHandling
+    name: UISpriteHandling
+    isExternal: true
+    href: DREditor.UISpriteHandling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UISpriteHandling
+    name: UISpriteHandling
+    isExternal: true
+    href: DREditor.UISpriteHandling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.Dialogues.LineReading.ILineProcessor
+  commentId: T:DREditor.Dialogues.LineReading.ILineProcessor
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  name: ILineProcessor
+  nameWithType: ILineProcessor
+  fullName: DREditor.Dialogues.LineReading.ILineProcessor
+- uid: DREditor.Dialogues.Loading.ILoadToLineEnd
+  commentId: T:DREditor.Dialogues.Loading.ILoadToLineEnd
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEnd.cs
+  name: ILoadToLineEnd
+  nameWithType: ILoadToLineEnd
+  fullName: DREditor.Dialogues.Loading.ILoadToLineEnd
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ProtagUISpriteHandler>(ProtagUISpriteHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<ProtagUISpriteHandler>(ProtagUISpriteHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.UISpriteHandling.ProtagUISpriteHandler>(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ProtagUISpriteHandler)(ProtagUISpriteHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.UISpriteHandling.ProtagUISpriteHandler)(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+  name.vb: GetFieldNames(Of ProtagUISpriteHandler)(ProtagUISpriteHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ProtagUISpriteHandler>(ProtagUISpriteHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<ProtagUISpriteHandler>(ProtagUISpriteHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.UISpriteHandling.ProtagUISpriteHandler>(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ProtagUISpriteHandler)(ProtagUISpriteHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.UISpriteHandling.ProtagUISpriteHandler)(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+  name.vb: GetFieldValues(Of ProtagUISpriteHandler)(ProtagUISpriteHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ProtagUISpriteHandler>(ProtagUISpriteHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<ProtagUISpriteHandler>(ProtagUISpriteHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.UISpriteHandling.ProtagUISpriteHandler>(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ProtagUISpriteHandler)(ProtagUISpriteHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.UISpriteHandling.ProtagUISpriteHandler)(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+  name.vb: DeepCopy(Of ProtagUISpriteHandler)(ProtagUISpriteHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.UISpriteHandling.ProtagUISpriteHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.UISpriteHandling.ProtagUISpriteHandler
+    name: ProtagUISpriteHandler
+    isExternal: true
+    href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Dialogues.Loading
+  commentId: N:DREditor.Dialogues.Loading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Loading
+  nameWithType: DREditor.Dialogues.Loading
+  fullName: DREditor.Dialogues.Loading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.LineProcess*
+  commentId: Overload:DREditor.UISpriteHandling.ProtagUISpriteHandler.LineProcess
+  isExternal: true
+  href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html#DREditor_UISpriteHandling_ProtagUISpriteHandler_LineProcess_DREditor_Dialogues_Line_
+  name: LineProcess
+  nameWithType: ProtagUISpriteHandler.LineProcess
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.LineProcess
+- uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineProcessor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  name: LineProcess(Line)
+  nameWithType: ILineProcessor.LineProcess(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+    name: LineProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+    name: LineProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.OnLoadToLineEnd*
+  commentId: Overload:DREditor.UISpriteHandling.ProtagUISpriteHandler.OnLoadToLineEnd
+  isExternal: true
+  href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html#DREditor_UISpriteHandling_ProtagUISpriteHandler_OnLoadToLineEnd_DREditor_Dialogues_Line_
+  name: OnLoadToLineEnd
+  nameWithType: ProtagUISpriteHandler.OnLoadToLineEnd
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.OnLoadToLineEnd
+- uid: DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.ILoadToLineEnd
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEnd.cs
+  name: OnLoadToLineEnd(Line)
+  nameWithType: ILoadToLineEnd.OnLoadToLineEnd(Line)
+  fullName: DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+    name: OnLoadToLineEnd
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEnd.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+    name: OnLoadToLineEnd
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEnd.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.UISpriteHandling.ProtagUISpriteHandler.#ctor*
+  commentId: Overload:DREditor.UISpriteHandling.ProtagUISpriteHandler.#ctor
+  isExternal: true
+  href: DREditor.UISpriteHandling.ProtagUISpriteHandler.html#DREditor_UISpriteHandling_ProtagUISpriteHandler__ctor
+  name: ProtagUISpriteHandler
+  nameWithType: ProtagUISpriteHandler.ProtagUISpriteHandler
+  fullName: DREditor.UISpriteHandling.ProtagUISpriteHandler.ProtagUISpriteHandler
+  nameWithType.vb: ProtagUISpriteHandler.New
+  fullName.vb: DREditor.UISpriteHandling.ProtagUISpriteHandler.New
+  name.vb: New

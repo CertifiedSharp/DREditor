@@ -1,0 +1,1979 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Talkables.ItemActor
+  commentId: T:DREditor.Talkables.ItemActor
+  id: ItemActor
+  parent: DREditor.Talkables
+  children:
+  - DREditor.Talkables.ItemActor.#ctor
+  - DREditor.Talkables.ItemActor.ClearItemData
+  - DREditor.Talkables.ItemActor.CreateChild(System.String)
+  - DREditor.Talkables.ItemActor.EditorInstantiation
+  - DREditor.Talkables.ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem
+  - DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation(DREditor.LocalDialogues.LocalDialogue,System.Boolean)
+  - DREditor.Talkables.ItemActor.OnDestroy
+  - DREditor.Talkables.ItemActor.SelectObject
+  - DREditor.Talkables.ItemActor.SetSelectability(System.Boolean)
+  - DREditor.Talkables.ItemActor.Start
+  - DREditor.Talkables.ItemActor.addOnLayerIndex
+  - DREditor.Talkables.ItemActor.defaultLayerIndex
+  - DREditor.Talkables.ItemActor.isStaticItem
+  - DREditor.Talkables.ItemActor.itemLayerIndex
+  - DREditor.Talkables.ItemActor.observeAddOnObjects
+  - DREditor.Talkables.ItemActor.toggleBlurEventString
+  langs:
+  - csharp
+  - vb
+  name: ItemActor
+  nameWithType: ItemActor
+  fullName: DREditor.Talkables.ItemActor
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("Talkable\n\n")]
+
+      public class ItemActor : Talkable, INameDisplayable, ISelectableObject, IDialogueProgression, IDialogueHolder, ISkipConversation
+    content.vb: >-
+      <ClassHeader("Talkable" & vbLf & vbLf)>
+
+      Public Class ItemActor Inherits Talkable Implements INameDisplayable, ISelectableObject, IDialogueProgression, IDialogueHolder, ISkipConversation
+  inheritance:
+  - System.Object
+  - DREditor.EventObjects.SelectableObject
+  - DREditor.Talkables.Talkable
+  implements:
+  - DREditor.Processables.INameDisplayable
+  - DREditor.EventObjects.ISelectableObject
+  - DREditor.LocalDialogues.IDialogueProgression
+  - DREditor.Dialogues.IDialogueHolder
+  - DREditor.LocalDialogues.ISkipConversation
+  inheritedMembers:
+  - DREditor.Talkables.Talkable.identified
+  - DREditor.Talkables.Talkable.unidentifiedDisplayName
+  - DREditor.Talkables.Talkable.conversations
+  - DREditor.Talkables.Talkable.SubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+  - DREditor.Talkables.Talkable.UnsubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+  - DREditor.Talkables.Talkable.InvokeConversation(DREditor.Dialogues.Dialogue[])
+  - DREditor.Talkables.Talkable.Register``1({T})
+  - DREditor.Talkables.Talkable.WaitForObjectPooler``1({T})
+  - DREditor.Talkables.Talkable.Unregister``1({T})
+  - DREditor.Talkables.Talkable.CheckIfSaveDialogue
+  - DREditor.Talkables.Talkable.SkipConversation(System.Int32)
+  - DREditor.Talkables.Talkable.AllDialogueTriggered
+  - DREditor.Talkables.Talkable.HasUnTriggeredRequiredFlags
+  - DREditor.Talkables.Talkable.DisplayName
+  - DREditor.Talkables.Talkable.StartConversation
+  - DREditor.EventObjects.SelectableObject.displayName
+  - DREditor.EventObjects.SelectableObject.head
+  - DREditor.EventObjects.SelectableObject.body
+  - DREditor.EventObjects.SelectableObject.selectable
+  - DREditor.EventObjects.SelectableObject.selectableCollider
+  - DREditor.EventObjects.SelectableObject.SetHeadAndBody(UnityEngine.Transform,UnityEngine.Transform)
+  - DREditor.EventObjects.SelectableObject.EnableCollision(System.Boolean)
+  - DREditor.EventObjects.SelectableObject.GetSaveDisplayName
+  extensionMethods:
+  - DREditor.Talkables.ItemActor.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Talkables.ItemActor.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Talkables.ItemActor.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        Talkable
+
+- uid: DREditor.Talkables.ItemActor.toggleBlurEventString
+  commentId: F:DREditor.Talkables.ItemActor.toggleBlurEventString
+  id: toggleBlurEventString
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: toggleBlurEventString
+  nameWithType: ItemActor.toggleBlurEventString
+  fullName: DREditor.Talkables.ItemActor.toggleBlurEventString
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected string toggleBlurEventString
+    return:
+      type: System.String
+    content.vb: Protected toggleBlurEventString As String
+- uid: DREditor.Talkables.ItemActor.isStaticItem
+  commentId: F:DREditor.Talkables.ItemActor.isStaticItem
+  id: isStaticItem
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: isStaticItem
+  nameWithType: ItemActor.isStaticItem
+  fullName: DREditor.Talkables.ItemActor.isStaticItem
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: public bool isStaticItem
+    return:
+      type: System.Boolean
+    content.vb: Public isStaticItem As Boolean
+- uid: DREditor.Talkables.ItemActor.observeAddOnObjects
+  commentId: F:DREditor.Talkables.ItemActor.observeAddOnObjects
+  id: observeAddOnObjects
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: observeAddOnObjects
+  nameWithType: ItemActor.observeAddOnObjects
+  fullName: DREditor.Talkables.ItemActor.observeAddOnObjects
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<GameObject> observeAddOnObjects
+    return:
+      type: System.Collections.Generic.List{UnityEngine.GameObject}
+    content.vb: Protected observeAddOnObjects As List(Of GameObject)
+- uid: DREditor.Talkables.ItemActor.defaultLayerIndex
+  commentId: F:DREditor.Talkables.ItemActor.defaultLayerIndex
+  id: defaultLayerIndex
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: defaultLayerIndex
+  nameWithType: ItemActor.defaultLayerIndex
+  fullName: DREditor.Talkables.ItemActor.defaultLayerIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected int defaultLayerIndex
+    return:
+      type: System.Int32
+    content.vb: Protected defaultLayerIndex As Integer
+- uid: DREditor.Talkables.ItemActor.itemLayerIndex
+  commentId: F:DREditor.Talkables.ItemActor.itemLayerIndex
+  id: itemLayerIndex
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: itemLayerIndex
+  nameWithType: ItemActor.itemLayerIndex
+  fullName: DREditor.Talkables.ItemActor.itemLayerIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected int itemLayerIndex
+    return:
+      type: System.Int32
+    content.vb: Protected itemLayerIndex As Integer
+- uid: DREditor.Talkables.ItemActor.addOnLayerIndex
+  commentId: F:DREditor.Talkables.ItemActor.addOnLayerIndex
+  id: addOnLayerIndex
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: addOnLayerIndex
+  nameWithType: ItemActor.addOnLayerIndex
+  fullName: DREditor.Talkables.ItemActor.addOnLayerIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected int addOnLayerIndex
+    return:
+      type: System.Int32
+    content.vb: Protected addOnLayerIndex As Integer
+- uid: DREditor.Talkables.ItemActor.Start
+  commentId: M:DREditor.Talkables.ItemActor.Start
+  id: Start
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ItemActor.Start()
+  fullName: DREditor.Talkables.ItemActor.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void Start()
+    content.vb: Protected Overrides Sub Start()
+  overridden: DREditor.Talkables.Talkable.Start
+  overload: DREditor.Talkables.ItemActor.Start*
+- uid: DREditor.Talkables.ItemActor.OnDestroy
+  commentId: M:DREditor.Talkables.ItemActor.OnDestroy
+  id: OnDestroy
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: ItemActor.OnDestroy()
+  fullName: DREditor.Talkables.ItemActor.OnDestroy()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void OnDestroy()
+    content.vb: Protected Overrides Sub OnDestroy()
+  overridden: DREditor.Talkables.Talkable.OnDestroy
+  overload: DREditor.Talkables.ItemActor.OnDestroy*
+- uid: DREditor.Talkables.ItemActor.ClearItemData
+  commentId: M:DREditor.Talkables.ItemActor.ClearItemData
+  id: ClearItemData
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: ClearItemData()
+  nameWithType: ItemActor.ClearItemData()
+  fullName: DREditor.Talkables.ItemActor.ClearItemData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ClearItemData()
+    content.vb: Public Overridable Sub ClearItemData()
+  overload: DREditor.Talkables.ItemActor.ClearItemData*
+- uid: DREditor.Talkables.ItemActor.SelectObject
+  commentId: M:DREditor.Talkables.ItemActor.SelectObject
+  id: SelectObject
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: SelectObject()
+  nameWithType: ItemActor.SelectObject()
+  fullName: DREditor.Talkables.ItemActor.SelectObject()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: public override void SelectObject()
+    content.vb: Public Overrides Sub SelectObject()
+  overridden: DREditor.EventObjects.SelectableObject.SelectObject
+  overload: DREditor.Talkables.ItemActor.SelectObject*
+- uid: DREditor.Talkables.ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem
+  commentId: M:DREditor.Talkables.ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem
+  id: EvaluateDialogueWhereTriggeredFlagIsItem
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: EvaluateDialogueWhereTriggeredFlagIsItem()
+  nameWithType: ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem()
+  fullName: DREditor.Talkables.ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: protected virtual Dialogue EvaluateDialogueWhereTriggeredFlagIsItem()
+    return:
+      type: DREditor.Dialogues.Dialogue
+      description: ''
+    content.vb: Protected Overridable Function EvaluateDialogueWhereTriggeredFlagIsItem() As Dialogue
+  overload: DREditor.Talkables.ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem*
+- uid: DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation(DREditor.LocalDialogues.LocalDialogue,System.Boolean)
+  commentId: M:DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation(DREditor.LocalDialogues.LocalDialogue,System.Boolean)
+  id: GetDialogueThroughEvaluation(DREditor.LocalDialogues.LocalDialogue,System.Boolean)
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: GetDialogueThroughEvaluation(LocalDialogue, bool)
+  nameWithType: ItemActor.GetDialogueThroughEvaluation(LocalDialogue, bool)
+  fullName: DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation(DREditor.LocalDialogues.LocalDialogue, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual Dialogue GetDialogueThroughEvaluation(LocalDialogue localDialogue, bool evaluation)
+    parameters:
+    - id: localDialogue
+      type: DREditor.LocalDialogues.LocalDialogue
+      description: ''
+    - id: evaluation
+      type: System.Boolean
+      description: ''
+    return:
+      type: DREditor.Dialogues.Dialogue
+      description: ''
+    content.vb: Protected Overridable Function GetDialogueThroughEvaluation(localDialogue As LocalDialogue, evaluation As Boolean) As Dialogue
+  overload: DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation*
+  nameWithType.vb: ItemActor.GetDialogueThroughEvaluation(LocalDialogue, Boolean)
+  fullName.vb: DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation(DREditor.LocalDialogues.LocalDialogue, Boolean)
+  name.vb: GetDialogueThroughEvaluation(LocalDialogue, Boolean)
+- uid: DREditor.Talkables.ItemActor.SetSelectability(System.Boolean)
+  commentId: M:DREditor.Talkables.ItemActor.SetSelectability(System.Boolean)
+  id: SetSelectability(System.Boolean)
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: SetSelectability(bool)
+  nameWithType: ItemActor.SetSelectability(bool)
+  fullName: DREditor.Talkables.ItemActor.SetSelectability(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: public override void SetSelectability(bool selectable)
+    parameters:
+    - id: selectable
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Sub SetSelectability(selectable As Boolean)
+  overridden: DREditor.EventObjects.SelectableObject.SetSelectability(System.Boolean)
+  overload: DREditor.Talkables.ItemActor.SetSelectability*
+  nameWithType.vb: ItemActor.SetSelectability(Boolean)
+  fullName.vb: DREditor.Talkables.ItemActor.SetSelectability(Boolean)
+  name.vb: SetSelectability(Boolean)
+- uid: DREditor.Talkables.ItemActor.EditorInstantiation
+  commentId: M:DREditor.Talkables.ItemActor.EditorInstantiation
+  id: EditorInstantiation
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: EditorInstantiation()
+  nameWithType: ItemActor.EditorInstantiation()
+  fullName: DREditor.Talkables.ItemActor.EditorInstantiation()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void EditorInstantiation()
+    content.vb: Public Overridable Sub EditorInstantiation()
+  overload: DREditor.Talkables.ItemActor.EditorInstantiation*
+- uid: DREditor.Talkables.ItemActor.CreateChild(System.String)
+  commentId: M:DREditor.Talkables.ItemActor.CreateChild(System.String)
+  id: CreateChild(System.String)
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: CreateChild(string)
+  nameWithType: ItemActor.CreateChild(string)
+  fullName: DREditor.Talkables.ItemActor.CreateChild(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual GameObject CreateChild(string suffix)
+    parameters:
+    - id: suffix
+      type: System.String
+      description: ''
+    return:
+      type: UnityEngine.GameObject
+      description: ''
+    content.vb: Protected Overridable Function CreateChild(suffix As String) As GameObject
+  overload: DREditor.Talkables.ItemActor.CreateChild*
+  nameWithType.vb: ItemActor.CreateChild(String)
+  fullName.vb: DREditor.Talkables.ItemActor.CreateChild(String)
+  name.vb: CreateChild(String)
+- uid: DREditor.Talkables.ItemActor.#ctor
+  commentId: M:DREditor.Talkables.ItemActor.#ctor
+  id: '#ctor'
+  parent: DREditor.Talkables.ItemActor
+  langs:
+  - csharp
+  - vb
+  name: ItemActor()
+  nameWithType: ItemActor.ItemActor()
+  fullName: DREditor.Talkables.ItemActor.ItemActor()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/ItemActor.cs
+  assemblies:
+  - DREditor.Talkables
+  namespace: DREditor.Talkables
+  syntax:
+    content: public ItemActor()
+    content.vb: Public Sub New()
+  overload: DREditor.Talkables.ItemActor.#ctor*
+  nameWithType.vb: ItemActor.New()
+  fullName.vb: DREditor.Talkables.ItemActor.New()
+  name.vb: New()
+references:
+- uid: DREditor.Talkables
+  commentId: N:DREditor.Talkables
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Talkables
+  nameWithType: DREditor.Talkables
+  fullName: DREditor.Talkables
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Talkables
+    name: Talkables
+    isExternal: true
+    href: DREditor.Talkables.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Talkables
+    name: Talkables
+    isExternal: true
+    href: DREditor.Talkables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.EventObjects.SelectableObject
+  commentId: T:DREditor.EventObjects.SelectableObject
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: SelectableObject
+  nameWithType: SelectableObject
+  fullName: DREditor.EventObjects.SelectableObject
+- uid: DREditor.Talkables.Talkable
+  commentId: T:DREditor.Talkables.Talkable
+  parent: DREditor.Talkables
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: Talkable
+  nameWithType: Talkable
+  fullName: DREditor.Talkables.Talkable
+- uid: DREditor.Processables.INameDisplayable
+  commentId: T:DREditor.Processables.INameDisplayable
+  parent: DREditor.Processables
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Processables/INameDisplayable.cs
+  name: INameDisplayable
+  nameWithType: INameDisplayable
+  fullName: DREditor.Processables.INameDisplayable
+- uid: DREditor.EventObjects.ISelectableObject
+  commentId: T:DREditor.EventObjects.ISelectableObject
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISelectableObject.cs
+  name: ISelectableObject
+  nameWithType: ISelectableObject
+  fullName: DREditor.EventObjects.ISelectableObject
+- uid: DREditor.LocalDialogues.IDialogueProgression
+  commentId: T:DREditor.LocalDialogues.IDialogueProgression
+  parent: DREditor.LocalDialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.LocalDialogues/IDialogueProgression.cs
+  name: IDialogueProgression
+  nameWithType: IDialogueProgression
+  fullName: DREditor.LocalDialogues.IDialogueProgression
+- uid: DREditor.Dialogues.IDialogueHolder
+  commentId: T:DREditor.Dialogues.IDialogueHolder
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: IDialogueHolder
+  nameWithType: IDialogueHolder
+  fullName: DREditor.Dialogues.IDialogueHolder
+- uid: DREditor.LocalDialogues.ISkipConversation
+  commentId: T:DREditor.LocalDialogues.ISkipConversation
+  parent: DREditor.LocalDialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.LocalDialogues/ISkipConversation.cs
+  name: ISkipConversation
+  nameWithType: ISkipConversation
+  fullName: DREditor.LocalDialogues.ISkipConversation
+- uid: DREditor.Talkables.Talkable.identified
+  commentId: F:DREditor.Talkables.Talkable.identified
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: identified
+  nameWithType: Talkable.identified
+  fullName: DREditor.Talkables.Talkable.identified
+- uid: DREditor.Talkables.Talkable.unidentifiedDisplayName
+  commentId: F:DREditor.Talkables.Talkable.unidentifiedDisplayName
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: unidentifiedDisplayName
+  nameWithType: Talkable.unidentifiedDisplayName
+  fullName: DREditor.Talkables.Talkable.unidentifiedDisplayName
+- uid: DREditor.Talkables.Talkable.conversations
+  commentId: F:DREditor.Talkables.Talkable.conversations
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: conversations
+  nameWithType: Talkable.conversations
+  fullName: DREditor.Talkables.Talkable.conversations
+- uid: DREditor.Talkables.Talkable.SubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+  commentId: M:DREditor.Talkables.Talkable.SubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: SubscribeToStartConversation(Action<Talkable, Dialogue[]>)
+  nameWithType: Talkable.SubscribeToStartConversation(Action<Talkable, Dialogue[]>)
+  fullName: DREditor.Talkables.Talkable.SubscribeToStartConversation(System.Action<DREditor.Talkables.Talkable, DREditor.Dialogues.Dialogue[]>)
+  nameWithType.vb: Talkable.SubscribeToStartConversation(Action(Of Talkable, Dialogue()))
+  fullName.vb: DREditor.Talkables.Talkable.SubscribeToStartConversation(System.Action(Of DREditor.Talkables.Talkable, DREditor.Dialogues.Dialogue()))
+  name.vb: SubscribeToStartConversation(Action(Of Talkable, Dialogue()))
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.SubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+    name: SubscribeToStartConversation
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: '['
+  - name: ']'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.SubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+    name: SubscribeToStartConversation
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: (
+  - name: )
+  - name: )
+  - name: )
+- uid: DREditor.Talkables.Talkable.UnsubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+  commentId: M:DREditor.Talkables.Talkable.UnsubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: UnsubscribeToStartConversation(Action<Talkable, Dialogue[]>)
+  nameWithType: Talkable.UnsubscribeToStartConversation(Action<Talkable, Dialogue[]>)
+  fullName: DREditor.Talkables.Talkable.UnsubscribeToStartConversation(System.Action<DREditor.Talkables.Talkable, DREditor.Dialogues.Dialogue[]>)
+  nameWithType.vb: Talkable.UnsubscribeToStartConversation(Action(Of Talkable, Dialogue()))
+  fullName.vb: DREditor.Talkables.Talkable.UnsubscribeToStartConversation(System.Action(Of DREditor.Talkables.Talkable, DREditor.Dialogues.Dialogue()))
+  name.vb: UnsubscribeToStartConversation(Action(Of Talkable, Dialogue()))
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.UnsubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+    name: UnsubscribeToStartConversation
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: '['
+  - name: ']'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.UnsubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})
+    name: UnsubscribeToStartConversation
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: (
+  - name: )
+  - name: )
+  - name: )
+- uid: DREditor.Talkables.Talkable.InvokeConversation(DREditor.Dialogues.Dialogue[])
+  commentId: M:DREditor.Talkables.Talkable.InvokeConversation(DREditor.Dialogues.Dialogue[])
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: InvokeConversation(Dialogue[])
+  nameWithType: Talkable.InvokeConversation(Dialogue[])
+  fullName: DREditor.Talkables.Talkable.InvokeConversation(DREditor.Dialogues.Dialogue[])
+  nameWithType.vb: Talkable.InvokeConversation(Dialogue())
+  fullName.vb: DREditor.Talkables.Talkable.InvokeConversation(DREditor.Dialogues.Dialogue())
+  name.vb: InvokeConversation(Dialogue())
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.InvokeConversation(DREditor.Dialogues.Dialogue[])
+    name: InvokeConversation
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.InvokeConversation(DREditor.Dialogues.Dialogue[])
+    name: InvokeConversation
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: (
+  - name: )
+  - name: )
+- uid: DREditor.Talkables.Talkable.Register``1({T})
+  commentId: M:DREditor.Talkables.Talkable.Register``1(``0)
+  parent: DREditor.Talkables.Talkable
+  definition: DREditor.Talkables.Talkable.Register``1(``0)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: Register<T>(T)
+  nameWithType: Talkable.Register<T>(T)
+  fullName: DREditor.Talkables.Talkable.Register<T>(T)
+  nameWithType.vb: Talkable.Register(Of T)(T)
+  fullName.vb: DREditor.Talkables.Talkable.Register(Of T)(T)
+  name.vb: Register(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.Register``1(``0)
+    name: Register
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.Register``1(``0)
+    name: Register
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Talkables.Talkable.WaitForObjectPooler``1({T})
+  commentId: M:DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)
+  parent: DREditor.Talkables.Talkable
+  definition: DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: WaitForObjectPooler<T>(T)
+  nameWithType: Talkable.WaitForObjectPooler<T>(T)
+  fullName: DREditor.Talkables.Talkable.WaitForObjectPooler<T>(T)
+  nameWithType.vb: Talkable.WaitForObjectPooler(Of T)(T)
+  fullName.vb: DREditor.Talkables.Talkable.WaitForObjectPooler(Of T)(T)
+  name.vb: WaitForObjectPooler(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)
+    name: WaitForObjectPooler
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)
+    name: WaitForObjectPooler
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Talkables.Talkable.Unregister``1({T})
+  commentId: M:DREditor.Talkables.Talkable.Unregister``1(``0)
+  parent: DREditor.Talkables.Talkable
+  definition: DREditor.Talkables.Talkable.Unregister``1(``0)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: Unregister<T>(T)
+  nameWithType: Talkable.Unregister<T>(T)
+  fullName: DREditor.Talkables.Talkable.Unregister<T>(T)
+  nameWithType.vb: Talkable.Unregister(Of T)(T)
+  fullName.vb: DREditor.Talkables.Talkable.Unregister(Of T)(T)
+  name.vb: Unregister(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.Unregister``1(``0)
+    name: Unregister
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.Unregister``1(``0)
+    name: Unregister
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Talkables.Talkable.CheckIfSaveDialogue
+  commentId: M:DREditor.Talkables.Talkable.CheckIfSaveDialogue
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: CheckIfSaveDialogue()
+  nameWithType: Talkable.CheckIfSaveDialogue()
+  fullName: DREditor.Talkables.Talkable.CheckIfSaveDialogue()
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+- uid: DREditor.Talkables.Talkable.SkipConversation(System.Int32)
+  commentId: M:DREditor.Talkables.Talkable.SkipConversation(System.Int32)
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: SkipConversation(int)
+  nameWithType: Talkable.SkipConversation(int)
+  fullName: DREditor.Talkables.Talkable.SkipConversation(int)
+  nameWithType.vb: Talkable.SkipConversation(Integer)
+  fullName.vb: DREditor.Talkables.Talkable.SkipConversation(Integer)
+  name.vb: SkipConversation(Integer)
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.SkipConversation(System.Int32)
+    name: SkipConversation
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.SkipConversation(System.Int32)
+    name: SkipConversation
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Talkables.Talkable.AllDialogueTriggered
+  commentId: M:DREditor.Talkables.Talkable.AllDialogueTriggered
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: AllDialogueTriggered()
+  nameWithType: Talkable.AllDialogueTriggered()
+  fullName: DREditor.Talkables.Talkable.AllDialogueTriggered()
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.AllDialogueTriggered
+    name: AllDialogueTriggered
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.AllDialogueTriggered
+    name: AllDialogueTriggered
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+- uid: DREditor.Talkables.Talkable.HasUnTriggeredRequiredFlags
+  commentId: M:DREditor.Talkables.Talkable.HasUnTriggeredRequiredFlags
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: HasUnTriggeredRequiredFlags()
+  nameWithType: Talkable.HasUnTriggeredRequiredFlags()
+  fullName: DREditor.Talkables.Talkable.HasUnTriggeredRequiredFlags()
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.HasUnTriggeredRequiredFlags
+    name: HasUnTriggeredRequiredFlags
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.HasUnTriggeredRequiredFlags
+    name: HasUnTriggeredRequiredFlags
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+- uid: DREditor.Talkables.Talkable.DisplayName
+  commentId: P:DREditor.Talkables.Talkable.DisplayName
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: DisplayName
+  nameWithType: Talkable.DisplayName
+  fullName: DREditor.Talkables.Talkable.DisplayName
+- uid: DREditor.Talkables.Talkable.StartConversation
+  commentId: E:DREditor.Talkables.Talkable.StartConversation
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: StartConversation
+  nameWithType: Talkable.StartConversation
+  fullName: DREditor.Talkables.Talkable.StartConversation
+- uid: DREditor.EventObjects.SelectableObject.displayName
+  commentId: F:DREditor.EventObjects.SelectableObject.displayName
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: displayName
+  nameWithType: SelectableObject.displayName
+  fullName: DREditor.EventObjects.SelectableObject.displayName
+- uid: DREditor.EventObjects.SelectableObject.head
+  commentId: F:DREditor.EventObjects.SelectableObject.head
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: head
+  nameWithType: SelectableObject.head
+  fullName: DREditor.EventObjects.SelectableObject.head
+- uid: DREditor.EventObjects.SelectableObject.body
+  commentId: F:DREditor.EventObjects.SelectableObject.body
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: body
+  nameWithType: SelectableObject.body
+  fullName: DREditor.EventObjects.SelectableObject.body
+- uid: DREditor.EventObjects.SelectableObject.selectable
+  commentId: F:DREditor.EventObjects.SelectableObject.selectable
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: selectable
+  nameWithType: SelectableObject.selectable
+  fullName: DREditor.EventObjects.SelectableObject.selectable
+- uid: DREditor.EventObjects.SelectableObject.selectableCollider
+  commentId: F:DREditor.EventObjects.SelectableObject.selectableCollider
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: selectableCollider
+  nameWithType: SelectableObject.selectableCollider
+  fullName: DREditor.EventObjects.SelectableObject.selectableCollider
+- uid: DREditor.EventObjects.SelectableObject.SetHeadAndBody(UnityEngine.Transform,UnityEngine.Transform)
+  commentId: M:DREditor.EventObjects.SelectableObject.SetHeadAndBody(UnityEngine.Transform,UnityEngine.Transform)
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: SetHeadAndBody(Transform, Transform)
+  nameWithType: SelectableObject.SetHeadAndBody(Transform, Transform)
+  fullName: DREditor.EventObjects.SelectableObject.SetHeadAndBody(UnityEngine.Transform, UnityEngine.Transform)
+  spec.csharp:
+  - uid: DREditor.EventObjects.SelectableObject.SetHeadAndBody(UnityEngine.Transform,UnityEngine.Transform)
+    name: SetHeadAndBody
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SelectableObject.SetHeadAndBody(UnityEngine.Transform,UnityEngine.Transform)
+    name: SetHeadAndBody
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Transform
+    name: Transform
+    isExternal: true
+  - name: )
+- uid: DREditor.EventObjects.SelectableObject.EnableCollision(System.Boolean)
+  commentId: M:DREditor.EventObjects.SelectableObject.EnableCollision(System.Boolean)
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: EnableCollision(bool)
+  nameWithType: SelectableObject.EnableCollision(bool)
+  fullName: DREditor.EventObjects.SelectableObject.EnableCollision(bool)
+  nameWithType.vb: SelectableObject.EnableCollision(Boolean)
+  fullName.vb: DREditor.EventObjects.SelectableObject.EnableCollision(Boolean)
+  name.vb: EnableCollision(Boolean)
+  spec.csharp:
+  - uid: DREditor.EventObjects.SelectableObject.EnableCollision(System.Boolean)
+    name: EnableCollision
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SelectableObject.EnableCollision(System.Boolean)
+    name: EnableCollision
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.EventObjects.SelectableObject.GetSaveDisplayName
+  commentId: M:DREditor.EventObjects.SelectableObject.GetSaveDisplayName
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: GetSaveDisplayName()
+  nameWithType: SelectableObject.GetSaveDisplayName()
+  fullName: DREditor.EventObjects.SelectableObject.GetSaveDisplayName()
+  spec.csharp:
+  - uid: DREditor.EventObjects.SelectableObject.GetSaveDisplayName
+    name: GetSaveDisplayName
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SelectableObject.GetSaveDisplayName
+    name: GetSaveDisplayName
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - name: )
+- uid: DREditor.Talkables.ItemActor.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ItemActor>(ItemActor)
+  nameWithType: ReflectionHelper.GetFieldNames<ItemActor>(ItemActor)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Talkables.ItemActor>(DREditor.Talkables.ItemActor)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ItemActor)(ItemActor)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Talkables.ItemActor)(DREditor.Talkables.ItemActor)
+  name.vb: GetFieldNames(Of ItemActor)(ItemActor)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Talkables.ItemActor)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Talkables.ItemActor)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+- uid: DREditor.Talkables.ItemActor.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ItemActor>(ItemActor)
+  nameWithType: ReflectionHelper.GetFieldValues<ItemActor>(ItemActor)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Talkables.ItemActor>(DREditor.Talkables.ItemActor)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ItemActor)(ItemActor)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Talkables.ItemActor)(DREditor.Talkables.ItemActor)
+  name.vb: GetFieldValues(Of ItemActor)(ItemActor)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Talkables.ItemActor)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Talkables.ItemActor)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+- uid: DREditor.Talkables.ItemActor.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ItemActor>(ItemActor)
+  nameWithType: DeepCopyExtensions.DeepCopy<ItemActor>(ItemActor)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Talkables.ItemActor>(DREditor.Talkables.ItemActor)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ItemActor)(ItemActor)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Talkables.ItemActor)(DREditor.Talkables.ItemActor)
+  name.vb: DeepCopy(Of ItemActor)(ItemActor)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Talkables.ItemActor)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Talkables.ItemActor)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Talkables.ItemActor
+    name: ItemActor
+    isExternal: true
+    href: DREditor.Talkables.ItemActor.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Processables
+  commentId: N:DREditor.Processables
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Processables
+  nameWithType: DREditor.Processables
+  fullName: DREditor.Processables
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Processables
+    name: Processables
+    isExternal: true
+    href: DREditor.Processables.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Processables
+    name: Processables
+    isExternal: true
+    href: DREditor.Processables.html
+- uid: DREditor.LocalDialogues
+  commentId: N:DREditor.LocalDialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.LocalDialogues
+  nameWithType: DREditor.LocalDialogues
+  fullName: DREditor.LocalDialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.LocalDialogues
+    name: LocalDialogues
+    isExternal: true
+    href: DREditor.LocalDialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.LocalDialogues
+    name: LocalDialogues
+    isExternal: true
+    href: DREditor.LocalDialogues.html
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Talkables.Talkable.Register``1(``0)
+  commentId: M:DREditor.Talkables.Talkable.Register``1(``0)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: Register<T>(T)
+  nameWithType: Talkable.Register<T>(T)
+  fullName: DREditor.Talkables.Talkable.Register<T>(T)
+  nameWithType.vb: Talkable.Register(Of T)(T)
+  fullName.vb: DREditor.Talkables.Talkable.Register(Of T)(T)
+  name.vb: Register(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.Register``1(``0)
+    name: Register
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.Register``1(``0)
+    name: Register
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)
+  commentId: M:DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: WaitForObjectPooler<T>(T)
+  nameWithType: Talkable.WaitForObjectPooler<T>(T)
+  fullName: DREditor.Talkables.Talkable.WaitForObjectPooler<T>(T)
+  nameWithType.vb: Talkable.WaitForObjectPooler(Of T)(T)
+  fullName.vb: DREditor.Talkables.Talkable.WaitForObjectPooler(Of T)(T)
+  name.vb: WaitForObjectPooler(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)
+    name: WaitForObjectPooler
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)
+    name: WaitForObjectPooler
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Talkables.Talkable.Unregister``1(``0)
+  commentId: M:DREditor.Talkables.Talkable.Unregister``1(``0)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: Unregister<T>(T)
+  nameWithType: Talkable.Unregister<T>(T)
+  fullName: DREditor.Talkables.Talkable.Unregister<T>(T)
+  nameWithType.vb: Talkable.Unregister(Of T)(T)
+  fullName.vb: DREditor.Talkables.Talkable.Unregister(Of T)(T)
+  name.vb: Unregister(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.Unregister``1(``0)
+    name: Unregister
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.Unregister``1(``0)
+    name: Unregister
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.List{UnityEngine.GameObject}
+  commentId: T:System.Collections.Generic.List{UnityEngine.GameObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<GameObject>
+  nameWithType: List<GameObject>
+  fullName: System.Collections.Generic.List<UnityEngine.GameObject>
+  nameWithType.vb: List(Of GameObject)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.GameObject)
+  name.vb: List(Of GameObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Talkables.Talkable.Start
+  commentId: M:DREditor.Talkables.Talkable.Start
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: Start()
+  nameWithType: Talkable.Start()
+  fullName: DREditor.Talkables.Talkable.Start()
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.Start
+    name: Start
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.Start
+    name: Start
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+- uid: DREditor.Talkables.ItemActor.Start*
+  commentId: Overload:DREditor.Talkables.ItemActor.Start
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_Start
+  name: Start
+  nameWithType: ItemActor.Start
+  fullName: DREditor.Talkables.ItemActor.Start
+- uid: DREditor.Talkables.Talkable.OnDestroy
+  commentId: M:DREditor.Talkables.Talkable.OnDestroy
+  parent: DREditor.Talkables.Talkable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: OnDestroy()
+  nameWithType: Talkable.OnDestroy()
+  fullName: DREditor.Talkables.Talkable.OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Talkables.Talkable.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Talkables.Talkable.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: (
+  - name: )
+- uid: DREditor.Talkables.ItemActor.OnDestroy*
+  commentId: Overload:DREditor.Talkables.ItemActor.OnDestroy
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_OnDestroy
+  name: OnDestroy
+  nameWithType: ItemActor.OnDestroy
+  fullName: DREditor.Talkables.ItemActor.OnDestroy
+- uid: DREditor.Talkables.ItemActor.ClearItemData*
+  commentId: Overload:DREditor.Talkables.ItemActor.ClearItemData
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_ClearItemData
+  name: ClearItemData
+  nameWithType: ItemActor.ClearItemData
+  fullName: DREditor.Talkables.ItemActor.ClearItemData
+- uid: DREditor.EventObjects.SelectableObject.SelectObject
+  commentId: M:DREditor.EventObjects.SelectableObject.SelectObject
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: SelectObject()
+  nameWithType: SelectableObject.SelectObject()
+  fullName: DREditor.EventObjects.SelectableObject.SelectObject()
+  spec.csharp:
+  - uid: DREditor.EventObjects.SelectableObject.SelectObject
+    name: SelectObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SelectableObject.SelectObject
+    name: SelectObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - name: )
+- uid: DREditor.Talkables.ItemActor.SelectObject*
+  commentId: Overload:DREditor.Talkables.ItemActor.SelectObject
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_SelectObject
+  name: SelectObject
+  nameWithType: ItemActor.SelectObject
+  fullName: DREditor.Talkables.ItemActor.SelectObject
+- uid: DREditor.Talkables.ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem*
+  commentId: Overload:DREditor.Talkables.ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_EvaluateDialogueWhereTriggeredFlagIsItem
+  name: EvaluateDialogueWhereTriggeredFlagIsItem
+  nameWithType: ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem
+  fullName: DREditor.Talkables.ItemActor.EvaluateDialogueWhereTriggeredFlagIsItem
+- uid: DREditor.Dialogues.Dialogue
+  commentId: T:DREditor.Dialogues.Dialogue
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  name: Dialogue
+  nameWithType: Dialogue
+  fullName: DREditor.Dialogues.Dialogue
+- uid: DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation*
+  commentId: Overload:DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_GetDialogueThroughEvaluation_DREditor_LocalDialogues_LocalDialogue_System_Boolean_
+  name: GetDialogueThroughEvaluation
+  nameWithType: ItemActor.GetDialogueThroughEvaluation
+  fullName: DREditor.Talkables.ItemActor.GetDialogueThroughEvaluation
+- uid: DREditor.LocalDialogues.LocalDialogue
+  commentId: T:DREditor.LocalDialogues.LocalDialogue
+  parent: DREditor.LocalDialogues
+  isExternal: true
+  href: DREditor.LocalDialogues.LocalDialogue.html
+  name: LocalDialogue
+  nameWithType: LocalDialogue
+  fullName: DREditor.LocalDialogues.LocalDialogue
+- uid: DREditor.EventObjects.SelectableObject.SetSelectability(System.Boolean)
+  commentId: M:DREditor.EventObjects.SelectableObject.SetSelectability(System.Boolean)
+  parent: DREditor.EventObjects.SelectableObject
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: SetSelectability(bool)
+  nameWithType: SelectableObject.SetSelectability(bool)
+  fullName: DREditor.EventObjects.SelectableObject.SetSelectability(bool)
+  nameWithType.vb: SelectableObject.SetSelectability(Boolean)
+  fullName.vb: DREditor.EventObjects.SelectableObject.SetSelectability(Boolean)
+  name.vb: SetSelectability(Boolean)
+  spec.csharp:
+  - uid: DREditor.EventObjects.SelectableObject.SetSelectability(System.Boolean)
+    name: SetSelectability
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SelectableObject.SetSelectability(System.Boolean)
+    name: SetSelectability
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Talkables.ItemActor.SetSelectability*
+  commentId: Overload:DREditor.Talkables.ItemActor.SetSelectability
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_SetSelectability_System_Boolean_
+  name: SetSelectability
+  nameWithType: ItemActor.SetSelectability
+  fullName: DREditor.Talkables.ItemActor.SetSelectability
+- uid: DREditor.Talkables.ItemActor.EditorInstantiation*
+  commentId: Overload:DREditor.Talkables.ItemActor.EditorInstantiation
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_EditorInstantiation
+  name: EditorInstantiation
+  nameWithType: ItemActor.EditorInstantiation
+  fullName: DREditor.Talkables.ItemActor.EditorInstantiation
+- uid: DREditor.Talkables.ItemActor.CreateChild*
+  commentId: Overload:DREditor.Talkables.ItemActor.CreateChild
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor_CreateChild_System_String_
+  name: CreateChild
+  nameWithType: ItemActor.CreateChild
+  fullName: DREditor.Talkables.ItemActor.CreateChild
+- uid: UnityEngine.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: DREditor.Talkables.ItemActor.#ctor*
+  commentId: Overload:DREditor.Talkables.ItemActor.#ctor
+  isExternal: true
+  href: DREditor.Talkables.ItemActor.html#DREditor_Talkables_ItemActor__ctor
+  name: ItemActor
+  nameWithType: ItemActor.ItemActor
+  fullName: DREditor.Talkables.ItemActor.ItemActor
+  nameWithType.vb: ItemActor.New
+  fullName.vb: DREditor.Talkables.ItemActor.New
+  name.vb: New

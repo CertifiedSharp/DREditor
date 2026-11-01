@@ -1,0 +1,1537 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Trials.TrialManager
+  commentId: T:DREditor.Trials.TrialManager
+  id: TrialManager
+  parent: DREditor.Trials
+  children:
+  - DREditor.Trials.TrialManager.#ctor
+  - DREditor.Trials.TrialManager.Awake
+  - DREditor.Trials.TrialManager.BufferFadeOut
+  - DREditor.Trials.TrialManager.CheckIfSaveDialogue
+  - DREditor.Trials.TrialManager.EvaluateLoadIndex
+  - DREditor.Trials.TrialManager.InitializeTrial
+  - DREditor.Trials.TrialManager.LoadTrialAtDialogueIndex
+  - DREditor.Trials.TrialManager.LoadTrialIndex
+  - DREditor.Trials.TrialManager.OnDisable
+  - DREditor.Trials.TrialManager.OnEnable
+  - DREditor.Trials.TrialManager.Start
+  - DREditor.Trials.TrialManager.StartTrialAtChapter
+  - DREditor.Trials.TrialManager.StartTrialAtIndex(System.Int32)
+  - DREditor.Trials.TrialManager.currentChapterIndex
+  - DREditor.Trials.TrialManager.enterFadeOutBuffer
+  - DREditor.Trials.TrialManager.enterFadeOutDuration
+  - DREditor.Trials.TrialManager.inTrialMode
+  - DREditor.Trials.TrialManager.initializeDialogueEvents
+  - DREditor.Trials.TrialManager.isLoadingFile
+  - DREditor.Trials.TrialManager.isLoadingToRoom
+  - DREditor.Trials.TrialManager.loadTrialIndex
+  - DREditor.Trials.TrialManager.onFinishedLoadingRoomNoDialogue
+  - DREditor.Trials.TrialManager.playOnStart
+  - DREditor.Trials.TrialManager.sequencer
+  - DREditor.Trials.TrialManager.trials
+  langs:
+  - csharp
+  - vb
+  name: TrialManager
+  nameWithType: TrialManager
+  fullName: DREditor.Trials.TrialManager
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("TrialManagerBase, IDialogueHolder\n\n")]
+
+      public class TrialManager : TrialManagerBase, IDialogueHolder
+    content.vb: >-
+      <ClassHeader("TrialManagerBase, IDialogueHolder" & vbLf & vbLf)>
+
+      Public Class TrialManager Inherits TrialManagerBase Implements IDialogueHolder
+  inheritance:
+  - System.Object
+  - DREditor.Trials.TrialManagerBase
+  implements:
+  - DREditor.Dialogues.IDialogueHolder
+  extensionMethods:
+  - DREditor.Trials.TrialManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Trials.TrialManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Trials.TrialManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        TrialManagerBase, IDialogueHolder
+
+- uid: DREditor.Trials.TrialManager.isLoadingFile
+  commentId: F:DREditor.Trials.TrialManager.isLoadingFile
+  id: isLoadingFile
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: isLoadingFile
+  nameWithType: TrialManager.isLoadingFile
+  fullName: DREditor.Trials.TrialManager.isLoadingFile
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent isLoadingFile
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected isLoadingFile As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Trials.TrialManager.inTrialMode
+  commentId: F:DREditor.Trials.TrialManager.inTrialMode
+  id: inTrialMode
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: inTrialMode
+  nameWithType: TrialManager.inTrialMode
+  fullName: DREditor.Trials.TrialManager.inTrialMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inTrialMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inTrialMode As BoolWithEvent
+- uid: DREditor.Trials.TrialManager.isLoadingToRoom
+  commentId: F:DREditor.Trials.TrialManager.isLoadingToRoom
+  id: isLoadingToRoom
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: isLoadingToRoom
+  nameWithType: TrialManager.isLoadingToRoom
+  fullName: DREditor.Trials.TrialManager.isLoadingToRoom
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isLoadingToRoom
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isLoadingToRoom As BoolWithEvent
+- uid: DREditor.Trials.TrialManager.currentChapterIndex
+  commentId: F:DREditor.Trials.TrialManager.currentChapterIndex
+  id: currentChapterIndex
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: currentChapterIndex
+  nameWithType: TrialManager.currentChapterIndex
+  fullName: DREditor.Trials.TrialManager.currentChapterIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected IntWithEvent currentChapterIndex
+    return:
+      type: DREditor.EventObjects.IntWithEvent
+    content.vb: Protected currentChapterIndex As IntWithEvent
+- uid: DREditor.Trials.TrialManager.LoadTrialIndex
+  commentId: F:DREditor.Trials.TrialManager.LoadTrialIndex
+  id: LoadTrialIndex
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: LoadTrialIndex
+  nameWithType: TrialManager.LoadTrialIndex
+  fullName: DREditor.Trials.TrialManager.LoadTrialIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected SceneEventListener LoadTrialIndex
+    return:
+      type: DREditor.EventObjects.SceneEventListener
+    content.vb: >-
+      <Divider>
+
+      Protected LoadTrialIndex As SceneEventListener
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Trials.TrialManager.onFinishedLoadingRoomNoDialogue
+  commentId: F:DREditor.Trials.TrialManager.onFinishedLoadingRoomNoDialogue
+  id: onFinishedLoadingRoomNoDialogue
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: onFinishedLoadingRoomNoDialogue
+  nameWithType: TrialManager.onFinishedLoadingRoomNoDialogue
+  fullName: DREditor.Trials.TrialManager.onFinishedLoadingRoomNoDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEventListener onFinishedLoadingRoomNoDialogue
+    return:
+      type: DREditor.EventObjects.SceneEventListener
+    content.vb: Protected onFinishedLoadingRoomNoDialogue As SceneEventListener
+- uid: DREditor.Trials.TrialManager.sequencer
+  commentId: F:DREditor.Trials.TrialManager.sequencer
+  id: sequencer
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: sequencer
+  nameWithType: TrialManager.sequencer
+  fullName: DREditor.Trials.TrialManager.sequencer
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected TrialSequencer sequencer
+    return:
+      type: DREditor.Trials.TrialSequencer
+    content.vb: Protected sequencer As TrialSequencer
+- uid: DREditor.Trials.TrialManager.playOnStart
+  commentId: F:DREditor.Trials.TrialManager.playOnStart
+  id: playOnStart
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: playOnStart
+  nameWithType: TrialManager.playOnStart
+  fullName: DREditor.Trials.TrialManager.playOnStart
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected bool playOnStart
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Divider>
+
+      Protected playOnStart As Boolean
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Trials.TrialManager.trials
+  commentId: F:DREditor.Trials.TrialManager.trials
+  id: trials
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: trials
+  nameWithType: TrialManager.trials
+  fullName: DREditor.Trials.TrialManager.trials
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<TrialBuilder> trials
+    return:
+      type: System.Collections.Generic.List{DREditor.Trials.TrialBuilder}
+    content.vb: Protected trials As List(Of TrialBuilder)
+- uid: DREditor.Trials.TrialManager.enterFadeOutBuffer
+  commentId: F:DREditor.Trials.TrialManager.enterFadeOutBuffer
+  id: enterFadeOutBuffer
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: enterFadeOutBuffer
+  nameWithType: TrialManager.enterFadeOutBuffer
+  fullName: DREditor.Trials.TrialManager.enterFadeOutBuffer
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected float enterFadeOutBuffer
+    return:
+      type: System.Single
+    content.vb: >-
+      <Divider>
+
+      Protected enterFadeOutBuffer As Single
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Trials.TrialManager.enterFadeOutDuration
+  commentId: F:DREditor.Trials.TrialManager.enterFadeOutDuration
+  id: enterFadeOutDuration
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: enterFadeOutDuration
+  nameWithType: TrialManager.enterFadeOutDuration
+  fullName: DREditor.Trials.TrialManager.enterFadeOutDuration
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected float enterFadeOutDuration
+    return:
+      type: System.Single
+    content.vb: Protected enterFadeOutDuration As Single
+- uid: DREditor.Trials.TrialManager.initializeDialogueEvents
+  commentId: F:DREditor.Trials.TrialManager.initializeDialogueEvents
+  id: initializeDialogueEvents
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: initializeDialogueEvents
+  nameWithType: TrialManager.initializeDialogueEvents
+  fullName: DREditor.Trials.TrialManager.initializeDialogueEvents
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<string> initializeDialogueEvents
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Protected initializeDialogueEvents As List(Of String)
+- uid: DREditor.Trials.TrialManager.loadTrialIndex
+  commentId: F:DREditor.Trials.TrialManager.loadTrialIndex
+  id: loadTrialIndex
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: loadTrialIndex
+  nameWithType: TrialManager.loadTrialIndex
+  fullName: DREditor.Trials.TrialManager.loadTrialIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected int loadTrialIndex
+    return:
+      type: System.Int32
+    content.vb: Protected loadTrialIndex As Integer
+- uid: DREditor.Trials.TrialManager.Awake
+  commentId: M:DREditor.Trials.TrialManager.Awake
+  id: Awake
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: TrialManager.Awake()
+  fullName: DREditor.Trials.TrialManager.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: DREditor.Trials.TrialManager.Awake*
+- uid: DREditor.Trials.TrialManager.OnEnable
+  commentId: M:DREditor.Trials.TrialManager.OnEnable
+  id: OnEnable
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: TrialManager.OnEnable()
+  fullName: DREditor.Trials.TrialManager.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.Trials.TrialManager.OnEnable*
+- uid: DREditor.Trials.TrialManager.OnDisable
+  commentId: M:DREditor.Trials.TrialManager.OnDisable
+  id: OnDisable
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: TrialManager.OnDisable()
+  fullName: DREditor.Trials.TrialManager.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.Trials.TrialManager.OnDisable*
+- uid: DREditor.Trials.TrialManager.Start
+  commentId: M:DREditor.Trials.TrialManager.Start
+  id: Start
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: TrialManager.Start()
+  fullName: DREditor.Trials.TrialManager.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.Trials.TrialManager.Start*
+- uid: DREditor.Trials.TrialManager.InitializeTrial
+  commentId: M:DREditor.Trials.TrialManager.InitializeTrial
+  id: InitializeTrial
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: InitializeTrial()
+  nameWithType: TrialManager.InitializeTrial()
+  fullName: DREditor.Trials.TrialManager.InitializeTrial()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializeTrial()
+    content.vb: Protected Overridable Sub InitializeTrial()
+  overload: DREditor.Trials.TrialManager.InitializeTrial*
+- uid: DREditor.Trials.TrialManager.BufferFadeOut
+  commentId: M:DREditor.Trials.TrialManager.BufferFadeOut
+  id: BufferFadeOut
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: BufferFadeOut()
+  nameWithType: TrialManager.BufferFadeOut()
+  fullName: DREditor.Trials.TrialManager.BufferFadeOut()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator BufferFadeOut()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function BufferFadeOut() As IEnumerator
+  overload: DREditor.Trials.TrialManager.BufferFadeOut*
+- uid: DREditor.Trials.TrialManager.LoadTrialAtDialogueIndex
+  commentId: M:DREditor.Trials.TrialManager.LoadTrialAtDialogueIndex
+  id: LoadTrialAtDialogueIndex
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: LoadTrialAtDialogueIndex()
+  nameWithType: TrialManager.LoadTrialAtDialogueIndex()
+  fullName: DREditor.Trials.TrialManager.LoadTrialAtDialogueIndex()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void LoadTrialAtDialogueIndex()
+    content.vb: Protected Overrides Sub LoadTrialAtDialogueIndex()
+  overridden: DREditor.Trials.TrialManagerBase.LoadTrialAtDialogueIndex
+  overload: DREditor.Trials.TrialManager.LoadTrialAtDialogueIndex*
+- uid: DREditor.Trials.TrialManager.EvaluateLoadIndex
+  commentId: M:DREditor.Trials.TrialManager.EvaluateLoadIndex
+  id: EvaluateLoadIndex
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: EvaluateLoadIndex()
+  nameWithType: TrialManager.EvaluateLoadIndex()
+  fullName: DREditor.Trials.TrialManager.EvaluateLoadIndex()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual int EvaluateLoadIndex()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Protected Overridable Function EvaluateLoadIndex() As Integer
+  overload: DREditor.Trials.TrialManager.EvaluateLoadIndex*
+- uid: DREditor.Trials.TrialManager.StartTrialAtIndex(System.Int32)
+  commentId: M:DREditor.Trials.TrialManager.StartTrialAtIndex(System.Int32)
+  id: StartTrialAtIndex(System.Int32)
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: StartTrialAtIndex(int)
+  nameWithType: TrialManager.StartTrialAtIndex(int)
+  fullName: DREditor.Trials.TrialManager.StartTrialAtIndex(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: public override void StartTrialAtIndex(int startIndex)
+    parameters:
+    - id: startIndex
+      type: System.Int32
+      description: ''
+    content.vb: Public Overrides Sub StartTrialAtIndex(startIndex As Integer)
+  overridden: DREditor.Trials.TrialManagerBase.StartTrialAtIndex(System.Int32)
+  overload: DREditor.Trials.TrialManager.StartTrialAtIndex*
+  nameWithType.vb: TrialManager.StartTrialAtIndex(Integer)
+  fullName.vb: DREditor.Trials.TrialManager.StartTrialAtIndex(Integer)
+  name.vb: StartTrialAtIndex(Integer)
+- uid: DREditor.Trials.TrialManager.StartTrialAtChapter
+  commentId: M:DREditor.Trials.TrialManager.StartTrialAtChapter
+  id: StartTrialAtChapter
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: StartTrialAtChapter()
+  nameWithType: TrialManager.StartTrialAtChapter()
+  fullName: DREditor.Trials.TrialManager.StartTrialAtChapter()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: public override void StartTrialAtChapter()
+    content.vb: Public Overrides Sub StartTrialAtChapter()
+  overridden: DREditor.Trials.TrialManagerBase.StartTrialAtChapter
+  overload: DREditor.Trials.TrialManager.StartTrialAtChapter*
+- uid: DREditor.Trials.TrialManager.CheckIfSaveDialogue
+  commentId: M:DREditor.Trials.TrialManager.CheckIfSaveDialogue
+  id: CheckIfSaveDialogue
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: CheckIfSaveDialogue()
+  nameWithType: TrialManager.CheckIfSaveDialogue()
+  fullName: DREditor.Trials.TrialManager.CheckIfSaveDialogue()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool CheckIfSaveDialogue()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function CheckIfSaveDialogue() As Boolean
+  overload: DREditor.Trials.TrialManager.CheckIfSaveDialogue*
+  implements:
+  - DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+- uid: DREditor.Trials.TrialManager.#ctor
+  commentId: M:DREditor.Trials.TrialManager.#ctor
+  id: '#ctor'
+  parent: DREditor.Trials.TrialManager
+  langs:
+  - csharp
+  - vb
+  name: TrialManager()
+  nameWithType: TrialManager.TrialManager()
+  fullName: DREditor.Trials.TrialManager.TrialManager()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Trials/TrialManager.cs
+  assemblies:
+  - DREditor.Trials
+  namespace: DREditor.Trials
+  syntax:
+    content: public TrialManager()
+    content.vb: Public Sub New()
+  overload: DREditor.Trials.TrialManager.#ctor*
+  nameWithType.vb: TrialManager.New()
+  fullName.vb: DREditor.Trials.TrialManager.New()
+  name.vb: New()
+references:
+- uid: DREditor.Trials
+  commentId: N:DREditor.Trials
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Trials
+  nameWithType: DREditor.Trials
+  fullName: DREditor.Trials
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Trials
+    name: Trials
+    isExternal: true
+    href: DREditor.Trials.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Trials
+    name: Trials
+    isExternal: true
+    href: DREditor.Trials.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Trials.TrialManagerBase
+  commentId: T:DREditor.Trials.TrialManagerBase
+  parent: DREditor.Trials
+  isExternal: true
+  href: DREditor.Trials.TrialManagerBase.html
+  name: TrialManagerBase
+  nameWithType: TrialManagerBase
+  fullName: DREditor.Trials.TrialManagerBase
+- uid: DREditor.Dialogues.IDialogueHolder
+  commentId: T:DREditor.Dialogues.IDialogueHolder
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: IDialogueHolder
+  nameWithType: IDialogueHolder
+  fullName: DREditor.Dialogues.IDialogueHolder
+- uid: DREditor.Trials.TrialManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<TrialManager>(TrialManager)
+  nameWithType: ReflectionHelper.GetFieldNames<TrialManager>(TrialManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Trials.TrialManager>(DREditor.Trials.TrialManager)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of TrialManager)(TrialManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Trials.TrialManager)(DREditor.Trials.TrialManager)
+  name.vb: GetFieldNames(Of TrialManager)(TrialManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Trials.TrialManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Trials.TrialManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+- uid: DREditor.Trials.TrialManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<TrialManager>(TrialManager)
+  nameWithType: ReflectionHelper.GetFieldValues<TrialManager>(TrialManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Trials.TrialManager>(DREditor.Trials.TrialManager)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of TrialManager)(TrialManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Trials.TrialManager)(DREditor.Trials.TrialManager)
+  name.vb: GetFieldValues(Of TrialManager)(TrialManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Trials.TrialManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Trials.TrialManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+- uid: DREditor.Trials.TrialManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<TrialManager>(TrialManager)
+  nameWithType: DeepCopyExtensions.DeepCopy<TrialManager>(TrialManager)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Trials.TrialManager>(DREditor.Trials.TrialManager)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of TrialManager)(TrialManager)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Trials.TrialManager)(DREditor.Trials.TrialManager)
+  name.vb: DeepCopy(Of TrialManager)(TrialManager)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Trials.TrialManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Trials.TrialManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Trials.TrialManager
+    name: TrialManager
+    isExternal: true
+    href: DREditor.Trials.TrialManager.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.IntWithEvent
+  commentId: T:DREditor.EventObjects.IntWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/IntWithEvent.cs
+  name: IntWithEvent
+  nameWithType: IntWithEvent
+  fullName: DREditor.EventObjects.IntWithEvent
+- uid: DREditor.EventObjects.SceneEventListener
+  commentId: T:DREditor.EventObjects.SceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: SceneEventListener
+  nameWithType: SceneEventListener
+  fullName: DREditor.EventObjects.SceneEventListener
+- uid: DREditor.Trials.TrialSequencer
+  commentId: T:DREditor.Trials.TrialSequencer
+  parent: DREditor.Trials
+  isExternal: true
+  href: DREditor.Trials.TrialSequencer.html
+  name: TrialSequencer
+  nameWithType: TrialSequencer
+  fullName: DREditor.Trials.TrialSequencer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.List{DREditor.Trials.TrialBuilder}
+  commentId: T:System.Collections.Generic.List{DREditor.Trials.TrialBuilder}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<TrialBuilder>
+  nameWithType: List<TrialBuilder>
+  fullName: System.Collections.Generic.List<DREditor.Trials.TrialBuilder>
+  nameWithType.vb: List(Of TrialBuilder)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Trials.TrialBuilder)
+  name.vb: List(Of TrialBuilder)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Trials.TrialBuilder
+    name: TrialBuilder
+    isExternal: true
+    href: DREditor.Trials.TrialBuilder.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Trials.TrialBuilder
+    name: TrialBuilder
+    isExternal: true
+    href: DREditor.Trials.TrialBuilder.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Trials.TrialManager.Awake*
+  commentId: Overload:DREditor.Trials.TrialManager.Awake
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_Awake
+  name: Awake
+  nameWithType: TrialManager.Awake
+  fullName: DREditor.Trials.TrialManager.Awake
+- uid: DREditor.Trials.TrialManager.OnEnable*
+  commentId: Overload:DREditor.Trials.TrialManager.OnEnable
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_OnEnable
+  name: OnEnable
+  nameWithType: TrialManager.OnEnable
+  fullName: DREditor.Trials.TrialManager.OnEnable
+- uid: DREditor.Trials.TrialManager.OnDisable*
+  commentId: Overload:DREditor.Trials.TrialManager.OnDisable
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_OnDisable
+  name: OnDisable
+  nameWithType: TrialManager.OnDisable
+  fullName: DREditor.Trials.TrialManager.OnDisable
+- uid: DREditor.Trials.TrialManager.Start*
+  commentId: Overload:DREditor.Trials.TrialManager.Start
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_Start
+  name: Start
+  nameWithType: TrialManager.Start
+  fullName: DREditor.Trials.TrialManager.Start
+- uid: DREditor.Trials.TrialManager.InitializeTrial*
+  commentId: Overload:DREditor.Trials.TrialManager.InitializeTrial
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_InitializeTrial
+  name: InitializeTrial
+  nameWithType: TrialManager.InitializeTrial
+  fullName: DREditor.Trials.TrialManager.InitializeTrial
+- uid: DREditor.Trials.TrialManager.BufferFadeOut*
+  commentId: Overload:DREditor.Trials.TrialManager.BufferFadeOut
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_BufferFadeOut
+  name: BufferFadeOut
+  nameWithType: TrialManager.BufferFadeOut
+  fullName: DREditor.Trials.TrialManager.BufferFadeOut
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Trials.TrialManagerBase.LoadTrialAtDialogueIndex
+  commentId: M:DREditor.Trials.TrialManagerBase.LoadTrialAtDialogueIndex
+  parent: DREditor.Trials.TrialManagerBase
+  isExternal: true
+  href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_LoadTrialAtDialogueIndex
+  name: LoadTrialAtDialogueIndex()
+  nameWithType: TrialManagerBase.LoadTrialAtDialogueIndex()
+  fullName: DREditor.Trials.TrialManagerBase.LoadTrialAtDialogueIndex()
+  spec.csharp:
+  - uid: DREditor.Trials.TrialManagerBase.LoadTrialAtDialogueIndex
+    name: LoadTrialAtDialogueIndex
+    isExternal: true
+    href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_LoadTrialAtDialogueIndex
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Trials.TrialManagerBase.LoadTrialAtDialogueIndex
+    name: LoadTrialAtDialogueIndex
+    isExternal: true
+    href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_LoadTrialAtDialogueIndex
+  - name: (
+  - name: )
+- uid: DREditor.Trials.TrialManager.LoadTrialAtDialogueIndex*
+  commentId: Overload:DREditor.Trials.TrialManager.LoadTrialAtDialogueIndex
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_LoadTrialAtDialogueIndex
+  name: LoadTrialAtDialogueIndex
+  nameWithType: TrialManager.LoadTrialAtDialogueIndex
+  fullName: DREditor.Trials.TrialManager.LoadTrialAtDialogueIndex
+- uid: DREditor.Trials.TrialManager.EvaluateLoadIndex*
+  commentId: Overload:DREditor.Trials.TrialManager.EvaluateLoadIndex
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_EvaluateLoadIndex
+  name: EvaluateLoadIndex
+  nameWithType: TrialManager.EvaluateLoadIndex
+  fullName: DREditor.Trials.TrialManager.EvaluateLoadIndex
+- uid: DREditor.Trials.TrialManagerBase.StartTrialAtIndex(System.Int32)
+  commentId: M:DREditor.Trials.TrialManagerBase.StartTrialAtIndex(System.Int32)
+  parent: DREditor.Trials.TrialManagerBase
+  isExternal: true
+  href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_StartTrialAtIndex_System_Int32_
+  name: StartTrialAtIndex(int)
+  nameWithType: TrialManagerBase.StartTrialAtIndex(int)
+  fullName: DREditor.Trials.TrialManagerBase.StartTrialAtIndex(int)
+  nameWithType.vb: TrialManagerBase.StartTrialAtIndex(Integer)
+  fullName.vb: DREditor.Trials.TrialManagerBase.StartTrialAtIndex(Integer)
+  name.vb: StartTrialAtIndex(Integer)
+  spec.csharp:
+  - uid: DREditor.Trials.TrialManagerBase.StartTrialAtIndex(System.Int32)
+    name: StartTrialAtIndex
+    isExternal: true
+    href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_StartTrialAtIndex_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Trials.TrialManagerBase.StartTrialAtIndex(System.Int32)
+    name: StartTrialAtIndex
+    isExternal: true
+    href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_StartTrialAtIndex_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Trials.TrialManager.StartTrialAtIndex*
+  commentId: Overload:DREditor.Trials.TrialManager.StartTrialAtIndex
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_StartTrialAtIndex_System_Int32_
+  name: StartTrialAtIndex
+  nameWithType: TrialManager.StartTrialAtIndex
+  fullName: DREditor.Trials.TrialManager.StartTrialAtIndex
+- uid: DREditor.Trials.TrialManagerBase.StartTrialAtChapter
+  commentId: M:DREditor.Trials.TrialManagerBase.StartTrialAtChapter
+  parent: DREditor.Trials.TrialManagerBase
+  isExternal: true
+  href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_StartTrialAtChapter
+  name: StartTrialAtChapter()
+  nameWithType: TrialManagerBase.StartTrialAtChapter()
+  fullName: DREditor.Trials.TrialManagerBase.StartTrialAtChapter()
+  spec.csharp:
+  - uid: DREditor.Trials.TrialManagerBase.StartTrialAtChapter
+    name: StartTrialAtChapter
+    isExternal: true
+    href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_StartTrialAtChapter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Trials.TrialManagerBase.StartTrialAtChapter
+    name: StartTrialAtChapter
+    isExternal: true
+    href: DREditor.Trials.TrialManagerBase.html#DREditor_Trials_TrialManagerBase_StartTrialAtChapter
+  - name: (
+  - name: )
+- uid: DREditor.Trials.TrialManager.StartTrialAtChapter*
+  commentId: Overload:DREditor.Trials.TrialManager.StartTrialAtChapter
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_StartTrialAtChapter
+  name: StartTrialAtChapter
+  nameWithType: TrialManager.StartTrialAtChapter
+  fullName: DREditor.Trials.TrialManager.StartTrialAtChapter
+- uid: DREditor.Trials.TrialManager.CheckIfSaveDialogue*
+  commentId: Overload:DREditor.Trials.TrialManager.CheckIfSaveDialogue
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager_CheckIfSaveDialogue
+  name: CheckIfSaveDialogue
+  nameWithType: TrialManager.CheckIfSaveDialogue
+  fullName: DREditor.Trials.TrialManager.CheckIfSaveDialogue
+- uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+  commentId: M:DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+  parent: DREditor.Dialogues.IDialogueHolder
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: CheckIfSaveDialogue()
+  nameWithType: IDialogueHolder.CheckIfSaveDialogue()
+  fullName: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue()
+  spec.csharp:
+  - uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Trials.TrialManager.#ctor*
+  commentId: Overload:DREditor.Trials.TrialManager.#ctor
+  isExternal: true
+  href: DREditor.Trials.TrialManager.html#DREditor_Trials_TrialManager__ctor
+  name: TrialManager
+  nameWithType: TrialManager.TrialManager
+  fullName: DREditor.Trials.TrialManager.TrialManager
+  nameWithType.vb: TrialManager.New
+  fullName.vb: DREditor.Trials.TrialManager.New
+  name.vb: New

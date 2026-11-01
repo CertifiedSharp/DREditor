@@ -1,0 +1,2061 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.SubAreas.SubAreaActivator
+  commentId: T:DREditor.SubAreas.SubAreaActivator
+  id: SubAreaActivator
+  parent: DREditor.SubAreas
+  children:
+  - DREditor.SubAreas.SubAreaActivator.#ctor
+  - DREditor.SubAreas.SubAreaActivator.Activate
+  - DREditor.SubAreas.SubAreaActivator.ActivateSubAreaOnDialogueEnd
+  - DREditor.SubAreas.SubAreaActivator.Activation
+  - DREditor.SubAreas.SubAreaActivator.BeginActivationState
+  - DREditor.SubAreas.SubAreaActivator.CheckIfSaveDialogue
+  - DREditor.SubAreas.SubAreaActivator.CheckLoad
+  - DREditor.SubAreas.SubAreaActivator.Data
+  - DREditor.SubAreas.SubAreaActivator.DestroyCameraArrows
+  - DREditor.SubAreas.SubAreaActivator.EndOfActivationHandler
+  - DREditor.SubAreas.SubAreaActivator.Initialize(System.Object)
+  - DREditor.SubAreas.SubAreaActivator.MoveToSubAreaPosition
+  - DREditor.SubAreas.SubAreaActivator.OnDisable
+  - DREditor.SubAreas.SubAreaActivator.OnEnable
+  - DREditor.SubAreas.SubAreaActivator.OnEventRaised
+  - DREditor.SubAreas.SubAreaActivator.OnSAMActivate
+  - DREditor.SubAreas.SubAreaActivator.OnSAMAutoStartDialogue
+  - DREditor.SubAreas.SubAreaActivator.SaveLoadActivation
+  - DREditor.SubAreas.SubAreaActivator.autoStartDialogue
+  - DREditor.SubAreas.SubAreaActivator.cachedLoadingSave
+  - DREditor.SubAreas.SubAreaActivator.cameraArrowsPrefab
+  - DREditor.SubAreas.SubAreaActivator.cameraArrowsRef
+  - DREditor.SubAreas.SubAreaActivator.deactivator
+  - DREditor.SubAreas.SubAreaActivator.fadeTime
+  - DREditor.SubAreas.SubAreaActivator.focusedActor
+  - DREditor.SubAreas.SubAreaActivator.inSubAreaActivation
+  - DREditor.SubAreas.SubAreaActivator.onFadingOutOfLoading
+  - DREditor.SubAreas.SubAreaActivator.onFinishedRoomTransitions
+  - DREditor.SubAreas.SubAreaActivator.reticleCanSelect
+  - DREditor.SubAreas.SubAreaActivator.startDialogue
+  langs:
+  - csharp
+  - vb
+  name: SubAreaActivator
+  nameWithType: SubAreaActivator
+  fullName: DREditor.SubAreas.SubAreaActivator
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("SubAreaActivationHandler, IDialogueHolder, ISceneEventListener\n\n")]
+
+      public class SubAreaActivator : SubAreaActivationHandler, IDialogueHolder, ISceneEventListener
+    content.vb: >-
+      <ClassHeader("SubAreaActivationHandler, IDialogueHolder, ISceneEventListener" & vbLf & vbLf)>
+
+      Public Class SubAreaActivator Inherits SubAreaActivationHandler Implements IDialogueHolder, ISceneEventListener
+  inheritance:
+  - System.Object
+  - DREditor.SubAreas.SubAreaManagerBase
+  - DREditor.SubAreas.SubAreaActivationHandler
+  implements:
+  - DREditor.Dialogues.IDialogueHolder
+  - DREditor.EventObjects.ISceneEventListener
+  inheritedMembers:
+  - DREditor.SubAreas.SubAreaActivationHandler.inLeaveProcess
+  - DREditor.SubAreas.SubAreaActivationHandler.hasMenuAccess
+  - DREditor.SubAreas.SubAreaActivationHandler.isLoadingFile
+  - DREditor.SubAreas.SubAreaActivationHandler.subAreaCollider
+  - DREditor.SubAreas.SubAreaActivationHandler.tpfdManager
+  - DREditor.SubAreas.SubAreaActivationHandler.objectGroup
+  - DREditor.SubAreas.SubAreaActivationHandler.TPFDMode
+  - DREditor.SubAreas.SubAreaActivationHandler.panToBodyTime
+  - DREditor.SubAreas.SubAreaActivationHandler.mainCameraTag
+  - DREditor.SubAreas.SubAreaActivationHandler.playerSystem
+  - DREditor.SubAreas.SubAreaActivationHandler.managers
+  - DREditor.SubAreas.SubAreaActivationHandler.mainCamera
+  - DREditor.SubAreas.SubAreaActivationHandler.Awake
+  - DREditor.SubAreas.SubAreaActivationHandler.AlreadyInTPFD
+  - DREditor.SubAreas.SubAreaActivationHandler.Start
+  - DREditor.SubAreas.SubAreaActivationHandler.GetTPFDDoors
+  - DREditor.SubAreas.SubAreaActivationHandler.MoveCameraToPosition(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)
+  - DREditor.SubAreas.SubAreaActivationHandler.FinishHandler
+  - DREditor.SubAreas.SubAreaActivationHandler.OnHandlerFinished
+  - DREditor.SubAreas.SubAreaManagerBase.currentDisplayName
+  - DREditor.SubAreas.SubAreaManagerBase.inDialogue
+  - DREditor.SubAreas.SubAreaManagerBase.inTPFD
+  - DREditor.SubAreas.SubAreaManagerBase.dialogueManager
+  - DREditor.SubAreas.SubAreaManagerBase.TryPlayingDialogue(DREditor.EventObjects.SelectableObject,System.Collections.Generic.List{DREditor.LocalDialogues.LocalDialogue})
+  - DREditor.SubAreas.SubAreaManagerBase.SubscribeEndDialogueEvent(System.Action)
+  - DREditor.SubAreas.SubAreaManagerBase.UnsubscribeEndDialogueEvent(System.Action)
+  - DREditor.SubAreas.SubAreaManagerBase.TurnOffDisplayedObjectName
+  extensionMethods:
+  - DREditor.SubAreas.SubAreaActivator.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.SubAreas.SubAreaActivator.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.SubAreas.SubAreaActivator.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        SubAreaActivationHandler, IDialogueHolder, ISceneEventListener
+
+- uid: DREditor.SubAreas.SubAreaActivator.fadeTime
+  commentId: F:DREditor.SubAreas.SubAreaActivator.fadeTime
+  id: fadeTime
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: fadeTime
+  nameWithType: SubAreaActivator.fadeTime
+  fullName: DREditor.SubAreas.SubAreaActivator.fadeTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected float fadeTime
+    return:
+      type: System.Single
+    content.vb: Protected fadeTime As Single
+- uid: DREditor.SubAreas.SubAreaActivator.deactivator
+  commentId: F:DREditor.SubAreas.SubAreaActivator.deactivator
+  id: deactivator
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: deactivator
+  nameWithType: SubAreaActivator.deactivator
+  fullName: DREditor.SubAreas.SubAreaActivator.deactivator
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected SubAreaActivationHandler deactivator
+    return:
+      type: DREditor.SubAreas.SubAreaActivationHandler
+    content.vb: >-
+      <Divider>
+
+      Protected deactivator As SubAreaActivationHandler
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.SubAreas.SubAreaActivator.focusedActor
+  commentId: F:DREditor.SubAreas.SubAreaActivator.focusedActor
+  id: focusedActor
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: focusedActor
+  nameWithType: SubAreaActivator.focusedActor
+  fullName: DREditor.SubAreas.SubAreaActivator.focusedActor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected SelectableObject focusedActor
+    return:
+      type: DREditor.EventObjects.SelectableObject
+    content.vb: Protected focusedActor As SelectableObject
+- uid: DREditor.SubAreas.SubAreaActivator.startDialogue
+  commentId: F:DREditor.SubAreas.SubAreaActivator.startDialogue
+  id: startDialogue
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: startDialogue
+  nameWithType: SubAreaActivator.startDialogue
+  fullName: DREditor.SubAreas.SubAreaActivator.startDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected Dialogue startDialogue
+    return:
+      type: DREditor.Dialogues.Dialogue
+    content.vb: Protected startDialogue As Dialogue
+- uid: DREditor.SubAreas.SubAreaActivator.autoStartDialogue
+  commentId: F:DREditor.SubAreas.SubAreaActivator.autoStartDialogue
+  id: autoStartDialogue
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: autoStartDialogue
+  nameWithType: SubAreaActivator.autoStartDialogue
+  fullName: DREditor.SubAreas.SubAreaActivator.autoStartDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected Dialogue autoStartDialogue
+    return:
+      type: DREditor.Dialogues.Dialogue
+    content.vb: Protected autoStartDialogue As Dialogue
+- uid: DREditor.SubAreas.SubAreaActivator.cameraArrowsPrefab
+  commentId: F:DREditor.SubAreas.SubAreaActivator.cameraArrowsPrefab
+  id: cameraArrowsPrefab
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: cameraArrowsPrefab
+  nameWithType: SubAreaActivator.cameraArrowsPrefab
+  fullName: DREditor.SubAreas.SubAreaActivator.cameraArrowsPrefab
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected GameObject cameraArrowsPrefab
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Protected cameraArrowsPrefab As GameObject
+- uid: DREditor.SubAreas.SubAreaActivator.reticleCanSelect
+  commentId: F:DREditor.SubAreas.SubAreaActivator.reticleCanSelect
+  id: reticleCanSelect
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: reticleCanSelect
+  nameWithType: SubAreaActivator.reticleCanSelect
+  fullName: DREditor.SubAreas.SubAreaActivator.reticleCanSelect
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent reticleCanSelect
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected reticleCanSelect As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.SubAreas.SubAreaActivator.inSubAreaActivation
+  commentId: F:DREditor.SubAreas.SubAreaActivator.inSubAreaActivation
+  id: inSubAreaActivation
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: inSubAreaActivation
+  nameWithType: SubAreaActivator.inSubAreaActivation
+  fullName: DREditor.SubAreas.SubAreaActivator.inSubAreaActivation
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inSubAreaActivation
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inSubAreaActivation As BoolWithEvent
+- uid: DREditor.SubAreas.SubAreaActivator.OnSAMActivate
+  commentId: F:DREditor.SubAreas.SubAreaActivator.OnSAMActivate
+  id: OnSAMActivate
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: OnSAMActivate
+  nameWithType: SubAreaActivator.OnSAMActivate
+  fullName: DREditor.SubAreas.SubAreaActivator.OnSAMActivate
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent OnSAMActivate
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected OnSAMActivate As SceneEvent
+- uid: DREditor.SubAreas.SubAreaActivator.OnSAMAutoStartDialogue
+  commentId: F:DREditor.SubAreas.SubAreaActivator.OnSAMAutoStartDialogue
+  id: OnSAMAutoStartDialogue
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: OnSAMAutoStartDialogue
+  nameWithType: SubAreaActivator.OnSAMAutoStartDialogue
+  fullName: DREditor.SubAreas.SubAreaActivator.OnSAMAutoStartDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent OnSAMAutoStartDialogue
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected OnSAMAutoStartDialogue As SceneEvent
+- uid: DREditor.SubAreas.SubAreaActivator.onFadingOutOfLoading
+  commentId: F:DREditor.SubAreas.SubAreaActivator.onFadingOutOfLoading
+  id: onFadingOutOfLoading
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: onFadingOutOfLoading
+  nameWithType: SubAreaActivator.onFadingOutOfLoading
+  fullName: DREditor.SubAreas.SubAreaActivator.onFadingOutOfLoading
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onFadingOutOfLoading
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onFadingOutOfLoading As SceneEvent
+- uid: DREditor.SubAreas.SubAreaActivator.onFinishedRoomTransitions
+  commentId: F:DREditor.SubAreas.SubAreaActivator.onFinishedRoomTransitions
+  id: onFinishedRoomTransitions
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: onFinishedRoomTransitions
+  nameWithType: SubAreaActivator.onFinishedRoomTransitions
+  fullName: DREditor.SubAreas.SubAreaActivator.onFinishedRoomTransitions
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEventListener onFinishedRoomTransitions
+    return:
+      type: DREditor.EventObjects.SceneEventListener
+    content.vb: Protected onFinishedRoomTransitions As SceneEventListener
+- uid: DREditor.SubAreas.SubAreaActivator.Data
+  commentId: F:DREditor.SubAreas.SubAreaActivator.Data
+  id: Data
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: SubAreaActivator.Data
+  fullName: DREditor.SubAreas.SubAreaActivator.Data
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected SubAreaData Data
+    return:
+      type: DREditor.SubAreas.SubAreaData
+    content.vb: Protected Data As SubAreaData
+- uid: DREditor.SubAreas.SubAreaActivator.cameraArrowsRef
+  commentId: F:DREditor.SubAreas.SubAreaActivator.cameraArrowsRef
+  id: cameraArrowsRef
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: cameraArrowsRef
+  nameWithType: SubAreaActivator.cameraArrowsRef
+  fullName: DREditor.SubAreas.SubAreaActivator.cameraArrowsRef
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected GameObject cameraArrowsRef
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Protected cameraArrowsRef As GameObject
+- uid: DREditor.SubAreas.SubAreaActivator.cachedLoadingSave
+  commentId: F:DREditor.SubAreas.SubAreaActivator.cachedLoadingSave
+  id: cachedLoadingSave
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: cachedLoadingSave
+  nameWithType: SubAreaActivator.cachedLoadingSave
+  fullName: DREditor.SubAreas.SubAreaActivator.cachedLoadingSave
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool cachedLoadingSave
+    return:
+      type: System.Boolean
+    content.vb: Protected cachedLoadingSave As Boolean
+- uid: DREditor.SubAreas.SubAreaActivator.OnEnable
+  commentId: M:DREditor.SubAreas.SubAreaActivator.OnEnable
+  id: OnEnable
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: SubAreaActivator.OnEnable()
+  fullName: DREditor.SubAreas.SubAreaActivator.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.SubAreas.SubAreaActivator.OnEnable*
+- uid: DREditor.SubAreas.SubAreaActivator.OnDisable
+  commentId: M:DREditor.SubAreas.SubAreaActivator.OnDisable
+  id: OnDisable
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: SubAreaActivator.OnDisable()
+  fullName: DREditor.SubAreas.SubAreaActivator.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.SubAreas.SubAreaActivator.OnDisable*
+- uid: DREditor.SubAreas.SubAreaActivator.CheckLoad
+  commentId: M:DREditor.SubAreas.SubAreaActivator.CheckLoad
+  id: CheckLoad
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: CheckLoad()
+  nameWithType: SubAreaActivator.CheckLoad()
+  fullName: DREditor.SubAreas.SubAreaActivator.CheckLoad()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void CheckLoad()
+    content.vb: Protected Overridable Sub CheckLoad()
+  overload: DREditor.SubAreas.SubAreaActivator.CheckLoad*
+- uid: DREditor.SubAreas.SubAreaActivator.Initialize(System.Object)
+  commentId: M:DREditor.SubAreas.SubAreaActivator.Initialize(System.Object)
+  id: Initialize(System.Object)
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: Initialize(object)
+  nameWithType: SubAreaActivator.Initialize(object)
+  fullName: DREditor.SubAreas.SubAreaActivator.Initialize(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: public override void Initialize(object subAreaData)
+    parameters:
+    - id: subAreaData
+      type: System.Object
+      description: ''
+    content.vb: Public Overrides Sub Initialize(subAreaData As Object)
+  overridden: DREditor.SubAreas.SubAreaActivationHandler.Initialize(System.Object)
+  overload: DREditor.SubAreas.SubAreaActivator.Initialize*
+  nameWithType.vb: SubAreaActivator.Initialize(Object)
+  fullName.vb: DREditor.SubAreas.SubAreaActivator.Initialize(Object)
+  name.vb: Initialize(Object)
+- uid: DREditor.SubAreas.SubAreaActivator.BeginActivationState
+  commentId: M:DREditor.SubAreas.SubAreaActivator.BeginActivationState
+  id: BeginActivationState
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: BeginActivationState()
+  nameWithType: SubAreaActivator.BeginActivationState()
+  fullName: DREditor.SubAreas.SubAreaActivator.BeginActivationState()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: public override void BeginActivationState()
+    content.vb: Public Overrides Sub BeginActivationState()
+  overridden: DREditor.SubAreas.SubAreaActivationHandler.BeginActivationState
+  overload: DREditor.SubAreas.SubAreaActivator.BeginActivationState*
+- uid: DREditor.SubAreas.SubAreaActivator.ActivateSubAreaOnDialogueEnd
+  commentId: M:DREditor.SubAreas.SubAreaActivator.ActivateSubAreaOnDialogueEnd
+  id: ActivateSubAreaOnDialogueEnd
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: ActivateSubAreaOnDialogueEnd()
+  nameWithType: SubAreaActivator.ActivateSubAreaOnDialogueEnd()
+  fullName: DREditor.SubAreas.SubAreaActivator.ActivateSubAreaOnDialogueEnd()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ActivateSubAreaOnDialogueEnd()
+    content.vb: Protected Overridable Sub ActivateSubAreaOnDialogueEnd()
+  overload: DREditor.SubAreas.SubAreaActivator.ActivateSubAreaOnDialogueEnd*
+- uid: DREditor.SubAreas.SubAreaActivator.Activate
+  commentId: M:DREditor.SubAreas.SubAreaActivator.Activate
+  id: Activate
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: Activate()
+  nameWithType: SubAreaActivator.Activate()
+  fullName: DREditor.SubAreas.SubAreaActivator.Activate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Activate()
+    content.vb: Protected Overridable Sub Activate()
+  overload: DREditor.SubAreas.SubAreaActivator.Activate*
+- uid: DREditor.SubAreas.SubAreaActivator.SaveLoadActivation
+  commentId: M:DREditor.SubAreas.SubAreaActivator.SaveLoadActivation
+  id: SaveLoadActivation
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: SaveLoadActivation()
+  nameWithType: SubAreaActivator.SaveLoadActivation()
+  fullName: DREditor.SubAreas.SubAreaActivator.SaveLoadActivation()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator SaveLoadActivation()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function SaveLoadActivation() As IEnumerator
+  overload: DREditor.SubAreas.SubAreaActivator.SaveLoadActivation*
+- uid: DREditor.SubAreas.SubAreaActivator.Activation
+  commentId: M:DREditor.SubAreas.SubAreaActivator.Activation
+  id: Activation
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: Activation()
+  nameWithType: SubAreaActivator.Activation()
+  fullName: DREditor.SubAreas.SubAreaActivator.Activation()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator Activation()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function Activation() As IEnumerator
+  overload: DREditor.SubAreas.SubAreaActivator.Activation*
+- uid: DREditor.SubAreas.SubAreaActivator.EndOfActivationHandler
+  commentId: M:DREditor.SubAreas.SubAreaActivator.EndOfActivationHandler
+  id: EndOfActivationHandler
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: EndOfActivationHandler()
+  nameWithType: SubAreaActivator.EndOfActivationHandler()
+  fullName: DREditor.SubAreas.SubAreaActivator.EndOfActivationHandler()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: public override void EndOfActivationHandler()
+    content.vb: Public Overrides Sub EndOfActivationHandler()
+  overridden: DREditor.SubAreas.SubAreaActivationHandler.EndOfActivationHandler
+  overload: DREditor.SubAreas.SubAreaActivator.EndOfActivationHandler*
+- uid: DREditor.SubAreas.SubAreaActivator.MoveToSubAreaPosition
+  commentId: M:DREditor.SubAreas.SubAreaActivator.MoveToSubAreaPosition
+  id: MoveToSubAreaPosition
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: MoveToSubAreaPosition()
+  nameWithType: SubAreaActivator.MoveToSubAreaPosition()
+  fullName: DREditor.SubAreas.SubAreaActivator.MoveToSubAreaPosition()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator MoveToSubAreaPosition()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function MoveToSubAreaPosition() As IEnumerator
+  overload: DREditor.SubAreas.SubAreaActivator.MoveToSubAreaPosition*
+- uid: DREditor.SubAreas.SubAreaActivator.DestroyCameraArrows
+  commentId: M:DREditor.SubAreas.SubAreaActivator.DestroyCameraArrows
+  id: DestroyCameraArrows
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: DestroyCameraArrows()
+  nameWithType: SubAreaActivator.DestroyCameraArrows()
+  fullName: DREditor.SubAreas.SubAreaActivator.DestroyCameraArrows()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void DestroyCameraArrows()
+    content.vb: Protected Overridable Sub DestroyCameraArrows()
+  overload: DREditor.SubAreas.SubAreaActivator.DestroyCameraArrows*
+- uid: DREditor.SubAreas.SubAreaActivator.CheckIfSaveDialogue
+  commentId: M:DREditor.SubAreas.SubAreaActivator.CheckIfSaveDialogue
+  id: CheckIfSaveDialogue
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: CheckIfSaveDialogue()
+  nameWithType: SubAreaActivator.CheckIfSaveDialogue()
+  fullName: DREditor.SubAreas.SubAreaActivator.CheckIfSaveDialogue()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool CheckIfSaveDialogue()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function CheckIfSaveDialogue() As Boolean
+  overload: DREditor.SubAreas.SubAreaActivator.CheckIfSaveDialogue*
+  implements:
+  - DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+- uid: DREditor.SubAreas.SubAreaActivator.OnEventRaised
+  commentId: M:DREditor.SubAreas.SubAreaActivator.OnEventRaised
+  id: OnEventRaised
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: OnEventRaised()
+  nameWithType: SubAreaActivator.OnEventRaised()
+  fullName: DREditor.SubAreas.SubAreaActivator.OnEventRaised()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnEventRaised()
+    content.vb: Public Overridable Sub OnEventRaised()
+  overload: DREditor.SubAreas.SubAreaActivator.OnEventRaised*
+  implements:
+  - DREditor.EventObjects.ISceneEventListener.OnEventRaised
+- uid: DREditor.SubAreas.SubAreaActivator.#ctor
+  commentId: M:DREditor.SubAreas.SubAreaActivator.#ctor
+  id: '#ctor'
+  parent: DREditor.SubAreas.SubAreaActivator
+  langs:
+  - csharp
+  - vb
+  name: SubAreaActivator()
+  nameWithType: SubAreaActivator.SubAreaActivator()
+  fullName: DREditor.SubAreas.SubAreaActivator.SubAreaActivator()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.SubAreas/SubAreaActivator.cs
+  assemblies:
+  - DREditor.SubAreas
+  namespace: DREditor.SubAreas
+  syntax:
+    content: public SubAreaActivator()
+    content.vb: Public Sub New()
+  overload: DREditor.SubAreas.SubAreaActivator.#ctor*
+  nameWithType.vb: SubAreaActivator.New()
+  fullName.vb: DREditor.SubAreas.SubAreaActivator.New()
+  name.vb: New()
+references:
+- uid: DREditor.SubAreas
+  commentId: N:DREditor.SubAreas
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.SubAreas
+  nameWithType: DREditor.SubAreas
+  fullName: DREditor.SubAreas
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.SubAreas
+    name: SubAreas
+    isExternal: true
+    href: DREditor.SubAreas.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.SubAreas
+    name: SubAreas
+    isExternal: true
+    href: DREditor.SubAreas.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.SubAreas.SubAreaManagerBase
+  commentId: T:DREditor.SubAreas.SubAreaManagerBase
+  parent: DREditor.SubAreas
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html
+  name: SubAreaManagerBase
+  nameWithType: SubAreaManagerBase
+  fullName: DREditor.SubAreas.SubAreaManagerBase
+- uid: DREditor.SubAreas.SubAreaActivationHandler
+  commentId: T:DREditor.SubAreas.SubAreaActivationHandler
+  parent: DREditor.SubAreas
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html
+  name: SubAreaActivationHandler
+  nameWithType: SubAreaActivationHandler
+  fullName: DREditor.SubAreas.SubAreaActivationHandler
+- uid: DREditor.Dialogues.IDialogueHolder
+  commentId: T:DREditor.Dialogues.IDialogueHolder
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: IDialogueHolder
+  nameWithType: IDialogueHolder
+  fullName: DREditor.Dialogues.IDialogueHolder
+- uid: DREditor.EventObjects.ISceneEventListener
+  commentId: T:DREditor.EventObjects.ISceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: ISceneEventListener
+  nameWithType: ISceneEventListener
+  fullName: DREditor.EventObjects.ISceneEventListener
+- uid: DREditor.SubAreas.SubAreaActivationHandler.inLeaveProcess
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.inLeaveProcess
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_inLeaveProcess
+  name: inLeaveProcess
+  nameWithType: SubAreaActivationHandler.inLeaveProcess
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.inLeaveProcess
+- uid: DREditor.SubAreas.SubAreaActivationHandler.hasMenuAccess
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.hasMenuAccess
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_hasMenuAccess
+  name: hasMenuAccess
+  nameWithType: SubAreaActivationHandler.hasMenuAccess
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.hasMenuAccess
+- uid: DREditor.SubAreas.SubAreaActivationHandler.isLoadingFile
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.isLoadingFile
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_isLoadingFile
+  name: isLoadingFile
+  nameWithType: SubAreaActivationHandler.isLoadingFile
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.isLoadingFile
+- uid: DREditor.SubAreas.SubAreaActivationHandler.subAreaCollider
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.subAreaCollider
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_subAreaCollider
+  name: subAreaCollider
+  nameWithType: SubAreaActivationHandler.subAreaCollider
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.subAreaCollider
+- uid: DREditor.SubAreas.SubAreaActivationHandler.tpfdManager
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.tpfdManager
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_tpfdManager
+  name: tpfdManager
+  nameWithType: SubAreaActivationHandler.tpfdManager
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.tpfdManager
+- uid: DREditor.SubAreas.SubAreaActivationHandler.objectGroup
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.objectGroup
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_objectGroup
+  name: objectGroup
+  nameWithType: SubAreaActivationHandler.objectGroup
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.objectGroup
+- uid: DREditor.SubAreas.SubAreaActivationHandler.TPFDMode
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.TPFDMode
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_TPFDMode
+  name: TPFDMode
+  nameWithType: SubAreaActivationHandler.TPFDMode
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.TPFDMode
+- uid: DREditor.SubAreas.SubAreaActivationHandler.panToBodyTime
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.panToBodyTime
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_panToBodyTime
+  name: panToBodyTime
+  nameWithType: SubAreaActivationHandler.panToBodyTime
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.panToBodyTime
+- uid: DREditor.SubAreas.SubAreaActivationHandler.mainCameraTag
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.mainCameraTag
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_mainCameraTag
+  name: mainCameraTag
+  nameWithType: SubAreaActivationHandler.mainCameraTag
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.mainCameraTag
+- uid: DREditor.SubAreas.SubAreaActivationHandler.playerSystem
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.playerSystem
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_playerSystem
+  name: playerSystem
+  nameWithType: SubAreaActivationHandler.playerSystem
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.playerSystem
+- uid: DREditor.SubAreas.SubAreaActivationHandler.managers
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.managers
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_managers
+  name: managers
+  nameWithType: SubAreaActivationHandler.managers
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.managers
+- uid: DREditor.SubAreas.SubAreaActivationHandler.mainCamera
+  commentId: F:DREditor.SubAreas.SubAreaActivationHandler.mainCamera
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_mainCamera
+  name: mainCamera
+  nameWithType: SubAreaActivationHandler.mainCamera
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.mainCamera
+- uid: DREditor.SubAreas.SubAreaActivationHandler.Awake
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.Awake
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Awake
+  name: Awake()
+  nameWithType: SubAreaActivationHandler.Awake()
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.Awake()
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.Awake
+    name: Awake
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Awake
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.Awake
+    name: Awake
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Awake
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivationHandler.AlreadyInTPFD
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.AlreadyInTPFD
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_AlreadyInTPFD
+  name: AlreadyInTPFD()
+  nameWithType: SubAreaActivationHandler.AlreadyInTPFD()
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.AlreadyInTPFD()
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.AlreadyInTPFD
+    name: AlreadyInTPFD
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_AlreadyInTPFD
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.AlreadyInTPFD
+    name: AlreadyInTPFD
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_AlreadyInTPFD
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivationHandler.Start
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.Start
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Start
+  name: Start()
+  nameWithType: SubAreaActivationHandler.Start()
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.Start()
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.Start
+    name: Start
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.Start
+    name: Start
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Start
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivationHandler.GetTPFDDoors
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.GetTPFDDoors
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_GetTPFDDoors
+  name: GetTPFDDoors()
+  nameWithType: SubAreaActivationHandler.GetTPFDDoors()
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.GetTPFDDoors()
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.GetTPFDDoors
+    name: GetTPFDDoors
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_GetTPFDDoors
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.GetTPFDDoors
+    name: GetTPFDDoors
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_GetTPFDDoors
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivationHandler.MoveCameraToPosition(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.MoveCameraToPosition(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_MoveCameraToPosition_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_System_Single_
+  name: MoveCameraToPosition(Vector3, Vector3, float, float)
+  nameWithType: SubAreaActivationHandler.MoveCameraToPosition(Vector3, Vector3, float, float)
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.MoveCameraToPosition(UnityEngine.Vector3, UnityEngine.Vector3, float, float)
+  nameWithType.vb: SubAreaActivationHandler.MoveCameraToPosition(Vector3, Vector3, Single, Single)
+  fullName.vb: DREditor.SubAreas.SubAreaActivationHandler.MoveCameraToPosition(UnityEngine.Vector3, UnityEngine.Vector3, Single, Single)
+  name.vb: MoveCameraToPosition(Vector3, Vector3, Single, Single)
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.MoveCameraToPosition(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)
+    name: MoveCameraToPosition
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_MoveCameraToPosition_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_System_Single_
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.MoveCameraToPosition(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)
+    name: MoveCameraToPosition
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_MoveCameraToPosition_UnityEngine_Vector3_UnityEngine_Vector3_System_Single_System_Single_
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivationHandler.FinishHandler
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.FinishHandler
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_FinishHandler
+  name: FinishHandler()
+  nameWithType: SubAreaActivationHandler.FinishHandler()
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.FinishHandler()
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.FinishHandler
+    name: FinishHandler
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_FinishHandler
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.FinishHandler
+    name: FinishHandler
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_FinishHandler
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivationHandler.OnHandlerFinished
+  commentId: E:DREditor.SubAreas.SubAreaActivationHandler.OnHandlerFinished
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_OnHandlerFinished
+  name: OnHandlerFinished
+  nameWithType: SubAreaActivationHandler.OnHandlerFinished
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.OnHandlerFinished
+- uid: DREditor.SubAreas.SubAreaManagerBase.currentDisplayName
+  commentId: F:DREditor.SubAreas.SubAreaManagerBase.currentDisplayName
+  parent: DREditor.SubAreas.SubAreaManagerBase
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_currentDisplayName
+  name: currentDisplayName
+  nameWithType: SubAreaManagerBase.currentDisplayName
+  fullName: DREditor.SubAreas.SubAreaManagerBase.currentDisplayName
+- uid: DREditor.SubAreas.SubAreaManagerBase.inDialogue
+  commentId: F:DREditor.SubAreas.SubAreaManagerBase.inDialogue
+  parent: DREditor.SubAreas.SubAreaManagerBase
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_inDialogue
+  name: inDialogue
+  nameWithType: SubAreaManagerBase.inDialogue
+  fullName: DREditor.SubAreas.SubAreaManagerBase.inDialogue
+- uid: DREditor.SubAreas.SubAreaManagerBase.inTPFD
+  commentId: F:DREditor.SubAreas.SubAreaManagerBase.inTPFD
+  parent: DREditor.SubAreas.SubAreaManagerBase
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_inTPFD
+  name: inTPFD
+  nameWithType: SubAreaManagerBase.inTPFD
+  fullName: DREditor.SubAreas.SubAreaManagerBase.inTPFD
+- uid: DREditor.SubAreas.SubAreaManagerBase.dialogueManager
+  commentId: F:DREditor.SubAreas.SubAreaManagerBase.dialogueManager
+  parent: DREditor.SubAreas.SubAreaManagerBase
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_dialogueManager
+  name: dialogueManager
+  nameWithType: SubAreaManagerBase.dialogueManager
+  fullName: DREditor.SubAreas.SubAreaManagerBase.dialogueManager
+- uid: DREditor.SubAreas.SubAreaManagerBase.TryPlayingDialogue(DREditor.EventObjects.SelectableObject,System.Collections.Generic.List{DREditor.LocalDialogues.LocalDialogue})
+  commentId: M:DREditor.SubAreas.SubAreaManagerBase.TryPlayingDialogue(DREditor.EventObjects.SelectableObject,System.Collections.Generic.List{DREditor.LocalDialogues.LocalDialogue})
+  parent: DREditor.SubAreas.SubAreaManagerBase
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_TryPlayingDialogue_DREditor_EventObjects_SelectableObject_System_Collections_Generic_List_DREditor_LocalDialogues_LocalDialogue__
+  name: TryPlayingDialogue(SelectableObject, List<LocalDialogue>)
+  nameWithType: SubAreaManagerBase.TryPlayingDialogue(SelectableObject, List<LocalDialogue>)
+  fullName: DREditor.SubAreas.SubAreaManagerBase.TryPlayingDialogue(DREditor.EventObjects.SelectableObject, System.Collections.Generic.List<DREditor.LocalDialogues.LocalDialogue>)
+  nameWithType.vb: SubAreaManagerBase.TryPlayingDialogue(SelectableObject, List(Of LocalDialogue))
+  fullName.vb: DREditor.SubAreas.SubAreaManagerBase.TryPlayingDialogue(DREditor.EventObjects.SelectableObject, System.Collections.Generic.List(Of DREditor.LocalDialogues.LocalDialogue))
+  name.vb: TryPlayingDialogue(SelectableObject, List(Of LocalDialogue))
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaManagerBase.TryPlayingDialogue(DREditor.EventObjects.SelectableObject,System.Collections.Generic.List{DREditor.LocalDialogues.LocalDialogue})
+    name: TryPlayingDialogue
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_TryPlayingDialogue_DREditor_EventObjects_SelectableObject_System_Collections_Generic_List_DREditor_LocalDialogues_LocalDialogue__
+  - name: (
+  - uid: DREditor.EventObjects.SelectableObject
+    name: SelectableObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.LocalDialogues.LocalDialogue
+    name: LocalDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.LocalDialogues/LocalDialogue.cs
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaManagerBase.TryPlayingDialogue(DREditor.EventObjects.SelectableObject,System.Collections.Generic.List{DREditor.LocalDialogues.LocalDialogue})
+    name: TryPlayingDialogue
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_TryPlayingDialogue_DREditor_EventObjects_SelectableObject_System_Collections_Generic_List_DREditor_LocalDialogues_LocalDialogue__
+  - name: (
+  - uid: DREditor.EventObjects.SelectableObject
+    name: SelectableObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.LocalDialogues.LocalDialogue
+    name: LocalDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.LocalDialogues/LocalDialogue.cs
+  - name: )
+  - name: )
+- uid: DREditor.SubAreas.SubAreaManagerBase.SubscribeEndDialogueEvent(System.Action)
+  commentId: M:DREditor.SubAreas.SubAreaManagerBase.SubscribeEndDialogueEvent(System.Action)
+  parent: DREditor.SubAreas.SubAreaManagerBase
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_SubscribeEndDialogueEvent_System_Action_
+  name: SubscribeEndDialogueEvent(Action)
+  nameWithType: SubAreaManagerBase.SubscribeEndDialogueEvent(Action)
+  fullName: DREditor.SubAreas.SubAreaManagerBase.SubscribeEndDialogueEvent(System.Action)
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaManagerBase.SubscribeEndDialogueEvent(System.Action)
+    name: SubscribeEndDialogueEvent
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_SubscribeEndDialogueEvent_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaManagerBase.SubscribeEndDialogueEvent(System.Action)
+    name: SubscribeEndDialogueEvent
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_SubscribeEndDialogueEvent_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.SubAreas.SubAreaManagerBase.UnsubscribeEndDialogueEvent(System.Action)
+  commentId: M:DREditor.SubAreas.SubAreaManagerBase.UnsubscribeEndDialogueEvent(System.Action)
+  parent: DREditor.SubAreas.SubAreaManagerBase
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_UnsubscribeEndDialogueEvent_System_Action_
+  name: UnsubscribeEndDialogueEvent(Action)
+  nameWithType: SubAreaManagerBase.UnsubscribeEndDialogueEvent(Action)
+  fullName: DREditor.SubAreas.SubAreaManagerBase.UnsubscribeEndDialogueEvent(System.Action)
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaManagerBase.UnsubscribeEndDialogueEvent(System.Action)
+    name: UnsubscribeEndDialogueEvent
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_UnsubscribeEndDialogueEvent_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaManagerBase.UnsubscribeEndDialogueEvent(System.Action)
+    name: UnsubscribeEndDialogueEvent
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_UnsubscribeEndDialogueEvent_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.SubAreas.SubAreaManagerBase.TurnOffDisplayedObjectName
+  commentId: M:DREditor.SubAreas.SubAreaManagerBase.TurnOffDisplayedObjectName
+  parent: DREditor.SubAreas.SubAreaManagerBase
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_TurnOffDisplayedObjectName
+  name: TurnOffDisplayedObjectName()
+  nameWithType: SubAreaManagerBase.TurnOffDisplayedObjectName()
+  fullName: DREditor.SubAreas.SubAreaManagerBase.TurnOffDisplayedObjectName()
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaManagerBase.TurnOffDisplayedObjectName
+    name: TurnOffDisplayedObjectName
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_TurnOffDisplayedObjectName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaManagerBase.TurnOffDisplayedObjectName
+    name: TurnOffDisplayedObjectName
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaManagerBase.html#DREditor_SubAreas_SubAreaManagerBase_TurnOffDisplayedObjectName
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivator.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<SubAreaActivator>(SubAreaActivator)
+  nameWithType: ReflectionHelper.GetFieldNames<SubAreaActivator>(SubAreaActivator)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.SubAreas.SubAreaActivator>(DREditor.SubAreas.SubAreaActivator)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of SubAreaActivator)(SubAreaActivator)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.SubAreas.SubAreaActivator)(DREditor.SubAreas.SubAreaActivator)
+  name.vb: GetFieldNames(Of SubAreaActivator)(SubAreaActivator)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.SubAreas.SubAreaActivator)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.SubAreas.SubAreaActivator)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+  - name: (
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivator.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<SubAreaActivator>(SubAreaActivator)
+  nameWithType: ReflectionHelper.GetFieldValues<SubAreaActivator>(SubAreaActivator)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.SubAreas.SubAreaActivator>(DREditor.SubAreas.SubAreaActivator)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of SubAreaActivator)(SubAreaActivator)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.SubAreas.SubAreaActivator)(DREditor.SubAreas.SubAreaActivator)
+  name.vb: GetFieldValues(Of SubAreaActivator)(SubAreaActivator)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.SubAreas.SubAreaActivator)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.SubAreas.SubAreaActivator)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+  - name: (
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivator.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<SubAreaActivator>(SubAreaActivator)
+  nameWithType: DeepCopyExtensions.DeepCopy<SubAreaActivator>(SubAreaActivator)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.SubAreas.SubAreaActivator>(DREditor.SubAreas.SubAreaActivator)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of SubAreaActivator)(SubAreaActivator)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.SubAreas.SubAreaActivator)(DREditor.SubAreas.SubAreaActivator)
+  name.vb: DeepCopy(Of SubAreaActivator)(SubAreaActivator)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.SubAreas.SubAreaActivator)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.SubAreas.SubAreaActivator)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+  - name: (
+  - uid: DREditor.SubAreas.SubAreaActivator
+    name: SubAreaActivator
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivator.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: DREditor.EventObjects.SelectableObject
+  commentId: T:DREditor.EventObjects.SelectableObject
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: SelectableObject
+  nameWithType: SelectableObject
+  fullName: DREditor.EventObjects.SelectableObject
+- uid: DREditor.Dialogues.Dialogue
+  commentId: T:DREditor.Dialogues.Dialogue
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  name: Dialogue
+  nameWithType: Dialogue
+  fullName: DREditor.Dialogues.Dialogue
+- uid: UnityEngine.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: DREditor.EventObjects.SceneEventListener
+  commentId: T:DREditor.EventObjects.SceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: SceneEventListener
+  nameWithType: SceneEventListener
+  fullName: DREditor.EventObjects.SceneEventListener
+- uid: DREditor.SubAreas.SubAreaData
+  commentId: T:DREditor.SubAreas.SubAreaData
+  parent: DREditor.SubAreas
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaData.html
+  name: SubAreaData
+  nameWithType: SubAreaData
+  fullName: DREditor.SubAreas.SubAreaData
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.SubAreas.SubAreaActivator.OnEnable*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.OnEnable
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_OnEnable
+  name: OnEnable
+  nameWithType: SubAreaActivator.OnEnable
+  fullName: DREditor.SubAreas.SubAreaActivator.OnEnable
+- uid: DREditor.SubAreas.SubAreaActivator.OnDisable*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.OnDisable
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_OnDisable
+  name: OnDisable
+  nameWithType: SubAreaActivator.OnDisable
+  fullName: DREditor.SubAreas.SubAreaActivator.OnDisable
+- uid: DREditor.SubAreas.SubAreaActivator.CheckLoad*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.CheckLoad
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_CheckLoad
+  name: CheckLoad
+  nameWithType: SubAreaActivator.CheckLoad
+  fullName: DREditor.SubAreas.SubAreaActivator.CheckLoad
+- uid: DREditor.SubAreas.SubAreaActivationHandler.Initialize(System.Object)
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.Initialize(System.Object)
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Initialize_System_Object_
+  name: Initialize(object)
+  nameWithType: SubAreaActivationHandler.Initialize(object)
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.Initialize(object)
+  nameWithType.vb: SubAreaActivationHandler.Initialize(Object)
+  fullName.vb: DREditor.SubAreas.SubAreaActivationHandler.Initialize(Object)
+  name.vb: Initialize(Object)
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.Initialize(System.Object)
+    name: Initialize
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Initialize_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.Initialize(System.Object)
+    name: Initialize
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_Initialize_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivator.Initialize*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.Initialize
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_Initialize_System_Object_
+  name: Initialize
+  nameWithType: SubAreaActivator.Initialize
+  fullName: DREditor.SubAreas.SubAreaActivator.Initialize
+- uid: DREditor.SubAreas.SubAreaActivationHandler.BeginActivationState
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.BeginActivationState
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_BeginActivationState
+  name: BeginActivationState()
+  nameWithType: SubAreaActivationHandler.BeginActivationState()
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.BeginActivationState()
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.BeginActivationState
+    name: BeginActivationState
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_BeginActivationState
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.BeginActivationState
+    name: BeginActivationState
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_BeginActivationState
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivator.BeginActivationState*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.BeginActivationState
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_BeginActivationState
+  name: BeginActivationState
+  nameWithType: SubAreaActivator.BeginActivationState
+  fullName: DREditor.SubAreas.SubAreaActivator.BeginActivationState
+- uid: DREditor.SubAreas.SubAreaActivator.ActivateSubAreaOnDialogueEnd*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.ActivateSubAreaOnDialogueEnd
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_ActivateSubAreaOnDialogueEnd
+  name: ActivateSubAreaOnDialogueEnd
+  nameWithType: SubAreaActivator.ActivateSubAreaOnDialogueEnd
+  fullName: DREditor.SubAreas.SubAreaActivator.ActivateSubAreaOnDialogueEnd
+- uid: DREditor.SubAreas.SubAreaActivator.Activate*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.Activate
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_Activate
+  name: Activate
+  nameWithType: SubAreaActivator.Activate
+  fullName: DREditor.SubAreas.SubAreaActivator.Activate
+- uid: DREditor.SubAreas.SubAreaActivator.SaveLoadActivation*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.SaveLoadActivation
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_SaveLoadActivation
+  name: SaveLoadActivation
+  nameWithType: SubAreaActivator.SaveLoadActivation
+  fullName: DREditor.SubAreas.SubAreaActivator.SaveLoadActivation
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.SubAreas.SubAreaActivator.Activation*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.Activation
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_Activation
+  name: Activation
+  nameWithType: SubAreaActivator.Activation
+  fullName: DREditor.SubAreas.SubAreaActivator.Activation
+- uid: DREditor.SubAreas.SubAreaActivationHandler.EndOfActivationHandler
+  commentId: M:DREditor.SubAreas.SubAreaActivationHandler.EndOfActivationHandler
+  parent: DREditor.SubAreas.SubAreaActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_EndOfActivationHandler
+  name: EndOfActivationHandler()
+  nameWithType: SubAreaActivationHandler.EndOfActivationHandler()
+  fullName: DREditor.SubAreas.SubAreaActivationHandler.EndOfActivationHandler()
+  spec.csharp:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.EndOfActivationHandler
+    name: EndOfActivationHandler
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_EndOfActivationHandler
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.SubAreas.SubAreaActivationHandler.EndOfActivationHandler
+    name: EndOfActivationHandler
+    isExternal: true
+    href: DREditor.SubAreas.SubAreaActivationHandler.html#DREditor_SubAreas_SubAreaActivationHandler_EndOfActivationHandler
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivator.EndOfActivationHandler*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.EndOfActivationHandler
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_EndOfActivationHandler
+  name: EndOfActivationHandler
+  nameWithType: SubAreaActivator.EndOfActivationHandler
+  fullName: DREditor.SubAreas.SubAreaActivator.EndOfActivationHandler
+- uid: DREditor.SubAreas.SubAreaActivator.MoveToSubAreaPosition*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.MoveToSubAreaPosition
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_MoveToSubAreaPosition
+  name: MoveToSubAreaPosition
+  nameWithType: SubAreaActivator.MoveToSubAreaPosition
+  fullName: DREditor.SubAreas.SubAreaActivator.MoveToSubAreaPosition
+- uid: DREditor.SubAreas.SubAreaActivator.DestroyCameraArrows*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.DestroyCameraArrows
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_DestroyCameraArrows
+  name: DestroyCameraArrows
+  nameWithType: SubAreaActivator.DestroyCameraArrows
+  fullName: DREditor.SubAreas.SubAreaActivator.DestroyCameraArrows
+- uid: DREditor.SubAreas.SubAreaActivator.CheckIfSaveDialogue*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.CheckIfSaveDialogue
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_CheckIfSaveDialogue
+  name: CheckIfSaveDialogue
+  nameWithType: SubAreaActivator.CheckIfSaveDialogue
+  fullName: DREditor.SubAreas.SubAreaActivator.CheckIfSaveDialogue
+- uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+  commentId: M:DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+  parent: DREditor.Dialogues.IDialogueHolder
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: CheckIfSaveDialogue()
+  nameWithType: IDialogueHolder.CheckIfSaveDialogue()
+  fullName: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue()
+  spec.csharp:
+  - uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivator.OnEventRaised*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.OnEventRaised
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator_OnEventRaised
+  name: OnEventRaised
+  nameWithType: SubAreaActivator.OnEventRaised
+  fullName: DREditor.SubAreas.SubAreaActivator.OnEventRaised
+- uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  commentId: M:DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  parent: DREditor.EventObjects.ISceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: OnEventRaised()
+  nameWithType: ISceneEventListener.OnEventRaised()
+  fullName: DREditor.EventObjects.ISceneEventListener.OnEventRaised()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.SubAreas.SubAreaActivator.#ctor*
+  commentId: Overload:DREditor.SubAreas.SubAreaActivator.#ctor
+  isExternal: true
+  href: DREditor.SubAreas.SubAreaActivator.html#DREditor_SubAreas_SubAreaActivator__ctor
+  name: SubAreaActivator
+  nameWithType: SubAreaActivator.SubAreaActivator
+  fullName: DREditor.SubAreas.SubAreaActivator.SubAreaActivator
+  nameWithType.vb: SubAreaActivator.New
+  fullName.vb: DREditor.SubAreas.SubAreaActivator.New
+  name.vb: New

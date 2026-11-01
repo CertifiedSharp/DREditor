@@ -1,0 +1,1370 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.UIHandling.CanvasUIVisibility
+  commentId: T:DREditor.UIHandling.CanvasUIVisibility
+  id: CanvasUIVisibility
+  parent: DREditor.UIHandling
+  children:
+  - DREditor.UIHandling.CanvasUIVisibility.#ctor
+  - DREditor.UIHandling.CanvasUIVisibility.Awake
+  - DREditor.UIHandling.CanvasUIVisibility.ChangeVisibilityOnTitleScreen
+  - DREditor.UIHandling.CanvasUIVisibility.CheckInitializeCanvas
+  - DREditor.UIHandling.CanvasUIVisibility.HideUI
+  - DREditor.UIHandling.CanvasUIVisibility.SetCanvas(UnityEngine.Canvas)
+  - DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo(System.Boolean)
+  - DREditor.UIHandling.CanvasUIVisibility.ShowUI
+  - DREditor.UIHandling.CanvasUIVisibility.ToTitleScreen
+  - DREditor.UIHandling.CanvasUIVisibility.WaitForUIToComplete
+  - DREditor.UIHandling.CanvasUIVisibility.canvas
+  - DREditor.UIHandling.CanvasUIVisibility.debug
+  - DREditor.UIHandling.CanvasUIVisibility.setVisibilityOnTitleScreen
+  - DREditor.UIHandling.CanvasUIVisibility.visibilityOnTitleScreen
+  langs:
+  - csharp
+  - vb
+  name: CanvasUIVisibility
+  nameWithType: CanvasUIVisibility
+  fullName: DREditor.UIHandling.CanvasUIVisibility
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("UIVisibilityComponent, IUIVisibility, IToTitleScreen\n\n")]
+
+      public class CanvasUIVisibility : UIVisibilityComponent, IUIVisibility, ITrackableVisibility, IToTitleScreen
+    content.vb: >-
+      <ClassHeader("UIVisibilityComponent, IUIVisibility, IToTitleScreen" & vbLf & vbLf)>
+
+      Public Class CanvasUIVisibility Inherits UIVisibilityComponent Implements IUIVisibility, ITrackableVisibility, IToTitleScreen
+  inheritance:
+  - System.Object
+  - DREditor.UIHandling.UIVisibilityComponent
+  implements:
+  - DREditor.UIHandling.IUIVisibility
+  - DREditor.UIHandling.ITrackableVisibility
+  - DREditor.Services.IToTitleScreen
+  inheritedMembers:
+  - DREditor.UIHandling.UIVisibilityComponent.skipShowTillComplete
+  - DREditor.UIHandling.UIVisibilityComponent.skipHideTillComplete
+  - DREditor.UIHandling.UIVisibilityComponent.Show
+  - DREditor.UIHandling.UIVisibilityComponent.Hide
+  - DREditor.UIHandling.UIVisibilityComponent.MakeUIVisibleState(System.Boolean)
+  - DREditor.UIHandling.UIVisibilityComponent.SetVisible(System.Boolean)
+  - DREditor.UIHandling.UIVisibilityComponent.InvokeVisibleState
+  - DREditor.UIHandling.UIVisibilityComponent.WaitForChangeToComplete
+  - DREditor.UIHandling.UIVisibilityComponent.SkipWaitingToComplete
+  - DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForShow
+  - DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForHide
+  - DREditor.UIHandling.UIVisibilityComponent.ShowTillComplete
+  - DREditor.UIHandling.UIVisibilityComponent.HideTillComplete
+  - DREditor.UIHandling.UIVisibilityComponent.Invoke(System.Boolean)
+  - DREditor.UIHandling.UIVisibilityComponent.Visible
+  extensionMethods:
+  - DREditor.UIHandling.CanvasUIVisibility.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.UIHandling.CanvasUIVisibility.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.UIHandling.CanvasUIVisibility.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        UIVisibilityComponent, IUIVisibility, IToTitleScreen
+
+- uid: DREditor.UIHandling.CanvasUIVisibility.canvas
+  commentId: F:DREditor.UIHandling.CanvasUIVisibility.canvas
+  id: canvas
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: canvas
+  nameWithType: CanvasUIVisibility.canvas
+  fullName: DREditor.UIHandling.CanvasUIVisibility.canvas
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected Canvas canvas
+    return:
+      type: UnityEngine.Canvas
+    content.vb: Protected canvas As Canvas
+- uid: DREditor.UIHandling.CanvasUIVisibility.debug
+  commentId: F:DREditor.UIHandling.CanvasUIVisibility.debug
+  id: debug
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: debug
+  nameWithType: CanvasUIVisibility.debug
+  fullName: DREditor.UIHandling.CanvasUIVisibility.debug
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected bool debug
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Divider>
+
+      Protected debug As Boolean
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.UIHandling.CanvasUIVisibility.setVisibilityOnTitleScreen
+  commentId: F:DREditor.UIHandling.CanvasUIVisibility.setVisibilityOnTitleScreen
+  id: setVisibilityOnTitleScreen
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: setVisibilityOnTitleScreen
+  nameWithType: CanvasUIVisibility.setVisibilityOnTitleScreen
+  fullName: DREditor.UIHandling.CanvasUIVisibility.setVisibilityOnTitleScreen
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool setVisibilityOnTitleScreen
+    return:
+      type: System.Boolean
+    content.vb: Protected setVisibilityOnTitleScreen As Boolean
+- uid: DREditor.UIHandling.CanvasUIVisibility.visibilityOnTitleScreen
+  commentId: F:DREditor.UIHandling.CanvasUIVisibility.visibilityOnTitleScreen
+  id: visibilityOnTitleScreen
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: visibilityOnTitleScreen
+  nameWithType: CanvasUIVisibility.visibilityOnTitleScreen
+  fullName: DREditor.UIHandling.CanvasUIVisibility.visibilityOnTitleScreen
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool visibilityOnTitleScreen
+    return:
+      type: System.Boolean
+    content.vb: Protected visibilityOnTitleScreen As Boolean
+- uid: DREditor.UIHandling.CanvasUIVisibility.Awake
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.Awake
+  id: Awake
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: CanvasUIVisibility.Awake()
+  fullName: DREditor.UIHandling.CanvasUIVisibility.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: DREditor.UIHandling.CanvasUIVisibility.Awake*
+- uid: DREditor.UIHandling.CanvasUIVisibility.CheckInitializeCanvas
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.CheckInitializeCanvas
+  id: CheckInitializeCanvas
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: CheckInitializeCanvas()
+  nameWithType: CanvasUIVisibility.CheckInitializeCanvas()
+  fullName: DREditor.UIHandling.CanvasUIVisibility.CheckInitializeCanvas()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void CheckInitializeCanvas()
+    content.vb: Protected Overridable Sub CheckInitializeCanvas()
+  overload: DREditor.UIHandling.CanvasUIVisibility.CheckInitializeCanvas*
+- uid: DREditor.UIHandling.CanvasUIVisibility.ShowUI
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.ShowUI
+  id: ShowUI
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: ShowUI()
+  nameWithType: CanvasUIVisibility.ShowUI()
+  fullName: DREditor.UIHandling.CanvasUIVisibility.ShowUI()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void ShowUI()
+    content.vb: Protected Overrides Sub ShowUI()
+  overridden: DREditor.UIHandling.UIVisibilityComponent.ShowUI
+  overload: DREditor.UIHandling.CanvasUIVisibility.ShowUI*
+- uid: DREditor.UIHandling.CanvasUIVisibility.HideUI
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.HideUI
+  id: HideUI
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: HideUI()
+  nameWithType: CanvasUIVisibility.HideUI()
+  fullName: DREditor.UIHandling.CanvasUIVisibility.HideUI()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void HideUI()
+    content.vb: Protected Overrides Sub HideUI()
+  overridden: DREditor.UIHandling.UIVisibilityComponent.HideUI
+  overload: DREditor.UIHandling.CanvasUIVisibility.HideUI*
+- uid: DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo(System.Boolean)
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo(System.Boolean)
+  id: SetCanvasTo(System.Boolean)
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: SetCanvasTo(bool)
+  nameWithType: CanvasUIVisibility.SetCanvasTo(bool)
+  fullName: DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SetCanvasTo(bool to)
+    parameters:
+    - id: to
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Sub SetCanvasTo([to] As Boolean)
+  overload: DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo*
+  nameWithType.vb: CanvasUIVisibility.SetCanvasTo(Boolean)
+  fullName.vb: DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo(Boolean)
+  name.vb: SetCanvasTo(Boolean)
+- uid: DREditor.UIHandling.CanvasUIVisibility.WaitForUIToComplete
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.WaitForUIToComplete
+  id: WaitForUIToComplete
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: WaitForUIToComplete()
+  nameWithType: CanvasUIVisibility.WaitForUIToComplete()
+  fullName: DREditor.UIHandling.CanvasUIVisibility.WaitForUIToComplete()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected override IEnumerator WaitForUIToComplete()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overrides Function WaitForUIToComplete() As IEnumerator
+  overridden: DREditor.UIHandling.UIVisibilityComponent.WaitForUIToComplete
+  overload: DREditor.UIHandling.CanvasUIVisibility.WaitForUIToComplete*
+- uid: DREditor.UIHandling.CanvasUIVisibility.ToTitleScreen
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: CanvasUIVisibility.ToTitleScreen()
+  fullName: DREditor.UIHandling.CanvasUIVisibility.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.UIHandling.CanvasUIVisibility.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.UIHandling.CanvasUIVisibility.ChangeVisibilityOnTitleScreen
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.ChangeVisibilityOnTitleScreen
+  id: ChangeVisibilityOnTitleScreen
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: ChangeVisibilityOnTitleScreen()
+  nameWithType: CanvasUIVisibility.ChangeVisibilityOnTitleScreen()
+  fullName: DREditor.UIHandling.CanvasUIVisibility.ChangeVisibilityOnTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ChangeVisibilityOnTitleScreen()
+    content.vb: Protected Overridable Sub ChangeVisibilityOnTitleScreen()
+  overload: DREditor.UIHandling.CanvasUIVisibility.ChangeVisibilityOnTitleScreen*
+- uid: DREditor.UIHandling.CanvasUIVisibility.SetCanvas(UnityEngine.Canvas)
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.SetCanvas(UnityEngine.Canvas)
+  id: SetCanvas(UnityEngine.Canvas)
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: SetCanvas(Canvas)
+  nameWithType: CanvasUIVisibility.SetCanvas(Canvas)
+  fullName: DREditor.UIHandling.CanvasUIVisibility.SetCanvas(UnityEngine.Canvas)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: public void SetCanvas(Canvas canvas)
+    parameters:
+    - id: canvas
+      type: UnityEngine.Canvas
+      description: ''
+    content.vb: Public Sub SetCanvas(canvas As Canvas)
+  overload: DREditor.UIHandling.CanvasUIVisibility.SetCanvas*
+- uid: DREditor.UIHandling.CanvasUIVisibility.#ctor
+  commentId: M:DREditor.UIHandling.CanvasUIVisibility.#ctor
+  id: '#ctor'
+  parent: DREditor.UIHandling.CanvasUIVisibility
+  langs:
+  - csharp
+  - vb
+  name: CanvasUIVisibility()
+  nameWithType: CanvasUIVisibility.CanvasUIVisibility()
+  fullName: DREditor.UIHandling.CanvasUIVisibility.CanvasUIVisibility()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/CanvasUIVisibility.cs
+  assemblies:
+  - DREditor.UIHandling
+  namespace: DREditor.UIHandling
+  syntax:
+    content: public CanvasUIVisibility()
+    content.vb: Public Sub New()
+  overload: DREditor.UIHandling.CanvasUIVisibility.#ctor*
+  nameWithType.vb: CanvasUIVisibility.New()
+  fullName.vb: DREditor.UIHandling.CanvasUIVisibility.New()
+  name.vb: New()
+references:
+- uid: DREditor.UIHandling
+  commentId: N:DREditor.UIHandling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.UIHandling
+  nameWithType: DREditor.UIHandling
+  fullName: DREditor.UIHandling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UIHandling
+    name: UIHandling
+    isExternal: true
+    href: DREditor.UIHandling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UIHandling
+    name: UIHandling
+    isExternal: true
+    href: DREditor.UIHandling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.UIHandling.UIVisibilityComponent
+  commentId: T:DREditor.UIHandling.UIVisibilityComponent
+  parent: DREditor.UIHandling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: UIVisibilityComponent
+  nameWithType: UIVisibilityComponent
+  fullName: DREditor.UIHandling.UIVisibilityComponent
+- uid: DREditor.UIHandling.IUIVisibility
+  commentId: T:DREditor.UIHandling.IUIVisibility
+  parent: DREditor.UIHandling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/IUIVisibility.cs
+  name: IUIVisibility
+  nameWithType: IUIVisibility
+  fullName: DREditor.UIHandling.IUIVisibility
+- uid: DREditor.UIHandling.ITrackableVisibility
+  commentId: T:DREditor.UIHandling.ITrackableVisibility
+  parent: DREditor.UIHandling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/ITrackableVisibility.cs
+  name: ITrackableVisibility
+  nameWithType: ITrackableVisibility
+  fullName: DREditor.UIHandling.ITrackableVisibility
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.UIHandling.UIVisibilityComponent.skipShowTillComplete
+  commentId: F:DREditor.UIHandling.UIVisibilityComponent.skipShowTillComplete
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: skipShowTillComplete
+  nameWithType: UIVisibilityComponent.skipShowTillComplete
+  fullName: DREditor.UIHandling.UIVisibilityComponent.skipShowTillComplete
+- uid: DREditor.UIHandling.UIVisibilityComponent.skipHideTillComplete
+  commentId: F:DREditor.UIHandling.UIVisibilityComponent.skipHideTillComplete
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: skipHideTillComplete
+  nameWithType: UIVisibilityComponent.skipHideTillComplete
+  fullName: DREditor.UIHandling.UIVisibilityComponent.skipHideTillComplete
+- uid: DREditor.UIHandling.UIVisibilityComponent.Show
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.Show
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: Show()
+  nameWithType: UIVisibilityComponent.Show()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.Show()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.Show
+    name: Show
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.Show
+    name: Show
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.Hide
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.Hide
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: Hide()
+  nameWithType: UIVisibilityComponent.Hide()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.Hide()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.Hide
+    name: Hide
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.Hide
+    name: Hide
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.MakeUIVisibleState(System.Boolean)
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.MakeUIVisibleState(System.Boolean)
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: MakeUIVisibleState(bool)
+  nameWithType: UIVisibilityComponent.MakeUIVisibleState(bool)
+  fullName: DREditor.UIHandling.UIVisibilityComponent.MakeUIVisibleState(bool)
+  nameWithType.vb: UIVisibilityComponent.MakeUIVisibleState(Boolean)
+  fullName.vb: DREditor.UIHandling.UIVisibilityComponent.MakeUIVisibleState(Boolean)
+  name.vb: MakeUIVisibleState(Boolean)
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.MakeUIVisibleState(System.Boolean)
+    name: MakeUIVisibleState
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.MakeUIVisibleState(System.Boolean)
+    name: MakeUIVisibleState
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.SetVisible(System.Boolean)
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.SetVisible(System.Boolean)
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: SetVisible(bool)
+  nameWithType: UIVisibilityComponent.SetVisible(bool)
+  fullName: DREditor.UIHandling.UIVisibilityComponent.SetVisible(bool)
+  nameWithType.vb: UIVisibilityComponent.SetVisible(Boolean)
+  fullName.vb: DREditor.UIHandling.UIVisibilityComponent.SetVisible(Boolean)
+  name.vb: SetVisible(Boolean)
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.SetVisible(System.Boolean)
+    name: SetVisible
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.SetVisible(System.Boolean)
+    name: SetVisible
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.InvokeVisibleState
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.InvokeVisibleState
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: InvokeVisibleState()
+  nameWithType: UIVisibilityComponent.InvokeVisibleState()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.InvokeVisibleState()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.InvokeVisibleState
+    name: InvokeVisibleState
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.InvokeVisibleState
+    name: InvokeVisibleState
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.WaitForChangeToComplete
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.WaitForChangeToComplete
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: WaitForChangeToComplete()
+  nameWithType: UIVisibilityComponent.WaitForChangeToComplete()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.WaitForChangeToComplete()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.WaitForChangeToComplete
+    name: WaitForChangeToComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.WaitForChangeToComplete
+    name: WaitForChangeToComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.SkipWaitingToComplete
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.SkipWaitingToComplete
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: SkipWaitingToComplete()
+  nameWithType: UIVisibilityComponent.SkipWaitingToComplete()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.SkipWaitingToComplete()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.SkipWaitingToComplete
+    name: SkipWaitingToComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.SkipWaitingToComplete
+    name: SkipWaitingToComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForShow
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForShow
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: ShouldSkipWaitingForShow()
+  nameWithType: UIVisibilityComponent.ShouldSkipWaitingForShow()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForShow()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForShow
+    name: ShouldSkipWaitingForShow
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForShow
+    name: ShouldSkipWaitingForShow
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForHide
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForHide
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: ShouldSkipWaitingForHide()
+  nameWithType: UIVisibilityComponent.ShouldSkipWaitingForHide()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForHide()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForHide
+    name: ShouldSkipWaitingForHide
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.ShouldSkipWaitingForHide
+    name: ShouldSkipWaitingForHide
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.ShowTillComplete
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.ShowTillComplete
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: ShowTillComplete()
+  nameWithType: UIVisibilityComponent.ShowTillComplete()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.ShowTillComplete()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.ShowTillComplete
+    name: ShowTillComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.ShowTillComplete
+    name: ShowTillComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.HideTillComplete
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.HideTillComplete
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: HideTillComplete()
+  nameWithType: UIVisibilityComponent.HideTillComplete()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.HideTillComplete()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.HideTillComplete
+    name: HideTillComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.HideTillComplete
+    name: HideTillComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.Invoke(System.Boolean)
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.Invoke(System.Boolean)
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: Invoke(bool)
+  nameWithType: UIVisibilityComponent.Invoke(bool)
+  fullName: DREditor.UIHandling.UIVisibilityComponent.Invoke(bool)
+  nameWithType.vb: UIVisibilityComponent.Invoke(Boolean)
+  fullName.vb: DREditor.UIHandling.UIVisibilityComponent.Invoke(Boolean)
+  name.vb: Invoke(Boolean)
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.Invoke(System.Boolean)
+    name: Invoke
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.Invoke(System.Boolean)
+    name: Invoke
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.UIHandling.UIVisibilityComponent.Visible
+  commentId: P:DREditor.UIHandling.UIVisibilityComponent.Visible
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: Visible
+  nameWithType: UIVisibilityComponent.Visible
+  fullName: DREditor.UIHandling.UIVisibilityComponent.Visible
+- uid: DREditor.UIHandling.CanvasUIVisibility.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<CanvasUIVisibility>(CanvasUIVisibility)
+  nameWithType: ReflectionHelper.GetFieldNames<CanvasUIVisibility>(CanvasUIVisibility)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.UIHandling.CanvasUIVisibility>(DREditor.UIHandling.CanvasUIVisibility)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of CanvasUIVisibility)(CanvasUIVisibility)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.UIHandling.CanvasUIVisibility)(DREditor.UIHandling.CanvasUIVisibility)
+  name.vb: GetFieldNames(Of CanvasUIVisibility)(CanvasUIVisibility)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.UIHandling.CanvasUIVisibility)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.UIHandling.CanvasUIVisibility)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+  - name: (
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+- uid: DREditor.UIHandling.CanvasUIVisibility.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<CanvasUIVisibility>(CanvasUIVisibility)
+  nameWithType: ReflectionHelper.GetFieldValues<CanvasUIVisibility>(CanvasUIVisibility)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.UIHandling.CanvasUIVisibility>(DREditor.UIHandling.CanvasUIVisibility)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of CanvasUIVisibility)(CanvasUIVisibility)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.UIHandling.CanvasUIVisibility)(DREditor.UIHandling.CanvasUIVisibility)
+  name.vb: GetFieldValues(Of CanvasUIVisibility)(CanvasUIVisibility)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.UIHandling.CanvasUIVisibility)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.UIHandling.CanvasUIVisibility)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+  - name: (
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+- uid: DREditor.UIHandling.CanvasUIVisibility.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<CanvasUIVisibility>(CanvasUIVisibility)
+  nameWithType: DeepCopyExtensions.DeepCopy<CanvasUIVisibility>(CanvasUIVisibility)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.UIHandling.CanvasUIVisibility>(DREditor.UIHandling.CanvasUIVisibility)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of CanvasUIVisibility)(CanvasUIVisibility)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.UIHandling.CanvasUIVisibility)(DREditor.UIHandling.CanvasUIVisibility)
+  name.vb: DeepCopy(Of CanvasUIVisibility)(CanvasUIVisibility)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.UIHandling.CanvasUIVisibility)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.UIHandling.CanvasUIVisibility)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+  - name: (
+  - uid: DREditor.UIHandling.CanvasUIVisibility
+    name: CanvasUIVisibility
+    isExternal: true
+    href: DREditor.UIHandling.CanvasUIVisibility.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.Canvas
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: UnityEngine.Canvas
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.UIHandling.CanvasUIVisibility.Awake*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.Awake
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_Awake
+  name: Awake
+  nameWithType: CanvasUIVisibility.Awake
+  fullName: DREditor.UIHandling.CanvasUIVisibility.Awake
+- uid: DREditor.UIHandling.CanvasUIVisibility.CheckInitializeCanvas*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.CheckInitializeCanvas
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_CheckInitializeCanvas
+  name: CheckInitializeCanvas
+  nameWithType: CanvasUIVisibility.CheckInitializeCanvas
+  fullName: DREditor.UIHandling.CanvasUIVisibility.CheckInitializeCanvas
+- uid: DREditor.UIHandling.UIVisibilityComponent.ShowUI
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.ShowUI
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: ShowUI()
+  nameWithType: UIVisibilityComponent.ShowUI()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.ShowUI()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.ShowUI
+    name: ShowUI
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.ShowUI
+    name: ShowUI
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.CanvasUIVisibility.ShowUI*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.ShowUI
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_ShowUI
+  name: ShowUI
+  nameWithType: CanvasUIVisibility.ShowUI
+  fullName: DREditor.UIHandling.CanvasUIVisibility.ShowUI
+- uid: DREditor.UIHandling.UIVisibilityComponent.HideUI
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.HideUI
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: HideUI()
+  nameWithType: UIVisibilityComponent.HideUI()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.HideUI()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.HideUI
+    name: HideUI
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.HideUI
+    name: HideUI
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.CanvasUIVisibility.HideUI*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.HideUI
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_HideUI
+  name: HideUI
+  nameWithType: CanvasUIVisibility.HideUI
+  fullName: DREditor.UIHandling.CanvasUIVisibility.HideUI
+- uid: DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_SetCanvasTo_System_Boolean_
+  name: SetCanvasTo
+  nameWithType: CanvasUIVisibility.SetCanvasTo
+  fullName: DREditor.UIHandling.CanvasUIVisibility.SetCanvasTo
+- uid: DREditor.UIHandling.UIVisibilityComponent.WaitForUIToComplete
+  commentId: M:DREditor.UIHandling.UIVisibilityComponent.WaitForUIToComplete
+  parent: DREditor.UIHandling.UIVisibilityComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: WaitForUIToComplete()
+  nameWithType: UIVisibilityComponent.WaitForUIToComplete()
+  fullName: DREditor.UIHandling.UIVisibilityComponent.WaitForUIToComplete()
+  spec.csharp:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.WaitForUIToComplete
+    name: WaitForUIToComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UIHandling.UIVisibilityComponent.WaitForUIToComplete
+    name: WaitForUIToComplete
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.CanvasUIVisibility.WaitForUIToComplete*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.WaitForUIToComplete
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_WaitForUIToComplete
+  name: WaitForUIToComplete
+  nameWithType: CanvasUIVisibility.WaitForUIToComplete
+  fullName: DREditor.UIHandling.CanvasUIVisibility.WaitForUIToComplete
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.UIHandling.CanvasUIVisibility.ToTitleScreen*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.ToTitleScreen
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: CanvasUIVisibility.ToTitleScreen
+  fullName: DREditor.UIHandling.CanvasUIVisibility.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.UIHandling.CanvasUIVisibility.ChangeVisibilityOnTitleScreen*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.ChangeVisibilityOnTitleScreen
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_ChangeVisibilityOnTitleScreen
+  name: ChangeVisibilityOnTitleScreen
+  nameWithType: CanvasUIVisibility.ChangeVisibilityOnTitleScreen
+  fullName: DREditor.UIHandling.CanvasUIVisibility.ChangeVisibilityOnTitleScreen
+- uid: DREditor.UIHandling.CanvasUIVisibility.SetCanvas*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.SetCanvas
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility_SetCanvas_UnityEngine_Canvas_
+  name: SetCanvas
+  nameWithType: CanvasUIVisibility.SetCanvas
+  fullName: DREditor.UIHandling.CanvasUIVisibility.SetCanvas
+- uid: DREditor.UIHandling.CanvasUIVisibility.#ctor*
+  commentId: Overload:DREditor.UIHandling.CanvasUIVisibility.#ctor
+  isExternal: true
+  href: DREditor.UIHandling.CanvasUIVisibility.html#DREditor_UIHandling_CanvasUIVisibility__ctor
+  name: CanvasUIVisibility
+  nameWithType: CanvasUIVisibility.CanvasUIVisibility
+  fullName: DREditor.UIHandling.CanvasUIVisibility.CanvasUIVisibility
+  nameWithType.vb: CanvasUIVisibility.New
+  fullName.vb: DREditor.UIHandling.CanvasUIVisibility.New
+  name.vb: New

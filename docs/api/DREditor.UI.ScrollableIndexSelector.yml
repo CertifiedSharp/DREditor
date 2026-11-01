@@ -1,0 +1,1335 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.UI.ScrollableIndexSelector
+  commentId: T:DREditor.UI.ScrollableIndexSelector
+  id: ScrollableIndexSelector
+  parent: DREditor.UI
+  children:
+  - DREditor.UI.ScrollableIndexSelector.#ctor
+  - DREditor.UI.ScrollableIndexSelector.ActivateControls
+  - DREditor.UI.ScrollableIndexSelector.DeactivateControls
+  - DREditor.UI.ScrollableIndexSelector.MoveLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - DREditor.UI.ScrollableIndexSelector.MoveRight(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - DREditor.UI.ScrollableIndexSelector.shuffleLeft
+  - DREditor.UI.ScrollableIndexSelector.shuffleRight
+  langs:
+  - csharp
+  - vb
+  name: ScrollableIndexSelector
+  nameWithType: ScrollableIndexSelector
+  fullName: DREditor.UI.ScrollableIndexSelector
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollableIndexSelector.cs
+  assemblies:
+  - DREditor.UI
+  namespace: DREditor.UI
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("IndexSelector\n\n")]
+
+      public class ScrollableIndexSelector : IndexSelector, ITrackableIndex
+    content.vb: >-
+      <ClassHeader("IndexSelector" & vbLf & vbLf)>
+
+      Public Class ScrollableIndexSelector Inherits IndexSelector Implements ITrackableIndex
+  inheritance:
+  - System.Object
+  - DREditor.EventObjects.ControlledComponent
+  - DREditor.UI.IndexSelector
+  implements:
+  - DREditor.UI.ITrackableIndex
+  inheritedMembers:
+  - DREditor.UI.IndexSelector.previousIndex
+  - DREditor.UI.IndexSelector.selectionRate
+  - DREditor.UI.IndexSelector.OnForward
+  - DREditor.UI.IndexSelector.OnBackward
+  - DREditor.UI.IndexSelector.OnNavigated
+  - DREditor.UI.IndexSelector.OnReset
+  - DREditor.UI.IndexSelector.Move(System.Int32)
+  - DREditor.UI.IndexSelector.InitializeInputtedDirection(System.Int32)
+  - DREditor.UI.IndexSelector.ApplyMovement
+  - DREditor.UI.IndexSelector.OutOfRange
+  - DREditor.UI.IndexSelector.UpdateSelectedIndexes
+  - DREditor.UI.IndexSelector.InvokeMovedIndexFrom
+  - DREditor.UI.IndexSelector.InvokeDirection
+  - DREditor.UI.IndexSelector.ResetIndexSelector
+  - DREditor.UI.IndexSelector.ResetSelectedIndex
+  - DREditor.UI.IndexSelector.InvokeNavigated
+  - DREditor.UI.IndexSelector.InvokeReset
+  - DREditor.UI.IndexSelector.InputDirection
+  - DREditor.UI.IndexSelector.SelectedIndex
+  - DREditor.UI.IndexSelector.SelectionMaximum
+  - DREditor.UI.IndexSelector.MovedIndexFrom
+  - DREditor.EventObjects.ControlledComponent.debug
+  - DREditor.EventObjects.ControlledComponent.configureManually
+  - DREditor.EventObjects.ControlledComponent.inputAllowed
+  - DREditor.EventObjects.ControlledComponent.NotUsingManual
+  - DREditor.EventObjects.ControlledComponent.EnableInput
+  - DREditor.EventObjects.ControlledComponent.DisableInput
+  - DREditor.EventObjects.ControlledComponent.InputAllowed
+  - DREditor.EventObjects.ControlledComponent.Awake
+  - DREditor.EventObjects.ControlledComponent.OnEnable
+  - DREditor.EventObjects.ControlledComponent.OnDisable
+  - DREditor.EventObjects.ControlledComponent.OnUpdateInput(System.Boolean)
+  - DREditor.EventObjects.ControlledComponent.Start
+  extensionMethods:
+  - DREditor.UI.ScrollableIndexSelector.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.UI.ScrollableIndexSelector.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.UI.ScrollableIndexSelector.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        IndexSelector
+
+- uid: DREditor.UI.ScrollableIndexSelector.shuffleLeft
+  commentId: F:DREditor.UI.ScrollableIndexSelector.shuffleLeft
+  id: shuffleLeft
+  parent: DREditor.UI.ScrollableIndexSelector
+  langs:
+  - csharp
+  - vb
+  name: shuffleLeft
+  nameWithType: ScrollableIndexSelector.shuffleLeft
+  fullName: DREditor.UI.ScrollableIndexSelector.shuffleLeft
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollableIndexSelector.cs
+  assemblies:
+  - DREditor.UI
+  namespace: DREditor.UI
+  summary: ''
+  example: []
+  syntax:
+    content: protected InputActionReference shuffleLeft
+    return:
+      type: UnityEngine.InputSystem.InputActionReference
+    content.vb: Protected shuffleLeft As InputActionReference
+- uid: DREditor.UI.ScrollableIndexSelector.shuffleRight
+  commentId: F:DREditor.UI.ScrollableIndexSelector.shuffleRight
+  id: shuffleRight
+  parent: DREditor.UI.ScrollableIndexSelector
+  langs:
+  - csharp
+  - vb
+  name: shuffleRight
+  nameWithType: ScrollableIndexSelector.shuffleRight
+  fullName: DREditor.UI.ScrollableIndexSelector.shuffleRight
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollableIndexSelector.cs
+  assemblies:
+  - DREditor.UI
+  namespace: DREditor.UI
+  summary: ''
+  example: []
+  syntax:
+    content: protected InputActionReference shuffleRight
+    return:
+      type: UnityEngine.InputSystem.InputActionReference
+    content.vb: Protected shuffleRight As InputActionReference
+- uid: DREditor.UI.ScrollableIndexSelector.ActivateControls
+  commentId: M:DREditor.UI.ScrollableIndexSelector.ActivateControls
+  id: ActivateControls
+  parent: DREditor.UI.ScrollableIndexSelector
+  langs:
+  - csharp
+  - vb
+  name: ActivateControls()
+  nameWithType: ScrollableIndexSelector.ActivateControls()
+  fullName: DREditor.UI.ScrollableIndexSelector.ActivateControls()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollableIndexSelector.cs
+  assemblies:
+  - DREditor.UI
+  namespace: DREditor.UI
+  summary: ''
+  example: []
+  syntax:
+    content: public override void ActivateControls()
+    content.vb: Public Overrides Sub ActivateControls()
+  overridden: DREditor.EventObjects.ControlledComponent.ActivateControls
+  overload: DREditor.UI.ScrollableIndexSelector.ActivateControls*
+- uid: DREditor.UI.ScrollableIndexSelector.DeactivateControls
+  commentId: M:DREditor.UI.ScrollableIndexSelector.DeactivateControls
+  id: DeactivateControls
+  parent: DREditor.UI.ScrollableIndexSelector
+  langs:
+  - csharp
+  - vb
+  name: DeactivateControls()
+  nameWithType: ScrollableIndexSelector.DeactivateControls()
+  fullName: DREditor.UI.ScrollableIndexSelector.DeactivateControls()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollableIndexSelector.cs
+  assemblies:
+  - DREditor.UI
+  namespace: DREditor.UI
+  summary: ''
+  example: []
+  syntax:
+    content: public override void DeactivateControls()
+    content.vb: Public Overrides Sub DeactivateControls()
+  overridden: DREditor.EventObjects.ControlledComponent.DeactivateControls
+  overload: DREditor.UI.ScrollableIndexSelector.DeactivateControls*
+- uid: DREditor.UI.ScrollableIndexSelector.MoveRight(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:DREditor.UI.ScrollableIndexSelector.MoveRight(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: MoveRight(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: DREditor.UI.ScrollableIndexSelector
+  langs:
+  - csharp
+  - vb
+  name: MoveRight(CallbackContext)
+  nameWithType: ScrollableIndexSelector.MoveRight(InputAction.CallbackContext)
+  fullName: DREditor.UI.ScrollableIndexSelector.MoveRight(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollableIndexSelector.cs
+  assemblies:
+  - DREditor.UI
+  namespace: DREditor.UI
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void MoveRight(InputAction.CallbackContext ctx)
+    parameters:
+    - id: ctx
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+      description: ''
+    content.vb: Protected Overridable Sub MoveRight(ctx As InputAction.CallbackContext)
+  overload: DREditor.UI.ScrollableIndexSelector.MoveRight*
+- uid: DREditor.UI.ScrollableIndexSelector.MoveLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:DREditor.UI.ScrollableIndexSelector.MoveLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: MoveLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: DREditor.UI.ScrollableIndexSelector
+  langs:
+  - csharp
+  - vb
+  name: MoveLeft(CallbackContext)
+  nameWithType: ScrollableIndexSelector.MoveLeft(InputAction.CallbackContext)
+  fullName: DREditor.UI.ScrollableIndexSelector.MoveLeft(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollableIndexSelector.cs
+  assemblies:
+  - DREditor.UI
+  namespace: DREditor.UI
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void MoveLeft(InputAction.CallbackContext ctx)
+    parameters:
+    - id: ctx
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+      description: ''
+    content.vb: Protected Overridable Sub MoveLeft(ctx As InputAction.CallbackContext)
+  overload: DREditor.UI.ScrollableIndexSelector.MoveLeft*
+- uid: DREditor.UI.ScrollableIndexSelector.#ctor
+  commentId: M:DREditor.UI.ScrollableIndexSelector.#ctor
+  id: '#ctor'
+  parent: DREditor.UI.ScrollableIndexSelector
+  langs:
+  - csharp
+  - vb
+  name: ScrollableIndexSelector()
+  nameWithType: ScrollableIndexSelector.ScrollableIndexSelector()
+  fullName: DREditor.UI.ScrollableIndexSelector.ScrollableIndexSelector()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollableIndexSelector.cs
+  assemblies:
+  - DREditor.UI
+  namespace: DREditor.UI
+  syntax:
+    content: public ScrollableIndexSelector()
+    content.vb: Public Sub New()
+  overload: DREditor.UI.ScrollableIndexSelector.#ctor*
+  nameWithType.vb: ScrollableIndexSelector.New()
+  fullName.vb: DREditor.UI.ScrollableIndexSelector.New()
+  name.vb: New()
+references:
+- uid: DREditor.UI
+  commentId: N:DREditor.UI
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.UI
+  nameWithType: DREditor.UI
+  fullName: DREditor.UI
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UI
+    name: UI
+    isExternal: true
+    href: DREditor.UI.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UI
+    name: UI
+    isExternal: true
+    href: DREditor.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.EventObjects.ControlledComponent
+  commentId: T:DREditor.EventObjects.ControlledComponent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: ControlledComponent
+  nameWithType: ControlledComponent
+  fullName: DREditor.EventObjects.ControlledComponent
+- uid: DREditor.UI.IndexSelector
+  commentId: T:DREditor.UI.IndexSelector
+  parent: DREditor.UI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: IndexSelector
+  nameWithType: IndexSelector
+  fullName: DREditor.UI.IndexSelector
+- uid: DREditor.UI.ITrackableIndex
+  commentId: T:DREditor.UI.ITrackableIndex
+  parent: DREditor.UI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ITrackableIndex.cs
+  name: ITrackableIndex
+  nameWithType: ITrackableIndex
+  fullName: DREditor.UI.ITrackableIndex
+- uid: DREditor.UI.IndexSelector.previousIndex
+  commentId: F:DREditor.UI.IndexSelector.previousIndex
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: previousIndex
+  nameWithType: IndexSelector.previousIndex
+  fullName: DREditor.UI.IndexSelector.previousIndex
+- uid: DREditor.UI.IndexSelector.selectionRate
+  commentId: F:DREditor.UI.IndexSelector.selectionRate
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: selectionRate
+  nameWithType: IndexSelector.selectionRate
+  fullName: DREditor.UI.IndexSelector.selectionRate
+- uid: DREditor.UI.IndexSelector.OnForward
+  commentId: F:DREditor.UI.IndexSelector.OnForward
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: OnForward
+  nameWithType: IndexSelector.OnForward
+  fullName: DREditor.UI.IndexSelector.OnForward
+- uid: DREditor.UI.IndexSelector.OnBackward
+  commentId: F:DREditor.UI.IndexSelector.OnBackward
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: OnBackward
+  nameWithType: IndexSelector.OnBackward
+  fullName: DREditor.UI.IndexSelector.OnBackward
+- uid: DREditor.UI.IndexSelector.OnNavigated
+  commentId: F:DREditor.UI.IndexSelector.OnNavigated
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: OnNavigated
+  nameWithType: IndexSelector.OnNavigated
+  fullName: DREditor.UI.IndexSelector.OnNavigated
+- uid: DREditor.UI.IndexSelector.OnReset
+  commentId: F:DREditor.UI.IndexSelector.OnReset
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: OnReset
+  nameWithType: IndexSelector.OnReset
+  fullName: DREditor.UI.IndexSelector.OnReset
+- uid: DREditor.UI.IndexSelector.Move(System.Int32)
+  commentId: M:DREditor.UI.IndexSelector.Move(System.Int32)
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: Move(int)
+  nameWithType: IndexSelector.Move(int)
+  fullName: DREditor.UI.IndexSelector.Move(int)
+  nameWithType.vb: IndexSelector.Move(Integer)
+  fullName.vb: DREditor.UI.IndexSelector.Move(Integer)
+  name.vb: Move(Integer)
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.Move(System.Int32)
+    name: Move
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.Move(System.Int32)
+    name: Move
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.UI.IndexSelector.InitializeInputtedDirection(System.Int32)
+  commentId: M:DREditor.UI.IndexSelector.InitializeInputtedDirection(System.Int32)
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: InitializeInputtedDirection(int)
+  nameWithType: IndexSelector.InitializeInputtedDirection(int)
+  fullName: DREditor.UI.IndexSelector.InitializeInputtedDirection(int)
+  nameWithType.vb: IndexSelector.InitializeInputtedDirection(Integer)
+  fullName.vb: DREditor.UI.IndexSelector.InitializeInputtedDirection(Integer)
+  name.vb: InitializeInputtedDirection(Integer)
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.InitializeInputtedDirection(System.Int32)
+    name: InitializeInputtedDirection
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.InitializeInputtedDirection(System.Int32)
+    name: InitializeInputtedDirection
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.UI.IndexSelector.ApplyMovement
+  commentId: M:DREditor.UI.IndexSelector.ApplyMovement
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: ApplyMovement()
+  nameWithType: IndexSelector.ApplyMovement()
+  fullName: DREditor.UI.IndexSelector.ApplyMovement()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.ApplyMovement
+    name: ApplyMovement
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.ApplyMovement
+    name: ApplyMovement
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.OutOfRange
+  commentId: M:DREditor.UI.IndexSelector.OutOfRange
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: OutOfRange()
+  nameWithType: IndexSelector.OutOfRange()
+  fullName: DREditor.UI.IndexSelector.OutOfRange()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.OutOfRange
+    name: OutOfRange
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.OutOfRange
+    name: OutOfRange
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.UpdateSelectedIndexes
+  commentId: M:DREditor.UI.IndexSelector.UpdateSelectedIndexes
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: UpdateSelectedIndexes()
+  nameWithType: IndexSelector.UpdateSelectedIndexes()
+  fullName: DREditor.UI.IndexSelector.UpdateSelectedIndexes()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.UpdateSelectedIndexes
+    name: UpdateSelectedIndexes
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.UpdateSelectedIndexes
+    name: UpdateSelectedIndexes
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.InvokeMovedIndexFrom
+  commentId: M:DREditor.UI.IndexSelector.InvokeMovedIndexFrom
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: InvokeMovedIndexFrom()
+  nameWithType: IndexSelector.InvokeMovedIndexFrom()
+  fullName: DREditor.UI.IndexSelector.InvokeMovedIndexFrom()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.InvokeMovedIndexFrom
+    name: InvokeMovedIndexFrom
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.InvokeMovedIndexFrom
+    name: InvokeMovedIndexFrom
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.InvokeDirection
+  commentId: M:DREditor.UI.IndexSelector.InvokeDirection
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: InvokeDirection()
+  nameWithType: IndexSelector.InvokeDirection()
+  fullName: DREditor.UI.IndexSelector.InvokeDirection()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.InvokeDirection
+    name: InvokeDirection
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.InvokeDirection
+    name: InvokeDirection
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.ResetIndexSelector
+  commentId: M:DREditor.UI.IndexSelector.ResetIndexSelector
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: ResetIndexSelector()
+  nameWithType: IndexSelector.ResetIndexSelector()
+  fullName: DREditor.UI.IndexSelector.ResetIndexSelector()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.ResetIndexSelector
+    name: ResetIndexSelector
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.ResetIndexSelector
+    name: ResetIndexSelector
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.ResetSelectedIndex
+  commentId: M:DREditor.UI.IndexSelector.ResetSelectedIndex
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: ResetSelectedIndex()
+  nameWithType: IndexSelector.ResetSelectedIndex()
+  fullName: DREditor.UI.IndexSelector.ResetSelectedIndex()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.ResetSelectedIndex
+    name: ResetSelectedIndex
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.ResetSelectedIndex
+    name: ResetSelectedIndex
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.InvokeNavigated
+  commentId: M:DREditor.UI.IndexSelector.InvokeNavigated
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: InvokeNavigated()
+  nameWithType: IndexSelector.InvokeNavigated()
+  fullName: DREditor.UI.IndexSelector.InvokeNavigated()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.InvokeNavigated
+    name: InvokeNavigated
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.InvokeNavigated
+    name: InvokeNavigated
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.InvokeReset
+  commentId: M:DREditor.UI.IndexSelector.InvokeReset
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: InvokeReset()
+  nameWithType: IndexSelector.InvokeReset()
+  fullName: DREditor.UI.IndexSelector.InvokeReset()
+  spec.csharp:
+  - uid: DREditor.UI.IndexSelector.InvokeReset
+    name: InvokeReset
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.IndexSelector.InvokeReset
+    name: InvokeReset
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.IndexSelector.InputDirection
+  commentId: P:DREditor.UI.IndexSelector.InputDirection
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: InputDirection
+  nameWithType: IndexSelector.InputDirection
+  fullName: DREditor.UI.IndexSelector.InputDirection
+- uid: DREditor.UI.IndexSelector.SelectedIndex
+  commentId: P:DREditor.UI.IndexSelector.SelectedIndex
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: SelectedIndex
+  nameWithType: IndexSelector.SelectedIndex
+  fullName: DREditor.UI.IndexSelector.SelectedIndex
+- uid: DREditor.UI.IndexSelector.SelectionMaximum
+  commentId: P:DREditor.UI.IndexSelector.SelectionMaximum
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: SelectionMaximum
+  nameWithType: IndexSelector.SelectionMaximum
+  fullName: DREditor.UI.IndexSelector.SelectionMaximum
+- uid: DREditor.UI.IndexSelector.MovedIndexFrom
+  commentId: P:DREditor.UI.IndexSelector.MovedIndexFrom
+  parent: DREditor.UI.IndexSelector
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/IndexSelector.cs
+  name: MovedIndexFrom
+  nameWithType: IndexSelector.MovedIndexFrom
+  fullName: DREditor.UI.IndexSelector.MovedIndexFrom
+- uid: DREditor.EventObjects.ControlledComponent.debug
+  commentId: F:DREditor.EventObjects.ControlledComponent.debug
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: debug
+  nameWithType: ControlledComponent.debug
+  fullName: DREditor.EventObjects.ControlledComponent.debug
+- uid: DREditor.EventObjects.ControlledComponent.configureManually
+  commentId: F:DREditor.EventObjects.ControlledComponent.configureManually
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: configureManually
+  nameWithType: ControlledComponent.configureManually
+  fullName: DREditor.EventObjects.ControlledComponent.configureManually
+- uid: DREditor.EventObjects.ControlledComponent.inputAllowed
+  commentId: F:DREditor.EventObjects.ControlledComponent.inputAllowed
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: inputAllowed
+  nameWithType: ControlledComponent.inputAllowed
+  fullName: DREditor.EventObjects.ControlledComponent.inputAllowed
+- uid: DREditor.EventObjects.ControlledComponent.NotUsingManual
+  commentId: M:DREditor.EventObjects.ControlledComponent.NotUsingManual
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: NotUsingManual()
+  nameWithType: ControlledComponent.NotUsingManual()
+  fullName: DREditor.EventObjects.ControlledComponent.NotUsingManual()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.NotUsingManual
+    name: NotUsingManual
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.NotUsingManual
+    name: NotUsingManual
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.ControlledComponent.EnableInput
+  commentId: M:DREditor.EventObjects.ControlledComponent.EnableInput
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: EnableInput()
+  nameWithType: ControlledComponent.EnableInput()
+  fullName: DREditor.EventObjects.ControlledComponent.EnableInput()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.EnableInput
+    name: EnableInput
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.EnableInput
+    name: EnableInput
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.ControlledComponent.DisableInput
+  commentId: M:DREditor.EventObjects.ControlledComponent.DisableInput
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: DisableInput()
+  nameWithType: ControlledComponent.DisableInput()
+  fullName: DREditor.EventObjects.ControlledComponent.DisableInput()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.DisableInput
+    name: DisableInput
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.DisableInput
+    name: DisableInput
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.ControlledComponent.InputAllowed
+  commentId: M:DREditor.EventObjects.ControlledComponent.InputAllowed
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: InputAllowed()
+  nameWithType: ControlledComponent.InputAllowed()
+  fullName: DREditor.EventObjects.ControlledComponent.InputAllowed()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.InputAllowed
+    name: InputAllowed
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.InputAllowed
+    name: InputAllowed
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.ControlledComponent.Awake
+  commentId: M:DREditor.EventObjects.ControlledComponent.Awake
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: Awake()
+  nameWithType: ControlledComponent.Awake()
+  fullName: DREditor.EventObjects.ControlledComponent.Awake()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.ControlledComponent.OnEnable
+  commentId: M:DREditor.EventObjects.ControlledComponent.OnEnable
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: OnEnable()
+  nameWithType: ControlledComponent.OnEnable()
+  fullName: DREditor.EventObjects.ControlledComponent.OnEnable()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.ControlledComponent.OnDisable
+  commentId: M:DREditor.EventObjects.ControlledComponent.OnDisable
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: OnDisable()
+  nameWithType: ControlledComponent.OnDisable()
+  fullName: DREditor.EventObjects.ControlledComponent.OnDisable()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.ControlledComponent.OnUpdateInput(System.Boolean)
+  commentId: M:DREditor.EventObjects.ControlledComponent.OnUpdateInput(System.Boolean)
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: OnUpdateInput(bool)
+  nameWithType: ControlledComponent.OnUpdateInput(bool)
+  fullName: DREditor.EventObjects.ControlledComponent.OnUpdateInput(bool)
+  nameWithType.vb: ControlledComponent.OnUpdateInput(Boolean)
+  fullName.vb: DREditor.EventObjects.ControlledComponent.OnUpdateInput(Boolean)
+  name.vb: OnUpdateInput(Boolean)
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.OnUpdateInput(System.Boolean)
+    name: OnUpdateInput
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.OnUpdateInput(System.Boolean)
+    name: OnUpdateInput
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.EventObjects.ControlledComponent.Start
+  commentId: M:DREditor.EventObjects.ControlledComponent.Start
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: Start()
+  nameWithType: ControlledComponent.Start()
+  fullName: DREditor.EventObjects.ControlledComponent.Start()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.Start
+    name: Start
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.Start
+    name: Start
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.ScrollableIndexSelector.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ScrollableIndexSelector>(ScrollableIndexSelector)
+  nameWithType: ReflectionHelper.GetFieldNames<ScrollableIndexSelector>(ScrollableIndexSelector)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.UI.ScrollableIndexSelector>(DREditor.UI.ScrollableIndexSelector)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ScrollableIndexSelector)(ScrollableIndexSelector)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.UI.ScrollableIndexSelector)(DREditor.UI.ScrollableIndexSelector)
+  name.vb: GetFieldNames(Of ScrollableIndexSelector)(ScrollableIndexSelector)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.UI.ScrollableIndexSelector)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.UI.ScrollableIndexSelector)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+  - name: (
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+- uid: DREditor.UI.ScrollableIndexSelector.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ScrollableIndexSelector>(ScrollableIndexSelector)
+  nameWithType: ReflectionHelper.GetFieldValues<ScrollableIndexSelector>(ScrollableIndexSelector)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.UI.ScrollableIndexSelector>(DREditor.UI.ScrollableIndexSelector)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ScrollableIndexSelector)(ScrollableIndexSelector)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.UI.ScrollableIndexSelector)(DREditor.UI.ScrollableIndexSelector)
+  name.vb: GetFieldValues(Of ScrollableIndexSelector)(ScrollableIndexSelector)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.UI.ScrollableIndexSelector)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.UI.ScrollableIndexSelector)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+  - name: (
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+- uid: DREditor.UI.ScrollableIndexSelector.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ScrollableIndexSelector>(ScrollableIndexSelector)
+  nameWithType: DeepCopyExtensions.DeepCopy<ScrollableIndexSelector>(ScrollableIndexSelector)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.UI.ScrollableIndexSelector>(DREditor.UI.ScrollableIndexSelector)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ScrollableIndexSelector)(ScrollableIndexSelector)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.UI.ScrollableIndexSelector)(DREditor.UI.ScrollableIndexSelector)
+  name.vb: DeepCopy(Of ScrollableIndexSelector)(ScrollableIndexSelector)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.UI.ScrollableIndexSelector)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.UI.ScrollableIndexSelector)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+  - name: (
+  - uid: DREditor.UI.ScrollableIndexSelector
+    name: ScrollableIndexSelector
+    isExternal: true
+    href: DREditor.UI.ScrollableIndexSelector.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.InputSystem.InputActionReference
+  isExternal: true
+  name: InputActionReference
+  nameWithType: InputActionReference
+  fullName: UnityEngine.InputSystem.InputActionReference
+- uid: DREditor.EventObjects.ControlledComponent.ActivateControls
+  commentId: M:DREditor.EventObjects.ControlledComponent.ActivateControls
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: ActivateControls()
+  nameWithType: ControlledComponent.ActivateControls()
+  fullName: DREditor.EventObjects.ControlledComponent.ActivateControls()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.ActivateControls
+    name: ActivateControls
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.ActivateControls
+    name: ActivateControls
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.ScrollableIndexSelector.ActivateControls*
+  commentId: Overload:DREditor.UI.ScrollableIndexSelector.ActivateControls
+  isExternal: true
+  href: DREditor.UI.ScrollableIndexSelector.html#DREditor_UI_ScrollableIndexSelector_ActivateControls
+  name: ActivateControls
+  nameWithType: ScrollableIndexSelector.ActivateControls
+  fullName: DREditor.UI.ScrollableIndexSelector.ActivateControls
+- uid: DREditor.EventObjects.ControlledComponent.DeactivateControls
+  commentId: M:DREditor.EventObjects.ControlledComponent.DeactivateControls
+  parent: DREditor.EventObjects.ControlledComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  name: DeactivateControls()
+  nameWithType: ControlledComponent.DeactivateControls()
+  fullName: DREditor.EventObjects.ControlledComponent.DeactivateControls()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ControlledComponent.DeactivateControls
+    name: DeactivateControls
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ControlledComponent.DeactivateControls
+    name: DeactivateControls
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ControlledComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.ScrollableIndexSelector.DeactivateControls*
+  commentId: Overload:DREditor.UI.ScrollableIndexSelector.DeactivateControls
+  isExternal: true
+  href: DREditor.UI.ScrollableIndexSelector.html#DREditor_UI_ScrollableIndexSelector_DeactivateControls
+  name: DeactivateControls
+  nameWithType: ScrollableIndexSelector.DeactivateControls
+  fullName: DREditor.UI.ScrollableIndexSelector.DeactivateControls
+- uid: DREditor.UI.ScrollableIndexSelector.MoveRight*
+  commentId: Overload:DREditor.UI.ScrollableIndexSelector.MoveRight
+  isExternal: true
+  href: DREditor.UI.ScrollableIndexSelector.html#DREditor_UI_ScrollableIndexSelector_MoveRight_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: MoveRight
+  nameWithType: ScrollableIndexSelector.MoveRight
+  fullName: DREditor.UI.ScrollableIndexSelector.MoveRight
+- uid: UnityEngine.InputSystem.InputAction.CallbackContext
+  isExternal: true
+  name: CallbackContext
+  nameWithType: InputAction.CallbackContext
+  fullName: UnityEngine.InputSystem.InputAction.CallbackContext
+- uid: DREditor.UI.ScrollableIndexSelector.MoveLeft*
+  commentId: Overload:DREditor.UI.ScrollableIndexSelector.MoveLeft
+  isExternal: true
+  href: DREditor.UI.ScrollableIndexSelector.html#DREditor_UI_ScrollableIndexSelector_MoveLeft_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: MoveLeft
+  nameWithType: ScrollableIndexSelector.MoveLeft
+  fullName: DREditor.UI.ScrollableIndexSelector.MoveLeft
+- uid: DREditor.UI.ScrollableIndexSelector.#ctor*
+  commentId: Overload:DREditor.UI.ScrollableIndexSelector.#ctor
+  isExternal: true
+  href: DREditor.UI.ScrollableIndexSelector.html#DREditor_UI_ScrollableIndexSelector__ctor
+  name: ScrollableIndexSelector
+  nameWithType: ScrollableIndexSelector.ScrollableIndexSelector
+  fullName: DREditor.UI.ScrollableIndexSelector.ScrollableIndexSelector
+  nameWithType.vb: ScrollableIndexSelector.New
+  fullName.vb: DREditor.UI.ScrollableIndexSelector.New
+  name.vb: New

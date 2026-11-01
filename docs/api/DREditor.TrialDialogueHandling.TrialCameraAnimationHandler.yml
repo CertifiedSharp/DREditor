@@ -1,0 +1,958 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  commentId: T:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  id: TrialCameraAnimationHandler
+  parent: DREditor.TrialDialogueHandling
+  children:
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.#ctor
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.LineProcess(DREditor.Dialogues.Line)
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.OnLoadToLine(DREditor.Dialogues.Line)
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim(DREditor.Cameras.DRTrialCamera,System.Int32)
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.noCameraAnimationIndex
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.tCAD
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.useRebind
+  langs:
+  - csharp
+  - vb
+  name: TrialCameraAnimationHandler
+  nameWithType: TrialCameraAnimationHandler
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/TrialCameraAnimationHandler.cs
+  assemblies:
+  - DREditor.TrialDialogueHandling
+  namespace: DREditor.TrialDialogueHandling
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("TrialCameraDialogueHandler, ILineProcessor, ILoadToLineable\n\n")]
+
+      public class TrialCameraAnimationHandler : TrialCameraDialogueHandler, ILineProcessor, ILoadToLineable
+    content.vb: >-
+      <ClassHeader("TrialCameraDialogueHandler, ILineProcessor, ILoadToLineable" & vbLf & vbLf)>
+
+      Public Class TrialCameraAnimationHandler Inherits TrialCameraDialogueHandler Implements ILineProcessor, ILoadToLineable
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  - DREditor.TrialDialogueHandling.TrialCameraDialogueHandler
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessor
+  - DREditor.Dialogues.Loading.ILoadToLineable
+  inheritedMembers:
+  - DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.trialCamera
+  - DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.Start
+  - DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.InitializeTrialCamera
+  extensionMethods:
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        TrialCameraDialogueHandler, ILineProcessor, ILoadToLineable
+
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.tCAD
+  commentId: F:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.tCAD
+  id: tCAD
+  parent: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: tCAD
+  nameWithType: TrialCameraAnimationHandler.tCAD
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.tCAD
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/TrialCameraAnimationHandler.cs
+  assemblies:
+  - DREditor.TrialDialogueHandling
+  namespace: DREditor.TrialDialogueHandling
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected TrialCameraAnimDatabase tCAD
+    return:
+      type: DREditor.Dialogues.TrialCameraAnimDatabase
+    content.vb: >-
+      <Divider>
+
+      Protected tCAD As TrialCameraAnimDatabase
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.noCameraAnimationIndex
+  commentId: F:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.noCameraAnimationIndex
+  id: noCameraAnimationIndex
+  parent: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: noCameraAnimationIndex
+  nameWithType: TrialCameraAnimationHandler.noCameraAnimationIndex
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.noCameraAnimationIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/TrialCameraAnimationHandler.cs
+  assemblies:
+  - DREditor.TrialDialogueHandling
+  namespace: DREditor.TrialDialogueHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected int noCameraAnimationIndex
+    return:
+      type: System.Int32
+    content.vb: Protected noCameraAnimationIndex As Integer
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.useRebind
+  commentId: F:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.useRebind
+  id: useRebind
+  parent: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: useRebind
+  nameWithType: TrialCameraAnimationHandler.useRebind
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.useRebind
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/TrialCameraAnimationHandler.cs
+  assemblies:
+  - DREditor.TrialDialogueHandling
+  namespace: DREditor.TrialDialogueHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool useRebind
+    return:
+      type: System.Boolean
+    content.vb: Protected useRebind As Boolean
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.LineProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.LineProcess(DREditor.Dialogues.Line)
+  id: LineProcess(DREditor.Dialogues.Line)
+  parent: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: LineProcess(Line)
+  nameWithType: TrialCameraAnimationHandler.LineProcess(Line)
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.LineProcess(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/TrialCameraAnimationHandler.cs
+  assemblies:
+  - DREditor.TrialDialogueHandling
+  namespace: DREditor.TrialDialogueHandling
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LineProcess(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub LineProcess(currentLine As Line)
+  overload: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.LineProcess*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.OnLoadToLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.OnLoadToLine(DREditor.Dialogues.Line)
+  id: OnLoadToLine(DREditor.Dialogues.Line)
+  parent: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: OnLoadToLine(Line)
+  nameWithType: TrialCameraAnimationHandler.OnLoadToLine(Line)
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.OnLoadToLine(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/TrialCameraAnimationHandler.cs
+  assemblies:
+  - DREditor.TrialDialogueHandling
+  namespace: DREditor.TrialDialogueHandling
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnLoadToLine(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub OnLoadToLine(currentLine As Line)
+  overload: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.OnLoadToLine*
+  implements:
+  - DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim(DREditor.Cameras.DRTrialCamera,System.Int32)
+  commentId: M:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim(DREditor.Cameras.DRTrialCamera,System.Int32)
+  id: TriggerCamAnim(DREditor.Cameras.DRTrialCamera,System.Int32)
+  parent: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: TriggerCamAnim(DRTrialCamera, int)
+  nameWithType: TrialCameraAnimationHandler.TriggerCamAnim(DRTrialCamera, int)
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim(DREditor.Cameras.DRTrialCamera, int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/TrialCameraAnimationHandler.cs
+  assemblies:
+  - DREditor.TrialDialogueHandling
+  namespace: DREditor.TrialDialogueHandling
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void TriggerCamAnim(DRTrialCamera trialCamera, int camAnimIdx)
+    parameters:
+    - id: trialCamera
+      type: DREditor.Cameras.DRTrialCamera
+      description: ''
+    - id: camAnimIdx
+      type: System.Int32
+      description: ''
+    content.vb: Protected Overridable Sub TriggerCamAnim(trialCamera As DRTrialCamera, camAnimIdx As Integer)
+  overload: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim*
+  nameWithType.vb: TrialCameraAnimationHandler.TriggerCamAnim(DRTrialCamera, Integer)
+  fullName.vb: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim(DREditor.Cameras.DRTrialCamera, Integer)
+  name.vb: TriggerCamAnim(DRTrialCamera, Integer)
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.#ctor
+  commentId: M:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: TrialCameraAnimationHandler()
+  nameWithType: TrialCameraAnimationHandler.TrialCameraAnimationHandler()
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TrialCameraAnimationHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/TrialCameraAnimationHandler.cs
+  assemblies:
+  - DREditor.TrialDialogueHandling
+  namespace: DREditor.TrialDialogueHandling
+  syntax:
+    content: public TrialCameraAnimationHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.#ctor*
+  nameWithType.vb: TrialCameraAnimationHandler.New()
+  fullName.vb: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.TrialDialogueHandling
+  commentId: N:DREditor.TrialDialogueHandling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.TrialDialogueHandling
+  nameWithType: DREditor.TrialDialogueHandling
+  fullName: DREditor.TrialDialogueHandling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.TrialDialogueHandling
+    name: TrialDialogueHandling
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.TrialDialogueHandling
+    name: TrialDialogueHandling
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler
+  commentId: T:DREditor.TrialDialogueHandling.TrialCameraDialogueHandler
+  parent: DREditor.TrialDialogueHandling
+  isExternal: true
+  href: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.html
+  name: TrialCameraDialogueHandler
+  nameWithType: TrialCameraDialogueHandler
+  fullName: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler
+- uid: DREditor.Dialogues.LineReading.ILineProcessor
+  commentId: T:DREditor.Dialogues.LineReading.ILineProcessor
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  name: ILineProcessor
+  nameWithType: ILineProcessor
+  fullName: DREditor.Dialogues.LineReading.ILineProcessor
+- uid: DREditor.Dialogues.Loading.ILoadToLineable
+  commentId: T:DREditor.Dialogues.Loading.ILoadToLineable
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  name: ILoadToLineable
+  nameWithType: ILoadToLineable
+  fullName: DREditor.Dialogues.Loading.ILoadToLineable
+- uid: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.trialCamera
+  commentId: F:DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.trialCamera
+  parent: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler
+  isExternal: true
+  href: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.html#DREditor_TrialDialogueHandling_TrialCameraDialogueHandler_trialCamera
+  name: trialCamera
+  nameWithType: TrialCameraDialogueHandler.trialCamera
+  fullName: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.trialCamera
+- uid: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.Start
+  commentId: M:DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.Start
+  parent: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler
+  isExternal: true
+  href: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.html#DREditor_TrialDialogueHandling_TrialCameraDialogueHandler_Start
+  name: Start()
+  nameWithType: TrialCameraDialogueHandler.Start()
+  fullName: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.Start()
+  spec.csharp:
+  - uid: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.Start
+    name: Start
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.html#DREditor_TrialDialogueHandling_TrialCameraDialogueHandler_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.Start
+    name: Start
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.html#DREditor_TrialDialogueHandling_TrialCameraDialogueHandler_Start
+  - name: (
+  - name: )
+- uid: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.InitializeTrialCamera
+  commentId: M:DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.InitializeTrialCamera
+  parent: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler
+  isExternal: true
+  href: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.html#DREditor_TrialDialogueHandling_TrialCameraDialogueHandler_InitializeTrialCamera
+  name: InitializeTrialCamera()
+  nameWithType: TrialCameraDialogueHandler.InitializeTrialCamera()
+  fullName: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.InitializeTrialCamera()
+  spec.csharp:
+  - uid: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.InitializeTrialCamera
+    name: InitializeTrialCamera
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.html#DREditor_TrialDialogueHandling_TrialCameraDialogueHandler_InitializeTrialCamera
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.InitializeTrialCamera
+    name: InitializeTrialCamera
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraDialogueHandler.html#DREditor_TrialDialogueHandling_TrialCameraDialogueHandler_InitializeTrialCamera
+  - name: (
+  - name: )
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<TrialCameraAnimationHandler>(TrialCameraAnimationHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<TrialCameraAnimationHandler>(TrialCameraAnimationHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.TrialDialogueHandling.TrialCameraAnimationHandler>(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of TrialCameraAnimationHandler)(TrialCameraAnimationHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+  name.vb: GetFieldNames(Of TrialCameraAnimationHandler)(TrialCameraAnimationHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<TrialCameraAnimationHandler>(TrialCameraAnimationHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<TrialCameraAnimationHandler>(TrialCameraAnimationHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.TrialDialogueHandling.TrialCameraAnimationHandler>(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of TrialCameraAnimationHandler)(TrialCameraAnimationHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+  name.vb: GetFieldValues(Of TrialCameraAnimationHandler)(TrialCameraAnimationHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<TrialCameraAnimationHandler>(TrialCameraAnimationHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<TrialCameraAnimationHandler>(TrialCameraAnimationHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.TrialDialogueHandling.TrialCameraAnimationHandler>(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of TrialCameraAnimationHandler)(TrialCameraAnimationHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+  name.vb: DeepCopy(Of TrialCameraAnimationHandler)(TrialCameraAnimationHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.TrialDialogueHandling.TrialCameraAnimationHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler
+    name: TrialCameraAnimationHandler
+    isExternal: true
+    href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Dialogues.Loading
+  commentId: N:DREditor.Dialogues.Loading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Loading
+  nameWithType: DREditor.Dialogues.Loading
+  fullName: DREditor.Dialogues.Loading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase
+  commentId: T:DREditor.Dialogues.TrialCameraAnimDatabase
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  name: TrialCameraAnimDatabase
+  nameWithType: TrialCameraAnimDatabase
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.LineProcess*
+  commentId: Overload:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.LineProcess
+  isExternal: true
+  href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html#DREditor_TrialDialogueHandling_TrialCameraAnimationHandler_LineProcess_DREditor_Dialogues_Line_
+  name: LineProcess
+  nameWithType: TrialCameraAnimationHandler.LineProcess
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.LineProcess
+- uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineProcessor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  name: LineProcess(Line)
+  nameWithType: ILineProcessor.LineProcess(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+    name: LineProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+    name: LineProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.OnLoadToLine*
+  commentId: Overload:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.OnLoadToLine
+  isExternal: true
+  href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html#DREditor_TrialDialogueHandling_TrialCameraAnimationHandler_OnLoadToLine_DREditor_Dialogues_Line_
+  name: OnLoadToLine
+  nameWithType: TrialCameraAnimationHandler.OnLoadToLine
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.OnLoadToLine
+- uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.ILoadToLineable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  name: OnLoadToLine(Line)
+  nameWithType: ILoadToLineable.OnLoadToLine(Line)
+  fullName: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+    name: OnLoadToLine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+    name: OnLoadToLine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim*
+  commentId: Overload:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim
+  isExternal: true
+  href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html#DREditor_TrialDialogueHandling_TrialCameraAnimationHandler_TriggerCamAnim_DREditor_Cameras_DRTrialCamera_System_Int32_
+  name: TriggerCamAnim
+  nameWithType: TrialCameraAnimationHandler.TriggerCamAnim
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TriggerCamAnim
+- uid: DREditor.Cameras.DRTrialCamera
+  commentId: T:DREditor.Cameras.DRTrialCamera
+  parent: DREditor.Cameras
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Cameras/DRTrialCamera.cs
+  name: DRTrialCamera
+  nameWithType: DRTrialCamera
+  fullName: DREditor.Cameras.DRTrialCamera
+- uid: DREditor.Cameras
+  commentId: N:DREditor.Cameras
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Cameras
+  nameWithType: DREditor.Cameras
+  fullName: DREditor.Cameras
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Cameras
+    name: Cameras
+    isExternal: true
+    href: DREditor.Cameras.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Cameras
+    name: Cameras
+    isExternal: true
+    href: DREditor.Cameras.html
+- uid: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.#ctor*
+  commentId: Overload:DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.#ctor
+  isExternal: true
+  href: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.html#DREditor_TrialDialogueHandling_TrialCameraAnimationHandler__ctor
+  name: TrialCameraAnimationHandler
+  nameWithType: TrialCameraAnimationHandler.TrialCameraAnimationHandler
+  fullName: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.TrialCameraAnimationHandler
+  nameWithType.vb: TrialCameraAnimationHandler.New
+  fullName.vb: DREditor.TrialDialogueHandling.TrialCameraAnimationHandler.New
+  name.vb: New
