@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Starting a Prologue | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Starting a Prologue | DREditor API ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="starting-a-prologue">Starting a Prologue</h1>
+<div class="page-author text-secondary mb-4 p-2 border-bottom" style="font-size: 0.95rem;">  <i class="bi bi-person-fill me-1"></i> <strong>Author:</strong> Benjamin "Sweden" Jillson</div>
+<h2 id="setting-up-the-room-state-manager">Setting up the Room State Manager</h2>
+<ul>
+<li>Search in the project window for the Room_State_Manager and put it into the scene, make sure it's position is 0,0,0.</li>
+<li>Right Click Room_State_Manager: DREditor/Create Project Prefab Variant.</li>
+<li>Open up your new project prefab variant by selecting &quot;Open&quot; in the top right.</li>
+<li>Select &quot;Actor&quot; in the hierarchy.</li>
+<li>Fill out the Character Database field.</li>
+<li>Ctrl + S to save.</li>
+</ul>
+<h2 id="setting-up-the-starting-dialogue-for-a-game">Setting up the Starting Dialogue for a Game</h2>
+<ul>
+<li>In the project window search bar, type: DRE_Start_Alone_Scene</li>
+<li>Click and drag it into your first area.</li>
+<li>Create a new Folder in your Dialogues folder call it &quot;Prologue&quot; to keep things organized.</li>
+<li>Create a starting Dialogue with Right Click: Create/DREditor/Dialogues/Dialogue.</li>
+<li>Ensure that your Dialogue's first line must start with a CG, if you do not have one, feel free to use the black screen. To make a CG Event, you can do so by using the drop down under dialogue events under a dialogue line and select &quot;CGDisplay&quot;. To end the CG on another line, simply add a CGDisplay event and don't fill it in.</li>
+<li>Once you complete your starting dialogue. Fill out the Starting Dialogue Field on the DRE_Start_Alone_Scene.</li>
+<li>In the inspector, select the &quot;Add Component&quot; button and type &quot;Spawnable&quot; and add that component to the game object.</li>
+<li>Right Click DRE_Start_Alone_Scene: DREditor/Create Project Prefab Variant</li>
+<li>Open up your newly made prefab variant. Under the Spawnable Component, to the left there are 3 dots, once clicked, you should see an option that says &quot;Initialize Destroy Call&quot; click it.</li>
+<li>Ctrl + S to save.</li>
+<li>Now you can use DRE_Start_Alone_Scene in a Room Save.</li>
+</ul>
+<h2 id="building-a-room-save">Building a Room Save</h2>
+<ul>
+<li>On the Room State Manager, if you haven't already, Press the &quot;Initialize Builder&quot; Button.</li>
+<li>In your project folder, go to where your character prefabs are.</li>
+<li>You can click and drag them into the scene, place them wherever you like.</li>
+<li>Click on your character in the hierarchy, in the inspector window, under the Actor Script, there is a drop down called &quot;Conversations&quot;.</li>
+<li>Add a new conversation by hitting the &quot;+&quot; button.</li>
+<li>Assign the dialogue you want the character to have by filling out the top most dialogue field on the characters conversation.</li>
+<li>Once you're ready to create your room save, just go to your Room State Manager.</li>
+<li>Select the objective you want the character and it's conversation to be available at.</li>
+<li>Click &quot;Create Room Save&quot;.</li>
+<li>Once you've created your room save, you can click the &quot;Clear All&quot; Button.</li>
+<li>Ctrl + S to save the scene.</li>
+</ul>
+<h3 id="overwriting-a-room-save-updating-a-room-save">Overwriting a Room Save (Updating a Room Save)</h3>
+<ul>
+<li>Press the load button on the Room State Manager for the save you want to edit.</li>
+<li>It should load the room save, simply edit whatever you want changed.</li>
+<li>Press Overwrite on the Room State Manager.</li>
+<li>Confirm the Overwrite.</li>
+<li>Press the &quot;Clear All&quot; button.</li>
+<li>Ctrl + S to save the scene.</li>
+</ul>
+<h2 id="triggering-a-progression-flag-from-dialogue">Triggering a Progression Flag From Dialogue</h2>
+<ul>
+<li>Click on your dialogue asset and scroll to the very bottom.</li>
+<li>Click the &quot;Trigger Flag&quot; Button</li>
+<li>Here you can select what flags you want to set as triggered once the dialogue ends.</li>
+</ul>
+<h2 id="rules-of-thumb-for-making-objectivesprogression-per-chapter">Rules of Thumb for making Objectives/Progression Per Chapter</h2>
+<ul>
+<li>The first objectives being daily life, and however many flags you need.</li>
+<li>If you are required to talk to a character in order to leave a room or progress, then it will have it's own progression flag.</li>
+<li>The investigation objective at minimum must as many flags as there are truth bullets for that chapter + 1 , the +1 being the flag to notify that all truth bullet flags have been completed.</li>
+<li>The Trial Objective only really needs 1 flag, that being that the trial is completed, which should be triggered on the final trial dialogue asset played in the trial.</li>
+<li>A Post-Trial Objective that only really needs 1 flag to represent that the post trial (and therefore the chapter) has been completed.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

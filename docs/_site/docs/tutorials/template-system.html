@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Template System | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Template System | DREditor API ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="template-system">Template System</h1>
+<div class="page-author text-secondary mb-4 p-2 border-bottom" style="font-size: 0.95rem;">  <i class="bi bi-person-fill me-1"></i> <strong>Author:</strong> Benjamin "Sweden" Jillson</div>
+<p>In order to make things simpler for the user, DREditor has many templates, however not all of them are completely filled out. There are tons of templates that need context for your specific project in order to for those systems to function.</p>
+<p>Therefore, you'll notice that a lot of names of game objects will say &quot;Template&quot; or &quot;ETemplate&quot; or &quot;Shell&quot; or Neither. Each of these symbolizes what steps need to be taken in order for that template to be usable or for it to function properly. In order to use these templates to our advantage. <strong>It is essential that anything with a template suffix should be turned into a prefab variant where you replace the &quot;Template&quot; or &quot;ETemplate&quot; part of the name with the acronym of your project. Detailed below.</strong> This is done for multiple reasons, one being organizational purposes, the second being so that the templates in your imported samples folder can be updated and/or replaced.</p>
+<p>As an example, if a new DREditor Version drops and there's mention of a template change, after updating your project through DREditor/Dependencies/Update Package Wizard you can go to the package manager and click on the package that was updated and there should be a Samples section you can click on, and there should be a button that says &quot;Import&quot; or &quot;Re-Import&quot;.
+<strong>This will replace your Templates in your Samples folder, therefore it is a rule of thumb in DREditor to never edit a template otherwise when you reimport your samples , your work may be overwritten! This also applies to animations on the templates!</strong></p>
+<h2 id="no-suffix">No Suffix</h2>
+<p>If a prefab in DREditor does not have any suffix of &quot;Template&quot; or &quot;ETemplate&quot; then it is usually a system that either does not need setting up, or is already filled out for you by default. That said, if you wish to change anything on these, you should make a Project Prefab Variant of it so that in the future data won't get overwritten.</p>
+<h2 id="etemplate">ETemplate</h2>
+<p>Short for &quot;Editable Template&quot;, these are templates that just need to be filled out. Simply check the fields on the scripts on the game object that are empty and fill them in, whatever they may be. A majority of the time, it's databases or simple things that may not even need a tutorial for.</p>
+<h2 id="template">Template</h2>
+<p>There are likely more Templates or ETemplates inside of this template. They are likely a larger system broken up into smaller systems. Where in order to fully &quot;fill out&quot; the template, all of the other templates inside of the template must be filled out or wired to each other <em>first</em> for the template to be considered &quot;filled&quot;. Depending on the circumstance, you may need to unpack a template into the shell, <em>then</em> make it into a Project Prefab Variant in order to use it. (See Below)</p>
+<h2 id="shells">Shells</h2>
+<p>You'll notice that Templates are Unity Prefab Variants already. Meaning there's an underlying prefab that was built off in order to make the Template. This prefab is referred to as the &quot;Shell&quot;.  The shells contain very little, like the hollowed out state of whatever process it holds. This tends to be scripts the template uses that we know will never change.</p>
+<h2 id="making-a-project-prefab-variant">Making A Project Prefab Variant</h2>
+<p>A &quot;Project Prefab Variant&quot; is simply the name given to a Unity Prefab Variant of a DREditor Template for your specific project. Project prefabs are commonly suffixed with the acronym of the project.</p>
+<ul>
+<li>Right click on a template in the hierarchy.</li>
+<li>DREditor/Create Project Prefab Variant, A wizard will pop up.</li>
+<li>The only field you need to fill out is the Suffix. Simply type the acronym for your project.
+<ul>
+<li>Example 1: Project: Eden's Garden =&gt; EG  or PJEG</li>
+<li>Example 2: Kill/Cure: Beautiful Vice =&gt; KC or KCBV</li>
+<li>Example 3: The Uzujigoku Massacre =&gt; TUM</li>
+</ul>
+</li>
+<li>If you like your acronym, and you know you won't be changing it in the future. You can check the &quot;Permanently Use Settings&quot; check box and from now on you won't have to type your acronym every single time you want to create a project prefab variant.</li>
+<li>If for what ever reason you don't want to auto set this, you can just click &quot;Create&quot;.</li>
+<li>At this point the system will have updated the prefab in the hierarchy with your new project prefab variant.</li>
+<li>When you left click on the object in the hierarchy, in the inspector window to the right, you should see 2 buttons &quot;Select&quot; and &quot;Open&quot;.</li>
+<li>You can click on &quot;Open&quot; and from there you can start working on your prefab and applying changes safely.</li>
+</ul>
+<h2 id="unpacking-a-template-for-the-shell">Unpacking a Template for the Shell.</h2>
+<p>Sometimes, when trying to edit a template, unity may stop you, saying that you can't mess with part of a prefab structure (See below image). This usually means you'll have to unpack a template into it's shell <em>then</em> make your Project Prefab Variant so you can edit what you need to.
+To do this you can Right Click:</p>
+<ul>
+<li>Prefab/Unpack.  <strong>Do NOT press &quot;Unpack Completely!</strong></li>
+<li>Then, right click again and follow the steps to make your Project Prefab Variant.</li>
+<li>Now you should be able to open your Project Prefab Variant, and make the edits you want.</li>
+</ul>
+<img src="https://files.catbox.moe/opnqtr.png" width="25%" alt="prefabinstance">
+<h2 id="templates-with-animations">Templates with Animations</h2>
+<p>If you're wanting to use an animation present on the template and edit it. You can do this <strong>if you've already made your prefab variant of the template for your project.</strong></p>
+<ul>
+<li>Right click on the game object containing the animator component and go to DREditor/Duplicate Insert Animation.</li>
+<li>This will let you choose an output folder to put your animation, be sure to keep things as organized as you can!</li>
+<li>Once you've selected your folder, it should duplicate the animation for you to edit it as you see fit, and it should automatically plug in the newly duplicated animator.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

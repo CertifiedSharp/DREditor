@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Trials | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Trials | DREditor API ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="trials">Trials</h1>
+<div class="page-author text-secondary mb-4 p-2 border-bottom" style="font-size: 0.95rem;">  <i class="bi bi-person-fill me-1"></i> <strong>Author:</strong> Benjamin "Sweden" Jillson</div>
+<h2 id="initializing-trial-scene-setup">Initializing Trial Scene Setup</h2>
+<ul>
+<li>Open up your GYM_Trial scene, or whatever you named your trial scene.</li>
+<li>Mass Select from the Controls_UI_Canvas_ETemplate to the Letter_Box_Canvas</li>
+<li>Right Click: Delete</li>
+<li>Menu Item: DREditor/Utility/Scriptable Object Assigner</li>
+<li>Click the &quot;+&quot; button on the Scriptable Objects list.</li>
+<li>You're going to fill the field with your Character Database</li>
+<li>Click &quot;Assign to All Components In Scenes&quot;</li>
+<li>Go to your GYM_MainMenu scene.</li>
+<li>Mass Select your Global Systems (Select everything that is NOT from the Build_Version_Canvas to the Fast_Forward_To_Line_Tool)</li>
+<li>Right Click: Copy</li>
+<li>Move back to your GYM_Trial scene.</li>
+<li>Right Click: Paste to the hierarchy.</li>
+<li>Reorganize things to where global systems are separated from the trial systems. (Click and drag them above the ====ENVIRONMENT==== game object.)</li>
+<li>Open your Dialogue_System Prefab</li>
+<li>Ensure that the 3D_UI_Canvas's canvas component is disabled. (Check box next to the script name)</li>
+<li>Make sure that you add the trial scene to the Build Scene List (File/Build)</li>
+</ul>
+<h2 id="setting-up-your-trial-camera-animations">Setting Up Your Trial Camera Animations</h2>
+<ul>
+<li>In your root project folder, Right Click: Create/Folder called Animations</li>
+<li>Inside that folder, create another folder called: Trial Camera</li>
+<li>In your Hierarchy, Left click DRCameraAnchor</li>
+<li>Right Click DRCameraAnchor: DREditor/Create Project Prefab Variant</li>
+<li>In the inspector window, press the &quot;Open&quot; button</li>
+<li>Right Click DRCamera_Pivot: DREditor/Duplicate Insert Animation</li>
+<li>Make sure that the target directory field says Assets/Animations/Trial Camera</li>
+<li>Set the Affix Separator to &quot;None&quot;.</li>
+<li>Click &quot;Duplicate&quot;, this will duplicate all the template trial animations.</li>
+<li>In your project window, Right Click: Create/DREditor/Trials/Camera Anim Database</li>
+<li>In your project folder you'll find an Asset called &quot;TrialCamera&quot; this is the animator controller for the trial camera.</li>
+<li>Click and drag that asset into the Trial Camera Animator Controller Field.</li>
+<li>Click &quot;Import Animation Clips&quot;</li>
+</ul>
+<h2 id="setting-up-the-trial-dialogue-minigame-manager-timeup-and-continue_confirm-dialogues">Setting Up The Trial Dialogue Minigame Manager, TimeUp and Continue_Confirm Dialogues</h2>
+<ul>
+<li>In your Dialogues folder, make a new folder &quot;Trial&quot;.</li>
+<li>Inside that folder, Right Click: Create/DREditor/Dialogues/Trial Dialogue</li>
+<li>Name it Continue_Confirm</li>
+<li>Ctrl + D to duplicate it, press F2 to rename the duplicate to TimeUp.</li>
+<li>Fill out both dialogues with at least one line from your protag for when they refuse to give up after a game over and the line they say when they run out of time in a minigame.</li>
+<li>In the hierarchy select Trial_Dialogue_Minigame</li>
+<li>Fill out the continue confirm and time up fields with the dialogues you've just made.</li>
+<li>Right Click Trial_Dialogue_Minigame_Template: DREditor/Create Project Prefab Variant</li>
+<li>Press the Open Button</li>
+<li>In the Hierarchy Search Bar search for Trial_Camera_Animation_Handler There should be 2, select both or one at a time.</li>
+<li>On both, Fill in the TCAD field with the Trial Camera Anim Database you made in the previous tutorials.</li>
+</ul>
+<h2 id="setting-up-the-trial-discussion-minigame-type">Setting Up the Trial Discussion Minigame Type</h2>
+<ul>
+<li>In your Resources folder, make an new Folder named: Trial</li>
+<li>Right Click: Create/DREditor/Trials/Minigame Type</li>
+<li>Name it: Trial Discussion</li>
+<li>Under the &quot;Type Name&quot; field set it to the same name: Trial Discussion</li>
+<li>Set the controls key to: td</li>
+<li>Lock the inspector by clicking the lock icon in the top right of the window.</li>
+<li>Click on your Trial_Dialogue_Minigame Project Prefab Template in the hierarchy.</li>
+<li>Click the &quot;Select&quot; button.</li>
+<li>It should have updated your project window, showing you where the Prefab is.</li>
+<li>Click and drag it into the &quot;Prefab&quot; field in the inspector window.</li>
+<li>Press the &quot;+&quot; button displayed under the previously mentioned prefab field.</li>
+<li>In the game object field, click and drag your prefab again.</li>
+<li>Click on the &quot;No Function&quot; drop down.</li>
+<li>Hover over &quot;TrialDialogueMinigame&quot;</li>
+<li>Select &quot;StartMinigame&quot; under the Dynamic ScriptableObject section.</li>
+<li>You can now add this to an minigame type database.</li>
+</ul>
+<h2 id="setting-up-a-trial-discussion">Setting Up a Trial Discussion</h2>
+<ul>
+<li>You can now make Trial Discussion assets, Right Click: Create/DREditor/Dialogues/Trial Discussion and just fill in the fields with Trial Dialogues.</li>
+<li>The common naming convention for trial discussions is: TD_ChapterNumber_DiscussionNumber with Trial Dialogues named: TD_ChapterNumber_DiscussionNumber_DialogueNumber</li>
+</ul>
+<h2 id="setting-up-the-trial-minigame-type-database">Setting Up the Trial Minigame Type Database</h2>
+<ul>
+<li>In your Resources/Trials folder.</li>
+<li>Right Click: Create/DREditor/Trials/Minigame Type Database</li>
+<li>Add your Trial Discussion minigame type to the databases list.</li>
+</ul>
+<h2 id="creating-a-trial-builder-asset">Creating a Trial Builder Asset</h2>
+<ul>
+<li>In an organized folder in the project window.</li>
+<li>Right Click: Create/DREditor/Trials/Trial Builder Asset</li>
+<li>Click the &quot;Add a new part of the trial&quot; button.</li>
+<li>From the dropdown you can select which minigame type you want.</li>
+<li>Fill the field with the minigame asset for that minigame's type. (Trial Discussion Assets for the Trial Discussion type, etc.)</li>
+</ul>
+<h2 id="setting-up-your-trial-manager-prefab">Setting Up Your Trial Manager Prefab</h2>
+<ul>
+<li>Left Click on the Trial_Manager_Template in the hierarchy.</li>
+<li>Under the Trial Sequencer Script, fill in the trial discussion type with the trial discussion type you made previously.</li>
+<li>Right Click Trial_Manager_Template: DREditor/Create Project Prefab Variant</li>
+<li>Under the Trial Manager Script you can now add Trials per chapter. Make sure they are kept in the proper order. (Prologue/Chapter 1 first and so on)</li>
+</ul>
+<h2 id="setting-up-your-trial-characters">Setting Up Your Trial Characters</h2>
+<ul>
+<li>Menu Item: DREditor/Characters/Auto Setup Trial Character</li>
+<li>Under the Spawn Settings header, look for the &quot;Ignored Characters&quot; list.</li>
+<li>Add your Tutorial character to this list.</li>
+<li>The only other option you should ever really mess with is the &quot;Number of Objects&quot; dial to set up how many characters will participate in the trial. (Not Counting Hosts)</li>
+<li>Use the Dropdowns in the circle UI to set up each characters assigned seats in the trial. Where the top most seat will be in front of the brown host chair in the scene template.</li>
+<li>When ready, click the &quot;Create&quot; button at the bottom.</li>
+<li>Ctrl + S to save the scene.</li>
+<li>To do your hosts, essentially do this same process, but fill the &quot;Ignored Characters&quot; Field with the already created Characters + Tutorial.</li>
+<li>Once they spawn, you can simply just move the host to where you wish.</li>
+</ul>
+<h2 id="post-trial-scene">Post Trial Scene</h2>
+<p>After the results of a trial, what usually happens is a dialogue sequence. So we'll set up the Trial scene as a TPFD (2.5D) scene for the game to transition out of Trial Gameplay.</p>
+<ul>
+<li>Select your Trial Scene in your project window.</li>
+<li>Ctrl + D to duplicate it. F2 and rename it to something like: GYM_Trial2D</li>
+<li>Open it up.</li>
+<li>Delete everything except for the ====ENVIRONMENT==== game object in the hierarchy.</li>
+<li>Under the ====ENVIRONMENT==== game object's Character object, delete the Trial Characters present.</li>
+<li>Click on the ====ENVIRONMENT==== game object under the transform component near &quot;Scale&quot; click on the chain icon.</li>
+<li>Set the x scale to 1/3 and hit enter.</li>
+<li>The entire room should now scale down to a smaller size. (The Trial scene is 3x bigger so we're scaling it down.)</li>
+<li>In your project window, search for your Room State Manager, and Set up the room as you would a TPFD Room.</li>
+<li>You'll want an On Load Actuator with a dialogue subsequent to start up the post trial dialogue scene.</li>
+<li>It is suggested that the dialogue ends on a black CG for smoother transition to the end of the chapter.</li>
+<li>Make sure that you add this scene to the Build Scene List (File/Build)</li>
+<li>At the bottom of your Trial Builder asset, fill out the field with GYM_Trial2D so that when a trial ends, it moves to that scene. (Or you can fill in the gate field) (Do NOT fill in both)</li>
+</ul>
+<h2 id="finishing-a-chapter">Finishing a Chapter</h2>
+<ul>
+<li>On the final dialogue asset that's played, scroll to the bottom and click &quot;Enter Scene&quot;</li>
+<li>Write GYM_SavePoint or whatever your Save point scene name is.</li>
+<li>Open up GYM_SavePoint</li>
+<li>Make sure that you add this scene to the Build Scene List (File/Build)</li>
+<li>Open up GYM_Credits</li>
+<li>Make sure that you add this scene to the Build Scene List (File/Build)</li>
+<li>Assuming all of the steps have been completed in combination with the details of your project, the gameplay loop should now be complete, and you can export a build of your game.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

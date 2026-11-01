@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Triggers | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Triggers | DREditor API ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="triggers">Triggers</h1>
+<div class="page-author text-secondary mb-4 p-2 border-bottom" style="font-size: 0.95rem;">  <i class="bi bi-person-fill me-1"></i> <strong>Author:</strong> Benjamin "Sweden" Jillson</div>
+<p>Triggers, are game objects that contain 2 types of scripts. Actuators and Subsequents.</p>
+<p>Simply put, the Trigger system can be understood as objects used in Room Building that can be best understood as: <em>&quot;If something happens, the do something.&quot;</em></p>
+<p>As an example, by looking at a trigger game object, you can understand what a trigger does simply by reading what it's individual parts do.</p>
+<p>Example: Actuator: OnLoadActuator | Subsequents: DialogueSubsequent</p>
+<p>Read As: <em>&quot;When the room loads, start dialogue.&quot;</em></p>
+<h2 id="actuators">Actuators</h2>
+<p>Stemming from the definition of a mechanical device that moves or controls or <strong>starts</strong> something, Actuators are categorized as the scripts that decide <em>&quot;How a trigger can be activated, or start.&quot;</em> . There will usually only ever be one Actuator per Game Object.</p>
+<ul>
+<li>OnLoadActuator: Activates the moment the room loads. (You don't need to fill out any info on this script.)</li>
+<li>OLFlagActuator: Activates the moment the room loads, and specific progression flags are or aren't triggered. (Only fill out &quot;Call if Flags are&quot; and &quot;Flags&quot; with the names of the flags that should match &quot;Call if Flags are&quot; in order for the Actuator to activate.)</li>
+<li>HitboxActuator: Activates the moment the player enters the hitbox. (The system will add a hitbox for you to manipulate.)</li>
+</ul>
+<h2 id="subsequents">Subsequents</h2>
+<p>Subsequent: The second half of the trigger system, where they are categorized as the scripts that decide <em>&quot;What a Trigger should do once it's been activated.&quot;</em> or <em>&quot;The subsequent action after actuation.&quot;</em> . There is no limit to the amount of Subsequents per game object.</p>
+<ul>
+<li>DialogueSubsequent: Responds to Activation by: Automatically starting dialogue.</li>
+<li>LDialogueSubsequent: Responds to Activation by: Automatically starting dialogue depending on local dialogue evaluation.</li>
+<li>MovePlayerSubsequent: Responds to Activation by: Moving the Player to the position outlined on the subsequent.</li>
+</ul>
+<h2 id="creating-a-trigger">Creating a Trigger</h2>
+<ul>
+<li>In the hierarchy, Right Click: Create Empty</li>
+<li>In the inspector window, click the &quot;Add Component&quot; button in the inspector, and then type the names of any of the Actuator scripts mentioned above.</li>
+<li>Click the &quot;Add Component&quot; button in the inspector, and then type the names of any of the Subsequent scripts mentioned above.</li>
+<li>Once both scripts have been filled out. The trigger is considered complete, and can be used in combination with Room Building.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

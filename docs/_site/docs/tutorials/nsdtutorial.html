@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Non-Stop Debate | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Non-Stop Debate | DREditor API ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="non-stop-debate">Non-Stop Debate</h1>
+<div class="page-author text-secondary mb-4 p-2 border-bottom" style="font-size: 0.95rem;">  <i class="bi bi-person-fill me-1"></i> <strong>Author:</strong> Benjamin "Sweden" Jillson</div>
+<p><code>ALERT: You must have Truth Bullets and a Difficulty State Database made in order to use this functionality!</code></p>
+<h2 id="create-your-nsd-manager">Create your NSD Manager</h2>
+<ul>
+<li>In your project window, in the search bar, look for NSD_Manager_Template</li>
+<li>Click and Drag it into the hierarchy.</li>
+<li>Set it's X and Z position to 0</li>
+<li>Set it's Y position to 2.01</li>
+<li>Right Click NSD_Manager_Template: DREditor/Create Project Prefab Variant</li>
+<li>Now Right Click: Delete the NSD Manager in the hierarchy.</li>
+<li>In your project window, go to where your trial scene is.</li>
+<li>Left Click to select it, then Ctrl + D to duplicate it.</li>
+<li>Press F2 to rename it GYM_NSD</li>
+<li>Open up GYM_NSD.</li>
+<li>In your project window, Search for your projects NSD_Manager and click and drag it into the scene.</li>
+<li>Press the Open Button</li>
+<li>In the Hierarchy Search Bar search for Trial_Camera_Animation_Handler and select it.</li>
+<li>Fill in the TCAD field with the Trial Camera Anim Database you made in the previous tutorials.</li>
+<li>Select your Trial_Manager in the hierarchy. Uncheck &quot;Play on Start&quot;</li>
+<li>On the Global_Fade_Canvas Press the &quot;Toggle Fade State&quot; Button.</li>
+<li>Ctrl + S to save the scene.</li>
+</ul>
+<h2 id="setting-up-the-nsd-minigame-type">Setting Up the NSD Minigame Type</h2>
+<ul>
+<li>In your Resources/Trials folder.</li>
+<li>Right Click: Create/DREditor/Trials/Minigame Type</li>
+<li>Name it: Non-Stop Debate</li>
+<li>Under the &quot;Type Name&quot; field set it to the same name: Non-Stop Debate</li>
+<li>Set the controls key to: nsd</li>
+<li>Lock the inspector by clicking the lock icon in the top right of the window.</li>
+<li>Click on your NSD_Manager Project Prefab Template in the hierarchy.</li>
+<li>Click the &quot;Select&quot; button.</li>
+<li>It should have updated your project window, showing you where the Prefab is.</li>
+<li>Click and drag it into the &quot;Prefab&quot; field in the inspector window.</li>
+<li>Press the &quot;+&quot; button displayed under the previously mentioned prefab field.</li>
+<li>In the game object field, click and drag your prefab again.</li>
+<li>Click on the &quot;No Function&quot; drop down.</li>
+<li>Hover over &quot;NSDManager&quot;</li>
+<li>Select &quot;StartMinigame&quot; under the Dynamic ScriptableObject section.</li>
+<li>You can now add this to an minigame type database.</li>
+</ul>
+<h2 id="setting-up-dialogue-and-nsd-gradients">Setting Up Dialogue and NSD Gradients</h2>
+<ul>
+<li>In your project window, go to the folder path: TextMesh Pro/Examples &amp; Extras/Resources/Color Gradient Presets</li>
+<li>Ctrl + D any of the existing gradients</li>
+<li>F2 and rename it to: HitText</li>
+<li>Repeat the last 2 processes twice, naming them: ConsentText and ResponseText</li>
+<li>Set all their color modes to Vertical Gradient, and set each top and bottom color.</li>
+<li>HitText: Top: #FEBF2DFF Bottom: #F78C1EFF</li>
+<li>ConsentText: Top: #14B8FFFF Bottom: #317BFFFF</li>
+<li>ResponseText: Top: #46CBE6FF Bottom: #FFFFFFFF</li>
+<li>Hittable Text will not display properly in NSD and in regular dialogue, encapsulating dialogue text with the @ symbol will color it with the HitText Gradient. Ex: @Dialogue Text@ Note: You do not need to use the @ symbol when making NSD Text/Panels.</li>
+</ul>
+<h2 id="create-the-phrase-preset-database">Create the Phrase Preset Database</h2>
+<ul>
+<li>In an organized folder, Right Click: Create/DREditor/Minigames/Phrases/Phrase Preset Database</li>
+<li>In the inspector window of the newly created asset. In the top right there should be a symbol that looks like dials and sliders.</li>
+<li>Clicking on it should allow you to select a preset. There should be one available to you, double click it.</li>
+<li>This should fill out the list of presets.</li>
+</ul>
+<h2 id="creating-an-nsd-instance">Creating an NSD Instance</h2>
+<ul>
+<li>In a project folder you've organized: Right Click: Create/DREditor/Minigames/NSD</li>
+<li>Common Naming Convetion is: NSD_ChapterNumber_NSDNumber (NSD_0_0)</li>
+<li>On the surface, the debate is basically no different from regular dialogue, and can be filled out in the exact same way.</li>
+</ul>
+<h2 id="creating-the-end-panel-dialogue">Creating the End Panel Dialogue</h2>
+<ul>
+<li>Right Click: Create/DREditor/Dialogues/Trial Dialogue</li>
+<li>Naming Convention is: NSD_ChapterNumber_NSDNumber_END (NSD_0_0_END)</li>
+<li>Put minimum of one dialogue line from the protagonist.</li>
+<li>On your NSD Asset Fill in the &quot;Ending Panel Group Dialogue&quot; Field with the END Trial Dialogue asset you've just made. If the player makes it to the end of the conversation, this is the conversation that will play before the NSD restarts.</li>
+</ul>
+<h2 id="filling-out-the-nsd-instance">Filling out the NSD Instance</h2>
+<p>After Filling out the debate conversation like you would normal dialogue, we can then edit the details of each panel/line and animate the words being spoken during the debate.
+But because there is literally so much information surrounding NSD, you can view a Full Showcase video going over almost every single detail that goes into creating an instance of these minigames.
+Keep and mind that this recording was made many months before DREditor Release during a Dev log.
+So some things may be slightly different, but a majority should still be relevant.</p>
+<p><a href="https://youtu.be/1Ghg2DkyvBU?si=9-C7XRA9W6iaGfdW&amp;t=404">DREditor Beta Preview: NSD Showcase</a></p>
+<p><a href="https://youtu.be/NjZxHMCHC_U?si=ZTiiSDsewK7mHNuB&amp;t=7037">Fangan Project Tutorial Scouting: NSD Timestamp</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

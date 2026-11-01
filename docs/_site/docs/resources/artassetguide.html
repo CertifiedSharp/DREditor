@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Art Asset Guide | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Art Asset Guide | DREditor API ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="art-asset-guide">Art Asset Guide</h1>
+<div class="page-author text-secondary mb-4 p-2 border-bottom" style="font-size: 0.95rem;">  <i class="bi bi-person-fill me-1"></i> <strong>Author:</strong> Benjamin "Sweden" Jillson</div>
+<p>To start, it is highly recommended that <strong>all assets on your project have their dimension sizes divisible by 4.</strong> This is to prevent bloat in your project in the long run, as unity has a built in compressor that needs asset dimensions divisible by 4.</p>
+<h2 id="cgs-and-fullscreen-assets">CG's and Fullscreen Assets</h2>
+<p>CG's and Fullscreen assets should be 1920x1080, or whatever the default resolution you plan to have for your project. It is highly recommended though to stay within the 1920x1080 rule though.</p>
+<h2 id="videos">Videos</h2>
+<p>Videos are usually considered a full screen asset. Videos shouldn't usually have sound since they can usually synced by adding the audio to FMOD and just calling in normally through dialogue.
+Note that any audio that is left on will still play in the game, however because it is not passed through FMOD, the volume of the audio for the video cannot be changed so at the very least make sure it is not too loud.
+It should also be noted that if you are wanting a video that contains transparency, it <strong>must be exported as a .webm</strong>. Additionally .webm also appears to be relatively optimized so webm's are highly suggested.</p>
+<h2 id="character-sprites">Character Sprites</h2>
+<h3 id="naming-convention">Naming Convention</h3>
+<p>Sprite files should be named appropriately, the best convention being: CharacterFirstName_SpriteCode .
+Examples of this would look like: Damon_1a or Damon_Happy .
+This convention is followed for two reasons: Ensures no additional work needs to be done when writing dialogue syntax, and so that the auto character importer can properly set the sprite codes for the characters sprite.
+Note that while following this convention is not <em>required</em> , be warned that by not doing so you will have to update each sprite's sprite code manually on the character asset.</p>
+<h3 id="dimension-size">Dimension Size</h3>
+<p>It is HIGHLY recommended that your character sprites be dimensions that are 2048x2048, 1024x1024, 512x512, etc. Note that it must stay consistent throughout ALL characters. Otherwise you will have to do much more extra work.
+The reason is so characters are scaled relative to each other, so that their heights in-game match their actual heights.
+<strong>Therefore, it is highly recommended to create a height chart so that artists know how to size the characters proportionately to each other.</strong>
+As an example, here is one of the tallest and one of the shortest characters in Project: Eden's Garden, Wolfgang and Toshiko.</p>
+<img src="https://files.catbox.moe/r22vev.png" width="25%" alt="wolfgang">
+<img src="https://files.catbox.moe/j7q5zx.png" width="25%" alt="toshiko">
+<p>Notice how there's a bunch of empty space around Toshiko? This is so that when we paste both characters on the same canvas, their heights in the game will always be scaled correctly to each other, no matter what.</p>
+<p>Otherwise, character sprites should be good to go!</p>
+<h3 id="replacing-an-imported-sprite">Replacing an Imported Sprite</h3>
+<ul>
+<li>Make sure that the new sprite is named THE EXACT SAME AS THE TEMPORARY ONE.</li>
+<li>Find the sprite you want to replace in your project window. Right Click: Show in Explorer</li>
+<li>Click and drag your new sprite into the folder that pops up.</li>
+<li>Your computer will ask you if you want to replace the existing file, confirm this action.</li>
+<li>Once it's done replacing, you can close the explorer window and go back into unity, it'll recompile, and once it's done, you should see that your sprite has been updated without breaking anything!</li>
+</ul>
+<h2 id="nameplates">Nameplates</h2>
+<p>If you are using image nameplates for your characters, the dimensions size doesn't matter so long as:</p>
+<ul>
+<li>The dimension size is divisible by 4.</li>
+<li>ALL nameplates dimensions sizes are the same.</li>
+</ul>
+<p>To make this easier on artists, it is suggested to <strong>make the nameplate for the character with the longest name first</strong>.
+Whatever the size to the nearest number divisible by 4 is, <em>that</em> will be the dimension size you use for all nameplates.
+A suggested dimension size would be 592x84.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
