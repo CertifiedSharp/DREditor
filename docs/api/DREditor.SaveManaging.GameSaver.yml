@@ -1,0 +1,900 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.SaveManaging.GameSaver
+  commentId: T:DREditor.SaveManaging.GameSaver
+  id: GameSaver
+  parent: DREditor.SaveManaging
+  children:
+  - DREditor.SaveManaging.GameSaver.#ctor
+  - DREditor.SaveManaging.GameSaver.ApplyCurrentData(System.Object)
+  - DREditor.SaveManaging.GameSaver.ClearCurrentData
+  - DREditor.SaveManaging.GameSaver.CurrentDRESaveData
+  - DREditor.SaveManaging.GameSaver.GetData(System.String)
+  - DREditor.SaveManaging.GameSaver.LoadGameFile(System.Object)
+  - DREditor.SaveManaging.GameSaver.SaveGameFile(System.Object)
+  - DREditor.SaveManaging.GameSaver.Start
+  - DREditor.SaveManaging.GameSaver.ToTitleScreen
+  - DREditor.SaveManaging.GameSaver.UpdateGameFromData(System.Object)
+  - DREditor.SaveManaging.GameSaver.firstTimeLoaded
+  - DREditor.SaveManaging.GameSaver.hasLoadedSaveData
+  langs:
+  - csharp
+  - vb
+  name: GameSaver
+  nameWithType: GameSaver
+  fullName: DREditor.SaveManaging.GameSaver
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: 'public abstract class GameSaver : MonoBehaviour, IToTitleScreen'
+    content.vb: Public MustInherit Class GameSaver Inherits MonoBehaviour Implements IToTitleScreen
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - DREditor.SaveManaging.DREGameSaver
+  implements:
+  - DREditor.Services.IToTitleScreen
+  extensionMethods:
+  - DREditor.SaveManaging.GameSaver.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.SaveManaging.GameSaver.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.SaveManaging.GameSaver.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.SaveManaging.GameSaver.hasLoadedSaveData
+  commentId: F:DREditor.SaveManaging.GameSaver.hasLoadedSaveData
+  id: hasLoadedSaveData
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: hasLoadedSaveData
+  nameWithType: GameSaver.hasLoadedSaveData
+  fullName: DREditor.SaveManaging.GameSaver.hasLoadedSaveData
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent hasLoadedSaveData
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected hasLoadedSaveData As BoolWithEvent
+- uid: DREditor.SaveManaging.GameSaver.firstTimeLoaded
+  commentId: F:DREditor.SaveManaging.GameSaver.firstTimeLoaded
+  id: firstTimeLoaded
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: firstTimeLoaded
+  nameWithType: GameSaver.firstTimeLoaded
+  fullName: DREditor.SaveManaging.GameSaver.firstTimeLoaded
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent firstTimeLoaded
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected firstTimeLoaded As BoolWithEvent
+- uid: DREditor.SaveManaging.GameSaver.Start
+  commentId: M:DREditor.SaveManaging.GameSaver.Start
+  id: Start
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: GameSaver.Start()
+  fullName: DREditor.SaveManaging.GameSaver.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.SaveManaging.GameSaver.Start*
+- uid: DREditor.SaveManaging.GameSaver.SaveGameFile(System.Object)
+  commentId: M:DREditor.SaveManaging.GameSaver.SaveGameFile(System.Object)
+  id: SaveGameFile(System.Object)
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: SaveGameFile(object)
+  nameWithType: GameSaver.SaveGameFile(object)
+  fullName: DREditor.SaveManaging.GameSaver.SaveGameFile(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void SaveGameFile(object o = null)
+    parameters:
+    - id: o
+      type: System.Object
+      description: ''
+    content.vb: Public MustOverride Sub SaveGameFile(o As Object = Nothing)
+  overload: DREditor.SaveManaging.GameSaver.SaveGameFile*
+  nameWithType.vb: GameSaver.SaveGameFile(Object)
+  fullName.vb: DREditor.SaveManaging.GameSaver.SaveGameFile(Object)
+  name.vb: SaveGameFile(Object)
+- uid: DREditor.SaveManaging.GameSaver.LoadGameFile(System.Object)
+  commentId: M:DREditor.SaveManaging.GameSaver.LoadGameFile(System.Object)
+  id: LoadGameFile(System.Object)
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: LoadGameFile(object)
+  nameWithType: GameSaver.LoadGameFile(object)
+  fullName: DREditor.SaveManaging.GameSaver.LoadGameFile(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LoadGameFile(object o = null)
+    parameters:
+    - id: o
+      type: System.Object
+      description: ''
+    content.vb: Public Overridable Sub LoadGameFile(o As Object = Nothing)
+  overload: DREditor.SaveManaging.GameSaver.LoadGameFile*
+  nameWithType.vb: GameSaver.LoadGameFile(Object)
+  fullName.vb: DREditor.SaveManaging.GameSaver.LoadGameFile(Object)
+  name.vb: LoadGameFile(Object)
+- uid: DREditor.SaveManaging.GameSaver.UpdateGameFromData(System.Object)
+  commentId: M:DREditor.SaveManaging.GameSaver.UpdateGameFromData(System.Object)
+  id: UpdateGameFromData(System.Object)
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: UpdateGameFromData(object)
+  nameWithType: GameSaver.UpdateGameFromData(object)
+  fullName: DREditor.SaveManaging.GameSaver.UpdateGameFromData(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void UpdateGameFromData(object o = null)
+    parameters:
+    - id: o
+      type: System.Object
+      description: ''
+    content.vb: Public MustOverride Sub UpdateGameFromData(o As Object = Nothing)
+  overload: DREditor.SaveManaging.GameSaver.UpdateGameFromData*
+  nameWithType.vb: GameSaver.UpdateGameFromData(Object)
+  fullName.vb: DREditor.SaveManaging.GameSaver.UpdateGameFromData(Object)
+  name.vb: UpdateGameFromData(Object)
+- uid: DREditor.SaveManaging.GameSaver.GetData(System.String)
+  commentId: M:DREditor.SaveManaging.GameSaver.GetData(System.String)
+  id: GetData(System.String)
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: GetData(string)
+  nameWithType: GameSaver.GetData(string)
+  fullName: DREditor.SaveManaging.GameSaver.GetData(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract DRESaveData GetData(string slotNum)
+    parameters:
+    - id: slotNum
+      type: System.String
+      description: ''
+    return:
+      type: DREditor.Saving.DRESaveData
+      description: ''
+    content.vb: Public MustOverride Function GetData(slotNum As String) As DRESaveData
+  overload: DREditor.SaveManaging.GameSaver.GetData*
+  nameWithType.vb: GameSaver.GetData(String)
+  fullName.vb: DREditor.SaveManaging.GameSaver.GetData(String)
+  name.vb: GetData(String)
+- uid: DREditor.SaveManaging.GameSaver.ApplyCurrentData(System.Object)
+  commentId: M:DREditor.SaveManaging.GameSaver.ApplyCurrentData(System.Object)
+  id: ApplyCurrentData(System.Object)
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: ApplyCurrentData(object)
+  nameWithType: GameSaver.ApplyCurrentData(object)
+  fullName: DREditor.SaveManaging.GameSaver.ApplyCurrentData(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: public abstract void ApplyCurrentData(object o = null)
+    parameters:
+    - id: o
+      type: System.Object
+      description: ''
+    content.vb: Public MustOverride Sub ApplyCurrentData(o As Object = Nothing)
+  overload: DREditor.SaveManaging.GameSaver.ApplyCurrentData*
+  nameWithType.vb: GameSaver.ApplyCurrentData(Object)
+  fullName.vb: DREditor.SaveManaging.GameSaver.ApplyCurrentData(Object)
+  name.vb: ApplyCurrentData(Object)
+- uid: DREditor.SaveManaging.GameSaver.ClearCurrentData
+  commentId: M:DREditor.SaveManaging.GameSaver.ClearCurrentData
+  id: ClearCurrentData
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: ClearCurrentData()
+  nameWithType: GameSaver.ClearCurrentData()
+  fullName: DREditor.SaveManaging.GameSaver.ClearCurrentData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ClearCurrentData()
+    content.vb: Public Overridable Sub ClearCurrentData()
+  overload: DREditor.SaveManaging.GameSaver.ClearCurrentData*
+- uid: DREditor.SaveManaging.GameSaver.ToTitleScreen
+  commentId: M:DREditor.SaveManaging.GameSaver.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: GameSaver.ToTitleScreen()
+  fullName: DREditor.SaveManaging.GameSaver.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.SaveManaging.GameSaver.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.SaveManaging.GameSaver.#ctor
+  commentId: M:DREditor.SaveManaging.GameSaver.#ctor
+  id: '#ctor'
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: GameSaver()
+  nameWithType: GameSaver.GameSaver()
+  fullName: DREditor.SaveManaging.GameSaver.GameSaver()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  syntax:
+    content: protected GameSaver()
+    content.vb: Protected Sub New()
+  overload: DREditor.SaveManaging.GameSaver.#ctor*
+  nameWithType.vb: GameSaver.New()
+  fullName.vb: DREditor.SaveManaging.GameSaver.New()
+  name.vb: New()
+- uid: DREditor.SaveManaging.GameSaver.CurrentDRESaveData
+  commentId: P:DREditor.SaveManaging.GameSaver.CurrentDRESaveData
+  id: CurrentDRESaveData
+  parent: DREditor.SaveManaging.GameSaver
+  langs:
+  - csharp
+  - vb
+  name: CurrentDRESaveData
+  nameWithType: GameSaver.CurrentDRESaveData
+  fullName: DREditor.SaveManaging.GameSaver.CurrentDRESaveData
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/SaveManaging/GameSaver.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.SaveManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public DRESaveData CurrentDRESaveData { get; set; }
+    parameters: []
+    return:
+      type: DREditor.Saving.DRESaveData
+    content.vb: Public Property CurrentDRESaveData As DRESaveData
+  overload: DREditor.SaveManaging.GameSaver.CurrentDRESaveData*
+references:
+- uid: DREditor.SaveManaging
+  commentId: N:DREditor.SaveManaging
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.SaveManaging
+  nameWithType: DREditor.SaveManaging
+  fullName: DREditor.SaveManaging
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.SaveManaging
+    name: SaveManaging
+    isExternal: true
+    href: DREditor.SaveManaging.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.SaveManaging
+    name: SaveManaging
+    isExternal: true
+    href: DREditor.SaveManaging.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.SaveManaging.GameSaver.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<GameSaver>(GameSaver)
+  nameWithType: ReflectionHelper.GetFieldNames<GameSaver>(GameSaver)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.SaveManaging.GameSaver>(DREditor.SaveManaging.GameSaver)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of GameSaver)(GameSaver)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.SaveManaging.GameSaver)(DREditor.SaveManaging.GameSaver)
+  name.vb: GetFieldNames(Of GameSaver)(GameSaver)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.SaveManaging.GameSaver)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.SaveManaging.GameSaver)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+  - name: (
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+- uid: DREditor.SaveManaging.GameSaver.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<GameSaver>(GameSaver)
+  nameWithType: ReflectionHelper.GetFieldValues<GameSaver>(GameSaver)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.SaveManaging.GameSaver>(DREditor.SaveManaging.GameSaver)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of GameSaver)(GameSaver)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.SaveManaging.GameSaver)(DREditor.SaveManaging.GameSaver)
+  name.vb: GetFieldValues(Of GameSaver)(GameSaver)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.SaveManaging.GameSaver)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.SaveManaging.GameSaver)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+  - name: (
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+- uid: DREditor.SaveManaging.GameSaver.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<GameSaver>(GameSaver)
+  nameWithType: DeepCopyExtensions.DeepCopy<GameSaver>(GameSaver)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.SaveManaging.GameSaver>(DREditor.SaveManaging.GameSaver)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of GameSaver)(GameSaver)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.SaveManaging.GameSaver)(DREditor.SaveManaging.GameSaver)
+  name.vb: DeepCopy(Of GameSaver)(GameSaver)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.SaveManaging.GameSaver)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.SaveManaging.GameSaver)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+  - name: (
+  - uid: DREditor.SaveManaging.GameSaver
+    name: GameSaver
+    isExternal: true
+    href: DREditor.SaveManaging.GameSaver.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.SaveManaging.GameSaver.Start*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.Start
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_Start
+  name: Start
+  nameWithType: GameSaver.Start
+  fullName: DREditor.SaveManaging.GameSaver.Start
+- uid: DREditor.SaveManaging.GameSaver.SaveGameFile*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.SaveGameFile
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_SaveGameFile_System_Object_
+  name: SaveGameFile
+  nameWithType: GameSaver.SaveGameFile
+  fullName: DREditor.SaveManaging.GameSaver.SaveGameFile
+- uid: DREditor.SaveManaging.GameSaver.LoadGameFile*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.LoadGameFile
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_LoadGameFile_System_Object_
+  name: LoadGameFile
+  nameWithType: GameSaver.LoadGameFile
+  fullName: DREditor.SaveManaging.GameSaver.LoadGameFile
+- uid: DREditor.SaveManaging.GameSaver.UpdateGameFromData*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.UpdateGameFromData
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_UpdateGameFromData_System_Object_
+  name: UpdateGameFromData
+  nameWithType: GameSaver.UpdateGameFromData
+  fullName: DREditor.SaveManaging.GameSaver.UpdateGameFromData
+- uid: DREditor.SaveManaging.GameSaver.GetData*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.GetData
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_GetData_System_String_
+  name: GetData
+  nameWithType: GameSaver.GetData
+  fullName: DREditor.SaveManaging.GameSaver.GetData
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Saving.DRESaveData
+  commentId: T:DREditor.Saving.DRESaveData
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.DRESaveData.html
+  name: DRESaveData
+  nameWithType: DRESaveData
+  fullName: DREditor.Saving.DRESaveData
+- uid: DREditor.SaveManaging.GameSaver.ApplyCurrentData*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.ApplyCurrentData
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_ApplyCurrentData_System_Object_
+  name: ApplyCurrentData
+  nameWithType: GameSaver.ApplyCurrentData
+  fullName: DREditor.SaveManaging.GameSaver.ApplyCurrentData
+- uid: DREditor.SaveManaging.GameSaver.ClearCurrentData*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.ClearCurrentData
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_ClearCurrentData
+  name: ClearCurrentData
+  nameWithType: GameSaver.ClearCurrentData
+  fullName: DREditor.SaveManaging.GameSaver.ClearCurrentData
+- uid: DREditor.SaveManaging.GameSaver.ToTitleScreen*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.ToTitleScreen
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: GameSaver.ToTitleScreen
+  fullName: DREditor.SaveManaging.GameSaver.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.SaveManaging.GameSaver.#ctor*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.#ctor
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver__ctor
+  name: GameSaver
+  nameWithType: GameSaver.GameSaver
+  fullName: DREditor.SaveManaging.GameSaver.GameSaver
+  nameWithType.vb: GameSaver.New
+  fullName.vb: DREditor.SaveManaging.GameSaver.New
+  name.vb: New
+- uid: DREditor.SaveManaging.GameSaver.CurrentDRESaveData*
+  commentId: Overload:DREditor.SaveManaging.GameSaver.CurrentDRESaveData
+  isExternal: true
+  href: DREditor.SaveManaging.GameSaver.html#DREditor_SaveManaging_GameSaver_CurrentDRESaveData
+  name: CurrentDRESaveData
+  nameWithType: GameSaver.CurrentDRESaveData
+  fullName: DREditor.SaveManaging.GameSaver.CurrentDRESaveData

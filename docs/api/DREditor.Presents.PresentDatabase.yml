@@ -6,6 +6,7 @@ items:
   parent: DREditor.Presents
   children:
   - DREditor.Presents.PresentDatabase.#ctor
+  - DREditor.Presents.PresentDatabase.GetPresentByID(System.Int32)
   - DREditor.Presents.PresentDatabase.presents
   langs:
   - csharp
@@ -15,15 +16,21 @@ items:
   fullName: DREditor.Presents.PresentDatabase
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Presents/PresentDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentDatabase.cs
   assemblies:
-  - DREditor
+  - DREditor.Presents
   namespace: DREditor.Presents
+  summary: ''
+  example: []
   syntax:
     content: 'public class PresentDatabase : ScriptableObject'
     content.vb: Public Class PresentDatabase Inherits ScriptableObject
   inheritance:
   - System.Object
+  extensionMethods:
+  - DREditor.Presents.PresentDatabase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Presents.PresentDatabase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Presents.PresentDatabase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.Presents.PresentDatabase.presents
   commentId: F:DREditor.Presents.PresentDatabase.presents
   id: presents
@@ -36,15 +43,49 @@ items:
   fullName: DREditor.Presents.PresentDatabase.presents
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Presents/PresentDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentDatabase.cs
   assemblies:
-  - DREditor
+  - DREditor.Presents
   namespace: DREditor.Presents
+  summary: ''
+  example: []
   syntax:
     content: public List<Present> presents
     return:
       type: System.Collections.Generic.List{DREditor.Presents.Present}
     content.vb: Public presents As List(Of Present)
+- uid: DREditor.Presents.PresentDatabase.GetPresentByID(System.Int32)
+  commentId: M:DREditor.Presents.PresentDatabase.GetPresentByID(System.Int32)
+  id: GetPresentByID(System.Int32)
+  parent: DREditor.Presents.PresentDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetPresentByID(int)
+  nameWithType: PresentDatabase.GetPresentByID(int)
+  fullName: DREditor.Presents.PresentDatabase.GetPresentByID(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentDatabase.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual Present GetPresentByID(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    return:
+      type: DREditor.Presents.Present
+      description: ''
+    content.vb: Public Overridable Function GetPresentByID(id As Integer) As Present
+  overload: DREditor.Presents.PresentDatabase.GetPresentByID*
+  nameWithType.vb: PresentDatabase.GetPresentByID(Integer)
+  fullName.vb: DREditor.Presents.PresentDatabase.GetPresentByID(Integer)
+  name.vb: GetPresentByID(Integer)
 - uid: DREditor.Presents.PresentDatabase.#ctor
   commentId: M:DREditor.Presents.PresentDatabase.#ctor
   id: '#ctor'
@@ -57,9 +98,9 @@ items:
   fullName: DREditor.Presents.PresentDatabase.PresentDatabase()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Presents/PresentDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentDatabase.cs
   assemblies:
-  - DREditor
+  - DREditor.Presents
   namespace: DREditor.Presents
   syntax:
     content: public PresentDatabase()
@@ -107,6 +148,147 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Presents.PresentDatabase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<PresentDatabase>(PresentDatabase)
+  nameWithType: ReflectionHelper.GetFieldNames<PresentDatabase>(PresentDatabase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Presents.PresentDatabase>(DREditor.Presents.PresentDatabase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of PresentDatabase)(PresentDatabase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Presents.PresentDatabase)(DREditor.Presents.PresentDatabase)
+  name.vb: GetFieldNames(Of PresentDatabase)(PresentDatabase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Presents.PresentDatabase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Presents.PresentDatabase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
+- uid: DREditor.Presents.PresentDatabase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<PresentDatabase>(PresentDatabase)
+  nameWithType: ReflectionHelper.GetFieldValues<PresentDatabase>(PresentDatabase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Presents.PresentDatabase>(DREditor.Presents.PresentDatabase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of PresentDatabase)(PresentDatabase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Presents.PresentDatabase)(DREditor.Presents.PresentDatabase)
+  name.vb: GetFieldValues(Of PresentDatabase)(PresentDatabase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Presents.PresentDatabase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Presents.PresentDatabase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
+- uid: DREditor.Presents.PresentDatabase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<PresentDatabase>(PresentDatabase)
+  nameWithType: DeepCopyExtensions.DeepCopy<PresentDatabase>(PresentDatabase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Presents.PresentDatabase>(DREditor.Presents.PresentDatabase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of PresentDatabase)(PresentDatabase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Presents.PresentDatabase)(DREditor.Presents.PresentDatabase)
+  name.vb: DeepCopy(Of PresentDatabase)(PresentDatabase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Presents.PresentDatabase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Presents.PresentDatabase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.PresentDatabase
+    name: PresentDatabase
+    isExternal: true
+    href: DREditor.Presents.PresentDatabase.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -114,6 +296,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.Collections.Generic.List{DREditor.Presents.Present}
   commentId: T:System.Collections.Generic.List{DREditor.Presents.Present}
   parent: System.Collections.Generic
@@ -134,7 +488,7 @@ references:
   - uid: DREditor.Presents.Present
     name: Present
     isExternal: true
-    href: DREditor.Presents.Present.html
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Present.cs
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
@@ -147,7 +501,7 @@ references:
   - uid: DREditor.Presents.Present
     name: Present
     isExternal: true
-    href: DREditor.Presents.Present.html
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Present.cs
   - name: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
@@ -214,6 +568,32 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Presents.PresentDatabase.GetPresentByID*
+  commentId: Overload:DREditor.Presents.PresentDatabase.GetPresentByID
+  isExternal: true
+  href: DREditor.Presents.PresentDatabase.html#DREditor_Presents_PresentDatabase_GetPresentByID_System_Int32_
+  name: GetPresentByID
+  nameWithType: PresentDatabase.GetPresentByID
+  fullName: DREditor.Presents.PresentDatabase.GetPresentByID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Presents.Present
+  commentId: T:DREditor.Presents.Present
+  parent: DREditor.Presents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Present.cs
+  name: Present
+  nameWithType: Present
+  fullName: DREditor.Presents.Present
 - uid: DREditor.Presents.PresentDatabase.#ctor*
   commentId: Overload:DREditor.Presents.PresentDatabase.#ctor
   isExternal: true

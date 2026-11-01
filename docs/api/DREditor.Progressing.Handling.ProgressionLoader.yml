@@ -1,0 +1,1378 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Progressing.Handling.ProgressionLoader
+  commentId: T:DREditor.Progressing.Handling.ProgressionLoader
+  id: ProgressionLoader
+  parent: DREditor.Progressing.Handling
+  children:
+  - DREditor.Progressing.Handling.ProgressionLoader.#ctor
+  - DREditor.Progressing.Handling.ProgressionLoader.FlagCountUpdated(DREditor.Progressing.Objective,DREditor.Progressing.Objective)
+  - DREditor.Progressing.Handling.ProgressionLoader.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.Progressing.Handling.ProgressionLoader.LoadBaseObjective(DREditor.Progressing.Objective)
+  - DREditor.Progressing.Handling.ProgressionLoader.LoadOnSceneEvent
+  - DREditor.Progressing.Handling.ProgressionLoader.OnResponseInvoked
+  - DREditor.Progressing.Handling.ProgressionLoader.Start
+  - DREditor.Progressing.Handling.ProgressionLoader.chapterKey
+  - DREditor.Progressing.Handling.ProgressionLoader.currentChapterIndex
+  - DREditor.Progressing.Handling.ProgressionLoader.manager
+  - DREditor.Progressing.Handling.ProgressionLoader.objectiveKey
+  - DREditor.Progressing.Handling.ProgressionLoader.progressionDatabase
+  - DREditor.Progressing.Handling.ProgressionLoader.saveDatas
+  langs:
+  - csharp
+  - vb
+  name: ProgressionLoader
+  nameWithType: ProgressionLoader
+  fullName: DREditor.Progressing.Handling.ProgressionLoader
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("SceneEventListener, IDRELoadable\n\n")]
+
+      public class ProgressionLoader : SceneEventListener, ISceneEventListener, IPrioritizable, IDRELoadable
+    content.vb: >-
+      <ClassHeader("SceneEventListener, IDRELoadable" & vbLf & vbLf)>
+
+      Public Class ProgressionLoader Inherits SceneEventListener Implements ISceneEventListener, IPrioritizable, IDRELoadable
+  inheritance:
+  - System.Object
+  - DREditor.EventObjects.SceneEventListener
+  implements:
+  - DREditor.EventObjects.ISceneEventListener
+  - DREditor.Processables.IPrioritizable
+  - DREditor.Saving.IDRELoadable
+  inheritedMembers:
+  - DREditor.EventObjects.SceneEventListener.Event
+  - DREditor.EventObjects.SceneEventListener.Condition
+  - DREditor.EventObjects.SceneEventListener.conditionMustBe
+  - DREditor.EventObjects.SceneEventListener.priority
+  - DREditor.EventObjects.SceneEventListener.Response
+  - DREditor.EventObjects.SceneEventListener.OnEnable
+  - DREditor.EventObjects.SceneEventListener.OnDisable
+  - DREditor.EventObjects.SceneEventListener.OnEventRaised
+  - DREditor.EventObjects.SceneEventListener.AddListener(UnityEngine.Events.UnityAction)
+  - DREditor.EventObjects.SceneEventListener.RemoveListener(UnityEngine.Events.UnityAction)
+  - DREditor.EventObjects.SceneEventListener.ConditionAssigned
+  - DREditor.EventObjects.SceneEventListener.Priority
+  extensionMethods:
+  - DREditor.Progressing.Handling.ProgressionLoader.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Progressing.Handling.ProgressionLoader.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Progressing.Handling.ProgressionLoader.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        SceneEventListener, IDRELoadable
+
+- uid: DREditor.Progressing.Handling.ProgressionLoader.progressionDatabase
+  commentId: F:DREditor.Progressing.Handling.ProgressionLoader.progressionDatabase
+  id: progressionDatabase
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: progressionDatabase
+  nameWithType: ProgressionLoader.progressionDatabase
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.progressionDatabase
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: protected ProgressionDatabase progressionDatabase
+    return:
+      type: DREditor.Progressing.ProgressionDatabase
+    content.vb: Protected progressionDatabase As ProgressionDatabase
+- uid: DREditor.Progressing.Handling.ProgressionLoader.currentChapterIndex
+  commentId: F:DREditor.Progressing.Handling.ProgressionLoader.currentChapterIndex
+  id: currentChapterIndex
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: currentChapterIndex
+  nameWithType: ProgressionLoader.currentChapterIndex
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.currentChapterIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: protected IntWithEvent currentChapterIndex
+    return:
+      type: DREditor.EventObjects.IntWithEvent
+    content.vb: Protected currentChapterIndex As IntWithEvent
+- uid: DREditor.Progressing.Handling.ProgressionLoader.chapterKey
+  commentId: F:DREditor.Progressing.Handling.ProgressionLoader.chapterKey
+  id: chapterKey
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: chapterKey
+  nameWithType: ProgressionLoader.chapterKey
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.chapterKey
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected string chapterKey
+    return:
+      type: System.String
+    content.vb: >-
+      <Divider>
+
+      Protected chapterKey As String
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Progressing.Handling.ProgressionLoader.objectiveKey
+  commentId: F:DREditor.Progressing.Handling.ProgressionLoader.objectiveKey
+  id: objectiveKey
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: objectiveKey
+  nameWithType: ProgressionLoader.objectiveKey
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.objectiveKey
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: protected string objectiveKey
+    return:
+      type: System.String
+    content.vb: Protected objectiveKey As String
+- uid: DREditor.Progressing.Handling.ProgressionLoader.saveDatas
+  commentId: F:DREditor.Progressing.Handling.ProgressionLoader.saveDatas
+  id: saveDatas
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: saveDatas
+  nameWithType: ProgressionLoader.saveDatas
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.saveDatas
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: protected Dictionary<string, object> saveDatas
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Protected saveDatas As Dictionary(Of String, Object)
+- uid: DREditor.Progressing.Handling.ProgressionLoader.manager
+  commentId: F:DREditor.Progressing.Handling.ProgressionLoader.manager
+  id: manager
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: manager
+  nameWithType: ProgressionLoader.manager
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.manager
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: protected ProgressionManagerBase manager
+    return:
+      type: DREditor.Progressing.Handling.ProgressionManagerBase
+    content.vb: Protected manager As ProgressionManagerBase
+- uid: DREditor.Progressing.Handling.ProgressionLoader.Start
+  commentId: M:DREditor.Progressing.Handling.ProgressionLoader.Start
+  id: Start
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ProgressionLoader.Start()
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.Progressing.Handling.ProgressionLoader.Start*
+- uid: DREditor.Progressing.Handling.ProgressionLoader.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Progressing.Handling.ProgressionLoader.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(Dictionary<string, object>)
+  nameWithType: ProgressionLoader.Load(Dictionary<string, object>)
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.Load(System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Load(Dictionary<string, object> saveDatas)
+    parameters:
+    - id: saveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    content.vb: Public Overridable Sub Load(saveDatas As Dictionary(Of String, Object))
+  overload: DREditor.Progressing.Handling.ProgressionLoader.Load*
+  implements:
+  - DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: ProgressionLoader.Load(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Progressing.Handling.ProgressionLoader.Load(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Load(Dictionary(Of String, Object))
+- uid: DREditor.Progressing.Handling.ProgressionLoader.OnResponseInvoked
+  commentId: M:DREditor.Progressing.Handling.ProgressionLoader.OnResponseInvoked
+  id: OnResponseInvoked
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: OnResponseInvoked()
+  nameWithType: ProgressionLoader.OnResponseInvoked()
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.OnResponseInvoked()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  example: []
+  syntax:
+    content: protected override void OnResponseInvoked()
+    content.vb: Protected Overrides Sub OnResponseInvoked()
+  overridden: DREditor.EventObjects.SceneEventListener.OnResponseInvoked
+  overload: DREditor.Progressing.Handling.ProgressionLoader.OnResponseInvoked*
+- uid: DREditor.Progressing.Handling.ProgressionLoader.LoadOnSceneEvent
+  commentId: M:DREditor.Progressing.Handling.ProgressionLoader.LoadOnSceneEvent
+  id: LoadOnSceneEvent
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadOnSceneEvent()
+  nameWithType: ProgressionLoader.LoadOnSceneEvent()
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.LoadOnSceneEvent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void LoadOnSceneEvent()
+    content.vb: Protected Overridable Sub LoadOnSceneEvent()
+  overload: DREditor.Progressing.Handling.ProgressionLoader.LoadOnSceneEvent*
+- uid: DREditor.Progressing.Handling.ProgressionLoader.LoadBaseObjective(DREditor.Progressing.Objective)
+  commentId: M:DREditor.Progressing.Handling.ProgressionLoader.LoadBaseObjective(DREditor.Progressing.Objective)
+  id: LoadBaseObjective(DREditor.Progressing.Objective)
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadBaseObjective(Objective)
+  nameWithType: ProgressionLoader.LoadBaseObjective(Objective)
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.LoadBaseObjective(DREditor.Progressing.Objective)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: protected void LoadBaseObjective(Objective saveObjective)
+    parameters:
+    - id: saveObjective
+      type: DREditor.Progressing.Objective
+      description: ''
+    content.vb: Protected Sub LoadBaseObjective(saveObjective As Objective)
+  overload: DREditor.Progressing.Handling.ProgressionLoader.LoadBaseObjective*
+- uid: DREditor.Progressing.Handling.ProgressionLoader.FlagCountUpdated(DREditor.Progressing.Objective,DREditor.Progressing.Objective)
+  commentId: M:DREditor.Progressing.Handling.ProgressionLoader.FlagCountUpdated(DREditor.Progressing.Objective,DREditor.Progressing.Objective)
+  id: FlagCountUpdated(DREditor.Progressing.Objective,DREditor.Progressing.Objective)
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: FlagCountUpdated(Objective, Objective)
+  nameWithType: ProgressionLoader.FlagCountUpdated(Objective, Objective)
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.FlagCountUpdated(DREditor.Progressing.Objective, DREditor.Progressing.Objective)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool FlagCountUpdated(Objective baseObjective, Objective saveObjective)
+    parameters:
+    - id: baseObjective
+      type: DREditor.Progressing.Objective
+      description: ''
+    - id: saveObjective
+      type: DREditor.Progressing.Objective
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function FlagCountUpdated(baseObjective As Objective, saveObjective As Objective) As Boolean
+  overload: DREditor.Progressing.Handling.ProgressionLoader.FlagCountUpdated*
+- uid: DREditor.Progressing.Handling.ProgressionLoader.#ctor
+  commentId: M:DREditor.Progressing.Handling.ProgressionLoader.#ctor
+  id: '#ctor'
+  parent: DREditor.Progressing.Handling.ProgressionLoader
+  langs:
+  - csharp
+  - vb
+  name: ProgressionLoader()
+  nameWithType: ProgressionLoader.ProgressionLoader()
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.ProgressionLoader()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Progressing.Handling/ProgressionLoader.cs
+  assemblies:
+  - DREditor.Progressing.Handling
+  namespace: DREditor.Progressing.Handling
+  syntax:
+    content: public ProgressionLoader()
+    content.vb: Public Sub New()
+  overload: DREditor.Progressing.Handling.ProgressionLoader.#ctor*
+  nameWithType.vb: ProgressionLoader.New()
+  fullName.vb: DREditor.Progressing.Handling.ProgressionLoader.New()
+  name.vb: New()
+references:
+- uid: DREditor.Progressing.Handling
+  commentId: N:DREditor.Progressing.Handling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Progressing.Handling
+  nameWithType: DREditor.Progressing.Handling
+  fullName: DREditor.Progressing.Handling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Progressing
+    name: Progressing
+    isExternal: true
+    href: DREditor.Progressing.html
+  - name: .
+  - uid: DREditor.Progressing.Handling
+    name: Handling
+    isExternal: true
+    href: DREditor.Progressing.Handling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Progressing
+    name: Progressing
+    isExternal: true
+    href: DREditor.Progressing.html
+  - name: .
+  - uid: DREditor.Progressing.Handling
+    name: Handling
+    isExternal: true
+    href: DREditor.Progressing.Handling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.EventObjects.SceneEventListener
+  commentId: T:DREditor.EventObjects.SceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: SceneEventListener
+  nameWithType: SceneEventListener
+  fullName: DREditor.EventObjects.SceneEventListener
+- uid: DREditor.EventObjects.ISceneEventListener
+  commentId: T:DREditor.EventObjects.ISceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: ISceneEventListener
+  nameWithType: ISceneEventListener
+  fullName: DREditor.EventObjects.ISceneEventListener
+- uid: DREditor.Processables.IPrioritizable
+  commentId: T:DREditor.Processables.IPrioritizable
+  parent: DREditor.Processables
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Processables/IPrioritizable.cs
+  name: IPrioritizable
+  nameWithType: IPrioritizable
+  fullName: DREditor.Processables.IPrioritizable
+- uid: DREditor.Saving.IDRELoadable
+  commentId: T:DREditor.Saving.IDRELoadable
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  name: IDRELoadable
+  nameWithType: IDRELoadable
+  fullName: DREditor.Saving.IDRELoadable
+- uid: DREditor.EventObjects.SceneEventListener.Event
+  commentId: F:DREditor.EventObjects.SceneEventListener.Event
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: Event
+  nameWithType: SceneEventListener.Event
+  fullName: DREditor.EventObjects.SceneEventListener.Event
+- uid: DREditor.EventObjects.SceneEventListener.Condition
+  commentId: F:DREditor.EventObjects.SceneEventListener.Condition
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: Condition
+  nameWithType: SceneEventListener.Condition
+  fullName: DREditor.EventObjects.SceneEventListener.Condition
+- uid: DREditor.EventObjects.SceneEventListener.conditionMustBe
+  commentId: F:DREditor.EventObjects.SceneEventListener.conditionMustBe
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: conditionMustBe
+  nameWithType: SceneEventListener.conditionMustBe
+  fullName: DREditor.EventObjects.SceneEventListener.conditionMustBe
+- uid: DREditor.EventObjects.SceneEventListener.priority
+  commentId: F:DREditor.EventObjects.SceneEventListener.priority
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: priority
+  nameWithType: SceneEventListener.priority
+  fullName: DREditor.EventObjects.SceneEventListener.priority
+- uid: DREditor.EventObjects.SceneEventListener.Response
+  commentId: F:DREditor.EventObjects.SceneEventListener.Response
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: Response
+  nameWithType: SceneEventListener.Response
+  fullName: DREditor.EventObjects.SceneEventListener.Response
+- uid: DREditor.EventObjects.SceneEventListener.OnEnable
+  commentId: M:DREditor.EventObjects.SceneEventListener.OnEnable
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: OnEnable()
+  nameWithType: SceneEventListener.OnEnable()
+  fullName: DREditor.EventObjects.SceneEventListener.OnEnable()
+  spec.csharp:
+  - uid: DREditor.EventObjects.SceneEventListener.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SceneEventListener.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.SceneEventListener.OnDisable
+  commentId: M:DREditor.EventObjects.SceneEventListener.OnDisable
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: OnDisable()
+  nameWithType: SceneEventListener.OnDisable()
+  fullName: DREditor.EventObjects.SceneEventListener.OnDisable()
+  spec.csharp:
+  - uid: DREditor.EventObjects.SceneEventListener.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SceneEventListener.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.SceneEventListener.OnEventRaised
+  commentId: M:DREditor.EventObjects.SceneEventListener.OnEventRaised
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: OnEventRaised()
+  nameWithType: SceneEventListener.OnEventRaised()
+  fullName: DREditor.EventObjects.SceneEventListener.OnEventRaised()
+  spec.csharp:
+  - uid: DREditor.EventObjects.SceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.SceneEventListener.AddListener(UnityEngine.Events.UnityAction)
+  commentId: M:DREditor.EventObjects.SceneEventListener.AddListener(UnityEngine.Events.UnityAction)
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: AddListener(UnityAction)
+  nameWithType: SceneEventListener.AddListener(UnityAction)
+  fullName: DREditor.EventObjects.SceneEventListener.AddListener(UnityEngine.Events.UnityAction)
+  spec.csharp:
+  - uid: DREditor.EventObjects.SceneEventListener.AddListener(UnityEngine.Events.UnityAction)
+    name: AddListener
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SceneEventListener.AddListener(UnityEngine.Events.UnityAction)
+    name: AddListener
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+- uid: DREditor.EventObjects.SceneEventListener.RemoveListener(UnityEngine.Events.UnityAction)
+  commentId: M:DREditor.EventObjects.SceneEventListener.RemoveListener(UnityEngine.Events.UnityAction)
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: RemoveListener(UnityAction)
+  nameWithType: SceneEventListener.RemoveListener(UnityAction)
+  fullName: DREditor.EventObjects.SceneEventListener.RemoveListener(UnityEngine.Events.UnityAction)
+  spec.csharp:
+  - uid: DREditor.EventObjects.SceneEventListener.RemoveListener(UnityEngine.Events.UnityAction)
+    name: RemoveListener
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SceneEventListener.RemoveListener(UnityEngine.Events.UnityAction)
+    name: RemoveListener
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+- uid: DREditor.EventObjects.SceneEventListener.ConditionAssigned
+  commentId: M:DREditor.EventObjects.SceneEventListener.ConditionAssigned
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: ConditionAssigned()
+  nameWithType: SceneEventListener.ConditionAssigned()
+  fullName: DREditor.EventObjects.SceneEventListener.ConditionAssigned()
+  spec.csharp:
+  - uid: DREditor.EventObjects.SceneEventListener.ConditionAssigned
+    name: ConditionAssigned
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SceneEventListener.ConditionAssigned
+    name: ConditionAssigned
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.SceneEventListener.Priority
+  commentId: P:DREditor.EventObjects.SceneEventListener.Priority
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: Priority
+  nameWithType: SceneEventListener.Priority
+  fullName: DREditor.EventObjects.SceneEventListener.Priority
+- uid: DREditor.Progressing.Handling.ProgressionLoader.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ProgressionLoader>(ProgressionLoader)
+  nameWithType: ReflectionHelper.GetFieldNames<ProgressionLoader>(ProgressionLoader)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Progressing.Handling.ProgressionLoader>(DREditor.Progressing.Handling.ProgressionLoader)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ProgressionLoader)(ProgressionLoader)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Progressing.Handling.ProgressionLoader)(DREditor.Progressing.Handling.ProgressionLoader)
+  name.vb: GetFieldNames(Of ProgressionLoader)(ProgressionLoader)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Progressing.Handling.ProgressionLoader)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Progressing.Handling.ProgressionLoader)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+  - name: (
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+- uid: DREditor.Progressing.Handling.ProgressionLoader.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ProgressionLoader>(ProgressionLoader)
+  nameWithType: ReflectionHelper.GetFieldValues<ProgressionLoader>(ProgressionLoader)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Progressing.Handling.ProgressionLoader>(DREditor.Progressing.Handling.ProgressionLoader)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ProgressionLoader)(ProgressionLoader)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Progressing.Handling.ProgressionLoader)(DREditor.Progressing.Handling.ProgressionLoader)
+  name.vb: GetFieldValues(Of ProgressionLoader)(ProgressionLoader)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Progressing.Handling.ProgressionLoader)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Progressing.Handling.ProgressionLoader)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+  - name: (
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+- uid: DREditor.Progressing.Handling.ProgressionLoader.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ProgressionLoader>(ProgressionLoader)
+  nameWithType: DeepCopyExtensions.DeepCopy<ProgressionLoader>(ProgressionLoader)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Progressing.Handling.ProgressionLoader>(DREditor.Progressing.Handling.ProgressionLoader)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ProgressionLoader)(ProgressionLoader)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Progressing.Handling.ProgressionLoader)(DREditor.Progressing.Handling.ProgressionLoader)
+  name.vb: DeepCopy(Of ProgressionLoader)(ProgressionLoader)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Progressing.Handling.ProgressionLoader)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Progressing.Handling.ProgressionLoader)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+  - name: (
+  - uid: DREditor.Progressing.Handling.ProgressionLoader
+    name: ProgressionLoader
+    isExternal: true
+    href: DREditor.Progressing.Handling.ProgressionLoader.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Processables
+  commentId: N:DREditor.Processables
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Processables
+  nameWithType: DREditor.Processables
+  fullName: DREditor.Processables
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Processables
+    name: Processables
+    isExternal: true
+    href: DREditor.Processables.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Processables
+    name: Processables
+    isExternal: true
+    href: DREditor.Processables.html
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Progressing.ProgressionDatabase
+  commentId: T:DREditor.Progressing.ProgressionDatabase
+  parent: DREditor.Progressing
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Progressing/ProgressionDatabase.cs
+  name: ProgressionDatabase
+  nameWithType: ProgressionDatabase
+  fullName: DREditor.Progressing.ProgressionDatabase
+- uid: DREditor.Progressing
+  commentId: N:DREditor.Progressing
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Progressing
+  nameWithType: DREditor.Progressing
+  fullName: DREditor.Progressing
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Progressing
+    name: Progressing
+    isExternal: true
+    href: DREditor.Progressing.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Progressing
+    name: Progressing
+    isExternal: true
+    href: DREditor.Progressing.html
+- uid: DREditor.EventObjects.IntWithEvent
+  commentId: T:DREditor.EventObjects.IntWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/IntWithEvent.cs
+  name: IntWithEvent
+  nameWithType: IntWithEvent
+  fullName: DREditor.EventObjects.IntWithEvent
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Progressing.Handling.ProgressionManagerBase
+  commentId: T:DREditor.Progressing.Handling.ProgressionManagerBase
+  parent: DREditor.Progressing.Handling
+  isExternal: true
+  href: DREditor.Progressing.Handling.ProgressionManagerBase.html
+  name: ProgressionManagerBase
+  nameWithType: ProgressionManagerBase
+  fullName: DREditor.Progressing.Handling.ProgressionManagerBase
+- uid: DREditor.Progressing.Handling.ProgressionLoader.Start*
+  commentId: Overload:DREditor.Progressing.Handling.ProgressionLoader.Start
+  isExternal: true
+  href: DREditor.Progressing.Handling.ProgressionLoader.html#DREditor_Progressing_Handling_ProgressionLoader_Start
+  name: Start
+  nameWithType: ProgressionLoader.Start
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.Start
+- uid: DREditor.Progressing.Handling.ProgressionLoader.Load*
+  commentId: Overload:DREditor.Progressing.Handling.ProgressionLoader.Load
+  isExternal: true
+  href: DREditor.Progressing.Handling.ProgressionLoader.html#DREditor_Progressing_Handling_ProgressionLoader_Load_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: Load
+  nameWithType: ProgressionLoader.Load
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.Load
+- uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.IDRELoadable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  name: Load(Dictionary<string, object>)
+  nameWithType: IDRELoadable.Load(Dictionary<string, object>)
+  fullName: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: IDRELoadable.Load(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Load(Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Load
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Load
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: DREditor.EventObjects.SceneEventListener.OnResponseInvoked
+  commentId: M:DREditor.EventObjects.SceneEventListener.OnResponseInvoked
+  parent: DREditor.EventObjects.SceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: OnResponseInvoked()
+  nameWithType: SceneEventListener.OnResponseInvoked()
+  fullName: DREditor.EventObjects.SceneEventListener.OnResponseInvoked()
+  spec.csharp:
+  - uid: DREditor.EventObjects.SceneEventListener.OnResponseInvoked
+    name: OnResponseInvoked
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.SceneEventListener.OnResponseInvoked
+    name: OnResponseInvoked
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.Progressing.Handling.ProgressionLoader.OnResponseInvoked*
+  commentId: Overload:DREditor.Progressing.Handling.ProgressionLoader.OnResponseInvoked
+  isExternal: true
+  href: DREditor.Progressing.Handling.ProgressionLoader.html#DREditor_Progressing_Handling_ProgressionLoader_OnResponseInvoked
+  name: OnResponseInvoked
+  nameWithType: ProgressionLoader.OnResponseInvoked
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.OnResponseInvoked
+- uid: DREditor.Progressing.Handling.ProgressionLoader.LoadOnSceneEvent*
+  commentId: Overload:DREditor.Progressing.Handling.ProgressionLoader.LoadOnSceneEvent
+  isExternal: true
+  href: DREditor.Progressing.Handling.ProgressionLoader.html#DREditor_Progressing_Handling_ProgressionLoader_LoadOnSceneEvent
+  name: LoadOnSceneEvent
+  nameWithType: ProgressionLoader.LoadOnSceneEvent
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.LoadOnSceneEvent
+- uid: DREditor.Progressing.Handling.ProgressionLoader.LoadBaseObjective*
+  commentId: Overload:DREditor.Progressing.Handling.ProgressionLoader.LoadBaseObjective
+  isExternal: true
+  href: DREditor.Progressing.Handling.ProgressionLoader.html#DREditor_Progressing_Handling_ProgressionLoader_LoadBaseObjective_DREditor_Progressing_Objective_
+  name: LoadBaseObjective
+  nameWithType: ProgressionLoader.LoadBaseObjective
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.LoadBaseObjective
+- uid: DREditor.Progressing.Objective
+  commentId: T:DREditor.Progressing.Objective
+  parent: DREditor.Progressing
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Progressing/Chapter.cs
+  name: Objective
+  nameWithType: Objective
+  fullName: DREditor.Progressing.Objective
+- uid: DREditor.Progressing.Handling.ProgressionLoader.FlagCountUpdated*
+  commentId: Overload:DREditor.Progressing.Handling.ProgressionLoader.FlagCountUpdated
+  isExternal: true
+  href: DREditor.Progressing.Handling.ProgressionLoader.html#DREditor_Progressing_Handling_ProgressionLoader_FlagCountUpdated_DREditor_Progressing_Objective_DREditor_Progressing_Objective_
+  name: FlagCountUpdated
+  nameWithType: ProgressionLoader.FlagCountUpdated
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.FlagCountUpdated
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Progressing.Handling.ProgressionLoader.#ctor*
+  commentId: Overload:DREditor.Progressing.Handling.ProgressionLoader.#ctor
+  isExternal: true
+  href: DREditor.Progressing.Handling.ProgressionLoader.html#DREditor_Progressing_Handling_ProgressionLoader__ctor
+  name: ProgressionLoader
+  nameWithType: ProgressionLoader.ProgressionLoader
+  fullName: DREditor.Progressing.Handling.ProgressionLoader.ProgressionLoader
+  nameWithType.vb: ProgressionLoader.New
+  fullName.vb: DREditor.Progressing.Handling.ProgressionLoader.New
+  name.vb: New

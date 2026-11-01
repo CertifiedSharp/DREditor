@@ -6,7 +6,26 @@ items:
   parent: DREditor.Presents.Editor
   children:
   - DREditor.Presents.Editor.PresentEditor.#ctor
+  - DREditor.Presents.Editor.PresentEditor.AddData(System.Object)
+  - DREditor.Presents.Editor.PresentEditor.DisplayAttributes
+  - DREditor.Presents.Editor.PresentEditor.DisplayID
+  - DREditor.Presents.Editor.PresentEditor.DisplayItemData
+  - DREditor.Presents.Editor.PresentEditor.DisplayName
+  - DREditor.Presents.Editor.PresentEditor.IDLabel
+  - DREditor.Presents.Editor.PresentEditor.IDPropertyString
+  - DREditor.Presents.Editor.PresentEditor.IndexCaches
+  - DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties
+  - DREditor.Presents.Editor.PresentEditor.OnEnable
   - DREditor.Presents.Editor.PresentEditor.OnInspectorGUI
+  - DREditor.Presents.Editor.PresentEditor.TryGetData``1(``0@)
+  - DREditor.Presents.Editor.PresentEditor.VisibilityCaches
+  - DREditor.Presents.Editor.PresentEditor.dataCaches
+  - DREditor.Presents.Editor.PresentEditor.indexCaches
+  - DREditor.Presents.Editor.PresentEditor.present
+  - DREditor.Presents.Editor.PresentEditor.presentDataEditor
+  - DREditor.Presents.Editor.PresentEditor.propID
+  - DREditor.Presents.Editor.PresentEditor.showUI
+  - DREditor.Presents.Editor.PresentEditor.visibilityCaches
   langs:
   - csharp
   - vb
@@ -15,15 +34,292 @@ items:
   fullName: DREditor.Presents.Editor.PresentEditor
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentEditor.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
   assemblies:
-  - DREditor.Editor
+  - DREditor.Presents.Editor
   namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
   syntax:
-    content: 'public class PresentEditor : Editor'
-    content.vb: Public Class PresentEditor Inherits Editor
+    content: 'public class PresentEditor : InventoryItemEditor, INestedEditorCacheable'
+    content.vb: Public Class PresentEditor Inherits InventoryItemEditor Implements INestedEditorCacheable
   inheritance:
   - System.Object
+  - DREditor.Editor.Toolbox.InventoryItemEditor
+  implements:
+  - DREditor.Editor.Utility.INestedEditorCacheable
+  inheritedMembers:
+  - DREditor.Editor.Toolbox.InventoryItemEditor.propName
+  - DREditor.Editor.Toolbox.InventoryItemEditor.propDescription
+  - DREditor.Editor.Toolbox.InventoryItemEditor.propImage
+  - DREditor.Editor.Toolbox.InventoryItemEditor.VerticalBoxLayoutStyle
+  - DREditor.Editor.Toolbox.InventoryItemEditor.NamePropertyString
+  - DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionPropertyString
+  - DREditor.Editor.Toolbox.InventoryItemEditor.ImagePropertyString
+  - DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionHeight
+  - DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionWidth
+  - DREditor.Editor.Toolbox.InventoryItemEditor.NameLabel
+  - DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionLabel
+  - DREditor.Editor.Toolbox.InventoryItemEditor.ImageLabel
+  - DREditor.Editor.Toolbox.InventoryItemEditor.DisplayData
+  - DREditor.Editor.Toolbox.InventoryItemEditor.DisplayDescription
+  - DREditor.Editor.Toolbox.InventoryItemEditor.DisplayImage
+  extensionMethods:
+  - DREditor.Presents.Editor.PresentEditor.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Presents.Editor.PresentEditor.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Presents.Editor.PresentEditor.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Presents.Editor.PresentEditor.present
+  commentId: F:DREditor.Presents.Editor.PresentEditor.present
+  id: present
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: present
+  nameWithType: PresentEditor.present
+  fullName: DREditor.Presents.Editor.PresentEditor.present
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected Present present
+    return:
+      type: DREditor.Presents.Present
+    content.vb: Protected present As Present
+- uid: DREditor.Presents.Editor.PresentEditor.propID
+  commentId: F:DREditor.Presents.Editor.PresentEditor.propID
+  id: propID
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: propID
+  nameWithType: PresentEditor.propID
+  fullName: DREditor.Presents.Editor.PresentEditor.propID
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected SerializedProperty propID
+    return:
+      type: UnityEditor.SerializedProperty
+    content.vb: Protected propID As SerializedProperty
+- uid: DREditor.Presents.Editor.PresentEditor.visibilityCaches
+  commentId: F:DREditor.Presents.Editor.PresentEditor.visibilityCaches
+  id: visibilityCaches
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: visibilityCaches
+  nameWithType: PresentEditor.visibilityCaches
+  fullName: DREditor.Presents.Editor.PresentEditor.visibilityCaches
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected Dictionary<object, bool> visibilityCaches
+    return:
+      type: System.Collections.Generic.Dictionary{System.Object,System.Boolean}
+    content.vb: Protected visibilityCaches As Dictionary(Of Object, Boolean)
+- uid: DREditor.Presents.Editor.PresentEditor.indexCaches
+  commentId: F:DREditor.Presents.Editor.PresentEditor.indexCaches
+  id: indexCaches
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: indexCaches
+  nameWithType: PresentEditor.indexCaches
+  fullName: DREditor.Presents.Editor.PresentEditor.indexCaches
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected Dictionary<object, int> indexCaches
+    return:
+      type: System.Collections.Generic.Dictionary{System.Object,System.Int32}
+    content.vb: Protected indexCaches As Dictionary(Of Object, Integer)
+- uid: DREditor.Presents.Editor.PresentEditor.dataCaches
+  commentId: F:DREditor.Presents.Editor.PresentEditor.dataCaches
+  id: dataCaches
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: dataCaches
+  nameWithType: PresentEditor.dataCaches
+  fullName: DREditor.Presents.Editor.PresentEditor.dataCaches
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<object> dataCaches
+    return:
+      type: System.Collections.Generic.List{System.Object}
+    content.vb: Protected dataCaches As List(Of Object)
+- uid: DREditor.Presents.Editor.PresentEditor.showUI
+  commentId: F:DREditor.Presents.Editor.PresentEditor.showUI
+  id: showUI
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: showUI
+  nameWithType: PresentEditor.showUI
+  fullName: DREditor.Presents.Editor.PresentEditor.showUI
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool showUI
+    return:
+      type: System.Boolean
+    content.vb: Protected showUI As Boolean
+- uid: DREditor.Presents.Editor.PresentEditor.presentDataEditor
+  commentId: F:DREditor.Presents.Editor.PresentEditor.presentDataEditor
+  id: presentDataEditor
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: presentDataEditor
+  nameWithType: PresentEditor.presentDataEditor
+  fullName: DREditor.Presents.Editor.PresentEditor.presentDataEditor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected InterfaceEditor<IPresentData> presentDataEditor
+    return:
+      type: DREditor.Editor.Utility.InterfaceEditor{DREditor.Presents.IPresentData}
+    content.vb: Protected presentDataEditor As InterfaceEditor(Of IPresentData)
+- uid: DREditor.Presents.Editor.PresentEditor.IDPropertyString
+  commentId: F:DREditor.Presents.Editor.PresentEditor.IDPropertyString
+  id: IDPropertyString
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: IDPropertyString
+  nameWithType: PresentEditor.IDPropertyString
+  fullName: DREditor.Presents.Editor.PresentEditor.IDPropertyString
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly string IDPropertyString
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly IDPropertyString As String
+- uid: DREditor.Presents.Editor.PresentEditor.IDLabel
+  commentId: F:DREditor.Presents.Editor.PresentEditor.IDLabel
+  id: IDLabel
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: IDLabel
+  nameWithType: PresentEditor.IDLabel
+  fullName: DREditor.Presents.Editor.PresentEditor.IDLabel
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly string IDLabel
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly IDLabel As String
+- uid: DREditor.Presents.Editor.PresentEditor.OnEnable
+  commentId: M:DREditor.Presents.Editor.PresentEditor.OnEnable
+  id: OnEnable
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: PresentEditor.OnEnable()
+  fullName: DREditor.Presents.Editor.PresentEditor.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  example: []
+  syntax:
+    content: protected override void OnEnable()
+    content.vb: Protected Overrides Sub OnEnable()
+  overridden: DREditor.Editor.Toolbox.InventoryItemEditor.OnEnable
+  overload: DREditor.Presents.Editor.PresentEditor.OnEnable*
+- uid: DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties
+  commentId: M:DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties
+  id: InitializeSerializedProperties
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: InitializeSerializedProperties()
+  nameWithType: PresentEditor.InitializeSerializedProperties()
+  fullName: DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void InitializeSerializedProperties()
+    content.vb: Protected Overrides Sub InitializeSerializedProperties()
+  overridden: DREditor.Editor.Toolbox.InventoryItemEditor.InitializeSerializedProperties
+  overload: DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties*
 - uid: DREditor.Presents.Editor.PresentEditor.OnInspectorGUI
   commentId: M:DREditor.Presents.Editor.PresentEditor.OnInspectorGUI
   id: OnInspectorGUI
@@ -36,15 +332,173 @@ items:
   fullName: DREditor.Presents.Editor.PresentEditor.OnInspectorGUI()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentEditor.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
   assemblies:
-  - DREditor.Editor
+  - DREditor.Presents.Editor
   namespace: DREditor.Presents.Editor
   example: []
   syntax:
     content: public override void OnInspectorGUI()
     content.vb: Public Overrides Sub OnInspectorGUI()
   overload: DREditor.Presents.Editor.PresentEditor.OnInspectorGUI*
+- uid: DREditor.Presents.Editor.PresentEditor.DisplayItemData
+  commentId: M:DREditor.Presents.Editor.PresentEditor.DisplayItemData
+  id: DisplayItemData
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: DisplayItemData()
+  nameWithType: PresentEditor.DisplayItemData()
+  fullName: DREditor.Presents.Editor.PresentEditor.DisplayItemData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void DisplayItemData()
+    content.vb: Protected Overrides Sub DisplayItemData()
+  overridden: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayItemData
+  overload: DREditor.Presents.Editor.PresentEditor.DisplayItemData*
+- uid: DREditor.Presents.Editor.PresentEditor.DisplayAttributes
+  commentId: M:DREditor.Presents.Editor.PresentEditor.DisplayAttributes
+  id: DisplayAttributes
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: DisplayAttributes()
+  nameWithType: PresentEditor.DisplayAttributes()
+  fullName: DREditor.Presents.Editor.PresentEditor.DisplayAttributes()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void DisplayAttributes()
+    content.vb: Protected Overridable Sub DisplayAttributes()
+  overload: DREditor.Presents.Editor.PresentEditor.DisplayAttributes*
+- uid: DREditor.Presents.Editor.PresentEditor.DisplayName
+  commentId: M:DREditor.Presents.Editor.PresentEditor.DisplayName
+  id: DisplayName
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: DisplayName()
+  nameWithType: PresentEditor.DisplayName()
+  fullName: DREditor.Presents.Editor.PresentEditor.DisplayName()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void DisplayName()
+    content.vb: Protected Overrides Sub DisplayName()
+  overridden: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayName
+  overload: DREditor.Presents.Editor.PresentEditor.DisplayName*
+- uid: DREditor.Presents.Editor.PresentEditor.DisplayID
+  commentId: M:DREditor.Presents.Editor.PresentEditor.DisplayID
+  id: DisplayID
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: DisplayID()
+  nameWithType: PresentEditor.DisplayID()
+  fullName: DREditor.Presents.Editor.PresentEditor.DisplayID()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void DisplayID()
+    content.vb: Protected Overridable Sub DisplayID()
+  overload: DREditor.Presents.Editor.PresentEditor.DisplayID*
+- uid: DREditor.Presents.Editor.PresentEditor.AddData(System.Object)
+  commentId: M:DREditor.Presents.Editor.PresentEditor.AddData(System.Object)
+  id: AddData(System.Object)
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: AddData(object)
+  nameWithType: PresentEditor.AddData(object)
+  fullName: DREditor.Presents.Editor.PresentEditor.AddData(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void AddData(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: ''
+    content.vb: Public Overridable Sub AddData(obj As Object)
+  overload: DREditor.Presents.Editor.PresentEditor.AddData*
+  implements:
+  - DREditor.Editor.Utility.INestedEditorCacheable.AddData(System.Object)
+  nameWithType.vb: PresentEditor.AddData(Object)
+  fullName.vb: DREditor.Presents.Editor.PresentEditor.AddData(Object)
+  name.vb: AddData(Object)
+- uid: DREditor.Presents.Editor.PresentEditor.TryGetData``1(``0@)
+  commentId: M:DREditor.Presents.Editor.PresentEditor.TryGetData``1(``0@)
+  id: TryGetData``1(``0@)
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: TryGetData<T>(out T)
+  nameWithType: PresentEditor.TryGetData<T>(out T)
+  fullName: DREditor.Presents.Editor.PresentEditor.TryGetData<T>(out T)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool TryGetData<T>(out T data)
+    parameters:
+    - id: data
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function TryGetData(Of T)(data As T) As Boolean
+  overload: DREditor.Presents.Editor.PresentEditor.TryGetData*
+  implements:
+  - DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1({T}@)
+  nameWithType.vb: PresentEditor.TryGetData(Of T)(T)
+  fullName.vb: DREditor.Presents.Editor.PresentEditor.TryGetData(Of T)(T)
+  name.vb: TryGetData(Of T)(T)
 - uid: DREditor.Presents.Editor.PresentEditor.#ctor
   commentId: M:DREditor.Presents.Editor.PresentEditor.#ctor
   id: '#ctor'
@@ -57,9 +511,9 @@ items:
   fullName: DREditor.Presents.Editor.PresentEditor.PresentEditor()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentEditor.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
   assemblies:
-  - DREditor.Editor
+  - DREditor.Presents.Editor
   namespace: DREditor.Presents.Editor
   syntax:
     content: public PresentEditor()
@@ -68,6 +522,60 @@ items:
   nameWithType.vb: PresentEditor.New()
   fullName.vb: DREditor.Presents.Editor.PresentEditor.New()
   name.vb: New()
+- uid: DREditor.Presents.Editor.PresentEditor.VisibilityCaches
+  commentId: P:DREditor.Presents.Editor.PresentEditor.VisibilityCaches
+  id: VisibilityCaches
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: VisibilityCaches
+  nameWithType: PresentEditor.VisibilityCaches
+  fullName: DREditor.Presents.Editor.PresentEditor.VisibilityCaches
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: public Dictionary<object, bool> VisibilityCaches { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.Object,System.Boolean}
+    content.vb: Public ReadOnly Property VisibilityCaches As Dictionary(Of Object, Boolean)
+  overload: DREditor.Presents.Editor.PresentEditor.VisibilityCaches*
+  implements:
+  - DREditor.Editor.Utility.INestedEditorCacheable.VisibilityCaches
+- uid: DREditor.Presents.Editor.PresentEditor.IndexCaches
+  commentId: P:DREditor.Presents.Editor.PresentEditor.IndexCaches
+  id: IndexCaches
+  parent: DREditor.Presents.Editor.PresentEditor
+  langs:
+  - csharp
+  - vb
+  name: IndexCaches
+  nameWithType: PresentEditor.IndexCaches
+  fullName: DREditor.Presents.Editor.PresentEditor.IndexCaches
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: public Dictionary<object, int> IndexCaches { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.Object,System.Int32}
+    content.vb: Public ReadOnly Property IndexCaches As Dictionary(Of Object, Integer)
+  overload: DREditor.Presents.Editor.PresentEditor.IndexCaches*
+  implements:
+  - DREditor.Editor.Utility.INestedEditorCacheable.IndexCaches
 references:
 - uid: DREditor.Presents.Editor
   commentId: N:DREditor.Presents.Editor
@@ -117,6 +625,325 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor
+  commentId: T:DREditor.Editor.Toolbox.InventoryItemEditor
+  parent: DREditor.Editor.Toolbox
+  isExternal: true
+  href: DREditor.Editor.Toolbox.InventoryItemEditor.html
+  name: InventoryItemEditor
+  nameWithType: InventoryItemEditor
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor
+- uid: DREditor.Editor.Utility.INestedEditorCacheable
+  commentId: T:DREditor.Editor.Utility.INestedEditorCacheable
+  parent: DREditor.Editor.Utility
+  isExternal: true
+  href: DREditor.Editor.Utility.INestedEditorCacheable.html
+  name: INestedEditorCacheable
+  nameWithType: INestedEditorCacheable
+  fullName: DREditor.Editor.Utility.INestedEditorCacheable
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.propName
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.propName
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: propName
+  nameWithType: InventoryItemEditor.propName
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.propName
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.propDescription
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.propDescription
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: propDescription
+  nameWithType: InventoryItemEditor.propDescription
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.propDescription
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.propImage
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.propImage
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: propImage
+  nameWithType: InventoryItemEditor.propImage
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.propImage
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.VerticalBoxLayoutStyle
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.VerticalBoxLayoutStyle
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: VerticalBoxLayoutStyle
+  nameWithType: InventoryItemEditor.VerticalBoxLayoutStyle
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.VerticalBoxLayoutStyle
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.NamePropertyString
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.NamePropertyString
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: NamePropertyString
+  nameWithType: InventoryItemEditor.NamePropertyString
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.NamePropertyString
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionPropertyString
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionPropertyString
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DescriptionPropertyString
+  nameWithType: InventoryItemEditor.DescriptionPropertyString
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionPropertyString
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.ImagePropertyString
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.ImagePropertyString
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: ImagePropertyString
+  nameWithType: InventoryItemEditor.ImagePropertyString
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.ImagePropertyString
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionHeight
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionHeight
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DescriptionHeight
+  nameWithType: InventoryItemEditor.DescriptionHeight
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionHeight
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionWidth
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionWidth
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DescriptionWidth
+  nameWithType: InventoryItemEditor.DescriptionWidth
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionWidth
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.NameLabel
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.NameLabel
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: NameLabel
+  nameWithType: InventoryItemEditor.NameLabel
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.NameLabel
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionLabel
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionLabel
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DescriptionLabel
+  nameWithType: InventoryItemEditor.DescriptionLabel
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DescriptionLabel
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.ImageLabel
+  commentId: F:DREditor.Editor.Toolbox.InventoryItemEditor.ImageLabel
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: ImageLabel
+  nameWithType: InventoryItemEditor.ImageLabel
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.ImageLabel
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayData
+  commentId: M:DREditor.Editor.Toolbox.InventoryItemEditor.DisplayData
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DisplayData()
+  nameWithType: InventoryItemEditor.DisplayData()
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayData()
+  spec.csharp:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayData
+    name: DisplayData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayData
+    name: DisplayData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayDescription
+  commentId: M:DREditor.Editor.Toolbox.InventoryItemEditor.DisplayDescription
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DisplayDescription()
+  nameWithType: InventoryItemEditor.DisplayDescription()
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayDescription()
+  spec.csharp:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayDescription
+    name: DisplayDescription
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayDescription
+    name: DisplayDescription
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayImage
+  commentId: M:DREditor.Editor.Toolbox.InventoryItemEditor.DisplayImage
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DisplayImage()
+  nameWithType: InventoryItemEditor.DisplayImage()
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayImage()
+  spec.csharp:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayImage
+    name: DisplayImage
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayImage
+    name: DisplayImage
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+- uid: DREditor.Presents.Editor.PresentEditor.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<PresentEditor>(PresentEditor)
+  nameWithType: ReflectionHelper.GetFieldNames<PresentEditor>(PresentEditor)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Presents.Editor.PresentEditor>(DREditor.Presents.Editor.PresentEditor)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of PresentEditor)(PresentEditor)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Presents.Editor.PresentEditor)(DREditor.Presents.Editor.PresentEditor)
+  name.vb: GetFieldNames(Of PresentEditor)(PresentEditor)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Presents.Editor.PresentEditor)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Presents.Editor.PresentEditor)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
+- uid: DREditor.Presents.Editor.PresentEditor.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<PresentEditor>(PresentEditor)
+  nameWithType: ReflectionHelper.GetFieldValues<PresentEditor>(PresentEditor)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Presents.Editor.PresentEditor>(DREditor.Presents.Editor.PresentEditor)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of PresentEditor)(PresentEditor)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Presents.Editor.PresentEditor)(DREditor.Presents.Editor.PresentEditor)
+  name.vb: GetFieldValues(Of PresentEditor)(PresentEditor)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Presents.Editor.PresentEditor)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Presents.Editor.PresentEditor)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
+- uid: DREditor.Presents.Editor.PresentEditor.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<PresentEditor>(PresentEditor)
+  nameWithType: DeepCopyExtensions.DeepCopy<PresentEditor>(PresentEditor)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Presents.Editor.PresentEditor>(DREditor.Presents.Editor.PresentEditor)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of PresentEditor)(PresentEditor)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Presents.Editor.PresentEditor)(DREditor.Presents.Editor.PresentEditor)
+  name.vb: DeepCopy(Of PresentEditor)(PresentEditor)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Presents.Editor.PresentEditor)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Presents.Editor.PresentEditor)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentEditor
+    name: PresentEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentEditor.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -124,6 +951,663 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Editor.Toolbox
+  commentId: N:DREditor.Editor.Toolbox
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Editor.Toolbox
+  nameWithType: DREditor.Editor.Toolbox
+  fullName: DREditor.Editor.Toolbox
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Editor
+    name: Editor
+    isExternal: true
+    href: DREditor.Editor.html
+  - name: .
+  - uid: DREditor.Editor.Toolbox
+    name: Toolbox
+    isExternal: true
+    href: DREditor.Editor.Toolbox.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Editor
+    name: Editor
+    isExternal: true
+    href: DREditor.Editor.html
+  - name: .
+  - uid: DREditor.Editor.Toolbox
+    name: Toolbox
+    isExternal: true
+    href: DREditor.Editor.Toolbox.html
+- uid: DREditor.Editor.Utility
+  commentId: N:DREditor.Editor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Editor.Utility
+  nameWithType: DREditor.Editor.Utility
+  fullName: DREditor.Editor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Editor
+    name: Editor
+    isExternal: true
+    href: DREditor.Editor.html
+  - name: .
+  - uid: DREditor.Editor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Editor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Editor
+    name: Editor
+    isExternal: true
+    href: DREditor.Editor.html
+  - name: .
+  - uid: DREditor.Editor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Editor.Utility.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Presents.Present
+  commentId: T:DREditor.Presents.Present
+  parent: DREditor.Presents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Present.cs
+  name: Present
+  nameWithType: Present
+  fullName: DREditor.Presents.Present
+- uid: DREditor.Presents
+  commentId: N:DREditor.Presents
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Presents
+  nameWithType: DREditor.Presents
+  fullName: DREditor.Presents
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Presents
+    name: Presents
+    isExternal: true
+    href: DREditor.Presents.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Presents
+    name: Presents
+    isExternal: true
+    href: DREditor.Presents.html
+- uid: UnityEditor.SerializedProperty
+  isExternal: true
+  name: SerializedProperty
+  nameWithType: SerializedProperty
+  fullName: UnityEditor.SerializedProperty
+- uid: System.Collections.Generic.Dictionary{System.Object,System.Boolean}
+  commentId: T:System.Collections.Generic.Dictionary{System.Object,System.Boolean}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<object, bool>
+  nameWithType: Dictionary<object, bool>
+  fullName: System.Collections.Generic.Dictionary<object, bool>
+  nameWithType.vb: Dictionary(Of Object, Boolean)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Object, Boolean)
+  name.vb: Dictionary(Of Object, Boolean)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Dictionary{System.Object,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.Object,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<object, int>
+  nameWithType: Dictionary<object, int>
+  fullName: System.Collections.Generic.Dictionary<object, int>
+  nameWithType.vb: Dictionary(Of Object, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Object, Integer)
+  name.vb: Dictionary(Of Object, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List{System.Object}
+  commentId: T:System.Collections.Generic.List{System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<object>
+  nameWithType: List<object>
+  fullName: System.Collections.Generic.List<object>
+  nameWithType.vb: List(Of Object)
+  fullName.vb: System.Collections.Generic.List(Of Object)
+  name.vb: List(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Editor.Utility.InterfaceEditor{DREditor.Presents.IPresentData}
+  commentId: T:DREditor.Editor.Utility.InterfaceEditor{DREditor.Presents.IPresentData}
+  parent: DREditor.Editor.Utility
+  definition: DREditor.Editor.Utility.InterfaceEditor`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/InterfaceEditor.cs
+  name: InterfaceEditor<IPresentData>
+  nameWithType: InterfaceEditor<IPresentData>
+  fullName: DREditor.Editor.Utility.InterfaceEditor<DREditor.Presents.IPresentData>
+  nameWithType.vb: InterfaceEditor(Of IPresentData)
+  fullName.vb: DREditor.Editor.Utility.InterfaceEditor(Of DREditor.Presents.IPresentData)
+  name.vb: InterfaceEditor(Of IPresentData)
+  spec.csharp:
+  - uid: DREditor.Editor.Utility.InterfaceEditor`1
+    name: InterfaceEditor
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/InterfaceEditor.cs
+  - name: <
+  - uid: DREditor.Presents.IPresentData
+    name: IPresentData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/IPresentData.cs
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Editor.Utility.InterfaceEditor`1
+    name: InterfaceEditor
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/InterfaceEditor.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.IPresentData
+    name: IPresentData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/IPresentData.cs
+  - name: )
+- uid: DREditor.Editor.Utility.InterfaceEditor`1
+  commentId: T:DREditor.Editor.Utility.InterfaceEditor`1
+  isExternal: true
+  href: DREditor.Editor.Utility.InterfaceEditor-1.html
+  name: InterfaceEditor<T>
+  nameWithType: InterfaceEditor<T>
+  fullName: DREditor.Editor.Utility.InterfaceEditor<T>
+  nameWithType.vb: InterfaceEditor(Of T)
+  fullName.vb: DREditor.Editor.Utility.InterfaceEditor(Of T)
+  name.vb: InterfaceEditor(Of T)
+  spec.csharp:
+  - uid: DREditor.Editor.Utility.InterfaceEditor`1
+    name: InterfaceEditor
+    isExternal: true
+    href: DREditor.Editor.Utility.InterfaceEditor-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Editor.Utility.InterfaceEditor`1
+    name: InterfaceEditor
+    isExternal: true
+    href: DREditor.Editor.Utility.InterfaceEditor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.OnEnable
+  commentId: M:DREditor.Editor.Toolbox.InventoryItemEditor.OnEnable
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: OnEnable()
+  nameWithType: InventoryItemEditor.OnEnable()
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.OnEnable()
+  spec.csharp:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+- uid: DREditor.Presents.Editor.PresentEditor.OnEnable*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.OnEnable
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_OnEnable
+  name: OnEnable
+  nameWithType: PresentEditor.OnEnable
+  fullName: DREditor.Presents.Editor.PresentEditor.OnEnable
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.InitializeSerializedProperties
+  commentId: M:DREditor.Editor.Toolbox.InventoryItemEditor.InitializeSerializedProperties
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: InitializeSerializedProperties()
+  nameWithType: InventoryItemEditor.InitializeSerializedProperties()
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.InitializeSerializedProperties()
+  spec.csharp:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.InitializeSerializedProperties
+    name: InitializeSerializedProperties
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.InitializeSerializedProperties
+    name: InitializeSerializedProperties
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+- uid: DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_InitializeSerializedProperties
+  name: InitializeSerializedProperties
+  nameWithType: PresentEditor.InitializeSerializedProperties
+  fullName: DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties
 - uid: DREditor.Presents.Editor.PresentEditor.OnInspectorGUI*
   commentId: Overload:DREditor.Presents.Editor.PresentEditor.OnInspectorGUI
   isExternal: true
@@ -131,6 +1615,208 @@ references:
   name: OnInspectorGUI
   nameWithType: PresentEditor.OnInspectorGUI
   fullName: DREditor.Presents.Editor.PresentEditor.OnInspectorGUI
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayItemData
+  commentId: M:DREditor.Editor.Toolbox.InventoryItemEditor.DisplayItemData
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DisplayItemData()
+  nameWithType: InventoryItemEditor.DisplayItemData()
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayItemData()
+  spec.csharp:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayItemData
+    name: DisplayItemData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayItemData
+    name: DisplayItemData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+- uid: DREditor.Presents.Editor.PresentEditor.DisplayItemData*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.DisplayItemData
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_DisplayItemData
+  name: DisplayItemData
+  nameWithType: PresentEditor.DisplayItemData
+  fullName: DREditor.Presents.Editor.PresentEditor.DisplayItemData
+- uid: DREditor.Presents.Editor.PresentEditor.DisplayAttributes*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.DisplayAttributes
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_DisplayAttributes
+  name: DisplayAttributes
+  nameWithType: PresentEditor.DisplayAttributes
+  fullName: DREditor.Presents.Editor.PresentEditor.DisplayAttributes
+- uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayName
+  commentId: M:DREditor.Editor.Toolbox.InventoryItemEditor.DisplayName
+  parent: DREditor.Editor.Toolbox.InventoryItemEditor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  name: DisplayName()
+  nameWithType: InventoryItemEditor.DisplayName()
+  fullName: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayName()
+  spec.csharp:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayName
+    name: DisplayName
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Toolbox.InventoryItemEditor.DisplayName
+    name: DisplayName
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/InventoryItemEditor.cs
+  - name: (
+  - name: )
+- uid: DREditor.Presents.Editor.PresentEditor.DisplayName*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.DisplayName
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_DisplayName
+  name: DisplayName
+  nameWithType: PresentEditor.DisplayName
+  fullName: DREditor.Presents.Editor.PresentEditor.DisplayName
+- uid: DREditor.Presents.Editor.PresentEditor.DisplayID*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.DisplayID
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_DisplayID
+  name: DisplayID
+  nameWithType: PresentEditor.DisplayID
+  fullName: DREditor.Presents.Editor.PresentEditor.DisplayID
+- uid: DREditor.Presents.Editor.PresentEditor.AddData*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.AddData
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_AddData_System_Object_
+  name: AddData
+  nameWithType: PresentEditor.AddData
+  fullName: DREditor.Presents.Editor.PresentEditor.AddData
+- uid: DREditor.Editor.Utility.INestedEditorCacheable.AddData(System.Object)
+  commentId: M:DREditor.Editor.Utility.INestedEditorCacheable.AddData(System.Object)
+  parent: DREditor.Editor.Utility.INestedEditorCacheable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  name: AddData(object)
+  nameWithType: INestedEditorCacheable.AddData(object)
+  fullName: DREditor.Editor.Utility.INestedEditorCacheable.AddData(object)
+  nameWithType.vb: INestedEditorCacheable.AddData(Object)
+  fullName.vb: DREditor.Editor.Utility.INestedEditorCacheable.AddData(Object)
+  name.vb: AddData(Object)
+  spec.csharp:
+  - uid: DREditor.Editor.Utility.INestedEditorCacheable.AddData(System.Object)
+    name: AddData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Utility.INestedEditorCacheable.AddData(System.Object)
+    name: AddData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.Presents.Editor.PresentEditor.TryGetData*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.TryGetData
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_TryGetData__1___0__
+  name: TryGetData
+  nameWithType: PresentEditor.TryGetData
+  fullName: DREditor.Presents.Editor.PresentEditor.TryGetData
+- uid: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1({T}@)
+  commentId: M:DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1(``0@)
+  parent: DREditor.Editor.Utility.INestedEditorCacheable
+  definition: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1(``0@)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  name: TryGetData<T>(out T)
+  nameWithType: INestedEditorCacheable.TryGetData<T>(out T)
+  fullName: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData<T>(out T)
+  nameWithType.vb: INestedEditorCacheable.TryGetData(Of T)(T)
+  fullName.vb: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData(Of T)(T)
+  name.vb: TryGetData(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1(``0@)
+    name: TryGetData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1(``0@)
+    name: TryGetData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1(``0@)
+  commentId: M:DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1(``0@)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  name: TryGetData<T>(out T)
+  nameWithType: INestedEditorCacheable.TryGetData<T>(out T)
+  fullName: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData<T>(out T)
+  nameWithType.vb: INestedEditorCacheable.TryGetData(Of T)(T)
+  fullName.vb: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData(Of T)(T)
+  name.vb: TryGetData(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1(``0@)
+    name: TryGetData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Editor.Utility.INestedEditorCacheable.TryGetData``1(``0@)
+    name: TryGetData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
 - uid: DREditor.Presents.Editor.PresentEditor.#ctor*
   commentId: Overload:DREditor.Presents.Editor.PresentEditor.#ctor
   isExternal: true
@@ -141,3 +1827,33 @@ references:
   nameWithType.vb: PresentEditor.New
   fullName.vb: DREditor.Presents.Editor.PresentEditor.New
   name.vb: New
+- uid: DREditor.Presents.Editor.PresentEditor.VisibilityCaches*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.VisibilityCaches
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_VisibilityCaches
+  name: VisibilityCaches
+  nameWithType: PresentEditor.VisibilityCaches
+  fullName: DREditor.Presents.Editor.PresentEditor.VisibilityCaches
+- uid: DREditor.Editor.Utility.INestedEditorCacheable.VisibilityCaches
+  commentId: P:DREditor.Editor.Utility.INestedEditorCacheable.VisibilityCaches
+  parent: DREditor.Editor.Utility.INestedEditorCacheable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  name: VisibilityCaches
+  nameWithType: INestedEditorCacheable.VisibilityCaches
+  fullName: DREditor.Editor.Utility.INestedEditorCacheable.VisibilityCaches
+- uid: DREditor.Presents.Editor.PresentEditor.IndexCaches*
+  commentId: Overload:DREditor.Presents.Editor.PresentEditor.IndexCaches
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentEditor.html#DREditor_Presents_Editor_PresentEditor_IndexCaches
+  name: IndexCaches
+  nameWithType: PresentEditor.IndexCaches
+  fullName: DREditor.Presents.Editor.PresentEditor.IndexCaches
+- uid: DREditor.Editor.Utility.INestedEditorCacheable.IndexCaches
+  commentId: P:DREditor.Editor.Utility.INestedEditorCacheable.IndexCaches
+  parent: DREditor.Editor.Utility.INestedEditorCacheable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/INestedEditorCacheable.cs
+  name: IndexCaches
+  nameWithType: INestedEditorCacheable.IndexCaches
+  fullName: DREditor.Editor.Utility.INestedEditorCacheable.IndexCaches

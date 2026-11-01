@@ -1,0 +1,1218 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.RoomLoading.DREStartAloneScene
+  commentId: T:DREditor.RoomLoading.DREStartAloneScene
+  id: DREStartAloneScene
+  parent: DREditor.RoomLoading
+  children:
+  - DREditor.RoomLoading.DREStartAloneScene.#ctor
+  - DREditor.RoomLoading.DREStartAloneScene.AssertObserveModeUnlockAfterDialogue
+  - DREditor.RoomLoading.DREStartAloneScene.Awake
+  - DREditor.RoomLoading.DREStartAloneScene.CheckIfSaveDialogue
+  - DREditor.RoomLoading.DREStartAloneScene.InitializeGameStates
+  - DREditor.RoomLoading.DREStartAloneScene.OnDestroy
+  - DREditor.RoomLoading.DREStartAloneScene.SetGameToDesignatedMode
+  - DREditor.RoomLoading.DREStartAloneScene.Start
+  - DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogue
+  - DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogueRoutine
+  - DREditor.RoomLoading.DREStartAloneScene.StartSceneProcessFromLoadSituation
+  - DREditor.RoomLoading.DREStartAloneScene.SubscribeToSceneEvent
+  - DREditor.RoomLoading.DREStartAloneScene.UnsubscribeToSceneEvent
+  - DREditor.RoomLoading.DREStartAloneScene.actor
+  - DREditor.RoomLoading.DREStartAloneScene.inDialogue
+  - DREditor.RoomLoading.DREStartAloneScene.isLoadingFile
+  - DREditor.RoomLoading.DREStartAloneScene.observeModeLocked
+  - DREditor.RoomLoading.DREStartAloneScene.onFinishedLoadingRoomNoDialogue
+  - DREditor.RoomLoading.DREStartAloneScene.reticleSelectOverride
+  - DREditor.RoomLoading.DREStartAloneScene.startSceneDialogueBufferTime
+  - DREditor.RoomLoading.DREStartAloneScene.startingDialogue
+  - DREditor.RoomLoading.DREStartAloneScene.startingMode
+  langs:
+  - csharp
+  - vb
+  name: DREStartAloneScene
+  nameWithType: DREStartAloneScene
+  fullName: DREditor.RoomLoading.DREStartAloneScene
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("IDialogueHolder\n\n")]
+
+      public class DREStartAloneScene : MonoBehaviour, IDialogueHolder
+    content.vb: >-
+      <ClassHeader("IDialogueHolder" & vbLf & vbLf)>
+
+      Public Class DREStartAloneScene Inherits MonoBehaviour Implements IDialogueHolder
+  inheritance:
+  - System.Object
+  implements:
+  - DREditor.Dialogues.IDialogueHolder
+  extensionMethods:
+  - DREditor.RoomLoading.DREStartAloneScene.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.RoomLoading.DREStartAloneScene.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.RoomLoading.DREStartAloneScene.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        IDialogueHolder
+
+- uid: DREditor.RoomLoading.DREStartAloneScene.startingDialogue
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.startingDialogue
+  id: startingDialogue
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: startingDialogue
+  nameWithType: DREStartAloneScene.startingDialogue
+  fullName: DREditor.RoomLoading.DREStartAloneScene.startingDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected Dialogue startingDialogue
+    return:
+      type: DREditor.Dialogues.Dialogue
+    content.vb: >-
+      <Divider>
+
+      Protected startingDialogue As Dialogue
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.RoomLoading.DREStartAloneScene.startingMode
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.startingMode
+  id: startingMode
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: startingMode
+  nameWithType: DREStartAloneScene.startingMode
+  fullName: DREditor.RoomLoading.DREStartAloneScene.startingMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent startingMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected startingMode As BoolWithEvent
+- uid: DREditor.RoomLoading.DREStartAloneScene.inDialogue
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.inDialogue
+  id: inDialogue
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: inDialogue
+  nameWithType: DREStartAloneScene.inDialogue
+  fullName: DREditor.RoomLoading.DREStartAloneScene.inDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inDialogue
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inDialogue As BoolWithEvent
+- uid: DREditor.RoomLoading.DREStartAloneScene.isLoadingFile
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.isLoadingFile
+  id: isLoadingFile
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: isLoadingFile
+  nameWithType: DREStartAloneScene.isLoadingFile
+  fullName: DREditor.RoomLoading.DREStartAloneScene.isLoadingFile
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isLoadingFile
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isLoadingFile As BoolWithEvent
+- uid: DREditor.RoomLoading.DREStartAloneScene.observeModeLocked
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.observeModeLocked
+  id: observeModeLocked
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: observeModeLocked
+  nameWithType: DREStartAloneScene.observeModeLocked
+  fullName: DREditor.RoomLoading.DREStartAloneScene.observeModeLocked
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent observeModeLocked
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected observeModeLocked As BoolWithEvent
+- uid: DREditor.RoomLoading.DREStartAloneScene.reticleSelectOverride
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.reticleSelectOverride
+  id: reticleSelectOverride
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: reticleSelectOverride
+  nameWithType: DREStartAloneScene.reticleSelectOverride
+  fullName: DREditor.RoomLoading.DREStartAloneScene.reticleSelectOverride
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent reticleSelectOverride
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected reticleSelectOverride As BoolWithEvent
+- uid: DREditor.RoomLoading.DREStartAloneScene.onFinishedLoadingRoomNoDialogue
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.onFinishedLoadingRoomNoDialogue
+  id: onFinishedLoadingRoomNoDialogue
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: onFinishedLoadingRoomNoDialogue
+  nameWithType: DREStartAloneScene.onFinishedLoadingRoomNoDialogue
+  fullName: DREditor.RoomLoading.DREStartAloneScene.onFinishedLoadingRoomNoDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEventListener onFinishedLoadingRoomNoDialogue
+    return:
+      type: DREditor.EventObjects.SceneEventListener
+    content.vb: Protected onFinishedLoadingRoomNoDialogue As SceneEventListener
+- uid: DREditor.RoomLoading.DREStartAloneScene.startSceneDialogueBufferTime
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.startSceneDialogueBufferTime
+  id: startSceneDialogueBufferTime
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: startSceneDialogueBufferTime
+  nameWithType: DREStartAloneScene.startSceneDialogueBufferTime
+  fullName: DREditor.RoomLoading.DREStartAloneScene.startSceneDialogueBufferTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected float startSceneDialogueBufferTime
+    return:
+      type: System.Single
+    content.vb: >-
+      <Divider>
+
+      Protected startSceneDialogueBufferTime As Single
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.RoomLoading.DREStartAloneScene.actor
+  commentId: F:DREditor.RoomLoading.DREStartAloneScene.actor
+  id: actor
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: actor
+  nameWithType: DREStartAloneScene.actor
+  fullName: DREditor.RoomLoading.DREStartAloneScene.actor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SelectableObject actor
+    return:
+      type: DREditor.EventObjects.SelectableObject
+    content.vb: Protected actor As SelectableObject
+- uid: DREditor.RoomLoading.DREStartAloneScene.Awake
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.Awake
+  id: Awake
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: DREStartAloneScene.Awake()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: DREditor.RoomLoading.DREStartAloneScene.Awake*
+- uid: DREditor.RoomLoading.DREStartAloneScene.InitializeGameStates
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.InitializeGameStates
+  id: InitializeGameStates
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: InitializeGameStates()
+  nameWithType: DREStartAloneScene.InitializeGameStates()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.InitializeGameStates()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializeGameStates()
+    content.vb: Protected Overridable Sub InitializeGameStates()
+  overload: DREditor.RoomLoading.DREStartAloneScene.InitializeGameStates*
+- uid: DREditor.RoomLoading.DREStartAloneScene.SetGameToDesignatedMode
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.SetGameToDesignatedMode
+  id: SetGameToDesignatedMode
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: SetGameToDesignatedMode()
+  nameWithType: DREStartAloneScene.SetGameToDesignatedMode()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.SetGameToDesignatedMode()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SetGameToDesignatedMode()
+    content.vb: Protected Overridable Sub SetGameToDesignatedMode()
+  overload: DREditor.RoomLoading.DREStartAloneScene.SetGameToDesignatedMode*
+- uid: DREditor.RoomLoading.DREStartAloneScene.Start
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.Start
+  id: Start
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: DREStartAloneScene.Start()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.RoomLoading.DREStartAloneScene.Start*
+- uid: DREditor.RoomLoading.DREStartAloneScene.StartSceneProcessFromLoadSituation
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.StartSceneProcessFromLoadSituation
+  id: StartSceneProcessFromLoadSituation
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: StartSceneProcessFromLoadSituation()
+  nameWithType: DREStartAloneScene.StartSceneProcessFromLoadSituation()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.StartSceneProcessFromLoadSituation()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void StartSceneProcessFromLoadSituation()
+    content.vb: Protected Overridable Sub StartSceneProcessFromLoadSituation()
+  overload: DREditor.RoomLoading.DREStartAloneScene.StartSceneProcessFromLoadSituation*
+- uid: DREditor.RoomLoading.DREStartAloneScene.SubscribeToSceneEvent
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.SubscribeToSceneEvent
+  id: SubscribeToSceneEvent
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: SubscribeToSceneEvent()
+  nameWithType: DREStartAloneScene.SubscribeToSceneEvent()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.SubscribeToSceneEvent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SubscribeToSceneEvent()
+    content.vb: Protected Overridable Sub SubscribeToSceneEvent()
+  overload: DREditor.RoomLoading.DREStartAloneScene.SubscribeToSceneEvent*
+- uid: DREditor.RoomLoading.DREStartAloneScene.AssertObserveModeUnlockAfterDialogue
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.AssertObserveModeUnlockAfterDialogue
+  id: AssertObserveModeUnlockAfterDialogue
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: AssertObserveModeUnlockAfterDialogue()
+  nameWithType: DREStartAloneScene.AssertObserveModeUnlockAfterDialogue()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.AssertObserveModeUnlockAfterDialogue()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator AssertObserveModeUnlockAfterDialogue()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Protected Overridable Function AssertObserveModeUnlockAfterDialogue() As IEnumerator
+  overload: DREditor.RoomLoading.DREStartAloneScene.AssertObserveModeUnlockAfterDialogue*
+- uid: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogue
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogue
+  id: StartGameSceneDialogue
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: StartGameSceneDialogue()
+  nameWithType: DREStartAloneScene.StartGameSceneDialogue()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogue()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void StartGameSceneDialogue()
+    content.vb: Protected Overridable Sub StartGameSceneDialogue()
+  overload: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogue*
+- uid: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogueRoutine
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogueRoutine
+  id: StartGameSceneDialogueRoutine
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: StartGameSceneDialogueRoutine()
+  nameWithType: DREStartAloneScene.StartGameSceneDialogueRoutine()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogueRoutine()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator StartGameSceneDialogueRoutine()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Protected Overridable Function StartGameSceneDialogueRoutine() As IEnumerator
+  overload: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogueRoutine*
+- uid: DREditor.RoomLoading.DREStartAloneScene.OnDestroy
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.OnDestroy
+  id: OnDestroy
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: DREStartAloneScene.OnDestroy()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.OnDestroy()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnDestroy()
+    content.vb: Protected Overridable Sub OnDestroy()
+  overload: DREditor.RoomLoading.DREStartAloneScene.OnDestroy*
+- uid: DREditor.RoomLoading.DREStartAloneScene.UnsubscribeToSceneEvent
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.UnsubscribeToSceneEvent
+  id: UnsubscribeToSceneEvent
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: UnsubscribeToSceneEvent()
+  nameWithType: DREStartAloneScene.UnsubscribeToSceneEvent()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.UnsubscribeToSceneEvent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void UnsubscribeToSceneEvent()
+    content.vb: Protected Overridable Sub UnsubscribeToSceneEvent()
+  overload: DREditor.RoomLoading.DREStartAloneScene.UnsubscribeToSceneEvent*
+- uid: DREditor.RoomLoading.DREStartAloneScene.CheckIfSaveDialogue
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.CheckIfSaveDialogue
+  id: CheckIfSaveDialogue
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: CheckIfSaveDialogue()
+  nameWithType: DREStartAloneScene.CheckIfSaveDialogue()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.CheckIfSaveDialogue()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool CheckIfSaveDialogue()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function CheckIfSaveDialogue() As Boolean
+  overload: DREditor.RoomLoading.DREStartAloneScene.CheckIfSaveDialogue*
+  implements:
+  - DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+- uid: DREditor.RoomLoading.DREStartAloneScene.#ctor
+  commentId: M:DREditor.RoomLoading.DREStartAloneScene.#ctor
+  id: '#ctor'
+  parent: DREditor.RoomLoading.DREStartAloneScene
+  langs:
+  - csharp
+  - vb
+  name: DREStartAloneScene()
+  nameWithType: DREStartAloneScene.DREStartAloneScene()
+  fullName: DREditor.RoomLoading.DREStartAloneScene.DREStartAloneScene()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/DREStartAloneScene.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  syntax:
+    content: public DREStartAloneScene()
+    content.vb: Public Sub New()
+  overload: DREditor.RoomLoading.DREStartAloneScene.#ctor*
+  nameWithType.vb: DREStartAloneScene.New()
+  fullName.vb: DREditor.RoomLoading.DREStartAloneScene.New()
+  name.vb: New()
+references:
+- uid: DREditor.RoomLoading
+  commentId: N:DREditor.RoomLoading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.RoomLoading
+  nameWithType: DREditor.RoomLoading
+  fullName: DREditor.RoomLoading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomLoading
+    name: RoomLoading
+    isExternal: true
+    href: DREditor.RoomLoading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomLoading
+    name: RoomLoading
+    isExternal: true
+    href: DREditor.RoomLoading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.IDialogueHolder
+  commentId: T:DREditor.Dialogues.IDialogueHolder
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: IDialogueHolder
+  nameWithType: IDialogueHolder
+  fullName: DREditor.Dialogues.IDialogueHolder
+- uid: DREditor.RoomLoading.DREStartAloneScene.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<DREStartAloneScene>(DREStartAloneScene)
+  nameWithType: ReflectionHelper.GetFieldNames<DREStartAloneScene>(DREStartAloneScene)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.RoomLoading.DREStartAloneScene>(DREditor.RoomLoading.DREStartAloneScene)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of DREStartAloneScene)(DREStartAloneScene)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.RoomLoading.DREStartAloneScene)(DREditor.RoomLoading.DREStartAloneScene)
+  name.vb: GetFieldNames(Of DREStartAloneScene)(DREStartAloneScene)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomLoading.DREStartAloneScene)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomLoading.DREStartAloneScene)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+- uid: DREditor.RoomLoading.DREStartAloneScene.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<DREStartAloneScene>(DREStartAloneScene)
+  nameWithType: ReflectionHelper.GetFieldValues<DREStartAloneScene>(DREStartAloneScene)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.RoomLoading.DREStartAloneScene>(DREditor.RoomLoading.DREStartAloneScene)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of DREStartAloneScene)(DREStartAloneScene)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.RoomLoading.DREStartAloneScene)(DREditor.RoomLoading.DREStartAloneScene)
+  name.vb: GetFieldValues(Of DREStartAloneScene)(DREStartAloneScene)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomLoading.DREStartAloneScene)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomLoading.DREStartAloneScene)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+- uid: DREditor.RoomLoading.DREStartAloneScene.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<DREStartAloneScene>(DREStartAloneScene)
+  nameWithType: DeepCopyExtensions.DeepCopy<DREStartAloneScene>(DREStartAloneScene)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.RoomLoading.DREStartAloneScene>(DREditor.RoomLoading.DREStartAloneScene)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of DREStartAloneScene)(DREStartAloneScene)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.RoomLoading.DREStartAloneScene)(DREditor.RoomLoading.DREStartAloneScene)
+  name.vb: DeepCopy(Of DREStartAloneScene)(DREStartAloneScene)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomLoading.DREStartAloneScene)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomLoading.DREStartAloneScene)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.DREStartAloneScene
+    name: DREStartAloneScene
+    isExternal: true
+    href: DREditor.RoomLoading.DREStartAloneScene.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Dialogues.Dialogue
+  commentId: T:DREditor.Dialogues.Dialogue
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  name: Dialogue
+  nameWithType: Dialogue
+  fullName: DREditor.Dialogues.Dialogue
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.SceneEventListener
+  commentId: T:DREditor.EventObjects.SceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEventListener.cs
+  name: SceneEventListener
+  nameWithType: SceneEventListener
+  fullName: DREditor.EventObjects.SceneEventListener
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: DREditor.EventObjects.SelectableObject
+  commentId: T:DREditor.EventObjects.SelectableObject
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  name: SelectableObject
+  nameWithType: SelectableObject
+  fullName: DREditor.EventObjects.SelectableObject
+- uid: DREditor.RoomLoading.DREStartAloneScene.Awake*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.Awake
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_Awake
+  name: Awake
+  nameWithType: DREStartAloneScene.Awake
+  fullName: DREditor.RoomLoading.DREStartAloneScene.Awake
+- uid: DREditor.RoomLoading.DREStartAloneScene.InitializeGameStates*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.InitializeGameStates
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_InitializeGameStates
+  name: InitializeGameStates
+  nameWithType: DREStartAloneScene.InitializeGameStates
+  fullName: DREditor.RoomLoading.DREStartAloneScene.InitializeGameStates
+- uid: DREditor.RoomLoading.DREStartAloneScene.SetGameToDesignatedMode*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.SetGameToDesignatedMode
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_SetGameToDesignatedMode
+  name: SetGameToDesignatedMode
+  nameWithType: DREStartAloneScene.SetGameToDesignatedMode
+  fullName: DREditor.RoomLoading.DREStartAloneScene.SetGameToDesignatedMode
+- uid: DREditor.RoomLoading.DREStartAloneScene.Start*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.Start
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_Start
+  name: Start
+  nameWithType: DREStartAloneScene.Start
+  fullName: DREditor.RoomLoading.DREStartAloneScene.Start
+- uid: DREditor.RoomLoading.DREStartAloneScene.StartSceneProcessFromLoadSituation*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.StartSceneProcessFromLoadSituation
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_StartSceneProcessFromLoadSituation
+  name: StartSceneProcessFromLoadSituation
+  nameWithType: DREStartAloneScene.StartSceneProcessFromLoadSituation
+  fullName: DREditor.RoomLoading.DREStartAloneScene.StartSceneProcessFromLoadSituation
+- uid: DREditor.RoomLoading.DREStartAloneScene.SubscribeToSceneEvent*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.SubscribeToSceneEvent
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_SubscribeToSceneEvent
+  name: SubscribeToSceneEvent
+  nameWithType: DREStartAloneScene.SubscribeToSceneEvent
+  fullName: DREditor.RoomLoading.DREStartAloneScene.SubscribeToSceneEvent
+- uid: DREditor.RoomLoading.DREStartAloneScene.AssertObserveModeUnlockAfterDialogue*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.AssertObserveModeUnlockAfterDialogue
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_AssertObserveModeUnlockAfterDialogue
+  name: AssertObserveModeUnlockAfterDialogue
+  nameWithType: DREStartAloneScene.AssertObserveModeUnlockAfterDialogue
+  fullName: DREditor.RoomLoading.DREStartAloneScene.AssertObserveModeUnlockAfterDialogue
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogue*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogue
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_StartGameSceneDialogue
+  name: StartGameSceneDialogue
+  nameWithType: DREStartAloneScene.StartGameSceneDialogue
+  fullName: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogue
+- uid: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogueRoutine*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogueRoutine
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_StartGameSceneDialogueRoutine
+  name: StartGameSceneDialogueRoutine
+  nameWithType: DREStartAloneScene.StartGameSceneDialogueRoutine
+  fullName: DREditor.RoomLoading.DREStartAloneScene.StartGameSceneDialogueRoutine
+- uid: DREditor.RoomLoading.DREStartAloneScene.OnDestroy*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.OnDestroy
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_OnDestroy
+  name: OnDestroy
+  nameWithType: DREStartAloneScene.OnDestroy
+  fullName: DREditor.RoomLoading.DREStartAloneScene.OnDestroy
+- uid: DREditor.RoomLoading.DREStartAloneScene.UnsubscribeToSceneEvent*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.UnsubscribeToSceneEvent
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_UnsubscribeToSceneEvent
+  name: UnsubscribeToSceneEvent
+  nameWithType: DREStartAloneScene.UnsubscribeToSceneEvent
+  fullName: DREditor.RoomLoading.DREStartAloneScene.UnsubscribeToSceneEvent
+- uid: DREditor.RoomLoading.DREStartAloneScene.CheckIfSaveDialogue*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.CheckIfSaveDialogue
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene_CheckIfSaveDialogue
+  name: CheckIfSaveDialogue
+  nameWithType: DREStartAloneScene.CheckIfSaveDialogue
+  fullName: DREditor.RoomLoading.DREStartAloneScene.CheckIfSaveDialogue
+- uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+  commentId: M:DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+  parent: DREditor.Dialogues.IDialogueHolder
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: CheckIfSaveDialogue()
+  nameWithType: IDialogueHolder.CheckIfSaveDialogue()
+  fullName: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue()
+  spec.csharp:
+  - uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.RoomLoading.DREStartAloneScene.#ctor*
+  commentId: Overload:DREditor.RoomLoading.DREStartAloneScene.#ctor
+  isExternal: true
+  href: DREditor.RoomLoading.DREStartAloneScene.html#DREditor_RoomLoading_DREStartAloneScene__ctor
+  name: DREStartAloneScene
+  nameWithType: DREStartAloneScene.DREStartAloneScene
+  fullName: DREditor.RoomLoading.DREStartAloneScene.DREStartAloneScene
+  nameWithType.vb: DREStartAloneScene.New
+  fullName.vb: DREditor.RoomLoading.DREStartAloneScene.New
+  name.vb: New

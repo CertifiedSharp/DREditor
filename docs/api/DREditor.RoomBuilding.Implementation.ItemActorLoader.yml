@@ -1,0 +1,2223 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  commentId: T:DREditor.RoomBuilding.Implementation.ItemActorLoader
+  id: ItemActorLoader
+  parent: DREditor.RoomBuilding.Implementation
+  children:
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.#ctor
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.FindRoomDatasWithNoDialogue
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.Save
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.SaveItems
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload(System.Boolean)
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.UnloadItems
+  langs:
+  - csharp
+  - vb
+  name: ItemActorLoader
+  nameWithType: ItemActorLoader
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("RoomStateHandlerBase for types <ItemStateData, ItemData>\n\n")]
+
+      public class ItemActorLoader : RoomStateHandlerBase<ItemStateData, ItemData>, IRoomStateSaver, IRoomStateLoader
+    content.vb: >-
+      <ClassHeader("RoomStateHandlerBase for types <ItemStateData, ItemData>" & vbLf & vbLf)>
+
+      Public Class ItemActorLoader Inherits RoomStateHandlerBase(Of ItemStateData, ItemData) Implements IRoomStateSaver, IRoomStateLoader
+  inheritance:
+  - System.Object
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  implements:
+  - DREditor.RoomStateBuilding.IRoomStateSaver
+  - DREditor.RoomStateBuilding.IRoomStateLoader
+  inheritedMembers:
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.loadedBaseDatas
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.loadedInstances
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetTypeName
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadedInstanceValid(System.String,DREditor.RoomBuilding.Implementation.ItemData@)
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveDataAsset(System.String)
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAssetName
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveInstance
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Unload(System.Boolean)
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetAssetFromGUID``1(System.String)
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Save
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetData(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleBaseDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleInstanceDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  - DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  extensionMethods:
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.RoomBuilding.Implementation.ItemActorLoader.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        RoomStateHandlerBase for types <ItemStateData, ItemData>
+
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.Save
+  commentId: M:DREditor.RoomBuilding.Implementation.ItemActorLoader.Save
+  id: Save
+  parent: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  langs:
+  - csharp
+  - vb
+  name: Save()
+  nameWithType: ItemActorLoader.Save()
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.Save()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public override List<ItemData> Save()
+    return:
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+      description: ''
+    content.vb: Public Overrides Function Save() As List(Of ItemData)
+  overridden: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Save
+  overload: DREditor.RoomBuilding.Implementation.ItemActorLoader.Save*
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  commentId: M:DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  id: LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  parent: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadAssetProcess(List<ItemData>, List<ItemData>)
+  nameWithType: ItemActorLoader.LoadAssetProcess(List<ItemData>, List<ItemData>)
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess(System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>, System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void LoadAssetProcess(List<ItemData> baseDatas, List<ItemData> instanceDatas = null)
+    parameters:
+    - id: baseDatas
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+      description: ''
+    - id: instanceDatas
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+      description: ''
+    content.vb: Protected Overrides Sub LoadAssetProcess(baseDatas As List(Of ItemData), instanceDatas As List(Of ItemData) = Nothing)
+  overridden: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  overload: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess*
+  nameWithType.vb: ItemActorLoader.LoadAssetProcess(List(Of ItemData), List(Of ItemData))
+  fullName.vb: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess(System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData), System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData))
+  name.vb: LoadAssetProcess(List(Of ItemData), List(Of ItemData))
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload(System.Boolean)
+  commentId: M:DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload(System.Boolean)
+  id: Unload(System.Boolean)
+  parent: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  langs:
+  - csharp
+  - vb
+  name: Unload(bool)
+  nameWithType: ItemActorLoader.Unload(bool)
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public override void Unload(bool inEditor)
+    parameters:
+    - id: inEditor
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Sub Unload(inEditor As Boolean)
+  overridden: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Unload(System.Boolean)
+  overload: DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload*
+  nameWithType.vb: ItemActorLoader.Unload(Boolean)
+  fullName.vb: DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload(Boolean)
+  name.vb: Unload(Boolean)
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  commentId: M:DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  id: LoadItems(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  parent: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadItems(List<ItemData>, List<ItemData>)
+  nameWithType: ItemActorLoader.LoadItems(List<ItemData>, List<ItemData>)
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems(System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>, System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public static List<ItemData> LoadItems(List<ItemData> data, List<ItemData> instanceData = null)
+    parameters:
+    - id: data
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+      description: ''
+    - id: instanceData
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+      description: ''
+    return:
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+    content.vb: Public Shared Function LoadItems(data As List(Of ItemData), instanceData As List(Of ItemData) = Nothing) As List(Of ItemData)
+  overload: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems*
+  nameWithType.vb: ItemActorLoader.LoadItems(List(Of ItemData), List(Of ItemData))
+  fullName.vb: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems(System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData), System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData))
+  name.vb: LoadItems(List(Of ItemData), List(Of ItemData))
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.SaveItems
+  commentId: M:DREditor.RoomBuilding.Implementation.ItemActorLoader.SaveItems
+  id: SaveItems
+  parent: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  langs:
+  - csharp
+  - vb
+  name: SaveItems()
+  nameWithType: ItemActorLoader.SaveItems()
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.SaveItems()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public static List<ItemData> SaveItems()
+    return:
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+      description: ''
+    content.vb: Public Shared Function SaveItems() As List(Of ItemData)
+  overload: DREditor.RoomBuilding.Implementation.ItemActorLoader.SaveItems*
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.UnloadItems
+  commentId: M:DREditor.RoomBuilding.Implementation.ItemActorLoader.UnloadItems
+  id: UnloadItems
+  parent: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  langs:
+  - csharp
+  - vb
+  name: UnloadItems()
+  nameWithType: ItemActorLoader.UnloadItems()
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.UnloadItems()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public static void UnloadItems()
+    content.vb: Public Shared Sub UnloadItems()
+  overload: DREditor.RoomBuilding.Implementation.ItemActorLoader.UnloadItems*
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.FindRoomDatasWithNoDialogue
+  commentId: M:DREditor.RoomBuilding.Implementation.ItemActorLoader.FindRoomDatasWithNoDialogue
+  id: FindRoomDatasWithNoDialogue
+  parent: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  langs:
+  - csharp
+  - vb
+  name: FindRoomDatasWithNoDialogue()
+  nameWithType: ItemActorLoader.FindRoomDatasWithNoDialogue()
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.FindRoomDatasWithNoDialogue()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public static void FindRoomDatasWithNoDialogue()
+    content.vb: Public Shared Sub FindRoomDatasWithNoDialogue()
+  overload: DREditor.RoomBuilding.Implementation.ItemActorLoader.FindRoomDatasWithNoDialogue*
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.#ctor
+  commentId: M:DREditor.RoomBuilding.Implementation.ItemActorLoader.#ctor
+  id: '#ctor'
+  parent: DREditor.RoomBuilding.Implementation.ItemActorLoader
+  langs:
+  - csharp
+  - vb
+  name: ItemActorLoader()
+  nameWithType: ItemActorLoader.ItemActorLoader()
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.ItemActorLoader()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/ItemActorLoader.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation
+  syntax:
+    content: public ItemActorLoader()
+    content.vb: Public Sub New()
+  overload: DREditor.RoomBuilding.Implementation.ItemActorLoader.#ctor*
+  nameWithType.vb: ItemActorLoader.New()
+  fullName.vb: DREditor.RoomBuilding.Implementation.ItemActorLoader.New()
+  name.vb: New()
+references:
+- uid: DREditor.RoomBuilding.Implementation
+  commentId: N:DREditor.RoomBuilding.Implementation
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.RoomBuilding.Implementation
+  nameWithType: DREditor.RoomBuilding.Implementation
+  fullName: DREditor.RoomBuilding.Implementation
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomBuilding
+    name: RoomBuilding
+    isExternal: true
+    href: DREditor.RoomBuilding.html
+  - name: .
+  - uid: DREditor.RoomBuilding.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomBuilding
+    name: RoomBuilding
+    isExternal: true
+    href: DREditor.RoomBuilding.html
+  - name: .
+  - uid: DREditor.RoomBuilding.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  commentId: T:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  parent: DREditor.RoomBuilding.Implementation
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html
+  name: RoomStateHandlerBase<ItemStateData, ItemData>
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData)
+  name.vb: RoomStateHandlerBase(Of ItemStateData, ItemData)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2
+    name: RoomStateHandlerBase
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemStateData
+    name: ItemStateData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemStateData.html
+  - name: ','
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2
+    name: RoomStateHandlerBase
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemStateData
+    name: ItemStateData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemStateData.html
+  - name: ','
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+- uid: DREditor.RoomStateBuilding.IRoomStateSaver
+  commentId: T:DREditor.RoomStateBuilding.IRoomStateSaver
+  parent: DREditor.RoomStateBuilding
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomStateBuilding/IRoomStateSaver.cs
+  name: IRoomStateSaver
+  nameWithType: IRoomStateSaver
+  fullName: DREditor.RoomStateBuilding.IRoomStateSaver
+- uid: DREditor.RoomStateBuilding.IRoomStateLoader
+  commentId: T:DREditor.RoomStateBuilding.IRoomStateLoader
+  parent: DREditor.RoomStateBuilding
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomStateBuilding/IRoomStateLoader.cs
+  name: IRoomStateLoader
+  nameWithType: IRoomStateLoader
+  fullName: DREditor.RoomStateBuilding.IRoomStateLoader
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.loadedBaseDatas
+  commentId: F:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.loadedBaseDatas
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.loadedBaseDatas
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_loadedBaseDatas
+  name: loadedBaseDatas
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.loadedBaseDatas
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.loadedBaseDatas
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).loadedBaseDatas
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).loadedBaseDatas
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.loadedInstances
+  commentId: F:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.loadedInstances
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.loadedInstances
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_loadedInstances
+  name: loadedInstances
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.loadedInstances
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.loadedInstances
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).loadedInstances
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).loadedInstances
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetTypeName
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetTypeName
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetTypeName
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName
+  name: GetTypeName()
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.GetTypeName()
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.GetTypeName()
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).GetTypeName()
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).GetTypeName()
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetTypeName
+    name: GetTypeName
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetTypeName
+    name: GetTypeName
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  name: LoadData(List<ScriptableObject>)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.LoadData(List<ScriptableObject>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.LoadData(System.Collections.Generic.List<UnityEngine.ScriptableObject>)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).LoadData(List(Of ScriptableObject))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).LoadData(System.Collections.Generic.List(Of UnityEngine.ScriptableObject))
+  name.vb: LoadData(List(Of ScriptableObject))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+    name: LoadData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+    name: LoadData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_System_Collections_Generic_List_UnityEngine_ScriptableObject__System_Object_
+  name: LoadInstance(List<ScriptableObject>, object)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.LoadInstance(List<ScriptableObject>, object)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.LoadInstance(System.Collections.Generic.List<UnityEngine.ScriptableObject>, object)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).LoadInstance(List(Of ScriptableObject), Object)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).LoadInstance(System.Collections.Generic.List(Of UnityEngine.ScriptableObject), Object)
+  name.vb: LoadInstance(List(Of ScriptableObject), Object)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+    name: LoadInstance
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_System_Collections_Generic_List_UnityEngine_ScriptableObject__System_Object_
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+    name: LoadInstance
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_System_Collections_Generic_List_UnityEngine_ScriptableObject__System_Object_
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadedInstanceValid(System.String,DREditor.RoomBuilding.Implementation.ItemData@)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadedInstanceValid(System.String,DREditor.RoomBuilding.Implementation.ItemData@)
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadedInstanceValid(System.String,`1@)
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_System_String__1__
+  name: LoadedInstanceValid(string, out ItemData)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.LoadedInstanceValid(string, out ItemData)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.LoadedInstanceValid(string, out DREditor.RoomBuilding.Implementation.ItemData)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).LoadedInstanceValid(String, ItemData)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).LoadedInstanceValid(String, DREditor.RoomBuilding.Implementation.ItemData)
+  name.vb: LoadedInstanceValid(String, ItemData)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadedInstanceValid(System.String,DREditor.RoomBuilding.Implementation.ItemData@)
+    name: LoadedInstanceValid
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_System_String__1__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadedInstanceValid(System.String,DREditor.RoomBuilding.Implementation.ItemData@)
+    name: LoadedInstanceValid
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_System_String__1__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveDataAsset(System.String)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveDataAsset(System.String)
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveDataAsset(System.String)
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_System_String_
+  name: SaveDataAsset(string)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.SaveDataAsset(string)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.SaveDataAsset(string)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).SaveDataAsset(String)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).SaveDataAsset(String)
+  name.vb: SaveDataAsset(String)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveDataAsset(System.String)
+    name: SaveDataAsset
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveDataAsset(System.String)
+    name: SaveDataAsset
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAssetName
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAssetName
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAssetName
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName
+  name: GetDataAssetName()
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.GetDataAssetName()
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.GetDataAssetName()
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).GetDataAssetName()
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).GetDataAssetName()
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAssetName
+    name: GetDataAssetName
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAssetName
+    name: GetDataAssetName
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveInstance
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveInstance
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveInstance
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance
+  name: SaveInstance()
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.SaveInstance()
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.SaveInstance()
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).SaveInstance()
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).SaveInstance()
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveInstance
+    name: SaveInstance
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.SaveInstance
+    name: SaveInstance
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Unload(System.Boolean)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Unload(System.Boolean)
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Unload(System.Boolean)
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_System_Boolean_
+  name: Unload(bool)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.Unload(bool)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.Unload(bool)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).Unload(Boolean)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).Unload(Boolean)
+  name.vb: Unload(Boolean)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Unload(System.Boolean)
+    name: Unload
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Unload(System.Boolean)
+    name: Unload
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetAssetFromGUID``1(System.String)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetAssetFromGUID``1(System.String)
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetAssetFromGUID``1(System.String)
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID__1_System_String_
+  name: GetAssetFromGUID<T3>(string)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.GetAssetFromGUID<T3>(string)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.GetAssetFromGUID<T3>(string)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).GetAssetFromGUID(Of T3)(String)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).GetAssetFromGUID(Of T3)(String)
+  name.vb: GetAssetFromGUID(Of T3)(String)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetAssetFromGUID``1(System.String)
+    name: GetAssetFromGUID
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID__1_System_String_
+  - name: <
+  - name: T3
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetAssetFromGUID``1(System.String)
+    name: GetAssetFromGUID
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID__1_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T3
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset__1_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  name: GetDataAsset<T4>(List<ScriptableObject>)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.GetDataAsset<T4>(List<ScriptableObject>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.GetDataAsset<T4>(System.Collections.Generic.List<UnityEngine.ScriptableObject>)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).GetDataAsset(Of T4)(List(Of ScriptableObject))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).GetDataAsset(Of T4)(System.Collections.Generic.List(Of UnityEngine.ScriptableObject))
+  name.vb: GetDataAsset(Of T4)(List(Of ScriptableObject))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+    name: GetDataAsset
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset__1_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  - name: <
+  - name: T4
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+    name: GetDataAsset
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset__1_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T4
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Save
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Save
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Save
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save
+  name: Save()
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.Save()
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.Save()
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).Save()
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).Save()
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Save
+    name: Save
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.Save
+    name: Save
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetData(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetData(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetData(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  name: LoadAssetData(List<ItemData>, List<ItemData>)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.LoadAssetData(List<ItemData>, List<ItemData>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.LoadAssetData(System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>, System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).LoadAssetData(List(Of ItemData), List(Of ItemData))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).LoadAssetData(System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData), System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData))
+  name.vb: LoadAssetData(List(Of ItemData), List(Of ItemData))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetData(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+    name: LoadAssetData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetData(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+    name: LoadAssetData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleBaseDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleBaseDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleBaseDatas(System.Collections.Generic.List{`1})
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_System_Collections_Generic_List__1__
+  name: InitializeVisibleBaseDatas(List<ItemData>)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.InitializeVisibleBaseDatas(List<ItemData>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.InitializeVisibleBaseDatas(System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).InitializeVisibleBaseDatas(List(Of ItemData))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).InitializeVisibleBaseDatas(System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData))
+  name.vb: InitializeVisibleBaseDatas(List(Of ItemData))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleBaseDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+    name: InitializeVisibleBaseDatas
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleBaseDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+    name: InitializeVisibleBaseDatas
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleInstanceDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleInstanceDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleInstanceDatas(System.Collections.Generic.List{`1})
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_System_Collections_Generic_List__1__
+  name: InitializeVisibleInstanceDatas(List<ItemData>)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.InitializeVisibleInstanceDatas(List<ItemData>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.InitializeVisibleInstanceDatas(System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).InitializeVisibleInstanceDatas(List(Of ItemData))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).InitializeVisibleInstanceDatas(System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData))
+  name.vb: InitializeVisibleInstanceDatas(List(Of ItemData))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleInstanceDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+    name: InitializeVisibleInstanceDatas
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.InitializeVisibleInstanceDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+    name: InitializeVisibleInstanceDatas
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+  parent: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}
+  definition: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetProcess(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  name: LoadAssetProcess(List<ItemData>, List<ItemData>)
+  nameWithType: RoomStateHandlerBase<ItemStateData, ItemData>.LoadAssetProcess(List<ItemData>, List<ItemData>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData>.LoadAssetProcess(System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>, System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>)
+  nameWithType.vb: RoomStateHandlerBase(Of ItemStateData, ItemData).LoadAssetProcess(List(Of ItemData), List(Of ItemData))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of DREditor.RoomBuilding.Implementation.ItemStateData, DREditor.RoomBuilding.Implementation.ItemData).LoadAssetProcess(System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData), System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData))
+  name.vb: LoadAssetProcess(List(Of ItemData), List(Of ItemData))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+    name: LoadAssetProcess
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase{DREditor.RoomBuilding.Implementation.ItemStateData,DREditor.RoomBuilding.Implementation.ItemData}.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData})
+    name: LoadAssetProcess
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ItemActorLoader>(ItemActorLoader)
+  nameWithType: ReflectionHelper.GetFieldNames<ItemActorLoader>(ItemActorLoader)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.RoomBuilding.Implementation.ItemActorLoader>(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ItemActorLoader)(ItemActorLoader)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.RoomBuilding.Implementation.ItemActorLoader)(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+  name.vb: GetFieldNames(Of ItemActorLoader)(ItemActorLoader)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ItemActorLoader>(ItemActorLoader)
+  nameWithType: ReflectionHelper.GetFieldValues<ItemActorLoader>(ItemActorLoader)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.RoomBuilding.Implementation.ItemActorLoader>(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ItemActorLoader)(ItemActorLoader)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.RoomBuilding.Implementation.ItemActorLoader)(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+  name.vb: GetFieldValues(Of ItemActorLoader)(ItemActorLoader)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ItemActorLoader>(ItemActorLoader)
+  nameWithType: DeepCopyExtensions.DeepCopy<ItemActorLoader>(ItemActorLoader)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.RoomBuilding.Implementation.ItemActorLoader>(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ItemActorLoader)(ItemActorLoader)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.RoomBuilding.Implementation.ItemActorLoader)(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+  name.vb: DeepCopy(Of ItemActorLoader)(ItemActorLoader)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomBuilding.Implementation.ItemActorLoader)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.ItemActorLoader
+    name: ItemActorLoader
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2
+  commentId: T:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html
+  name: RoomStateHandlerBase<T, T2>
+  nameWithType: RoomStateHandlerBase<T, T2>
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2)
+  name.vb: RoomStateHandlerBase(Of T, T2)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2
+    name: RoomStateHandlerBase
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2
+    name: RoomStateHandlerBase
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: DREditor.RoomStateBuilding
+  commentId: N:DREditor.RoomStateBuilding
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.RoomStateBuilding
+  nameWithType: DREditor.RoomStateBuilding
+  fullName: DREditor.RoomStateBuilding
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomStateBuilding
+    name: RoomStateBuilding
+    isExternal: true
+    href: DREditor.RoomStateBuilding.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomStateBuilding
+    name: RoomStateBuilding
+    isExternal: true
+    href: DREditor.RoomStateBuilding.html
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.loadedBaseDatas
+  commentId: F:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.loadedBaseDatas
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_loadedBaseDatas
+  name: loadedBaseDatas
+  nameWithType: RoomStateHandlerBase<T, T2>.loadedBaseDatas
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.loadedBaseDatas
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).loadedBaseDatas
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).loadedBaseDatas
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.loadedInstances
+  commentId: F:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.loadedInstances
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_loadedInstances
+  name: loadedInstances
+  nameWithType: RoomStateHandlerBase<T, T2>.loadedInstances
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.loadedInstances
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).loadedInstances
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).loadedInstances
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetTypeName
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetTypeName
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName
+  name: GetTypeName()
+  nameWithType: RoomStateHandlerBase<T, T2>.GetTypeName()
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.GetTypeName()
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).GetTypeName()
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).GetTypeName()
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetTypeName
+    name: GetTypeName
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetTypeName
+    name: GetTypeName
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  name: LoadData(List<ScriptableObject>)
+  nameWithType: RoomStateHandlerBase<T, T2>.LoadData(List<ScriptableObject>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.LoadData(System.Collections.Generic.List<UnityEngine.ScriptableObject>)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).LoadData(List(Of ScriptableObject))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).LoadData(System.Collections.Generic.List(Of UnityEngine.ScriptableObject))
+  name.vb: LoadData(List(Of ScriptableObject))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+    name: LoadData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+    name: LoadData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_System_Collections_Generic_List_UnityEngine_ScriptableObject__System_Object_
+  name: LoadInstance(List<ScriptableObject>, object)
+  nameWithType: RoomStateHandlerBase<T, T2>.LoadInstance(List<ScriptableObject>, object)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.LoadInstance(System.Collections.Generic.List<UnityEngine.ScriptableObject>, object)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).LoadInstance(List(Of ScriptableObject), Object)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).LoadInstance(System.Collections.Generic.List(Of UnityEngine.ScriptableObject), Object)
+  name.vb: LoadInstance(List(Of ScriptableObject), Object)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+    name: LoadInstance
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_System_Collections_Generic_List_UnityEngine_ScriptableObject__System_Object_
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)
+    name: LoadInstance
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_System_Collections_Generic_List_UnityEngine_ScriptableObject__System_Object_
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadedInstanceValid(System.String,`1@)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadedInstanceValid(System.String,`1@)
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_System_String__1__
+  name: LoadedInstanceValid(string, out T2)
+  nameWithType: RoomStateHandlerBase<T, T2>.LoadedInstanceValid(string, out T2)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.LoadedInstanceValid(string, out T2)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).LoadedInstanceValid(String, T2)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).LoadedInstanceValid(String, T2)
+  name.vb: LoadedInstanceValid(String, T2)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadedInstanceValid(System.String,`1@)
+    name: LoadedInstanceValid
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_System_String__1__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadedInstanceValid(System.String,`1@)
+    name: LoadedInstanceValid
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_System_String__1__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveDataAsset(System.String)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveDataAsset(System.String)
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_System_String_
+  name: SaveDataAsset(string)
+  nameWithType: RoomStateHandlerBase<T, T2>.SaveDataAsset(string)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.SaveDataAsset(string)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).SaveDataAsset(String)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).SaveDataAsset(String)
+  name.vb: SaveDataAsset(String)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveDataAsset(System.String)
+    name: SaveDataAsset
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveDataAsset(System.String)
+    name: SaveDataAsset
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAssetName
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAssetName
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName
+  name: GetDataAssetName()
+  nameWithType: RoomStateHandlerBase<T, T2>.GetDataAssetName()
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.GetDataAssetName()
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).GetDataAssetName()
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).GetDataAssetName()
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAssetName
+    name: GetDataAssetName
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAssetName
+    name: GetDataAssetName
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveInstance
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveInstance
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance
+  name: SaveInstance()
+  nameWithType: RoomStateHandlerBase<T, T2>.SaveInstance()
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.SaveInstance()
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).SaveInstance()
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).SaveInstance()
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveInstance
+    name: SaveInstance
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveInstance
+    name: SaveInstance
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Unload(System.Boolean)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Unload(System.Boolean)
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_System_Boolean_
+  name: Unload(bool)
+  nameWithType: RoomStateHandlerBase<T, T2>.Unload(bool)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.Unload(bool)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).Unload(Boolean)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).Unload(Boolean)
+  name.vb: Unload(Boolean)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Unload(System.Boolean)
+    name: Unload
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Unload(System.Boolean)
+    name: Unload
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetAssetFromGUID``1(System.String)
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetAssetFromGUID``1(System.String)
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID__1_System_String_
+  name: GetAssetFromGUID<T3>(string)
+  nameWithType: RoomStateHandlerBase<T, T2>.GetAssetFromGUID<T3>(string)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.GetAssetFromGUID<T3>(string)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).GetAssetFromGUID(Of T3)(String)
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).GetAssetFromGUID(Of T3)(String)
+  name.vb: GetAssetFromGUID(Of T3)(String)
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetAssetFromGUID``1(System.String)
+    name: GetAssetFromGUID
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID__1_System_String_
+  - name: <
+  - name: T3
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetAssetFromGUID``1(System.String)
+    name: GetAssetFromGUID
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID__1_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T3
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset__1_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  name: GetDataAsset<T4>(List<ScriptableObject>)
+  nameWithType: RoomStateHandlerBase<T, T2>.GetDataAsset<T4>(List<ScriptableObject>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.GetDataAsset<T4>(System.Collections.Generic.List<UnityEngine.ScriptableObject>)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).GetDataAsset(Of T4)(List(Of ScriptableObject))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).GetDataAsset(Of T4)(System.Collections.Generic.List(Of UnityEngine.ScriptableObject))
+  name.vb: GetDataAsset(Of T4)(List(Of ScriptableObject))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+    name: GetDataAsset
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset__1_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  - name: <
+  - name: T4
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})
+    name: GetDataAsset
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset__1_System_Collections_Generic_List_UnityEngine_ScriptableObject__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T4
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.ScriptableObject
+    name: ScriptableObject
+    isExternal: true
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Save
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Save
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save
+  name: Save()
+  nameWithType: RoomStateHandlerBase<T, T2>.Save()
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.Save()
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).Save()
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).Save()
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Save
+    name: Save
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Save
+    name: Save
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetData(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetData(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  name: LoadAssetData(List<T2>, List<T2>)
+  nameWithType: RoomStateHandlerBase<T, T2>.LoadAssetData(List<T2>, List<T2>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.LoadAssetData(System.Collections.Generic.List<T2>, System.Collections.Generic.List<T2>)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).LoadAssetData(List(Of T2), List(Of T2))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).LoadAssetData(System.Collections.Generic.List(Of T2), System.Collections.Generic.List(Of T2))
+  name.vb: LoadAssetData(List(Of T2), List(Of T2))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetData(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+    name: LoadAssetData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetData(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+    name: LoadAssetData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleBaseDatas(System.Collections.Generic.List{`1})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleBaseDatas(System.Collections.Generic.List{`1})
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_System_Collections_Generic_List__1__
+  name: InitializeVisibleBaseDatas(List<T2>)
+  nameWithType: RoomStateHandlerBase<T, T2>.InitializeVisibleBaseDatas(List<T2>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.InitializeVisibleBaseDatas(System.Collections.Generic.List<T2>)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).InitializeVisibleBaseDatas(List(Of T2))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).InitializeVisibleBaseDatas(System.Collections.Generic.List(Of T2))
+  name.vb: InitializeVisibleBaseDatas(List(Of T2))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleBaseDatas(System.Collections.Generic.List{`1})
+    name: InitializeVisibleBaseDatas
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleBaseDatas(System.Collections.Generic.List{`1})
+    name: InitializeVisibleBaseDatas
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleInstanceDatas(System.Collections.Generic.List{`1})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleInstanceDatas(System.Collections.Generic.List{`1})
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_System_Collections_Generic_List__1__
+  name: InitializeVisibleInstanceDatas(List<T2>)
+  nameWithType: RoomStateHandlerBase<T, T2>.InitializeVisibleInstanceDatas(List<T2>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.InitializeVisibleInstanceDatas(System.Collections.Generic.List<T2>)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).InitializeVisibleInstanceDatas(List(Of T2))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).InitializeVisibleInstanceDatas(System.Collections.Generic.List(Of T2))
+  name.vb: InitializeVisibleInstanceDatas(List(Of T2))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleInstanceDatas(System.Collections.Generic.List{`1})
+    name: InitializeVisibleInstanceDatas
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleInstanceDatas(System.Collections.Generic.List{`1})
+    name: InitializeVisibleInstanceDatas
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetProcess(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+  commentId: M:DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetProcess(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  name: LoadAssetProcess(List<T2>, List<T2>)
+  nameWithType: RoomStateHandlerBase<T, T2>.LoadAssetProcess(List<T2>, List<T2>)
+  fullName: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase<T, T2>.LoadAssetProcess(System.Collections.Generic.List<T2>, System.Collections.Generic.List<T2>)
+  nameWithType.vb: RoomStateHandlerBase(Of T, T2).LoadAssetProcess(List(Of T2), List(Of T2))
+  fullName.vb: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase(Of T, T2).LoadAssetProcess(System.Collections.Generic.List(Of T2), System.Collections.Generic.List(Of T2))
+  name.vb: LoadAssetProcess(List(Of T2), List(Of T2))
+  spec.csharp:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetProcess(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+    name: LoadAssetProcess
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetProcess(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})
+    name: LoadAssetProcess
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_System_Collections_Generic_List__1__System_Collections_Generic_List__1__
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.Save*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.ItemActorLoader.Save
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html#DREditor_RoomBuilding_Implementation_ItemActorLoader_Save
+  name: Save
+  nameWithType: ItemActorLoader.Save
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.Save
+- uid: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+  commentId: T:System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.ItemData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ItemData>
+  nameWithType: List<ItemData>
+  fullName: System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.ItemData>
+  nameWithType.vb: List(Of ItemData)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.ItemData)
+  name.vb: List(Of ItemData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.ItemData
+    name: ItemData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.ItemData.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html#DREditor_RoomBuilding_Implementation_ItemActorLoader_LoadAssetProcess_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_ItemData__System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_ItemData__
+  name: LoadAssetProcess
+  nameWithType: ItemActorLoader.LoadAssetProcess
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadAssetProcess
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html#DREditor_RoomBuilding_Implementation_ItemActorLoader_Unload_System_Boolean_
+  name: Unload
+  nameWithType: ItemActorLoader.Unload
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.Unload
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html#DREditor_RoomBuilding_Implementation_ItemActorLoader_LoadItems_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_ItemData__System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_ItemData__
+  name: LoadItems
+  nameWithType: ItemActorLoader.LoadItems
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.LoadItems
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.SaveItems*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.ItemActorLoader.SaveItems
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html#DREditor_RoomBuilding_Implementation_ItemActorLoader_SaveItems
+  name: SaveItems
+  nameWithType: ItemActorLoader.SaveItems
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.SaveItems
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.UnloadItems*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.ItemActorLoader.UnloadItems
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html#DREditor_RoomBuilding_Implementation_ItemActorLoader_UnloadItems
+  name: UnloadItems
+  nameWithType: ItemActorLoader.UnloadItems
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.UnloadItems
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.FindRoomDatasWithNoDialogue*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.ItemActorLoader.FindRoomDatasWithNoDialogue
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html#DREditor_RoomBuilding_Implementation_ItemActorLoader_FindRoomDatasWithNoDialogue
+  name: FindRoomDatasWithNoDialogue
+  nameWithType: ItemActorLoader.FindRoomDatasWithNoDialogue
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.FindRoomDatasWithNoDialogue
+- uid: DREditor.RoomBuilding.Implementation.ItemActorLoader.#ctor*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.ItemActorLoader.#ctor
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.ItemActorLoader.html#DREditor_RoomBuilding_Implementation_ItemActorLoader__ctor
+  name: ItemActorLoader
+  nameWithType: ItemActorLoader.ItemActorLoader
+  fullName: DREditor.RoomBuilding.Implementation.ItemActorLoader.ItemActorLoader
+  nameWithType.vb: ItemActorLoader.New
+  fullName.vb: DREditor.RoomBuilding.Implementation.ItemActorLoader.New
+  name.vb: New

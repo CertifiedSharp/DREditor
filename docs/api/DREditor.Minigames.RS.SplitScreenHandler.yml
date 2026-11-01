@@ -1,0 +1,1994 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Minigames.RS.SplitScreenHandler
+  commentId: T:DREditor.Minigames.RS.SplitScreenHandler
+  id: SplitScreenHandler
+  parent: DREditor.Minigames.RS
+  children:
+  - DREditor.Minigames.RS.SplitScreenHandler.#ctor
+  - DREditor.Minigames.RS.SplitScreenHandler.AnimateToResetState
+  - DREditor.Minigames.RS.SplitScreenHandler.Attack(UnityEngine.RectTransform,System.Single)
+  - DREditor.Minigames.RS.SplitScreenHandler.CalculateDomination
+  - DREditor.Minigames.RS.SplitScreenHandler.ClampPlayerMask
+  - DREditor.Minigames.RS.SplitScreenHandler.DebugEnemyAttack
+  - DREditor.Minigames.RS.SplitScreenHandler.DebugPlayerAttack
+  - DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack(System.Int32,System.Single)
+  - DREditor.Minigames.RS.SplitScreenHandler.GetUpdatedSize(UnityEngine.RectTransform)
+  - DREditor.Minigames.RS.SplitScreenHandler.InitializeMaskWidths
+  - DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount(System.Int32)
+  - DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX(System.Int32,System.Int32,System.Single)
+  - DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack(System.Single)
+  - DREditor.Minigames.RS.SplitScreenHandler.Start
+  - DREditor.Minigames.RS.SplitScreenHandler.WillAdvanceOnTie
+  - DREditor.Minigames.RS.SplitScreenHandler.advancePointThreshold
+  - DREditor.Minigames.RS.SplitScreenHandler.canvasRectTransform
+  - DREditor.Minigames.RS.SplitScreenHandler.debugDamageAmount
+  - DREditor.Minigames.RS.SplitScreenHandler.inputAllowed
+  - DREditor.Minigames.RS.SplitScreenHandler.maskAnimTime
+  - DREditor.Minigames.RS.SplitScreenHandler.maskWidths
+  - DREditor.Minigames.RS.SplitScreenHandler.masks
+  - DREditor.Minigames.RS.SplitScreenHandler.midPointThreshold
+  - DREditor.Minigames.RS.SplitScreenHandler.playerIndex
+  - DREditor.Minigames.RS.SplitScreenHandler.retreatPointThreshold
+  langs:
+  - csharp
+  - vb
+  name: SplitScreenHandler
+  nameWithType: SplitScreenHandler
+  fullName: DREditor.Minigames.RS.SplitScreenHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("ServiceHolder, ISplitScreen, IPanelSendable\n\n")]
+
+      public class SplitScreenHandler : ServiceHolder<ISplitScreen>, ISplitScreen, IPanelSendable
+    content.vb: >-
+      <ClassHeader("ServiceHolder, ISplitScreen, IPanelSendable" & vbLf & vbLf)>
+
+      Public Class SplitScreenHandler Inherits ServiceHolder(Of ISplitScreen) Implements ISplitScreen, IPanelSendable
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  implements:
+  - DREditor.Minigames.RS.ISplitScreen
+  - DREditor.Minigames.Debates.Mechanics.IPanelSendable
+  inheritedMembers:
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.Awake
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.InitializeService
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.OnDestroy
+  extensionMethods:
+  - DREditor.Minigames.RS.SplitScreenHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Minigames.RS.SplitScreenHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Minigames.RS.SplitScreenHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        ServiceHolder, ISplitScreen, IPanelSendable
+
+- uid: DREditor.Minigames.RS.SplitScreenHandler.inputAllowed
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.inputAllowed
+  id: inputAllowed
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: inputAllowed
+  nameWithType: SplitScreenHandler.inputAllowed
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.inputAllowed
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inputAllowed
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inputAllowed As BoolWithEvent
+- uid: DREditor.Minigames.RS.SplitScreenHandler.canvasRectTransform
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.canvasRectTransform
+  id: canvasRectTransform
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: canvasRectTransform
+  nameWithType: SplitScreenHandler.canvasRectTransform
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.canvasRectTransform
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected RectTransform canvasRectTransform
+    return:
+      type: UnityEngine.RectTransform
+    content.vb: Protected canvasRectTransform As RectTransform
+- uid: DREditor.Minigames.RS.SplitScreenHandler.playerIndex
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.playerIndex
+  id: playerIndex
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: playerIndex
+  nameWithType: SplitScreenHandler.playerIndex
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.playerIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected int playerIndex
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Divider>
+
+      Protected playerIndex As Integer
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Minigames.RS.SplitScreenHandler.maskAnimTime
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.maskAnimTime
+  id: maskAnimTime
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: maskAnimTime
+  nameWithType: SplitScreenHandler.maskAnimTime
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.maskAnimTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected float maskAnimTime
+    return:
+      type: System.Single
+    content.vb: Protected maskAnimTime As Single
+- uid: DREditor.Minigames.RS.SplitScreenHandler.advancePointThreshold
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.advancePointThreshold
+  id: advancePointThreshold
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: advancePointThreshold
+  nameWithType: SplitScreenHandler.advancePointThreshold
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.advancePointThreshold
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected float advancePointThreshold
+    return:
+      type: System.Single
+    content.vb: Protected advancePointThreshold As Single
+- uid: DREditor.Minigames.RS.SplitScreenHandler.midPointThreshold
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.midPointThreshold
+  id: midPointThreshold
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: midPointThreshold
+  nameWithType: SplitScreenHandler.midPointThreshold
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.midPointThreshold
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected float midPointThreshold
+    return:
+      type: System.Single
+    content.vb: Protected midPointThreshold As Single
+- uid: DREditor.Minigames.RS.SplitScreenHandler.retreatPointThreshold
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.retreatPointThreshold
+  id: retreatPointThreshold
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: retreatPointThreshold
+  nameWithType: SplitScreenHandler.retreatPointThreshold
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.retreatPointThreshold
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected float retreatPointThreshold
+    return:
+      type: System.Single
+    content.vb: Protected retreatPointThreshold As Single
+- uid: DREditor.Minigames.RS.SplitScreenHandler.debugDamageAmount
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.debugDamageAmount
+  id: debugDamageAmount
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: debugDamageAmount
+  nameWithType: SplitScreenHandler.debugDamageAmount
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.debugDamageAmount
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected float debugDamageAmount
+    return:
+      type: System.Single
+    content.vb: Protected debugDamageAmount As Single
+- uid: DREditor.Minigames.RS.SplitScreenHandler.masks
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.masks
+  id: masks
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: masks
+  nameWithType: SplitScreenHandler.masks
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.masks
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected List<RectTransform> masks
+    return:
+      type: System.Collections.Generic.List{UnityEngine.RectTransform}
+    content.vb: >-
+      <Divider>
+
+      Protected masks As List(Of RectTransform)
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Minigames.RS.SplitScreenHandler.maskWidths
+  commentId: F:DREditor.Minigames.RS.SplitScreenHandler.maskWidths
+  id: maskWidths
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: maskWidths
+  nameWithType: SplitScreenHandler.maskWidths
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.maskWidths
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly List<float> maskWidths
+    return:
+      type: System.Collections.Generic.List{System.Single}
+    content.vb: Protected ReadOnly maskWidths As List(Of Single)
+- uid: DREditor.Minigames.RS.SplitScreenHandler.Start
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.Start
+  id: Start
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: SplitScreenHandler.Start()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.Minigames.RS.SplitScreenHandler.Start*
+- uid: DREditor.Minigames.RS.SplitScreenHandler.InitializeMaskWidths
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.InitializeMaskWidths
+  id: InitializeMaskWidths
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: InitializeMaskWidths()
+  nameWithType: SplitScreenHandler.InitializeMaskWidths()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.InitializeMaskWidths()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializeMaskWidths()
+    content.vb: Protected Overridable Sub InitializeMaskWidths()
+  overload: DREditor.Minigames.RS.SplitScreenHandler.InitializeMaskWidths*
+- uid: DREditor.Minigames.RS.SplitScreenHandler.CalculateDomination
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.CalculateDomination
+  id: CalculateDomination
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: CalculateDomination()
+  nameWithType: SplitScreenHandler.CalculateDomination()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.CalculateDomination()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual int CalculateDomination()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Overridable Function CalculateDomination() As Integer
+  overload: DREditor.Minigames.RS.SplitScreenHandler.CalculateDomination*
+  implements:
+  - DREditor.Minigames.RS.ISplitScreen.CalculateDomination
+- uid: DREditor.Minigames.RS.SplitScreenHandler.ClampPlayerMask
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.ClampPlayerMask
+  id: ClampPlayerMask
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: ClampPlayerMask()
+  nameWithType: SplitScreenHandler.ClampPlayerMask()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.ClampPlayerMask()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ClampPlayerMask()
+    content.vb: Protected Overridable Sub ClampPlayerMask()
+  overload: DREditor.Minigames.RS.SplitScreenHandler.ClampPlayerMask*
+- uid: DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount(System.Int32)
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount(System.Int32)
+  id: InitializePanelCount(System.Int32)
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: InitializePanelCount(int)
+  nameWithType: SplitScreenHandler.InitializePanelCount(int)
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void InitializePanelCount(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+    content.vb: Public Overridable Sub InitializePanelCount(count As Integer)
+  overload: DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount*
+  implements:
+  - DREditor.Minigames.Debates.Mechanics.IPanelSendable.InitializePanelCount(System.Int32)
+  nameWithType.vb: SplitScreenHandler.InitializePanelCount(Integer)
+  fullName.vb: DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount(Integer)
+  name.vb: InitializePanelCount(Integer)
+- uid: DREditor.Minigames.RS.SplitScreenHandler.WillAdvanceOnTie
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.WillAdvanceOnTie
+  id: WillAdvanceOnTie
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: WillAdvanceOnTie()
+  nameWithType: SplitScreenHandler.WillAdvanceOnTie()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.WillAdvanceOnTie()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool WillAdvanceOnTie()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function WillAdvanceOnTie() As Boolean
+  overload: DREditor.Minigames.RS.SplitScreenHandler.WillAdvanceOnTie*
+  implements:
+  - DREditor.Minigames.RS.ISplitScreen.WillAdvanceOnTie
+- uid: DREditor.Minigames.RS.SplitScreenHandler.AnimateToResetState
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.AnimateToResetState
+  id: AnimateToResetState
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: AnimateToResetState()
+  nameWithType: SplitScreenHandler.AnimateToResetState()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.AnimateToResetState()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  example: []
+  syntax:
+    content: public virtual void AnimateToResetState()
+    content.vb: Public Overridable Sub AnimateToResetState()
+  overload: DREditor.Minigames.RS.SplitScreenHandler.AnimateToResetState*
+  implements:
+  - DREditor.Minigames.RS.ISplitScreen.AnimateToResetState
+- uid: DREditor.Minigames.RS.SplitScreenHandler.GetUpdatedSize(UnityEngine.RectTransform)
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.GetUpdatedSize(UnityEngine.RectTransform)
+  id: GetUpdatedSize(UnityEngine.RectTransform)
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: GetUpdatedSize(RectTransform)
+  nameWithType: SplitScreenHandler.GetUpdatedSize(RectTransform)
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.GetUpdatedSize(UnityEngine.RectTransform)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual Vector2 GetUpdatedSize(RectTransform rectTransform)
+    parameters:
+    - id: rectTransform
+      type: UnityEngine.RectTransform
+      description: ''
+    return:
+      type: UnityEngine.Vector2
+      description: ''
+    content.vb: Protected Overridable Function GetUpdatedSize(rectTransform As RectTransform) As Vector2
+  overload: DREditor.Minigames.RS.SplitScreenHandler.GetUpdatedSize*
+- uid: DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack(System.Single)
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack(System.Single)
+  id: PlayerAttack(System.Single)
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: PlayerAttack(float)
+  nameWithType: SplitScreenHandler.PlayerAttack(float)
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack(float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void PlayerAttack(float damage)
+    parameters:
+    - id: damage
+      type: System.Single
+      description: ''
+    content.vb: Public Overridable Sub PlayerAttack(damage As Single)
+  overload: DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack*
+  implements:
+  - DREditor.Minigames.RS.ISplitScreen.PlayerAttack(System.Single)
+  nameWithType.vb: SplitScreenHandler.PlayerAttack(Single)
+  fullName.vb: DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack(Single)
+  name.vb: PlayerAttack(Single)
+- uid: DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack(System.Int32,System.Single)
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack(System.Int32,System.Single)
+  id: EnemyAttack(System.Int32,System.Single)
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: EnemyAttack(int, float)
+  nameWithType: SplitScreenHandler.EnemyAttack(int, float)
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack(int, float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void EnemyAttack(int enemyIDX, float damage)
+    parameters:
+    - id: enemyIDX
+      type: System.Int32
+    - id: damage
+      type: System.Single
+      description: ''
+    content.vb: Public Overridable Sub EnemyAttack(enemyIDX As Integer, damage As Single)
+  overload: DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack*
+  implements:
+  - DREditor.Minigames.RS.ISplitScreen.EnemyAttack(System.Int32,System.Single)
+  nameWithType.vb: SplitScreenHandler.EnemyAttack(Integer, Single)
+  fullName.vb: DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack(Integer, Single)
+  name.vb: EnemyAttack(Integer, Single)
+- uid: DREditor.Minigames.RS.SplitScreenHandler.Attack(UnityEngine.RectTransform,System.Single)
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.Attack(UnityEngine.RectTransform,System.Single)
+  id: Attack(UnityEngine.RectTransform,System.Single)
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: Attack(RectTransform, float)
+  nameWithType: SplitScreenHandler.Attack(RectTransform, float)
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.Attack(UnityEngine.RectTransform, float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Attack(RectTransform rectTransform, float damage)
+    parameters:
+    - id: rectTransform
+      type: UnityEngine.RectTransform
+      description: ''
+    - id: damage
+      type: System.Single
+      description: ''
+    content.vb: Protected Overridable Sub Attack(rectTransform As RectTransform, damage As Single)
+  overload: DREditor.Minigames.RS.SplitScreenHandler.Attack*
+  nameWithType.vb: SplitScreenHandler.Attack(RectTransform, Single)
+  fullName.vb: DREditor.Minigames.RS.SplitScreenHandler.Attack(UnityEngine.RectTransform, Single)
+  name.vb: Attack(RectTransform, Single)
+- uid: DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX(System.Int32,System.Int32,System.Single)
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX(System.Int32,System.Int32,System.Single)
+  id: MoveMaskX(System.Int32,System.Int32,System.Single)
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: MoveMaskX(int, int, float)
+  nameWithType: SplitScreenHandler.MoveMaskX(int, int, float)
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX(int, int, float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void MoveMaskX(int attackerIndex, int targetIndex, float damage)
+    parameters:
+    - id: attackerIndex
+      type: System.Int32
+      description: ''
+    - id: targetIndex
+      type: System.Int32
+      description: ''
+    - id: damage
+      type: System.Single
+      description: ''
+    content.vb: Protected Overridable Sub MoveMaskX(attackerIndex As Integer, targetIndex As Integer, damage As Single)
+  overload: DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX*
+  nameWithType.vb: SplitScreenHandler.MoveMaskX(Integer, Integer, Single)
+  fullName.vb: DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX(Integer, Integer, Single)
+  name.vb: MoveMaskX(Integer, Integer, Single)
+- uid: DREditor.Minigames.RS.SplitScreenHandler.DebugPlayerAttack
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.DebugPlayerAttack
+  id: DebugPlayerAttack
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: DebugPlayerAttack()
+  nameWithType: SplitScreenHandler.DebugPlayerAttack()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.DebugPlayerAttack()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [BehaviourButton(null)]
+
+      public void DebugPlayerAttack()
+    content.vb: >-
+      <BehaviourButton(Nothing)>
+
+      Public Sub DebugPlayerAttack()
+  overload: DREditor.Minigames.RS.SplitScreenHandler.DebugPlayerAttack*
+  attributes:
+  - type: DREditor.BehaviourButtonAttribute
+    ctor: DREditor.BehaviourButtonAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+- uid: DREditor.Minigames.RS.SplitScreenHandler.DebugEnemyAttack
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.DebugEnemyAttack
+  id: DebugEnemyAttack
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: DebugEnemyAttack()
+  nameWithType: SplitScreenHandler.DebugEnemyAttack()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.DebugEnemyAttack()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [BehaviourButton(null)]
+
+      public void DebugEnemyAttack()
+    content.vb: >-
+      <BehaviourButton(Nothing)>
+
+      Public Sub DebugEnemyAttack()
+  overload: DREditor.Minigames.RS.SplitScreenHandler.DebugEnemyAttack*
+  attributes:
+  - type: DREditor.BehaviourButtonAttribute
+    ctor: DREditor.BehaviourButtonAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+- uid: DREditor.Minigames.RS.SplitScreenHandler.#ctor
+  commentId: M:DREditor.Minigames.RS.SplitScreenHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Minigames.RS.SplitScreenHandler
+  langs:
+  - csharp
+  - vb
+  name: SplitScreenHandler()
+  nameWithType: SplitScreenHandler.SplitScreenHandler()
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.SplitScreenHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/SplitScreenHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS
+  syntax:
+    content: public SplitScreenHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Minigames.RS.SplitScreenHandler.#ctor*
+  nameWithType.vb: SplitScreenHandler.New()
+  fullName.vb: DREditor.Minigames.RS.SplitScreenHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.Minigames.RS
+  commentId: N:DREditor.Minigames.RS
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.RS
+  nameWithType: DREditor.Minigames.RS
+  fullName: DREditor.Minigames.RS
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.RS
+    name: RS
+    isExternal: true
+    href: DREditor.Minigames.RS.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.RS
+    name: RS
+    isExternal: true
+    href: DREditor.Minigames.RS.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<ISplitScreen>
+  nameWithType: ServiceHolder<ISplitScreen>
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.RS.ISplitScreen>
+  nameWithType.vb: ServiceHolder(Of ISplitScreen)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.RS.ISplitScreen)
+  name.vb: ServiceHolder(Of ISplitScreen)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.Minigames.RS.ISplitScreen
+    name: ISplitScreen
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.ISplitScreen
+    name: ISplitScreen
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html
+  - name: )
+- uid: DREditor.Minigames.RS.ISplitScreen
+  commentId: T:DREditor.Minigames.RS.ISplitScreen
+  parent: DREditor.Minigames.RS
+  isExternal: true
+  href: DREditor.Minigames.RS.ISplitScreen.html
+  name: ISplitScreen
+  nameWithType: ISplitScreen
+  fullName: DREditor.Minigames.RS.ISplitScreen
+- uid: DREditor.Minigames.Debates.Mechanics.IPanelSendable
+  commentId: T:DREditor.Minigames.Debates.Mechanics.IPanelSendable
+  parent: DREditor.Minigames.Debates.Mechanics
+  isExternal: true
+  href: DREditor.Minigames.Debates.Mechanics.IPanelSendable.html
+  name: IPanelSendable
+  nameWithType: IPanelSendable
+  fullName: DREditor.Minigames.Debates.Mechanics.IPanelSendable
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<ISplitScreen>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.RS.ISplitScreen>.registerService
+  nameWithType.vb: ServiceHolder(Of ISplitScreen).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.RS.ISplitScreen).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<ISplitScreen>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.RS.ISplitScreen>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of ISplitScreen).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.RS.ISplitScreen).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<ISplitScreen>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.RS.ISplitScreen>.Awake()
+  nameWithType.vb: ServiceHolder(Of ISplitScreen).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.RS.ISplitScreen).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<ISplitScreen>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.RS.ISplitScreen>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of ISplitScreen).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.RS.ISplitScreen).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<ISplitScreen>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.RS.ISplitScreen>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of ISplitScreen).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.RS.ISplitScreen).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<ISplitScreen>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.RS.ISplitScreen>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of ISplitScreen).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.RS.ISplitScreen).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.RS.ISplitScreen}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<SplitScreenHandler>(SplitScreenHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<SplitScreenHandler>(SplitScreenHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Minigames.RS.SplitScreenHandler>(DREditor.Minigames.RS.SplitScreenHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of SplitScreenHandler)(SplitScreenHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Minigames.RS.SplitScreenHandler)(DREditor.Minigames.RS.SplitScreenHandler)
+  name.vb: GetFieldNames(Of SplitScreenHandler)(SplitScreenHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Minigames.RS.SplitScreenHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Minigames.RS.SplitScreenHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<SplitScreenHandler>(SplitScreenHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<SplitScreenHandler>(SplitScreenHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Minigames.RS.SplitScreenHandler>(DREditor.Minigames.RS.SplitScreenHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of SplitScreenHandler)(SplitScreenHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Minigames.RS.SplitScreenHandler)(DREditor.Minigames.RS.SplitScreenHandler)
+  name.vb: GetFieldValues(Of SplitScreenHandler)(SplitScreenHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Minigames.RS.SplitScreenHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Minigames.RS.SplitScreenHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<SplitScreenHandler>(SplitScreenHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<SplitScreenHandler>(SplitScreenHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Minigames.RS.SplitScreenHandler>(DREditor.Minigames.RS.SplitScreenHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of SplitScreenHandler)(SplitScreenHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Minigames.RS.SplitScreenHandler)(DREditor.Minigames.RS.SplitScreenHandler)
+  name.vb: DeepCopy(Of SplitScreenHandler)(SplitScreenHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Minigames.RS.SplitScreenHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Minigames.RS.SplitScreenHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.SplitScreenHandler
+    name: SplitScreenHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.SplitScreenHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Minigames.Debates.Mechanics
+  commentId: N:DREditor.Minigames.Debates.Mechanics
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.Debates.Mechanics
+  nameWithType: DREditor.Minigames.Debates.Mechanics
+  fullName: DREditor.Minigames.Debates.Mechanics
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  - name: .
+  - uid: DREditor.Minigames.Debates.Mechanics
+    name: Mechanics
+    isExternal: true
+    href: DREditor.Minigames.Debates.Mechanics.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  - name: .
+  - uid: DREditor.Minigames.Debates.Mechanics
+    name: Mechanics
+    isExternal: true
+    href: DREditor.Minigames.Debates.Mechanics.html
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: UnityEngine.RectTransform
+  isExternal: true
+  name: RectTransform
+  nameWithType: RectTransform
+  fullName: UnityEngine.RectTransform
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Collections.Generic.List{UnityEngine.RectTransform}
+  commentId: T:System.Collections.Generic.List{UnityEngine.RectTransform}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<RectTransform>
+  nameWithType: List<RectTransform>
+  fullName: System.Collections.Generic.List<UnityEngine.RectTransform>
+  nameWithType.vb: List(Of RectTransform)
+  fullName.vb: System.Collections.Generic.List(Of UnityEngine.RectTransform)
+  name.vb: List(Of RectTransform)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: UnityEngine.RectTransform
+    name: RectTransform
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.RectTransform
+    name: RectTransform
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{System.Single}
+  commentId: T:System.Collections.Generic.List{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<float>
+  nameWithType: List<float>
+  fullName: System.Collections.Generic.List<float>
+  nameWithType.vb: List(Of Single)
+  fullName.vb: System.Collections.Generic.List(Of Single)
+  name.vb: List(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.Start*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.Start
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_Start
+  name: Start
+  nameWithType: SplitScreenHandler.Start
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.Start
+- uid: DREditor.Minigames.RS.SplitScreenHandler.InitializeMaskWidths*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.InitializeMaskWidths
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_InitializeMaskWidths
+  name: InitializeMaskWidths
+  nameWithType: SplitScreenHandler.InitializeMaskWidths
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.InitializeMaskWidths
+- uid: DREditor.Minigames.RS.SplitScreenHandler.CalculateDomination*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.CalculateDomination
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_CalculateDomination
+  name: CalculateDomination
+  nameWithType: SplitScreenHandler.CalculateDomination
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.CalculateDomination
+- uid: DREditor.Minigames.RS.ISplitScreen.CalculateDomination
+  commentId: M:DREditor.Minigames.RS.ISplitScreen.CalculateDomination
+  parent: DREditor.Minigames.RS.ISplitScreen
+  isExternal: true
+  href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_CalculateDomination
+  name: CalculateDomination()
+  nameWithType: ISplitScreen.CalculateDomination()
+  fullName: DREditor.Minigames.RS.ISplitScreen.CalculateDomination()
+  spec.csharp:
+  - uid: DREditor.Minigames.RS.ISplitScreen.CalculateDomination
+    name: CalculateDomination
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_CalculateDomination
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.RS.ISplitScreen.CalculateDomination
+    name: CalculateDomination
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_CalculateDomination
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.ClampPlayerMask*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.ClampPlayerMask
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_ClampPlayerMask
+  name: ClampPlayerMask
+  nameWithType: SplitScreenHandler.ClampPlayerMask
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.ClampPlayerMask
+- uid: DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_InitializePanelCount_System_Int32_
+  name: InitializePanelCount
+  nameWithType: SplitScreenHandler.InitializePanelCount
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.InitializePanelCount
+- uid: DREditor.Minigames.Debates.Mechanics.IPanelSendable.InitializePanelCount(System.Int32)
+  commentId: M:DREditor.Minigames.Debates.Mechanics.IPanelSendable.InitializePanelCount(System.Int32)
+  parent: DREditor.Minigames.Debates.Mechanics.IPanelSendable
+  isExternal: true
+  href: DREditor.Minigames.Debates.Mechanics.IPanelSendable.html#DREditor_Minigames_Debates_Mechanics_IPanelSendable_InitializePanelCount_System_Int32_
+  name: InitializePanelCount(int)
+  nameWithType: IPanelSendable.InitializePanelCount(int)
+  fullName: DREditor.Minigames.Debates.Mechanics.IPanelSendable.InitializePanelCount(int)
+  nameWithType.vb: IPanelSendable.InitializePanelCount(Integer)
+  fullName.vb: DREditor.Minigames.Debates.Mechanics.IPanelSendable.InitializePanelCount(Integer)
+  name.vb: InitializePanelCount(Integer)
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Mechanics.IPanelSendable.InitializePanelCount(System.Int32)
+    name: InitializePanelCount
+    isExternal: true
+    href: DREditor.Minigames.Debates.Mechanics.IPanelSendable.html#DREditor_Minigames_Debates_Mechanics_IPanelSendable_InitializePanelCount_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Mechanics.IPanelSendable.InitializePanelCount(System.Int32)
+    name: InitializePanelCount
+    isExternal: true
+    href: DREditor.Minigames.Debates.Mechanics.IPanelSendable.html#DREditor_Minigames_Debates_Mechanics_IPanelSendable_InitializePanelCount_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.WillAdvanceOnTie*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.WillAdvanceOnTie
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_WillAdvanceOnTie
+  name: WillAdvanceOnTie
+  nameWithType: SplitScreenHandler.WillAdvanceOnTie
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.WillAdvanceOnTie
+- uid: DREditor.Minigames.RS.ISplitScreen.WillAdvanceOnTie
+  commentId: M:DREditor.Minigames.RS.ISplitScreen.WillAdvanceOnTie
+  parent: DREditor.Minigames.RS.ISplitScreen
+  isExternal: true
+  href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_WillAdvanceOnTie
+  name: WillAdvanceOnTie()
+  nameWithType: ISplitScreen.WillAdvanceOnTie()
+  fullName: DREditor.Minigames.RS.ISplitScreen.WillAdvanceOnTie()
+  spec.csharp:
+  - uid: DREditor.Minigames.RS.ISplitScreen.WillAdvanceOnTie
+    name: WillAdvanceOnTie
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_WillAdvanceOnTie
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.RS.ISplitScreen.WillAdvanceOnTie
+    name: WillAdvanceOnTie
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_WillAdvanceOnTie
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Minigames.RS.SplitScreenHandler.AnimateToResetState*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.AnimateToResetState
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_AnimateToResetState
+  name: AnimateToResetState
+  nameWithType: SplitScreenHandler.AnimateToResetState
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.AnimateToResetState
+- uid: DREditor.Minigames.RS.ISplitScreen.AnimateToResetState
+  commentId: M:DREditor.Minigames.RS.ISplitScreen.AnimateToResetState
+  parent: DREditor.Minigames.RS.ISplitScreen
+  isExternal: true
+  href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_AnimateToResetState
+  name: AnimateToResetState()
+  nameWithType: ISplitScreen.AnimateToResetState()
+  fullName: DREditor.Minigames.RS.ISplitScreen.AnimateToResetState()
+  spec.csharp:
+  - uid: DREditor.Minigames.RS.ISplitScreen.AnimateToResetState
+    name: AnimateToResetState
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_AnimateToResetState
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.RS.ISplitScreen.AnimateToResetState
+    name: AnimateToResetState
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_AnimateToResetState
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.GetUpdatedSize*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.GetUpdatedSize
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_GetUpdatedSize_UnityEngine_RectTransform_
+  name: GetUpdatedSize
+  nameWithType: SplitScreenHandler.GetUpdatedSize
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.GetUpdatedSize
+- uid: UnityEngine.Vector2
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: UnityEngine.Vector2
+- uid: DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_PlayerAttack_System_Single_
+  name: PlayerAttack
+  nameWithType: SplitScreenHandler.PlayerAttack
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.PlayerAttack
+- uid: DREditor.Minigames.RS.ISplitScreen.PlayerAttack(System.Single)
+  commentId: M:DREditor.Minigames.RS.ISplitScreen.PlayerAttack(System.Single)
+  parent: DREditor.Minigames.RS.ISplitScreen
+  isExternal: true
+  href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_PlayerAttack_System_Single_
+  name: PlayerAttack(float)
+  nameWithType: ISplitScreen.PlayerAttack(float)
+  fullName: DREditor.Minigames.RS.ISplitScreen.PlayerAttack(float)
+  nameWithType.vb: ISplitScreen.PlayerAttack(Single)
+  fullName.vb: DREditor.Minigames.RS.ISplitScreen.PlayerAttack(Single)
+  name.vb: PlayerAttack(Single)
+  spec.csharp:
+  - uid: DREditor.Minigames.RS.ISplitScreen.PlayerAttack(System.Single)
+    name: PlayerAttack
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_PlayerAttack_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.RS.ISplitScreen.PlayerAttack(System.Single)
+    name: PlayerAttack
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_PlayerAttack_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_EnemyAttack_System_Int32_System_Single_
+  name: EnemyAttack
+  nameWithType: SplitScreenHandler.EnemyAttack
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.EnemyAttack
+- uid: DREditor.Minigames.RS.ISplitScreen.EnemyAttack(System.Int32,System.Single)
+  commentId: M:DREditor.Minigames.RS.ISplitScreen.EnemyAttack(System.Int32,System.Single)
+  parent: DREditor.Minigames.RS.ISplitScreen
+  isExternal: true
+  href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_EnemyAttack_System_Int32_System_Single_
+  name: EnemyAttack(int, float)
+  nameWithType: ISplitScreen.EnemyAttack(int, float)
+  fullName: DREditor.Minigames.RS.ISplitScreen.EnemyAttack(int, float)
+  nameWithType.vb: ISplitScreen.EnemyAttack(Integer, Single)
+  fullName.vb: DREditor.Minigames.RS.ISplitScreen.EnemyAttack(Integer, Single)
+  name.vb: EnemyAttack(Integer, Single)
+  spec.csharp:
+  - uid: DREditor.Minigames.RS.ISplitScreen.EnemyAttack(System.Int32,System.Single)
+    name: EnemyAttack
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_EnemyAttack_System_Int32_System_Single_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.RS.ISplitScreen.EnemyAttack(System.Int32,System.Single)
+    name: EnemyAttack
+    isExternal: true
+    href: DREditor.Minigames.RS.ISplitScreen.html#DREditor_Minigames_RS_ISplitScreen_EnemyAttack_System_Int32_System_Single_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: DREditor.Minigames.RS.SplitScreenHandler.Attack*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.Attack
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_Attack_UnityEngine_RectTransform_System_Single_
+  name: Attack
+  nameWithType: SplitScreenHandler.Attack
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.Attack
+- uid: DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_MoveMaskX_System_Int32_System_Int32_System_Single_
+  name: MoveMaskX
+  nameWithType: SplitScreenHandler.MoveMaskX
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.MoveMaskX
+- uid: DREditor.Minigames.RS.SplitScreenHandler.DebugPlayerAttack*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.DebugPlayerAttack
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_DebugPlayerAttack
+  name: DebugPlayerAttack
+  nameWithType: SplitScreenHandler.DebugPlayerAttack
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.DebugPlayerAttack
+- uid: DREditor.Minigames.RS.SplitScreenHandler.DebugEnemyAttack*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.DebugEnemyAttack
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler_DebugEnemyAttack
+  name: DebugEnemyAttack
+  nameWithType: SplitScreenHandler.DebugEnemyAttack
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.DebugEnemyAttack
+- uid: DREditor.Minigames.RS.SplitScreenHandler.#ctor*
+  commentId: Overload:DREditor.Minigames.RS.SplitScreenHandler.#ctor
+  isExternal: true
+  href: DREditor.Minigames.RS.SplitScreenHandler.html#DREditor_Minigames_RS_SplitScreenHandler__ctor
+  name: SplitScreenHandler
+  nameWithType: SplitScreenHandler.SplitScreenHandler
+  fullName: DREditor.Minigames.RS.SplitScreenHandler.SplitScreenHandler
+  nameWithType.vb: SplitScreenHandler.New
+  fullName.vb: DREditor.Minigames.RS.SplitScreenHandler.New
+  name.vb: New

@@ -1,0 +1,1116 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Nameplates.DialogueNameplateHandler
+  commentId: T:DREditor.Nameplates.DialogueNameplateHandler
+  id: DialogueNameplateHandler
+  parent: DREditor.Nameplates
+  children:
+  - DREditor.Nameplates.DialogueNameplateHandler.#ctor
+  - DREditor.Nameplates.DialogueNameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+  - DREditor.Nameplates.DialogueNameplateHandler.OnDisable
+  - DREditor.Nameplates.DialogueNameplateHandler.OnEnable
+  - DREditor.Nameplates.DialogueNameplateHandler.OnEventRaised
+  - DREditor.Nameplates.DialogueNameplateHandler.SetNameTransparent
+  - DREditor.Nameplates.DialogueNameplateHandler.allNameplatesTransparent
+  - DREditor.Nameplates.DialogueNameplateHandler.setNameTransparentIfTutorial
+  - DREditor.Nameplates.DialogueNameplateHandler.transparentImage
+  - DREditor.Nameplates.DialogueNameplateHandler.tutorialCharacterFirstName
+  langs:
+  - csharp
+  - vb
+  name: DialogueNameplateHandler
+  nameWithType: DialogueNameplateHandler
+  fullName: DREditor.Nameplates.DialogueNameplateHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("ILineProcessor, ITransparentableNameplate, ISceneEventListener\n\n")]
+
+      public class DialogueNameplateHandler : NameplateHandler, ILineProcessor, ITransparentableNameplate, ISceneEventListener
+    content.vb: >-
+      <ClassHeader("ILineProcessor, ITransparentableNameplate, ISceneEventListener" & vbLf & vbLf)>
+
+      Public Class DialogueNameplateHandler Inherits NameplateHandler Implements ILineProcessor, ITransparentableNameplate, ISceneEventListener
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  - DREditor.Nameplates.NameplateHandler
+  derivedClasses:
+  - DREditor.Nameplates.TrialDialogueNameplateHandler
+  - DREditor.TrialDialogueHandling.TrialPortraitHandler
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessor
+  - DREditor.Nameplates.ITransparentableNameplate
+  - DREditor.EventObjects.ISceneEventListener
+  inheritedMembers:
+  - DREditor.Nameplates.NameplateHandler.textureEvent
+  - DREditor.Nameplates.NameplateHandler.Start
+  - DREditor.Nameplates.NameplateHandler.CheckIfNameplateValid
+  - DREditor.Nameplates.NameplateHandler.LineProcess(DREditor.Dialogues.Line)
+  - DREditor.Nameplates.NameplateHandler.SetNameplate(DREditor.Dialogues.Line)
+  - DREditor.Nameplates.NameplateHandler.SetTexture(UnityEngine.Texture2D)
+  extensionMethods:
+  - DREditor.Nameplates.DialogueNameplateHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Nameplates.DialogueNameplateHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Nameplates.DialogueNameplateHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        ILineProcessor, ITransparentableNameplate, ISceneEventListener
+
+- uid: DREditor.Nameplates.DialogueNameplateHandler.transparentImage
+  commentId: F:DREditor.Nameplates.DialogueNameplateHandler.transparentImage
+  id: transparentImage
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: transparentImage
+  nameWithType: DialogueNameplateHandler.transparentImage
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.transparentImage
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected Texture2D transparentImage
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: >-
+      <Divider>
+
+      Protected transparentImage As Texture2D
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Nameplates.DialogueNameplateHandler.allNameplatesTransparent
+  commentId: F:DREditor.Nameplates.DialogueNameplateHandler.allNameplatesTransparent
+  id: allNameplatesTransparent
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: allNameplatesTransparent
+  nameWithType: DialogueNameplateHandler.allNameplatesTransparent
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.allNameplatesTransparent
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent allNameplatesTransparent
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected allNameplatesTransparent As SceneEvent
+- uid: DREditor.Nameplates.DialogueNameplateHandler.setNameTransparentIfTutorial
+  commentId: F:DREditor.Nameplates.DialogueNameplateHandler.setNameTransparentIfTutorial
+  id: setNameTransparentIfTutorial
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: setNameTransparentIfTutorial
+  nameWithType: DialogueNameplateHandler.setNameTransparentIfTutorial
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.setNameTransparentIfTutorial
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected bool setNameTransparentIfTutorial
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Divider>
+
+      Protected setNameTransparentIfTutorial As Boolean
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Nameplates.DialogueNameplateHandler.tutorialCharacterFirstName
+  commentId: F:DREditor.Nameplates.DialogueNameplateHandler.tutorialCharacterFirstName
+  id: tutorialCharacterFirstName
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: tutorialCharacterFirstName
+  nameWithType: DialogueNameplateHandler.tutorialCharacterFirstName
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.tutorialCharacterFirstName
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: protected string tutorialCharacterFirstName
+    return:
+      type: System.String
+    content.vb: Protected tutorialCharacterFirstName As String
+- uid: DREditor.Nameplates.DialogueNameplateHandler.OnEnable
+  commentId: M:DREditor.Nameplates.DialogueNameplateHandler.OnEnable
+  id: OnEnable
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: DialogueNameplateHandler.OnEnable()
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.Nameplates.DialogueNameplateHandler.OnEnable*
+- uid: DREditor.Nameplates.DialogueNameplateHandler.OnDisable
+  commentId: M:DREditor.Nameplates.DialogueNameplateHandler.OnDisable
+  id: OnDisable
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: DialogueNameplateHandler.OnDisable()
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.Nameplates.DialogueNameplateHandler.OnDisable*
+- uid: DREditor.Nameplates.DialogueNameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Nameplates.DialogueNameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+  id: EvaluateNameplate(DREditor.Dialogues.Line)
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateNameplate(Line)
+  nameWithType: DialogueNameplateHandler.EvaluateNameplate(Line)
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: public override void EvaluateNameplate(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overrides Sub EvaluateNameplate(currentLine As Line)
+  overridden: DREditor.Nameplates.NameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+  overload: DREditor.Nameplates.DialogueNameplateHandler.EvaluateNameplate*
+- uid: DREditor.Nameplates.DialogueNameplateHandler.OnEventRaised
+  commentId: M:DREditor.Nameplates.DialogueNameplateHandler.OnEventRaised
+  id: OnEventRaised
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: OnEventRaised()
+  nameWithType: DialogueNameplateHandler.OnEventRaised()
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.OnEventRaised()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnEventRaised()
+    content.vb: Public Overridable Sub OnEventRaised()
+  overload: DREditor.Nameplates.DialogueNameplateHandler.OnEventRaised*
+  implements:
+  - DREditor.EventObjects.ISceneEventListener.OnEventRaised
+- uid: DREditor.Nameplates.DialogueNameplateHandler.SetNameTransparent
+  commentId: M:DREditor.Nameplates.DialogueNameplateHandler.SetNameTransparent
+  id: SetNameTransparent
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: SetNameTransparent()
+  nameWithType: DialogueNameplateHandler.SetNameTransparent()
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.SetNameTransparent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void SetNameTransparent()
+    content.vb: Public Overridable Sub SetNameTransparent()
+  overload: DREditor.Nameplates.DialogueNameplateHandler.SetNameTransparent*
+  implements:
+  - DREditor.Nameplates.ITransparentableNameplate.SetNameTransparent
+- uid: DREditor.Nameplates.DialogueNameplateHandler.#ctor
+  commentId: M:DREditor.Nameplates.DialogueNameplateHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Nameplates.DialogueNameplateHandler
+  langs:
+  - csharp
+  - vb
+  name: DialogueNameplateHandler()
+  nameWithType: DialogueNameplateHandler.DialogueNameplateHandler()
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.DialogueNameplateHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Nameplates/DialogueNameplateHandler.cs
+  assemblies:
+  - DREditor.Nameplates
+  namespace: DREditor.Nameplates
+  syntax:
+    content: public DialogueNameplateHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Nameplates.DialogueNameplateHandler.#ctor*
+  nameWithType.vb: DialogueNameplateHandler.New()
+  fullName.vb: DREditor.Nameplates.DialogueNameplateHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.Nameplates
+  commentId: N:DREditor.Nameplates
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Nameplates
+  nameWithType: DREditor.Nameplates
+  fullName: DREditor.Nameplates
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Nameplates
+    name: Nameplates
+    isExternal: true
+    href: DREditor.Nameplates.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Nameplates
+    name: Nameplates
+    isExternal: true
+    href: DREditor.Nameplates.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.Nameplates.NameplateHandler
+  commentId: T:DREditor.Nameplates.NameplateHandler
+  parent: DREditor.Nameplates
+  isExternal: true
+  href: DREditor.Nameplates.NameplateHandler.html
+  name: NameplateHandler
+  nameWithType: NameplateHandler
+  fullName: DREditor.Nameplates.NameplateHandler
+- uid: DREditor.Dialogues.LineReading.ILineProcessor
+  commentId: T:DREditor.Dialogues.LineReading.ILineProcessor
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  name: ILineProcessor
+  nameWithType: ILineProcessor
+  fullName: DREditor.Dialogues.LineReading.ILineProcessor
+- uid: DREditor.Nameplates.ITransparentableNameplate
+  commentId: T:DREditor.Nameplates.ITransparentableNameplate
+  parent: DREditor.Nameplates
+  isExternal: true
+  href: DREditor.Nameplates.ITransparentableNameplate.html
+  name: ITransparentableNameplate
+  nameWithType: ITransparentableNameplate
+  fullName: DREditor.Nameplates.ITransparentableNameplate
+- uid: DREditor.EventObjects.ISceneEventListener
+  commentId: T:DREditor.EventObjects.ISceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: ISceneEventListener
+  nameWithType: ISceneEventListener
+  fullName: DREditor.EventObjects.ISceneEventListener
+- uid: DREditor.Nameplates.NameplateHandler.textureEvent
+  commentId: F:DREditor.Nameplates.NameplateHandler.textureEvent
+  parent: DREditor.Nameplates.NameplateHandler
+  isExternal: true
+  href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_textureEvent
+  name: textureEvent
+  nameWithType: NameplateHandler.textureEvent
+  fullName: DREditor.Nameplates.NameplateHandler.textureEvent
+- uid: DREditor.Nameplates.NameplateHandler.Start
+  commentId: M:DREditor.Nameplates.NameplateHandler.Start
+  parent: DREditor.Nameplates.NameplateHandler
+  isExternal: true
+  href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_Start
+  name: Start()
+  nameWithType: NameplateHandler.Start()
+  fullName: DREditor.Nameplates.NameplateHandler.Start()
+  spec.csharp:
+  - uid: DREditor.Nameplates.NameplateHandler.Start
+    name: Start
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Nameplates.NameplateHandler.Start
+    name: Start
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_Start
+  - name: (
+  - name: )
+- uid: DREditor.Nameplates.NameplateHandler.CheckIfNameplateValid
+  commentId: M:DREditor.Nameplates.NameplateHandler.CheckIfNameplateValid
+  parent: DREditor.Nameplates.NameplateHandler
+  isExternal: true
+  href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_CheckIfNameplateValid
+  name: CheckIfNameplateValid()
+  nameWithType: NameplateHandler.CheckIfNameplateValid()
+  fullName: DREditor.Nameplates.NameplateHandler.CheckIfNameplateValid()
+  spec.csharp:
+  - uid: DREditor.Nameplates.NameplateHandler.CheckIfNameplateValid
+    name: CheckIfNameplateValid
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_CheckIfNameplateValid
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Nameplates.NameplateHandler.CheckIfNameplateValid
+    name: CheckIfNameplateValid
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_CheckIfNameplateValid
+  - name: (
+  - name: )
+- uid: DREditor.Nameplates.NameplateHandler.LineProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Nameplates.NameplateHandler.LineProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Nameplates.NameplateHandler
+  isExternal: true
+  href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_LineProcess_DREditor_Dialogues_Line_
+  name: LineProcess(Line)
+  nameWithType: NameplateHandler.LineProcess(Line)
+  fullName: DREditor.Nameplates.NameplateHandler.LineProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Nameplates.NameplateHandler.LineProcess(DREditor.Dialogues.Line)
+    name: LineProcess
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_LineProcess_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Nameplates.NameplateHandler.LineProcess(DREditor.Dialogues.Line)
+    name: LineProcess
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_LineProcess_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Nameplates.NameplateHandler.SetNameplate(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Nameplates.NameplateHandler.SetNameplate(DREditor.Dialogues.Line)
+  parent: DREditor.Nameplates.NameplateHandler
+  isExternal: true
+  href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_SetNameplate_DREditor_Dialogues_Line_
+  name: SetNameplate(Line)
+  nameWithType: NameplateHandler.SetNameplate(Line)
+  fullName: DREditor.Nameplates.NameplateHandler.SetNameplate(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Nameplates.NameplateHandler.SetNameplate(DREditor.Dialogues.Line)
+    name: SetNameplate
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_SetNameplate_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Nameplates.NameplateHandler.SetNameplate(DREditor.Dialogues.Line)
+    name: SetNameplate
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_SetNameplate_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Nameplates.NameplateHandler.SetTexture(UnityEngine.Texture2D)
+  commentId: M:DREditor.Nameplates.NameplateHandler.SetTexture(UnityEngine.Texture2D)
+  parent: DREditor.Nameplates.NameplateHandler
+  isExternal: true
+  href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_SetTexture_UnityEngine_Texture2D_
+  name: SetTexture(Texture2D)
+  nameWithType: NameplateHandler.SetTexture(Texture2D)
+  fullName: DREditor.Nameplates.NameplateHandler.SetTexture(UnityEngine.Texture2D)
+  spec.csharp:
+  - uid: DREditor.Nameplates.NameplateHandler.SetTexture(UnityEngine.Texture2D)
+    name: SetTexture
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_SetTexture_UnityEngine_Texture2D_
+  - name: (
+  - uid: UnityEngine.Texture2D
+    name: Texture2D
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.Nameplates.NameplateHandler.SetTexture(UnityEngine.Texture2D)
+    name: SetTexture
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_SetTexture_UnityEngine_Texture2D_
+  - name: (
+  - uid: UnityEngine.Texture2D
+    name: Texture2D
+    isExternal: true
+  - name: )
+- uid: DREditor.Nameplates.DialogueNameplateHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<DialogueNameplateHandler>(DialogueNameplateHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<DialogueNameplateHandler>(DialogueNameplateHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Nameplates.DialogueNameplateHandler>(DREditor.Nameplates.DialogueNameplateHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of DialogueNameplateHandler)(DialogueNameplateHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Nameplates.DialogueNameplateHandler)(DREditor.Nameplates.DialogueNameplateHandler)
+  name.vb: GetFieldNames(Of DialogueNameplateHandler)(DialogueNameplateHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Nameplates.DialogueNameplateHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Nameplates.DialogueNameplateHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+- uid: DREditor.Nameplates.DialogueNameplateHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<DialogueNameplateHandler>(DialogueNameplateHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<DialogueNameplateHandler>(DialogueNameplateHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Nameplates.DialogueNameplateHandler>(DREditor.Nameplates.DialogueNameplateHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of DialogueNameplateHandler)(DialogueNameplateHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Nameplates.DialogueNameplateHandler)(DREditor.Nameplates.DialogueNameplateHandler)
+  name.vb: GetFieldValues(Of DialogueNameplateHandler)(DialogueNameplateHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Nameplates.DialogueNameplateHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Nameplates.DialogueNameplateHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+- uid: DREditor.Nameplates.DialogueNameplateHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<DialogueNameplateHandler>(DialogueNameplateHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<DialogueNameplateHandler>(DialogueNameplateHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Nameplates.DialogueNameplateHandler>(DREditor.Nameplates.DialogueNameplateHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of DialogueNameplateHandler)(DialogueNameplateHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Nameplates.DialogueNameplateHandler)(DREditor.Nameplates.DialogueNameplateHandler)
+  name.vb: DeepCopy(Of DialogueNameplateHandler)(DialogueNameplateHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Nameplates.DialogueNameplateHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Nameplates.DialogueNameplateHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Nameplates.DialogueNameplateHandler
+    name: DialogueNameplateHandler
+    isExternal: true
+    href: DREditor.Nameplates.DialogueNameplateHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.Texture2D
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: UnityEngine.Texture2D
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Nameplates.DialogueNameplateHandler.OnEnable*
+  commentId: Overload:DREditor.Nameplates.DialogueNameplateHandler.OnEnable
+  isExternal: true
+  href: DREditor.Nameplates.DialogueNameplateHandler.html#DREditor_Nameplates_DialogueNameplateHandler_OnEnable
+  name: OnEnable
+  nameWithType: DialogueNameplateHandler.OnEnable
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.OnEnable
+- uid: DREditor.Nameplates.DialogueNameplateHandler.OnDisable*
+  commentId: Overload:DREditor.Nameplates.DialogueNameplateHandler.OnDisable
+  isExternal: true
+  href: DREditor.Nameplates.DialogueNameplateHandler.html#DREditor_Nameplates_DialogueNameplateHandler_OnDisable
+  name: OnDisable
+  nameWithType: DialogueNameplateHandler.OnDisable
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.OnDisable
+- uid: DREditor.Nameplates.NameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Nameplates.NameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+  parent: DREditor.Nameplates.NameplateHandler
+  isExternal: true
+  href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_EvaluateNameplate_DREditor_Dialogues_Line_
+  name: EvaluateNameplate(Line)
+  nameWithType: NameplateHandler.EvaluateNameplate(Line)
+  fullName: DREditor.Nameplates.NameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Nameplates.NameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+    name: EvaluateNameplate
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_EvaluateNameplate_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Nameplates.NameplateHandler.EvaluateNameplate(DREditor.Dialogues.Line)
+    name: EvaluateNameplate
+    isExternal: true
+    href: DREditor.Nameplates.NameplateHandler.html#DREditor_Nameplates_NameplateHandler_EvaluateNameplate_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Nameplates.DialogueNameplateHandler.EvaluateNameplate*
+  commentId: Overload:DREditor.Nameplates.DialogueNameplateHandler.EvaluateNameplate
+  isExternal: true
+  href: DREditor.Nameplates.DialogueNameplateHandler.html#DREditor_Nameplates_DialogueNameplateHandler_EvaluateNameplate_DREditor_Dialogues_Line_
+  name: EvaluateNameplate
+  nameWithType: DialogueNameplateHandler.EvaluateNameplate
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.EvaluateNameplate
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: DREditor.Nameplates.DialogueNameplateHandler.OnEventRaised*
+  commentId: Overload:DREditor.Nameplates.DialogueNameplateHandler.OnEventRaised
+  isExternal: true
+  href: DREditor.Nameplates.DialogueNameplateHandler.html#DREditor_Nameplates_DialogueNameplateHandler_OnEventRaised
+  name: OnEventRaised
+  nameWithType: DialogueNameplateHandler.OnEventRaised
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.OnEventRaised
+- uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  commentId: M:DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  parent: DREditor.EventObjects.ISceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: OnEventRaised()
+  nameWithType: ISceneEventListener.OnEventRaised()
+  fullName: DREditor.EventObjects.ISceneEventListener.OnEventRaised()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.Nameplates.DialogueNameplateHandler.SetNameTransparent*
+  commentId: Overload:DREditor.Nameplates.DialogueNameplateHandler.SetNameTransparent
+  isExternal: true
+  href: DREditor.Nameplates.DialogueNameplateHandler.html#DREditor_Nameplates_DialogueNameplateHandler_SetNameTransparent
+  name: SetNameTransparent
+  nameWithType: DialogueNameplateHandler.SetNameTransparent
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.SetNameTransparent
+- uid: DREditor.Nameplates.ITransparentableNameplate.SetNameTransparent
+  commentId: M:DREditor.Nameplates.ITransparentableNameplate.SetNameTransparent
+  parent: DREditor.Nameplates.ITransparentableNameplate
+  isExternal: true
+  href: DREditor.Nameplates.ITransparentableNameplate.html#DREditor_Nameplates_ITransparentableNameplate_SetNameTransparent
+  name: SetNameTransparent()
+  nameWithType: ITransparentableNameplate.SetNameTransparent()
+  fullName: DREditor.Nameplates.ITransparentableNameplate.SetNameTransparent()
+  spec.csharp:
+  - uid: DREditor.Nameplates.ITransparentableNameplate.SetNameTransparent
+    name: SetNameTransparent
+    isExternal: true
+    href: DREditor.Nameplates.ITransparentableNameplate.html#DREditor_Nameplates_ITransparentableNameplate_SetNameTransparent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Nameplates.ITransparentableNameplate.SetNameTransparent
+    name: SetNameTransparent
+    isExternal: true
+    href: DREditor.Nameplates.ITransparentableNameplate.html#DREditor_Nameplates_ITransparentableNameplate_SetNameTransparent
+  - name: (
+  - name: )
+- uid: DREditor.Nameplates.DialogueNameplateHandler.#ctor*
+  commentId: Overload:DREditor.Nameplates.DialogueNameplateHandler.#ctor
+  isExternal: true
+  href: DREditor.Nameplates.DialogueNameplateHandler.html#DREditor_Nameplates_DialogueNameplateHandler__ctor
+  name: DialogueNameplateHandler
+  nameWithType: DialogueNameplateHandler.DialogueNameplateHandler
+  fullName: DREditor.Nameplates.DialogueNameplateHandler.DialogueNameplateHandler
+  nameWithType.vb: DialogueNameplateHandler.New
+  fullName.vb: DREditor.Nameplates.DialogueNameplateHandler.New
+  name.vb: New

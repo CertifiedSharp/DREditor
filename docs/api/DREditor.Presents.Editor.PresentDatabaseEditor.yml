@@ -6,7 +6,21 @@ items:
   parent: DREditor.Presents.Editor
   children:
   - DREditor.Presents.Editor.PresentDatabaseEditor.#ctor
+  - DREditor.Presents.Editor.PresentDatabaseEditor.AddNewPresent
+  - DREditor.Presents.Editor.PresentDatabaseEditor.ClearPresentsButton
+  - DREditor.Presents.Editor.PresentDatabaseEditor.CreateForm
+  - DREditor.Presents.Editor.PresentDatabaseEditor.DisplayHeader
+  - DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview(System.Int32)
+  - DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreviews
+  - DREditor.Presents.Editor.PresentDatabaseEditor.ImportPresents
+  - DREditor.Presents.Editor.PresentDatabaseEditor.OnEnable
   - DREditor.Presents.Editor.PresentDatabaseEditor.OnInspectorGUI
+  - DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton(System.Int32)
+  - DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImage
+  - DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImageButton
+  - DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent(DREditor.Presents.Present,System.Int32)
+  - DREditor.Presents.Editor.PresentDatabaseEditor.ShowPresentImage(DREditor.Presents.Present)
+  - DREditor.Presents.Editor.PresentDatabaseEditor.database
   langs:
   - csharp
   - vb
@@ -15,15 +29,62 @@ items:
   fullName: DREditor.Presents.Editor.PresentDatabaseEditor
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentDatabaseEditor.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
   assemblies:
-  - DREditor.Editor
+  - DREditor.Presents.Editor
   namespace: DREditor.Presents.Editor
   syntax:
     content: 'public class PresentDatabaseEditor : Editor'
     content.vb: Public Class PresentDatabaseEditor Inherits Editor
   inheritance:
   - System.Object
+  extensionMethods:
+  - DREditor.Presents.Editor.PresentDatabaseEditor.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Presents.Editor.PresentDatabaseEditor.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Presents.Editor.PresentDatabaseEditor.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.database
+  commentId: F:DREditor.Presents.Editor.PresentDatabaseEditor.database
+  id: database
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: database
+  nameWithType: PresentDatabaseEditor.database
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.database
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected PresentDatabase database
+    return:
+      type: DREditor.Presents.PresentDatabase
+    content.vb: Protected database As PresentDatabase
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.OnEnable
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.OnEnable
+  id: OnEnable
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: PresentDatabaseEditor.OnEnable()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.OnEnable*
 - uid: DREditor.Presents.Editor.PresentDatabaseEditor.OnInspectorGUI
   commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.OnInspectorGUI
   id: OnInspectorGUI
@@ -36,15 +97,313 @@ items:
   fullName: DREditor.Presents.Editor.PresentDatabaseEditor.OnInspectorGUI()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentDatabaseEditor.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
   assemblies:
-  - DREditor.Editor
+  - DREditor.Presents.Editor
   namespace: DREditor.Presents.Editor
   example: []
   syntax:
     content: public override void OnInspectorGUI()
     content.vb: Public Overrides Sub OnInspectorGUI()
   overload: DREditor.Presents.Editor.PresentDatabaseEditor.OnInspectorGUI*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.CreateForm
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.CreateForm
+  id: CreateForm
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: CreateForm()
+  nameWithType: PresentDatabaseEditor.CreateForm()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.CreateForm()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void CreateForm()
+    content.vb: Protected Overridable Sub CreateForm()
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.CreateForm*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayHeader
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.DisplayHeader
+  id: DisplayHeader
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: DisplayHeader()
+  nameWithType: PresentDatabaseEditor.DisplayHeader()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayHeader()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void DisplayHeader()
+    content.vb: Protected Overridable Sub DisplayHeader()
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayHeader*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.ImportPresents
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.ImportPresents
+  id: ImportPresents
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: ImportPresents()
+  nameWithType: PresentDatabaseEditor.ImportPresents()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.ImportPresents()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool ImportPresents()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function ImportPresents() As Boolean
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.ImportPresents*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.ClearPresentsButton
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.ClearPresentsButton
+  id: ClearPresentsButton
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: ClearPresentsButton()
+  nameWithType: PresentDatabaseEditor.ClearPresentsButton()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.ClearPresentsButton()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ClearPresentsButton()
+    content.vb: Protected Overridable Sub ClearPresentsButton()
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.ClearPresentsButton*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.AddNewPresent
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.AddNewPresent
+  id: AddNewPresent
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: AddNewPresent()
+  nameWithType: PresentDatabaseEditor.AddNewPresent()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.AddNewPresent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool AddNewPresent()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function AddNewPresent() As Boolean
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.AddNewPresent*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreviews
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreviews
+  id: DisplayPresentPreviews
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: DisplayPresentPreviews()
+  nameWithType: PresentDatabaseEditor.DisplayPresentPreviews()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreviews()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void DisplayPresentPreviews()
+    content.vb: Protected Overridable Sub DisplayPresentPreviews()
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreviews*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview(System.Int32)
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview(System.Int32)
+  id: DisplayPresentPreview(System.Int32)
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: DisplayPresentPreview(int)
+  nameWithType: PresentDatabaseEditor.DisplayPresentPreview(int)
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void DisplayPresentPreview(int i)
+    parameters:
+    - id: i
+      type: System.Int32
+      description: ''
+    content.vb: Protected Overridable Sub DisplayPresentPreview(i As Integer)
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview*
+  nameWithType.vb: PresentDatabaseEditor.DisplayPresentPreview(Integer)
+  fullName.vb: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview(Integer)
+  name.vb: DisplayPresentPreview(Integer)
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.ShowPresentImage(DREditor.Presents.Present)
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.ShowPresentImage(DREditor.Presents.Present)
+  id: ShowPresentImage(DREditor.Presents.Present)
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: ShowPresentImage(Present)
+  nameWithType: PresentDatabaseEditor.ShowPresentImage(Present)
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.ShowPresentImage(DREditor.Presents.Present)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ShowPresentImage(Present present)
+    parameters:
+    - id: present
+      type: DREditor.Presents.Present
+      description: ''
+    content.vb: Protected Overridable Sub ShowPresentImage(present As Present)
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.ShowPresentImage*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent(DREditor.Presents.Present,System.Int32)
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent(DREditor.Presents.Present,System.Int32)
+  id: SelectPresent(DREditor.Presents.Present,System.Int32)
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: SelectPresent(Present, int)
+  nameWithType: PresentDatabaseEditor.SelectPresent(Present, int)
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent(DREditor.Presents.Present, int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SelectPresent(Present present, int index)
+    parameters:
+    - id: present
+      type: DREditor.Presents.Present
+      description: ''
+    - id: index
+      type: System.Int32
+      description: ''
+    content.vb: Protected Overridable Sub SelectPresent(present As Present, index As Integer)
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent*
+  nameWithType.vb: PresentDatabaseEditor.SelectPresent(Present, Integer)
+  fullName.vb: DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent(DREditor.Presents.Present, Integer)
+  name.vb: SelectPresent(Present, Integer)
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton(System.Int32)
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton(System.Int32)
+  id: RemovePresentButton(System.Int32)
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: RemovePresentButton(int)
+  nameWithType: PresentDatabaseEditor.RemovePresentButton(int)
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void RemovePresentButton(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: ''
+    content.vb: Protected Overridable Sub RemovePresentButton(index As Integer)
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton*
+  nameWithType.vb: PresentDatabaseEditor.RemovePresentButton(Integer)
+  fullName.vb: DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton(Integer)
+  name.vb: RemovePresentButton(Integer)
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImageButton
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImageButton
+  id: RestorePresentIDsFromImageButton
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: RestorePresentIDsFromImageButton()
+  nameWithType: PresentDatabaseEditor.RestorePresentIDsFromImageButton()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImageButton()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void RestorePresentIDsFromImageButton()
+    content.vb: Protected Overridable Sub RestorePresentIDsFromImageButton()
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImageButton*
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImage
+  commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImage
+  id: RestorePresentIDsFromImage
+  parent: DREditor.Presents.Editor.PresentDatabaseEditor
+  langs:
+  - csharp
+  - vb
+  name: RestorePresentIDsFromImage()
+  nameWithType: PresentDatabaseEditor.RestorePresentIDsFromImage()
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImage()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
+  assemblies:
+  - DREditor.Presents.Editor
+  namespace: DREditor.Presents.Editor
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void RestorePresentIDsFromImage()
+    content.vb: Protected Overridable Sub RestorePresentIDsFromImage()
+  overload: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImage*
 - uid: DREditor.Presents.Editor.PresentDatabaseEditor.#ctor
   commentId: M:DREditor.Presents.Editor.PresentDatabaseEditor.#ctor
   id: '#ctor'
@@ -57,9 +416,9 @@ items:
   fullName: DREditor.Presents.Editor.PresentDatabaseEditor.PresentDatabaseEditor()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentDatabaseEditor.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentDatabaseEditor.cs
   assemblies:
-  - DREditor.Editor
+  - DREditor.Presents.Editor
   namespace: DREditor.Presents.Editor
   syntax:
     content: public PresentDatabaseEditor()
@@ -117,6 +476,147 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<PresentDatabaseEditor>(PresentDatabaseEditor)
+  nameWithType: ReflectionHelper.GetFieldNames<PresentDatabaseEditor>(PresentDatabaseEditor)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Presents.Editor.PresentDatabaseEditor>(DREditor.Presents.Editor.PresentDatabaseEditor)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of PresentDatabaseEditor)(PresentDatabaseEditor)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Presents.Editor.PresentDatabaseEditor)(DREditor.Presents.Editor.PresentDatabaseEditor)
+  name.vb: GetFieldNames(Of PresentDatabaseEditor)(PresentDatabaseEditor)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Presents.Editor.PresentDatabaseEditor)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Presents.Editor.PresentDatabaseEditor)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<PresentDatabaseEditor>(PresentDatabaseEditor)
+  nameWithType: ReflectionHelper.GetFieldValues<PresentDatabaseEditor>(PresentDatabaseEditor)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Presents.Editor.PresentDatabaseEditor>(DREditor.Presents.Editor.PresentDatabaseEditor)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of PresentDatabaseEditor)(PresentDatabaseEditor)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Presents.Editor.PresentDatabaseEditor)(DREditor.Presents.Editor.PresentDatabaseEditor)
+  name.vb: GetFieldValues(Of PresentDatabaseEditor)(PresentDatabaseEditor)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Presents.Editor.PresentDatabaseEditor)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Presents.Editor.PresentDatabaseEditor)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<PresentDatabaseEditor>(PresentDatabaseEditor)
+  nameWithType: DeepCopyExtensions.DeepCopy<PresentDatabaseEditor>(PresentDatabaseEditor)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Presents.Editor.PresentDatabaseEditor>(DREditor.Presents.Editor.PresentDatabaseEditor)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of PresentDatabaseEditor)(PresentDatabaseEditor)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Presents.Editor.PresentDatabaseEditor)(DREditor.Presents.Editor.PresentDatabaseEditor)
+  name.vb: DeepCopy(Of PresentDatabaseEditor)(PresentDatabaseEditor)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Presents.Editor.PresentDatabaseEditor)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Presents.Editor.PresentDatabaseEditor)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.Editor.PresentDatabaseEditor
+    name: PresentDatabaseEditor
+    isExternal: true
+    href: DREditor.Presents.Editor.PresentDatabaseEditor.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -124,6 +624,220 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Presents.PresentDatabase
+  commentId: T:DREditor.Presents.PresentDatabase
+  parent: DREditor.Presents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentDatabase.cs
+  name: PresentDatabase
+  nameWithType: PresentDatabase
+  fullName: DREditor.Presents.PresentDatabase
+- uid: DREditor.Presents
+  commentId: N:DREditor.Presents
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Presents
+  nameWithType: DREditor.Presents
+  fullName: DREditor.Presents
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Presents
+    name: Presents
+    isExternal: true
+    href: DREditor.Presents.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Presents
+    name: Presents
+    isExternal: true
+    href: DREditor.Presents.html
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.OnEnable*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.OnEnable
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_OnEnable
+  name: OnEnable
+  nameWithType: PresentDatabaseEditor.OnEnable
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.OnEnable
 - uid: DREditor.Presents.Editor.PresentDatabaseEditor.OnInspectorGUI*
   commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.OnInspectorGUI
   isExternal: true
@@ -131,6 +845,120 @@ references:
   name: OnInspectorGUI
   nameWithType: PresentDatabaseEditor.OnInspectorGUI
   fullName: DREditor.Presents.Editor.PresentDatabaseEditor.OnInspectorGUI
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.CreateForm*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.CreateForm
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_CreateForm
+  name: CreateForm
+  nameWithType: PresentDatabaseEditor.CreateForm
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.CreateForm
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayHeader*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.DisplayHeader
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_DisplayHeader
+  name: DisplayHeader
+  nameWithType: PresentDatabaseEditor.DisplayHeader
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayHeader
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.ImportPresents*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.ImportPresents
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_ImportPresents
+  name: ImportPresents
+  nameWithType: PresentDatabaseEditor.ImportPresents
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.ImportPresents
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.ClearPresentsButton*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.ClearPresentsButton
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_ClearPresentsButton
+  name: ClearPresentsButton
+  nameWithType: PresentDatabaseEditor.ClearPresentsButton
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.ClearPresentsButton
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.AddNewPresent*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.AddNewPresent
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_AddNewPresent
+  name: AddNewPresent
+  nameWithType: PresentDatabaseEditor.AddNewPresent
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.AddNewPresent
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreviews*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreviews
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_DisplayPresentPreviews
+  name: DisplayPresentPreviews
+  nameWithType: PresentDatabaseEditor.DisplayPresentPreviews
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreviews
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_DisplayPresentPreview_System_Int32_
+  name: DisplayPresentPreview
+  nameWithType: PresentDatabaseEditor.DisplayPresentPreview
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.DisplayPresentPreview
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.ShowPresentImage*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.ShowPresentImage
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_ShowPresentImage_DREditor_Presents_Present_
+  name: ShowPresentImage
+  nameWithType: PresentDatabaseEditor.ShowPresentImage
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.ShowPresentImage
+- uid: DREditor.Presents.Present
+  commentId: T:DREditor.Presents.Present
+  parent: DREditor.Presents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Present.cs
+  name: Present
+  nameWithType: Present
+  fullName: DREditor.Presents.Present
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_SelectPresent_DREditor_Presents_Present_System_Int32_
+  name: SelectPresent
+  nameWithType: PresentDatabaseEditor.SelectPresent
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.SelectPresent
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_RemovePresentButton_System_Int32_
+  name: RemovePresentButton
+  nameWithType: PresentDatabaseEditor.RemovePresentButton
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.RemovePresentButton
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImageButton*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImageButton
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_RestorePresentIDsFromImageButton
+  name: RestorePresentIDsFromImageButton
+  nameWithType: PresentDatabaseEditor.RestorePresentIDsFromImageButton
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImageButton
+- uid: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImage*
+  commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImage
+  isExternal: true
+  href: DREditor.Presents.Editor.PresentDatabaseEditor.html#DREditor_Presents_Editor_PresentDatabaseEditor_RestorePresentIDsFromImage
+  name: RestorePresentIDsFromImage
+  nameWithType: PresentDatabaseEditor.RestorePresentIDsFromImage
+  fullName: DREditor.Presents.Editor.PresentDatabaseEditor.RestorePresentIDsFromImage
 - uid: DREditor.Presents.Editor.PresentDatabaseEditor.#ctor*
   commentId: Overload:DREditor.Presents.Editor.PresentDatabaseEditor.#ctor
   isExternal: true

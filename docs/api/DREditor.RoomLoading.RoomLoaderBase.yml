@@ -1,0 +1,1261 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.RoomLoading.RoomLoaderBase
+  commentId: T:DREditor.RoomLoading.RoomLoaderBase
+  id: RoomLoaderBase
+  parent: DREditor.RoomLoading
+  children:
+  - DREditor.RoomLoading.RoomLoaderBase.#ctor
+  - DREditor.RoomLoading.RoomLoaderBase.AllowRoomsToLoad
+  - DREditor.RoomLoading.RoomLoaderBase.DoNotAllowRoomsToLoad
+  - DREditor.RoomLoading.RoomLoaderBase.OnDisable
+  - DREditor.RoomLoading.RoomLoaderBase.OnEnable
+  - DREditor.RoomLoading.RoomLoaderBase.OnEventRaised
+  - DREditor.RoomLoading.RoomLoaderBase.ToTitleScreen
+  - DREditor.RoomLoading.RoomLoaderBase.allowRoomsToLoadOn
+  - DREditor.RoomLoading.RoomLoaderBase.onFinishedLoadingRoom
+  - DREditor.RoomLoading.RoomLoaderBase.onFinishedLoadingRoomNoDialogue
+  - DREditor.RoomLoading.RoomLoaderBase.onFinishedRoomTransitions
+  - DREditor.RoomLoading.RoomLoaderBase.onLoadingRoom
+  langs:
+  - csharp
+  - vb
+  name: RoomLoaderBase
+  nameWithType: RoomLoaderBase
+  fullName: DREditor.RoomLoading.RoomLoaderBase
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: 'public abstract class RoomLoaderBase : ServiceHolder<RoomLoaderBase>, ISceneEventListener, IToTitleScreen'
+    content.vb: Public MustInherit Class RoomLoaderBase Inherits ServiceHolder(Of RoomLoaderBase) Implements ISceneEventListener, IToTitleScreen
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  derivedClasses:
+  - DREditor.RoomLoading.RoomLoader
+  implements:
+  - DREditor.EventObjects.ISceneEventListener
+  - DREditor.Services.IToTitleScreen
+  inheritedMembers:
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.Awake
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.InitializeService
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.OnDestroy
+  extensionMethods:
+  - DREditor.RoomLoading.RoomLoaderBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.RoomLoading.RoomLoaderBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.RoomLoading.RoomLoaderBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.RoomLoading.RoomLoaderBase.allowRoomsToLoadOn
+  commentId: F:DREditor.RoomLoading.RoomLoaderBase.allowRoomsToLoadOn
+  id: allowRoomsToLoadOn
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: allowRoomsToLoadOn
+  nameWithType: RoomLoaderBase.allowRoomsToLoadOn
+  fullName: DREditor.RoomLoading.RoomLoaderBase.allowRoomsToLoadOn
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected List<SceneEvent> allowRoomsToLoadOn
+    return:
+      type: System.Collections.Generic.List{DREditor.EventObjects.SceneEvent}
+    content.vb: >-
+      <Divider>
+
+      Protected allowRoomsToLoadOn As List(Of SceneEvent)
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.RoomLoading.RoomLoaderBase.onLoadingRoom
+  commentId: F:DREditor.RoomLoading.RoomLoaderBase.onLoadingRoom
+  id: onLoadingRoom
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: onLoadingRoom
+  nameWithType: RoomLoaderBase.onLoadingRoom
+  fullName: DREditor.RoomLoading.RoomLoaderBase.onLoadingRoom
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onLoadingRoom
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onLoadingRoom As SceneEvent
+- uid: DREditor.RoomLoading.RoomLoaderBase.onFinishedRoomTransitions
+  commentId: F:DREditor.RoomLoading.RoomLoaderBase.onFinishedRoomTransitions
+  id: onFinishedRoomTransitions
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: onFinishedRoomTransitions
+  nameWithType: RoomLoaderBase.onFinishedRoomTransitions
+  fullName: DREditor.RoomLoading.RoomLoaderBase.onFinishedRoomTransitions
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onFinishedRoomTransitions
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onFinishedRoomTransitions As SceneEvent
+- uid: DREditor.RoomLoading.RoomLoaderBase.onFinishedLoadingRoom
+  commentId: F:DREditor.RoomLoading.RoomLoaderBase.onFinishedLoadingRoom
+  id: onFinishedLoadingRoom
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: onFinishedLoadingRoom
+  nameWithType: RoomLoaderBase.onFinishedLoadingRoom
+  fullName: DREditor.RoomLoading.RoomLoaderBase.onFinishedLoadingRoom
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onFinishedLoadingRoom
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onFinishedLoadingRoom As SceneEvent
+- uid: DREditor.RoomLoading.RoomLoaderBase.onFinishedLoadingRoomNoDialogue
+  commentId: F:DREditor.RoomLoading.RoomLoaderBase.onFinishedLoadingRoomNoDialogue
+  id: onFinishedLoadingRoomNoDialogue
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: onFinishedLoadingRoomNoDialogue
+  nameWithType: RoomLoaderBase.onFinishedLoadingRoomNoDialogue
+  fullName: DREditor.RoomLoading.RoomLoaderBase.onFinishedLoadingRoomNoDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onFinishedLoadingRoomNoDialogue
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onFinishedLoadingRoomNoDialogue As SceneEvent
+- uid: DREditor.RoomLoading.RoomLoaderBase.OnEnable
+  commentId: M:DREditor.RoomLoading.RoomLoaderBase.OnEnable
+  id: OnEnable
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: RoomLoaderBase.OnEnable()
+  fullName: DREditor.RoomLoading.RoomLoaderBase.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.RoomLoading.RoomLoaderBase.OnEnable*
+- uid: DREditor.RoomLoading.RoomLoaderBase.OnDisable
+  commentId: M:DREditor.RoomLoading.RoomLoaderBase.OnDisable
+  id: OnDisable
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: RoomLoaderBase.OnDisable()
+  fullName: DREditor.RoomLoading.RoomLoaderBase.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.RoomLoading.RoomLoaderBase.OnDisable*
+- uid: DREditor.RoomLoading.RoomLoaderBase.AllowRoomsToLoad
+  commentId: M:DREditor.RoomLoading.RoomLoaderBase.AllowRoomsToLoad
+  id: AllowRoomsToLoad
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: AllowRoomsToLoad()
+  nameWithType: RoomLoaderBase.AllowRoomsToLoad()
+  fullName: DREditor.RoomLoading.RoomLoaderBase.AllowRoomsToLoad()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void AllowRoomsToLoad()
+    content.vb: Public MustOverride Sub AllowRoomsToLoad()
+  overload: DREditor.RoomLoading.RoomLoaderBase.AllowRoomsToLoad*
+- uid: DREditor.RoomLoading.RoomLoaderBase.DoNotAllowRoomsToLoad
+  commentId: M:DREditor.RoomLoading.RoomLoaderBase.DoNotAllowRoomsToLoad
+  id: DoNotAllowRoomsToLoad
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: DoNotAllowRoomsToLoad()
+  nameWithType: RoomLoaderBase.DoNotAllowRoomsToLoad()
+  fullName: DREditor.RoomLoading.RoomLoaderBase.DoNotAllowRoomsToLoad()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void DoNotAllowRoomsToLoad()
+    content.vb: Public MustOverride Sub DoNotAllowRoomsToLoad()
+  overload: DREditor.RoomLoading.RoomLoaderBase.DoNotAllowRoomsToLoad*
+- uid: DREditor.RoomLoading.RoomLoaderBase.OnEventRaised
+  commentId: M:DREditor.RoomLoading.RoomLoaderBase.OnEventRaised
+  id: OnEventRaised
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: OnEventRaised()
+  nameWithType: RoomLoaderBase.OnEventRaised()
+  fullName: DREditor.RoomLoading.RoomLoaderBase.OnEventRaised()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnEventRaised()
+    content.vb: Public Overridable Sub OnEventRaised()
+  overload: DREditor.RoomLoading.RoomLoaderBase.OnEventRaised*
+  implements:
+  - DREditor.EventObjects.ISceneEventListener.OnEventRaised
+- uid: DREditor.RoomLoading.RoomLoaderBase.ToTitleScreen
+  commentId: M:DREditor.RoomLoading.RoomLoaderBase.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: RoomLoaderBase.ToTitleScreen()
+  fullName: DREditor.RoomLoading.RoomLoaderBase.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.RoomLoading.RoomLoaderBase.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.RoomLoading.RoomLoaderBase.#ctor
+  commentId: M:DREditor.RoomLoading.RoomLoaderBase.#ctor
+  id: '#ctor'
+  parent: DREditor.RoomLoading.RoomLoaderBase
+  langs:
+  - csharp
+  - vb
+  name: RoomLoaderBase()
+  nameWithType: RoomLoaderBase.RoomLoaderBase()
+  fullName: DREditor.RoomLoading.RoomLoaderBase.RoomLoaderBase()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoaderBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  syntax:
+    content: protected RoomLoaderBase()
+    content.vb: Protected Sub New()
+  overload: DREditor.RoomLoading.RoomLoaderBase.#ctor*
+  nameWithType.vb: RoomLoaderBase.New()
+  fullName.vb: DREditor.RoomLoading.RoomLoaderBase.New()
+  name.vb: New()
+references:
+- uid: DREditor.RoomLoading
+  commentId: N:DREditor.RoomLoading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.RoomLoading
+  nameWithType: DREditor.RoomLoading
+  fullName: DREditor.RoomLoading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomLoading
+    name: RoomLoading
+    isExternal: true
+    href: DREditor.RoomLoading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomLoading
+    name: RoomLoading
+    isExternal: true
+    href: DREditor.RoomLoading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<RoomLoaderBase>
+  nameWithType: ServiceHolder<RoomLoaderBase>
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomLoaderBase>
+  nameWithType.vb: ServiceHolder(Of RoomLoaderBase)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomLoaderBase)
+  name.vb: ServiceHolder(Of RoomLoaderBase)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+- uid: DREditor.EventObjects.ISceneEventListener
+  commentId: T:DREditor.EventObjects.ISceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: ISceneEventListener
+  nameWithType: ISceneEventListener
+  fullName: DREditor.EventObjects.ISceneEventListener
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<RoomLoaderBase>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomLoaderBase>.registerService
+  nameWithType.vb: ServiceHolder(Of RoomLoaderBase).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomLoaderBase).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<RoomLoaderBase>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomLoaderBase>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of RoomLoaderBase).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomLoaderBase).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<RoomLoaderBase>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomLoaderBase>.Awake()
+  nameWithType.vb: ServiceHolder(Of RoomLoaderBase).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomLoaderBase).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<RoomLoaderBase>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomLoaderBase>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of RoomLoaderBase).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomLoaderBase).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<RoomLoaderBase>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomLoaderBase>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of RoomLoaderBase).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomLoaderBase).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<RoomLoaderBase>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomLoaderBase>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of RoomLoaderBase).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomLoaderBase).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomLoaderBase}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.RoomLoading.RoomLoaderBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<RoomLoaderBase>(RoomLoaderBase)
+  nameWithType: ReflectionHelper.GetFieldNames<RoomLoaderBase>(RoomLoaderBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.RoomLoading.RoomLoaderBase>(DREditor.RoomLoading.RoomLoaderBase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of RoomLoaderBase)(RoomLoaderBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.RoomLoading.RoomLoaderBase)(DREditor.RoomLoading.RoomLoaderBase)
+  name.vb: GetFieldNames(Of RoomLoaderBase)(RoomLoaderBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomLoading.RoomLoaderBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomLoading.RoomLoaderBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+- uid: DREditor.RoomLoading.RoomLoaderBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<RoomLoaderBase>(RoomLoaderBase)
+  nameWithType: ReflectionHelper.GetFieldValues<RoomLoaderBase>(RoomLoaderBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.RoomLoading.RoomLoaderBase>(DREditor.RoomLoading.RoomLoaderBase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of RoomLoaderBase)(RoomLoaderBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.RoomLoading.RoomLoaderBase)(DREditor.RoomLoading.RoomLoaderBase)
+  name.vb: GetFieldValues(Of RoomLoaderBase)(RoomLoaderBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomLoading.RoomLoaderBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomLoading.RoomLoaderBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+- uid: DREditor.RoomLoading.RoomLoaderBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<RoomLoaderBase>(RoomLoaderBase)
+  nameWithType: DeepCopyExtensions.DeepCopy<RoomLoaderBase>(RoomLoaderBase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.RoomLoading.RoomLoaderBase>(DREditor.RoomLoading.RoomLoaderBase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of RoomLoaderBase)(RoomLoaderBase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.RoomLoading.RoomLoaderBase)(DREditor.RoomLoading.RoomLoaderBase)
+  name.vb: DeepCopy(Of RoomLoaderBase)(RoomLoaderBase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomLoading.RoomLoaderBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomLoading.RoomLoaderBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.RoomLoaderBase
+    name: RoomLoaderBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomLoaderBase.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.Collections.Generic.List{DREditor.EventObjects.SceneEvent}
+  commentId: T:System.Collections.Generic.List{DREditor.EventObjects.SceneEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<SceneEvent>
+  nameWithType: List<SceneEvent>
+  fullName: System.Collections.Generic.List<DREditor.EventObjects.SceneEvent>
+  nameWithType.vb: List(Of SceneEvent)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.EventObjects.SceneEvent)
+  name.vb: List(Of SceneEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.EventObjects.SceneEvent
+    name: SceneEvent
+    isExternal: true
+    href: DREditor.EventObjects.SceneEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.EventObjects.SceneEvent
+    name: SceneEvent
+    isExternal: true
+    href: DREditor.EventObjects.SceneEvent.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: DREditor.RoomLoading.RoomLoaderBase.OnEnable*
+  commentId: Overload:DREditor.RoomLoading.RoomLoaderBase.OnEnable
+  isExternal: true
+  href: DREditor.RoomLoading.RoomLoaderBase.html#DREditor_RoomLoading_RoomLoaderBase_OnEnable
+  name: OnEnable
+  nameWithType: RoomLoaderBase.OnEnable
+  fullName: DREditor.RoomLoading.RoomLoaderBase.OnEnable
+- uid: DREditor.RoomLoading.RoomLoaderBase.OnDisable*
+  commentId: Overload:DREditor.RoomLoading.RoomLoaderBase.OnDisable
+  isExternal: true
+  href: DREditor.RoomLoading.RoomLoaderBase.html#DREditor_RoomLoading_RoomLoaderBase_OnDisable
+  name: OnDisable
+  nameWithType: RoomLoaderBase.OnDisable
+  fullName: DREditor.RoomLoading.RoomLoaderBase.OnDisable
+- uid: DREditor.RoomLoading.RoomLoaderBase.AllowRoomsToLoad*
+  commentId: Overload:DREditor.RoomLoading.RoomLoaderBase.AllowRoomsToLoad
+  isExternal: true
+  href: DREditor.RoomLoading.RoomLoaderBase.html#DREditor_RoomLoading_RoomLoaderBase_AllowRoomsToLoad
+  name: AllowRoomsToLoad
+  nameWithType: RoomLoaderBase.AllowRoomsToLoad
+  fullName: DREditor.RoomLoading.RoomLoaderBase.AllowRoomsToLoad
+- uid: DREditor.RoomLoading.RoomLoaderBase.DoNotAllowRoomsToLoad*
+  commentId: Overload:DREditor.RoomLoading.RoomLoaderBase.DoNotAllowRoomsToLoad
+  isExternal: true
+  href: DREditor.RoomLoading.RoomLoaderBase.html#DREditor_RoomLoading_RoomLoaderBase_DoNotAllowRoomsToLoad
+  name: DoNotAllowRoomsToLoad
+  nameWithType: RoomLoaderBase.DoNotAllowRoomsToLoad
+  fullName: DREditor.RoomLoading.RoomLoaderBase.DoNotAllowRoomsToLoad
+- uid: DREditor.RoomLoading.RoomLoaderBase.OnEventRaised*
+  commentId: Overload:DREditor.RoomLoading.RoomLoaderBase.OnEventRaised
+  isExternal: true
+  href: DREditor.RoomLoading.RoomLoaderBase.html#DREditor_RoomLoading_RoomLoaderBase_OnEventRaised
+  name: OnEventRaised
+  nameWithType: RoomLoaderBase.OnEventRaised
+  fullName: DREditor.RoomLoading.RoomLoaderBase.OnEventRaised
+- uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  commentId: M:DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  parent: DREditor.EventObjects.ISceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: OnEventRaised()
+  nameWithType: ISceneEventListener.OnEventRaised()
+  fullName: DREditor.EventObjects.ISceneEventListener.OnEventRaised()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.RoomLoading.RoomLoaderBase.ToTitleScreen*
+  commentId: Overload:DREditor.RoomLoading.RoomLoaderBase.ToTitleScreen
+  isExternal: true
+  href: DREditor.RoomLoading.RoomLoaderBase.html#DREditor_RoomLoading_RoomLoaderBase_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: RoomLoaderBase.ToTitleScreen
+  fullName: DREditor.RoomLoading.RoomLoaderBase.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.RoomLoading.RoomLoaderBase.#ctor*
+  commentId: Overload:DREditor.RoomLoading.RoomLoaderBase.#ctor
+  isExternal: true
+  href: DREditor.RoomLoading.RoomLoaderBase.html#DREditor_RoomLoading_RoomLoaderBase__ctor
+  name: RoomLoaderBase
+  nameWithType: RoomLoaderBase.RoomLoaderBase
+  fullName: DREditor.RoomLoading.RoomLoaderBase.RoomLoaderBase
+  nameWithType.vb: RoomLoaderBase.New
+  fullName.vb: DREditor.RoomLoading.RoomLoaderBase.New
+  name.vb: New

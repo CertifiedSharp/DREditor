@@ -1,0 +1,1094 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+  commentId: T:DREditor.Minigames.RS.Managers.FiredSliceHandler
+  id: FiredSliceHandler
+  parent: DREditor.Minigames.RS.Managers
+  children:
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.#ctor
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.EvaluateBulletHit
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.GetHittablePhrase
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.InitializeComponents
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase(DREditor.Minigames.Debates.PhraseTextBase@)
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.phraseManagers
+  langs:
+  - csharp
+  - vb
+  name: FiredSliceHandler
+  nameWithType: FiredSliceHandler
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/FiredSliceHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("FiredTruthHandler\n\n")]
+
+      public class FiredSliceHandler : FiredTruthHandler, IFireBulletUI
+    content.vb: >-
+      <ClassHeader("FiredTruthHandler" & vbLf & vbLf)>
+
+      Public Class FiredSliceHandler Inherits FiredTruthHandler Implements IFireBulletUI
+  inheritance:
+  - System.Object
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  implements:
+  - DREditor.Minigames.Debates.Firing.IFireBulletUI
+  inheritedMembers:
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.onPhraseShot
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.fireAnimation
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.fallbackRemainingDuration
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.reloadBulletHandler
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.Awake
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.FireUITruthBullet
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletAnimation
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.InvokePhraseShot
+  - DREditor.Minigames.Debates.Firing.FiredTruthHandler.WaitForFireAnimation
+  extensionMethods:
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Minigames.RS.Managers.FiredSliceHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        FiredTruthHandler
+
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.phraseManagers
+  commentId: F:DREditor.Minigames.RS.Managers.FiredSliceHandler.phraseManagers
+  id: phraseManagers
+  parent: DREditor.Minigames.RS.Managers.FiredSliceHandler
+  langs:
+  - csharp
+  - vb
+  name: phraseManagers
+  nameWithType: FiredSliceHandler.phraseManagers
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.phraseManagers
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/FiredSliceHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected IEnumerable<IPhraseManager> phraseManagers
+    return:
+      type: System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.Managers.IPhraseManager}
+    content.vb: Protected phraseManagers As IEnumerable(Of IPhraseManager)
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.InitializeComponents
+  commentId: M:DREditor.Minigames.RS.Managers.FiredSliceHandler.InitializeComponents
+  id: InitializeComponents
+  parent: DREditor.Minigames.RS.Managers.FiredSliceHandler
+  langs:
+  - csharp
+  - vb
+  name: InitializeComponents()
+  nameWithType: FiredSliceHandler.InitializeComponents()
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.InitializeComponents()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/FiredSliceHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected override Component[] InitializeComponents()
+    return:
+      type: UnityEngine.Component[]
+      description: ''
+    content.vb: Protected Overrides Function InitializeComponents() As Component()
+  overridden: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InitializeComponents
+  overload: DREditor.Minigames.RS.Managers.FiredSliceHandler.InitializeComponents*
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.EvaluateBulletHit
+  commentId: M:DREditor.Minigames.RS.Managers.FiredSliceHandler.EvaluateBulletHit
+  id: EvaluateBulletHit
+  parent: DREditor.Minigames.RS.Managers.FiredSliceHandler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateBulletHit()
+  nameWithType: FiredSliceHandler.EvaluateBulletHit()
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.EvaluateBulletHit()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/FiredSliceHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected override IEnumerator EvaluateBulletHit()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overrides Function EvaluateBulletHit() As IEnumerator
+  overridden: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletHit
+  overload: DREditor.Minigames.RS.Managers.FiredSliceHandler.EvaluateBulletHit*
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase(DREditor.Minigames.Debates.PhraseTextBase@)
+  commentId: M:DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase(DREditor.Minigames.Debates.PhraseTextBase@)
+  id: ShouldHitPhrase(DREditor.Minigames.Debates.PhraseTextBase@)
+  parent: DREditor.Minigames.RS.Managers.FiredSliceHandler
+  langs:
+  - csharp
+  - vb
+  name: ShouldHitPhrase(out PhraseTextBase)
+  nameWithType: FiredSliceHandler.ShouldHitPhrase(out PhraseTextBase)
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase(out DREditor.Minigames.Debates.PhraseTextBase)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/FiredSliceHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool ShouldHitPhrase(out PhraseTextBase phraseText)
+    parameters:
+    - id: phraseText
+      type: DREditor.Minigames.Debates.PhraseTextBase
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function ShouldHitPhrase(phraseText As PhraseTextBase) As Boolean
+  overload: DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase*
+  nameWithType.vb: FiredSliceHandler.ShouldHitPhrase(PhraseTextBase)
+  fullName.vb: DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase(DREditor.Minigames.Debates.PhraseTextBase)
+  name.vb: ShouldHitPhrase(PhraseTextBase)
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.GetHittablePhrase
+  commentId: M:DREditor.Minigames.RS.Managers.FiredSliceHandler.GetHittablePhrase
+  id: GetHittablePhrase
+  parent: DREditor.Minigames.RS.Managers.FiredSliceHandler
+  langs:
+  - csharp
+  - vb
+  name: GetHittablePhrase()
+  nameWithType: FiredSliceHandler.GetHittablePhrase()
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.GetHittablePhrase()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/FiredSliceHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual PhraseTextBase GetHittablePhrase()
+    return:
+      type: DREditor.Minigames.Debates.PhraseTextBase
+      description: ''
+    content.vb: Protected Overridable Function GetHittablePhrase() As PhraseTextBase
+  overload: DREditor.Minigames.RS.Managers.FiredSliceHandler.GetHittablePhrase*
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.#ctor
+  commentId: M:DREditor.Minigames.RS.Managers.FiredSliceHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Minigames.RS.Managers.FiredSliceHandler
+  langs:
+  - csharp
+  - vb
+  name: FiredSliceHandler()
+  nameWithType: FiredSliceHandler.FiredSliceHandler()
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.FiredSliceHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/FiredSliceHandler.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  syntax:
+    content: public FiredSliceHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Minigames.RS.Managers.FiredSliceHandler.#ctor*
+  nameWithType.vb: FiredSliceHandler.New()
+  fullName.vb: DREditor.Minigames.RS.Managers.FiredSliceHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.Minigames.RS.Managers
+  commentId: N:DREditor.Minigames.RS.Managers
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.RS.Managers
+  nameWithType: DREditor.Minigames.RS.Managers
+  fullName: DREditor.Minigames.RS.Managers
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.RS
+    name: RS
+    isExternal: true
+    href: DREditor.Minigames.RS.html
+  - name: .
+  - uid: DREditor.Minigames.RS.Managers
+    name: Managers
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.RS
+    name: RS
+    isExternal: true
+    href: DREditor.Minigames.RS.html
+  - name: .
+  - uid: DREditor.Minigames.RS.Managers
+    name: Managers
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  commentId: T:DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  parent: DREditor.Minigames.Debates.Firing
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html
+  name: FiredTruthHandler
+  nameWithType: FiredTruthHandler
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+- uid: DREditor.Minigames.Debates.Firing.IFireBulletUI
+  commentId: T:DREditor.Minigames.Debates.Firing.IFireBulletUI
+  parent: DREditor.Minigames.Debates.Firing
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.IFireBulletUI.html
+  name: IFireBulletUI
+  nameWithType: IFireBulletUI
+  fullName: DREditor.Minigames.Debates.Firing.IFireBulletUI
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.onPhraseShot
+  commentId: F:DREditor.Minigames.Debates.Firing.FiredTruthHandler.onPhraseShot
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_onPhraseShot
+  name: onPhraseShot
+  nameWithType: FiredTruthHandler.onPhraseShot
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.onPhraseShot
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.fireAnimation
+  commentId: F:DREditor.Minigames.Debates.Firing.FiredTruthHandler.fireAnimation
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_fireAnimation
+  name: fireAnimation
+  nameWithType: FiredTruthHandler.fireAnimation
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.fireAnimation
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.fallbackRemainingDuration
+  commentId: F:DREditor.Minigames.Debates.Firing.FiredTruthHandler.fallbackRemainingDuration
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_fallbackRemainingDuration
+  name: fallbackRemainingDuration
+  nameWithType: FiredTruthHandler.fallbackRemainingDuration
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.fallbackRemainingDuration
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.reloadBulletHandler
+  commentId: F:DREditor.Minigames.Debates.Firing.FiredTruthHandler.reloadBulletHandler
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_reloadBulletHandler
+  name: reloadBulletHandler
+  nameWithType: FiredTruthHandler.reloadBulletHandler
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.reloadBulletHandler
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.Awake
+  commentId: M:DREditor.Minigames.Debates.Firing.FiredTruthHandler.Awake
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_Awake
+  name: Awake()
+  nameWithType: FiredTruthHandler.Awake()
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.Awake()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.Awake
+    name: Awake
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_Awake
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.Awake
+    name: Awake
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_Awake
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.FireUITruthBullet
+  commentId: M:DREditor.Minigames.Debates.Firing.FiredTruthHandler.FireUITruthBullet
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_FireUITruthBullet
+  name: FireUITruthBullet()
+  nameWithType: FiredTruthHandler.FireUITruthBullet()
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.FireUITruthBullet()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.FireUITruthBullet
+    name: FireUITruthBullet
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_FireUITruthBullet
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.FireUITruthBullet
+    name: FireUITruthBullet
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_FireUITruthBullet
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletAnimation
+  commentId: M:DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletAnimation
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_EvaluateBulletAnimation
+  name: EvaluateBulletAnimation()
+  nameWithType: FiredTruthHandler.EvaluateBulletAnimation()
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletAnimation()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletAnimation
+    name: EvaluateBulletAnimation
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_EvaluateBulletAnimation
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletAnimation
+    name: EvaluateBulletAnimation
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_EvaluateBulletAnimation
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InvokePhraseShot
+  commentId: M:DREditor.Minigames.Debates.Firing.FiredTruthHandler.InvokePhraseShot
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_InvokePhraseShot
+  name: InvokePhraseShot()
+  nameWithType: FiredTruthHandler.InvokePhraseShot()
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InvokePhraseShot()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InvokePhraseShot
+    name: InvokePhraseShot
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_InvokePhraseShot
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InvokePhraseShot
+    name: InvokePhraseShot
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_InvokePhraseShot
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.WaitForFireAnimation
+  commentId: M:DREditor.Minigames.Debates.Firing.FiredTruthHandler.WaitForFireAnimation
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_WaitForFireAnimation
+  name: WaitForFireAnimation()
+  nameWithType: FiredTruthHandler.WaitForFireAnimation()
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.WaitForFireAnimation()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.WaitForFireAnimation
+    name: WaitForFireAnimation
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_WaitForFireAnimation
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.WaitForFireAnimation
+    name: WaitForFireAnimation
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_WaitForFireAnimation
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<FiredSliceHandler>(FiredSliceHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<FiredSliceHandler>(FiredSliceHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Minigames.RS.Managers.FiredSliceHandler>(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of FiredSliceHandler)(FiredSliceHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Minigames.RS.Managers.FiredSliceHandler)(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+  name.vb: GetFieldNames(Of FiredSliceHandler)(FiredSliceHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<FiredSliceHandler>(FiredSliceHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<FiredSliceHandler>(FiredSliceHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Minigames.RS.Managers.FiredSliceHandler>(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of FiredSliceHandler)(FiredSliceHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Minigames.RS.Managers.FiredSliceHandler)(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+  name.vb: GetFieldValues(Of FiredSliceHandler)(FiredSliceHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<FiredSliceHandler>(FiredSliceHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<FiredSliceHandler>(FiredSliceHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Minigames.RS.Managers.FiredSliceHandler>(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of FiredSliceHandler)(FiredSliceHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Minigames.RS.Managers.FiredSliceHandler)(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+  name.vb: DeepCopy(Of FiredSliceHandler)(FiredSliceHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Minigames.RS.Managers.FiredSliceHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.FiredSliceHandler
+    name: FiredSliceHandler
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Minigames.Debates.Firing
+  commentId: N:DREditor.Minigames.Debates.Firing
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.Debates.Firing
+  nameWithType: DREditor.Minigames.Debates.Firing
+  fullName: DREditor.Minigames.Debates.Firing
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  - name: .
+  - uid: DREditor.Minigames.Debates.Firing
+    name: Firing
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  - name: .
+  - uid: DREditor.Minigames.Debates.Firing
+    name: Firing
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.Managers.IPhraseManager}
+  commentId: T:System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.Managers.IPhraseManager}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IPhraseManager>
+  nameWithType: IEnumerable<IPhraseManager>
+  fullName: System.Collections.Generic.IEnumerable<DREditor.Minigames.Debates.Managers.IPhraseManager>
+  nameWithType.vb: IEnumerable(Of IPhraseManager)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of DREditor.Minigames.Debates.Managers.IPhraseManager)
+  name.vb: IEnumerable(Of IPhraseManager)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: DREditor.Minigames.Debates.Managers.IPhraseManager
+    name: IPhraseManager
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/IPhraseManager.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.Debates.Managers.IPhraseManager
+    name: IPhraseManager
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/IPhraseManager.cs
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InitializeComponents
+  commentId: M:DREditor.Minigames.Debates.Firing.FiredTruthHandler.InitializeComponents
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_InitializeComponents
+  name: InitializeComponents()
+  nameWithType: FiredTruthHandler.InitializeComponents()
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InitializeComponents()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InitializeComponents
+    name: InitializeComponents
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_InitializeComponents
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.InitializeComponents
+    name: InitializeComponents
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_InitializeComponents
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.InitializeComponents*
+  commentId: Overload:DREditor.Minigames.RS.Managers.FiredSliceHandler.InitializeComponents
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html#DREditor_Minigames_RS_Managers_FiredSliceHandler_InitializeComponents
+  name: InitializeComponents
+  nameWithType: FiredSliceHandler.InitializeComponents
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.InitializeComponents
+- uid: UnityEngine.Component[]
+  isExternal: true
+  name: Component[]
+  nameWithType: Component[]
+  fullName: UnityEngine.Component[]
+  nameWithType.vb: Component()
+  fullName.vb: UnityEngine.Component()
+  name.vb: Component()
+  spec.csharp:
+  - uid: UnityEngine.Component
+    name: Component
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: UnityEngine.Component
+    name: Component
+    isExternal: true
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletHit
+  commentId: M:DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletHit
+  parent: DREditor.Minigames.Debates.Firing.FiredTruthHandler
+  isExternal: true
+  href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_EvaluateBulletHit
+  name: EvaluateBulletHit()
+  nameWithType: FiredTruthHandler.EvaluateBulletHit()
+  fullName: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletHit()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletHit
+    name: EvaluateBulletHit
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_EvaluateBulletHit
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Firing.FiredTruthHandler.EvaluateBulletHit
+    name: EvaluateBulletHit
+    isExternal: true
+    href: DREditor.Minigames.Debates.Firing.FiredTruthHandler.html#DREditor_Minigames_Debates_Firing_FiredTruthHandler_EvaluateBulletHit
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.EvaluateBulletHit*
+  commentId: Overload:DREditor.Minigames.RS.Managers.FiredSliceHandler.EvaluateBulletHit
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html#DREditor_Minigames_RS_Managers_FiredSliceHandler_EvaluateBulletHit
+  name: EvaluateBulletHit
+  nameWithType: FiredSliceHandler.EvaluateBulletHit
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.EvaluateBulletHit
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase*
+  commentId: Overload:DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html#DREditor_Minigames_RS_Managers_FiredSliceHandler_ShouldHitPhrase_DREditor_Minigames_Debates_PhraseTextBase__
+  name: ShouldHitPhrase
+  nameWithType: FiredSliceHandler.ShouldHitPhrase
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.ShouldHitPhrase
+- uid: DREditor.Minigames.Debates.PhraseTextBase
+  commentId: T:DREditor.Minigames.Debates.PhraseTextBase
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.PhraseTextBase.html
+  name: PhraseTextBase
+  nameWithType: PhraseTextBase
+  fullName: DREditor.Minigames.Debates.PhraseTextBase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Minigames.Debates
+  commentId: N:DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.Debates
+  nameWithType: DREditor.Minigames.Debates
+  fullName: DREditor.Minigames.Debates
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.GetHittablePhrase*
+  commentId: Overload:DREditor.Minigames.RS.Managers.FiredSliceHandler.GetHittablePhrase
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html#DREditor_Minigames_RS_Managers_FiredSliceHandler_GetHittablePhrase
+  name: GetHittablePhrase
+  nameWithType: FiredSliceHandler.GetHittablePhrase
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.GetHittablePhrase
+- uid: DREditor.Minigames.RS.Managers.FiredSliceHandler.#ctor*
+  commentId: Overload:DREditor.Minigames.RS.Managers.FiredSliceHandler.#ctor
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.FiredSliceHandler.html#DREditor_Minigames_RS_Managers_FiredSliceHandler__ctor
+  name: FiredSliceHandler
+  nameWithType: FiredSliceHandler.FiredSliceHandler
+  fullName: DREditor.Minigames.RS.Managers.FiredSliceHandler.FiredSliceHandler
+  nameWithType.vb: FiredSliceHandler.New
+  fullName.vb: DREditor.Minigames.RS.Managers.FiredSliceHandler.New
+  name.vb: New

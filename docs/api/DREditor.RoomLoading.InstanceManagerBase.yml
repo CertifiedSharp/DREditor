@@ -1,0 +1,1132 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.RoomLoading.InstanceManagerBase
+  commentId: T:DREditor.RoomLoading.InstanceManagerBase
+  id: InstanceManagerBase
+  parent: DREditor.RoomLoading
+  children:
+  - DREditor.RoomLoading.InstanceManagerBase.#ctor
+  - DREditor.RoomLoading.InstanceManagerBase.Awake
+  - DREditor.RoomLoading.InstanceManagerBase.ClearData
+  - DREditor.RoomLoading.InstanceManagerBase.ClearRoomData
+  - DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor(System.String)
+  - DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom(System.String)
+  - DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance
+  - DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance(System.String)
+  - DREditor.RoomLoading.InstanceManagerBase.OnDisable
+  - DREditor.RoomLoading.InstanceManagerBase.OnEnable
+  - DREditor.RoomLoading.InstanceManagerBase.OnEventRaised
+  - DREditor.RoomLoading.InstanceManagerBase.OnRoomLoadRoutine
+  - DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance(System.String)
+  - DREditor.RoomLoading.InstanceManagerBase.dontDestroyOnLoad
+  - DREditor.RoomLoading.InstanceManagerBase.loadProgressionData
+  - DREditor.RoomLoading.InstanceManagerBase.onRoomInstanceLoaded
+  - DREditor.RoomLoading.InstanceManagerBase.startedNewGame
+  langs:
+  - csharp
+  - vb
+  name: InstanceManagerBase
+  nameWithType: InstanceManagerBase
+  fullName: DREditor.RoomLoading.InstanceManagerBase
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: 'public abstract class InstanceManagerBase : RoomLoadComponent, IRoomLoadRoutine, ISceneEventListener'
+    content.vb: Public MustInherit Class InstanceManagerBase Inherits RoomLoadComponent Implements IRoomLoadRoutine, ISceneEventListener
+  inheritance:
+  - System.Object
+  - DREditor.RoomLoading.RoomLoadComponent
+  derivedClasses:
+  - DREditor.RoomBuilding.Instances.RoomInstanceManager
+  implements:
+  - DREditor.RoomLoading.IRoomLoadRoutine
+  - DREditor.EventObjects.ISceneEventListener
+  extensionMethods:
+  - DREditor.RoomLoading.InstanceManagerBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.RoomLoading.InstanceManagerBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.RoomLoading.InstanceManagerBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.RoomLoading.InstanceManagerBase.startedNewGame
+  commentId: F:DREditor.RoomLoading.InstanceManagerBase.startedNewGame
+  id: startedNewGame
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: startedNewGame
+  nameWithType: InstanceManagerBase.startedNewGame
+  fullName: DREditor.RoomLoading.InstanceManagerBase.startedNewGame
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected SceneEvent startedNewGame
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: >-
+      <Divider>
+
+      Protected startedNewGame As SceneEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.RoomLoading.InstanceManagerBase.dontDestroyOnLoad
+  commentId: F:DREditor.RoomLoading.InstanceManagerBase.dontDestroyOnLoad
+  id: dontDestroyOnLoad
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: dontDestroyOnLoad
+  nameWithType: InstanceManagerBase.dontDestroyOnLoad
+  fullName: DREditor.RoomLoading.InstanceManagerBase.dontDestroyOnLoad
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool dontDestroyOnLoad
+    return:
+      type: System.Boolean
+    content.vb: Protected dontDestroyOnLoad As Boolean
+- uid: DREditor.RoomLoading.InstanceManagerBase.loadProgressionData
+  commentId: F:DREditor.RoomLoading.InstanceManagerBase.loadProgressionData
+  id: loadProgressionData
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: loadProgressionData
+  nameWithType: InstanceManagerBase.loadProgressionData
+  fullName: DREditor.RoomLoading.InstanceManagerBase.loadProgressionData
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected SceneEvent loadProgressionData
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: >-
+      <Divider>
+
+      Protected loadProgressionData As SceneEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.RoomLoading.InstanceManagerBase.onRoomInstanceLoaded
+  commentId: F:DREditor.RoomLoading.InstanceManagerBase.onRoomInstanceLoaded
+  id: onRoomInstanceLoaded
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: onRoomInstanceLoaded
+  nameWithType: InstanceManagerBase.onRoomInstanceLoaded
+  fullName: DREditor.RoomLoading.InstanceManagerBase.onRoomInstanceLoaded
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent onRoomInstanceLoaded
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected onRoomInstanceLoaded As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.RoomLoading.InstanceManagerBase.Awake
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.Awake
+  id: Awake
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: InstanceManagerBase.Awake()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: DREditor.RoomLoading.InstanceManagerBase.Awake*
+- uid: DREditor.RoomLoading.InstanceManagerBase.OnEnable
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.OnEnable
+  id: OnEnable
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: InstanceManagerBase.OnEnable()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.RoomLoading.InstanceManagerBase.OnEnable*
+- uid: DREditor.RoomLoading.InstanceManagerBase.OnDisable
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.OnDisable
+  id: OnDisable
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: InstanceManagerBase.OnDisable()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.RoomLoading.InstanceManagerBase.OnDisable*
+- uid: DREditor.RoomLoading.InstanceManagerBase.ClearData
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.ClearData
+  id: ClearData
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: ClearData()
+  nameWithType: InstanceManagerBase.ClearData()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.ClearData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void ClearData()
+    content.vb: Public MustOverride Sub ClearData()
+  overload: DREditor.RoomLoading.InstanceManagerBase.ClearData*
+- uid: DREditor.RoomLoading.InstanceManagerBase.ClearRoomData
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.ClearRoomData
+  id: ClearRoomData
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: ClearRoomData()
+  nameWithType: InstanceManagerBase.ClearRoomData()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.ClearRoomData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void ClearRoomData()
+    content.vb: Public MustOverride Sub ClearRoomData()
+  overload: DREditor.RoomLoading.InstanceManagerBase.ClearRoomData*
+- uid: DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor(System.String)
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor(System.String)
+  id: ContainsRoomDataFor(System.String)
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: ContainsRoomDataFor(string)
+  nameWithType: InstanceManagerBase.ContainsRoomDataFor(string)
+  fullName: DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool ContainsRoomDataFor(string roomName)
+    parameters:
+    - id: roomName
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function ContainsRoomDataFor(roomName As String) As Boolean
+  overload: DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor*
+  nameWithType.vb: InstanceManagerBase.ContainsRoomDataFor(String)
+  fullName.vb: DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor(String)
+  name.vb: ContainsRoomDataFor(String)
+- uid: DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom(System.String)
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom(System.String)
+  id: GetIndexOfRoom(System.String)
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: GetIndexOfRoom(string)
+  nameWithType: InstanceManagerBase.GetIndexOfRoom(string)
+  fullName: DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected abstract int GetIndexOfRoom(string roomName)
+    parameters:
+    - id: roomName
+      type: System.String
+      description: ''
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Protected MustOverride Function GetIndexOfRoom(roomName As String) As Integer
+  overload: DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom*
+  nameWithType.vb: InstanceManagerBase.GetIndexOfRoom(String)
+  fullName.vb: DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom(String)
+  name.vb: GetIndexOfRoom(String)
+- uid: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance(System.String)
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance(System.String)
+  id: LoadRoomInstance(System.String)
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: LoadRoomInstance(string)
+  nameWithType: InstanceManagerBase.LoadRoomInstance(string)
+  fullName: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void LoadRoomInstance(string roomName)
+    parameters:
+    - id: roomName
+      type: System.String
+      description: ''
+    content.vb: Public MustOverride Sub LoadRoomInstance(roomName As String)
+  overload: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance*
+  nameWithType.vb: InstanceManagerBase.LoadRoomInstance(String)
+  fullName.vb: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance(String)
+  name.vb: LoadRoomInstance(String)
+- uid: DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance(System.String)
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance(System.String)
+  id: SaveRoomInstance(System.String)
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: SaveRoomInstance(string)
+  nameWithType: InstanceManagerBase.SaveRoomInstance(string)
+  fullName: DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void SaveRoomInstance(string roomName)
+    parameters:
+    - id: roomName
+      type: System.String
+      description: ''
+    content.vb: Public MustOverride Sub SaveRoomInstance(roomName As String)
+  overload: DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance*
+  nameWithType.vb: InstanceManagerBase.SaveRoomInstance(String)
+  fullName.vb: DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance(String)
+  name.vb: SaveRoomInstance(String)
+- uid: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance
+  id: LoadRoomInstance
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: LoadRoomInstance()
+  nameWithType: InstanceManagerBase.LoadRoomInstance()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator LoadRoomInstance()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Protected Overridable Function LoadRoomInstance() As IEnumerator
+  overload: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance*
+- uid: DREditor.RoomLoading.InstanceManagerBase.OnRoomLoadRoutine
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.OnRoomLoadRoutine
+  id: OnRoomLoadRoutine
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: OnRoomLoadRoutine()
+  nameWithType: InstanceManagerBase.OnRoomLoadRoutine()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.OnRoomLoadRoutine()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract IEnumerator OnRoomLoadRoutine()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public MustOverride Function OnRoomLoadRoutine() As IEnumerator
+  overload: DREditor.RoomLoading.InstanceManagerBase.OnRoomLoadRoutine*
+  implements:
+  - DREditor.RoomLoading.IRoomLoadRoutine.OnRoomLoadRoutine
+- uid: DREditor.RoomLoading.InstanceManagerBase.OnEventRaised
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.OnEventRaised
+  id: OnEventRaised
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: OnEventRaised()
+  nameWithType: InstanceManagerBase.OnEventRaised()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.OnEventRaised()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnEventRaised()
+    content.vb: Public Overridable Sub OnEventRaised()
+  overload: DREditor.RoomLoading.InstanceManagerBase.OnEventRaised*
+  implements:
+  - DREditor.EventObjects.ISceneEventListener.OnEventRaised
+- uid: DREditor.RoomLoading.InstanceManagerBase.#ctor
+  commentId: M:DREditor.RoomLoading.InstanceManagerBase.#ctor
+  id: '#ctor'
+  parent: DREditor.RoomLoading.InstanceManagerBase
+  langs:
+  - csharp
+  - vb
+  name: InstanceManagerBase()
+  nameWithType: InstanceManagerBase.InstanceManagerBase()
+  fullName: DREditor.RoomLoading.InstanceManagerBase.InstanceManagerBase()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/InstanceManagerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  syntax:
+    content: protected InstanceManagerBase()
+    content.vb: Protected Sub New()
+  overload: DREditor.RoomLoading.InstanceManagerBase.#ctor*
+  nameWithType.vb: InstanceManagerBase.New()
+  fullName.vb: DREditor.RoomLoading.InstanceManagerBase.New()
+  name.vb: New()
+references:
+- uid: DREditor.RoomLoading
+  commentId: N:DREditor.RoomLoading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.RoomLoading
+  nameWithType: DREditor.RoomLoading
+  fullName: DREditor.RoomLoading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomLoading
+    name: RoomLoading
+    isExternal: true
+    href: DREditor.RoomLoading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomLoading
+    name: RoomLoading
+    isExternal: true
+    href: DREditor.RoomLoading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.RoomLoading.RoomLoadComponent
+  commentId: T:DREditor.RoomLoading.RoomLoadComponent
+  parent: DREditor.RoomLoading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomLoadComponent.cs
+  name: RoomLoadComponent
+  nameWithType: RoomLoadComponent
+  fullName: DREditor.RoomLoading.RoomLoadComponent
+- uid: DREditor.RoomLoading.IRoomLoadRoutine
+  commentId: T:DREditor.RoomLoading.IRoomLoadRoutine
+  parent: DREditor.RoomLoading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/IRoomLoadRoutine.cs
+  name: IRoomLoadRoutine
+  nameWithType: IRoomLoadRoutine
+  fullName: DREditor.RoomLoading.IRoomLoadRoutine
+- uid: DREditor.EventObjects.ISceneEventListener
+  commentId: T:DREditor.EventObjects.ISceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: ISceneEventListener
+  nameWithType: ISceneEventListener
+  fullName: DREditor.EventObjects.ISceneEventListener
+- uid: DREditor.RoomLoading.InstanceManagerBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<InstanceManagerBase>(InstanceManagerBase)
+  nameWithType: ReflectionHelper.GetFieldNames<InstanceManagerBase>(InstanceManagerBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.RoomLoading.InstanceManagerBase>(DREditor.RoomLoading.InstanceManagerBase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of InstanceManagerBase)(InstanceManagerBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.RoomLoading.InstanceManagerBase)(DREditor.RoomLoading.InstanceManagerBase)
+  name.vb: GetFieldNames(Of InstanceManagerBase)(InstanceManagerBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomLoading.InstanceManagerBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomLoading.InstanceManagerBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+- uid: DREditor.RoomLoading.InstanceManagerBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<InstanceManagerBase>(InstanceManagerBase)
+  nameWithType: ReflectionHelper.GetFieldValues<InstanceManagerBase>(InstanceManagerBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.RoomLoading.InstanceManagerBase>(DREditor.RoomLoading.InstanceManagerBase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of InstanceManagerBase)(InstanceManagerBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.RoomLoading.InstanceManagerBase)(DREditor.RoomLoading.InstanceManagerBase)
+  name.vb: GetFieldValues(Of InstanceManagerBase)(InstanceManagerBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomLoading.InstanceManagerBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomLoading.InstanceManagerBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+- uid: DREditor.RoomLoading.InstanceManagerBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<InstanceManagerBase>(InstanceManagerBase)
+  nameWithType: DeepCopyExtensions.DeepCopy<InstanceManagerBase>(InstanceManagerBase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.RoomLoading.InstanceManagerBase>(DREditor.RoomLoading.InstanceManagerBase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of InstanceManagerBase)(InstanceManagerBase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.RoomLoading.InstanceManagerBase)(DREditor.RoomLoading.InstanceManagerBase)
+  name.vb: DeepCopy(Of InstanceManagerBase)(InstanceManagerBase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomLoading.InstanceManagerBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomLoading.InstanceManagerBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.InstanceManagerBase
+    name: InstanceManagerBase
+    isExternal: true
+    href: DREditor.RoomLoading.InstanceManagerBase.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.RoomLoading.InstanceManagerBase.Awake*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.Awake
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_Awake
+  name: Awake
+  nameWithType: InstanceManagerBase.Awake
+  fullName: DREditor.RoomLoading.InstanceManagerBase.Awake
+- uid: DREditor.RoomLoading.InstanceManagerBase.OnEnable*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.OnEnable
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_OnEnable
+  name: OnEnable
+  nameWithType: InstanceManagerBase.OnEnable
+  fullName: DREditor.RoomLoading.InstanceManagerBase.OnEnable
+- uid: DREditor.RoomLoading.InstanceManagerBase.OnDisable*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.OnDisable
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_OnDisable
+  name: OnDisable
+  nameWithType: InstanceManagerBase.OnDisable
+  fullName: DREditor.RoomLoading.InstanceManagerBase.OnDisable
+- uid: DREditor.RoomLoading.InstanceManagerBase.ClearData*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.ClearData
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_ClearData
+  name: ClearData
+  nameWithType: InstanceManagerBase.ClearData
+  fullName: DREditor.RoomLoading.InstanceManagerBase.ClearData
+- uid: DREditor.RoomLoading.InstanceManagerBase.ClearRoomData*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.ClearRoomData
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_ClearRoomData
+  name: ClearRoomData
+  nameWithType: InstanceManagerBase.ClearRoomData
+  fullName: DREditor.RoomLoading.InstanceManagerBase.ClearRoomData
+- uid: DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_ContainsRoomDataFor_System_String_
+  name: ContainsRoomDataFor
+  nameWithType: InstanceManagerBase.ContainsRoomDataFor
+  fullName: DREditor.RoomLoading.InstanceManagerBase.ContainsRoomDataFor
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_GetIndexOfRoom_System_String_
+  name: GetIndexOfRoom
+  nameWithType: InstanceManagerBase.GetIndexOfRoom
+  fullName: DREditor.RoomLoading.InstanceManagerBase.GetIndexOfRoom
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_LoadRoomInstance_System_String_
+  name: LoadRoomInstance
+  nameWithType: InstanceManagerBase.LoadRoomInstance
+  fullName: DREditor.RoomLoading.InstanceManagerBase.LoadRoomInstance
+- uid: DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_SaveRoomInstance_System_String_
+  name: SaveRoomInstance
+  nameWithType: InstanceManagerBase.SaveRoomInstance
+  fullName: DREditor.RoomLoading.InstanceManagerBase.SaveRoomInstance
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.RoomLoading.InstanceManagerBase.OnRoomLoadRoutine*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.OnRoomLoadRoutine
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_OnRoomLoadRoutine
+  name: OnRoomLoadRoutine
+  nameWithType: InstanceManagerBase.OnRoomLoadRoutine
+  fullName: DREditor.RoomLoading.InstanceManagerBase.OnRoomLoadRoutine
+- uid: DREditor.RoomLoading.IRoomLoadRoutine.OnRoomLoadRoutine
+  commentId: M:DREditor.RoomLoading.IRoomLoadRoutine.OnRoomLoadRoutine
+  parent: DREditor.RoomLoading.IRoomLoadRoutine
+  isExternal: true
+  href: DREditor.RoomLoading.IRoomLoadRoutine.html#DREditor_RoomLoading_IRoomLoadRoutine_OnRoomLoadRoutine
+  name: OnRoomLoadRoutine()
+  nameWithType: IRoomLoadRoutine.OnRoomLoadRoutine()
+  fullName: DREditor.RoomLoading.IRoomLoadRoutine.OnRoomLoadRoutine()
+  spec.csharp:
+  - uid: DREditor.RoomLoading.IRoomLoadRoutine.OnRoomLoadRoutine
+    name: OnRoomLoadRoutine
+    isExternal: true
+    href: DREditor.RoomLoading.IRoomLoadRoutine.html#DREditor_RoomLoading_IRoomLoadRoutine_OnRoomLoadRoutine
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.RoomLoading.IRoomLoadRoutine.OnRoomLoadRoutine
+    name: OnRoomLoadRoutine
+    isExternal: true
+    href: DREditor.RoomLoading.IRoomLoadRoutine.html#DREditor_RoomLoading_IRoomLoadRoutine_OnRoomLoadRoutine
+  - name: (
+  - name: )
+- uid: DREditor.RoomLoading.InstanceManagerBase.OnEventRaised*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.OnEventRaised
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase_OnEventRaised
+  name: OnEventRaised
+  nameWithType: InstanceManagerBase.OnEventRaised
+  fullName: DREditor.RoomLoading.InstanceManagerBase.OnEventRaised
+- uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  commentId: M:DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  parent: DREditor.EventObjects.ISceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: OnEventRaised()
+  nameWithType: ISceneEventListener.OnEventRaised()
+  fullName: DREditor.EventObjects.ISceneEventListener.OnEventRaised()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.RoomLoading.InstanceManagerBase.#ctor*
+  commentId: Overload:DREditor.RoomLoading.InstanceManagerBase.#ctor
+  isExternal: true
+  href: DREditor.RoomLoading.InstanceManagerBase.html#DREditor_RoomLoading_InstanceManagerBase__ctor
+  name: InstanceManagerBase
+  nameWithType: InstanceManagerBase.InstanceManagerBase
+  fullName: DREditor.RoomLoading.InstanceManagerBase.InstanceManagerBase
+  nameWithType.vb: InstanceManagerBase.New
+  fullName.vb: DREditor.RoomLoading.InstanceManagerBase.New
+  name.vb: New

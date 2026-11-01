@@ -1,0 +1,1191 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+  commentId: T:DREditor.PhraseAnimations.PhraseAnimationHandler
+  id: PhraseAnimationHandler
+  parent: DREditor.PhraseAnimations
+  children:
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.#ctor
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.Awake
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.CompilePhraseAnimation
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.GetPhraseDuration
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.InitializePhraseAnimation(DREditor.Minigames.Debates.PhraseBase)
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.InitializeText
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.OnShattered
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.Priority
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.Reset
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase``1(``0)
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.animationClipName
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.compiledAnimation
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.duration
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.phraseAnimation
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.priority
+  langs:
+  - csharp
+  - vb
+  name: PhraseAnimationHandler
+  nameWithType: PhraseAnimationHandler
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("IPhraseAnimationComponent, IPhraseHandlerComponent, IPhraseShatterListener, IPhraseResetter, IPrioritizable\n\n")]
+
+      public class PhraseAnimationHandler : MonoBehaviour, IPhraseAnimationComponent, IPhraseHandlerComponent, IPhraseResetter, IPhraseShatterListener, IPrioritizable
+    content.vb: >-
+      <ClassHeader("IPhraseAnimationComponent, IPhraseHandlerComponent, IPhraseShatterListener, IPhraseResetter, IPrioritizable" & vbLf & vbLf)>
+
+      Public Class PhraseAnimationHandler Inherits MonoBehaviour Implements IPhraseAnimationComponent, IPhraseHandlerComponent, IPhraseResetter, IPhraseShatterListener, IPrioritizable
+  inheritance:
+  - System.Object
+  implements:
+  - DREditor.Minigames.Debates.IPhraseAnimationComponent
+  - DREditor.Minigames.Debates.IPhraseHandlerComponent
+  - DREditor.Minigames.Debates.IPhraseResetter
+  - DREditor.Minigames.Debates.IPhraseShatterListener
+  - DREditor.Processables.IPrioritizable
+  extensionMethods:
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.PhraseAnimations.PhraseAnimationHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        IPhraseAnimationComponent, IPhraseHandlerComponent, IPhraseShatterListener, IPhraseResetter, IPrioritizable
+
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.priority
+  commentId: F:DREditor.PhraseAnimations.PhraseAnimationHandler.priority
+  id: priority
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: priority
+  nameWithType: PhraseAnimationHandler.priority
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.priority
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: protected int priority
+    return:
+      type: System.Int32
+    content.vb: Protected priority As Integer
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.compiledAnimation
+  commentId: F:DREditor.PhraseAnimations.PhraseAnimationHandler.compiledAnimation
+  id: compiledAnimation
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: compiledAnimation
+  nameWithType: PhraseAnimationHandler.compiledAnimation
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.compiledAnimation
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected Animation compiledAnimation
+    return:
+      type: UnityEngine.Animation
+    content.vb: >-
+      <Divider>
+
+      Protected compiledAnimation As Animation
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.animationClipName
+  commentId: F:DREditor.PhraseAnimations.PhraseAnimationHandler.animationClipName
+  id: animationClipName
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: animationClipName
+  nameWithType: PhraseAnimationHandler.animationClipName
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.animationClipName
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly string animationClipName
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly animationClipName As String
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.duration
+  commentId: F:DREditor.PhraseAnimations.PhraseAnimationHandler.duration
+  id: duration
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: duration
+  nameWithType: PhraseAnimationHandler.duration
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.duration
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: protected float duration
+    return:
+      type: System.Single
+    content.vb: Protected duration As Single
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.phraseAnimation
+  commentId: F:DREditor.PhraseAnimations.PhraseAnimationHandler.phraseAnimation
+  id: phraseAnimation
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: phraseAnimation
+  nameWithType: PhraseAnimationHandler.phraseAnimation
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.phraseAnimation
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: protected PhraseAnimation phraseAnimation
+    return:
+      type: DREditor.PhraseAnimations.PhraseAnimation
+    content.vb: Protected phraseAnimation As PhraseAnimation
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.Awake
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.Awake
+  id: Awake
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: PhraseAnimationHandler.Awake()
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.Awake*
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase``1(``0)
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase``1(``0)
+  id: StartPhrase``1(``0)
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: StartPhrase<T>(T)
+  nameWithType: PhraseAnimationHandler.StartPhrase<T>(T)
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase<T>(T)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: 'public virtual void StartPhrase<T>(T phrase) where T : PhraseBase'
+    parameters:
+    - id: phrase
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Public Overridable Sub StartPhrase(Of T As PhraseBase)(phrase As T)
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase*
+  implements:
+  - DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1({T})
+  nameWithType.vb: PhraseAnimationHandler.StartPhrase(Of T)(T)
+  fullName.vb: DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase(Of T)(T)
+  name.vb: StartPhrase(Of T)(T)
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializePhraseAnimation(DREditor.Minigames.Debates.PhraseBase)
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.InitializePhraseAnimation(DREditor.Minigames.Debates.PhraseBase)
+  id: InitializePhraseAnimation(DREditor.Minigames.Debates.PhraseBase)
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: InitializePhraseAnimation(PhraseBase)
+  nameWithType: PhraseAnimationHandler.InitializePhraseAnimation(PhraseBase)
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializePhraseAnimation(DREditor.Minigames.Debates.PhraseBase)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializePhraseAnimation(PhraseBase phrase)
+    parameters:
+    - id: phrase
+      type: DREditor.Minigames.Debates.PhraseBase
+      description: ''
+    content.vb: Protected Overridable Sub InitializePhraseAnimation(phrase As PhraseBase)
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializePhraseAnimation*
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializeText
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.InitializeText
+  id: InitializeText
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: InitializeText()
+  nameWithType: PhraseAnimationHandler.InitializeText()
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializeText()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializeText()
+    content.vb: Protected Overridable Sub InitializeText()
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializeText*
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.CompilePhraseAnimation
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.CompilePhraseAnimation
+  id: CompilePhraseAnimation
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: CompilePhraseAnimation()
+  nameWithType: PhraseAnimationHandler.CompilePhraseAnimation()
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.CompilePhraseAnimation()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void CompilePhraseAnimation()
+    content.vb: Protected Overridable Sub CompilePhraseAnimation()
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.CompilePhraseAnimation*
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.OnShattered
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.OnShattered
+  id: OnShattered
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: OnShattered()
+  nameWithType: PhraseAnimationHandler.OnShattered()
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.OnShattered()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnShattered()
+    content.vb: Public Overridable Sub OnShattered()
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.OnShattered*
+  implements:
+  - DREditor.Minigames.Debates.IPhraseShatterListener.OnShattered
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.GetPhraseDuration
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.GetPhraseDuration
+  id: GetPhraseDuration
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: GetPhraseDuration()
+  nameWithType: PhraseAnimationHandler.GetPhraseDuration()
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.GetPhraseDuration()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual float GetPhraseDuration()
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Public Overridable Function GetPhraseDuration() As Single
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.GetPhraseDuration*
+  implements:
+  - DREditor.Minigames.Debates.IPhraseAnimationComponent.GetPhraseDuration
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.Reset
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.Reset
+  id: Reset
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: PhraseAnimationHandler.Reset()
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.Reset()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Reset()
+    content.vb: Public Overridable Sub Reset()
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.Reset*
+  implements:
+  - DREditor.Minigames.Debates.IPhraseResetter.Reset
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.#ctor
+  commentId: M:DREditor.PhraseAnimations.PhraseAnimationHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: PhraseAnimationHandler()
+  nameWithType: PhraseAnimationHandler.PhraseAnimationHandler()
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.PhraseAnimationHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  syntax:
+    content: public PhraseAnimationHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.#ctor*
+  nameWithType.vb: PhraseAnimationHandler.New()
+  fullName.vb: DREditor.PhraseAnimations.PhraseAnimationHandler.New()
+  name.vb: New()
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.Priority
+  commentId: P:DREditor.PhraseAnimations.PhraseAnimationHandler.Priority
+  id: Priority
+  parent: DREditor.PhraseAnimations.PhraseAnimationHandler
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: PhraseAnimationHandler.Priority
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.Priority
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.PhraseAnimations/PhraseAnimationHandler.cs
+  assemblies:
+  - DREditor.PhraseAnimations
+  namespace: DREditor.PhraseAnimations
+  summary: ''
+  example: []
+  syntax:
+    content: public int Priority { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Priority As Integer
+  overload: DREditor.PhraseAnimations.PhraseAnimationHandler.Priority*
+  implements:
+  - DREditor.Minigames.Debates.IPhraseHandlerComponent.Priority
+  - DREditor.Processables.IPrioritizable.Priority
+references:
+- uid: DREditor.PhraseAnimations
+  commentId: N:DREditor.PhraseAnimations
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.PhraseAnimations
+  nameWithType: DREditor.PhraseAnimations
+  fullName: DREditor.PhraseAnimations
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.PhraseAnimations
+    name: PhraseAnimations
+    isExternal: true
+    href: DREditor.PhraseAnimations.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.PhraseAnimations
+    name: PhraseAnimations
+    isExternal: true
+    href: DREditor.PhraseAnimations.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Minigames.Debates.IPhraseAnimationComponent
+  commentId: T:DREditor.Minigames.Debates.IPhraseAnimationComponent
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.IPhraseAnimationComponent.html
+  name: IPhraseAnimationComponent
+  nameWithType: IPhraseAnimationComponent
+  fullName: DREditor.Minigames.Debates.IPhraseAnimationComponent
+- uid: DREditor.Minigames.Debates.IPhraseHandlerComponent
+  commentId: T:DREditor.Minigames.Debates.IPhraseHandlerComponent
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.IPhraseHandlerComponent.html
+  name: IPhraseHandlerComponent
+  nameWithType: IPhraseHandlerComponent
+  fullName: DREditor.Minigames.Debates.IPhraseHandlerComponent
+- uid: DREditor.Minigames.Debates.IPhraseResetter
+  commentId: T:DREditor.Minigames.Debates.IPhraseResetter
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.IPhraseResetter.html
+  name: IPhraseResetter
+  nameWithType: IPhraseResetter
+  fullName: DREditor.Minigames.Debates.IPhraseResetter
+- uid: DREditor.Minigames.Debates.IPhraseShatterListener
+  commentId: T:DREditor.Minigames.Debates.IPhraseShatterListener
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.IPhraseShatterListener.html
+  name: IPhraseShatterListener
+  nameWithType: IPhraseShatterListener
+  fullName: DREditor.Minigames.Debates.IPhraseShatterListener
+- uid: DREditor.Processables.IPrioritizable
+  commentId: T:DREditor.Processables.IPrioritizable
+  parent: DREditor.Processables
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Processables/IPrioritizable.cs
+  name: IPrioritizable
+  nameWithType: IPrioritizable
+  fullName: DREditor.Processables.IPrioritizable
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<PhraseAnimationHandler>(PhraseAnimationHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<PhraseAnimationHandler>(PhraseAnimationHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.PhraseAnimations.PhraseAnimationHandler>(DREditor.PhraseAnimations.PhraseAnimationHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of PhraseAnimationHandler)(PhraseAnimationHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.PhraseAnimations.PhraseAnimationHandler)(DREditor.PhraseAnimations.PhraseAnimationHandler)
+  name.vb: GetFieldNames(Of PhraseAnimationHandler)(PhraseAnimationHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.PhraseAnimations.PhraseAnimationHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.PhraseAnimations.PhraseAnimationHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<PhraseAnimationHandler>(PhraseAnimationHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<PhraseAnimationHandler>(PhraseAnimationHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.PhraseAnimations.PhraseAnimationHandler>(DREditor.PhraseAnimations.PhraseAnimationHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of PhraseAnimationHandler)(PhraseAnimationHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.PhraseAnimations.PhraseAnimationHandler)(DREditor.PhraseAnimations.PhraseAnimationHandler)
+  name.vb: GetFieldValues(Of PhraseAnimationHandler)(PhraseAnimationHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.PhraseAnimations.PhraseAnimationHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.PhraseAnimations.PhraseAnimationHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<PhraseAnimationHandler>(PhraseAnimationHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<PhraseAnimationHandler>(PhraseAnimationHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.PhraseAnimations.PhraseAnimationHandler>(DREditor.PhraseAnimations.PhraseAnimationHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of PhraseAnimationHandler)(PhraseAnimationHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.PhraseAnimations.PhraseAnimationHandler)(DREditor.PhraseAnimations.PhraseAnimationHandler)
+  name.vb: DeepCopy(Of PhraseAnimationHandler)(PhraseAnimationHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.PhraseAnimations.PhraseAnimationHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.PhraseAnimations.PhraseAnimationHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.PhraseAnimations.PhraseAnimationHandler
+    name: PhraseAnimationHandler
+    isExternal: true
+    href: DREditor.PhraseAnimations.PhraseAnimationHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Minigames.Debates
+  commentId: N:DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.Debates
+  nameWithType: DREditor.Minigames.Debates
+  fullName: DREditor.Minigames.Debates
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+- uid: DREditor.Processables
+  commentId: N:DREditor.Processables
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Processables
+  nameWithType: DREditor.Processables
+  fullName: DREditor.Processables
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Processables
+    name: Processables
+    isExternal: true
+    href: DREditor.Processables.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Processables
+    name: Processables
+    isExternal: true
+    href: DREditor.Processables.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UnityEngine.Animation
+  isExternal: true
+  name: Animation
+  nameWithType: Animation
+  fullName: UnityEngine.Animation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: DREditor.PhraseAnimations.PhraseAnimation
+  commentId: T:DREditor.PhraseAnimations.PhraseAnimation
+  parent: DREditor.PhraseAnimations
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimation.html
+  name: PhraseAnimation
+  nameWithType: PhraseAnimation
+  fullName: DREditor.PhraseAnimations.PhraseAnimation
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.Awake*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.Awake
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_Awake
+  name: Awake
+  nameWithType: PhraseAnimationHandler.Awake
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.Awake
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_StartPhrase__1___0_
+  name: StartPhrase
+  nameWithType: PhraseAnimationHandler.StartPhrase
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.StartPhrase
+- uid: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1({T})
+  commentId: M:DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1(``0)
+  parent: DREditor.Minigames.Debates.IPhraseHandlerComponent
+  definition: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1(``0)
+  href: DREditor.Minigames.Debates.IPhraseHandlerComponent.html#DREditor_Minigames_Debates_IPhraseHandlerComponent_StartPhrase__1___0_
+  name: StartPhrase<T>(T)
+  nameWithType: IPhraseHandlerComponent.StartPhrase<T>(T)
+  fullName: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase<T>(T)
+  nameWithType.vb: IPhraseHandlerComponent.StartPhrase(Of T)(T)
+  fullName.vb: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase(Of T)(T)
+  name.vb: StartPhrase(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1(``0)
+    name: StartPhrase
+    isExternal: true
+    href: DREditor.Minigames.Debates.IPhraseHandlerComponent.html#DREditor_Minigames_Debates_IPhraseHandlerComponent_StartPhrase__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1(``0)
+    name: StartPhrase
+    isExternal: true
+    href: DREditor.Minigames.Debates.IPhraseHandlerComponent.html#DREditor_Minigames_Debates_IPhraseHandlerComponent_StartPhrase__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1(``0)
+  commentId: M:DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1(``0)
+  isExternal: true
+  href: DREditor.Minigames.Debates.IPhraseHandlerComponent.html#DREditor_Minigames_Debates_IPhraseHandlerComponent_StartPhrase__1___0_
+  name: StartPhrase<T>(T)
+  nameWithType: IPhraseHandlerComponent.StartPhrase<T>(T)
+  fullName: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase<T>(T)
+  nameWithType.vb: IPhraseHandlerComponent.StartPhrase(Of T)(T)
+  fullName.vb: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase(Of T)(T)
+  name.vb: StartPhrase(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1(``0)
+    name: StartPhrase
+    isExternal: true
+    href: DREditor.Minigames.Debates.IPhraseHandlerComponent.html#DREditor_Minigames_Debates_IPhraseHandlerComponent_StartPhrase__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.IPhraseHandlerComponent.StartPhrase``1(``0)
+    name: StartPhrase
+    isExternal: true
+    href: DREditor.Minigames.Debates.IPhraseHandlerComponent.html#DREditor_Minigames_Debates_IPhraseHandlerComponent_StartPhrase__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializePhraseAnimation*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.InitializePhraseAnimation
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_InitializePhraseAnimation_DREditor_Minigames_Debates_PhraseBase_
+  name: InitializePhraseAnimation
+  nameWithType: PhraseAnimationHandler.InitializePhraseAnimation
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializePhraseAnimation
+- uid: DREditor.Minigames.Debates.PhraseBase
+  commentId: T:DREditor.Minigames.Debates.PhraseBase
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.PhraseBase.html
+  name: PhraseBase
+  nameWithType: PhraseBase
+  fullName: DREditor.Minigames.Debates.PhraseBase
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializeText*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.InitializeText
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_InitializeText
+  name: InitializeText
+  nameWithType: PhraseAnimationHandler.InitializeText
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.InitializeText
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.CompilePhraseAnimation*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.CompilePhraseAnimation
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_CompilePhraseAnimation
+  name: CompilePhraseAnimation
+  nameWithType: PhraseAnimationHandler.CompilePhraseAnimation
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.CompilePhraseAnimation
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.OnShattered*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.OnShattered
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_OnShattered
+  name: OnShattered
+  nameWithType: PhraseAnimationHandler.OnShattered
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.OnShattered
+- uid: DREditor.Minigames.Debates.IPhraseShatterListener.OnShattered
+  commentId: M:DREditor.Minigames.Debates.IPhraseShatterListener.OnShattered
+  parent: DREditor.Minigames.Debates.IPhraseShatterListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/IPhraseShatterListener.cs
+  name: OnShattered()
+  nameWithType: IPhraseShatterListener.OnShattered()
+  fullName: DREditor.Minigames.Debates.IPhraseShatterListener.OnShattered()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.IPhraseShatterListener.OnShattered
+    name: OnShattered
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/IPhraseShatterListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.IPhraseShatterListener.OnShattered
+    name: OnShattered
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/IPhraseShatterListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.GetPhraseDuration*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.GetPhraseDuration
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_GetPhraseDuration
+  name: GetPhraseDuration
+  nameWithType: PhraseAnimationHandler.GetPhraseDuration
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.GetPhraseDuration
+- uid: DREditor.Minigames.Debates.IPhraseAnimationComponent.GetPhraseDuration
+  commentId: M:DREditor.Minigames.Debates.IPhraseAnimationComponent.GetPhraseDuration
+  parent: DREditor.Minigames.Debates.IPhraseAnimationComponent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/IPhraseAnimationComponent.cs
+  name: GetPhraseDuration()
+  nameWithType: IPhraseAnimationComponent.GetPhraseDuration()
+  fullName: DREditor.Minigames.Debates.IPhraseAnimationComponent.GetPhraseDuration()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.IPhraseAnimationComponent.GetPhraseDuration
+    name: GetPhraseDuration
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/IPhraseAnimationComponent.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.IPhraseAnimationComponent.GetPhraseDuration
+    name: GetPhraseDuration
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/IPhraseAnimationComponent.cs
+  - name: (
+  - name: )
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.Reset*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.Reset
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_Reset
+  name: Reset
+  nameWithType: PhraseAnimationHandler.Reset
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.Reset
+- uid: DREditor.Minigames.Debates.IPhraseResetter.Reset
+  commentId: M:DREditor.Minigames.Debates.IPhraseResetter.Reset
+  parent: DREditor.Minigames.Debates.IPhraseResetter
+  isExternal: true
+  href: DREditor.Minigames.Debates.IPhraseResetter.html#DREditor_Minigames_Debates_IPhraseResetter_Reset
+  name: Reset()
+  nameWithType: IPhraseResetter.Reset()
+  fullName: DREditor.Minigames.Debates.IPhraseResetter.Reset()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.IPhraseResetter.Reset
+    name: Reset
+    isExternal: true
+    href: DREditor.Minigames.Debates.IPhraseResetter.html#DREditor_Minigames_Debates_IPhraseResetter_Reset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.IPhraseResetter.Reset
+    name: Reset
+    isExternal: true
+    href: DREditor.Minigames.Debates.IPhraseResetter.html#DREditor_Minigames_Debates_IPhraseResetter_Reset
+  - name: (
+  - name: )
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.#ctor*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.#ctor
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler__ctor
+  name: PhraseAnimationHandler
+  nameWithType: PhraseAnimationHandler.PhraseAnimationHandler
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.PhraseAnimationHandler
+  nameWithType.vb: PhraseAnimationHandler.New
+  fullName.vb: DREditor.PhraseAnimations.PhraseAnimationHandler.New
+  name.vb: New
+- uid: DREditor.PhraseAnimations.PhraseAnimationHandler.Priority*
+  commentId: Overload:DREditor.PhraseAnimations.PhraseAnimationHandler.Priority
+  isExternal: true
+  href: DREditor.PhraseAnimations.PhraseAnimationHandler.html#DREditor_PhraseAnimations_PhraseAnimationHandler_Priority
+  name: Priority
+  nameWithType: PhraseAnimationHandler.Priority
+  fullName: DREditor.PhraseAnimations.PhraseAnimationHandler.Priority
+- uid: DREditor.Minigames.Debates.IPhraseHandlerComponent.Priority
+  commentId: P:DREditor.Minigames.Debates.IPhraseHandlerComponent.Priority
+  parent: DREditor.Minigames.Debates.IPhraseHandlerComponent
+  isExternal: true
+  href: DREditor.Minigames.Debates.IPhraseHandlerComponent.html#DREditor_Minigames_Debates_IPhraseHandlerComponent_Priority
+  name: Priority
+  nameWithType: IPhraseHandlerComponent.Priority
+  fullName: DREditor.Minigames.Debates.IPhraseHandlerComponent.Priority
+- uid: DREditor.Processables.IPrioritizable.Priority
+  commentId: P:DREditor.Processables.IPrioritizable.Priority
+  parent: DREditor.Processables.IPrioritizable
+  isExternal: true
+  href: DREditor.Processables.IPrioritizable.html#DREditor_Processables_IPrioritizable_Priority
+  name: Priority
+  nameWithType: IPrioritizable.Priority
+  fullName: DREditor.Processables.IPrioritizable.Priority

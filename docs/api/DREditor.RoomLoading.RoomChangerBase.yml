@@ -1,0 +1,1312 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.RoomLoading.RoomChangerBase
+  commentId: T:DREditor.RoomLoading.RoomChangerBase
+  id: RoomChangerBase
+  parent: DREditor.RoomLoading
+  children:
+  - DREditor.RoomLoading.RoomChangerBase.#ctor
+  - DREditor.RoomLoading.RoomChangerBase.AssignDestinationPosition
+  - DREditor.RoomLoading.RoomChangerBase.ChangeRoom(DREditor.Gates.Gate,UnityEngine.ScriptableObject)
+  - DREditor.RoomLoading.RoomChangerBase.GetDestination
+  - DREditor.RoomLoading.RoomChangerBase.GetOptions
+  - DREditor.RoomLoading.RoomChangerBase.OnDisable
+  - DREditor.RoomLoading.RoomChangerBase.OnEnable
+  - DREditor.RoomLoading.RoomChangerBase.OnEventRaised
+  - DREditor.RoomLoading.RoomChangerBase.SetDestination(DREditor.Gates.Gate)
+  - DREditor.RoomLoading.RoomChangerBase.SetOptions(UnityEngine.ScriptableObject)
+  - DREditor.RoomLoading.RoomChangerBase.ToTitleScreen
+  - DREditor.RoomLoading.RoomChangerBase.destination
+  - DREditor.RoomLoading.RoomChangerBase.onStartedChangingRoom
+  - DREditor.RoomLoading.RoomChangerBase.options
+  - DREditor.RoomLoading.RoomChangerBase.startedNewGame
+  langs:
+  - csharp
+  - vb
+  name: RoomChangerBase
+  nameWithType: RoomChangerBase
+  fullName: DREditor.RoomLoading.RoomChangerBase
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: 'public abstract class RoomChangerBase : ServiceHolder<RoomChangerBase>, ISceneEventListener, IToTitleScreen'
+    content.vb: Public MustInherit Class RoomChangerBase Inherits ServiceHolder(Of RoomChangerBase) Implements ISceneEventListener, IToTitleScreen
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  derivedClasses:
+  - DREditor.RoomLoading.RoomChanger
+  implements:
+  - DREditor.EventObjects.ISceneEventListener
+  - DREditor.Services.IToTitleScreen
+  inheritedMembers:
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.Awake
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.InitializeService
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.OnDestroy
+  extensionMethods:
+  - DREditor.RoomLoading.RoomChangerBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.RoomLoading.RoomChangerBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.RoomLoading.RoomChangerBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.RoomLoading.RoomChangerBase.onStartedChangingRoom
+  commentId: F:DREditor.RoomLoading.RoomChangerBase.onStartedChangingRoom
+  id: onStartedChangingRoom
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: onStartedChangingRoom
+  nameWithType: RoomChangerBase.onStartedChangingRoom
+  fullName: DREditor.RoomLoading.RoomChangerBase.onStartedChangingRoom
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onStartedChangingRoom
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onStartedChangingRoom As SceneEvent
+- uid: DREditor.RoomLoading.RoomChangerBase.startedNewGame
+  commentId: F:DREditor.RoomLoading.RoomChangerBase.startedNewGame
+  id: startedNewGame
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: startedNewGame
+  nameWithType: RoomChangerBase.startedNewGame
+  fullName: DREditor.RoomLoading.RoomChangerBase.startedNewGame
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent startedNewGame
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected startedNewGame As SceneEvent
+- uid: DREditor.RoomLoading.RoomChangerBase.options
+  commentId: F:DREditor.RoomLoading.RoomChangerBase.options
+  id: options
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: options
+  nameWithType: RoomChangerBase.options
+  fullName: DREditor.RoomLoading.RoomChangerBase.options
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected RoomLoadOptionsAsset options
+    return:
+      type: DREditor.RoomLoading.RoomLoadOptionsAsset
+    content.vb: Protected options As RoomLoadOptionsAsset
+- uid: DREditor.RoomLoading.RoomChangerBase.destination
+  commentId: F:DREditor.RoomLoading.RoomChangerBase.destination
+  id: destination
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: destination
+  nameWithType: RoomChangerBase.destination
+  fullName: DREditor.RoomLoading.RoomChangerBase.destination
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: protected Gate destination
+    return:
+      type: DREditor.Gates.Gate
+    content.vb: Protected destination As Gate
+- uid: DREditor.RoomLoading.RoomChangerBase.OnEnable
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.OnEnable
+  id: OnEnable
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: RoomChangerBase.OnEnable()
+  fullName: DREditor.RoomLoading.RoomChangerBase.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.RoomLoading.RoomChangerBase.OnEnable*
+- uid: DREditor.RoomLoading.RoomChangerBase.OnDisable
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.OnDisable
+  id: OnDisable
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: RoomChangerBase.OnDisable()
+  fullName: DREditor.RoomLoading.RoomChangerBase.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.RoomLoading.RoomChangerBase.OnDisable*
+- uid: DREditor.RoomLoading.RoomChangerBase.SetOptions(UnityEngine.ScriptableObject)
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.SetOptions(UnityEngine.ScriptableObject)
+  id: SetOptions(UnityEngine.ScriptableObject)
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: SetOptions(ScriptableObject)
+  nameWithType: RoomChangerBase.SetOptions(ScriptableObject)
+  fullName: DREditor.RoomLoading.RoomChangerBase.SetOptions(UnityEngine.ScriptableObject)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void SetOptions(ScriptableObject loadRoomOptions)
+    parameters:
+    - id: loadRoomOptions
+      type: UnityEngine.ScriptableObject
+      description: ''
+    content.vb: Public Overridable Sub SetOptions(loadRoomOptions As ScriptableObject)
+  overload: DREditor.RoomLoading.RoomChangerBase.SetOptions*
+- uid: DREditor.RoomLoading.RoomChangerBase.GetOptions
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.GetOptions
+  id: GetOptions
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: GetOptions()
+  nameWithType: RoomChangerBase.GetOptions()
+  fullName: DREditor.RoomLoading.RoomChangerBase.GetOptions()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual RoomLoadOptionsAsset GetOptions()
+    return:
+      type: DREditor.RoomLoading.RoomLoadOptionsAsset
+      description: ''
+    content.vb: Public Overridable Function GetOptions() As RoomLoadOptionsAsset
+  overload: DREditor.RoomLoading.RoomChangerBase.GetOptions*
+- uid: DREditor.RoomLoading.RoomChangerBase.SetDestination(DREditor.Gates.Gate)
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.SetDestination(DREditor.Gates.Gate)
+  id: SetDestination(DREditor.Gates.Gate)
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: SetDestination(Gate)
+  nameWithType: RoomChangerBase.SetDestination(Gate)
+  fullName: DREditor.RoomLoading.RoomChangerBase.SetDestination(DREditor.Gates.Gate)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void SetDestination(Gate destination)
+    parameters:
+    - id: destination
+      type: DREditor.Gates.Gate
+      description: ''
+    content.vb: Public Overridable Sub SetDestination(destination As Gate)
+  overload: DREditor.RoomLoading.RoomChangerBase.SetDestination*
+- uid: DREditor.RoomLoading.RoomChangerBase.GetDestination
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.GetDestination
+  id: GetDestination
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: GetDestination()
+  nameWithType: RoomChangerBase.GetDestination()
+  fullName: DREditor.RoomLoading.RoomChangerBase.GetDestination()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual Gate GetDestination()
+    return:
+      type: DREditor.Gates.Gate
+      description: ''
+    content.vb: Public Overridable Function GetDestination() As Gate
+  overload: DREditor.RoomLoading.RoomChangerBase.GetDestination*
+- uid: DREditor.RoomLoading.RoomChangerBase.ChangeRoom(DREditor.Gates.Gate,UnityEngine.ScriptableObject)
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.ChangeRoom(DREditor.Gates.Gate,UnityEngine.ScriptableObject)
+  id: ChangeRoom(DREditor.Gates.Gate,UnityEngine.ScriptableObject)
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: ChangeRoom(Gate, ScriptableObject)
+  nameWithType: RoomChangerBase.ChangeRoom(Gate, ScriptableObject)
+  fullName: DREditor.RoomLoading.RoomChangerBase.ChangeRoom(DREditor.Gates.Gate, UnityEngine.ScriptableObject)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void ChangeRoom(Gate destination, ScriptableObject options = null)
+    parameters:
+    - id: destination
+      type: DREditor.Gates.Gate
+      description: ''
+    - id: options
+      type: UnityEngine.ScriptableObject
+      description: ''
+    content.vb: Public MustOverride Sub ChangeRoom(destination As Gate, options As ScriptableObject = Nothing)
+  overload: DREditor.RoomLoading.RoomChangerBase.ChangeRoom*
+- uid: DREditor.RoomLoading.RoomChangerBase.AssignDestinationPosition
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.AssignDestinationPosition
+  id: AssignDestinationPosition
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: AssignDestinationPosition()
+  nameWithType: RoomChangerBase.AssignDestinationPosition()
+  fullName: DREditor.RoomLoading.RoomChangerBase.AssignDestinationPosition()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public abstract void AssignDestinationPosition()
+    content.vb: Public MustOverride Sub AssignDestinationPosition()
+  overload: DREditor.RoomLoading.RoomChangerBase.AssignDestinationPosition*
+- uid: DREditor.RoomLoading.RoomChangerBase.OnEventRaised
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.OnEventRaised
+  id: OnEventRaised
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: OnEventRaised()
+  nameWithType: RoomChangerBase.OnEventRaised()
+  fullName: DREditor.RoomLoading.RoomChangerBase.OnEventRaised()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnEventRaised()
+    content.vb: Public Overridable Sub OnEventRaised()
+  overload: DREditor.RoomLoading.RoomChangerBase.OnEventRaised*
+  implements:
+  - DREditor.EventObjects.ISceneEventListener.OnEventRaised
+- uid: DREditor.RoomLoading.RoomChangerBase.ToTitleScreen
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: RoomChangerBase.ToTitleScreen()
+  fullName: DREditor.RoomLoading.RoomChangerBase.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.RoomLoading.RoomChangerBase.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.RoomLoading.RoomChangerBase.#ctor
+  commentId: M:DREditor.RoomLoading.RoomChangerBase.#ctor
+  id: '#ctor'
+  parent: DREditor.RoomLoading.RoomChangerBase
+  langs:
+  - csharp
+  - vb
+  name: RoomChangerBase()
+  nameWithType: RoomChangerBase.RoomChangerBase()
+  fullName: DREditor.RoomLoading.RoomChangerBase.RoomChangerBase()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChangerBase.cs
+  assemblies:
+  - DREditor.RoomLoading
+  namespace: DREditor.RoomLoading
+  syntax:
+    content: protected RoomChangerBase()
+    content.vb: Protected Sub New()
+  overload: DREditor.RoomLoading.RoomChangerBase.#ctor*
+  nameWithType.vb: RoomChangerBase.New()
+  fullName.vb: DREditor.RoomLoading.RoomChangerBase.New()
+  name.vb: New()
+references:
+- uid: DREditor.RoomLoading
+  commentId: N:DREditor.RoomLoading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.RoomLoading
+  nameWithType: DREditor.RoomLoading
+  fullName: DREditor.RoomLoading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomLoading
+    name: RoomLoading
+    isExternal: true
+    href: DREditor.RoomLoading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomLoading
+    name: RoomLoading
+    isExternal: true
+    href: DREditor.RoomLoading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<RoomChangerBase>
+  nameWithType: ServiceHolder<RoomChangerBase>
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomChangerBase>
+  nameWithType.vb: ServiceHolder(Of RoomChangerBase)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomChangerBase)
+  name.vb: ServiceHolder(Of RoomChangerBase)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+- uid: DREditor.EventObjects.ISceneEventListener
+  commentId: T:DREditor.EventObjects.ISceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: ISceneEventListener
+  nameWithType: ISceneEventListener
+  fullName: DREditor.EventObjects.ISceneEventListener
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<RoomChangerBase>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomChangerBase>.registerService
+  nameWithType.vb: ServiceHolder(Of RoomChangerBase).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomChangerBase).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<RoomChangerBase>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomChangerBase>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of RoomChangerBase).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomChangerBase).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<RoomChangerBase>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomChangerBase>.Awake()
+  nameWithType.vb: ServiceHolder(Of RoomChangerBase).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomChangerBase).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<RoomChangerBase>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomChangerBase>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of RoomChangerBase).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomChangerBase).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<RoomChangerBase>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomChangerBase>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of RoomChangerBase).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomChangerBase).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<RoomChangerBase>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.RoomLoading.RoomChangerBase>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of RoomChangerBase).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.RoomLoading.RoomChangerBase).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.RoomLoading.RoomChangerBase}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.RoomLoading.RoomChangerBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<RoomChangerBase>(RoomChangerBase)
+  nameWithType: ReflectionHelper.GetFieldNames<RoomChangerBase>(RoomChangerBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.RoomLoading.RoomChangerBase>(DREditor.RoomLoading.RoomChangerBase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of RoomChangerBase)(RoomChangerBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.RoomLoading.RoomChangerBase)(DREditor.RoomLoading.RoomChangerBase)
+  name.vb: GetFieldNames(Of RoomChangerBase)(RoomChangerBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomLoading.RoomChangerBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomLoading.RoomChangerBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+- uid: DREditor.RoomLoading.RoomChangerBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<RoomChangerBase>(RoomChangerBase)
+  nameWithType: ReflectionHelper.GetFieldValues<RoomChangerBase>(RoomChangerBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.RoomLoading.RoomChangerBase>(DREditor.RoomLoading.RoomChangerBase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of RoomChangerBase)(RoomChangerBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.RoomLoading.RoomChangerBase)(DREditor.RoomLoading.RoomChangerBase)
+  name.vb: GetFieldValues(Of RoomChangerBase)(RoomChangerBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomLoading.RoomChangerBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomLoading.RoomChangerBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+- uid: DREditor.RoomLoading.RoomChangerBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<RoomChangerBase>(RoomChangerBase)
+  nameWithType: DeepCopyExtensions.DeepCopy<RoomChangerBase>(RoomChangerBase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.RoomLoading.RoomChangerBase>(DREditor.RoomLoading.RoomChangerBase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of RoomChangerBase)(RoomChangerBase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.RoomLoading.RoomChangerBase)(DREditor.RoomLoading.RoomChangerBase)
+  name.vb: DeepCopy(Of RoomChangerBase)(RoomChangerBase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomLoading.RoomChangerBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomLoading.RoomChangerBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomLoading.RoomChangerBase
+    name: RoomChangerBase
+    isExternal: true
+    href: DREditor.RoomLoading.RoomChangerBase.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: DREditor.RoomLoading.RoomLoadOptionsAsset
+  commentId: T:DREditor.RoomLoading.RoomLoadOptionsAsset
+  parent: DREditor.RoomLoading
+  isExternal: true
+  href: DREditor.RoomLoading.RoomLoadOptionsAsset.html
+  name: RoomLoadOptionsAsset
+  nameWithType: RoomLoadOptionsAsset
+  fullName: DREditor.RoomLoading.RoomLoadOptionsAsset
+- uid: DREditor.Gates.Gate
+  commentId: T:DREditor.Gates.Gate
+  parent: DREditor.Gates
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/Gate.cs
+  name: Gate
+  nameWithType: Gate
+  fullName: DREditor.Gates.Gate
+- uid: DREditor.Gates
+  commentId: N:DREditor.Gates
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Gates
+  nameWithType: DREditor.Gates
+  fullName: DREditor.Gates
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Gates
+    name: Gates
+    isExternal: true
+    href: DREditor.Gates.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Gates
+    name: Gates
+    isExternal: true
+    href: DREditor.Gates.html
+- uid: DREditor.RoomLoading.RoomChangerBase.OnEnable*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.OnEnable
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_OnEnable
+  name: OnEnable
+  nameWithType: RoomChangerBase.OnEnable
+  fullName: DREditor.RoomLoading.RoomChangerBase.OnEnable
+- uid: DREditor.RoomLoading.RoomChangerBase.OnDisable*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.OnDisable
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_OnDisable
+  name: OnDisable
+  nameWithType: RoomChangerBase.OnDisable
+  fullName: DREditor.RoomLoading.RoomChangerBase.OnDisable
+- uid: DREditor.RoomLoading.RoomChangerBase.SetOptions*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.SetOptions
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_SetOptions_UnityEngine_ScriptableObject_
+  name: SetOptions
+  nameWithType: RoomChangerBase.SetOptions
+  fullName: DREditor.RoomLoading.RoomChangerBase.SetOptions
+- uid: UnityEngine.ScriptableObject
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: DREditor.RoomLoading.RoomChangerBase.GetOptions*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.GetOptions
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_GetOptions
+  name: GetOptions
+  nameWithType: RoomChangerBase.GetOptions
+  fullName: DREditor.RoomLoading.RoomChangerBase.GetOptions
+- uid: DREditor.RoomLoading.RoomChangerBase.SetDestination*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.SetDestination
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_SetDestination_DREditor_Gates_Gate_
+  name: SetDestination
+  nameWithType: RoomChangerBase.SetDestination
+  fullName: DREditor.RoomLoading.RoomChangerBase.SetDestination
+- uid: DREditor.RoomLoading.RoomChangerBase.GetDestination*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.GetDestination
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_GetDestination
+  name: GetDestination
+  nameWithType: RoomChangerBase.GetDestination
+  fullName: DREditor.RoomLoading.RoomChangerBase.GetDestination
+- uid: DREditor.RoomLoading.RoomChangerBase.ChangeRoom*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.ChangeRoom
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_ChangeRoom_DREditor_Gates_Gate_UnityEngine_ScriptableObject_
+  name: ChangeRoom
+  nameWithType: RoomChangerBase.ChangeRoom
+  fullName: DREditor.RoomLoading.RoomChangerBase.ChangeRoom
+- uid: DREditor.RoomLoading.RoomChangerBase.AssignDestinationPosition*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.AssignDestinationPosition
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_AssignDestinationPosition
+  name: AssignDestinationPosition
+  nameWithType: RoomChangerBase.AssignDestinationPosition
+  fullName: DREditor.RoomLoading.RoomChangerBase.AssignDestinationPosition
+- uid: DREditor.RoomLoading.RoomChangerBase.OnEventRaised*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.OnEventRaised
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_OnEventRaised
+  name: OnEventRaised
+  nameWithType: RoomChangerBase.OnEventRaised
+  fullName: DREditor.RoomLoading.RoomChangerBase.OnEventRaised
+- uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  commentId: M:DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  parent: DREditor.EventObjects.ISceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: OnEventRaised()
+  nameWithType: ISceneEventListener.OnEventRaised()
+  fullName: DREditor.EventObjects.ISceneEventListener.OnEventRaised()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.RoomLoading.RoomChangerBase.ToTitleScreen*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.ToTitleScreen
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: RoomChangerBase.ToTitleScreen
+  fullName: DREditor.RoomLoading.RoomChangerBase.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.RoomLoading.RoomChangerBase.#ctor*
+  commentId: Overload:DREditor.RoomLoading.RoomChangerBase.#ctor
+  isExternal: true
+  href: DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase__ctor
+  name: RoomChangerBase
+  nameWithType: RoomChangerBase.RoomChangerBase
+  fullName: DREditor.RoomLoading.RoomChangerBase.RoomChangerBase
+  nameWithType.vb: RoomChangerBase.New
+  fullName.vb: DREditor.RoomLoading.RoomChangerBase.New
+  name.vb: New

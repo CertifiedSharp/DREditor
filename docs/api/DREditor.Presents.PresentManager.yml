@@ -1,0 +1,1844 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Presents.PresentManager
+  commentId: T:DREditor.Presents.PresentManager
+  id: PresentManager
+  parent: DREditor.Presents
+  children:
+  - DREditor.Presents.PresentManager.#ctor
+  - DREditor.Presents.PresentManager.AddPresent(System.Int32,System.Int32)
+  - DREditor.Presents.PresentManager.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.Presents.PresentManager.ClearPresentData
+  - DREditor.Presents.PresentManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  - DREditor.Presents.PresentManager.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.Presents.PresentManager.SetPresentData(System.Collections.Generic.List{DREditor.Presents.PresentData})
+  - DREditor.Presents.PresentManager.saveKey
+  langs:
+  - csharp
+  - vb
+  name: PresentManager
+  nameWithType: PresentManager
+  fullName: DREditor.Presents.PresentManager
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("ServiceHolder for type: IPresentManager\n\n")]
+
+      public class PresentManager : PresentManagerBase<PresentData>, IPresentManager, IDRESaveable, IDRELoadableManager, ILoadOnChapterSelect
+    content.vb: >-
+      <ClassHeader("ServiceHolder for type: IPresentManager" & vbLf & vbLf)>
+
+      Public Class PresentManager Inherits PresentManagerBase(Of PresentData) Implements IPresentManager, IDRESaveable, IDRELoadableManager, ILoadOnChapterSelect
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  - DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}
+  implements:
+  - DREditor.Presents.IPresentManager
+  - DREditor.Saving.IDRESaveable
+  - DREditor.Saving.IDRELoadableManager
+  - DREditor.Saving.ILoadOnChapterSelect
+  inheritedMembers:
+  - DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.presentDatas
+  - DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.Get``1(System.Int32)
+  - DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.HadPresent(System.Int32)
+  - DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.Count
+  - DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.Awake
+  - DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.InitializeService
+  - DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.OnDestroy
+  extensionMethods:
+  - DREditor.Presents.PresentManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Presents.PresentManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Presents.PresentManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        ServiceHolder for type: IPresentManager
+
+- uid: DREditor.Presents.PresentManager.saveKey
+  commentId: F:DREditor.Presents.PresentManager.saveKey
+  id: saveKey
+  parent: DREditor.Presents.PresentManager
+  langs:
+  - csharp
+  - vb
+  name: saveKey
+  nameWithType: PresentManager.saveKey
+  fullName: DREditor.Presents.PresentManager.saveKey
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected string saveKey
+    return:
+      type: System.String
+    content.vb: >-
+      <Divider>
+
+      Protected saveKey As String
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Presents.PresentManager.AddPresent(System.Int32,System.Int32)
+  commentId: M:DREditor.Presents.PresentManager.AddPresent(System.Int32,System.Int32)
+  id: AddPresent(System.Int32,System.Int32)
+  parent: DREditor.Presents.PresentManager
+  langs:
+  - csharp
+  - vb
+  name: AddPresent(int, int)
+  nameWithType: PresentManager.AddPresent(int, int)
+  fullName: DREditor.Presents.PresentManager.AddPresent(int, int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: public override void AddPresent(int id, int amt = 1)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ''
+    - id: amt
+      type: System.Int32
+      description: ''
+    content.vb: Public Overrides Sub AddPresent(id As Integer, amt As Integer = 1)
+  overridden: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.AddPresent(System.Int32,System.Int32)
+  overload: DREditor.Presents.PresentManager.AddPresent*
+  nameWithType.vb: PresentManager.AddPresent(Integer, Integer)
+  fullName.vb: DREditor.Presents.PresentManager.AddPresent(Integer, Integer)
+  name.vb: AddPresent(Integer, Integer)
+- uid: DREditor.Presents.PresentManager.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Presents.PresentManager.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Presents.PresentManager
+  langs:
+  - csharp
+  - vb
+  name: Save(Dictionary<string, object>)
+  nameWithType: PresentManager.Save(Dictionary<string, object>)
+  fullName: DREditor.Presents.PresentManager.Save(System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Save(Dictionary<string, object> saveData)
+    parameters:
+    - id: saveData
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Overridable Sub Save(saveData As Dictionary(Of String, Object))
+  overload: DREditor.Presents.PresentManager.Save*
+  implements:
+  - DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: PresentManager.Save(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Presents.PresentManager.Save(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Save(Dictionary(Of String, Object))
+- uid: DREditor.Presents.PresentManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  commentId: M:DREditor.Presents.PresentManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  id: LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  parent: DREditor.Presents.PresentManager
+  langs:
+  - csharp
+  - vb
+  name: LoadManager(Dictionary<string, object>, bool)
+  nameWithType: PresentManager.LoadManager(Dictionary<string, object>, bool)
+  fullName: DREditor.Presents.PresentManager.LoadManager(System.Collections.Generic.Dictionary<string, object>, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LoadManager(Dictionary<string, object> saveDatas, bool inChapterSelect)
+    parameters:
+    - id: saveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    - id: inChapterSelect
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Sub LoadManager(saveDatas As Dictionary(Of String, Object), inChapterSelect As Boolean)
+  overload: DREditor.Presents.PresentManager.LoadManager*
+  implements:
+  - DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  nameWithType.vb: PresentManager.LoadManager(Dictionary(Of String, Object), Boolean)
+  fullName.vb: DREditor.Presents.PresentManager.LoadManager(System.Collections.Generic.Dictionary(Of String, Object), Boolean)
+  name.vb: LoadManager(Dictionary(Of String, Object), Boolean)
+- uid: DREditor.Presents.PresentManager.SetPresentData(System.Collections.Generic.List{DREditor.Presents.PresentData})
+  commentId: M:DREditor.Presents.PresentManager.SetPresentData(System.Collections.Generic.List{DREditor.Presents.PresentData})
+  id: SetPresentData(System.Collections.Generic.List{DREditor.Presents.PresentData})
+  parent: DREditor.Presents.PresentManager
+  langs:
+  - csharp
+  - vb
+  name: SetPresentData(List<PresentData>)
+  nameWithType: PresentManager.SetPresentData(List<PresentData>)
+  fullName: DREditor.Presents.PresentManager.SetPresentData(System.Collections.Generic.List<DREditor.Presents.PresentData>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SetPresentData(List<PresentData> newDatas)
+    parameters:
+    - id: newDatas
+      type: System.Collections.Generic.List{DREditor.Presents.PresentData}
+      description: ''
+    content.vb: Protected Overridable Sub SetPresentData(newDatas As List(Of PresentData))
+  overload: DREditor.Presents.PresentManager.SetPresentData*
+  nameWithType.vb: PresentManager.SetPresentData(List(Of PresentData))
+  fullName.vb: DREditor.Presents.PresentManager.SetPresentData(System.Collections.Generic.List(Of DREditor.Presents.PresentData))
+  name.vb: SetPresentData(List(Of PresentData))
+- uid: DREditor.Presents.PresentManager.ClearPresentData
+  commentId: M:DREditor.Presents.PresentManager.ClearPresentData
+  id: ClearPresentData
+  parent: DREditor.Presents.PresentManager
+  langs:
+  - csharp
+  - vb
+  name: ClearPresentData()
+  nameWithType: PresentManager.ClearPresentData()
+  fullName: DREditor.Presents.PresentManager.ClearPresentData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ClearPresentData()
+    content.vb: Protected Overridable Sub ClearPresentData()
+  overload: DREditor.Presents.PresentManager.ClearPresentData*
+- uid: DREditor.Presents.PresentManager.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Presents.PresentManager.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Presents.PresentManager
+  langs:
+  - csharp
+  - vb
+  name: CarryOverOnChapterSelect(Dictionary<string, object>, Dictionary<string, object>)
+  nameWithType: PresentManager.CarryOverOnChapterSelect(Dictionary<string, object>, Dictionary<string, object>)
+  fullName: DREditor.Presents.PresentManager.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary<string, object>, System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void CarryOverOnChapterSelect(Dictionary<string, object> oldSaveDatas, Dictionary<string, object> newSaveDatas)
+    parameters:
+    - id: oldSaveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    - id: newSaveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    content.vb: Public Overridable Sub CarryOverOnChapterSelect(oldSaveDatas As Dictionary(Of String, Object), newSaveDatas As Dictionary(Of String, Object))
+  overload: DREditor.Presents.PresentManager.CarryOverOnChapterSelect*
+  implements:
+  - DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: PresentManager.CarryOverOnChapterSelect(Dictionary(Of String, Object), Dictionary(Of String, Object))
+  fullName.vb: DREditor.Presents.PresentManager.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary(Of String, Object), System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: CarryOverOnChapterSelect(Dictionary(Of String, Object), Dictionary(Of String, Object))
+- uid: DREditor.Presents.PresentManager.#ctor
+  commentId: M:DREditor.Presents.PresentManager.#ctor
+  id: '#ctor'
+  parent: DREditor.Presents.PresentManager
+  langs:
+  - csharp
+  - vb
+  name: PresentManager()
+  nameWithType: PresentManager.PresentManager()
+  fullName: DREditor.Presents.PresentManager.PresentManager()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentManager.cs
+  assemblies:
+  - DREditor.Presents
+  namespace: DREditor.Presents
+  syntax:
+    content: public PresentManager()
+    content.vb: Public Sub New()
+  overload: DREditor.Presents.PresentManager.#ctor*
+  nameWithType.vb: PresentManager.New()
+  fullName.vb: DREditor.Presents.PresentManager.New()
+  name.vb: New()
+references:
+- uid: DREditor.Presents
+  commentId: N:DREditor.Presents
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Presents
+  nameWithType: DREditor.Presents
+  fullName: DREditor.Presents
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Presents
+    name: Presents
+    isExternal: true
+    href: DREditor.Presents.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Presents
+    name: Presents
+    isExternal: true
+    href: DREditor.Presents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<IPresentManager>
+  nameWithType: ServiceHolder<IPresentManager>
+  fullName: DREditor.Services.ServiceHolder<DREditor.Presents.IPresentManager>
+  nameWithType.vb: ServiceHolder(Of IPresentManager)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Presents.IPresentManager)
+  name.vb: ServiceHolder(Of IPresentManager)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.Presents.IPresentManager
+    name: IPresentManager
+    isExternal: true
+    href: DREditor.Presents.IPresentManager.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.IPresentManager
+    name: IPresentManager
+    isExternal: true
+    href: DREditor.Presents.IPresentManager.html
+  - name: )
+- uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}
+  commentId: T:DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}
+  parent: DREditor.Presents
+  definition: DREditor.Presents.PresentManagerBase`1
+  href: DREditor.Presents.PresentManagerBase-1.html
+  name: PresentManagerBase<PresentData>
+  nameWithType: PresentManagerBase<PresentData>
+  fullName: DREditor.Presents.PresentManagerBase<DREditor.Presents.PresentData>
+  nameWithType.vb: PresentManagerBase(Of PresentData)
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of DREditor.Presents.PresentData)
+  name.vb: PresentManagerBase(Of PresentData)
+  spec.csharp:
+  - uid: DREditor.Presents.PresentManagerBase`1
+    name: PresentManagerBase
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html
+  - name: <
+  - uid: DREditor.Presents.PresentData
+    name: PresentData
+    isExternal: true
+    href: DREditor.Presents.PresentData.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Presents.PresentManagerBase`1
+    name: PresentManagerBase
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.PresentData
+    name: PresentData
+    isExternal: true
+    href: DREditor.Presents.PresentData.html
+  - name: )
+- uid: DREditor.Presents.IPresentManager
+  commentId: T:DREditor.Presents.IPresentManager
+  parent: DREditor.Presents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/IPresentManager.cs
+  name: IPresentManager
+  nameWithType: IPresentManager
+  fullName: DREditor.Presents.IPresentManager
+- uid: DREditor.Saving.IDRESaveable
+  commentId: T:DREditor.Saving.IDRESaveable
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  name: IDRESaveable
+  nameWithType: IDRESaveable
+  fullName: DREditor.Saving.IDRESaveable
+- uid: DREditor.Saving.IDRELoadableManager
+  commentId: T:DREditor.Saving.IDRELoadableManager
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  name: IDRELoadableManager
+  nameWithType: IDRELoadableManager
+  fullName: DREditor.Saving.IDRELoadableManager
+- uid: DREditor.Saving.ILoadOnChapterSelect
+  commentId: T:DREditor.Saving.ILoadOnChapterSelect
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/ILoadOnChapterSelect.cs
+  name: ILoadOnChapterSelect
+  nameWithType: ILoadOnChapterSelect
+  fullName: DREditor.Saving.ILoadOnChapterSelect
+- uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.presentDatas
+  commentId: F:DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.presentDatas
+  parent: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}
+  definition: DREditor.Presents.PresentManagerBase`1.presentDatas
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_presentDatas
+  name: presentDatas
+  nameWithType: PresentManagerBase<PresentData>.presentDatas
+  fullName: DREditor.Presents.PresentManagerBase<DREditor.Presents.PresentData>.presentDatas
+  nameWithType.vb: PresentManagerBase(Of PresentData).presentDatas
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of DREditor.Presents.PresentData).presentDatas
+- uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.Get``1(System.Int32)
+  commentId: M:DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.Get``1(System.Int32)
+  parent: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}
+  definition: DREditor.Presents.PresentManagerBase`1.Get``1(System.Int32)
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_Get__1_System_Int32_
+  name: Get<T1>(int)
+  nameWithType: PresentManagerBase<PresentData>.Get<T1>(int)
+  fullName: DREditor.Presents.PresentManagerBase<DREditor.Presents.PresentData>.Get<T1>(int)
+  nameWithType.vb: PresentManagerBase(Of PresentData).Get(Of T1)(Integer)
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of DREditor.Presents.PresentData).Get(Of T1)(Integer)
+  name.vb: Get(Of T1)(Integer)
+  spec.csharp:
+  - uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.Get``1(System.Int32)
+    name: Get
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_Get__1_System_Int32_
+  - name: <
+  - name: T1
+  - name: '>'
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.Get``1(System.Int32)
+    name: Get
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_Get__1_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: )
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.HadPresent(System.Int32)
+  commentId: M:DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.HadPresent(System.Int32)
+  parent: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}
+  definition: DREditor.Presents.PresentManagerBase`1.HadPresent(System.Int32)
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_HadPresent_System_Int32_
+  name: HadPresent(int)
+  nameWithType: PresentManagerBase<PresentData>.HadPresent(int)
+  fullName: DREditor.Presents.PresentManagerBase<DREditor.Presents.PresentData>.HadPresent(int)
+  nameWithType.vb: PresentManagerBase(Of PresentData).HadPresent(Integer)
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of DREditor.Presents.PresentData).HadPresent(Integer)
+  name.vb: HadPresent(Integer)
+  spec.csharp:
+  - uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.HadPresent(System.Int32)
+    name: HadPresent
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_HadPresent_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.HadPresent(System.Int32)
+    name: HadPresent
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_HadPresent_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.Count
+  commentId: P:DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.Count
+  parent: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}
+  definition: DREditor.Presents.PresentManagerBase`1.Count
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_Count
+  name: Count
+  nameWithType: PresentManagerBase<PresentData>.Count
+  fullName: DREditor.Presents.PresentManagerBase<DREditor.Presents.PresentData>.Count
+  nameWithType.vb: PresentManagerBase(Of PresentData).Count
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of DREditor.Presents.PresentData).Count
+- uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<IPresentManager>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.Presents.IPresentManager>.registerService
+  nameWithType.vb: ServiceHolder(Of IPresentManager).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Presents.IPresentManager).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<IPresentManager>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.Presents.IPresentManager>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of IPresentManager).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Presents.IPresentManager).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<IPresentManager>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Presents.IPresentManager>.Awake()
+  nameWithType.vb: ServiceHolder(Of IPresentManager).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Presents.IPresentManager).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<IPresentManager>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Presents.IPresentManager>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of IPresentManager).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Presents.IPresentManager).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<IPresentManager>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Presents.IPresentManager>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of IPresentManager).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Presents.IPresentManager).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<IPresentManager>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Presents.IPresentManager>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of IPresentManager).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Presents.IPresentManager).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Presents.IPresentManager}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Presents.PresentManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<PresentManager>(PresentManager)
+  nameWithType: ReflectionHelper.GetFieldNames<PresentManager>(PresentManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Presents.PresentManager>(DREditor.Presents.PresentManager)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of PresentManager)(PresentManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Presents.PresentManager)(DREditor.Presents.PresentManager)
+  name.vb: GetFieldNames(Of PresentManager)(PresentManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Presents.PresentManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Presents.PresentManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+- uid: DREditor.Presents.PresentManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<PresentManager>(PresentManager)
+  nameWithType: ReflectionHelper.GetFieldValues<PresentManager>(PresentManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Presents.PresentManager>(DREditor.Presents.PresentManager)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of PresentManager)(PresentManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Presents.PresentManager)(DREditor.Presents.PresentManager)
+  name.vb: GetFieldValues(Of PresentManager)(PresentManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Presents.PresentManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Presents.PresentManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+- uid: DREditor.Presents.PresentManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<PresentManager>(PresentManager)
+  nameWithType: DeepCopyExtensions.DeepCopy<PresentManager>(PresentManager)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Presents.PresentManager>(DREditor.Presents.PresentManager)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of PresentManager)(PresentManager)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Presents.PresentManager)(DREditor.Presents.PresentManager)
+  name.vb: DeepCopy(Of PresentManager)(PresentManager)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Presents.PresentManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Presents.PresentManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Presents.PresentManager
+    name: PresentManager
+    isExternal: true
+    href: DREditor.Presents.PresentManager.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Presents.PresentManagerBase`1
+  commentId: T:DREditor.Presents.PresentManagerBase`1
+  isExternal: true
+  href: DREditor.Presents.PresentManagerBase-1.html
+  name: PresentManagerBase<T>
+  nameWithType: PresentManagerBase<T>
+  fullName: DREditor.Presents.PresentManagerBase<T>
+  nameWithType.vb: PresentManagerBase(Of T)
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of T)
+  name.vb: PresentManagerBase(Of T)
+  spec.csharp:
+  - uid: DREditor.Presents.PresentManagerBase`1
+    name: PresentManagerBase
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Presents.PresentManagerBase`1
+    name: PresentManagerBase
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Presents.PresentManagerBase`1.presentDatas
+  commentId: F:DREditor.Presents.PresentManagerBase`1.presentDatas
+  isExternal: true
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_presentDatas
+  name: presentDatas
+  nameWithType: PresentManagerBase<T>.presentDatas
+  fullName: DREditor.Presents.PresentManagerBase<T>.presentDatas
+  nameWithType.vb: PresentManagerBase(Of T).presentDatas
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of T).presentDatas
+- uid: DREditor.Presents.PresentManagerBase`1.Get``1(System.Int32)
+  commentId: M:DREditor.Presents.PresentManagerBase`1.Get``1(System.Int32)
+  isExternal: true
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_Get__1_System_Int32_
+  name: Get<T1>(int)
+  nameWithType: PresentManagerBase<T>.Get<T1>(int)
+  fullName: DREditor.Presents.PresentManagerBase<T>.Get<T1>(int)
+  nameWithType.vb: PresentManagerBase(Of T).Get(Of T1)(Integer)
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of T).Get(Of T1)(Integer)
+  name.vb: Get(Of T1)(Integer)
+  spec.csharp:
+  - uid: DREditor.Presents.PresentManagerBase`1.Get``1(System.Int32)
+    name: Get
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_Get__1_System_Int32_
+  - name: <
+  - name: T1
+  - name: '>'
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Presents.PresentManagerBase`1.Get``1(System.Int32)
+    name: Get
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_Get__1_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: )
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Presents.PresentManagerBase`1.HadPresent(System.Int32)
+  commentId: M:DREditor.Presents.PresentManagerBase`1.HadPresent(System.Int32)
+  isExternal: true
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_HadPresent_System_Int32_
+  name: HadPresent(int)
+  nameWithType: PresentManagerBase<T>.HadPresent(int)
+  fullName: DREditor.Presents.PresentManagerBase<T>.HadPresent(int)
+  nameWithType.vb: PresentManagerBase(Of T).HadPresent(Integer)
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of T).HadPresent(Integer)
+  name.vb: HadPresent(Integer)
+  spec.csharp:
+  - uid: DREditor.Presents.PresentManagerBase`1.HadPresent(System.Int32)
+    name: HadPresent
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_HadPresent_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Presents.PresentManagerBase`1.HadPresent(System.Int32)
+    name: HadPresent
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_HadPresent_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Presents.PresentManagerBase`1.Count
+  commentId: P:DREditor.Presents.PresentManagerBase`1.Count
+  isExternal: true
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_Count
+  name: Count
+  nameWithType: PresentManagerBase<T>.Count
+  fullName: DREditor.Presents.PresentManagerBase<T>.Count
+  nameWithType.vb: PresentManagerBase(Of T).Count
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of T).Count
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.AddPresent(System.Int32,System.Int32)
+  commentId: M:DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.AddPresent(System.Int32,System.Int32)
+  parent: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}
+  definition: DREditor.Presents.PresentManagerBase`1.AddPresent(System.Int32,System.Int32)
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_AddPresent_System_Int32_System_Int32_
+  name: AddPresent(int, int)
+  nameWithType: PresentManagerBase<PresentData>.AddPresent(int, int)
+  fullName: DREditor.Presents.PresentManagerBase<DREditor.Presents.PresentData>.AddPresent(int, int)
+  nameWithType.vb: PresentManagerBase(Of PresentData).AddPresent(Integer, Integer)
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of DREditor.Presents.PresentData).AddPresent(Integer, Integer)
+  name.vb: AddPresent(Integer, Integer)
+  spec.csharp:
+  - uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.AddPresent(System.Int32,System.Int32)
+    name: AddPresent
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_AddPresent_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Presents.PresentManagerBase{DREditor.Presents.PresentData}.AddPresent(System.Int32,System.Int32)
+    name: AddPresent
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_AddPresent_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Presents.PresentManager.AddPresent*
+  commentId: Overload:DREditor.Presents.PresentManager.AddPresent
+  isExternal: true
+  href: DREditor.Presents.PresentManager.html#DREditor_Presents_PresentManager_AddPresent_System_Int32_System_Int32_
+  name: AddPresent
+  nameWithType: PresentManager.AddPresent
+  fullName: DREditor.Presents.PresentManager.AddPresent
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Presents.PresentManagerBase`1.AddPresent(System.Int32,System.Int32)
+  commentId: M:DREditor.Presents.PresentManagerBase`1.AddPresent(System.Int32,System.Int32)
+  isExternal: true
+  href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_AddPresent_System_Int32_System_Int32_
+  name: AddPresent(int, int)
+  nameWithType: PresentManagerBase<T>.AddPresent(int, int)
+  fullName: DREditor.Presents.PresentManagerBase<T>.AddPresent(int, int)
+  nameWithType.vb: PresentManagerBase(Of T).AddPresent(Integer, Integer)
+  fullName.vb: DREditor.Presents.PresentManagerBase(Of T).AddPresent(Integer, Integer)
+  name.vb: AddPresent(Integer, Integer)
+  spec.csharp:
+  - uid: DREditor.Presents.PresentManagerBase`1.AddPresent(System.Int32,System.Int32)
+    name: AddPresent
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_AddPresent_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Presents.PresentManagerBase`1.AddPresent(System.Int32,System.Int32)
+    name: AddPresent
+    isExternal: true
+    href: DREditor.Presents.PresentManagerBase-1.html#DREditor_Presents_PresentManagerBase_1_AddPresent_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Presents.PresentManager.Save*
+  commentId: Overload:DREditor.Presents.PresentManager.Save
+  isExternal: true
+  href: DREditor.Presents.PresentManager.html#DREditor_Presents_PresentManager_Save_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: Save
+  nameWithType: PresentManager.Save
+  fullName: DREditor.Presents.PresentManager.Save
+- uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.IDRESaveable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  name: Save(Dictionary<string, object>)
+  nameWithType: IDRESaveable.Save(Dictionary<string, object>)
+  fullName: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: IDRESaveable.Save(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Save(Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Save
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Save
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Presents.PresentManager.LoadManager*
+  commentId: Overload:DREditor.Presents.PresentManager.LoadManager
+  isExternal: true
+  href: DREditor.Presents.PresentManager.html#DREditor_Presents_PresentManager_LoadManager_System_Collections_Generic_Dictionary_System_String_System_Object__System_Boolean_
+  name: LoadManager
+  nameWithType: PresentManager.LoadManager
+  fullName: DREditor.Presents.PresentManager.LoadManager
+- uid: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  commentId: M:DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  parent: DREditor.Saving.IDRELoadableManager
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  name: LoadManager(Dictionary<string, object>, bool)
+  nameWithType: IDRELoadableManager.LoadManager(Dictionary<string, object>, bool)
+  fullName: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary<string, object>, bool)
+  nameWithType.vb: IDRELoadableManager.LoadManager(Dictionary(Of String, Object), Boolean)
+  fullName.vb: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary(Of String, Object), Boolean)
+  name.vb: LoadManager(Dictionary(Of String, Object), Boolean)
+  spec.csharp:
+  - uid: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+    name: LoadManager
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+    name: LoadManager
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Presents.PresentManager.SetPresentData*
+  commentId: Overload:DREditor.Presents.PresentManager.SetPresentData
+  isExternal: true
+  href: DREditor.Presents.PresentManager.html#DREditor_Presents_PresentManager_SetPresentData_System_Collections_Generic_List_DREditor_Presents_PresentData__
+  name: SetPresentData
+  nameWithType: PresentManager.SetPresentData
+  fullName: DREditor.Presents.PresentManager.SetPresentData
+- uid: System.Collections.Generic.List{DREditor.Presents.PresentData}
+  commentId: T:System.Collections.Generic.List{DREditor.Presents.PresentData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PresentData>
+  nameWithType: List<PresentData>
+  fullName: System.Collections.Generic.List<DREditor.Presents.PresentData>
+  nameWithType.vb: List(Of PresentData)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Presents.PresentData)
+  name.vb: List(Of PresentData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Presents.PresentData
+    name: PresentData
+    isExternal: true
+    href: DREditor.Presents.PresentData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.PresentData
+    name: PresentData
+    isExternal: true
+    href: DREditor.Presents.PresentData.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Presents.PresentManager.ClearPresentData*
+  commentId: Overload:DREditor.Presents.PresentManager.ClearPresentData
+  isExternal: true
+  href: DREditor.Presents.PresentManager.html#DREditor_Presents_PresentManager_ClearPresentData
+  name: ClearPresentData
+  nameWithType: PresentManager.ClearPresentData
+  fullName: DREditor.Presents.PresentManager.ClearPresentData
+- uid: DREditor.Presents.PresentManager.CarryOverOnChapterSelect*
+  commentId: Overload:DREditor.Presents.PresentManager.CarryOverOnChapterSelect
+  isExternal: true
+  href: DREditor.Presents.PresentManager.html#DREditor_Presents_PresentManager_CarryOverOnChapterSelect_System_Collections_Generic_Dictionary_System_String_System_Object__System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: CarryOverOnChapterSelect
+  nameWithType: PresentManager.CarryOverOnChapterSelect
+  fullName: DREditor.Presents.PresentManager.CarryOverOnChapterSelect
+- uid: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.ILoadOnChapterSelect
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/ILoadOnChapterSelect.cs
+  name: CarryOverOnChapterSelect(Dictionary<string, object>, Dictionary<string, object>)
+  nameWithType: ILoadOnChapterSelect.CarryOverOnChapterSelect(Dictionary<string, object>, Dictionary<string, object>)
+  fullName: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary<string, object>, System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: ILoadOnChapterSelect.CarryOverOnChapterSelect(Dictionary(Of String, Object), Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary(Of String, Object), System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: CarryOverOnChapterSelect(Dictionary(Of String, Object), Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: CarryOverOnChapterSelect
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/ILoadOnChapterSelect.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: CarryOverOnChapterSelect
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/ILoadOnChapterSelect.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: DREditor.Presents.PresentManager.#ctor*
+  commentId: Overload:DREditor.Presents.PresentManager.#ctor
+  isExternal: true
+  href: DREditor.Presents.PresentManager.html#DREditor_Presents_PresentManager__ctor
+  name: PresentManager
+  nameWithType: PresentManager.PresentManager
+  fullName: DREditor.Presents.PresentManager.PresentManager
+  nameWithType.vb: PresentManager.New
+  fullName.vb: DREditor.Presents.PresentManager.New
+  name.vb: New

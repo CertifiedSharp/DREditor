@@ -1,0 +1,1253 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  commentId: T:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  id: TrialActorManager
+  parent: DREditor.RoomBuilding.Implementation.Actors
+  children:
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.#ctor
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.InitializeTrialActors
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActor(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.TActorData)
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData})
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.SaveTrialActors
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.characterDatabase
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.debugViewingInstances
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.inDialogue
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.inTrialMode
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.saveKey
+  langs:
+  - csharp
+  - vb
+  name: TrialActorManager
+  nameWithType: TrialActorManager
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("IDRESaveable, IDRELoadable\n\n")]
+
+      public class TrialActorManager : MonoBehaviour, IDRESaveable, IDRELoadable
+    content.vb: >-
+      <ClassHeader("IDRESaveable, IDRELoadable" & vbLf & vbLf)>
+
+      Public Class TrialActorManager Inherits MonoBehaviour Implements IDRESaveable, IDRELoadable
+  inheritance:
+  - System.Object
+  implements:
+  - DREditor.Saving.IDRESaveable
+  - DREditor.Saving.IDRELoadable
+  extensionMethods:
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        IDRESaveable, IDRELoadable
+
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.saveKey
+  commentId: F:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.saveKey
+  id: saveKey
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: saveKey
+  nameWithType: TrialActorManager.saveKey
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.saveKey
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected string saveKey
+    return:
+      type: System.String
+    content.vb: Protected saveKey As String
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.characterDatabase
+  commentId: F:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.characterDatabase
+  id: characterDatabase
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: characterDatabase
+  nameWithType: TrialActorManager.characterDatabase
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.characterDatabase
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected CharacterDatabase characterDatabase
+    return:
+      type: DREditor.Characters.CharacterDatabase
+    content.vb: Protected characterDatabase As CharacterDatabase
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.inDialogue
+  commentId: F:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.inDialogue
+  id: inDialogue
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: inDialogue
+  nameWithType: TrialActorManager.inDialogue
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.inDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inDialogue
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inDialogue As BoolWithEvent
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.inTrialMode
+  commentId: F:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.inTrialMode
+  id: inTrialMode
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: inTrialMode
+  nameWithType: TrialActorManager.inTrialMode
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.inTrialMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inTrialMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inTrialMode As BoolWithEvent
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.debugViewingInstances
+  commentId: F:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.debugViewingInstances
+  id: debugViewingInstances
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: debugViewingInstances
+  nameWithType: TrialActorManager.debugViewingInstances
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.debugViewingInstances
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<TActorData> debugViewingInstances
+    return:
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData}
+    content.vb: Protected debugViewingInstances As List(Of TActorData)
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: Save(Dictionary<string, object>)
+  nameWithType: TrialActorManager.Save(Dictionary<string, object>)
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save(System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Save(Dictionary<string, object> saveData)
+    parameters:
+    - id: saveData
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Overridable Sub Save(saveData As Dictionary(Of String, Object))
+  overload: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save*
+  implements:
+  - DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: TrialActorManager.Save(Dictionary(Of String, Object))
+  fullName.vb: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Save(Dictionary(Of String, Object))
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: Load(Dictionary<string, object>)
+  nameWithType: TrialActorManager.Load(Dictionary<string, object>)
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load(System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Load(Dictionary<string, object> saveDatas)
+    parameters:
+    - id: saveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Overridable Sub Load(saveDatas As Dictionary(Of String, Object))
+  overload: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load*
+  implements:
+  - DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: TrialActorManager.Load(Dictionary(Of String, Object))
+  fullName.vb: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Load(Dictionary(Of String, Object))
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.InitializeTrialActors
+  commentId: M:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.InitializeTrialActors
+  id: InitializeTrialActors
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: InitializeTrialActors()
+  nameWithType: TrialActorManager.InitializeTrialActors()
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.InitializeTrialActors()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual Actor[] InitializeTrialActors()
+    return:
+      type: DREditor.Actors.Actor[]
+    content.vb: Protected Overridable Function InitializeTrialActors() As Actor()
+  overload: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.InitializeTrialActors*
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.SaveTrialActors
+  commentId: M:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.SaveTrialActors
+  id: SaveTrialActors
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: SaveTrialActors()
+  nameWithType: TrialActorManager.SaveTrialActors()
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.SaveTrialActors()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual List<TActorData> SaveTrialActors()
+    return:
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData}
+    content.vb: Protected Overridable Function SaveTrialActors() As List(Of TActorData)
+  overload: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.SaveTrialActors*
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData})
+  commentId: M:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData})
+  id: LoadTrialActors(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData})
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: LoadTrialActors(List<TActorData>)
+  nameWithType: TrialActorManager.LoadTrialActors(List<TActorData>)
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors(System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.Actors.TActorData>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void LoadTrialActors(List<TActorData> trialActorDatas)
+    parameters:
+    - id: trialActorDatas
+      type: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData}
+    content.vb: Protected Overridable Sub LoadTrialActors(trialActorDatas As List(Of TActorData))
+  overload: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors*
+  nameWithType.vb: TrialActorManager.LoadTrialActors(List(Of TActorData))
+  fullName.vb: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors(System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.Actors.TActorData))
+  name.vb: LoadTrialActors(List(Of TActorData))
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActor(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.TActorData)
+  commentId: M:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActor(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.TActorData)
+  id: LoadTrialActor(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.TActorData)
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: LoadTrialActor(Actor, TActorData)
+  nameWithType: TrialActorManager.LoadTrialActor(Actor, TActorData)
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActor(DREditor.Actors.Actor, DREditor.RoomBuilding.Implementation.Actors.TActorData)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void LoadTrialActor(Actor actor, TActorData data)
+    parameters:
+    - id: actor
+      type: DREditor.Actors.Actor
+    - id: data
+      type: DREditor.RoomBuilding.Implementation.Actors.TActorData
+    content.vb: Protected Overridable Sub LoadTrialActor(actor As Actor, data As TActorData)
+  overload: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActor*
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.#ctor
+  commentId: M:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.#ctor
+  id: '#ctor'
+  parent: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+  langs:
+  - csharp
+  - vb
+  name: TrialActorManager()
+  nameWithType: TrialActorManager.TrialActorManager()
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.TrialActorManager()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/TrialActorManager.cs
+  assemblies:
+  - DREditor.RoomBuilding
+  namespace: DREditor.RoomBuilding.Implementation.Actors
+  syntax:
+    content: public TrialActorManager()
+    content.vb: Public Sub New()
+  overload: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.#ctor*
+  nameWithType.vb: TrialActorManager.New()
+  fullName.vb: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.New()
+  name.vb: New()
+references:
+- uid: DREditor.RoomBuilding.Implementation.Actors
+  commentId: N:DREditor.RoomBuilding.Implementation.Actors
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.RoomBuilding.Implementation.Actors
+  nameWithType: DREditor.RoomBuilding.Implementation.Actors
+  fullName: DREditor.RoomBuilding.Implementation.Actors
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomBuilding
+    name: RoomBuilding
+    isExternal: true
+    href: DREditor.RoomBuilding.html
+  - name: .
+  - uid: DREditor.RoomBuilding.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.html
+  - name: .
+  - uid: DREditor.RoomBuilding.Implementation.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.RoomBuilding
+    name: RoomBuilding
+    isExternal: true
+    href: DREditor.RoomBuilding.html
+  - name: .
+  - uid: DREditor.RoomBuilding.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.html
+  - name: .
+  - uid: DREditor.RoomBuilding.Implementation.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Saving.IDRESaveable
+  commentId: T:DREditor.Saving.IDRESaveable
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  name: IDRESaveable
+  nameWithType: IDRESaveable
+  fullName: DREditor.Saving.IDRESaveable
+- uid: DREditor.Saving.IDRELoadable
+  commentId: T:DREditor.Saving.IDRELoadable
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  name: IDRELoadable
+  nameWithType: IDRELoadable
+  fullName: DREditor.Saving.IDRELoadable
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<TrialActorManager>(TrialActorManager)
+  nameWithType: ReflectionHelper.GetFieldNames<TrialActorManager>(TrialActorManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.RoomBuilding.Implementation.Actors.TrialActorManager>(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of TrialActorManager)(TrialActorManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+  name.vb: GetFieldNames(Of TrialActorManager)(TrialActorManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<TrialActorManager>(TrialActorManager)
+  nameWithType: ReflectionHelper.GetFieldValues<TrialActorManager>(TrialActorManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.RoomBuilding.Implementation.Actors.TrialActorManager>(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of TrialActorManager)(TrialActorManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+  name.vb: GetFieldValues(Of TrialActorManager)(TrialActorManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<TrialActorManager>(TrialActorManager)
+  nameWithType: DeepCopyExtensions.DeepCopy<TrialActorManager>(TrialActorManager)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.RoomBuilding.Implementation.Actors.TrialActorManager>(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of TrialActorManager)(TrialActorManager)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+  name.vb: DeepCopy(Of TrialActorManager)(TrialActorManager)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.RoomBuilding.Implementation.Actors.TrialActorManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager
+    name: TrialActorManager
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Characters.CharacterDatabase
+  commentId: T:DREditor.Characters.CharacterDatabase
+  parent: DREditor.Characters
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/CharacterDatabase.cs
+  name: CharacterDatabase
+  nameWithType: CharacterDatabase
+  fullName: DREditor.Characters.CharacterDatabase
+- uid: DREditor.Characters
+  commentId: N:DREditor.Characters
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Characters
+  nameWithType: DREditor.Characters
+  fullName: DREditor.Characters
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Characters
+    name: Characters
+    isExternal: true
+    href: DREditor.Characters.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Characters
+    name: Characters
+    isExternal: true
+    href: DREditor.Characters.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData}
+  commentId: T:System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.TActorData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<TActorData>
+  nameWithType: List<TActorData>
+  fullName: System.Collections.Generic.List<DREditor.RoomBuilding.Implementation.Actors.TActorData>
+  nameWithType.vb: List(Of TActorData)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.RoomBuilding.Implementation.Actors.TActorData)
+  name.vb: List(Of TActorData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TActorData
+    name: TActorData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TActorData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.RoomBuilding.Implementation.Actors.TActorData
+    name: TActorData
+    isExternal: true
+    href: DREditor.RoomBuilding.Implementation.Actors.TActorData.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html#DREditor_RoomBuilding_Implementation_Actors_TrialActorManager_Save_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: Save
+  nameWithType: TrialActorManager.Save
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Save
+- uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.IDRESaveable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  name: Save(Dictionary<string, object>)
+  nameWithType: IDRESaveable.Save(Dictionary<string, object>)
+  fullName: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: IDRESaveable.Save(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Save(Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Save
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Save
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html#DREditor_RoomBuilding_Implementation_Actors_TrialActorManager_Load_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: Load
+  nameWithType: TrialActorManager.Load
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.Load
+- uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.IDRELoadable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  name: Load(Dictionary<string, object>)
+  nameWithType: IDRELoadable.Load(Dictionary<string, object>)
+  fullName: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: IDRELoadable.Load(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Load(Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Load
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Load
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.InitializeTrialActors*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.InitializeTrialActors
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html#DREditor_RoomBuilding_Implementation_Actors_TrialActorManager_InitializeTrialActors
+  name: InitializeTrialActors
+  nameWithType: TrialActorManager.InitializeTrialActors
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.InitializeTrialActors
+- uid: DREditor.Actors.Actor[]
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Actor.cs
+  name: Actor[]
+  nameWithType: Actor[]
+  fullName: DREditor.Actors.Actor[]
+  nameWithType.vb: Actor()
+  fullName.vb: DREditor.Actors.Actor()
+  name.vb: Actor()
+  spec.csharp:
+  - uid: DREditor.Actors.Actor
+    name: Actor
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Actor.cs
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: DREditor.Actors.Actor
+    name: Actor
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Actor.cs
+  - name: (
+  - name: )
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.SaveTrialActors*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.SaveTrialActors
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html#DREditor_RoomBuilding_Implementation_Actors_TrialActorManager_SaveTrialActors
+  name: SaveTrialActors
+  nameWithType: TrialActorManager.SaveTrialActors
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.SaveTrialActors
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html#DREditor_RoomBuilding_Implementation_Actors_TrialActorManager_LoadTrialActors_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_TActorData__
+  name: LoadTrialActors
+  nameWithType: TrialActorManager.LoadTrialActors
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActors
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActor*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActor
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html#DREditor_RoomBuilding_Implementation_Actors_TrialActorManager_LoadTrialActor_DREditor_Actors_Actor_DREditor_RoomBuilding_Implementation_Actors_TActorData_
+  name: LoadTrialActor
+  nameWithType: TrialActorManager.LoadTrialActor
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.LoadTrialActor
+- uid: DREditor.Actors.Actor
+  commentId: T:DREditor.Actors.Actor
+  parent: DREditor.Actors
+  isExternal: true
+  href: DREditor.Actors.Actor.html
+  name: Actor
+  nameWithType: Actor
+  fullName: DREditor.Actors.Actor
+- uid: DREditor.RoomBuilding.Implementation.Actors.TActorData
+  commentId: T:DREditor.RoomBuilding.Implementation.Actors.TActorData
+  parent: DREditor.RoomBuilding.Implementation.Actors
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.Actors.TActorData.html
+  name: TActorData
+  nameWithType: TActorData
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TActorData
+- uid: DREditor.Actors
+  commentId: N:DREditor.Actors
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors
+  nameWithType: DREditor.Actors
+  fullName: DREditor.Actors
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+- uid: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.#ctor*
+  commentId: Overload:DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.#ctor
+  isExternal: true
+  href: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.html#DREditor_RoomBuilding_Implementation_Actors_TrialActorManager__ctor
+  name: TrialActorManager
+  nameWithType: TrialActorManager.TrialActorManager
+  fullName: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.TrialActorManager
+  nameWithType.vb: TrialActorManager.New
+  fullName.vb: DREditor.RoomBuilding.Implementation.Actors.TrialActorManager.New
+  name.vb: New

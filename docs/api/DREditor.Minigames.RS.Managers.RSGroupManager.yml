@@ -1,0 +1,2887 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager
+  commentId: T:DREditor.Minigames.RS.Managers.RSGroupManager
+  id: RSGroupManager
+  parent: DREditor.Minigames.RS.Managers
+  children:
+  - DREditor.Minigames.RS.Managers.RSGroupManager.#ctor
+  - DREditor.Minigames.RS.Managers.RSGroupManager.Advance
+  - DREditor.Minigames.RS.Managers.RSGroupManager.AnimationInvalid(DREditor.Minigames.Debates.PhraseTextBase)
+  - DREditor.Minigames.RS.Managers.RSGroupManager.Awake
+  - DREditor.Minigames.RS.Managers.RSGroupManager.CalculateDamage
+  - DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd(DREditor.Minigames.Debates.Panel,DREditor.Minigames.Debates.PhraseTextBase,System.Single)
+  - DREditor.Minigames.RS.Managers.RSGroupManager.EvaluateSectionResult
+  - DREditor.Minigames.RS.Managers.RSGroupManager.GetEnemyNumber
+  - DREditor.Minigames.RS.Managers.RSGroupManager.OnDisable
+  - DREditor.Minigames.RS.Managers.RSGroupManager.OnEnable
+  - DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated(DREditor.Minigames.Debates.Panel,DREditor.Minigames.Debates.PhraseTextBase,System.Single)
+  - DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseShattered(DREditor.Minigames.Debates.IPhraseShatterable)
+  - DREditor.Minigames.RS.Managers.RSGroupManager.PlayValidGroups
+  - DREditor.Minigames.RS.Managers.RSGroupManager.Retreat
+  - DREditor.Minigames.RS.Managers.RSGroupManager.Stall
+  - DREditor.Minigames.RS.Managers.RSGroupManager.Start
+  - DREditor.Minigames.RS.Managers.RSGroupManager.advanceAnimation
+  - DREditor.Minigames.RS.Managers.RSGroupManager.cutCount
+  - DREditor.Minigames.RS.Managers.RSGroupManager.damageDivisor
+  - DREditor.Minigames.RS.Managers.RSGroupManager.groupResult
+  - DREditor.Minigames.RS.Managers.RSGroupManager.inDialogue
+  - DREditor.Minigames.RS.Managers.RSGroupManager.lineManager
+  - DREditor.Minigames.RS.Managers.RSGroupManager.onAdvance
+  - DREditor.Minigames.RS.Managers.RSGroupManager.onRetreat
+  - DREditor.Minigames.RS.Managers.RSGroupManager.phraseManagers
+  - DREditor.Minigames.RS.Managers.RSGroupManager.resetManager
+  - DREditor.Minigames.RS.Managers.RSGroupManager.retreatAnimation
+  - DREditor.Minigames.RS.Managers.RSGroupManager.shatterablePhrases
+  - DREditor.Minigames.RS.Managers.RSGroupManager.splitScreenHandler
+  - DREditor.Minigames.RS.Managers.RSGroupManager.startOfSectionWaitTime
+  - DREditor.Minigames.RS.Managers.RSGroupManager.tieBreaker
+  - DREditor.Minigames.RS.Managers.RSGroupManager.trialTimer
+  langs:
+  - csharp
+  - vb
+  name: RSGroupManager
+  nameWithType: RSGroupManager
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DebateGroupManagerBase, ServiceHolder, IDebateGroupManager\n\n")]
+
+      public class RSGroupManager : DebateGroupManagerBase<RSGroup>, IDebateGroupManager
+    content.vb: >-
+      <ClassHeader("DebateGroupManagerBase, ServiceHolder, IDebateGroupManager" & vbLf & vbLf)>
+
+      Public Class RSGroupManager Inherits DebateGroupManagerBase(Of RSGroup) Implements IDebateGroupManager
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  implements:
+  - DREditor.Minigames.Debates.Managers.IDebateGroupManager
+  inheritedMembers:
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.stallNumber
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.winNumber
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.loseNumber
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.tieNumber
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onPanelsResolved
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onStopPanels
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onRestartPanels
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.debate
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.currentGroup
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.currentGroupIndex
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.debateLineCount
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayGroups``1(DREditor.Dialogues.DialogueBase{{T2}})
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnPanelsResolved
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnStopPanels
+  - DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnRestartPanels
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.InitializeService
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.OnDestroy
+  extensionMethods:
+  - DREditor.Minigames.RS.Managers.RSGroupManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Minigames.RS.Managers.RSGroupManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Minigames.RS.Managers.RSGroupManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DebateGroupManagerBase, ServiceHolder, IDebateGroupManager
+
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.inDialogue
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.inDialogue
+  id: inDialogue
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: inDialogue
+  nameWithType: RSGroupManager.inDialogue
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.inDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent inDialogue
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected inDialogue As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.cutCount
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.cutCount
+  id: cutCount
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: cutCount
+  nameWithType: RSGroupManager.cutCount
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.cutCount
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected IntWithEvent cutCount
+    return:
+      type: DREditor.EventObjects.IntWithEvent
+    content.vb: Protected cutCount As IntWithEvent
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.onAdvance
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.onAdvance
+  id: onAdvance
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: onAdvance
+  nameWithType: RSGroupManager.onAdvance
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.onAdvance
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onAdvance
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onAdvance As SceneEvent
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.onRetreat
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.onRetreat
+  id: onRetreat
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: onRetreat
+  nameWithType: RSGroupManager.onRetreat
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.onRetreat
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onRetreat
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onRetreat As SceneEvent
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.advanceAnimation
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.advanceAnimation
+  id: advanceAnimation
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: advanceAnimation
+  nameWithType: RSGroupManager.advanceAnimation
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.advanceAnimation
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected UIVisibilityComponent advanceAnimation
+    return:
+      type: DREditor.UIHandling.UIVisibilityComponent
+    content.vb: >-
+      <Divider>
+
+      Protected advanceAnimation As UIVisibilityComponent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.retreatAnimation
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.retreatAnimation
+  id: retreatAnimation
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: retreatAnimation
+  nameWithType: RSGroupManager.retreatAnimation
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.retreatAnimation
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected UIVisibilityComponent retreatAnimation
+    return:
+      type: DREditor.UIHandling.UIVisibilityComponent
+    content.vb: Protected retreatAnimation As UIVisibilityComponent
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.startOfSectionWaitTime
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.startOfSectionWaitTime
+  id: startOfSectionWaitTime
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: startOfSectionWaitTime
+  nameWithType: RSGroupManager.startOfSectionWaitTime
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.startOfSectionWaitTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected float startOfSectionWaitTime
+    return:
+      type: System.Single
+    content.vb: >-
+      <Divider>
+
+      Protected startOfSectionWaitTime As Single
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.damageDivisor
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.damageDivisor
+  id: damageDivisor
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: damageDivisor
+  nameWithType: RSGroupManager.damageDivisor
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.damageDivisor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected float damageDivisor
+    return:
+      type: System.Single
+    content.vb: Protected damageDivisor As Single
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.groupResult
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.groupResult
+  id: groupResult
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: groupResult
+  nameWithType: RSGroupManager.groupResult
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.groupResult
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected int groupResult
+    return:
+      type: System.Int32
+    content.vb: Protected groupResult As Integer
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.trialTimer
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.trialTimer
+  id: trialTimer
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: trialTimer
+  nameWithType: RSGroupManager.trialTimer
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.trialTimer
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected TrialTimerBase trialTimer
+    return:
+      type: DREditor.Minigames.TrialTimerBase
+    content.vb: Protected trialTimer As TrialTimerBase
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.shatterablePhrases
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.shatterablePhrases
+  id: shatterablePhrases
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: shatterablePhrases
+  nameWithType: RSGroupManager.shatterablePhrases
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.shatterablePhrases
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected IEnumerable<IPhraseShatterable> shatterablePhrases
+    return:
+      type: System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.IPhraseShatterable}
+    content.vb: Protected shatterablePhrases As IEnumerable(Of IPhraseShatterable)
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.phraseManagers
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.phraseManagers
+  id: phraseManagers
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: phraseManagers
+  nameWithType: RSGroupManager.phraseManagers
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.phraseManagers
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected IEnumerable<IPhraseManager> phraseManagers
+    return:
+      type: System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.Managers.IPhraseManager}
+    content.vb: Protected phraseManagers As IEnumerable(Of IPhraseManager)
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.lineManager
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.lineManager
+  id: lineManager
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: lineManager
+  nameWithType: RSGroupManager.lineManager
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.lineManager
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected IDebateLineManager lineManager
+    return:
+      type: DREditor.Minigames.Debates.Managers.IDebateLineManager
+    content.vb: Protected lineManager As IDebateLineManager
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.resetManager
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.resetManager
+  id: resetManager
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: resetManager
+  nameWithType: RSGroupManager.resetManager
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.resetManager
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected IPhraseResetManager resetManager
+    return:
+      type: DREditor.Minigames.Debates.Managers.IPhraseResetManager
+    content.vb: Protected resetManager As IPhraseResetManager
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.splitScreenHandler
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.splitScreenHandler
+  id: splitScreenHandler
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: splitScreenHandler
+  nameWithType: RSGroupManager.splitScreenHandler
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.splitScreenHandler
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected ISplitScreen splitScreenHandler
+    return:
+      type: DREditor.Minigames.RS.ISplitScreen
+    content.vb: Protected splitScreenHandler As ISplitScreen
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.tieBreaker
+  commentId: F:DREditor.Minigames.RS.Managers.RSGroupManager.tieBreaker
+  id: tieBreaker
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: tieBreaker
+  nameWithType: RSGroupManager.tieBreaker
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.tieBreaker
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected ITieBreaker tieBreaker
+    return:
+      type: DREditor.Minigames.RS.ITieBreaker
+    content.vb: Protected tieBreaker As ITieBreaker
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Awake
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.Awake
+  id: Awake
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: RSGroupManager.Awake()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void Awake()
+    content.vb: Protected Overrides Sub Awake()
+  overridden: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.Awake
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.Awake*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.OnEnable
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.OnEnable
+  id: OnEnable
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: RSGroupManager.OnEnable()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.OnEnable*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.OnDisable
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.OnDisable
+  id: OnDisable
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: RSGroupManager.OnDisable()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.OnDisable*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Start
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.Start
+  id: Start
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: RSGroupManager.Start()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.Start*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseShattered(DREditor.Minigames.Debates.IPhraseShatterable)
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseShattered(DREditor.Minigames.Debates.IPhraseShatterable)
+  id: OnPhraseShattered(DREditor.Minigames.Debates.IPhraseShatterable)
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: OnPhraseShattered(IPhraseShatterable)
+  nameWithType: RSGroupManager.OnPhraseShattered(IPhraseShatterable)
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseShattered(DREditor.Minigames.Debates.IPhraseShatterable)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnPhraseShattered(IPhraseShatterable phraseBase)
+    parameters:
+    - id: phraseBase
+      type: DREditor.Minigames.Debates.IPhraseShatterable
+      description: ''
+    content.vb: Protected Overridable Sub OnPhraseShattered(phraseBase As IPhraseShatterable)
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseShattered*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.GetEnemyNumber
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.GetEnemyNumber
+  id: GetEnemyNumber
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: GetEnemyNumber()
+  nameWithType: RSGroupManager.GetEnemyNumber()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.GetEnemyNumber()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual int GetEnemyNumber()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Protected Overridable Function GetEnemyNumber() As Integer
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.GetEnemyNumber*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.CalculateDamage
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.CalculateDamage
+  id: CalculateDamage
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: CalculateDamage()
+  nameWithType: RSGroupManager.CalculateDamage()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.CalculateDamage()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual float CalculateDamage()
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Protected Overridable Function CalculateDamage() As Single
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.CalculateDamage*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd(DREditor.Minigames.Debates.Panel,DREditor.Minigames.Debates.PhraseTextBase,System.Single)
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd(DREditor.Minigames.Debates.Panel,DREditor.Minigames.Debates.PhraseTextBase,System.Single)
+  id: EnemyAttackOnPhraseEnd(DREditor.Minigames.Debates.Panel,DREditor.Minigames.Debates.PhraseTextBase,System.Single)
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: EnemyAttackOnPhraseEnd(Panel, PhraseTextBase, float)
+  nameWithType: RSGroupManager.EnemyAttackOnPhraseEnd(Panel, PhraseTextBase, float)
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd(DREditor.Minigames.Debates.Panel, DREditor.Minigames.Debates.PhraseTextBase, float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void EnemyAttackOnPhraseEnd(Panel panel, PhraseTextBase phraseText, float clipLength)
+    parameters:
+    - id: panel
+      type: DREditor.Minigames.Debates.Panel
+      description: ''
+    - id: phraseText
+      type: DREditor.Minigames.Debates.PhraseTextBase
+      description: ''
+    - id: clipLength
+      type: System.Single
+      description: ''
+    content.vb: Protected Overridable Sub EnemyAttackOnPhraseEnd(panel As Panel, phraseText As PhraseTextBase, clipLength As Single)
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd*
+  nameWithType.vb: RSGroupManager.EnemyAttackOnPhraseEnd(Panel, PhraseTextBase, Single)
+  fullName.vb: DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd(DREditor.Minigames.Debates.Panel, DREditor.Minigames.Debates.PhraseTextBase, Single)
+  name.vb: EnemyAttackOnPhraseEnd(Panel, PhraseTextBase, Single)
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated(DREditor.Minigames.Debates.Panel,DREditor.Minigames.Debates.PhraseTextBase,System.Single)
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated(DREditor.Minigames.Debates.Panel,DREditor.Minigames.Debates.PhraseTextBase,System.Single)
+  id: OnPhraseAnimated(DREditor.Minigames.Debates.Panel,DREditor.Minigames.Debates.PhraseTextBase,System.Single)
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: OnPhraseAnimated(Panel, PhraseTextBase, float)
+  nameWithType: RSGroupManager.OnPhraseAnimated(Panel, PhraseTextBase, float)
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated(DREditor.Minigames.Debates.Panel, DREditor.Minigames.Debates.PhraseTextBase, float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator OnPhraseAnimated(Panel panel, PhraseTextBase phraseText, float clipLength)
+    parameters:
+    - id: panel
+      type: DREditor.Minigames.Debates.Panel
+      description: ''
+    - id: phraseText
+      type: DREditor.Minigames.Debates.PhraseTextBase
+      description: ''
+    - id: clipLength
+      type: System.Single
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function OnPhraseAnimated(panel As Panel, phraseText As PhraseTextBase, clipLength As Single) As IEnumerator
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated*
+  nameWithType.vb: RSGroupManager.OnPhraseAnimated(Panel, PhraseTextBase, Single)
+  fullName.vb: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated(DREditor.Minigames.Debates.Panel, DREditor.Minigames.Debates.PhraseTextBase, Single)
+  name.vb: OnPhraseAnimated(Panel, PhraseTextBase, Single)
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.AnimationInvalid(DREditor.Minigames.Debates.PhraseTextBase)
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.AnimationInvalid(DREditor.Minigames.Debates.PhraseTextBase)
+  id: AnimationInvalid(DREditor.Minigames.Debates.PhraseTextBase)
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: AnimationInvalid(PhraseTextBase)
+  nameWithType: RSGroupManager.AnimationInvalid(PhraseTextBase)
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.AnimationInvalid(DREditor.Minigames.Debates.PhraseTextBase)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool AnimationInvalid(PhraseTextBase phraseText)
+    parameters:
+    - id: phraseText
+      type: DREditor.Minigames.Debates.PhraseTextBase
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function AnimationInvalid(phraseText As PhraseTextBase) As Boolean
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.AnimationInvalid*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.PlayValidGroups
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.PlayValidGroups
+  id: PlayValidGroups
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: PlayValidGroups()
+  nameWithType: RSGroupManager.PlayValidGroups()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.PlayValidGroups()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected override IEnumerator PlayValidGroups()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overrides Function PlayValidGroups() As IEnumerator
+  overridden: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayValidGroups
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.PlayValidGroups*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.EvaluateSectionResult
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.EvaluateSectionResult
+  id: EvaluateSectionResult
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: EvaluateSectionResult()
+  nameWithType: RSGroupManager.EvaluateSectionResult()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.EvaluateSectionResult()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected override IEnumerator EvaluateSectionResult()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overrides Function EvaluateSectionResult() As IEnumerator
+  overridden: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.EvaluateSectionResult
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.EvaluateSectionResult*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Stall
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.Stall
+  id: Stall
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: Stall()
+  nameWithType: RSGroupManager.Stall()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Stall()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected override IEnumerator Stall()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overrides Function Stall() As IEnumerator
+  overridden: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Stall
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.Stall*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Advance
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.Advance
+  id: Advance
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: Advance()
+  nameWithType: RSGroupManager.Advance()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Advance()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected override IEnumerator Advance()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overrides Function Advance() As IEnumerator
+  overridden: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Advance
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.Advance*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Retreat
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.Retreat
+  id: Retreat
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: Retreat()
+  nameWithType: RSGroupManager.Retreat()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Retreat()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  summary: ''
+  example: []
+  syntax:
+    content: protected override IEnumerator Retreat()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overrides Function Retreat() As IEnumerator
+  overridden: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Retreat
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.Retreat*
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.#ctor
+  commentId: M:DREditor.Minigames.RS.Managers.RSGroupManager.#ctor
+  id: '#ctor'
+  parent: DREditor.Minigames.RS.Managers.RSGroupManager
+  langs:
+  - csharp
+  - vb
+  name: RSGroupManager()
+  nameWithType: RSGroupManager.RSGroupManager()
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.RSGroupManager()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSGroupManager.cs
+  assemblies:
+  - DREditor.Minigames.RS
+  namespace: DREditor.Minigames.RS.Managers
+  syntax:
+    content: public RSGroupManager()
+    content.vb: Public Sub New()
+  overload: DREditor.Minigames.RS.Managers.RSGroupManager.#ctor*
+  nameWithType.vb: RSGroupManager.New()
+  fullName.vb: DREditor.Minigames.RS.Managers.RSGroupManager.New()
+  name.vb: New()
+references:
+- uid: DREditor.Minigames.RS.Managers
+  commentId: N:DREditor.Minigames.RS.Managers
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.RS.Managers
+  nameWithType: DREditor.Minigames.RS.Managers
+  fullName: DREditor.Minigames.RS.Managers
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.RS
+    name: RS
+    isExternal: true
+    href: DREditor.Minigames.RS.html
+  - name: .
+  - uid: DREditor.Minigames.RS.Managers
+    name: Managers
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.RS
+    name: RS
+    isExternal: true
+    href: DREditor.Minigames.RS.html
+  - name: .
+  - uid: DREditor.Minigames.RS.Managers
+    name: Managers
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<IDebateGroupManager>
+  nameWithType: ServiceHolder<IDebateGroupManager>
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.Debates.Managers.IDebateGroupManager>
+  nameWithType.vb: ServiceHolder(Of IDebateGroupManager)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.Debates.Managers.IDebateGroupManager)
+  name.vb: ServiceHolder(Of IDebateGroupManager)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.Minigames.Debates.Managers.IDebateGroupManager
+    name: IDebateGroupManager
+    isExternal: true
+    href: DREditor.Minigames.Debates.Managers.IDebateGroupManager.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.Debates.Managers.IDebateGroupManager
+    name: IDebateGroupManager
+    isExternal: true
+    href: DREditor.Minigames.Debates.Managers.IDebateGroupManager.html
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  commentId: T:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  parent: DREditor.Minigames.Debates.Managers
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: DebateGroupManagerBase<RSGroup>
+  nameWithType: DebateGroupManagerBase<RSGroup>
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup)
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup)
+  name.vb: DebateGroupManagerBase(Of RSGroup)
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1
+    name: DebateGroupManagerBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: <
+  - uid: DREditor.Minigames.RS.Managers.RSGroup
+    name: RSGroup
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroup.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1
+    name: DebateGroupManagerBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.Managers.RSGroup
+    name: RSGroup
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroup.html
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.IDebateGroupManager
+  commentId: T:DREditor.Minigames.Debates.Managers.IDebateGroupManager
+  parent: DREditor.Minigames.Debates.Managers
+  isExternal: true
+  href: DREditor.Minigames.Debates.Managers.IDebateGroupManager.html
+  name: IDebateGroupManager
+  nameWithType: IDebateGroupManager
+  fullName: DREditor.Minigames.Debates.Managers.IDebateGroupManager
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.stallNumber
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.stallNumber
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.stallNumber
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: stallNumber
+  nameWithType: DebateGroupManagerBase<RSGroup>.stallNumber
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.stallNumber
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).stallNumber
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).stallNumber
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.winNumber
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.winNumber
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.winNumber
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: winNumber
+  nameWithType: DebateGroupManagerBase<RSGroup>.winNumber
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.winNumber
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).winNumber
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).winNumber
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.loseNumber
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.loseNumber
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.loseNumber
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: loseNumber
+  nameWithType: DebateGroupManagerBase<RSGroup>.loseNumber
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.loseNumber
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).loseNumber
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).loseNumber
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.tieNumber
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.tieNumber
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.tieNumber
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: tieNumber
+  nameWithType: DebateGroupManagerBase<RSGroup>.tieNumber
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.tieNumber
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).tieNumber
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).tieNumber
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onPanelsResolved
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onPanelsResolved
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onPanelsResolved
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: onPanelsResolved
+  nameWithType: DebateGroupManagerBase<RSGroup>.onPanelsResolved
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.onPanelsResolved
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).onPanelsResolved
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).onPanelsResolved
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onStopPanels
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onStopPanels
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onStopPanels
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: onStopPanels
+  nameWithType: DebateGroupManagerBase<RSGroup>.onStopPanels
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.onStopPanels
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).onStopPanels
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).onStopPanels
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onRestartPanels
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.onRestartPanels
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onRestartPanels
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: onRestartPanels
+  nameWithType: DebateGroupManagerBase<RSGroup>.onRestartPanels
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.onRestartPanels
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).onRestartPanels
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).onRestartPanels
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.debate
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.debate
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.debate
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: debate
+  nameWithType: DebateGroupManagerBase<RSGroup>.debate
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.debate
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).debate
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).debate
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.currentGroup
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.currentGroup
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.currentGroup
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: currentGroup
+  nameWithType: DebateGroupManagerBase<RSGroup>.currentGroup
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.currentGroup
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).currentGroup
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).currentGroup
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.currentGroupIndex
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.currentGroupIndex
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.currentGroupIndex
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: currentGroupIndex
+  nameWithType: DebateGroupManagerBase<RSGroup>.currentGroupIndex
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.currentGroupIndex
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).currentGroupIndex
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).currentGroupIndex
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.debateLineCount
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.debateLineCount
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.debateLineCount
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: debateLineCount
+  nameWithType: DebateGroupManagerBase<RSGroup>.debateLineCount
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.debateLineCount
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).debateLineCount
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).debateLineCount
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayGroups``1(DREditor.Dialogues.DialogueBase{{T2}})
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayGroups``1(DREditor.Dialogues.DialogueBase{``0})
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayGroups``1(DREditor.Dialogues.DialogueBase{``0})
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: PlayGroups<T2>(DialogueBase<T2>)
+  nameWithType: DebateGroupManagerBase<RSGroup>.PlayGroups<T2>(DialogueBase<T2>)
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.PlayGroups<T2>(DREditor.Dialogues.DialogueBase<T2>)
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).PlayGroups(Of T2)(DialogueBase(Of T2))
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).PlayGroups(Of T2)(DREditor.Dialogues.DialogueBase(Of T2))
+  name.vb: PlayGroups(Of T2)(DialogueBase(Of T2))
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayGroups``1(DREditor.Dialogues.DialogueBase{``0})
+    name: PlayGroups
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayGroups``1(DREditor.Dialogues.DialogueBase{``0})
+    name: PlayGroups
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnPanelsResolved
+  commentId: P:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnPanelsResolved
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnPanelsResolved
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: OnPanelsResolved
+  nameWithType: DebateGroupManagerBase<RSGroup>.OnPanelsResolved
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.OnPanelsResolved
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).OnPanelsResolved
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).OnPanelsResolved
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnStopPanels
+  commentId: P:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnStopPanels
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnStopPanels
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: OnStopPanels
+  nameWithType: DebateGroupManagerBase<RSGroup>.OnStopPanels
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.OnStopPanels
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).OnStopPanels
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).OnStopPanels
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnRestartPanels
+  commentId: P:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.OnRestartPanels
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnRestartPanels
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: OnRestartPanels
+  nameWithType: DebateGroupManagerBase<RSGroup>.OnRestartPanels
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.OnRestartPanels
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).OnRestartPanels
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).OnRestartPanels
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<IDebateGroupManager>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.Debates.Managers.IDebateGroupManager>.registerService
+  nameWithType.vb: ServiceHolder(Of IDebateGroupManager).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.Debates.Managers.IDebateGroupManager).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<IDebateGroupManager>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.Debates.Managers.IDebateGroupManager>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of IDebateGroupManager).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.Debates.Managers.IDebateGroupManager).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<IDebateGroupManager>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.Debates.Managers.IDebateGroupManager>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of IDebateGroupManager).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.Debates.Managers.IDebateGroupManager).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<IDebateGroupManager>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.Debates.Managers.IDebateGroupManager>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of IDebateGroupManager).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.Debates.Managers.IDebateGroupManager).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<IDebateGroupManager>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.Debates.Managers.IDebateGroupManager>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of IDebateGroupManager).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.Debates.Managers.IDebateGroupManager).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<RSGroupManager>(RSGroupManager)
+  nameWithType: ReflectionHelper.GetFieldNames<RSGroupManager>(RSGroupManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Minigames.RS.Managers.RSGroupManager>(DREditor.Minigames.RS.Managers.RSGroupManager)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of RSGroupManager)(RSGroupManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Minigames.RS.Managers.RSGroupManager)(DREditor.Minigames.RS.Managers.RSGroupManager)
+  name.vb: GetFieldNames(Of RSGroupManager)(RSGroupManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Minigames.RS.Managers.RSGroupManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Minigames.RS.Managers.RSGroupManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<RSGroupManager>(RSGroupManager)
+  nameWithType: ReflectionHelper.GetFieldValues<RSGroupManager>(RSGroupManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Minigames.RS.Managers.RSGroupManager>(DREditor.Minigames.RS.Managers.RSGroupManager)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of RSGroupManager)(RSGroupManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Minigames.RS.Managers.RSGroupManager)(DREditor.Minigames.RS.Managers.RSGroupManager)
+  name.vb: GetFieldValues(Of RSGroupManager)(RSGroupManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Minigames.RS.Managers.RSGroupManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Minigames.RS.Managers.RSGroupManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<RSGroupManager>(RSGroupManager)
+  nameWithType: DeepCopyExtensions.DeepCopy<RSGroupManager>(RSGroupManager)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Minigames.RS.Managers.RSGroupManager>(DREditor.Minigames.RS.Managers.RSGroupManager)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of RSGroupManager)(RSGroupManager)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Minigames.RS.Managers.RSGroupManager)(DREditor.Minigames.RS.Managers.RSGroupManager)
+  name.vb: DeepCopy(Of RSGroupManager)(RSGroupManager)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Minigames.RS.Managers.RSGroupManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Minigames.RS.Managers.RSGroupManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.RS.Managers.RSGroupManager
+    name: RSGroupManager
+    isExternal: true
+    href: DREditor.Minigames.RS.Managers.RSGroupManager.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1
+  commentId: T:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1
+  isExternal: true
+  href: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase-1.html
+  name: DebateGroupManagerBase<T>
+  nameWithType: DebateGroupManagerBase<T>
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>
+  nameWithType.vb: DebateGroupManagerBase(Of T)
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T)
+  name.vb: DebateGroupManagerBase(Of T)
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1
+    name: DebateGroupManagerBase
+    isExternal: true
+    href: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1
+    name: DebateGroupManagerBase
+    isExternal: true
+    href: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers
+  commentId: N:DREditor.Minigames.Debates.Managers
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.Debates.Managers
+  nameWithType: DREditor.Minigames.Debates.Managers
+  fullName: DREditor.Minigames.Debates.Managers
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  - name: .
+  - uid: DREditor.Minigames.Debates.Managers
+    name: Managers
+    isExternal: true
+    href: DREditor.Minigames.Debates.Managers.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  - name: .
+  - uid: DREditor.Minigames.Debates.Managers
+    name: Managers
+    isExternal: true
+    href: DREditor.Minigames.Debates.Managers.html
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.stallNumber
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.stallNumber
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: stallNumber
+  nameWithType: DebateGroupManagerBase<T>.stallNumber
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.stallNumber
+  nameWithType.vb: DebateGroupManagerBase(Of T).stallNumber
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).stallNumber
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.winNumber
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.winNumber
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: winNumber
+  nameWithType: DebateGroupManagerBase<T>.winNumber
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.winNumber
+  nameWithType.vb: DebateGroupManagerBase(Of T).winNumber
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).winNumber
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.loseNumber
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.loseNumber
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: loseNumber
+  nameWithType: DebateGroupManagerBase<T>.loseNumber
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.loseNumber
+  nameWithType.vb: DebateGroupManagerBase(Of T).loseNumber
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).loseNumber
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.tieNumber
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.tieNumber
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: tieNumber
+  nameWithType: DebateGroupManagerBase<T>.tieNumber
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.tieNumber
+  nameWithType.vb: DebateGroupManagerBase(Of T).tieNumber
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).tieNumber
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onPanelsResolved
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onPanelsResolved
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: onPanelsResolved
+  nameWithType: DebateGroupManagerBase<T>.onPanelsResolved
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.onPanelsResolved
+  nameWithType.vb: DebateGroupManagerBase(Of T).onPanelsResolved
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).onPanelsResolved
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onStopPanels
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onStopPanels
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: onStopPanels
+  nameWithType: DebateGroupManagerBase<T>.onStopPanels
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.onStopPanels
+  nameWithType.vb: DebateGroupManagerBase(Of T).onStopPanels
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).onStopPanels
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onRestartPanels
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.onRestartPanels
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: onRestartPanels
+  nameWithType: DebateGroupManagerBase<T>.onRestartPanels
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.onRestartPanels
+  nameWithType.vb: DebateGroupManagerBase(Of T).onRestartPanels
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).onRestartPanels
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.debate
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.debate
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: debate
+  nameWithType: DebateGroupManagerBase<T>.debate
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.debate
+  nameWithType.vb: DebateGroupManagerBase(Of T).debate
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).debate
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.currentGroup
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.currentGroup
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: currentGroup
+  nameWithType: DebateGroupManagerBase<T>.currentGroup
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.currentGroup
+  nameWithType.vb: DebateGroupManagerBase(Of T).currentGroup
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).currentGroup
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.currentGroupIndex
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.currentGroupIndex
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: currentGroupIndex
+  nameWithType: DebateGroupManagerBase<T>.currentGroupIndex
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.currentGroupIndex
+  nameWithType.vb: DebateGroupManagerBase(Of T).currentGroupIndex
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).currentGroupIndex
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.debateLineCount
+  commentId: F:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.debateLineCount
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: debateLineCount
+  nameWithType: DebateGroupManagerBase<T>.debateLineCount
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.debateLineCount
+  nameWithType.vb: DebateGroupManagerBase(Of T).debateLineCount
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).debateLineCount
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayGroups``1(DREditor.Dialogues.DialogueBase{``0})
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayGroups``1(DREditor.Dialogues.DialogueBase{``0})
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: PlayGroups<T2>(DialogueBase<T2>)
+  nameWithType: DebateGroupManagerBase<T>.PlayGroups<T2>(DialogueBase<T2>)
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.PlayGroups<T2>(DREditor.Dialogues.DialogueBase<T2>)
+  nameWithType.vb: DebateGroupManagerBase(Of T).PlayGroups(Of T2)(DialogueBase(Of T2))
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).PlayGroups(Of T2)(DREditor.Dialogues.DialogueBase(Of T2))
+  name.vb: PlayGroups(Of T2)(DialogueBase(Of T2))
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayGroups``1(DREditor.Dialogues.DialogueBase{``0})
+    name: PlayGroups
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayGroups``1(DREditor.Dialogues.DialogueBase{``0})
+    name: PlayGroups
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnPanelsResolved
+  commentId: P:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnPanelsResolved
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: OnPanelsResolved
+  nameWithType: DebateGroupManagerBase<T>.OnPanelsResolved
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.OnPanelsResolved
+  nameWithType.vb: DebateGroupManagerBase(Of T).OnPanelsResolved
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).OnPanelsResolved
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnStopPanels
+  commentId: P:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnStopPanels
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: OnStopPanels
+  nameWithType: DebateGroupManagerBase<T>.OnStopPanels
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.OnStopPanels
+  nameWithType.vb: DebateGroupManagerBase(Of T).OnStopPanels
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).OnStopPanels
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnRestartPanels
+  commentId: P:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.OnRestartPanels
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: OnRestartPanels
+  nameWithType: DebateGroupManagerBase<T>.OnRestartPanels
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.OnRestartPanels
+  nameWithType.vb: DebateGroupManagerBase(Of T).OnRestartPanels
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).OnRestartPanels
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.IntWithEvent
+  commentId: T:DREditor.EventObjects.IntWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/IntWithEvent.cs
+  name: IntWithEvent
+  nameWithType: IntWithEvent
+  fullName: DREditor.EventObjects.IntWithEvent
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: DREditor.UIHandling.UIVisibilityComponent
+  commentId: T:DREditor.UIHandling.UIVisibilityComponent
+  parent: DREditor.UIHandling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UIHandling/UIVisibilityComponent.cs
+  name: UIVisibilityComponent
+  nameWithType: UIVisibilityComponent
+  fullName: DREditor.UIHandling.UIVisibilityComponent
+- uid: DREditor.UIHandling
+  commentId: N:DREditor.UIHandling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.UIHandling
+  nameWithType: DREditor.UIHandling
+  fullName: DREditor.UIHandling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UIHandling
+    name: UIHandling
+    isExternal: true
+    href: DREditor.UIHandling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UIHandling
+    name: UIHandling
+    isExternal: true
+    href: DREditor.UIHandling.html
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Minigames.TrialTimerBase
+  commentId: T:DREditor.Minigames.TrialTimerBase
+  parent: DREditor.Minigames
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/TrialTimerBase.cs
+  name: TrialTimerBase
+  nameWithType: TrialTimerBase
+  fullName: DREditor.Minigames.TrialTimerBase
+- uid: DREditor.Minigames
+  commentId: N:DREditor.Minigames
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames
+  nameWithType: DREditor.Minigames
+  fullName: DREditor.Minigames
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+- uid: System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.IPhraseShatterable}
+  commentId: T:System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.IPhraseShatterable}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IPhraseShatterable>
+  nameWithType: IEnumerable<IPhraseShatterable>
+  fullName: System.Collections.Generic.IEnumerable<DREditor.Minigames.Debates.IPhraseShatterable>
+  nameWithType.vb: IEnumerable(Of IPhraseShatterable)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of DREditor.Minigames.Debates.IPhraseShatterable)
+  name.vb: IEnumerable(Of IPhraseShatterable)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: DREditor.Minigames.Debates.IPhraseShatterable
+    name: IPhraseShatterable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/IPhraseShatterable.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.Debates.IPhraseShatterable
+    name: IPhraseShatterable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/IPhraseShatterable.cs
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.Managers.IPhraseManager}
+  commentId: T:System.Collections.Generic.IEnumerable{DREditor.Minigames.Debates.Managers.IPhraseManager}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IPhraseManager>
+  nameWithType: IEnumerable<IPhraseManager>
+  fullName: System.Collections.Generic.IEnumerable<DREditor.Minigames.Debates.Managers.IPhraseManager>
+  nameWithType.vb: IEnumerable(Of IPhraseManager)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of DREditor.Minigames.Debates.Managers.IPhraseManager)
+  name.vb: IEnumerable(Of IPhraseManager)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: DREditor.Minigames.Debates.Managers.IPhraseManager
+    name: IPhraseManager
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/IPhraseManager.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.Debates.Managers.IPhraseManager
+    name: IPhraseManager
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/IPhraseManager.cs
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.IDebateLineManager
+  commentId: T:DREditor.Minigames.Debates.Managers.IDebateLineManager
+  parent: DREditor.Minigames.Debates.Managers
+  isExternal: true
+  href: DREditor.Minigames.Debates.Managers.IDebateLineManager.html
+  name: IDebateLineManager
+  nameWithType: IDebateLineManager
+  fullName: DREditor.Minigames.Debates.Managers.IDebateLineManager
+- uid: DREditor.Minigames.Debates.Managers.IPhraseResetManager
+  commentId: T:DREditor.Minigames.Debates.Managers.IPhraseResetManager
+  parent: DREditor.Minigames.Debates.Managers
+  isExternal: true
+  href: DREditor.Minigames.Debates.Managers.IPhraseResetManager.html
+  name: IPhraseResetManager
+  nameWithType: IPhraseResetManager
+  fullName: DREditor.Minigames.Debates.Managers.IPhraseResetManager
+- uid: DREditor.Minigames.RS.ISplitScreen
+  commentId: T:DREditor.Minigames.RS.ISplitScreen
+  parent: DREditor.Minigames.RS
+  isExternal: true
+  href: DREditor.Minigames.RS.ISplitScreen.html
+  name: ISplitScreen
+  nameWithType: ISplitScreen
+  fullName: DREditor.Minigames.RS.ISplitScreen
+- uid: DREditor.Minigames.RS
+  commentId: N:DREditor.Minigames.RS
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.RS
+  nameWithType: DREditor.Minigames.RS
+  fullName: DREditor.Minigames.RS
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.RS
+    name: RS
+    isExternal: true
+    href: DREditor.Minigames.RS.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.RS
+    name: RS
+    isExternal: true
+    href: DREditor.Minigames.RS.html
+- uid: DREditor.Minigames.RS.ITieBreaker
+  commentId: T:DREditor.Minigames.RS.ITieBreaker
+  parent: DREditor.Minigames.RS
+  isExternal: true
+  href: DREditor.Minigames.RS.ITieBreaker.html
+  name: ITieBreaker
+  nameWithType: ITieBreaker
+  fullName: DREditor.Minigames.RS.ITieBreaker
+- uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<IDebateGroupManager>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Minigames.Debates.Managers.IDebateGroupManager>.Awake()
+  nameWithType.vb: ServiceHolder(Of IDebateGroupManager).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Minigames.Debates.Managers.IDebateGroupManager).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Minigames.Debates.Managers.IDebateGroupManager}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Awake*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.Awake
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_Awake
+  name: Awake
+  nameWithType: RSGroupManager.Awake
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Awake
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.OnEnable*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.OnEnable
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_OnEnable
+  name: OnEnable
+  nameWithType: RSGroupManager.OnEnable
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.OnEnable
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.OnDisable*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.OnDisable
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_OnDisable
+  name: OnDisable
+  nameWithType: RSGroupManager.OnDisable
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.OnDisable
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Start*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.Start
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_Start
+  name: Start
+  nameWithType: RSGroupManager.Start
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Start
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseShattered*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseShattered
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_OnPhraseShattered_DREditor_Minigames_Debates_IPhraseShatterable_
+  name: OnPhraseShattered
+  nameWithType: RSGroupManager.OnPhraseShattered
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseShattered
+- uid: DREditor.Minigames.Debates.IPhraseShatterable
+  commentId: T:DREditor.Minigames.Debates.IPhraseShatterable
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.IPhraseShatterable.html
+  name: IPhraseShatterable
+  nameWithType: IPhraseShatterable
+  fullName: DREditor.Minigames.Debates.IPhraseShatterable
+- uid: DREditor.Minigames.Debates
+  commentId: N:DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames.Debates
+  nameWithType: DREditor.Minigames.Debates
+  fullName: DREditor.Minigames.Debates
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  - name: .
+  - uid: DREditor.Minigames.Debates
+    name: Debates
+    isExternal: true
+    href: DREditor.Minigames.Debates.html
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.GetEnemyNumber*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.GetEnemyNumber
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_GetEnemyNumber
+  name: GetEnemyNumber
+  nameWithType: RSGroupManager.GetEnemyNumber
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.GetEnemyNumber
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.CalculateDamage*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.CalculateDamage
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_CalculateDamage
+  name: CalculateDamage
+  nameWithType: RSGroupManager.CalculateDamage
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.CalculateDamage
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_EnemyAttackOnPhraseEnd_DREditor_Minigames_Debates_Panel_DREditor_Minigames_Debates_PhraseTextBase_System_Single_
+  name: EnemyAttackOnPhraseEnd
+  nameWithType: RSGroupManager.EnemyAttackOnPhraseEnd
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.EnemyAttackOnPhraseEnd
+- uid: DREditor.Minigames.Debates.Panel
+  commentId: T:DREditor.Minigames.Debates.Panel
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.Panel.html
+  name: Panel
+  nameWithType: Panel
+  fullName: DREditor.Minigames.Debates.Panel
+- uid: DREditor.Minigames.Debates.PhraseTextBase
+  commentId: T:DREditor.Minigames.Debates.PhraseTextBase
+  parent: DREditor.Minigames.Debates
+  isExternal: true
+  href: DREditor.Minigames.Debates.PhraseTextBase.html
+  name: PhraseTextBase
+  nameWithType: PhraseTextBase
+  fullName: DREditor.Minigames.Debates.PhraseTextBase
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_OnPhraseAnimated_DREditor_Minigames_Debates_Panel_DREditor_Minigames_Debates_PhraseTextBase_System_Single_
+  name: OnPhraseAnimated
+  nameWithType: RSGroupManager.OnPhraseAnimated
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.OnPhraseAnimated
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.AnimationInvalid*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.AnimationInvalid
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_AnimationInvalid_DREditor_Minigames_Debates_PhraseTextBase_
+  name: AnimationInvalid
+  nameWithType: RSGroupManager.AnimationInvalid
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.AnimationInvalid
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayValidGroups
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayValidGroups
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayValidGroups
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: PlayValidGroups()
+  nameWithType: DebateGroupManagerBase<RSGroup>.PlayValidGroups()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.PlayValidGroups()
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).PlayValidGroups()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).PlayValidGroups()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayValidGroups
+    name: PlayValidGroups
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.PlayValidGroups
+    name: PlayValidGroups
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.PlayValidGroups*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.PlayValidGroups
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_PlayValidGroups
+  name: PlayValidGroups
+  nameWithType: RSGroupManager.PlayValidGroups
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.PlayValidGroups
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayValidGroups
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayValidGroups
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: PlayValidGroups()
+  nameWithType: DebateGroupManagerBase<T>.PlayValidGroups()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.PlayValidGroups()
+  nameWithType.vb: DebateGroupManagerBase(Of T).PlayValidGroups()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).PlayValidGroups()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayValidGroups
+    name: PlayValidGroups
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.PlayValidGroups
+    name: PlayValidGroups
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.EvaluateSectionResult
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.EvaluateSectionResult
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.EvaluateSectionResult
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: EvaluateSectionResult()
+  nameWithType: DebateGroupManagerBase<RSGroup>.EvaluateSectionResult()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.EvaluateSectionResult()
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).EvaluateSectionResult()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).EvaluateSectionResult()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.EvaluateSectionResult
+    name: EvaluateSectionResult
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.EvaluateSectionResult
+    name: EvaluateSectionResult
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.EvaluateSectionResult*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.EvaluateSectionResult
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_EvaluateSectionResult
+  name: EvaluateSectionResult
+  nameWithType: RSGroupManager.EvaluateSectionResult
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.EvaluateSectionResult
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.EvaluateSectionResult
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.EvaluateSectionResult
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: EvaluateSectionResult()
+  nameWithType: DebateGroupManagerBase<T>.EvaluateSectionResult()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.EvaluateSectionResult()
+  nameWithType.vb: DebateGroupManagerBase(Of T).EvaluateSectionResult()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).EvaluateSectionResult()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.EvaluateSectionResult
+    name: EvaluateSectionResult
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.EvaluateSectionResult
+    name: EvaluateSectionResult
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Stall
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Stall
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Stall
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: Stall()
+  nameWithType: DebateGroupManagerBase<RSGroup>.Stall()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.Stall()
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).Stall()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).Stall()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Stall
+    name: Stall
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Stall
+    name: Stall
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Stall*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.Stall
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_Stall
+  name: Stall
+  nameWithType: RSGroupManager.Stall
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Stall
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Stall
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Stall
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: Stall()
+  nameWithType: DebateGroupManagerBase<T>.Stall()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.Stall()
+  nameWithType.vb: DebateGroupManagerBase(Of T).Stall()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).Stall()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Stall
+    name: Stall
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Stall
+    name: Stall
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Advance
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Advance
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Advance
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: Advance()
+  nameWithType: DebateGroupManagerBase<RSGroup>.Advance()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.Advance()
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).Advance()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).Advance()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Advance
+    name: Advance
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Advance
+    name: Advance
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Advance*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.Advance
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_Advance
+  name: Advance
+  nameWithType: RSGroupManager.Advance
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Advance
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Advance
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Advance
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: Advance()
+  nameWithType: DebateGroupManagerBase<T>.Advance()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.Advance()
+  nameWithType.vb: DebateGroupManagerBase(Of T).Advance()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).Advance()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Advance
+    name: Advance
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Advance
+    name: Advance
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Retreat
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Retreat
+  parent: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}
+  definition: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Retreat
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: Retreat()
+  nameWithType: DebateGroupManagerBase<RSGroup>.Retreat()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<DREditor.Minigames.RS.Managers.RSGroup>.Retreat()
+  nameWithType.vb: DebateGroupManagerBase(Of RSGroup).Retreat()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of DREditor.Minigames.RS.Managers.RSGroup).Retreat()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Retreat
+    name: Retreat
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase{DREditor.Minigames.RS.Managers.RSGroup}.Retreat
+    name: Retreat
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.Retreat*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.Retreat
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager_Retreat
+  name: Retreat
+  nameWithType: RSGroupManager.Retreat
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.Retreat
+- uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Retreat
+  commentId: M:DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Retreat
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  name: Retreat()
+  nameWithType: DebateGroupManagerBase<T>.Retreat()
+  fullName: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase<T>.Retreat()
+  nameWithType.vb: DebateGroupManagerBase(Of T).Retreat()
+  fullName.vb: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase(Of T).Retreat()
+  spec.csharp:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Retreat
+    name: Retreat
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Minigames.Debates.Managers.DebateGroupManagerBase`1.Retreat
+    name: Retreat
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Managers/DebateGroupManagerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.RS.Managers.RSGroupManager.#ctor*
+  commentId: Overload:DREditor.Minigames.RS.Managers.RSGroupManager.#ctor
+  isExternal: true
+  href: DREditor.Minigames.RS.Managers.RSGroupManager.html#DREditor_Minigames_RS_Managers_RSGroupManager__ctor
+  name: RSGroupManager
+  nameWithType: RSGroupManager.RSGroupManager
+  fullName: DREditor.Minigames.RS.Managers.RSGroupManager.RSGroupManager
+  nameWithType.vb: RSGroupManager.New
+  fullName.vb: DREditor.Minigames.RS.Managers.RSGroupManager.New
+  name.vb: New
