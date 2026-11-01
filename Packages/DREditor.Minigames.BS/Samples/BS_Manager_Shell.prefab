@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &519266951640283308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3888004582538263326}
+  - component: {fileID: 6532869711084237442}
+  - component: {fileID: 5645951775197928006}
+  m_Layer: 0
+  m_Name: BS_Manager_Shell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3888004582538263326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519266951640283308}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6532869711084237442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519266951640283308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ea774c3ad84714fb1c8157c327a342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endMinigameEvent: EndMinigame
+  destroyBufferDuration: 0.5
+  trialMistake: {fileID: 11400000, guid: fd18f268975177b49a6bb04fc134bf24, type: 2}
+  inTrialMinigame: {fileID: 11400000, guid: d7631f92c51dad4408c3ff48cb4b8d48, type: 2}
+  playerHasDied: {fileID: 11400000, guid: 9dc05d81ead29f647811ecc3464b6691, type: 2}
+  trialTimeUp: {fileID: 11400000, guid: b9db111180146994a9b49915d2a78ea1, type: 2}
+  submit: {fileID: 392368643174621059, guid: 5db4984853779e74db3e8e6c0ebb48c9, type: 3}
+  move: {fileID: -2537653343038290460, guid: 5db4984853779e74db3e8e6c0ebb48c9, type: 3}
+  controls: {fileID: -7201138993201489924, guid: 5db4984853779e74db3e8e6c0ebb48c9,
+    type: 3}
+  moving: 0
+  controlsKey: bs
+  currentControlsKey: {fileID: 11400000, guid: 076e48fabb7b9164f8f3255e13868b1a, type: 2}
+  inMenu: {fileID: 11400000, guid: ecf132a66f959974d84a1d2292242bdf, type: 2}
+  callControlsUI: {fileID: 11400000, guid: cf2a5300822769140b1e8e5f092582a9, type: 2}
+  questionToggle: {fileID: 0}
+  characterDatabase: {fileID: 0}
+  cameraPositionOffset: 0
+  debug: 0
+  debugbufferTime: 1
+  builder: {fileID: 0}
+  minigameUI: {fileID: 0}
+  selectionUI: {fileID: 0}
+  answerUI: {fileID: 0}
+  menuFadeWaitTime: 0.25
+  removeOffsetBufferDuration: 1
+  moveStallDuration: 0.3
+  OnMinigameStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowVisuals:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideVisuals:
+    m_PersistentCalls:
+      m_Calls: []
+  OnChangeSelection:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DREditor.Minigames.BS.BlackenedNameScroller, DREditor.Minigames
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCorrectSelected:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5645951775197928006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519266951640283308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134c7b5389d92a14fbc80606f01394a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DREditor.Minigames::DREditor.Minigames.RestoreControlsUIPostDialogue
+  currentControlsKey: {fileID: 11400000, guid: 076e48fabb7b9164f8f3255e13868b1a, type: 2}
+  scanningKey: trialdialogue
+  originalKey: 
