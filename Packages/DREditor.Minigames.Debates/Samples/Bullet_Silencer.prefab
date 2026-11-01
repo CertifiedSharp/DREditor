@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3068025450834665141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7381645576297214220}
+  - component: {fileID: 6156855735668157217}
+  - component: {fileID: 8734116406583991909}
+  m_Layer: 0
+  m_Name: Bullet_Silencer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7381645576297214220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068025450834665141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6156855735668157217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068025450834665141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33db41a278642c9408625e9c64dd2530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  configureManually: 0
+  inputAllowed: {fileID: 11400000, guid: c402d1823b564d244948dbb04c7c1211, type: 2}
+  silence: {fileID: 3039938025748162387, guid: 5db4984853779e74db3e8e6c0ebb48c9, type: 3}
+  canFireCondition: {fileID: 8734116406583991909}
+  silencable: {fileID: 11400000, guid: 2b1dd1b66418005438869a65da22d720, type: 2}
+  timeRemovedOnHitPhrase: 3
+  timeAddedOnHitWN: 5
+  OnHitWhiteNoise:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHitNonWhiteNoise:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMissedWhiteNoise:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8734116406583991909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068025450834665141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaff56f3c16f5054e87b71a753f6193f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DREditor.UIHandling::DREditor.UIHandling.EvaluateBoolCondition
+  onConditionPassed:
+    m_PersistentCalls:
+      m_Calls: []
+  onConditionFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onConditionEvaluated:
+    m_PersistentCalls:
+      m_Calls: []
+  debug: 0
+  any: 0
+  events:
+  - boolEvent: {fileID: 11400000, guid: 6c86ef0bfc10a214085dc5710c26330c, type: 2}
+    matchState: 1
+  - boolEvent: {fileID: 11400000, guid: 04326fc2342440141908c0d56a9b1b77, type: 2}
+    matchState: 0

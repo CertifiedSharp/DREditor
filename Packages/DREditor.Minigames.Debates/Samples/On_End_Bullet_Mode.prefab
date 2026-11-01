@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7452269908758151470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2622876691131330030}
+  - component: {fileID: 3636288003232770140}
+  - component: {fileID: 7526678232848186533}
+  m_Layer: 0
+  m_Name: On_End_Bullet_Mode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2622876691131330030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452269908758151470}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3636288003232770140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452269908758151470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1417e6917ab406f4b8031f3547ddffbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DREditor::DREditor.EventObjects.BoolWithEventListener
+  boolWithEvent: {fileID: 0}
+  onTrueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onFalseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7526678232848186533}
+        m_TargetAssemblyTypeName: DREditor.UIHandling.EvaluateBoolCondition, DREditor.UIHandling
+        m_MethodName: InvokeEvaluate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7526678232848186533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452269908758151470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaff56f3c16f5054e87b71a753f6193f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DREditor.UIHandling::DREditor.UIHandling.EvaluateBoolCondition
+  onConditionPassed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DREditor.SceneEvent, DREditor
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onConditionFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onConditionEvaluated:
+    m_PersistentCalls:
+      m_Calls: []
+  debug: 0
+  events:
+  - boolEvent: {fileID: 11400000, guid: d1f935b9dbd74ea4c857b1432c16719c, type: 2}
+    matchState: 1
