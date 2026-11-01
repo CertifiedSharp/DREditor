@@ -1,0 +1,1743 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Maps.MapManagerBase
+  commentId: T:DREditor.Maps.MapManagerBase
+  id: MapManagerBase
+  parent: DREditor.Maps
+  children:
+  - DREditor.Maps.MapManagerBase.#ctor
+  - DREditor.Maps.MapManagerBase.AddUnlockedArea(System.String)
+  - DREditor.Maps.MapManagerBase.AnimateToHoveredPlace
+  - DREditor.Maps.MapManagerBase.DestroyAreaUI
+  - DREditor.Maps.MapManagerBase.GetInstanceData
+  - DREditor.Maps.MapManagerBase.InstanceData
+  - DREditor.Maps.MapManagerBase.IsMovingDown(System.Single)
+  - DREditor.Maps.MapManagerBase.IsMovingUp(System.Single)
+  - DREditor.Maps.MapManagerBase.NavigateSelectVisual(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - DREditor.Maps.MapManagerBase.PopulateMapUIText(System.Int32)
+  - DREditor.Maps.MapManagerBase.SetInstanceData(DREditor.Maps.MapEntry)
+  - DREditor.Maps.MapManagerBase.ShiftThenHover(System.Boolean)
+  - DREditor.Maps.MapManagerBase.SpawnLoadAreaUI
+  - DREditor.Maps.MapManagerBase.Start
+  - DREditor.Maps.MapManagerBase.UpdateMapArea
+  - DREditor.Maps.MapManagerBase.UpdateMapUI
+  - DREditor.Maps.MapManagerBase.WaitForAreaLoaded
+  - DREditor.Maps.MapManagerBase.areaGameObject
+  - DREditor.Maps.MapManagerBase.areaText
+  - DREditor.Maps.MapManagerBase.currentAreaIndex
+  - DREditor.Maps.MapManagerBase.currentAreaManager
+  - DREditor.Maps.MapManagerBase.mapDatabase
+  - DREditor.Maps.MapManagerBase.onMapChanging
+  - DREditor.Maps.MapManagerBase.placeOptionHolder
+  - DREditor.Maps.MapManagerBase.root
+  - DREditor.Maps.MapManagerBase.shiftNumber
+  langs:
+  - csharp
+  - vb
+  name: MapManagerBase
+  nameWithType: MapManagerBase
+  fullName: DREditor.Maps.MapManagerBase
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: 'public abstract class MapManagerBase : ServiceHolder<IMapManager>, IMapManager'
+    content.vb: Public MustInherit Class MapManagerBase Inherits ServiceHolder(Of IMapManager) Implements IMapManager
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  derivedClasses:
+  - DREditor.Maps.MapManager
+  implements:
+  - DREditor.Maps.IMapManager
+  inheritedMembers:
+  - DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.Awake
+  - DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.InitializeService
+  - DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.OnDestroy
+  extensionMethods:
+  - DREditor.Maps.MapManagerBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Maps.MapManagerBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Maps.MapManagerBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Maps.MapManagerBase.InstanceData
+  commentId: F:DREditor.Maps.MapManagerBase.InstanceData
+  id: InstanceData
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: InstanceData
+  nameWithType: MapManagerBase.InstanceData
+  fullName: DREditor.Maps.MapManagerBase.InstanceData
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected MapEntry InstanceData
+    return:
+      type: DREditor.Maps.MapEntry
+    content.vb: >-
+      <Divider>
+
+      Protected InstanceData As MapEntry
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Maps.MapManagerBase.areaGameObject
+  commentId: F:DREditor.Maps.MapManagerBase.areaGameObject
+  id: areaGameObject
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: areaGameObject
+  nameWithType: MapManagerBase.areaGameObject
+  fullName: DREditor.Maps.MapManagerBase.areaGameObject
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected GameObject areaGameObject
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Protected areaGameObject As GameObject
+- uid: DREditor.Maps.MapManagerBase.currentAreaManager
+  commentId: F:DREditor.Maps.MapManagerBase.currentAreaManager
+  id: currentAreaManager
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: currentAreaManager
+  nameWithType: MapManagerBase.currentAreaManager
+  fullName: DREditor.Maps.MapManagerBase.currentAreaManager
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected MapAreaManager currentAreaManager
+    return:
+      type: DREditor.Maps.MapAreaManager
+    content.vb: Protected currentAreaManager As MapAreaManager
+- uid: DREditor.Maps.MapManagerBase.currentAreaIndex
+  commentId: F:DREditor.Maps.MapManagerBase.currentAreaIndex
+  id: currentAreaIndex
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: currentAreaIndex
+  nameWithType: MapManagerBase.currentAreaIndex
+  fullName: DREditor.Maps.MapManagerBase.currentAreaIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected int currentAreaIndex
+    return:
+      type: System.Int32
+    content.vb: Protected currentAreaIndex As Integer
+- uid: DREditor.Maps.MapManagerBase.mapDatabase
+  commentId: F:DREditor.Maps.MapManagerBase.mapDatabase
+  id: mapDatabase
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: mapDatabase
+  nameWithType: MapManagerBase.mapDatabase
+  fullName: DREditor.Maps.MapManagerBase.mapDatabase
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected MapDatabase mapDatabase
+    return:
+      type: DREditor.Maps.MapDatabase
+    content.vb: >-
+      <Divider>
+
+      Protected mapDatabase As MapDatabase
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Maps.MapManagerBase.root
+  commentId: F:DREditor.Maps.MapManagerBase.root
+  id: root
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: root
+  nameWithType: MapManagerBase.root
+  fullName: DREditor.Maps.MapManagerBase.root
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected GameObject root
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Protected root As GameObject
+- uid: DREditor.Maps.MapManagerBase.areaText
+  commentId: F:DREditor.Maps.MapManagerBase.areaText
+  id: areaText
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: areaText
+  nameWithType: MapManagerBase.areaText
+  fullName: DREditor.Maps.MapManagerBase.areaText
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected TextMeshProUGUI areaText
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Protected areaText As TextMeshProUGUI
+- uid: DREditor.Maps.MapManagerBase.onMapChanging
+  commentId: F:DREditor.Maps.MapManagerBase.onMapChanging
+  id: onMapChanging
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: onMapChanging
+  nameWithType: MapManagerBase.onMapChanging
+  fullName: DREditor.Maps.MapManagerBase.onMapChanging
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  syntax:
+    content: protected UnityEvent onMapChanging
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: Protected onMapChanging As UnityEvent
+- uid: DREditor.Maps.MapManagerBase.shiftNumber
+  commentId: F:DREditor.Maps.MapManagerBase.shiftNumber
+  id: shiftNumber
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: shiftNumber
+  nameWithType: MapManagerBase.shiftNumber
+  fullName: DREditor.Maps.MapManagerBase.shiftNumber
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected int shiftNumber
+    return:
+      type: System.Int32
+    content.vb: Protected shiftNumber As Integer
+- uid: DREditor.Maps.MapManagerBase.placeOptionHolder
+  commentId: F:DREditor.Maps.MapManagerBase.placeOptionHolder
+  id: placeOptionHolder
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: placeOptionHolder
+  nameWithType: MapManagerBase.placeOptionHolder
+  fullName: DREditor.Maps.MapManagerBase.placeOptionHolder
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected IPlaceOptionHolder placeOptionHolder
+    return:
+      type: DREditor.Maps.IPlaceOptionHolder
+    content.vb: Protected placeOptionHolder As IPlaceOptionHolder
+- uid: DREditor.Maps.MapManagerBase.Start
+  commentId: M:DREditor.Maps.MapManagerBase.Start
+  id: Start
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: MapManagerBase.Start()
+  fullName: DREditor.Maps.MapManagerBase.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.Maps.MapManagerBase.Start*
+- uid: DREditor.Maps.MapManagerBase.UpdateMapUI
+  commentId: M:DREditor.Maps.MapManagerBase.UpdateMapUI
+  id: UpdateMapUI
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: UpdateMapUI()
+  nameWithType: MapManagerBase.UpdateMapUI()
+  fullName: DREditor.Maps.MapManagerBase.UpdateMapUI()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void UpdateMapUI()
+    content.vb: Protected Overridable Sub UpdateMapUI()
+  overload: DREditor.Maps.MapManagerBase.UpdateMapUI*
+- uid: DREditor.Maps.MapManagerBase.UpdateMapArea
+  commentId: M:DREditor.Maps.MapManagerBase.UpdateMapArea
+  id: UpdateMapArea
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: UpdateMapArea()
+  nameWithType: MapManagerBase.UpdateMapArea()
+  fullName: DREditor.Maps.MapManagerBase.UpdateMapArea()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator UpdateMapArea()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function UpdateMapArea() As IEnumerator
+  overload: DREditor.Maps.MapManagerBase.UpdateMapArea*
+- uid: DREditor.Maps.MapManagerBase.DestroyAreaUI
+  commentId: M:DREditor.Maps.MapManagerBase.DestroyAreaUI
+  id: DestroyAreaUI
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: DestroyAreaUI()
+  nameWithType: MapManagerBase.DestroyAreaUI()
+  fullName: DREditor.Maps.MapManagerBase.DestroyAreaUI()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void DestroyAreaUI()
+    content.vb: Protected Overridable Sub DestroyAreaUI()
+  overload: DREditor.Maps.MapManagerBase.DestroyAreaUI*
+- uid: DREditor.Maps.MapManagerBase.SpawnLoadAreaUI
+  commentId: M:DREditor.Maps.MapManagerBase.SpawnLoadAreaUI
+  id: SpawnLoadAreaUI
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: SpawnLoadAreaUI()
+  nameWithType: MapManagerBase.SpawnLoadAreaUI()
+  fullName: DREditor.Maps.MapManagerBase.SpawnLoadAreaUI()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SpawnLoadAreaUI()
+    content.vb: Protected Overridable Sub SpawnLoadAreaUI()
+  overload: DREditor.Maps.MapManagerBase.SpawnLoadAreaUI*
+- uid: DREditor.Maps.MapManagerBase.PopulateMapUIText(System.Int32)
+  commentId: M:DREditor.Maps.MapManagerBase.PopulateMapUIText(System.Int32)
+  id: PopulateMapUIText(System.Int32)
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: PopulateMapUIText(int)
+  nameWithType: MapManagerBase.PopulateMapUIText(int)
+  fullName: DREditor.Maps.MapManagerBase.PopulateMapUIText(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void PopulateMapUIText(int shiftNum)
+    parameters:
+    - id: shiftNum
+      type: System.Int32
+      description: ''
+    content.vb: Protected Overridable Sub PopulateMapUIText(shiftNum As Integer)
+  overload: DREditor.Maps.MapManagerBase.PopulateMapUIText*
+  nameWithType.vb: MapManagerBase.PopulateMapUIText(Integer)
+  fullName.vb: DREditor.Maps.MapManagerBase.PopulateMapUIText(Integer)
+  name.vb: PopulateMapUIText(Integer)
+- uid: DREditor.Maps.MapManagerBase.NavigateSelectVisual(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:DREditor.Maps.MapManagerBase.NavigateSelectVisual(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: NavigateSelectVisual(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: NavigateSelectVisual(CallbackContext)
+  nameWithType: MapManagerBase.NavigateSelectVisual(InputAction.CallbackContext)
+  fullName: DREditor.Maps.MapManagerBase.NavigateSelectVisual(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected void NavigateSelectVisual(InputAction.CallbackContext ctx)
+    parameters:
+    - id: ctx
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+      description: ''
+    content.vb: Protected Sub NavigateSelectVisual(ctx As InputAction.CallbackContext)
+  overload: DREditor.Maps.MapManagerBase.NavigateSelectVisual*
+- uid: DREditor.Maps.MapManagerBase.IsMovingUp(System.Single)
+  commentId: M:DREditor.Maps.MapManagerBase.IsMovingUp(System.Single)
+  id: IsMovingUp(System.Single)
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: IsMovingUp(float)
+  nameWithType: MapManagerBase.IsMovingUp(float)
+  fullName: DREditor.Maps.MapManagerBase.IsMovingUp(float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool IsMovingUp(float vertical)
+    parameters:
+    - id: vertical
+      type: System.Single
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function IsMovingUp(vertical As Single) As Boolean
+  overload: DREditor.Maps.MapManagerBase.IsMovingUp*
+  nameWithType.vb: MapManagerBase.IsMovingUp(Single)
+  fullName.vb: DREditor.Maps.MapManagerBase.IsMovingUp(Single)
+  name.vb: IsMovingUp(Single)
+- uid: DREditor.Maps.MapManagerBase.IsMovingDown(System.Single)
+  commentId: M:DREditor.Maps.MapManagerBase.IsMovingDown(System.Single)
+  id: IsMovingDown(System.Single)
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: IsMovingDown(float)
+  nameWithType: MapManagerBase.IsMovingDown(float)
+  fullName: DREditor.Maps.MapManagerBase.IsMovingDown(float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool IsMovingDown(float vertical)
+    parameters:
+    - id: vertical
+      type: System.Single
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function IsMovingDown(vertical As Single) As Boolean
+  overload: DREditor.Maps.MapManagerBase.IsMovingDown*
+  nameWithType.vb: MapManagerBase.IsMovingDown(Single)
+  fullName.vb: DREditor.Maps.MapManagerBase.IsMovingDown(Single)
+  name.vb: IsMovingDown(Single)
+- uid: DREditor.Maps.MapManagerBase.ShiftThenHover(System.Boolean)
+  commentId: M:DREditor.Maps.MapManagerBase.ShiftThenHover(System.Boolean)
+  id: ShiftThenHover(System.Boolean)
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: ShiftThenHover(bool)
+  nameWithType: MapManagerBase.ShiftThenHover(bool)
+  fullName: DREditor.Maps.MapManagerBase.ShiftThenHover(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ShiftThenHover(bool movingUp)
+    parameters:
+    - id: movingUp
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Sub ShiftThenHover(movingUp As Boolean)
+  overload: DREditor.Maps.MapManagerBase.ShiftThenHover*
+  nameWithType.vb: MapManagerBase.ShiftThenHover(Boolean)
+  fullName.vb: DREditor.Maps.MapManagerBase.ShiftThenHover(Boolean)
+  name.vb: ShiftThenHover(Boolean)
+- uid: DREditor.Maps.MapManagerBase.AnimateToHoveredPlace
+  commentId: M:DREditor.Maps.MapManagerBase.AnimateToHoveredPlace
+  id: AnimateToHoveredPlace
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: AnimateToHoveredPlace()
+  nameWithType: MapManagerBase.AnimateToHoveredPlace()
+  fullName: DREditor.Maps.MapManagerBase.AnimateToHoveredPlace()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void AnimateToHoveredPlace()
+    content.vb: Protected Overridable Sub AnimateToHoveredPlace()
+  overload: DREditor.Maps.MapManagerBase.AnimateToHoveredPlace*
+- uid: DREditor.Maps.MapManagerBase.WaitForAreaLoaded
+  commentId: M:DREditor.Maps.MapManagerBase.WaitForAreaLoaded
+  id: WaitForAreaLoaded
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: WaitForAreaLoaded()
+  nameWithType: MapManagerBase.WaitForAreaLoaded()
+  fullName: DREditor.Maps.MapManagerBase.WaitForAreaLoaded()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator WaitForAreaLoaded()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function WaitForAreaLoaded() As IEnumerator
+  overload: DREditor.Maps.MapManagerBase.WaitForAreaLoaded*
+- uid: DREditor.Maps.MapManagerBase.GetInstanceData
+  commentId: M:DREditor.Maps.MapManagerBase.GetInstanceData
+  id: GetInstanceData
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: GetInstanceData()
+  nameWithType: MapManagerBase.GetInstanceData()
+  fullName: DREditor.Maps.MapManagerBase.GetInstanceData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual MapEntry GetInstanceData()
+    return:
+      type: DREditor.Maps.MapEntry
+      description: ''
+    content.vb: Public Overridable Function GetInstanceData() As MapEntry
+  overload: DREditor.Maps.MapManagerBase.GetInstanceData*
+  implements:
+  - DREditor.Maps.IMapManager.GetInstanceData
+- uid: DREditor.Maps.MapManagerBase.SetInstanceData(DREditor.Maps.MapEntry)
+  commentId: M:DREditor.Maps.MapManagerBase.SetInstanceData(DREditor.Maps.MapEntry)
+  id: SetInstanceData(DREditor.Maps.MapEntry)
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: SetInstanceData(MapEntry)
+  nameWithType: MapManagerBase.SetInstanceData(MapEntry)
+  fullName: DREditor.Maps.MapManagerBase.SetInstanceData(DREditor.Maps.MapEntry)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void SetInstanceData(MapEntry InstanceData)
+    parameters:
+    - id: InstanceData
+      type: DREditor.Maps.MapEntry
+      description: ''
+    content.vb: Public Overridable Sub SetInstanceData(InstanceData As MapEntry)
+  overload: DREditor.Maps.MapManagerBase.SetInstanceData*
+  implements:
+  - DREditor.Maps.IMapManager.SetInstanceData(DREditor.Maps.MapEntry)
+- uid: DREditor.Maps.MapManagerBase.AddUnlockedArea(System.String)
+  commentId: M:DREditor.Maps.MapManagerBase.AddUnlockedArea(System.String)
+  id: AddUnlockedArea(System.String)
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: AddUnlockedArea(string)
+  nameWithType: MapManagerBase.AddUnlockedArea(string)
+  fullName: DREditor.Maps.MapManagerBase.AddUnlockedArea(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void AddUnlockedArea(string areaName)
+    parameters:
+    - id: areaName
+      type: System.String
+      description: ''
+    content.vb: Public Overridable Sub AddUnlockedArea(areaName As String)
+  overload: DREditor.Maps.MapManagerBase.AddUnlockedArea*
+  implements:
+  - DREditor.Maps.IMapManager.AddUnlockedArea(System.String)
+  nameWithType.vb: MapManagerBase.AddUnlockedArea(String)
+  fullName.vb: DREditor.Maps.MapManagerBase.AddUnlockedArea(String)
+  name.vb: AddUnlockedArea(String)
+- uid: DREditor.Maps.MapManagerBase.#ctor
+  commentId: M:DREditor.Maps.MapManagerBase.#ctor
+  id: '#ctor'
+  parent: DREditor.Maps.MapManagerBase
+  langs:
+  - csharp
+  - vb
+  name: MapManagerBase()
+  nameWithType: MapManagerBase.MapManagerBase()
+  fullName: DREditor.Maps.MapManagerBase.MapManagerBase()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Maps/MapManagerBase.cs
+  assemblies:
+  - DREditor.Maps
+  namespace: DREditor.Maps
+  syntax:
+    content: protected MapManagerBase()
+    content.vb: Protected Sub New()
+  overload: DREditor.Maps.MapManagerBase.#ctor*
+  nameWithType.vb: MapManagerBase.New()
+  fullName.vb: DREditor.Maps.MapManagerBase.New()
+  name.vb: New()
+references:
+- uid: DREditor.Maps
+  commentId: N:DREditor.Maps
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Maps
+  nameWithType: DREditor.Maps
+  fullName: DREditor.Maps
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Maps
+    name: Maps
+    isExternal: true
+    href: DREditor.Maps.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Maps
+    name: Maps
+    isExternal: true
+    href: DREditor.Maps.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<IMapManager>
+  nameWithType: ServiceHolder<IMapManager>
+  fullName: DREditor.Services.ServiceHolder<DREditor.Maps.IMapManager>
+  nameWithType.vb: ServiceHolder(Of IMapManager)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Maps.IMapManager)
+  name.vb: ServiceHolder(Of IMapManager)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.Maps.IMapManager
+    name: IMapManager
+    isExternal: true
+    href: DREditor.Maps.IMapManager.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Maps.IMapManager
+    name: IMapManager
+    isExternal: true
+    href: DREditor.Maps.IMapManager.html
+  - name: )
+- uid: DREditor.Maps.IMapManager
+  commentId: T:DREditor.Maps.IMapManager
+  parent: DREditor.Maps
+  isExternal: true
+  href: DREditor.Maps.IMapManager.html
+  name: IMapManager
+  nameWithType: IMapManager
+  fullName: DREditor.Maps.IMapManager
+- uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<IMapManager>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.Maps.IMapManager>.registerService
+  nameWithType.vb: ServiceHolder(Of IMapManager).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Maps.IMapManager).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<IMapManager>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.Maps.IMapManager>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of IMapManager).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Maps.IMapManager).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<IMapManager>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Maps.IMapManager>.Awake()
+  nameWithType.vb: ServiceHolder(Of IMapManager).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Maps.IMapManager).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<IMapManager>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Maps.IMapManager>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of IMapManager).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Maps.IMapManager).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<IMapManager>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Maps.IMapManager>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of IMapManager).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Maps.IMapManager).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<IMapManager>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Maps.IMapManager>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of IMapManager).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Maps.IMapManager).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Maps.IMapManager}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Maps.MapManagerBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<MapManagerBase>(MapManagerBase)
+  nameWithType: ReflectionHelper.GetFieldNames<MapManagerBase>(MapManagerBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Maps.MapManagerBase>(DREditor.Maps.MapManagerBase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of MapManagerBase)(MapManagerBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Maps.MapManagerBase)(DREditor.Maps.MapManagerBase)
+  name.vb: GetFieldNames(Of MapManagerBase)(MapManagerBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Maps.MapManagerBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Maps.MapManagerBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+- uid: DREditor.Maps.MapManagerBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<MapManagerBase>(MapManagerBase)
+  nameWithType: ReflectionHelper.GetFieldValues<MapManagerBase>(MapManagerBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Maps.MapManagerBase>(DREditor.Maps.MapManagerBase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of MapManagerBase)(MapManagerBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Maps.MapManagerBase)(DREditor.Maps.MapManagerBase)
+  name.vb: GetFieldValues(Of MapManagerBase)(MapManagerBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Maps.MapManagerBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Maps.MapManagerBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+- uid: DREditor.Maps.MapManagerBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<MapManagerBase>(MapManagerBase)
+  nameWithType: DeepCopyExtensions.DeepCopy<MapManagerBase>(MapManagerBase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Maps.MapManagerBase>(DREditor.Maps.MapManagerBase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of MapManagerBase)(MapManagerBase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Maps.MapManagerBase)(DREditor.Maps.MapManagerBase)
+  name.vb: DeepCopy(Of MapManagerBase)(MapManagerBase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Maps.MapManagerBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Maps.MapManagerBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Maps.MapManagerBase
+    name: MapManagerBase
+    isExternal: true
+    href: DREditor.Maps.MapManagerBase.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Maps.MapEntry
+  commentId: T:DREditor.Maps.MapEntry
+  parent: DREditor.Maps
+  isExternal: true
+  href: DREditor.Maps.MapEntry.html
+  name: MapEntry
+  nameWithType: MapEntry
+  fullName: DREditor.Maps.MapEntry
+- uid: UnityEngine.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: DREditor.Maps.MapAreaManager
+  commentId: T:DREditor.Maps.MapAreaManager
+  parent: DREditor.Maps
+  isExternal: true
+  href: DREditor.Maps.MapAreaManager.html
+  name: MapAreaManager
+  nameWithType: MapAreaManager
+  fullName: DREditor.Maps.MapAreaManager
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Maps.MapDatabase
+  commentId: T:DREditor.Maps.MapDatabase
+  parent: DREditor.Maps
+  isExternal: true
+  href: DREditor.Maps.MapDatabase.html
+  name: MapDatabase
+  nameWithType: MapDatabase
+  fullName: DREditor.Maps.MapDatabase
+- uid: TMPro.TextMeshProUGUI
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: UnityEngine.Events.UnityEvent
+  isExternal: true
+  name: UnityEvent
+  nameWithType: UnityEvent
+  fullName: UnityEngine.Events.UnityEvent
+- uid: DREditor.Maps.IPlaceOptionHolder
+  commentId: T:DREditor.Maps.IPlaceOptionHolder
+  parent: DREditor.Maps
+  isExternal: true
+  href: DREditor.Maps.IPlaceOptionHolder.html
+  name: IPlaceOptionHolder
+  nameWithType: IPlaceOptionHolder
+  fullName: DREditor.Maps.IPlaceOptionHolder
+- uid: DREditor.Maps.MapManagerBase.Start*
+  commentId: Overload:DREditor.Maps.MapManagerBase.Start
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_Start
+  name: Start
+  nameWithType: MapManagerBase.Start
+  fullName: DREditor.Maps.MapManagerBase.Start
+- uid: DREditor.Maps.MapManagerBase.UpdateMapUI*
+  commentId: Overload:DREditor.Maps.MapManagerBase.UpdateMapUI
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_UpdateMapUI
+  name: UpdateMapUI
+  nameWithType: MapManagerBase.UpdateMapUI
+  fullName: DREditor.Maps.MapManagerBase.UpdateMapUI
+- uid: DREditor.Maps.MapManagerBase.UpdateMapArea*
+  commentId: Overload:DREditor.Maps.MapManagerBase.UpdateMapArea
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_UpdateMapArea
+  name: UpdateMapArea
+  nameWithType: MapManagerBase.UpdateMapArea
+  fullName: DREditor.Maps.MapManagerBase.UpdateMapArea
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Maps.MapManagerBase.DestroyAreaUI*
+  commentId: Overload:DREditor.Maps.MapManagerBase.DestroyAreaUI
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_DestroyAreaUI
+  name: DestroyAreaUI
+  nameWithType: MapManagerBase.DestroyAreaUI
+  fullName: DREditor.Maps.MapManagerBase.DestroyAreaUI
+- uid: DREditor.Maps.MapManagerBase.SpawnLoadAreaUI*
+  commentId: Overload:DREditor.Maps.MapManagerBase.SpawnLoadAreaUI
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_SpawnLoadAreaUI
+  name: SpawnLoadAreaUI
+  nameWithType: MapManagerBase.SpawnLoadAreaUI
+  fullName: DREditor.Maps.MapManagerBase.SpawnLoadAreaUI
+- uid: DREditor.Maps.MapManagerBase.PopulateMapUIText*
+  commentId: Overload:DREditor.Maps.MapManagerBase.PopulateMapUIText
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_PopulateMapUIText_System_Int32_
+  name: PopulateMapUIText
+  nameWithType: MapManagerBase.PopulateMapUIText
+  fullName: DREditor.Maps.MapManagerBase.PopulateMapUIText
+- uid: DREditor.Maps.MapManagerBase.NavigateSelectVisual*
+  commentId: Overload:DREditor.Maps.MapManagerBase.NavigateSelectVisual
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_NavigateSelectVisual_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: NavigateSelectVisual
+  nameWithType: MapManagerBase.NavigateSelectVisual
+  fullName: DREditor.Maps.MapManagerBase.NavigateSelectVisual
+- uid: UnityEngine.InputSystem.InputAction.CallbackContext
+  isExternal: true
+  name: CallbackContext
+  nameWithType: InputAction.CallbackContext
+  fullName: UnityEngine.InputSystem.InputAction.CallbackContext
+- uid: DREditor.Maps.MapManagerBase.IsMovingUp*
+  commentId: Overload:DREditor.Maps.MapManagerBase.IsMovingUp
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_IsMovingUp_System_Single_
+  name: IsMovingUp
+  nameWithType: MapManagerBase.IsMovingUp
+  fullName: DREditor.Maps.MapManagerBase.IsMovingUp
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Maps.MapManagerBase.IsMovingDown*
+  commentId: Overload:DREditor.Maps.MapManagerBase.IsMovingDown
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_IsMovingDown_System_Single_
+  name: IsMovingDown
+  nameWithType: MapManagerBase.IsMovingDown
+  fullName: DREditor.Maps.MapManagerBase.IsMovingDown
+- uid: DREditor.Maps.MapManagerBase.ShiftThenHover*
+  commentId: Overload:DREditor.Maps.MapManagerBase.ShiftThenHover
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_ShiftThenHover_System_Boolean_
+  name: ShiftThenHover
+  nameWithType: MapManagerBase.ShiftThenHover
+  fullName: DREditor.Maps.MapManagerBase.ShiftThenHover
+- uid: DREditor.Maps.MapManagerBase.AnimateToHoveredPlace*
+  commentId: Overload:DREditor.Maps.MapManagerBase.AnimateToHoveredPlace
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_AnimateToHoveredPlace
+  name: AnimateToHoveredPlace
+  nameWithType: MapManagerBase.AnimateToHoveredPlace
+  fullName: DREditor.Maps.MapManagerBase.AnimateToHoveredPlace
+- uid: DREditor.Maps.MapManagerBase.WaitForAreaLoaded*
+  commentId: Overload:DREditor.Maps.MapManagerBase.WaitForAreaLoaded
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_WaitForAreaLoaded
+  name: WaitForAreaLoaded
+  nameWithType: MapManagerBase.WaitForAreaLoaded
+  fullName: DREditor.Maps.MapManagerBase.WaitForAreaLoaded
+- uid: DREditor.Maps.MapManagerBase.GetInstanceData*
+  commentId: Overload:DREditor.Maps.MapManagerBase.GetInstanceData
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_GetInstanceData
+  name: GetInstanceData
+  nameWithType: MapManagerBase.GetInstanceData
+  fullName: DREditor.Maps.MapManagerBase.GetInstanceData
+- uid: DREditor.Maps.IMapManager.GetInstanceData
+  commentId: M:DREditor.Maps.IMapManager.GetInstanceData
+  parent: DREditor.Maps.IMapManager
+  isExternal: true
+  href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_GetInstanceData
+  name: GetInstanceData()
+  nameWithType: IMapManager.GetInstanceData()
+  fullName: DREditor.Maps.IMapManager.GetInstanceData()
+  spec.csharp:
+  - uid: DREditor.Maps.IMapManager.GetInstanceData
+    name: GetInstanceData
+    isExternal: true
+    href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_GetInstanceData
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Maps.IMapManager.GetInstanceData
+    name: GetInstanceData
+    isExternal: true
+    href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_GetInstanceData
+  - name: (
+  - name: )
+- uid: DREditor.Maps.MapManagerBase.SetInstanceData*
+  commentId: Overload:DREditor.Maps.MapManagerBase.SetInstanceData
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_SetInstanceData_DREditor_Maps_MapEntry_
+  name: SetInstanceData
+  nameWithType: MapManagerBase.SetInstanceData
+  fullName: DREditor.Maps.MapManagerBase.SetInstanceData
+- uid: DREditor.Maps.IMapManager.SetInstanceData(DREditor.Maps.MapEntry)
+  commentId: M:DREditor.Maps.IMapManager.SetInstanceData(DREditor.Maps.MapEntry)
+  parent: DREditor.Maps.IMapManager
+  isExternal: true
+  href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_SetInstanceData_DREditor_Maps_MapEntry_
+  name: SetInstanceData(MapEntry)
+  nameWithType: IMapManager.SetInstanceData(MapEntry)
+  fullName: DREditor.Maps.IMapManager.SetInstanceData(DREditor.Maps.MapEntry)
+  spec.csharp:
+  - uid: DREditor.Maps.IMapManager.SetInstanceData(DREditor.Maps.MapEntry)
+    name: SetInstanceData
+    isExternal: true
+    href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_SetInstanceData_DREditor_Maps_MapEntry_
+  - name: (
+  - uid: DREditor.Maps.MapEntry
+    name: MapEntry
+    isExternal: true
+    href: DREditor.Maps.MapEntry.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Maps.IMapManager.SetInstanceData(DREditor.Maps.MapEntry)
+    name: SetInstanceData
+    isExternal: true
+    href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_SetInstanceData_DREditor_Maps_MapEntry_
+  - name: (
+  - uid: DREditor.Maps.MapEntry
+    name: MapEntry
+    isExternal: true
+    href: DREditor.Maps.MapEntry.html
+  - name: )
+- uid: DREditor.Maps.MapManagerBase.AddUnlockedArea*
+  commentId: Overload:DREditor.Maps.MapManagerBase.AddUnlockedArea
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase_AddUnlockedArea_System_String_
+  name: AddUnlockedArea
+  nameWithType: MapManagerBase.AddUnlockedArea
+  fullName: DREditor.Maps.MapManagerBase.AddUnlockedArea
+- uid: DREditor.Maps.IMapManager.AddUnlockedArea(System.String)
+  commentId: M:DREditor.Maps.IMapManager.AddUnlockedArea(System.String)
+  parent: DREditor.Maps.IMapManager
+  isExternal: true
+  href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_AddUnlockedArea_System_String_
+  name: AddUnlockedArea(string)
+  nameWithType: IMapManager.AddUnlockedArea(string)
+  fullName: DREditor.Maps.IMapManager.AddUnlockedArea(string)
+  nameWithType.vb: IMapManager.AddUnlockedArea(String)
+  fullName.vb: DREditor.Maps.IMapManager.AddUnlockedArea(String)
+  name.vb: AddUnlockedArea(String)
+  spec.csharp:
+  - uid: DREditor.Maps.IMapManager.AddUnlockedArea(System.String)
+    name: AddUnlockedArea
+    isExternal: true
+    href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_AddUnlockedArea_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.Maps.IMapManager.AddUnlockedArea(System.String)
+    name: AddUnlockedArea
+    isExternal: true
+    href: DREditor.Maps.IMapManager.html#DREditor_Maps_IMapManager_AddUnlockedArea_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Maps.MapManagerBase.#ctor*
+  commentId: Overload:DREditor.Maps.MapManagerBase.#ctor
+  isExternal: true
+  href: DREditor.Maps.MapManagerBase.html#DREditor_Maps_MapManagerBase__ctor
+  name: MapManagerBase
+  nameWithType: MapManagerBase.MapManagerBase
+  fullName: DREditor.Maps.MapManagerBase.MapManagerBase
+  nameWithType.vb: MapManagerBase.New
+  fullName.vb: DREditor.Maps.MapManagerBase.New
+  name.vb: New

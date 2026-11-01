@@ -6,6 +6,7 @@ items:
   parent: DREditor.EventObjects
   children:
   - DREditor.EventObjects.ValueWithEvent`2.#ctor
+  - DREditor.EventObjects.ValueWithEvent`2.AddListener(UnityEngine.Events.UnityAction{`0})
   - DREditor.EventObjects.ValueWithEvent`2.GetValueAndAddListener(UnityEngine.Events.UnityAction{`0})
   - DREditor.EventObjects.ValueWithEvent`2.Init
   - DREditor.EventObjects.ValueWithEvent`2.InitialValue
@@ -16,6 +17,7 @@ items:
   - DREditor.EventObjects.ValueWithEvent`2.Reset
   - DREditor.EventObjects.ValueWithEvent`2.SetValue(`0)
   - DREditor.EventObjects.ValueWithEvent`2.Value
+  - DREditor.EventObjects.ValueWithEvent`2.alwaysInvokeOnSetValue
   langs:
   - csharp
   - vb
@@ -24,7 +26,7 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
@@ -42,11 +44,48 @@ items:
   - DREditor.EventObjects.FloatWithEvent
   - DREditor.EventObjects.GameObjectWithEvent
   - DREditor.EventObjects.IntWithEvent
+  - DREditor.EventObjects.OptionWithEvent`2
+  - DREditor.EventObjects.SelectableObjectWithEvent
   - DREditor.EventObjects.SpriteWithEvent
+  - DREditor.EventObjects.StringWithEvent
+  - DREditor.EventObjects.TextureWithEvent
   - DREditor.EventObjects.TransformWithEvent
+  inheritedMembers:
+  - DREditor.EventObjects.BaseValueWithEvent.debug
+  - DREditor.EventObjects.BaseValueWithEvent.OnUpdated
+  - DREditor.EventObjects.BaseValueWithEvent.AddListener(UnityEngine.Events.UnityAction)
+  - DREditor.EventObjects.BaseValueWithEvent.RemoveListener(UnityEngine.Events.UnityAction)
+  - DREditor.EventObjects.BaseValueWithEvent.InvokeUpdated
+  extensionMethods:
+  - DREditor.EventObjects.ValueWithEvent`2.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.EventObjects.ValueWithEvent`2.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.EventObjects.ValueWithEvent`2.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
   nameWithType.vb: ValueWithEvent(Of T, TY)
   fullName.vb: DREditor.EventObjects.ValueWithEvent(Of T, TY)
   name.vb: ValueWithEvent(Of T, TY)
+- uid: DREditor.EventObjects.ValueWithEvent`2.alwaysInvokeOnSetValue
+  commentId: F:DREditor.EventObjects.ValueWithEvent`2.alwaysInvokeOnSetValue
+  id: alwaysInvokeOnSetValue
+  parent: DREditor.EventObjects.ValueWithEvent`2
+  langs:
+  - csharp
+  - vb
+  name: alwaysInvokeOnSetValue
+  nameWithType: ValueWithEvent<T, TY>.alwaysInvokeOnSetValue
+  fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.alwaysInvokeOnSetValue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.EventObjects
+  syntax:
+    content: public bool alwaysInvokeOnSetValue
+    return:
+      type: System.Boolean
+    content.vb: Public alwaysInvokeOnSetValue As Boolean
+  nameWithType.vb: ValueWithEvent(Of T, TY).alwaysInvokeOnSetValue
+  fullName.vb: DREditor.EventObjects.ValueWithEvent(Of T, TY).alwaysInvokeOnSetValue
 - uid: DREditor.EventObjects.ValueWithEvent`2.OnChange
   commentId: F:DREditor.EventObjects.ValueWithEvent`2.OnChange
   id: OnChange
@@ -59,7 +98,7 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.OnChange
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
@@ -82,7 +121,7 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.InitialValue
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
@@ -105,11 +144,11 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.SetValue(T)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
-  summary: Set a new value and invoke the change event if it is different.
+  summary: ''
   example: []
   syntax:
     content: public virtual void SetValue(T x)
@@ -132,11 +171,11 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.Invoke()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
-  summary: Calls OnChange with the current value.
+  summary: ''
   example: []
   syntax:
     content: public override void Invoke()
@@ -157,11 +196,11 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.Init()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
-  summary: Sets the initial value and marks the object initialized.
+  summary: ''
   example: []
   syntax:
     content: public override void Init()
@@ -182,18 +221,18 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.GetValueAndAddListener(UnityEngine.Events.UnityAction<T>)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
-  summary: Get current value of the object and add a listener.
+  summary: ''
   example: []
   syntax:
     content: public virtual T GetValueAndAddListener(UnityAction<T> action)
     parameters:
     - id: action
       type: UnityEngine.Events.UnityAction{{T}}
-      description: Action that should happen on value change
+      description: ''
     return:
       type: '{T}'
     content.vb: Public Overridable Function GetValueAndAddListener(action As UnityAction(Of T)) As T
@@ -201,6 +240,32 @@ items:
   nameWithType.vb: ValueWithEvent(Of T, TY).GetValueAndAddListener(UnityAction(Of T))
   fullName.vb: DREditor.EventObjects.ValueWithEvent(Of T, TY).GetValueAndAddListener(UnityEngine.Events.UnityAction(Of T))
   name.vb: GetValueAndAddListener(UnityAction(Of T))
+- uid: DREditor.EventObjects.ValueWithEvent`2.AddListener(UnityEngine.Events.UnityAction{`0})
+  commentId: M:DREditor.EventObjects.ValueWithEvent`2.AddListener(UnityEngine.Events.UnityAction{`0})
+  id: AddListener(UnityEngine.Events.UnityAction{`0})
+  parent: DREditor.EventObjects.ValueWithEvent`2
+  langs:
+  - csharp
+  - vb
+  name: AddListener(UnityAction<T>)
+  nameWithType: ValueWithEvent<T, TY>.AddListener(UnityAction<T>)
+  fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.AddListener(UnityEngine.Events.UnityAction<T>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.EventObjects
+  syntax:
+    content: public virtual void AddListener(UnityAction<T> action)
+    parameters:
+    - id: action
+      type: UnityEngine.Events.UnityAction{{T}}
+    content.vb: Public Overridable Sub AddListener(action As UnityAction(Of T))
+  overload: DREditor.EventObjects.ValueWithEvent`2.AddListener*
+  nameWithType.vb: ValueWithEvent(Of T, TY).AddListener(UnityAction(Of T))
+  fullName.vb: DREditor.EventObjects.ValueWithEvent(Of T, TY).AddListener(UnityEngine.Events.UnityAction(Of T))
+  name.vb: AddListener(UnityAction(Of T))
 - uid: DREditor.EventObjects.ValueWithEvent`2.RemoveListener(UnityEngine.Events.UnityAction{`0})
   commentId: M:DREditor.EventObjects.ValueWithEvent`2.RemoveListener(UnityEngine.Events.UnityAction{`0})
   id: RemoveListener(UnityEngine.Events.UnityAction{`0})
@@ -213,16 +278,16 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.RemoveListener(UnityEngine.Events.UnityAction<T>)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
   syntax:
-    content: public void RemoveListener(UnityAction<T> action)
+    content: public virtual void RemoveListener(UnityAction<T> action)
     parameters:
     - id: action
       type: UnityEngine.Events.UnityAction{{T}}
-    content.vb: Public Sub RemoveListener(action As UnityAction(Of T))
+    content.vb: Public Overridable Sub RemoveListener(action As UnityAction(Of T))
   overload: DREditor.EventObjects.ValueWithEvent`2.RemoveListener*
   nameWithType.vb: ValueWithEvent(Of T, TY).RemoveListener(UnityAction(Of T))
   fullName.vb: DREditor.EventObjects.ValueWithEvent(Of T, TY).RemoveListener(UnityEngine.Events.UnityAction(Of T))
@@ -239,11 +304,11 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.Reset()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
-  summary: Reset the object's fields.
+  summary: ''
   example: []
   syntax:
     content: public override void Reset()
@@ -264,7 +329,7 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.ValueWithEvent()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
@@ -287,7 +352,7 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.IsInitialized
   type: Property
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
@@ -314,7 +379,7 @@ items:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.Value
   type: Property
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/EventObjects/ValueWithEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.EventObjects
@@ -374,6 +439,325 @@ references:
   name: BaseValueWithEvent
   nameWithType: BaseValueWithEvent
   fullName: DREditor.EventObjects.BaseValueWithEvent
+- uid: DREditor.EventObjects.BaseValueWithEvent.debug
+  commentId: F:DREditor.EventObjects.BaseValueWithEvent.debug
+  parent: DREditor.EventObjects.BaseValueWithEvent
+  isExternal: true
+  href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_debug
+  name: debug
+  nameWithType: BaseValueWithEvent.debug
+  fullName: DREditor.EventObjects.BaseValueWithEvent.debug
+- uid: DREditor.EventObjects.BaseValueWithEvent.OnUpdated
+  commentId: F:DREditor.EventObjects.BaseValueWithEvent.OnUpdated
+  parent: DREditor.EventObjects.BaseValueWithEvent
+  isExternal: true
+  href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_OnUpdated
+  name: OnUpdated
+  nameWithType: BaseValueWithEvent.OnUpdated
+  fullName: DREditor.EventObjects.BaseValueWithEvent.OnUpdated
+- uid: DREditor.EventObjects.BaseValueWithEvent.AddListener(UnityEngine.Events.UnityAction)
+  commentId: M:DREditor.EventObjects.BaseValueWithEvent.AddListener(UnityEngine.Events.UnityAction)
+  parent: DREditor.EventObjects.BaseValueWithEvent
+  isExternal: true
+  href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_AddListener_UnityEngine_Events_UnityAction_
+  name: AddListener(UnityAction)
+  nameWithType: BaseValueWithEvent.AddListener(UnityAction)
+  fullName: DREditor.EventObjects.BaseValueWithEvent.AddListener(UnityEngine.Events.UnityAction)
+  spec.csharp:
+  - uid: DREditor.EventObjects.BaseValueWithEvent.AddListener(UnityEngine.Events.UnityAction)
+    name: AddListener
+    isExternal: true
+    href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_AddListener_UnityEngine_Events_UnityAction_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.BaseValueWithEvent.AddListener(UnityEngine.Events.UnityAction)
+    name: AddListener
+    isExternal: true
+    href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_AddListener_UnityEngine_Events_UnityAction_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+- uid: DREditor.EventObjects.BaseValueWithEvent.RemoveListener(UnityEngine.Events.UnityAction)
+  commentId: M:DREditor.EventObjects.BaseValueWithEvent.RemoveListener(UnityEngine.Events.UnityAction)
+  parent: DREditor.EventObjects.BaseValueWithEvent
+  isExternal: true
+  href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_RemoveListener_UnityEngine_Events_UnityAction_
+  name: RemoveListener(UnityAction)
+  nameWithType: BaseValueWithEvent.RemoveListener(UnityAction)
+  fullName: DREditor.EventObjects.BaseValueWithEvent.RemoveListener(UnityEngine.Events.UnityAction)
+  spec.csharp:
+  - uid: DREditor.EventObjects.BaseValueWithEvent.RemoveListener(UnityEngine.Events.UnityAction)
+    name: RemoveListener
+    isExternal: true
+    href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_RemoveListener_UnityEngine_Events_UnityAction_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.BaseValueWithEvent.RemoveListener(UnityEngine.Events.UnityAction)
+    name: RemoveListener
+    isExternal: true
+    href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_RemoveListener_UnityEngine_Events_UnityAction_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+- uid: DREditor.EventObjects.BaseValueWithEvent.InvokeUpdated
+  commentId: M:DREditor.EventObjects.BaseValueWithEvent.InvokeUpdated
+  parent: DREditor.EventObjects.BaseValueWithEvent
+  isExternal: true
+  href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_InvokeUpdated
+  name: InvokeUpdated()
+  nameWithType: BaseValueWithEvent.InvokeUpdated()
+  fullName: DREditor.EventObjects.BaseValueWithEvent.InvokeUpdated()
+  spec.csharp:
+  - uid: DREditor.EventObjects.BaseValueWithEvent.InvokeUpdated
+    name: InvokeUpdated
+    isExternal: true
+    href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_InvokeUpdated
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.BaseValueWithEvent.InvokeUpdated
+    name: InvokeUpdated
+    isExternal: true
+    href: DREditor.EventObjects.BaseValueWithEvent.html#DREditor_EventObjects_BaseValueWithEvent_InvokeUpdated
+  - name: (
+  - name: )
+- uid: DREditor.EventObjects.ValueWithEvent`2.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ValueWithEvent<T, TY>>(ValueWithEvent<T, TY>)
+  nameWithType: ReflectionHelper.GetFieldNames<ValueWithEvent<T, TY>>(ValueWithEvent<T, TY>)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.EventObjects.ValueWithEvent<T, TY>>(DREditor.EventObjects.ValueWithEvent<T, TY>)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ValueWithEvent(Of T, TY))(ValueWithEvent(Of T, TY))
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.EventObjects.ValueWithEvent(Of T, TY))(DREditor.EventObjects.ValueWithEvent(Of T, TY))
+  name.vb: GetFieldNames(Of ValueWithEvent(Of T, TY))(ValueWithEvent(Of T, TY))
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.EventObjects.ValueWithEvent{`0,`1})
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.EventObjects.ValueWithEvent{`0,`1})
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: )
+  - name: )
+  - name: (
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: )
+  - name: )
+- uid: DREditor.EventObjects.ValueWithEvent`2.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ValueWithEvent<T, TY>>(ValueWithEvent<T, TY>)
+  nameWithType: ReflectionHelper.GetFieldValues<ValueWithEvent<T, TY>>(ValueWithEvent<T, TY>)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.EventObjects.ValueWithEvent<T, TY>>(DREditor.EventObjects.ValueWithEvent<T, TY>)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ValueWithEvent(Of T, TY))(ValueWithEvent(Of T, TY))
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.EventObjects.ValueWithEvent(Of T, TY))(DREditor.EventObjects.ValueWithEvent(Of T, TY))
+  name.vb: GetFieldValues(Of ValueWithEvent(Of T, TY))(ValueWithEvent(Of T, TY))
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.EventObjects.ValueWithEvent{`0,`1})
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.EventObjects.ValueWithEvent{`0,`1})
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: )
+  - name: )
+  - name: (
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: )
+  - name: )
+- uid: DREditor.EventObjects.ValueWithEvent`2.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ValueWithEvent<T, TY>>(ValueWithEvent<T, TY>)
+  nameWithType: DeepCopyExtensions.DeepCopy<ValueWithEvent<T, TY>>(ValueWithEvent<T, TY>)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.EventObjects.ValueWithEvent<T, TY>>(DREditor.EventObjects.ValueWithEvent<T, TY>)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ValueWithEvent(Of T, TY))(ValueWithEvent(Of T, TY))
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.EventObjects.ValueWithEvent(Of T, TY))(DREditor.EventObjects.ValueWithEvent(Of T, TY))
+  name.vb: DeepCopy(Of ValueWithEvent(Of T, TY))(ValueWithEvent(Of T, TY))
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.EventObjects.ValueWithEvent{`0,`1})
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.EventObjects.ValueWithEvent{`0,`1})
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: )
+  - name: )
+  - name: (
+  - uid: DREditor.EventObjects.ValueWithEvent`2
+    name: ValueWithEvent
+    isExternal: true
+    href: DREditor.EventObjects.ValueWithEvent-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TY
+  - name: )
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -381,6 +765,189 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: '{TY}'
   commentId: '!:TY'
   definition: TY
@@ -388,7 +955,6 @@ references:
   nameWithType: TY
   fullName: TY
 - uid: TY
-  commentId: '!:TY'
   name: TY
   nameWithType: TY
   fullName: TY
@@ -530,6 +1096,15 @@ references:
   - name: " "
   - name: ''
   - name: )
+- uid: DREditor.EventObjects.ValueWithEvent`2.AddListener*
+  commentId: Overload:DREditor.EventObjects.ValueWithEvent`2.AddListener
+  isExternal: true
+  href: DREditor.EventObjects.ValueWithEvent-2.html#DREditor_EventObjects_ValueWithEvent_2_AddListener_UnityEngine_Events_UnityAction__0__
+  name: AddListener
+  nameWithType: ValueWithEvent<T, TY>.AddListener
+  fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.AddListener
+  nameWithType.vb: ValueWithEvent(Of T, TY).AddListener
+  fullName.vb: DREditor.EventObjects.ValueWithEvent(Of T, TY).AddListener
 - uid: DREditor.EventObjects.ValueWithEvent`2.RemoveListener*
   commentId: Overload:DREditor.EventObjects.ValueWithEvent`2.RemoveListener
   isExternal: true
@@ -597,17 +1172,6 @@ references:
   fullName: DREditor.EventObjects.ValueWithEvent<T, TY>.IsInitialized
   nameWithType.vb: ValueWithEvent(Of T, TY).IsInitialized
   fullName.vb: DREditor.EventObjects.ValueWithEvent(Of T, TY).IsInitialized
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: DREditor.EventObjects.ValueWithEvent`2.Value*
   commentId: Overload:DREditor.EventObjects.ValueWithEvent`2.Value
   isExternal: true

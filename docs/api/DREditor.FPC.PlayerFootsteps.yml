@@ -7,10 +7,13 @@ items:
   children:
   - DREditor.FPC.PlayerFootsteps.#ctor
   - DREditor.FPC.PlayerFootsteps.AudioSource
+  - DREditor.FPC.PlayerFootsteps.Cooldown
   - DREditor.FPC.PlayerFootsteps.Running
   - DREditor.FPC.PlayerFootsteps.Step
   - DREditor.FPC.PlayerFootsteps.StepSounds
   - DREditor.FPC.PlayerFootsteps.Volume
+  - DREditor.FPC.PlayerFootsteps.cooldownDuration
+  - DREditor.FPC.PlayerFootsteps.onCooldown
   langs:
   - csharp
   - vb
@@ -19,7 +22,7 @@ items:
   fullName: DREditor.FPC.PlayerFootsteps
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/PlayerFootsteps.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -28,6 +31,10 @@ items:
     content.vb: Public Class PlayerFootsteps Inherits MonoBehaviour
   inheritance:
   - System.Object
+  extensionMethods:
+  - DREditor.FPC.PlayerFootsteps.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.FPC.PlayerFootsteps.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.FPC.PlayerFootsteps.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.FPC.PlayerFootsteps.AudioSource
   commentId: F:DREditor.FPC.PlayerFootsteps.AudioSource
   id: AudioSource
@@ -40,7 +47,7 @@ items:
   fullName: DREditor.FPC.PlayerFootsteps.AudioSource
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/PlayerFootsteps.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -61,7 +68,7 @@ items:
   fullName: DREditor.FPC.PlayerFootsteps.StepSounds
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/PlayerFootsteps.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -82,7 +89,7 @@ items:
   fullName: DREditor.FPC.PlayerFootsteps.Running
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/PlayerFootsteps.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -103,7 +110,7 @@ items:
   fullName: DREditor.FPC.PlayerFootsteps.Volume
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/PlayerFootsteps.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -112,6 +119,48 @@ items:
     return:
       type: System.Single
     content.vb: Public Volume As Single
+- uid: DREditor.FPC.PlayerFootsteps.cooldownDuration
+  commentId: F:DREditor.FPC.PlayerFootsteps.cooldownDuration
+  id: cooldownDuration
+  parent: DREditor.FPC.PlayerFootsteps
+  langs:
+  - csharp
+  - vb
+  name: cooldownDuration
+  nameWithType: PlayerFootsteps.cooldownDuration
+  fullName: DREditor.FPC.PlayerFootsteps.cooldownDuration
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: protected float cooldownDuration
+    return:
+      type: System.Single
+    content.vb: Protected cooldownDuration As Single
+- uid: DREditor.FPC.PlayerFootsteps.onCooldown
+  commentId: F:DREditor.FPC.PlayerFootsteps.onCooldown
+  id: onCooldown
+  parent: DREditor.FPC.PlayerFootsteps
+  langs:
+  - csharp
+  - vb
+  name: onCooldown
+  nameWithType: PlayerFootsteps.onCooldown
+  fullName: DREditor.FPC.PlayerFootsteps.onCooldown
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: protected bool onCooldown
+    return:
+      type: System.Boolean
+    content.vb: Protected onCooldown As Boolean
 - uid: DREditor.FPC.PlayerFootsteps.Step
   commentId: M:DREditor.FPC.PlayerFootsteps.Step
   id: Step
@@ -124,7 +173,7 @@ items:
   fullName: DREditor.FPC.PlayerFootsteps.Step()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/PlayerFootsteps.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -132,6 +181,28 @@ items:
     content: public void Step()
     content.vb: Public Sub [Step]()
   overload: DREditor.FPC.PlayerFootsteps.Step*
+- uid: DREditor.FPC.PlayerFootsteps.Cooldown
+  commentId: M:DREditor.FPC.PlayerFootsteps.Cooldown
+  id: Cooldown
+  parent: DREditor.FPC.PlayerFootsteps
+  langs:
+  - csharp
+  - vb
+  name: Cooldown()
+  nameWithType: PlayerFootsteps.Cooldown()
+  fullName: DREditor.FPC.PlayerFootsteps.Cooldown()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: protected virtual IEnumerator Cooldown()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function Cooldown() As IEnumerator
+  overload: DREditor.FPC.PlayerFootsteps.Cooldown*
 - uid: DREditor.FPC.PlayerFootsteps.#ctor
   commentId: M:DREditor.FPC.PlayerFootsteps.#ctor
   id: '#ctor'
@@ -144,7 +215,7 @@ items:
   fullName: DREditor.FPC.PlayerFootsteps.PlayerFootsteps()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/PlayerFootsteps.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/PlayerFootsteps.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -194,6 +265,147 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.FPC.PlayerFootsteps.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<PlayerFootsteps>(PlayerFootsteps)
+  nameWithType: ReflectionHelper.GetFieldNames<PlayerFootsteps>(PlayerFootsteps)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.FPC.PlayerFootsteps>(DREditor.FPC.PlayerFootsteps)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of PlayerFootsteps)(PlayerFootsteps)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.FPC.PlayerFootsteps)(DREditor.FPC.PlayerFootsteps)
+  name.vb: GetFieldNames(Of PlayerFootsteps)(PlayerFootsteps)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.FPC.PlayerFootsteps)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.FPC.PlayerFootsteps)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
+- uid: DREditor.FPC.PlayerFootsteps.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<PlayerFootsteps>(PlayerFootsteps)
+  nameWithType: ReflectionHelper.GetFieldValues<PlayerFootsteps>(PlayerFootsteps)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.FPC.PlayerFootsteps>(DREditor.FPC.PlayerFootsteps)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of PlayerFootsteps)(PlayerFootsteps)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.FPC.PlayerFootsteps)(DREditor.FPC.PlayerFootsteps)
+  name.vb: GetFieldValues(Of PlayerFootsteps)(PlayerFootsteps)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.FPC.PlayerFootsteps)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.FPC.PlayerFootsteps)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
+- uid: DREditor.FPC.PlayerFootsteps.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<PlayerFootsteps>(PlayerFootsteps)
+  nameWithType: DeepCopyExtensions.DeepCopy<PlayerFootsteps>(PlayerFootsteps)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.FPC.PlayerFootsteps>(DREditor.FPC.PlayerFootsteps)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of PlayerFootsteps)(PlayerFootsteps)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.FPC.PlayerFootsteps)(DREditor.FPC.PlayerFootsteps)
+  name.vb: DeepCopy(Of PlayerFootsteps)(PlayerFootsteps)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.FPC.PlayerFootsteps)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.FPC.PlayerFootsteps)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.PlayerFootsteps
+    name: PlayerFootsteps
+    isExternal: true
+    href: DREditor.FPC.PlayerFootsteps.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -201,6 +413,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: UnityEngine.AudioSource
   isExternal: true
   name: AudioSource
@@ -230,7 +614,7 @@ references:
   commentId: T:DREditor.EventObjects.BoolWithEvent
   parent: DREditor.EventObjects
   isExternal: true
-  href: DREditor.EventObjects.BoolWithEvent.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
   name: BoolWithEvent
   nameWithType: BoolWithEvent
   fullName: DREditor.EventObjects.BoolWithEvent
@@ -272,6 +656,17 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: DREditor.FPC.PlayerFootsteps.Step*
   commentId: Overload:DREditor.FPC.PlayerFootsteps.Step
   isExternal: true
@@ -279,6 +674,48 @@ references:
   name: Step
   nameWithType: PlayerFootsteps.Step
   fullName: DREditor.FPC.PlayerFootsteps.Step
+- uid: DREditor.FPC.PlayerFootsteps.Cooldown*
+  commentId: Overload:DREditor.FPC.PlayerFootsteps.Cooldown
+  isExternal: true
+  href: DREditor.FPC.PlayerFootsteps.html#DREditor_FPC_PlayerFootsteps_Cooldown
+  name: Cooldown
+  nameWithType: PlayerFootsteps.Cooldown
+  fullName: DREditor.FPC.PlayerFootsteps.Cooldown
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
 - uid: DREditor.FPC.PlayerFootsteps.#ctor*
   commentId: Overload:DREditor.FPC.PlayerFootsteps.#ctor
   isExternal: true

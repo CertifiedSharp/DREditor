@@ -13,6 +13,7 @@ items:
   - DREditor.Gates.GateDatabase.GetParentLocationList(DREditor.Gates.Gate)
   - DREditor.Gates.GateDatabase.IsInvGate(DREditor.Gates.Gate)
   - DREditor.Gates.GateDatabase.ProgressionGate
+  - DREditor.Gates.GateDatabase.gatelessLocations
   langs:
   - csharp
   - vb
@@ -21,20 +22,21 @@ items:
   fullName: DREditor.Gates.GateDatabase
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
-  summary: >-
-    Requires: Dialogues, Gateway
-
-    Database to keep track of what areas have doors to other areas
+  summary: ''
   example: []
   syntax:
     content: 'public class GateDatabase : ScriptableObject'
     content.vb: Public Class GateDatabase Inherits ScriptableObject
   inheritance:
   - System.Object
+  extensionMethods:
+  - DREditor.Gates.GateDatabase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Gates.GateDatabase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Gates.GateDatabase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.Gates.GateDatabase.ProgressionGate
   commentId: F:DREditor.Gates.GateDatabase.ProgressionGate
   id: ProgressionGate
@@ -47,7 +49,7 @@ items:
   fullName: DREditor.Gates.GateDatabase.ProgressionGate
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
@@ -68,7 +70,7 @@ items:
   fullName: DREditor.Gates.GateDatabase.Areas
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
@@ -77,6 +79,27 @@ items:
     return:
       type: System.Collections.Generic.List{DREditor.Gates.Gate}
     content.vb: Public Areas As List(Of Gate)
+- uid: DREditor.Gates.GateDatabase.gatelessLocations
+  commentId: F:DREditor.Gates.GateDatabase.gatelessLocations
+  id: gatelessLocations
+  parent: DREditor.Gates.GateDatabase
+  langs:
+  - csharp
+  - vb
+  name: gatelessLocations
+  nameWithType: GateDatabase.gatelessLocations
+  fullName: DREditor.Gates.GateDatabase.gatelessLocations
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Gates
+  syntax:
+    content: public List<string> gatelessLocations
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public gatelessLocations As List(Of String)
 - uid: DREditor.Gates.GateDatabase.GetArea(System.String)
   commentId: M:DREditor.Gates.GateDatabase.GetArea(System.String)
   id: GetArea(System.String)
@@ -89,7 +112,7 @@ items:
   fullName: DREditor.Gates.GateDatabase.GetArea(string)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
@@ -117,7 +140,7 @@ items:
   fullName: DREditor.Gates.GateDatabase.Contains(string)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
@@ -145,7 +168,7 @@ items:
   fullName: DREditor.Gates.GateDatabase.GetGateNames()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
@@ -167,7 +190,7 @@ items:
   fullName: DREditor.Gates.GateDatabase.IsInvGate(DREditor.Gates.Gate)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
@@ -192,7 +215,7 @@ items:
   fullName: DREditor.Gates.GateDatabase.GetParentLocationList(DREditor.Gates.Gate)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
@@ -217,7 +240,7 @@ items:
   fullName: DREditor.Gates.GateDatabase.GateDatabase()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Gates/GateDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/GateDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Gates
@@ -267,6 +290,147 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Gates.GateDatabase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<GateDatabase>(GateDatabase)
+  nameWithType: ReflectionHelper.GetFieldNames<GateDatabase>(GateDatabase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Gates.GateDatabase>(DREditor.Gates.GateDatabase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of GateDatabase)(GateDatabase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Gates.GateDatabase)(DREditor.Gates.GateDatabase)
+  name.vb: GetFieldNames(Of GateDatabase)(GateDatabase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Gates.GateDatabase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Gates.GateDatabase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
+- uid: DREditor.Gates.GateDatabase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<GateDatabase>(GateDatabase)
+  nameWithType: ReflectionHelper.GetFieldValues<GateDatabase>(GateDatabase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Gates.GateDatabase>(DREditor.Gates.GateDatabase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of GateDatabase)(GateDatabase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Gates.GateDatabase)(DREditor.Gates.GateDatabase)
+  name.vb: GetFieldValues(Of GateDatabase)(GateDatabase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Gates.GateDatabase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Gates.GateDatabase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
+- uid: DREditor.Gates.GateDatabase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<GateDatabase>(GateDatabase)
+  nameWithType: DeepCopyExtensions.DeepCopy<GateDatabase>(GateDatabase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Gates.GateDatabase>(DREditor.Gates.GateDatabase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of GateDatabase)(GateDatabase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Gates.GateDatabase)(DREditor.Gates.GateDatabase)
+  name.vb: DeepCopy(Of GateDatabase)(GateDatabase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Gates.GateDatabase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Gates.GateDatabase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Gates.GateDatabase
+    name: GateDatabase
+    isExternal: true
+    href: DREditor.Gates.GateDatabase.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -274,11 +438,183 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: DREditor.Gates.Gate
   commentId: T:DREditor.Gates.Gate
   parent: DREditor.Gates
   isExternal: true
-  href: DREditor.Gates.Gate.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/Gate.cs
   name: Gate
   nameWithType: Gate
   fullName: DREditor.Gates.Gate
@@ -382,6 +718,41 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
 - uid: DREditor.Gates.GateDatabase.GetArea*
   commentId: Overload:DREditor.Gates.GateDatabase.GetArea
   isExternal: true

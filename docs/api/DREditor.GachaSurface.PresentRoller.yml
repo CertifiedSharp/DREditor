@@ -1,0 +1,1917 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.GachaSurface.PresentRoller
+  commentId: T:DREditor.GachaSurface.PresentRoller
+  id: PresentRoller
+  parent: DREditor.GachaSurface
+  children:
+  - DREditor.GachaSurface.PresentRoller.#ctor
+  - DREditor.GachaSurface.PresentRoller.AddItemToInventory
+  - DREditor.GachaSurface.PresentRoller.AmountToPercentScale
+  - DREditor.GachaSurface.PresentRoller.CalculateBaseRepeatRate
+  - DREditor.GachaSurface.PresentRoller.CalculateRepeatRateByPaidAmount
+  - DREditor.GachaSurface.PresentRoller.GetRepeatRate
+  - DREditor.GachaSurface.PresentRoller.GetRolledObject
+  - DREditor.GachaSurface.PresentRoller.InvalidRepeatRate
+  - DREditor.GachaSurface.PresentRoller.OnAmountPaidInvalid
+  - DREditor.GachaSurface.PresentRoller.OneHundred
+  - DREditor.GachaSurface.PresentRoller.PaidValidAmount
+  - DREditor.GachaSurface.PresentRoller.PlayerHasAllPresents
+  - DREditor.GachaSurface.PresentRoller.PlayerOwnsItem(System.Object)
+  - DREditor.GachaSurface.PresentRoller.RollForItem(System.Object[])
+  - DREditor.GachaSurface.PresentRoller.RollPresent
+  - DREditor.GachaSurface.PresentRoller.RollPresentFrom(System.Collections.Generic.List{DREditor.Presents.Present})
+  - DREditor.GachaSurface.PresentRoller.RollUnownedPresent
+  - DREditor.GachaSurface.PresentRoller.RollUnownedPresent(DREditor.Presents.Present)
+  - DREditor.GachaSurface.PresentRoller.ServicesMissing
+  - DREditor.GachaSurface.PresentRoller.ShouldGetNewPresent
+  - DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent(System.Single)
+  - DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent(DREditor.Presents.Present@)
+  - DREditor.GachaSurface.PresentRoller.Zero
+  - DREditor.GachaSurface.PresentRoller.paidAmount
+  - DREditor.GachaSurface.PresentRoller.presentDatabase
+  - DREditor.GachaSurface.PresentRoller.presentManager
+  - DREditor.GachaSurface.PresentRoller.rolledObject
+  langs:
+  - csharp
+  - vb
+  name: PresentRoller
+  nameWithType: PresentRoller
+  fullName: DREditor.GachaSurface.PresentRoller
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("RepeatableRollerBase, ItemRollerBase, IItemRoller, IRepeatableRoller\n\n")]
+
+      public class PresentRoller : RepeatableRollerBase, IRepeatableRoller, IItemRoller
+    content.vb: >-
+      <ClassHeader("RepeatableRollerBase, ItemRollerBase, IItemRoller, IRepeatableRoller" & vbLf & vbLf)>
+
+      Public Class PresentRoller Inherits RepeatableRollerBase Implements IRepeatableRoller, IItemRoller
+  inheritance:
+  - System.Object
+  - DREditor.ItemRolling.ItemRollerBase
+  - DREditor.ItemRolling.RepeatableRollerBase
+  implements:
+  - DREditor.ItemRolling.IRepeatableRoller
+  - DREditor.ItemRolling.IItemRoller
+  inheritedMembers:
+  - DREditor.ItemRolling.RepeatableRollerBase.onRepeatPull
+  - DREditor.ItemRolling.RepeatableRollerBase.onNewPull
+  - DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+  - DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+  - DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1({T}@)
+  - DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+  extensionMethods:
+  - DREditor.GachaSurface.PresentRoller.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.GachaSurface.PresentRoller.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.GachaSurface.PresentRoller.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        RepeatableRollerBase, ItemRollerBase, IItemRoller, IRepeatableRoller
+
+- uid: DREditor.GachaSurface.PresentRoller.paidAmount
+  commentId: F:DREditor.GachaSurface.PresentRoller.paidAmount
+  id: paidAmount
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: paidAmount
+  nameWithType: PresentRoller.paidAmount
+  fullName: DREditor.GachaSurface.PresentRoller.paidAmount
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected IntWithEvent paidAmount
+    return:
+      type: DREditor.EventObjects.IntWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected paidAmount As IntWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.GachaSurface.PresentRoller.presentDatabase
+  commentId: F:DREditor.GachaSurface.PresentRoller.presentDatabase
+  id: presentDatabase
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: presentDatabase
+  nameWithType: PresentRoller.presentDatabase
+  fullName: DREditor.GachaSurface.PresentRoller.presentDatabase
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected PresentDatabase presentDatabase
+    return:
+      type: DREditor.Presents.PresentDatabase
+    content.vb: Protected presentDatabase As PresentDatabase
+- uid: DREditor.GachaSurface.PresentRoller.rolledObject
+  commentId: F:DREditor.GachaSurface.PresentRoller.rolledObject
+  id: rolledObject
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: rolledObject
+  nameWithType: PresentRoller.rolledObject
+  fullName: DREditor.GachaSurface.PresentRoller.rolledObject
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected Present rolledObject
+    return:
+      type: DREditor.Presents.Present
+    content.vb: Protected rolledObject As Present
+- uid: DREditor.GachaSurface.PresentRoller.presentManager
+  commentId: F:DREditor.GachaSurface.PresentRoller.presentManager
+  id: presentManager
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: presentManager
+  nameWithType: PresentRoller.presentManager
+  fullName: DREditor.GachaSurface.PresentRoller.presentManager
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected IPresentManager presentManager
+    return:
+      type: DREditor.Presents.IPresentManager
+    content.vb: Protected presentManager As IPresentManager
+- uid: DREditor.GachaSurface.PresentRoller.OneHundred
+  commentId: F:DREditor.GachaSurface.PresentRoller.OneHundred
+  id: OneHundred
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: OneHundred
+  nameWithType: PresentRoller.OneHundred
+  fullName: DREditor.GachaSurface.PresentRoller.OneHundred
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly float OneHundred
+    return:
+      type: System.Single
+    content.vb: Protected ReadOnly OneHundred As Single
+- uid: DREditor.GachaSurface.PresentRoller.AmountToPercentScale
+  commentId: F:DREditor.GachaSurface.PresentRoller.AmountToPercentScale
+  id: AmountToPercentScale
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: AmountToPercentScale
+  nameWithType: PresentRoller.AmountToPercentScale
+  fullName: DREditor.GachaSurface.PresentRoller.AmountToPercentScale
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly float AmountToPercentScale
+    return:
+      type: System.Single
+    content.vb: Protected ReadOnly AmountToPercentScale As Single
+- uid: DREditor.GachaSurface.PresentRoller.Zero
+  commentId: F:DREditor.GachaSurface.PresentRoller.Zero
+  id: Zero
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: PresentRoller.Zero
+  fullName: DREditor.GachaSurface.PresentRoller.Zero
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly int Zero
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly Zero As Integer
+- uid: DREditor.GachaSurface.PresentRoller.InvalidRepeatRate
+  commentId: F:DREditor.GachaSurface.PresentRoller.InvalidRepeatRate
+  id: InvalidRepeatRate
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: InvalidRepeatRate
+  nameWithType: PresentRoller.InvalidRepeatRate
+  fullName: DREditor.GachaSurface.PresentRoller.InvalidRepeatRate
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly int InvalidRepeatRate
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly InvalidRepeatRate As Integer
+- uid: DREditor.GachaSurface.PresentRoller.GetRolledObject
+  commentId: M:DREditor.GachaSurface.PresentRoller.GetRolledObject
+  id: GetRolledObject
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: GetRolledObject()
+  nameWithType: PresentRoller.GetRolledObject()
+  fullName: DREditor.GachaSurface.PresentRoller.GetRolledObject()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected override object GetRolledObject()
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Protected Overrides Function GetRolledObject() As Object
+  overridden: DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+  overload: DREditor.GachaSurface.PresentRoller.GetRolledObject*
+- uid: DREditor.GachaSurface.PresentRoller.AddItemToInventory
+  commentId: M:DREditor.GachaSurface.PresentRoller.AddItemToInventory
+  id: AddItemToInventory
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: AddItemToInventory()
+  nameWithType: PresentRoller.AddItemToInventory()
+  fullName: DREditor.GachaSurface.PresentRoller.AddItemToInventory()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void AddItemToInventory()
+    content.vb: Protected Overrides Sub AddItemToInventory()
+  overridden: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+  overload: DREditor.GachaSurface.PresentRoller.AddItemToInventory*
+- uid: DREditor.GachaSurface.PresentRoller.RollForItem(System.Object[])
+  commentId: M:DREditor.GachaSurface.PresentRoller.RollForItem(System.Object[])
+  id: RollForItem(System.Object[])
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: RollForItem(params object[])
+  nameWithType: PresentRoller.RollForItem(params object[])
+  fullName: DREditor.GachaSurface.PresentRoller.RollForItem(params object[])
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: public override object RollForItem(params object[] objects)
+    parameters:
+    - id: objects
+      type: System.Object[]
+      description: ''
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Overrides Function RollForItem(ParamArray objects As Object()) As Object
+  overridden: DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+  overload: DREditor.GachaSurface.PresentRoller.RollForItem*
+  nameWithType.vb: PresentRoller.RollForItem(ParamArray Object())
+  fullName.vb: DREditor.GachaSurface.PresentRoller.RollForItem(ParamArray Object())
+  name.vb: RollForItem(ParamArray Object())
+- uid: DREditor.GachaSurface.PresentRoller.ServicesMissing
+  commentId: M:DREditor.GachaSurface.PresentRoller.ServicesMissing
+  id: ServicesMissing
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: ServicesMissing()
+  nameWithType: PresentRoller.ServicesMissing()
+  fullName: DREditor.GachaSurface.PresentRoller.ServicesMissing()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool ServicesMissing()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function ServicesMissing() As Boolean
+  overload: DREditor.GachaSurface.PresentRoller.ServicesMissing*
+- uid: DREditor.GachaSurface.PresentRoller.PaidValidAmount
+  commentId: M:DREditor.GachaSurface.PresentRoller.PaidValidAmount
+  id: PaidValidAmount
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: PaidValidAmount()
+  nameWithType: PresentRoller.PaidValidAmount()
+  fullName: DREditor.GachaSurface.PresentRoller.PaidValidAmount()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool PaidValidAmount()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function PaidValidAmount() As Boolean
+  overload: DREditor.GachaSurface.PresentRoller.PaidValidAmount*
+- uid: DREditor.GachaSurface.PresentRoller.OnAmountPaidInvalid
+  commentId: M:DREditor.GachaSurface.PresentRoller.OnAmountPaidInvalid
+  id: OnAmountPaidInvalid
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: OnAmountPaidInvalid()
+  nameWithType: PresentRoller.OnAmountPaidInvalid()
+  fullName: DREditor.GachaSurface.PresentRoller.OnAmountPaidInvalid()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnAmountPaidInvalid()
+    content.vb: Protected Overridable Sub OnAmountPaidInvalid()
+  overload: DREditor.GachaSurface.PresentRoller.OnAmountPaidInvalid*
+- uid: DREditor.GachaSurface.PresentRoller.RollPresent
+  commentId: M:DREditor.GachaSurface.PresentRoller.RollPresent
+  id: RollPresent
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: RollPresent()
+  nameWithType: PresentRoller.RollPresent()
+  fullName: DREditor.GachaSurface.PresentRoller.RollPresent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual Present RollPresent()
+    return:
+      type: DREditor.Presents.Present
+      description: ''
+    content.vb: Protected Overridable Function RollPresent() As Present
+  overload: DREditor.GachaSurface.PresentRoller.RollPresent*
+- uid: DREditor.GachaSurface.PresentRoller.RollPresentFrom(System.Collections.Generic.List{DREditor.Presents.Present})
+  commentId: M:DREditor.GachaSurface.PresentRoller.RollPresentFrom(System.Collections.Generic.List{DREditor.Presents.Present})
+  id: RollPresentFrom(System.Collections.Generic.List{DREditor.Presents.Present})
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: RollPresentFrom(List<Present>)
+  nameWithType: PresentRoller.RollPresentFrom(List<Present>)
+  fullName: DREditor.GachaSurface.PresentRoller.RollPresentFrom(System.Collections.Generic.List<DREditor.Presents.Present>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual Present RollPresentFrom(List<Present> collection)
+    parameters:
+    - id: collection
+      type: System.Collections.Generic.List{DREditor.Presents.Present}
+    return:
+      type: DREditor.Presents.Present
+      description: ''
+    content.vb: Protected Overridable Function RollPresentFrom(collection As List(Of Present)) As Present
+  overload: DREditor.GachaSurface.PresentRoller.RollPresentFrom*
+  nameWithType.vb: PresentRoller.RollPresentFrom(List(Of Present))
+  fullName.vb: DREditor.GachaSurface.PresentRoller.RollPresentFrom(System.Collections.Generic.List(Of DREditor.Presents.Present))
+  name.vb: RollPresentFrom(List(Of Present))
+- uid: DREditor.GachaSurface.PresentRoller.PlayerOwnsItem(System.Object)
+  commentId: M:DREditor.GachaSurface.PresentRoller.PlayerOwnsItem(System.Object)
+  id: PlayerOwnsItem(System.Object)
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: PlayerOwnsItem(object)
+  nameWithType: PresentRoller.PlayerOwnsItem(object)
+  fullName: DREditor.GachaSurface.PresentRoller.PlayerOwnsItem(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected override bool PlayerOwnsItem(object item)
+    parameters:
+    - id: item
+      type: System.Object
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overrides Function PlayerOwnsItem(item As Object) As Boolean
+  overridden: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(System.Object)
+  overload: DREditor.GachaSurface.PresentRoller.PlayerOwnsItem*
+  nameWithType.vb: PresentRoller.PlayerOwnsItem(Object)
+  fullName.vb: DREditor.GachaSurface.PresentRoller.PlayerOwnsItem(Object)
+  name.vb: PlayerOwnsItem(Object)
+- uid: DREditor.GachaSurface.PresentRoller.ShouldGetNewPresent
+  commentId: M:DREditor.GachaSurface.PresentRoller.ShouldGetNewPresent
+  id: ShouldGetNewPresent
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: ShouldGetNewPresent()
+  nameWithType: PresentRoller.ShouldGetNewPresent()
+  fullName: DREditor.GachaSurface.PresentRoller.ShouldGetNewPresent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool ShouldGetNewPresent()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function ShouldGetNewPresent() As Boolean
+  overload: DREditor.GachaSurface.PresentRoller.ShouldGetNewPresent*
+- uid: DREditor.GachaSurface.PresentRoller.GetRepeatRate
+  commentId: M:DREditor.GachaSurface.PresentRoller.GetRepeatRate
+  id: GetRepeatRate
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: GetRepeatRate()
+  nameWithType: PresentRoller.GetRepeatRate()
+  fullName: DREditor.GachaSurface.PresentRoller.GetRepeatRate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: public override float GetRepeatRate()
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Public Overrides Function GetRepeatRate() As Single
+  overridden: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+  overload: DREditor.GachaSurface.PresentRoller.GetRepeatRate*
+- uid: DREditor.GachaSurface.PresentRoller.PlayerHasAllPresents
+  commentId: M:DREditor.GachaSurface.PresentRoller.PlayerHasAllPresents
+  id: PlayerHasAllPresents
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: PlayerHasAllPresents()
+  nameWithType: PresentRoller.PlayerHasAllPresents()
+  fullName: DREditor.GachaSurface.PresentRoller.PlayerHasAllPresents()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool PlayerHasAllPresents()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function PlayerHasAllPresents() As Boolean
+  overload: DREditor.GachaSurface.PresentRoller.PlayerHasAllPresents*
+- uid: DREditor.GachaSurface.PresentRoller.CalculateRepeatRateByPaidAmount
+  commentId: M:DREditor.GachaSurface.PresentRoller.CalculateRepeatRateByPaidAmount
+  id: CalculateRepeatRateByPaidAmount
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: CalculateRepeatRateByPaidAmount()
+  nameWithType: PresentRoller.CalculateRepeatRateByPaidAmount()
+  fullName: DREditor.GachaSurface.PresentRoller.CalculateRepeatRateByPaidAmount()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual float CalculateRepeatRateByPaidAmount()
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Protected Overridable Function CalculateRepeatRateByPaidAmount() As Single
+  overload: DREditor.GachaSurface.PresentRoller.CalculateRepeatRateByPaidAmount*
+- uid: DREditor.GachaSurface.PresentRoller.CalculateBaseRepeatRate
+  commentId: M:DREditor.GachaSurface.PresentRoller.CalculateBaseRepeatRate
+  id: CalculateBaseRepeatRate
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: CalculateBaseRepeatRate()
+  nameWithType: PresentRoller.CalculateBaseRepeatRate()
+  fullName: DREditor.GachaSurface.PresentRoller.CalculateBaseRepeatRate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected override float CalculateBaseRepeatRate()
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Protected Overrides Function CalculateBaseRepeatRate() As Single
+  overridden: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+  overload: DREditor.GachaSurface.PresentRoller.CalculateBaseRepeatRate*
+- uid: DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent(System.Single)
+  commentId: M:DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent(System.Single)
+  id: SuccededChanceForNewPresent(System.Single)
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: SuccededChanceForNewPresent(float)
+  nameWithType: PresentRoller.SuccededChanceForNewPresent(float)
+  fullName: DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent(float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool SuccededChanceForNewPresent(float modifiedRepeatRate)
+    parameters:
+    - id: modifiedRepeatRate
+      type: System.Single
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function SuccededChanceForNewPresent(modifiedRepeatRate As Single) As Boolean
+  overload: DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent*
+  nameWithType.vb: PresentRoller.SuccededChanceForNewPresent(Single)
+  fullName.vb: DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent(Single)
+  name.vb: SuccededChanceForNewPresent(Single)
+- uid: DREditor.GachaSurface.PresentRoller.RollUnownedPresent(DREditor.Presents.Present)
+  commentId: M:DREditor.GachaSurface.PresentRoller.RollUnownedPresent(DREditor.Presents.Present)
+  id: RollUnownedPresent(DREditor.Presents.Present)
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: RollUnownedPresent(Present)
+  nameWithType: PresentRoller.RollUnownedPresent(Present)
+  fullName: DREditor.GachaSurface.PresentRoller.RollUnownedPresent(DREditor.Presents.Present)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual Present RollUnownedPresent(Present present)
+    parameters:
+    - id: present
+      type: DREditor.Presents.Present
+      description: ''
+    return:
+      type: DREditor.Presents.Present
+      description: ''
+    content.vb: Protected Overridable Function RollUnownedPresent(present As Present) As Present
+  overload: DREditor.GachaSurface.PresentRoller.RollUnownedPresent*
+- uid: DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent(DREditor.Presents.Present@)
+  commentId: M:DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent(DREditor.Presents.Present@)
+  id: TryRollUnownedPresent(DREditor.Presents.Present@)
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: TryRollUnownedPresent(out Present)
+  nameWithType: PresentRoller.TryRollUnownedPresent(out Present)
+  fullName: DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent(out DREditor.Presents.Present)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool TryRollUnownedPresent(out Present present)
+    parameters:
+    - id: present
+      type: DREditor.Presents.Present
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function TryRollUnownedPresent(present As Present) As Boolean
+  overload: DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent*
+  nameWithType.vb: PresentRoller.TryRollUnownedPresent(Present)
+  fullName.vb: DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent(DREditor.Presents.Present)
+  name.vb: TryRollUnownedPresent(Present)
+- uid: DREditor.GachaSurface.PresentRoller.RollUnownedPresent
+  commentId: M:DREditor.GachaSurface.PresentRoller.RollUnownedPresent
+  id: RollUnownedPresent
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: RollUnownedPresent()
+  nameWithType: PresentRoller.RollUnownedPresent()
+  fullName: DREditor.GachaSurface.PresentRoller.RollUnownedPresent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual Present RollUnownedPresent()
+    return:
+      type: DREditor.Presents.Present
+      description: ''
+    content.vb: Protected Overridable Function RollUnownedPresent() As Present
+  overload: DREditor.GachaSurface.PresentRoller.RollUnownedPresent*
+- uid: DREditor.GachaSurface.PresentRoller.#ctor
+  commentId: M:DREditor.GachaSurface.PresentRoller.#ctor
+  id: '#ctor'
+  parent: DREditor.GachaSurface.PresentRoller
+  langs:
+  - csharp
+  - vb
+  name: PresentRoller()
+  nameWithType: PresentRoller.PresentRoller()
+  fullName: DREditor.GachaSurface.PresentRoller.PresentRoller()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.GachaSurface/PresentRoller.cs
+  assemblies:
+  - DREditor.GachaSurface
+  namespace: DREditor.GachaSurface
+  syntax:
+    content: public PresentRoller()
+    content.vb: Public Sub New()
+  overload: DREditor.GachaSurface.PresentRoller.#ctor*
+  nameWithType.vb: PresentRoller.New()
+  fullName.vb: DREditor.GachaSurface.PresentRoller.New()
+  name.vb: New()
+references:
+- uid: DREditor.GachaSurface
+  commentId: N:DREditor.GachaSurface
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.GachaSurface
+  nameWithType: DREditor.GachaSurface
+  fullName: DREditor.GachaSurface
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.GachaSurface
+    name: GachaSurface
+    isExternal: true
+    href: DREditor.GachaSurface.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.GachaSurface
+    name: GachaSurface
+    isExternal: true
+    href: DREditor.GachaSurface.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.ItemRolling.ItemRollerBase
+  commentId: T:DREditor.ItemRolling.ItemRollerBase
+  parent: DREditor.ItemRolling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: ItemRollerBase
+  nameWithType: ItemRollerBase
+  fullName: DREditor.ItemRolling.ItemRollerBase
+- uid: DREditor.ItemRolling.RepeatableRollerBase
+  commentId: T:DREditor.ItemRolling.RepeatableRollerBase
+  parent: DREditor.ItemRolling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: RepeatableRollerBase
+  nameWithType: RepeatableRollerBase
+  fullName: DREditor.ItemRolling.RepeatableRollerBase
+- uid: DREditor.ItemRolling.IRepeatableRoller
+  commentId: T:DREditor.ItemRolling.IRepeatableRoller
+  parent: DREditor.ItemRolling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/IRepeatableRoller.cs
+  name: IRepeatableRoller
+  nameWithType: IRepeatableRoller
+  fullName: DREditor.ItemRolling.IRepeatableRoller
+- uid: DREditor.ItemRolling.IItemRoller
+  commentId: T:DREditor.ItemRolling.IItemRoller
+  parent: DREditor.ItemRolling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/IItemRoller.cs
+  name: IItemRoller
+  nameWithType: IItemRoller
+  fullName: DREditor.ItemRolling.IItemRoller
+- uid: DREditor.ItemRolling.RepeatableRollerBase.onRepeatPull
+  commentId: F:DREditor.ItemRolling.RepeatableRollerBase.onRepeatPull
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: onRepeatPull
+  nameWithType: RepeatableRollerBase.onRepeatPull
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.onRepeatPull
+- uid: DREditor.ItemRolling.RepeatableRollerBase.onNewPull
+  commentId: F:DREditor.ItemRolling.RepeatableRollerBase.onNewPull
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: onNewPull
+  nameWithType: RepeatableRollerBase.onNewPull
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.onNewPull
+- uid: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: GivePlayerRolledItem()
+  nameWithType: RepeatableRollerBase.GivePlayerRolledItem()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+    name: GivePlayerRolledItem
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+    name: GivePlayerRolledItem
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: InvokePulledType()
+  nameWithType: RepeatableRollerBase.InvokePulledType()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+    name: InvokePulledType
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+    name: InvokePulledType
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1({T}@)
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+  parent: DREditor.ItemRolling.ItemRollerBase
+  definition: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: TryGetRolledObject<T>(out T)
+  nameWithType: ItemRollerBase.TryGetRolledObject<T>(out T)
+  fullName: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject<T>(out T)
+  nameWithType.vb: ItemRollerBase.TryGetRolledObject(Of T)(T)
+  fullName.vb: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject(Of T)(T)
+  name.vb: TryGetRolledObject(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+    name: TryGetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+    name: TryGetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+  parent: DREditor.ItemRolling.ItemRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: ReportElse(bool, string)
+  nameWithType: ItemRollerBase.ReportElse(bool, string)
+  fullName: DREditor.ItemRolling.ItemRollerBase.ReportElse(bool, string)
+  nameWithType.vb: ItemRollerBase.ReportElse(Boolean, String)
+  fullName.vb: DREditor.ItemRolling.ItemRollerBase.ReportElse(Boolean, String)
+  name.vb: ReportElse(Boolean, String)
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+    name: ReportElse
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+    name: ReportElse
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<PresentRoller>(PresentRoller)
+  nameWithType: ReflectionHelper.GetFieldNames<PresentRoller>(PresentRoller)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.GachaSurface.PresentRoller>(DREditor.GachaSurface.PresentRoller)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of PresentRoller)(PresentRoller)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.GachaSurface.PresentRoller)(DREditor.GachaSurface.PresentRoller)
+  name.vb: GetFieldNames(Of PresentRoller)(PresentRoller)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.GachaSurface.PresentRoller)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.GachaSurface.PresentRoller)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+  - name: (
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<PresentRoller>(PresentRoller)
+  nameWithType: ReflectionHelper.GetFieldValues<PresentRoller>(PresentRoller)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.GachaSurface.PresentRoller>(DREditor.GachaSurface.PresentRoller)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of PresentRoller)(PresentRoller)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.GachaSurface.PresentRoller)(DREditor.GachaSurface.PresentRoller)
+  name.vb: GetFieldValues(Of PresentRoller)(PresentRoller)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.GachaSurface.PresentRoller)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.GachaSurface.PresentRoller)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+  - name: (
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<PresentRoller>(PresentRoller)
+  nameWithType: DeepCopyExtensions.DeepCopy<PresentRoller>(PresentRoller)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.GachaSurface.PresentRoller>(DREditor.GachaSurface.PresentRoller)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of PresentRoller)(PresentRoller)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.GachaSurface.PresentRoller)(DREditor.GachaSurface.PresentRoller)
+  name.vb: DeepCopy(Of PresentRoller)(PresentRoller)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.GachaSurface.PresentRoller)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.GachaSurface.PresentRoller)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+  - name: (
+  - uid: DREditor.GachaSurface.PresentRoller
+    name: PresentRoller
+    isExternal: true
+    href: DREditor.GachaSurface.PresentRoller.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.ItemRolling
+  commentId: N:DREditor.ItemRolling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.ItemRolling
+  nameWithType: DREditor.ItemRolling
+  fullName: DREditor.ItemRolling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.ItemRolling
+    name: ItemRolling
+    isExternal: true
+    href: DREditor.ItemRolling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.ItemRolling
+    name: ItemRolling
+    isExternal: true
+    href: DREditor.ItemRolling.html
+- uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: TryGetRolledObject<T>(out T)
+  nameWithType: ItemRollerBase.TryGetRolledObject<T>(out T)
+  fullName: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject<T>(out T)
+  nameWithType.vb: ItemRollerBase.TryGetRolledObject(Of T)(T)
+  fullName.vb: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject(Of T)(T)
+  name.vb: TryGetRolledObject(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+    name: TryGetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+    name: TryGetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.IntWithEvent
+  commentId: T:DREditor.EventObjects.IntWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/IntWithEvent.cs
+  name: IntWithEvent
+  nameWithType: IntWithEvent
+  fullName: DREditor.EventObjects.IntWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Presents.PresentDatabase
+  commentId: T:DREditor.Presents.PresentDatabase
+  parent: DREditor.Presents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/PresentDatabase.cs
+  name: PresentDatabase
+  nameWithType: PresentDatabase
+  fullName: DREditor.Presents.PresentDatabase
+- uid: DREditor.Presents
+  commentId: N:DREditor.Presents
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Presents
+  nameWithType: DREditor.Presents
+  fullName: DREditor.Presents
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Presents
+    name: Presents
+    isExternal: true
+    href: DREditor.Presents.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Presents
+    name: Presents
+    isExternal: true
+    href: DREditor.Presents.html
+- uid: DREditor.Presents.Present
+  commentId: T:DREditor.Presents.Present
+  parent: DREditor.Presents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Present.cs
+  name: Present
+  nameWithType: Present
+  fullName: DREditor.Presents.Present
+- uid: DREditor.Presents.IPresentManager
+  commentId: T:DREditor.Presents.IPresentManager
+  parent: DREditor.Presents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/IPresentManager.cs
+  name: IPresentManager
+  nameWithType: IPresentManager
+  fullName: DREditor.Presents.IPresentManager
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+  parent: DREditor.ItemRolling.ItemRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: GetRolledObject()
+  nameWithType: ItemRollerBase.GetRolledObject()
+  fullName: DREditor.ItemRolling.ItemRollerBase.GetRolledObject()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+    name: GetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+    name: GetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.GetRolledObject*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.GetRolledObject
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_GetRolledObject
+  name: GetRolledObject
+  nameWithType: PresentRoller.GetRolledObject
+  fullName: DREditor.GachaSurface.PresentRoller.GetRolledObject
+- uid: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: AddItemToInventory()
+  nameWithType: RepeatableRollerBase.AddItemToInventory()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+    name: AddItemToInventory
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+    name: AddItemToInventory
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.AddItemToInventory*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.AddItemToInventory
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_AddItemToInventory
+  name: AddItemToInventory
+  nameWithType: PresentRoller.AddItemToInventory
+  fullName: DREditor.GachaSurface.PresentRoller.AddItemToInventory
+- uid: DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+  parent: DREditor.ItemRolling.ItemRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: RollForItem(params object[])
+  nameWithType: ItemRollerBase.RollForItem(params object[])
+  fullName: DREditor.ItemRolling.ItemRollerBase.RollForItem(params object[])
+  nameWithType.vb: ItemRollerBase.RollForItem(ParamArray Object())
+  fullName.vb: DREditor.ItemRolling.ItemRollerBase.RollForItem(ParamArray Object())
+  name.vb: RollForItem(ParamArray Object())
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+    name: RollForItem
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+    name: RollForItem
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.RollForItem*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.RollForItem
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_RollForItem_System_Object___
+  name: RollForItem
+  nameWithType: PresentRoller.RollForItem
+  fullName: DREditor.GachaSurface.PresentRoller.RollForItem
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.ServicesMissing*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.ServicesMissing
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_ServicesMissing
+  name: ServicesMissing
+  nameWithType: PresentRoller.ServicesMissing
+  fullName: DREditor.GachaSurface.PresentRoller.ServicesMissing
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.GachaSurface.PresentRoller.PaidValidAmount*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.PaidValidAmount
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_PaidValidAmount
+  name: PaidValidAmount
+  nameWithType: PresentRoller.PaidValidAmount
+  fullName: DREditor.GachaSurface.PresentRoller.PaidValidAmount
+- uid: DREditor.GachaSurface.PresentRoller.OnAmountPaidInvalid*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.OnAmountPaidInvalid
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_OnAmountPaidInvalid
+  name: OnAmountPaidInvalid
+  nameWithType: PresentRoller.OnAmountPaidInvalid
+  fullName: DREditor.GachaSurface.PresentRoller.OnAmountPaidInvalid
+- uid: DREditor.GachaSurface.PresentRoller.RollPresent*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.RollPresent
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_RollPresent
+  name: RollPresent
+  nameWithType: PresentRoller.RollPresent
+  fullName: DREditor.GachaSurface.PresentRoller.RollPresent
+- uid: DREditor.GachaSurface.PresentRoller.RollPresentFrom*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.RollPresentFrom
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_RollPresentFrom_System_Collections_Generic_List_DREditor_Presents_Present__
+  name: RollPresentFrom
+  nameWithType: PresentRoller.RollPresentFrom
+  fullName: DREditor.GachaSurface.PresentRoller.RollPresentFrom
+- uid: System.Collections.Generic.List{DREditor.Presents.Present}
+  commentId: T:System.Collections.Generic.List{DREditor.Presents.Present}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Present>
+  nameWithType: List<Present>
+  fullName: System.Collections.Generic.List<DREditor.Presents.Present>
+  nameWithType.vb: List(Of Present)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Presents.Present)
+  name.vb: List(Of Present)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Presents.Present
+    name: Present
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Present.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Presents.Present
+    name: Present
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Present.cs
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(System.Object)
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(System.Object)
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: PlayerOwnsItem(object)
+  nameWithType: RepeatableRollerBase.PlayerOwnsItem(object)
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(object)
+  nameWithType.vb: RepeatableRollerBase.PlayerOwnsItem(Object)
+  fullName.vb: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(Object)
+  name.vb: PlayerOwnsItem(Object)
+  spec.csharp:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(System.Object)
+    name: PlayerOwnsItem
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(System.Object)
+    name: PlayerOwnsItem
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.PlayerOwnsItem*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.PlayerOwnsItem
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_PlayerOwnsItem_System_Object_
+  name: PlayerOwnsItem
+  nameWithType: PresentRoller.PlayerOwnsItem
+  fullName: DREditor.GachaSurface.PresentRoller.PlayerOwnsItem
+- uid: DREditor.GachaSurface.PresentRoller.ShouldGetNewPresent*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.ShouldGetNewPresent
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_ShouldGetNewPresent
+  name: ShouldGetNewPresent
+  nameWithType: PresentRoller.ShouldGetNewPresent
+  fullName: DREditor.GachaSurface.PresentRoller.ShouldGetNewPresent
+- uid: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: GetRepeatRate()
+  nameWithType: RepeatableRollerBase.GetRepeatRate()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+    name: GetRepeatRate
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+    name: GetRepeatRate
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.GetRepeatRate*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.GetRepeatRate
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_GetRepeatRate
+  name: GetRepeatRate
+  nameWithType: PresentRoller.GetRepeatRate
+  fullName: DREditor.GachaSurface.PresentRoller.GetRepeatRate
+- uid: DREditor.GachaSurface.PresentRoller.PlayerHasAllPresents*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.PlayerHasAllPresents
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_PlayerHasAllPresents
+  name: PlayerHasAllPresents
+  nameWithType: PresentRoller.PlayerHasAllPresents
+  fullName: DREditor.GachaSurface.PresentRoller.PlayerHasAllPresents
+- uid: DREditor.GachaSurface.PresentRoller.CalculateRepeatRateByPaidAmount*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.CalculateRepeatRateByPaidAmount
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_CalculateRepeatRateByPaidAmount
+  name: CalculateRepeatRateByPaidAmount
+  nameWithType: PresentRoller.CalculateRepeatRateByPaidAmount
+  fullName: DREditor.GachaSurface.PresentRoller.CalculateRepeatRateByPaidAmount
+- uid: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  name: CalculateBaseRepeatRate()
+  nameWithType: RepeatableRollerBase.CalculateBaseRepeatRate()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+    name: CalculateBaseRepeatRate
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+    name: CalculateBaseRepeatRate
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.GachaSurface.PresentRoller.CalculateBaseRepeatRate*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.CalculateBaseRepeatRate
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_CalculateBaseRepeatRate
+  name: CalculateBaseRepeatRate
+  nameWithType: PresentRoller.CalculateBaseRepeatRate
+  fullName: DREditor.GachaSurface.PresentRoller.CalculateBaseRepeatRate
+- uid: DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_SuccededChanceForNewPresent_System_Single_
+  name: SuccededChanceForNewPresent
+  nameWithType: PresentRoller.SuccededChanceForNewPresent
+  fullName: DREditor.GachaSurface.PresentRoller.SuccededChanceForNewPresent
+- uid: DREditor.GachaSurface.PresentRoller.RollUnownedPresent*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.RollUnownedPresent
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_RollUnownedPresent_DREditor_Presents_Present_
+  name: RollUnownedPresent
+  nameWithType: PresentRoller.RollUnownedPresent
+  fullName: DREditor.GachaSurface.PresentRoller.RollUnownedPresent
+- uid: DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller_TryRollUnownedPresent_DREditor_Presents_Present__
+  name: TryRollUnownedPresent
+  nameWithType: PresentRoller.TryRollUnownedPresent
+  fullName: DREditor.GachaSurface.PresentRoller.TryRollUnownedPresent
+- uid: DREditor.GachaSurface.PresentRoller.#ctor*
+  commentId: Overload:DREditor.GachaSurface.PresentRoller.#ctor
+  isExternal: true
+  href: DREditor.GachaSurface.PresentRoller.html#DREditor_GachaSurface_PresentRoller__ctor
+  name: PresentRoller
+  nameWithType: PresentRoller.PresentRoller
+  fullName: DREditor.GachaSurface.PresentRoller.PresentRoller
+  nameWithType.vb: PresentRoller.New
+  fullName.vb: DREditor.GachaSurface.PresentRoller.New
+  name.vb: New

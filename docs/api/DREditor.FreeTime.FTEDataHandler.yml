@@ -1,0 +1,1725 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.FreeTime.FTEDataHandler
+  commentId: T:DREditor.FreeTime.FTEDataHandler
+  id: FTEDataHandler
+  parent: DREditor.FreeTime
+  children:
+  - DREditor.FreeTime.FTEDataHandler.#ctor
+  - DREditor.FreeTime.FTEDataHandler.AddCharacter(System.String)
+  - DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.FreeTime.FTEDataHandler.ClearData
+  - DREditor.FreeTime.FTEDataHandler.CopyFTEData(System.Collections.Generic.List{DREditor.FreeTime.FTEData})
+  - DREditor.FreeTime.FTEDataHandler.GetAffinity(System.String)
+  - DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter(System.String)
+  - DREditor.FreeTime.FTEDataHandler.InitializeFTEData
+  - DREditor.FreeTime.FTEDataHandler.LevelUpCharacter(System.String)
+  - DREditor.FreeTime.FTEDataHandler.LoadFTEDatas(System.Collections.Generic.List{DREditor.FreeTime.FTEData})
+  - DREditor.FreeTime.FTEDataHandler.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  - DREditor.FreeTime.FTEDataHandler.RemoveEmptyInstances
+  - DREditor.FreeTime.FTEDataHandler.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.FreeTime.FTEDataHandler.Start
+  - DREditor.FreeTime.FTEDataHandler.ValidateData
+  - DREditor.FreeTime.FTEDataHandler.characterDatabase
+  - DREditor.FreeTime.FTEDataHandler.fTEDataSaveKey
+  - DREditor.FreeTime.FTEDataHandler.fTEDatas
+  langs:
+  - csharp
+  - vb
+  name: FTEDataHandler
+  nameWithType: FTEDataHandler
+  fullName: DREditor.FreeTime.FTEDataHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("IDRESaveable, IDRELoadableManager, IFTEDataHandler, ILoadOnChapterSelect\n\n")]
+
+      public class FTEDataHandler : MonoBehaviour, IDRESaveable, IDRELoadableManager, IFTEDataHandler, IPlayerDataClearer, ILoadOnChapterSelect
+    content.vb: >-
+      <ClassHeader("IDRESaveable, IDRELoadableManager, IFTEDataHandler, ILoadOnChapterSelect" & vbLf & vbLf)>
+
+      Public Class FTEDataHandler Inherits MonoBehaviour Implements IDRESaveable, IDRELoadableManager, IFTEDataHandler, IPlayerDataClearer, ILoadOnChapterSelect
+  inheritance:
+  - System.Object
+  implements:
+  - DREditor.Saving.IDRESaveable
+  - DREditor.Saving.IDRELoadableManager
+  - DREditor.FreeTime.IFTEDataHandler
+  - DREditor.Saving.IPlayerDataClearer
+  - DREditor.Saving.ILoadOnChapterSelect
+  extensionMethods:
+  - DREditor.FreeTime.FTEDataHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.FreeTime.FTEDataHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.FreeTime.FTEDataHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        IDRESaveable, IDRELoadableManager, IFTEDataHandler, ILoadOnChapterSelect
+
+- uid: DREditor.FreeTime.FTEDataHandler.fTEDataSaveKey
+  commentId: F:DREditor.FreeTime.FTEDataHandler.fTEDataSaveKey
+  id: fTEDataSaveKey
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: fTEDataSaveKey
+  nameWithType: FTEDataHandler.fTEDataSaveKey
+  fullName: DREditor.FreeTime.FTEDataHandler.fTEDataSaveKey
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected string fTEDataSaveKey
+    return:
+      type: System.String
+    content.vb: >-
+      <Divider>
+
+      Protected fTEDataSaveKey As String
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.FreeTime.FTEDataHandler.characterDatabase
+  commentId: F:DREditor.FreeTime.FTEDataHandler.characterDatabase
+  id: characterDatabase
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: characterDatabase
+  nameWithType: FTEDataHandler.characterDatabase
+  fullName: DREditor.FreeTime.FTEDataHandler.characterDatabase
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected CharacterDatabase characterDatabase
+    return:
+      type: DREditor.Characters.CharacterDatabase
+    content.vb: >-
+      <Divider>
+
+      Protected characterDatabase As CharacterDatabase
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.FreeTime.FTEDataHandler.fTEDatas
+  commentId: F:DREditor.FreeTime.FTEDataHandler.fTEDatas
+  id: fTEDatas
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: fTEDatas
+  nameWithType: FTEDataHandler.fTEDatas
+  fullName: DREditor.FreeTime.FTEDataHandler.fTEDatas
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected List<FTEData> fTEDatas
+    return:
+      type: System.Collections.Generic.List{DREditor.FreeTime.FTEData}
+    content.vb: >-
+      <Divider>
+
+      Protected fTEDatas As List(Of FTEData)
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.FreeTime.FTEDataHandler.Start
+  commentId: M:DREditor.FreeTime.FTEDataHandler.Start
+  id: Start
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: FTEDataHandler.Start()
+  fullName: DREditor.FreeTime.FTEDataHandler.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.FreeTime.FTEDataHandler.Start*
+- uid: DREditor.FreeTime.FTEDataHandler.InitializeFTEData
+  commentId: M:DREditor.FreeTime.FTEDataHandler.InitializeFTEData
+  id: InitializeFTEData
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: InitializeFTEData()
+  nameWithType: FTEDataHandler.InitializeFTEData()
+  fullName: DREditor.FreeTime.FTEDataHandler.InitializeFTEData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializeFTEData()
+    content.vb: Protected Overridable Sub InitializeFTEData()
+  overload: DREditor.FreeTime.FTEDataHandler.InitializeFTEData*
+- uid: DREditor.FreeTime.FTEDataHandler.AddCharacter(System.String)
+  commentId: M:DREditor.FreeTime.FTEDataHandler.AddCharacter(System.String)
+  id: AddCharacter(System.String)
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: AddCharacter(string)
+  nameWithType: FTEDataHandler.AddCharacter(string)
+  fullName: DREditor.FreeTime.FTEDataHandler.AddCharacter(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void AddCharacter(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    content.vb: Public Overridable Sub AddCharacter(name As String)
+  overload: DREditor.FreeTime.FTEDataHandler.AddCharacter*
+  implements:
+  - DREditor.FreeTime.IFTEDataHandler.AddCharacter(System.String)
+  nameWithType.vb: FTEDataHandler.AddCharacter(String)
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.AddCharacter(String)
+  name.vb: AddCharacter(String)
+- uid: DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter(System.String)
+  commentId: M:DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter(System.String)
+  id: GetLevelOfCharacter(System.String)
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: GetLevelOfCharacter(string)
+  nameWithType: FTEDataHandler.GetLevelOfCharacter(string)
+  fullName: DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual int GetLevelOfCharacter(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Overridable Function GetLevelOfCharacter(name As String) As Integer
+  overload: DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter*
+  implements:
+  - DREditor.FreeTime.IFTEDataHandler.GetLevelOfCharacter(System.String)
+  nameWithType.vb: FTEDataHandler.GetLevelOfCharacter(String)
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter(String)
+  name.vb: GetLevelOfCharacter(String)
+- uid: DREditor.FreeTime.FTEDataHandler.LevelUpCharacter(System.String)
+  commentId: M:DREditor.FreeTime.FTEDataHandler.LevelUpCharacter(System.String)
+  id: LevelUpCharacter(System.String)
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: LevelUpCharacter(string)
+  nameWithType: FTEDataHandler.LevelUpCharacter(string)
+  fullName: DREditor.FreeTime.FTEDataHandler.LevelUpCharacter(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LevelUpCharacter(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    content.vb: Public Overridable Sub LevelUpCharacter(name As String)
+  overload: DREditor.FreeTime.FTEDataHandler.LevelUpCharacter*
+  implements:
+  - DREditor.FreeTime.IFTEDataHandler.LevelUpCharacter(System.String)
+  nameWithType.vb: FTEDataHandler.LevelUpCharacter(String)
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.LevelUpCharacter(String)
+  name.vb: LevelUpCharacter(String)
+- uid: DREditor.FreeTime.FTEDataHandler.GetAffinity(System.String)
+  commentId: M:DREditor.FreeTime.FTEDataHandler.GetAffinity(System.String)
+  id: GetAffinity(System.String)
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: GetAffinity(string)
+  nameWithType: FTEDataHandler.GetAffinity(string)
+  fullName: DREditor.FreeTime.FTEDataHandler.GetAffinity(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual int GetAffinity(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Overridable Function GetAffinity(name As String) As Integer
+  overload: DREditor.FreeTime.FTEDataHandler.GetAffinity*
+  implements:
+  - DREditor.FreeTime.IFTEDataHandler.GetAffinity(System.String)
+  nameWithType.vb: FTEDataHandler.GetAffinity(String)
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.GetAffinity(String)
+  name.vb: GetAffinity(String)
+- uid: DREditor.FreeTime.FTEDataHandler.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.FreeTime.FTEDataHandler.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: Save(Dictionary<string, object>)
+  nameWithType: FTEDataHandler.Save(Dictionary<string, object>)
+  fullName: DREditor.FreeTime.FTEDataHandler.Save(System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Save(Dictionary<string, object> saveData)
+    parameters:
+    - id: saveData
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Overridable Sub Save(saveData As Dictionary(Of String, Object))
+  overload: DREditor.FreeTime.FTEDataHandler.Save*
+  implements:
+  - DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: FTEDataHandler.Save(Dictionary(Of String, Object))
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.Save(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Save(Dictionary(Of String, Object))
+- uid: DREditor.FreeTime.FTEDataHandler.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  commentId: M:DREditor.FreeTime.FTEDataHandler.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  id: LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: LoadManager(Dictionary<string, object>, bool)
+  nameWithType: FTEDataHandler.LoadManager(Dictionary<string, object>, bool)
+  fullName: DREditor.FreeTime.FTEDataHandler.LoadManager(System.Collections.Generic.Dictionary<string, object>, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LoadManager(Dictionary<string, object> saveDatas, bool inChapterSelect)
+    parameters:
+    - id: saveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    - id: inChapterSelect
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Sub LoadManager(saveDatas As Dictionary(Of String, Object), inChapterSelect As Boolean)
+  overload: DREditor.FreeTime.FTEDataHandler.LoadManager*
+  implements:
+  - DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  nameWithType.vb: FTEDataHandler.LoadManager(Dictionary(Of String, Object), Boolean)
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.LoadManager(System.Collections.Generic.Dictionary(Of String, Object), Boolean)
+  name.vb: LoadManager(Dictionary(Of String, Object), Boolean)
+- uid: DREditor.FreeTime.FTEDataHandler.LoadFTEDatas(System.Collections.Generic.List{DREditor.FreeTime.FTEData})
+  commentId: M:DREditor.FreeTime.FTEDataHandler.LoadFTEDatas(System.Collections.Generic.List{DREditor.FreeTime.FTEData})
+  id: LoadFTEDatas(System.Collections.Generic.List{DREditor.FreeTime.FTEData})
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: LoadFTEDatas(List<FTEData>)
+  nameWithType: FTEDataHandler.LoadFTEDatas(List<FTEData>)
+  fullName: DREditor.FreeTime.FTEDataHandler.LoadFTEDatas(System.Collections.Generic.List<DREditor.FreeTime.FTEData>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void LoadFTEDatas(List<FTEData> loadedDatas)
+    parameters:
+    - id: loadedDatas
+      type: System.Collections.Generic.List{DREditor.FreeTime.FTEData}
+      description: ''
+    content.vb: Protected Overridable Sub LoadFTEDatas(loadedDatas As List(Of FTEData))
+  overload: DREditor.FreeTime.FTEDataHandler.LoadFTEDatas*
+  nameWithType.vb: FTEDataHandler.LoadFTEDatas(List(Of FTEData))
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.LoadFTEDatas(System.Collections.Generic.List(Of DREditor.FreeTime.FTEData))
+  name.vb: LoadFTEDatas(List(Of FTEData))
+- uid: DREditor.FreeTime.FTEDataHandler.CopyFTEData(System.Collections.Generic.List{DREditor.FreeTime.FTEData})
+  commentId: M:DREditor.FreeTime.FTEDataHandler.CopyFTEData(System.Collections.Generic.List{DREditor.FreeTime.FTEData})
+  id: CopyFTEData(System.Collections.Generic.List{DREditor.FreeTime.FTEData})
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: CopyFTEData(List<FTEData>)
+  nameWithType: FTEDataHandler.CopyFTEData(List<FTEData>)
+  fullName: DREditor.FreeTime.FTEDataHandler.CopyFTEData(System.Collections.Generic.List<DREditor.FreeTime.FTEData>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void CopyFTEData(List<FTEData> loadedDatas)
+    parameters:
+    - id: loadedDatas
+      type: System.Collections.Generic.List{DREditor.FreeTime.FTEData}
+      description: ''
+    content.vb: Protected Overridable Sub CopyFTEData(loadedDatas As List(Of FTEData))
+  overload: DREditor.FreeTime.FTEDataHandler.CopyFTEData*
+  nameWithType.vb: FTEDataHandler.CopyFTEData(List(Of FTEData))
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.CopyFTEData(System.Collections.Generic.List(Of DREditor.FreeTime.FTEData))
+  name.vb: CopyFTEData(List(Of FTEData))
+- uid: DREditor.FreeTime.FTEDataHandler.ValidateData
+  commentId: M:DREditor.FreeTime.FTEDataHandler.ValidateData
+  id: ValidateData
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: ValidateData()
+  nameWithType: FTEDataHandler.ValidateData()
+  fullName: DREditor.FreeTime.FTEDataHandler.ValidateData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ValidateData()
+    content.vb: Protected Overridable Sub ValidateData()
+  overload: DREditor.FreeTime.FTEDataHandler.ValidateData*
+- uid: DREditor.FreeTime.FTEDataHandler.RemoveEmptyInstances
+  commentId: M:DREditor.FreeTime.FTEDataHandler.RemoveEmptyInstances
+  id: RemoveEmptyInstances
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: RemoveEmptyInstances()
+  nameWithType: FTEDataHandler.RemoveEmptyInstances()
+  fullName: DREditor.FreeTime.FTEDataHandler.RemoveEmptyInstances()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void RemoveEmptyInstances()
+    content.vb: Protected Overridable Sub RemoveEmptyInstances()
+  overload: DREditor.FreeTime.FTEDataHandler.RemoveEmptyInstances*
+- uid: DREditor.FreeTime.FTEDataHandler.ClearData
+  commentId: M:DREditor.FreeTime.FTEDataHandler.ClearData
+  id: ClearData
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: ClearData()
+  nameWithType: FTEDataHandler.ClearData()
+  fullName: DREditor.FreeTime.FTEDataHandler.ClearData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ClearData()
+    content.vb: Public Overridable Sub ClearData()
+  overload: DREditor.FreeTime.FTEDataHandler.ClearData*
+  implements:
+  - DREditor.Saving.IPlayerDataClearer.ClearData
+- uid: DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: CarryOverOnChapterSelect(Dictionary<string, object>, Dictionary<string, object>)
+  nameWithType: FTEDataHandler.CarryOverOnChapterSelect(Dictionary<string, object>, Dictionary<string, object>)
+  fullName: DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary<string, object>, System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void CarryOverOnChapterSelect(Dictionary<string, object> oldSaveDatas, Dictionary<string, object> newSaveDatas)
+    parameters:
+    - id: oldSaveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    - id: newSaveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    content.vb: Public Overridable Sub CarryOverOnChapterSelect(oldSaveDatas As Dictionary(Of String, Object), newSaveDatas As Dictionary(Of String, Object))
+  overload: DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect*
+  implements:
+  - DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: FTEDataHandler.CarryOverOnChapterSelect(Dictionary(Of String, Object), Dictionary(Of String, Object))
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary(Of String, Object), System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: CarryOverOnChapterSelect(Dictionary(Of String, Object), Dictionary(Of String, Object))
+- uid: DREditor.FreeTime.FTEDataHandler.#ctor
+  commentId: M:DREditor.FreeTime.FTEDataHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.FreeTime.FTEDataHandler
+  langs:
+  - csharp
+  - vb
+  name: FTEDataHandler()
+  nameWithType: FTEDataHandler.FTEDataHandler()
+  fullName: DREditor.FreeTime.FTEDataHandler.FTEDataHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.FreeTime/FTEDataHandler.cs
+  assemblies:
+  - DREditor.FreeTime
+  namespace: DREditor.FreeTime
+  syntax:
+    content: public FTEDataHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.FreeTime.FTEDataHandler.#ctor*
+  nameWithType.vb: FTEDataHandler.New()
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.FreeTime
+  commentId: N:DREditor.FreeTime
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.FreeTime
+  nameWithType: DREditor.FreeTime
+  fullName: DREditor.FreeTime
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.FreeTime
+    name: FreeTime
+    isExternal: true
+    href: DREditor.FreeTime.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.FreeTime
+    name: FreeTime
+    isExternal: true
+    href: DREditor.FreeTime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Saving.IDRESaveable
+  commentId: T:DREditor.Saving.IDRESaveable
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  name: IDRESaveable
+  nameWithType: IDRESaveable
+  fullName: DREditor.Saving.IDRESaveable
+- uid: DREditor.Saving.IDRELoadableManager
+  commentId: T:DREditor.Saving.IDRELoadableManager
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  name: IDRELoadableManager
+  nameWithType: IDRELoadableManager
+  fullName: DREditor.Saving.IDRELoadableManager
+- uid: DREditor.FreeTime.IFTEDataHandler
+  commentId: T:DREditor.FreeTime.IFTEDataHandler
+  parent: DREditor.FreeTime
+  isExternal: true
+  href: DREditor.FreeTime.IFTEDataHandler.html
+  name: IFTEDataHandler
+  nameWithType: IFTEDataHandler
+  fullName: DREditor.FreeTime.IFTEDataHandler
+- uid: DREditor.Saving.IPlayerDataClearer
+  commentId: T:DREditor.Saving.IPlayerDataClearer
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IPlayerDataClearer.cs
+  name: IPlayerDataClearer
+  nameWithType: IPlayerDataClearer
+  fullName: DREditor.Saving.IPlayerDataClearer
+- uid: DREditor.Saving.ILoadOnChapterSelect
+  commentId: T:DREditor.Saving.ILoadOnChapterSelect
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/ILoadOnChapterSelect.cs
+  name: ILoadOnChapterSelect
+  nameWithType: ILoadOnChapterSelect
+  fullName: DREditor.Saving.ILoadOnChapterSelect
+- uid: DREditor.FreeTime.FTEDataHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<FTEDataHandler>(FTEDataHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<FTEDataHandler>(FTEDataHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.FreeTime.FTEDataHandler>(DREditor.FreeTime.FTEDataHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of FTEDataHandler)(FTEDataHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.FreeTime.FTEDataHandler)(DREditor.FreeTime.FTEDataHandler)
+  name.vb: GetFieldNames(Of FTEDataHandler)(FTEDataHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.FreeTime.FTEDataHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.FreeTime.FTEDataHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+- uid: DREditor.FreeTime.FTEDataHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<FTEDataHandler>(FTEDataHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<FTEDataHandler>(FTEDataHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.FreeTime.FTEDataHandler>(DREditor.FreeTime.FTEDataHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of FTEDataHandler)(FTEDataHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.FreeTime.FTEDataHandler)(DREditor.FreeTime.FTEDataHandler)
+  name.vb: GetFieldValues(Of FTEDataHandler)(FTEDataHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.FreeTime.FTEDataHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.FreeTime.FTEDataHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+- uid: DREditor.FreeTime.FTEDataHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<FTEDataHandler>(FTEDataHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<FTEDataHandler>(FTEDataHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.FreeTime.FTEDataHandler>(DREditor.FreeTime.FTEDataHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of FTEDataHandler)(FTEDataHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.FreeTime.FTEDataHandler)(DREditor.FreeTime.FTEDataHandler)
+  name.vb: DeepCopy(Of FTEDataHandler)(FTEDataHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.FreeTime.FTEDataHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.FreeTime.FTEDataHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.FreeTime.FTEDataHandler
+    name: FTEDataHandler
+    isExternal: true
+    href: DREditor.FreeTime.FTEDataHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Characters.CharacterDatabase
+  commentId: T:DREditor.Characters.CharacterDatabase
+  parent: DREditor.Characters
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/CharacterDatabase.cs
+  name: CharacterDatabase
+  nameWithType: CharacterDatabase
+  fullName: DREditor.Characters.CharacterDatabase
+- uid: DREditor.Characters
+  commentId: N:DREditor.Characters
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Characters
+  nameWithType: DREditor.Characters
+  fullName: DREditor.Characters
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Characters
+    name: Characters
+    isExternal: true
+    href: DREditor.Characters.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Characters
+    name: Characters
+    isExternal: true
+    href: DREditor.Characters.html
+- uid: System.Collections.Generic.List{DREditor.FreeTime.FTEData}
+  commentId: T:System.Collections.Generic.List{DREditor.FreeTime.FTEData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<FTEData>
+  nameWithType: List<FTEData>
+  fullName: System.Collections.Generic.List<DREditor.FreeTime.FTEData>
+  nameWithType.vb: List(Of FTEData)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.FreeTime.FTEData)
+  name.vb: List(Of FTEData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.FreeTime.FTEData
+    name: FTEData
+    isExternal: true
+    href: DREditor.FreeTime.FTEData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FreeTime.FTEData
+    name: FTEData
+    isExternal: true
+    href: DREditor.FreeTime.FTEData.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.FreeTime.FTEDataHandler.Start*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.Start
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_Start
+  name: Start
+  nameWithType: FTEDataHandler.Start
+  fullName: DREditor.FreeTime.FTEDataHandler.Start
+- uid: DREditor.FreeTime.FTEDataHandler.InitializeFTEData*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.InitializeFTEData
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_InitializeFTEData
+  name: InitializeFTEData
+  nameWithType: FTEDataHandler.InitializeFTEData
+  fullName: DREditor.FreeTime.FTEDataHandler.InitializeFTEData
+- uid: DREditor.FreeTime.FTEDataHandler.AddCharacter*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.AddCharacter
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_AddCharacter_System_String_
+  name: AddCharacter
+  nameWithType: FTEDataHandler.AddCharacter
+  fullName: DREditor.FreeTime.FTEDataHandler.AddCharacter
+- uid: DREditor.FreeTime.IFTEDataHandler.AddCharacter(System.String)
+  commentId: M:DREditor.FreeTime.IFTEDataHandler.AddCharacter(System.String)
+  parent: DREditor.FreeTime.IFTEDataHandler
+  isExternal: true
+  href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_AddCharacter_System_String_
+  name: AddCharacter(string)
+  nameWithType: IFTEDataHandler.AddCharacter(string)
+  fullName: DREditor.FreeTime.IFTEDataHandler.AddCharacter(string)
+  nameWithType.vb: IFTEDataHandler.AddCharacter(String)
+  fullName.vb: DREditor.FreeTime.IFTEDataHandler.AddCharacter(String)
+  name.vb: AddCharacter(String)
+  spec.csharp:
+  - uid: DREditor.FreeTime.IFTEDataHandler.AddCharacter(System.String)
+    name: AddCharacter
+    isExternal: true
+    href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_AddCharacter_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.FreeTime.IFTEDataHandler.AddCharacter(System.String)
+    name: AddCharacter
+    isExternal: true
+    href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_AddCharacter_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_GetLevelOfCharacter_System_String_
+  name: GetLevelOfCharacter
+  nameWithType: FTEDataHandler.GetLevelOfCharacter
+  fullName: DREditor.FreeTime.FTEDataHandler.GetLevelOfCharacter
+- uid: DREditor.FreeTime.IFTEDataHandler.GetLevelOfCharacter(System.String)
+  commentId: M:DREditor.FreeTime.IFTEDataHandler.GetLevelOfCharacter(System.String)
+  parent: DREditor.FreeTime.IFTEDataHandler
+  isExternal: true
+  href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_GetLevelOfCharacter_System_String_
+  name: GetLevelOfCharacter(string)
+  nameWithType: IFTEDataHandler.GetLevelOfCharacter(string)
+  fullName: DREditor.FreeTime.IFTEDataHandler.GetLevelOfCharacter(string)
+  nameWithType.vb: IFTEDataHandler.GetLevelOfCharacter(String)
+  fullName.vb: DREditor.FreeTime.IFTEDataHandler.GetLevelOfCharacter(String)
+  name.vb: GetLevelOfCharacter(String)
+  spec.csharp:
+  - uid: DREditor.FreeTime.IFTEDataHandler.GetLevelOfCharacter(System.String)
+    name: GetLevelOfCharacter
+    isExternal: true
+    href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_GetLevelOfCharacter_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.FreeTime.IFTEDataHandler.GetLevelOfCharacter(System.String)
+    name: GetLevelOfCharacter
+    isExternal: true
+    href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_GetLevelOfCharacter_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.FreeTime.FTEDataHandler.LevelUpCharacter*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.LevelUpCharacter
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_LevelUpCharacter_System_String_
+  name: LevelUpCharacter
+  nameWithType: FTEDataHandler.LevelUpCharacter
+  fullName: DREditor.FreeTime.FTEDataHandler.LevelUpCharacter
+- uid: DREditor.FreeTime.IFTEDataHandler.LevelUpCharacter(System.String)
+  commentId: M:DREditor.FreeTime.IFTEDataHandler.LevelUpCharacter(System.String)
+  parent: DREditor.FreeTime.IFTEDataHandler
+  isExternal: true
+  href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_LevelUpCharacter_System_String_
+  name: LevelUpCharacter(string)
+  nameWithType: IFTEDataHandler.LevelUpCharacter(string)
+  fullName: DREditor.FreeTime.IFTEDataHandler.LevelUpCharacter(string)
+  nameWithType.vb: IFTEDataHandler.LevelUpCharacter(String)
+  fullName.vb: DREditor.FreeTime.IFTEDataHandler.LevelUpCharacter(String)
+  name.vb: LevelUpCharacter(String)
+  spec.csharp:
+  - uid: DREditor.FreeTime.IFTEDataHandler.LevelUpCharacter(System.String)
+    name: LevelUpCharacter
+    isExternal: true
+    href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_LevelUpCharacter_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.FreeTime.IFTEDataHandler.LevelUpCharacter(System.String)
+    name: LevelUpCharacter
+    isExternal: true
+    href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_LevelUpCharacter_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.FreeTime.FTEDataHandler.GetAffinity*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.GetAffinity
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_GetAffinity_System_String_
+  name: GetAffinity
+  nameWithType: FTEDataHandler.GetAffinity
+  fullName: DREditor.FreeTime.FTEDataHandler.GetAffinity
+- uid: DREditor.FreeTime.IFTEDataHandler.GetAffinity(System.String)
+  commentId: M:DREditor.FreeTime.IFTEDataHandler.GetAffinity(System.String)
+  parent: DREditor.FreeTime.IFTEDataHandler
+  isExternal: true
+  href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_GetAffinity_System_String_
+  name: GetAffinity(string)
+  nameWithType: IFTEDataHandler.GetAffinity(string)
+  fullName: DREditor.FreeTime.IFTEDataHandler.GetAffinity(string)
+  nameWithType.vb: IFTEDataHandler.GetAffinity(String)
+  fullName.vb: DREditor.FreeTime.IFTEDataHandler.GetAffinity(String)
+  name.vb: GetAffinity(String)
+  spec.csharp:
+  - uid: DREditor.FreeTime.IFTEDataHandler.GetAffinity(System.String)
+    name: GetAffinity
+    isExternal: true
+    href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_GetAffinity_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.FreeTime.IFTEDataHandler.GetAffinity(System.String)
+    name: GetAffinity
+    isExternal: true
+    href: DREditor.FreeTime.IFTEDataHandler.html#DREditor_FreeTime_IFTEDataHandler_GetAffinity_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.FreeTime.FTEDataHandler.Save*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.Save
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_Save_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: Save
+  nameWithType: FTEDataHandler.Save
+  fullName: DREditor.FreeTime.FTEDataHandler.Save
+- uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.IDRESaveable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  name: Save(Dictionary<string, object>)
+  nameWithType: IDRESaveable.Save(Dictionary<string, object>)
+  fullName: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: IDRESaveable.Save(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Save(Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Save
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Save
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: DREditor.FreeTime.FTEDataHandler.LoadManager*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.LoadManager
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_LoadManager_System_Collections_Generic_Dictionary_System_String_System_Object__System_Boolean_
+  name: LoadManager
+  nameWithType: FTEDataHandler.LoadManager
+  fullName: DREditor.FreeTime.FTEDataHandler.LoadManager
+- uid: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  commentId: M:DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  parent: DREditor.Saving.IDRELoadableManager
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  name: LoadManager(Dictionary<string, object>, bool)
+  nameWithType: IDRELoadableManager.LoadManager(Dictionary<string, object>, bool)
+  fullName: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary<string, object>, bool)
+  nameWithType.vb: IDRELoadableManager.LoadManager(Dictionary(Of String, Object), Boolean)
+  fullName.vb: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary(Of String, Object), Boolean)
+  name.vb: LoadManager(Dictionary(Of String, Object), Boolean)
+  spec.csharp:
+  - uid: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+    name: LoadManager
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRELoadableManager.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+    name: LoadManager
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.FreeTime.FTEDataHandler.LoadFTEDatas*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.LoadFTEDatas
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_LoadFTEDatas_System_Collections_Generic_List_DREditor_FreeTime_FTEData__
+  name: LoadFTEDatas
+  nameWithType: FTEDataHandler.LoadFTEDatas
+  fullName: DREditor.FreeTime.FTEDataHandler.LoadFTEDatas
+- uid: DREditor.FreeTime.FTEDataHandler.CopyFTEData*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.CopyFTEData
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_CopyFTEData_System_Collections_Generic_List_DREditor_FreeTime_FTEData__
+  name: CopyFTEData
+  nameWithType: FTEDataHandler.CopyFTEData
+  fullName: DREditor.FreeTime.FTEDataHandler.CopyFTEData
+- uid: DREditor.FreeTime.FTEDataHandler.ValidateData*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.ValidateData
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_ValidateData
+  name: ValidateData
+  nameWithType: FTEDataHandler.ValidateData
+  fullName: DREditor.FreeTime.FTEDataHandler.ValidateData
+- uid: DREditor.FreeTime.FTEDataHandler.RemoveEmptyInstances*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.RemoveEmptyInstances
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_RemoveEmptyInstances
+  name: RemoveEmptyInstances
+  nameWithType: FTEDataHandler.RemoveEmptyInstances
+  fullName: DREditor.FreeTime.FTEDataHandler.RemoveEmptyInstances
+- uid: DREditor.FreeTime.FTEDataHandler.ClearData*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.ClearData
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_ClearData
+  name: ClearData
+  nameWithType: FTEDataHandler.ClearData
+  fullName: DREditor.FreeTime.FTEDataHandler.ClearData
+- uid: DREditor.Saving.IPlayerDataClearer.ClearData
+  commentId: M:DREditor.Saving.IPlayerDataClearer.ClearData
+  parent: DREditor.Saving.IPlayerDataClearer
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IPlayerDataClearer.cs
+  name: ClearData()
+  nameWithType: IPlayerDataClearer.ClearData()
+  fullName: DREditor.Saving.IPlayerDataClearer.ClearData()
+  spec.csharp:
+  - uid: DREditor.Saving.IPlayerDataClearer.ClearData
+    name: ClearData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IPlayerDataClearer.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IPlayerDataClearer.ClearData
+    name: ClearData
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IPlayerDataClearer.cs
+  - name: (
+  - name: )
+- uid: DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler_CarryOverOnChapterSelect_System_Collections_Generic_Dictionary_System_String_System_Object__System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: CarryOverOnChapterSelect
+  nameWithType: FTEDataHandler.CarryOverOnChapterSelect
+  fullName: DREditor.FreeTime.FTEDataHandler.CarryOverOnChapterSelect
+- uid: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.ILoadOnChapterSelect
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/ILoadOnChapterSelect.cs
+  name: CarryOverOnChapterSelect(Dictionary<string, object>, Dictionary<string, object>)
+  nameWithType: ILoadOnChapterSelect.CarryOverOnChapterSelect(Dictionary<string, object>, Dictionary<string, object>)
+  fullName: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary<string, object>, System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: ILoadOnChapterSelect.CarryOverOnChapterSelect(Dictionary(Of String, Object), Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary(Of String, Object), System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: CarryOverOnChapterSelect(Dictionary(Of String, Object), Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: CarryOverOnChapterSelect
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/ILoadOnChapterSelect.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ILoadOnChapterSelect.CarryOverOnChapterSelect(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: CarryOverOnChapterSelect
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/ILoadOnChapterSelect.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: DREditor.FreeTime.FTEDataHandler.#ctor*
+  commentId: Overload:DREditor.FreeTime.FTEDataHandler.#ctor
+  isExternal: true
+  href: DREditor.FreeTime.FTEDataHandler.html#DREditor_FreeTime_FTEDataHandler__ctor
+  name: FTEDataHandler
+  nameWithType: FTEDataHandler.FTEDataHandler
+  fullName: DREditor.FreeTime.FTEDataHandler.FTEDataHandler
+  nameWithType.vb: FTEDataHandler.New
+  fullName.vb: DREditor.FreeTime.FTEDataHandler.New
+  name.vb: New

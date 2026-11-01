@@ -6,20 +6,22 @@ items:
   parent: DREditor.FPC
   children:
   - DREditor.FPC.ControlMonobehaviours.#ctor
-  - DREditor.FPC.ControlMonobehaviours.Enable(System.Boolean)
+  - DREditor.FPC.ControlMonobehaviours.EnableBehaviours(System.Boolean)
   - DREditor.FPC.ControlMonobehaviours.EnableTPFD(System.Boolean)
   - DREditor.FPC.ControlMonobehaviours.InDialogue
   - DREditor.FPC.ControlMonobehaviours.InLoading
   - DREditor.FPC.ControlMonobehaviours.InMenu
   - DREditor.FPC.ControlMonobehaviours.InTPFD
-  - DREditor.FPC.ControlMonobehaviours.LoadBool
   - DREditor.FPC.ControlMonobehaviours.MonoBehaviours
+  - DREditor.FPC.ControlMonobehaviours.MovePlayer
   - DREditor.FPC.ControlMonobehaviours.RaycastScript
-  - DREditor.FPC.ControlMonobehaviours.SaveBool
+  - DREditor.FPC.ControlMonobehaviours.SetDisable(System.Boolean)
+  - DREditor.FPC.ControlMonobehaviours.SetRaycastScript(UnityEngine.MonoBehaviour)
+  - DREditor.FPC.ControlMonobehaviours.SetSetting(System.Boolean)
   - DREditor.FPC.ControlMonobehaviours.TPFDScript
   - DREditor.FPC.ControlMonobehaviours.disable
-  - DREditor.FPC.ControlMonobehaviours.instance
   - DREditor.FPC.ControlMonobehaviours.setting
+  - DREditor.FPC.ControlMonobehaviours.tpfdSetting
   langs:
   - csharp
   - vb
@@ -28,7 +30,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -37,6 +39,10 @@ items:
     content.vb: Public Class ControlMonobehaviours Inherits MonoBehaviour
   inheritance:
   - System.Object
+  extensionMethods:
+  - DREditor.FPC.ControlMonobehaviours.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.FPC.ControlMonobehaviours.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.FPC.ControlMonobehaviours.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.FPC.ControlMonobehaviours.InMenu
   commentId: F:DREditor.FPC.ControlMonobehaviours.InMenu
   id: InMenu
@@ -49,7 +55,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.InMenu
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -70,7 +76,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.InDialogue
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -91,7 +97,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.InTPFD
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -112,7 +118,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.InLoading
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -133,7 +139,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.setting
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -142,6 +148,27 @@ items:
     return:
       type: System.Boolean
     content.vb: Public setting As Boolean
+- uid: DREditor.FPC.ControlMonobehaviours.tpfdSetting
+  commentId: F:DREditor.FPC.ControlMonobehaviours.tpfdSetting
+  id: tpfdSetting
+  parent: DREditor.FPC.ControlMonobehaviours
+  langs:
+  - csharp
+  - vb
+  name: tpfdSetting
+  nameWithType: ControlMonobehaviours.tpfdSetting
+  fullName: DREditor.FPC.ControlMonobehaviours.tpfdSetting
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: public bool tpfdSetting
+    return:
+      type: System.Boolean
+    content.vb: Public tpfdSetting As Boolean
 - uid: DREditor.FPC.ControlMonobehaviours.disable
   commentId: F:DREditor.FPC.ControlMonobehaviours.disable
   id: disable
@@ -154,7 +181,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.disable
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -175,7 +202,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.MonoBehaviours
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -196,7 +223,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.RaycastScript
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -217,7 +244,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.TPFDScript
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -226,93 +253,53 @@ items:
     return:
       type: UnityEngine.MonoBehaviour
     content.vb: Public TPFDScript As MonoBehaviour
-- uid: DREditor.FPC.ControlMonobehaviours.instance
-  commentId: F:DREditor.FPC.ControlMonobehaviours.instance
-  id: instance
+- uid: DREditor.FPC.ControlMonobehaviours.MovePlayer
+  commentId: F:DREditor.FPC.ControlMonobehaviours.MovePlayer
+  id: MovePlayer
   parent: DREditor.FPC.ControlMonobehaviours
   langs:
   - csharp
   - vb
-  name: instance
-  nameWithType: ControlMonobehaviours.instance
-  fullName: DREditor.FPC.ControlMonobehaviours.instance
+  name: MovePlayer
+  nameWithType: ControlMonobehaviours.MovePlayer
+  fullName: DREditor.FPC.ControlMonobehaviours.MovePlayer
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
   syntax:
-    content: public static ControlMonobehaviours instance
+    content: public MonoBehaviour MovePlayer
     return:
-      type: DREditor.FPC.ControlMonobehaviours
-    content.vb: Public Shared instance As ControlMonobehaviours
-- uid: DREditor.FPC.ControlMonobehaviours.SaveBool
-  commentId: M:DREditor.FPC.ControlMonobehaviours.SaveBool
-  id: SaveBool
+      type: UnityEngine.MonoBehaviour
+    content.vb: Public MovePlayer As MonoBehaviour
+- uid: DREditor.FPC.ControlMonobehaviours.EnableBehaviours(System.Boolean)
+  commentId: M:DREditor.FPC.ControlMonobehaviours.EnableBehaviours(System.Boolean)
+  id: EnableBehaviours(System.Boolean)
   parent: DREditor.FPC.ControlMonobehaviours
   langs:
   - csharp
   - vb
-  name: SaveBool()
-  nameWithType: ControlMonobehaviours.SaveBool()
-  fullName: DREditor.FPC.ControlMonobehaviours.SaveBool()
+  name: EnableBehaviours(bool)
+  nameWithType: ControlMonobehaviours.EnableBehaviours(bool)
+  fullName: DREditor.FPC.ControlMonobehaviours.EnableBehaviours(bool)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
   syntax:
-    content: public void SaveBool()
-    content.vb: Public Sub SaveBool()
-  overload: DREditor.FPC.ControlMonobehaviours.SaveBool*
-- uid: DREditor.FPC.ControlMonobehaviours.LoadBool
-  commentId: M:DREditor.FPC.ControlMonobehaviours.LoadBool
-  id: LoadBool
-  parent: DREditor.FPC.ControlMonobehaviours
-  langs:
-  - csharp
-  - vb
-  name: LoadBool()
-  nameWithType: ControlMonobehaviours.LoadBool()
-  fullName: DREditor.FPC.ControlMonobehaviours.LoadBool()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.FPC
-  syntax:
-    content: public void LoadBool()
-    content.vb: Public Sub LoadBool()
-  overload: DREditor.FPC.ControlMonobehaviours.LoadBool*
-- uid: DREditor.FPC.ControlMonobehaviours.Enable(System.Boolean)
-  commentId: M:DREditor.FPC.ControlMonobehaviours.Enable(System.Boolean)
-  id: Enable(System.Boolean)
-  parent: DREditor.FPC.ControlMonobehaviours
-  langs:
-  - csharp
-  - vb
-  name: Enable(bool)
-  nameWithType: ControlMonobehaviours.Enable(bool)
-  fullName: DREditor.FPC.ControlMonobehaviours.Enable(bool)
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.FPC
-  syntax:
-    content: public void Enable(bool to)
+    content: public void EnableBehaviours(bool to)
     parameters:
     - id: to
       type: System.Boolean
-    content.vb: Public Sub Enable([to] As Boolean)
-  overload: DREditor.FPC.ControlMonobehaviours.Enable*
-  nameWithType.vb: ControlMonobehaviours.Enable(Boolean)
-  fullName.vb: DREditor.FPC.ControlMonobehaviours.Enable(Boolean)
-  name.vb: Enable(Boolean)
+    content.vb: Public Sub EnableBehaviours([to] As Boolean)
+  overload: DREditor.FPC.ControlMonobehaviours.EnableBehaviours*
+  nameWithType.vb: ControlMonobehaviours.EnableBehaviours(Boolean)
+  fullName.vb: DREditor.FPC.ControlMonobehaviours.EnableBehaviours(Boolean)
+  name.vb: EnableBehaviours(Boolean)
 - uid: DREditor.FPC.ControlMonobehaviours.EnableTPFD(System.Boolean)
   commentId: M:DREditor.FPC.ControlMonobehaviours.EnableTPFD(System.Boolean)
   id: EnableTPFD(System.Boolean)
@@ -325,7 +312,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.EnableTPFD(bool)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -339,6 +326,81 @@ items:
   nameWithType.vb: ControlMonobehaviours.EnableTPFD(Boolean)
   fullName.vb: DREditor.FPC.ControlMonobehaviours.EnableTPFD(Boolean)
   name.vb: EnableTPFD(Boolean)
+- uid: DREditor.FPC.ControlMonobehaviours.SetRaycastScript(UnityEngine.MonoBehaviour)
+  commentId: M:DREditor.FPC.ControlMonobehaviours.SetRaycastScript(UnityEngine.MonoBehaviour)
+  id: SetRaycastScript(UnityEngine.MonoBehaviour)
+  parent: DREditor.FPC.ControlMonobehaviours
+  langs:
+  - csharp
+  - vb
+  name: SetRaycastScript(MonoBehaviour)
+  nameWithType: ControlMonobehaviours.SetRaycastScript(MonoBehaviour)
+  fullName: DREditor.FPC.ControlMonobehaviours.SetRaycastScript(UnityEngine.MonoBehaviour)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: public void SetRaycastScript(MonoBehaviour RaycastScript)
+    parameters:
+    - id: RaycastScript
+      type: UnityEngine.MonoBehaviour
+    content.vb: Public Sub SetRaycastScript(RaycastScript As MonoBehaviour)
+  overload: DREditor.FPC.ControlMonobehaviours.SetRaycastScript*
+- uid: DREditor.FPC.ControlMonobehaviours.SetDisable(System.Boolean)
+  commentId: M:DREditor.FPC.ControlMonobehaviours.SetDisable(System.Boolean)
+  id: SetDisable(System.Boolean)
+  parent: DREditor.FPC.ControlMonobehaviours
+  langs:
+  - csharp
+  - vb
+  name: SetDisable(bool)
+  nameWithType: ControlMonobehaviours.SetDisable(bool)
+  fullName: DREditor.FPC.ControlMonobehaviours.SetDisable(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: public void SetDisable(bool to)
+    parameters:
+    - id: to
+      type: System.Boolean
+    content.vb: Public Sub SetDisable([to] As Boolean)
+  overload: DREditor.FPC.ControlMonobehaviours.SetDisable*
+  nameWithType.vb: ControlMonobehaviours.SetDisable(Boolean)
+  fullName.vb: DREditor.FPC.ControlMonobehaviours.SetDisable(Boolean)
+  name.vb: SetDisable(Boolean)
+- uid: DREditor.FPC.ControlMonobehaviours.SetSetting(System.Boolean)
+  commentId: M:DREditor.FPC.ControlMonobehaviours.SetSetting(System.Boolean)
+  id: SetSetting(System.Boolean)
+  parent: DREditor.FPC.ControlMonobehaviours
+  langs:
+  - csharp
+  - vb
+  name: SetSetting(bool)
+  nameWithType: ControlMonobehaviours.SetSetting(bool)
+  fullName: DREditor.FPC.ControlMonobehaviours.SetSetting(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: public void SetSetting(bool to)
+    parameters:
+    - id: to
+      type: System.Boolean
+    content.vb: Public Sub SetSetting([to] As Boolean)
+  overload: DREditor.FPC.ControlMonobehaviours.SetSetting*
+  nameWithType.vb: ControlMonobehaviours.SetSetting(Boolean)
+  fullName.vb: DREditor.FPC.ControlMonobehaviours.SetSetting(Boolean)
+  name.vb: SetSetting(Boolean)
 - uid: DREditor.FPC.ControlMonobehaviours.#ctor
   commentId: M:DREditor.FPC.ControlMonobehaviours.#ctor
   id: '#ctor'
@@ -351,7 +413,7 @@ items:
   fullName: DREditor.FPC.ControlMonobehaviours.ControlMonobehaviours()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/ControlMonobehaviours.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/ControlMonobehaviours.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -401,6 +463,147 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.FPC.ControlMonobehaviours.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ControlMonobehaviours>(ControlMonobehaviours)
+  nameWithType: ReflectionHelper.GetFieldNames<ControlMonobehaviours>(ControlMonobehaviours)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.FPC.ControlMonobehaviours>(DREditor.FPC.ControlMonobehaviours)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ControlMonobehaviours)(ControlMonobehaviours)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.FPC.ControlMonobehaviours)(DREditor.FPC.ControlMonobehaviours)
+  name.vb: GetFieldNames(Of ControlMonobehaviours)(ControlMonobehaviours)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.FPC.ControlMonobehaviours)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.FPC.ControlMonobehaviours)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
+- uid: DREditor.FPC.ControlMonobehaviours.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ControlMonobehaviours>(ControlMonobehaviours)
+  nameWithType: ReflectionHelper.GetFieldValues<ControlMonobehaviours>(ControlMonobehaviours)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.FPC.ControlMonobehaviours>(DREditor.FPC.ControlMonobehaviours)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ControlMonobehaviours)(ControlMonobehaviours)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.FPC.ControlMonobehaviours)(DREditor.FPC.ControlMonobehaviours)
+  name.vb: GetFieldValues(Of ControlMonobehaviours)(ControlMonobehaviours)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.FPC.ControlMonobehaviours)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.FPC.ControlMonobehaviours)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
+- uid: DREditor.FPC.ControlMonobehaviours.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ControlMonobehaviours>(ControlMonobehaviours)
+  nameWithType: DeepCopyExtensions.DeepCopy<ControlMonobehaviours>(ControlMonobehaviours)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.FPC.ControlMonobehaviours>(DREditor.FPC.ControlMonobehaviours)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ControlMonobehaviours)(ControlMonobehaviours)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.FPC.ControlMonobehaviours)(DREditor.FPC.ControlMonobehaviours)
+  name.vb: DeepCopy(Of ControlMonobehaviours)(ControlMonobehaviours)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.FPC.ControlMonobehaviours)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.FPC.ControlMonobehaviours)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.ControlMonobehaviours
+    name: ControlMonobehaviours
+    isExternal: true
+    href: DREditor.FPC.ControlMonobehaviours.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -408,11 +611,183 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: DREditor.EventObjects.BoolWithEvent
   commentId: T:DREditor.EventObjects.BoolWithEvent
   parent: DREditor.EventObjects
   isExternal: true
-  href: DREditor.EventObjects.BoolWithEvent.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
   name: BoolWithEvent
   nameWithType: BoolWithEvent
   fullName: DREditor.EventObjects.BoolWithEvent
@@ -557,35 +932,13 @@ references:
   name: MonoBehaviour
   nameWithType: MonoBehaviour
   fullName: UnityEngine.MonoBehaviour
-- uid: DREditor.FPC.ControlMonobehaviours
-  commentId: T:DREditor.FPC.ControlMonobehaviours
-  parent: DREditor.FPC
+- uid: DREditor.FPC.ControlMonobehaviours.EnableBehaviours*
+  commentId: Overload:DREditor.FPC.ControlMonobehaviours.EnableBehaviours
   isExternal: true
-  href: DREditor.FPC.ControlMonobehaviours.html
-  name: ControlMonobehaviours
-  nameWithType: ControlMonobehaviours
-  fullName: DREditor.FPC.ControlMonobehaviours
-- uid: DREditor.FPC.ControlMonobehaviours.SaveBool*
-  commentId: Overload:DREditor.FPC.ControlMonobehaviours.SaveBool
-  isExternal: true
-  href: DREditor.FPC.ControlMonobehaviours.html#DREditor_FPC_ControlMonobehaviours_SaveBool
-  name: SaveBool
-  nameWithType: ControlMonobehaviours.SaveBool
-  fullName: DREditor.FPC.ControlMonobehaviours.SaveBool
-- uid: DREditor.FPC.ControlMonobehaviours.LoadBool*
-  commentId: Overload:DREditor.FPC.ControlMonobehaviours.LoadBool
-  isExternal: true
-  href: DREditor.FPC.ControlMonobehaviours.html#DREditor_FPC_ControlMonobehaviours_LoadBool
-  name: LoadBool
-  nameWithType: ControlMonobehaviours.LoadBool
-  fullName: DREditor.FPC.ControlMonobehaviours.LoadBool
-- uid: DREditor.FPC.ControlMonobehaviours.Enable*
-  commentId: Overload:DREditor.FPC.ControlMonobehaviours.Enable
-  isExternal: true
-  href: DREditor.FPC.ControlMonobehaviours.html#DREditor_FPC_ControlMonobehaviours_Enable_System_Boolean_
-  name: Enable
-  nameWithType: ControlMonobehaviours.Enable
-  fullName: DREditor.FPC.ControlMonobehaviours.Enable
+  href: DREditor.FPC.ControlMonobehaviours.html#DREditor_FPC_ControlMonobehaviours_EnableBehaviours_System_Boolean_
+  name: EnableBehaviours
+  nameWithType: ControlMonobehaviours.EnableBehaviours
+  fullName: DREditor.FPC.ControlMonobehaviours.EnableBehaviours
 - uid: DREditor.FPC.ControlMonobehaviours.EnableTPFD*
   commentId: Overload:DREditor.FPC.ControlMonobehaviours.EnableTPFD
   isExternal: true
@@ -593,6 +946,27 @@ references:
   name: EnableTPFD
   nameWithType: ControlMonobehaviours.EnableTPFD
   fullName: DREditor.FPC.ControlMonobehaviours.EnableTPFD
+- uid: DREditor.FPC.ControlMonobehaviours.SetRaycastScript*
+  commentId: Overload:DREditor.FPC.ControlMonobehaviours.SetRaycastScript
+  isExternal: true
+  href: DREditor.FPC.ControlMonobehaviours.html#DREditor_FPC_ControlMonobehaviours_SetRaycastScript_UnityEngine_MonoBehaviour_
+  name: SetRaycastScript
+  nameWithType: ControlMonobehaviours.SetRaycastScript
+  fullName: DREditor.FPC.ControlMonobehaviours.SetRaycastScript
+- uid: DREditor.FPC.ControlMonobehaviours.SetDisable*
+  commentId: Overload:DREditor.FPC.ControlMonobehaviours.SetDisable
+  isExternal: true
+  href: DREditor.FPC.ControlMonobehaviours.html#DREditor_FPC_ControlMonobehaviours_SetDisable_System_Boolean_
+  name: SetDisable
+  nameWithType: ControlMonobehaviours.SetDisable
+  fullName: DREditor.FPC.ControlMonobehaviours.SetDisable
+- uid: DREditor.FPC.ControlMonobehaviours.SetSetting*
+  commentId: Overload:DREditor.FPC.ControlMonobehaviours.SetSetting
+  isExternal: true
+  href: DREditor.FPC.ControlMonobehaviours.html#DREditor_FPC_ControlMonobehaviours_SetSetting_System_Boolean_
+  name: SetSetting
+  nameWithType: ControlMonobehaviours.SetSetting
+  fullName: DREditor.FPC.ControlMonobehaviours.SetSetting
 - uid: DREditor.FPC.ControlMonobehaviours.#ctor*
   commentId: Overload:DREditor.FPC.ControlMonobehaviours.#ctor
   isExternal: true

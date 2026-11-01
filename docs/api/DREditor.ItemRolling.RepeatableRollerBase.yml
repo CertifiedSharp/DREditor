@@ -1,0 +1,987 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.ItemRolling.RepeatableRollerBase
+  commentId: T:DREditor.ItemRolling.RepeatableRollerBase
+  id: RepeatableRollerBase
+  parent: DREditor.ItemRolling
+  children:
+  - DREditor.ItemRolling.RepeatableRollerBase.#ctor
+  - DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+  - DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+  - DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+  - DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+  - DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+  - DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(System.Object)
+  - DREditor.ItemRolling.RepeatableRollerBase.onNewPull
+  - DREditor.ItemRolling.RepeatableRollerBase.onRepeatPull
+  langs:
+  - csharp
+  - vb
+  name: RepeatableRollerBase
+  nameWithType: RepeatableRollerBase
+  fullName: DREditor.ItemRolling.RepeatableRollerBase
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  summary: ''
+  example: []
+  syntax:
+    content: 'public abstract class RepeatableRollerBase : ItemRollerBase, IRepeatableRoller, IItemRoller'
+    content.vb: Public MustInherit Class RepeatableRollerBase Inherits ItemRollerBase Implements IRepeatableRoller, IItemRoller
+  inheritance:
+  - System.Object
+  - DREditor.ItemRolling.ItemRollerBase
+  derivedClasses:
+  - DREditor.GachaSurface.PresentRoller
+  implements:
+  - DREditor.ItemRolling.IRepeatableRoller
+  - DREditor.ItemRolling.IItemRoller
+  inheritedMembers:
+  - DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1({T}@)
+  - DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+  - DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+  - DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+  extensionMethods:
+  - DREditor.ItemRolling.RepeatableRollerBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.ItemRolling.RepeatableRollerBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.ItemRolling.RepeatableRollerBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.ItemRolling.RepeatableRollerBase.onRepeatPull
+  commentId: F:DREditor.ItemRolling.RepeatableRollerBase.onRepeatPull
+  id: onRepeatPull
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: onRepeatPull
+  nameWithType: RepeatableRollerBase.onRepeatPull
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.onRepeatPull
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  syntax:
+    content: >-
+      [Divider]
+
+      protected UnityEvent onRepeatPull
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: >-
+      <Divider>
+
+      Protected onRepeatPull As UnityEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.ItemRolling.RepeatableRollerBase.onNewPull
+  commentId: F:DREditor.ItemRolling.RepeatableRollerBase.onNewPull
+  id: onNewPull
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: onNewPull
+  nameWithType: RepeatableRollerBase.onNewPull
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.onNewPull
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  syntax:
+    content: protected UnityEvent onNewPull
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: Protected onNewPull As UnityEvent
+- uid: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+  id: GetRepeatRate
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: GetRepeatRate()
+  nameWithType: RepeatableRollerBase.GetRepeatRate()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual float GetRepeatRate()
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Public Overridable Function GetRepeatRate() As Single
+  overload: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate*
+  implements:
+  - DREditor.ItemRolling.IRepeatableRoller.GetRepeatRate
+- uid: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+  id: CalculateBaseRepeatRate
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: CalculateBaseRepeatRate()
+  nameWithType: RepeatableRollerBase.CalculateBaseRepeatRate()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  summary: ''
+  example: []
+  syntax:
+    content: protected abstract float CalculateBaseRepeatRate()
+    return:
+      type: System.Single
+      description: ''
+    content.vb: Protected MustOverride Function CalculateBaseRepeatRate() As Single
+  overload: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate*
+- uid: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(System.Object)
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(System.Object)
+  id: PlayerOwnsItem(System.Object)
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: PlayerOwnsItem(object)
+  nameWithType: RepeatableRollerBase.PlayerOwnsItem(object)
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  summary: ''
+  example: []
+  syntax:
+    content: protected abstract bool PlayerOwnsItem(object item)
+    parameters:
+    - id: item
+      type: System.Object
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected MustOverride Function PlayerOwnsItem(item As Object) As Boolean
+  overload: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem*
+  nameWithType.vb: RepeatableRollerBase.PlayerOwnsItem(Object)
+  fullName.vb: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem(Object)
+  name.vb: PlayerOwnsItem(Object)
+- uid: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+  id: GivePlayerRolledItem
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: GivePlayerRolledItem()
+  nameWithType: RepeatableRollerBase.GivePlayerRolledItem()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  summary: ''
+  example: []
+  syntax:
+    content: public override void GivePlayerRolledItem()
+    content.vb: Public Overrides Sub GivePlayerRolledItem()
+  overridden: DREditor.ItemRolling.ItemRollerBase.GivePlayerRolledItem
+  overload: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem*
+  implements:
+  - DREditor.ItemRolling.IItemRoller.GivePlayerRolledItem
+- uid: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+  id: InvokePulledType
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: InvokePulledType()
+  nameWithType: RepeatableRollerBase.InvokePulledType()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InvokePulledType()
+    content.vb: Protected Overridable Sub InvokePulledType()
+  overload: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType*
+- uid: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+  id: AddItemToInventory
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: AddItemToInventory()
+  nameWithType: RepeatableRollerBase.AddItemToInventory()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  summary: ''
+  example: []
+  syntax:
+    content: protected abstract void AddItemToInventory()
+    content.vb: Protected MustOverride Sub AddItemToInventory()
+  overload: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory*
+- uid: DREditor.ItemRolling.RepeatableRollerBase.#ctor
+  commentId: M:DREditor.ItemRolling.RepeatableRollerBase.#ctor
+  id: '#ctor'
+  parent: DREditor.ItemRolling.RepeatableRollerBase
+  langs:
+  - csharp
+  - vb
+  name: RepeatableRollerBase()
+  nameWithType: RepeatableRollerBase.RepeatableRollerBase()
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.RepeatableRollerBase()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/RepeatableRollerBase.cs
+  assemblies:
+  - DREditor.ItemRolling
+  namespace: DREditor.ItemRolling
+  syntax:
+    content: protected RepeatableRollerBase()
+    content.vb: Protected Sub New()
+  overload: DREditor.ItemRolling.RepeatableRollerBase.#ctor*
+  nameWithType.vb: RepeatableRollerBase.New()
+  fullName.vb: DREditor.ItemRolling.RepeatableRollerBase.New()
+  name.vb: New()
+references:
+- uid: DREditor.ItemRolling
+  commentId: N:DREditor.ItemRolling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.ItemRolling
+  nameWithType: DREditor.ItemRolling
+  fullName: DREditor.ItemRolling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.ItemRolling
+    name: ItemRolling
+    isExternal: true
+    href: DREditor.ItemRolling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.ItemRolling
+    name: ItemRolling
+    isExternal: true
+    href: DREditor.ItemRolling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.ItemRolling.ItemRollerBase
+  commentId: T:DREditor.ItemRolling.ItemRollerBase
+  parent: DREditor.ItemRolling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: ItemRollerBase
+  nameWithType: ItemRollerBase
+  fullName: DREditor.ItemRolling.ItemRollerBase
+- uid: DREditor.ItemRolling.IRepeatableRoller
+  commentId: T:DREditor.ItemRolling.IRepeatableRoller
+  parent: DREditor.ItemRolling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/IRepeatableRoller.cs
+  name: IRepeatableRoller
+  nameWithType: IRepeatableRoller
+  fullName: DREditor.ItemRolling.IRepeatableRoller
+- uid: DREditor.ItemRolling.IItemRoller
+  commentId: T:DREditor.ItemRolling.IItemRoller
+  parent: DREditor.ItemRolling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/IItemRoller.cs
+  name: IItemRoller
+  nameWithType: IItemRoller
+  fullName: DREditor.ItemRolling.IItemRoller
+- uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1({T}@)
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+  parent: DREditor.ItemRolling.ItemRollerBase
+  definition: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: TryGetRolledObject<T>(out T)
+  nameWithType: ItemRollerBase.TryGetRolledObject<T>(out T)
+  fullName: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject<T>(out T)
+  nameWithType.vb: ItemRollerBase.TryGetRolledObject(Of T)(T)
+  fullName.vb: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject(Of T)(T)
+  name.vb: TryGetRolledObject(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+    name: TryGetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+    name: TryGetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+  parent: DREditor.ItemRolling.ItemRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: ReportElse(bool, string)
+  nameWithType: ItemRollerBase.ReportElse(bool, string)
+  fullName: DREditor.ItemRolling.ItemRollerBase.ReportElse(bool, string)
+  nameWithType.vb: ItemRollerBase.ReportElse(Boolean, String)
+  fullName.vb: DREditor.ItemRolling.ItemRollerBase.ReportElse(Boolean, String)
+  name.vb: ReportElse(Boolean, String)
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+    name: ReportElse
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.ReportElse(System.Boolean,System.String)
+    name: ReportElse
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+  parent: DREditor.ItemRolling.ItemRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: GetRolledObject()
+  nameWithType: ItemRollerBase.GetRolledObject()
+  fullName: DREditor.ItemRolling.ItemRollerBase.GetRolledObject()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+    name: GetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.GetRolledObject
+    name: GetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: )
+- uid: DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+  parent: DREditor.ItemRolling.ItemRollerBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: RollForItem(params object[])
+  nameWithType: ItemRollerBase.RollForItem(params object[])
+  fullName: DREditor.ItemRolling.ItemRollerBase.RollForItem(params object[])
+  nameWithType.vb: ItemRollerBase.RollForItem(ParamArray Object())
+  fullName.vb: DREditor.ItemRolling.ItemRollerBase.RollForItem(ParamArray Object())
+  name.vb: RollForItem(ParamArray Object())
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+    name: RollForItem
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.RollForItem(System.Object[])
+    name: RollForItem
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: DREditor.ItemRolling.RepeatableRollerBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<RepeatableRollerBase>(RepeatableRollerBase)
+  nameWithType: ReflectionHelper.GetFieldNames<RepeatableRollerBase>(RepeatableRollerBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.ItemRolling.RepeatableRollerBase>(DREditor.ItemRolling.RepeatableRollerBase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of RepeatableRollerBase)(RepeatableRollerBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.ItemRolling.RepeatableRollerBase)(DREditor.ItemRolling.RepeatableRollerBase)
+  name.vb: GetFieldNames(Of RepeatableRollerBase)(RepeatableRollerBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.ItemRolling.RepeatableRollerBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.ItemRolling.RepeatableRollerBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+- uid: DREditor.ItemRolling.RepeatableRollerBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<RepeatableRollerBase>(RepeatableRollerBase)
+  nameWithType: ReflectionHelper.GetFieldValues<RepeatableRollerBase>(RepeatableRollerBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.ItemRolling.RepeatableRollerBase>(DREditor.ItemRolling.RepeatableRollerBase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of RepeatableRollerBase)(RepeatableRollerBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.ItemRolling.RepeatableRollerBase)(DREditor.ItemRolling.RepeatableRollerBase)
+  name.vb: GetFieldValues(Of RepeatableRollerBase)(RepeatableRollerBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.ItemRolling.RepeatableRollerBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.ItemRolling.RepeatableRollerBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+- uid: DREditor.ItemRolling.RepeatableRollerBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<RepeatableRollerBase>(RepeatableRollerBase)
+  nameWithType: DeepCopyExtensions.DeepCopy<RepeatableRollerBase>(RepeatableRollerBase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.ItemRolling.RepeatableRollerBase>(DREditor.ItemRolling.RepeatableRollerBase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of RepeatableRollerBase)(RepeatableRollerBase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.ItemRolling.RepeatableRollerBase)(DREditor.ItemRolling.RepeatableRollerBase)
+  name.vb: DeepCopy(Of RepeatableRollerBase)(RepeatableRollerBase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.ItemRolling.RepeatableRollerBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.ItemRolling.RepeatableRollerBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.ItemRolling.RepeatableRollerBase
+    name: RepeatableRollerBase
+    isExternal: true
+    href: DREditor.ItemRolling.RepeatableRollerBase.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  name: TryGetRolledObject<T>(out T)
+  nameWithType: ItemRollerBase.TryGetRolledObject<T>(out T)
+  fullName: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject<T>(out T)
+  nameWithType.vb: ItemRollerBase.TryGetRolledObject(Of T)(T)
+  fullName.vb: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject(Of T)(T)
+  name.vb: TryGetRolledObject(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+    name: TryGetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.TryGetRolledObject``1(``0@)
+    name: TryGetRolledObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ItemRolling/ItemRollerBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.Events.UnityEvent
+  isExternal: true
+  name: UnityEvent
+  nameWithType: UnityEvent
+  fullName: UnityEngine.Events.UnityEvent
+- uid: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate*
+  commentId: Overload:DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+  isExternal: true
+  href: DREditor.ItemRolling.RepeatableRollerBase.html#DREditor_ItemRolling_RepeatableRollerBase_GetRepeatRate
+  name: GetRepeatRate
+  nameWithType: RepeatableRollerBase.GetRepeatRate
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.GetRepeatRate
+- uid: DREditor.ItemRolling.IRepeatableRoller.GetRepeatRate
+  commentId: M:DREditor.ItemRolling.IRepeatableRoller.GetRepeatRate
+  parent: DREditor.ItemRolling.IRepeatableRoller
+  isExternal: true
+  href: DREditor.ItemRolling.IRepeatableRoller.html#DREditor_ItemRolling_IRepeatableRoller_GetRepeatRate
+  name: GetRepeatRate()
+  nameWithType: IRepeatableRoller.GetRepeatRate()
+  fullName: DREditor.ItemRolling.IRepeatableRoller.GetRepeatRate()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.IRepeatableRoller.GetRepeatRate
+    name: GetRepeatRate
+    isExternal: true
+    href: DREditor.ItemRolling.IRepeatableRoller.html#DREditor_ItemRolling_IRepeatableRoller_GetRepeatRate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.IRepeatableRoller.GetRepeatRate
+    name: GetRepeatRate
+    isExternal: true
+    href: DREditor.ItemRolling.IRepeatableRoller.html#DREditor_ItemRolling_IRepeatableRoller_GetRepeatRate
+  - name: (
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate*
+  commentId: Overload:DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+  isExternal: true
+  href: DREditor.ItemRolling.RepeatableRollerBase.html#DREditor_ItemRolling_RepeatableRollerBase_CalculateBaseRepeatRate
+  name: CalculateBaseRepeatRate
+  nameWithType: RepeatableRollerBase.CalculateBaseRepeatRate
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.CalculateBaseRepeatRate
+- uid: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem*
+  commentId: Overload:DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem
+  isExternal: true
+  href: DREditor.ItemRolling.RepeatableRollerBase.html#DREditor_ItemRolling_RepeatableRollerBase_PlayerOwnsItem_System_Object_
+  name: PlayerOwnsItem
+  nameWithType: RepeatableRollerBase.PlayerOwnsItem
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.PlayerOwnsItem
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.ItemRolling.ItemRollerBase.GivePlayerRolledItem
+  commentId: M:DREditor.ItemRolling.ItemRollerBase.GivePlayerRolledItem
+  parent: DREditor.ItemRolling.ItemRollerBase
+  isExternal: true
+  href: DREditor.ItemRolling.ItemRollerBase.html#DREditor_ItemRolling_ItemRollerBase_GivePlayerRolledItem
+  name: GivePlayerRolledItem()
+  nameWithType: ItemRollerBase.GivePlayerRolledItem()
+  fullName: DREditor.ItemRolling.ItemRollerBase.GivePlayerRolledItem()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.ItemRollerBase.GivePlayerRolledItem
+    name: GivePlayerRolledItem
+    isExternal: true
+    href: DREditor.ItemRolling.ItemRollerBase.html#DREditor_ItemRolling_ItemRollerBase_GivePlayerRolledItem
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.ItemRollerBase.GivePlayerRolledItem
+    name: GivePlayerRolledItem
+    isExternal: true
+    href: DREditor.ItemRolling.ItemRollerBase.html#DREditor_ItemRolling_ItemRollerBase_GivePlayerRolledItem
+  - name: (
+  - name: )
+- uid: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem*
+  commentId: Overload:DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+  isExternal: true
+  href: DREditor.ItemRolling.RepeatableRollerBase.html#DREditor_ItemRolling_RepeatableRollerBase_GivePlayerRolledItem
+  name: GivePlayerRolledItem
+  nameWithType: RepeatableRollerBase.GivePlayerRolledItem
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.GivePlayerRolledItem
+- uid: DREditor.ItemRolling.IItemRoller.GivePlayerRolledItem
+  commentId: M:DREditor.ItemRolling.IItemRoller.GivePlayerRolledItem
+  parent: DREditor.ItemRolling.IItemRoller
+  isExternal: true
+  href: DREditor.ItemRolling.IItemRoller.html#DREditor_ItemRolling_IItemRoller_GivePlayerRolledItem
+  name: GivePlayerRolledItem()
+  nameWithType: IItemRoller.GivePlayerRolledItem()
+  fullName: DREditor.ItemRolling.IItemRoller.GivePlayerRolledItem()
+  spec.csharp:
+  - uid: DREditor.ItemRolling.IItemRoller.GivePlayerRolledItem
+    name: GivePlayerRolledItem
+    isExternal: true
+    href: DREditor.ItemRolling.IItemRoller.html#DREditor_ItemRolling_IItemRoller_GivePlayerRolledItem
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ItemRolling.IItemRoller.GivePlayerRolledItem
+    name: GivePlayerRolledItem
+    isExternal: true
+    href: DREditor.ItemRolling.IItemRoller.html#DREditor_ItemRolling_IItemRoller_GivePlayerRolledItem
+  - name: (
+  - name: )
+- uid: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType*
+  commentId: Overload:DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+  isExternal: true
+  href: DREditor.ItemRolling.RepeatableRollerBase.html#DREditor_ItemRolling_RepeatableRollerBase_InvokePulledType
+  name: InvokePulledType
+  nameWithType: RepeatableRollerBase.InvokePulledType
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.InvokePulledType
+- uid: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory*
+  commentId: Overload:DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+  isExternal: true
+  href: DREditor.ItemRolling.RepeatableRollerBase.html#DREditor_ItemRolling_RepeatableRollerBase_AddItemToInventory
+  name: AddItemToInventory
+  nameWithType: RepeatableRollerBase.AddItemToInventory
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.AddItemToInventory
+- uid: DREditor.ItemRolling.RepeatableRollerBase.#ctor*
+  commentId: Overload:DREditor.ItemRolling.RepeatableRollerBase.#ctor
+  isExternal: true
+  href: DREditor.ItemRolling.RepeatableRollerBase.html#DREditor_ItemRolling_RepeatableRollerBase__ctor
+  name: RepeatableRollerBase
+  nameWithType: RepeatableRollerBase.RepeatableRollerBase
+  fullName: DREditor.ItemRolling.RepeatableRollerBase.RepeatableRollerBase
+  nameWithType.vb: RepeatableRollerBase.New
+  fullName.vb: DREditor.ItemRolling.RepeatableRollerBase.New
+  name.vb: New

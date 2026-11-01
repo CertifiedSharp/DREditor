@@ -1,0 +1,1986 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Fading.GlobalFadeHandler
+  commentId: T:DREditor.Fading.GlobalFadeHandler
+  id: GlobalFadeHandler
+  parent: DREditor.Fading
+  children:
+  - DREditor.Fading.GlobalFadeHandler.#ctor
+  - DREditor.Fading.GlobalFadeHandler.Fade
+  - DREditor.Fading.GlobalFadeHandler.FadeOut(System.Single,System.Boolean,System.Boolean)
+  - DREditor.Fading.GlobalFadeHandler.FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+  - DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal(System.Single,System.Boolean,System.Boolean)
+  - DREditor.Fading.GlobalFadeHandler.FadeTo(System.Single,System.Boolean,System.Boolean)
+  - DREditor.Fading.GlobalFadeHandler.FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+  - DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal(System.Single,System.Boolean,System.Boolean)
+  - DREditor.Fading.GlobalFadeHandler.FailedFade(System.Boolean,System.String)
+  - DREditor.Fading.GlobalFadeHandler.ForceVisibility(System.Boolean)
+  - DREditor.Fading.GlobalFadeHandler.IsUIDark
+  - DREditor.Fading.GlobalFadeHandler.KillFade
+  - DREditor.Fading.GlobalFadeHandler.LogWarning(System.String)
+  - DREditor.Fading.GlobalFadeHandler.SetColor(System.Boolean)
+  - DREditor.Fading.GlobalFadeHandler.ToTitleScreen
+  - DREditor.Fading.GlobalFadeHandler.ToggleFadeState
+  - DREditor.Fading.GlobalFadeHandler.debugLogs
+  - DREditor.Fading.GlobalFadeHandler.fadeOutRoutine
+  - DREditor.Fading.GlobalFadeHandler.fadeToRoutine
+  - DREditor.Fading.GlobalFadeHandler.inFastForwardMode
+  - DREditor.Fading.GlobalFadeHandler.lastFadeCaller
+  - DREditor.Fading.GlobalFadeHandler.onFadeOutComplete
+  - DREditor.Fading.GlobalFadeHandler.toTitleWaitTime
+  langs:
+  - csharp
+  - vb
+  name: GlobalFadeHandler
+  nameWithType: GlobalFadeHandler
+  fullName: DREditor.Fading.GlobalFadeHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("ServiceHolder for type: GlobalFade\n\n")]
+
+      public class GlobalFadeHandler : GlobalFade, IToTitleScreen
+    content.vb: >-
+      <ClassHeader("ServiceHolder for type: GlobalFade" & vbLf & vbLf)>
+
+      Public Class GlobalFadeHandler Inherits GlobalFade Implements IToTitleScreen
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  - DREditor.Fading.GlobalFade
+  implements:
+  - DREditor.Services.IToTitleScreen
+  inheritedMembers:
+  - DREditor.Fading.GlobalFade.screenIsDark
+  - DREditor.Fading.GlobalFade.isDark
+  - DREditor.Fading.GlobalFade.isTransitioning
+  - DREditor.Fading.GlobalFade.IsDark
+  - DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.Awake
+  - DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.InitializeService
+  - DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.OnDestroy
+  extensionMethods:
+  - DREditor.Fading.GlobalFadeHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Fading.GlobalFadeHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Fading.GlobalFadeHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        ServiceHolder for type: GlobalFade
+
+- uid: DREditor.Fading.GlobalFadeHandler.debugLogs
+  commentId: F:DREditor.Fading.GlobalFadeHandler.debugLogs
+  id: debugLogs
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: debugLogs
+  nameWithType: GlobalFadeHandler.debugLogs
+  fullName: DREditor.Fading.GlobalFadeHandler.debugLogs
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected bool debugLogs
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Divider>
+
+      Protected debugLogs As Boolean
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Fading.GlobalFadeHandler.inFastForwardMode
+  commentId: F:DREditor.Fading.GlobalFadeHandler.inFastForwardMode
+  id: inFastForwardMode
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: inFastForwardMode
+  nameWithType: GlobalFadeHandler.inFastForwardMode
+  fullName: DREditor.Fading.GlobalFadeHandler.inFastForwardMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent inFastForwardMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected inFastForwardMode As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Fading.GlobalFadeHandler.onFadeOutComplete
+  commentId: F:DREditor.Fading.GlobalFadeHandler.onFadeOutComplete
+  id: onFadeOutComplete
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: onFadeOutComplete
+  nameWithType: GlobalFadeHandler.onFadeOutComplete
+  fullName: DREditor.Fading.GlobalFadeHandler.onFadeOutComplete
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onFadeOutComplete
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onFadeOutComplete As SceneEvent
+- uid: DREditor.Fading.GlobalFadeHandler.Fade
+  commentId: F:DREditor.Fading.GlobalFadeHandler.Fade
+  id: Fade
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: Fade
+  nameWithType: GlobalFadeHandler.Fade
+  fullName: DREditor.Fading.GlobalFadeHandler.Fade
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected Image Fade
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Protected Fade As Image
+- uid: DREditor.Fading.GlobalFadeHandler.toTitleWaitTime
+  commentId: F:DREditor.Fading.GlobalFadeHandler.toTitleWaitTime
+  id: toTitleWaitTime
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: toTitleWaitTime
+  nameWithType: GlobalFadeHandler.toTitleWaitTime
+  fullName: DREditor.Fading.GlobalFadeHandler.toTitleWaitTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected float toTitleWaitTime
+    return:
+      type: System.Single
+    content.vb: Protected toTitleWaitTime As Single
+- uid: DREditor.Fading.GlobalFadeHandler.lastFadeCaller
+  commentId: F:DREditor.Fading.GlobalFadeHandler.lastFadeCaller
+  id: lastFadeCaller
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: lastFadeCaller
+  nameWithType: GlobalFadeHandler.lastFadeCaller
+  fullName: DREditor.Fading.GlobalFadeHandler.lastFadeCaller
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected string lastFadeCaller
+    return:
+      type: System.String
+    content.vb: Protected lastFadeCaller As String
+- uid: DREditor.Fading.GlobalFadeHandler.fadeToRoutine
+  commentId: F:DREditor.Fading.GlobalFadeHandler.fadeToRoutine
+  id: fadeToRoutine
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: fadeToRoutine
+  nameWithType: GlobalFadeHandler.fadeToRoutine
+  fullName: DREditor.Fading.GlobalFadeHandler.fadeToRoutine
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected Coroutine fadeToRoutine
+    return:
+      type: UnityEngine.Coroutine
+    content.vb: Protected fadeToRoutine As Coroutine
+- uid: DREditor.Fading.GlobalFadeHandler.fadeOutRoutine
+  commentId: F:DREditor.Fading.GlobalFadeHandler.fadeOutRoutine
+  id: fadeOutRoutine
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: fadeOutRoutine
+  nameWithType: GlobalFadeHandler.fadeOutRoutine
+  fullName: DREditor.Fading.GlobalFadeHandler.fadeOutRoutine
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected Coroutine fadeOutRoutine
+    return:
+      type: UnityEngine.Coroutine
+    content.vb: Protected fadeOutRoutine As Coroutine
+- uid: DREditor.Fading.GlobalFadeHandler.IsUIDark
+  commentId: M:DREditor.Fading.GlobalFadeHandler.IsUIDark
+  id: IsUIDark
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: IsUIDark()
+  nameWithType: GlobalFadeHandler.IsUIDark()
+  fullName: DREditor.Fading.GlobalFadeHandler.IsUIDark()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected override bool IsUIDark()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overrides Function IsUIDark() As Boolean
+  overridden: DREditor.Fading.GlobalFade.IsUIDark
+  overload: DREditor.Fading.GlobalFadeHandler.IsUIDark*
+- uid: DREditor.Fading.GlobalFadeHandler.FadeTo(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.FadeTo(System.Single,System.Boolean,System.Boolean)
+  id: FadeTo(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: FadeTo(float, bool, bool)
+  nameWithType: GlobalFadeHandler.FadeTo(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeTo(float, bool, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: public override void FadeTo(float time, bool white = false, bool overrule = false)
+    parameters:
+    - id: time
+      type: System.Single
+      description: ''
+    - id: white
+      type: System.Boolean
+      description: ''
+    - id: overrule
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Sub FadeTo(time As Single, white As Boolean = False, overrule As Boolean = False)
+  overridden: DREditor.Fading.GlobalFade.FadeTo(System.Single,System.Boolean,System.Boolean)
+  overload: DREditor.Fading.GlobalFadeHandler.FadeTo*
+  nameWithType.vb: GlobalFadeHandler.FadeTo(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.FadeTo(Single, Boolean, Boolean)
+  name.vb: FadeTo(Single, Boolean, Boolean)
+- uid: DREditor.Fading.GlobalFadeHandler.FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+  id: FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: FadeToRoutine(float, bool, bool)
+  nameWithType: GlobalFadeHandler.FadeToRoutine(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeToRoutine(float, bool, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: public override IEnumerator FadeToRoutine(float time, bool white = false, bool overrule = false)
+    parameters:
+    - id: time
+      type: System.Single
+      description: ''
+    - id: white
+      type: System.Boolean
+      description: ''
+    - id: overrule
+      type: System.Boolean
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Overrides Function FadeToRoutine(time As Single, white As Boolean = False, overrule As Boolean = False) As IEnumerator
+  overridden: DREditor.Fading.GlobalFade.FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+  overload: DREditor.Fading.GlobalFadeHandler.FadeToRoutine*
+  nameWithType.vb: GlobalFadeHandler.FadeToRoutine(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.FadeToRoutine(Single, Boolean, Boolean)
+  name.vb: FadeToRoutine(Single, Boolean, Boolean)
+- uid: DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal(System.Single,System.Boolean,System.Boolean)
+  id: FadeToRoutineInternal(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: FadeToRoutineInternal(float, bool, bool)
+  nameWithType: GlobalFadeHandler.FadeToRoutineInternal(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal(float, bool, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator FadeToRoutineInternal(float time, bool white = false, bool overrule = false)
+    parameters:
+    - id: time
+      type: System.Single
+      description: ''
+    - id: white
+      type: System.Boolean
+      description: ''
+    - id: overrule
+      type: System.Boolean
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function FadeToRoutineInternal(time As Single, white As Boolean = False, overrule As Boolean = False) As IEnumerator
+  overload: DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal*
+  nameWithType.vb: GlobalFadeHandler.FadeToRoutineInternal(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal(Single, Boolean, Boolean)
+  name.vb: FadeToRoutineInternal(Single, Boolean, Boolean)
+- uid: DREditor.Fading.GlobalFadeHandler.FadeOut(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.FadeOut(System.Single,System.Boolean,System.Boolean)
+  id: FadeOut(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: FadeOut(float, bool, bool)
+  nameWithType: GlobalFadeHandler.FadeOut(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeOut(float, bool, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: public override void FadeOut(float time, bool white = false, bool overrule = false)
+    parameters:
+    - id: time
+      type: System.Single
+      description: ''
+    - id: white
+      type: System.Boolean
+      description: ''
+    - id: overrule
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Sub FadeOut(time As Single, white As Boolean = False, overrule As Boolean = False)
+  overridden: DREditor.Fading.GlobalFade.FadeOut(System.Single,System.Boolean,System.Boolean)
+  overload: DREditor.Fading.GlobalFadeHandler.FadeOut*
+  nameWithType.vb: GlobalFadeHandler.FadeOut(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.FadeOut(Single, Boolean, Boolean)
+  name.vb: FadeOut(Single, Boolean, Boolean)
+- uid: DREditor.Fading.GlobalFadeHandler.FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+  id: FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: FadeOutRoutine(float, bool, bool)
+  nameWithType: GlobalFadeHandler.FadeOutRoutine(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeOutRoutine(float, bool, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: public override IEnumerator FadeOutRoutine(float time, bool white, bool overrule)
+    parameters:
+    - id: time
+      type: System.Single
+      description: ''
+    - id: white
+      type: System.Boolean
+      description: ''
+    - id: overrule
+      type: System.Boolean
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Overrides Function FadeOutRoutine(time As Single, white As Boolean, overrule As Boolean) As IEnumerator
+  overridden: DREditor.Fading.GlobalFade.FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+  overload: DREditor.Fading.GlobalFadeHandler.FadeOutRoutine*
+  nameWithType.vb: GlobalFadeHandler.FadeOutRoutine(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.FadeOutRoutine(Single, Boolean, Boolean)
+  name.vb: FadeOutRoutine(Single, Boolean, Boolean)
+- uid: DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal(System.Single,System.Boolean,System.Boolean)
+  id: FadeOutRoutineInternal(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: FadeOutRoutineInternal(float, bool, bool)
+  nameWithType: GlobalFadeHandler.FadeOutRoutineInternal(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal(float, bool, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator FadeOutRoutineInternal(float time, bool white = false, bool overrule = false)
+    parameters:
+    - id: time
+      type: System.Single
+      description: ''
+    - id: white
+      type: System.Boolean
+      description: ''
+    - id: overrule
+      type: System.Boolean
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function FadeOutRoutineInternal(time As Single, white As Boolean = False, overrule As Boolean = False) As IEnumerator
+  overload: DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal*
+  nameWithType.vb: GlobalFadeHandler.FadeOutRoutineInternal(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal(Single, Boolean, Boolean)
+  name.vb: FadeOutRoutineInternal(Single, Boolean, Boolean)
+- uid: DREditor.Fading.GlobalFadeHandler.FailedFade(System.Boolean,System.String)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.FailedFade(System.Boolean,System.String)
+  id: FailedFade(System.Boolean,System.String)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: FailedFade(bool, string)
+  nameWithType: GlobalFadeHandler.FailedFade(bool, string)
+  fullName: DREditor.Fading.GlobalFadeHandler.FailedFade(bool, string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool FailedFade(bool overrule, string fadeType)
+    parameters:
+    - id: overrule
+      type: System.Boolean
+      description: ''
+    - id: fadeType
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function FailedFade(overrule As Boolean, fadeType As String) As Boolean
+  overload: DREditor.Fading.GlobalFadeHandler.FailedFade*
+  nameWithType.vb: GlobalFadeHandler.FailedFade(Boolean, String)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.FailedFade(Boolean, String)
+  name.vb: FailedFade(Boolean, String)
+- uid: DREditor.Fading.GlobalFadeHandler.KillFade
+  commentId: M:DREditor.Fading.GlobalFadeHandler.KillFade
+  id: KillFade
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: KillFade()
+  nameWithType: GlobalFadeHandler.KillFade()
+  fullName: DREditor.Fading.GlobalFadeHandler.KillFade()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void KillFade()
+    content.vb: Protected Overridable Sub KillFade()
+  overload: DREditor.Fading.GlobalFadeHandler.KillFade*
+- uid: DREditor.Fading.GlobalFadeHandler.SetColor(System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.SetColor(System.Boolean)
+  id: SetColor(System.Boolean)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: SetColor(bool)
+  nameWithType: GlobalFadeHandler.SetColor(bool)
+  fullName: DREditor.Fading.GlobalFadeHandler.SetColor(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SetColor(bool white)
+    parameters:
+    - id: white
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Sub SetColor(white As Boolean)
+  overload: DREditor.Fading.GlobalFadeHandler.SetColor*
+  nameWithType.vb: GlobalFadeHandler.SetColor(Boolean)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.SetColor(Boolean)
+  name.vb: SetColor(Boolean)
+- uid: DREditor.Fading.GlobalFadeHandler.LogWarning(System.String)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.LogWarning(System.String)
+  id: LogWarning(System.String)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: LogWarning(string)
+  nameWithType: GlobalFadeHandler.LogWarning(string)
+  fullName: DREditor.Fading.GlobalFadeHandler.LogWarning(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void LogWarning(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: ''
+    content.vb: Protected Overridable Sub LogWarning(message As String)
+  overload: DREditor.Fading.GlobalFadeHandler.LogWarning*
+  nameWithType.vb: GlobalFadeHandler.LogWarning(String)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.LogWarning(String)
+  name.vb: LogWarning(String)
+- uid: DREditor.Fading.GlobalFadeHandler.ToTitleScreen
+  commentId: M:DREditor.Fading.GlobalFadeHandler.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: GlobalFadeHandler.ToTitleScreen()
+  fullName: DREditor.Fading.GlobalFadeHandler.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.Fading.GlobalFadeHandler.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.Fading.GlobalFadeHandler.ToggleFadeState
+  commentId: M:DREditor.Fading.GlobalFadeHandler.ToggleFadeState
+  id: ToggleFadeState
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: ToggleFadeState()
+  nameWithType: GlobalFadeHandler.ToggleFadeState()
+  fullName: DREditor.Fading.GlobalFadeHandler.ToggleFadeState()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [BehaviourButton(null)]
+
+      protected virtual void ToggleFadeState()
+    content.vb: >-
+      <BehaviourButton(Nothing)>
+
+      Protected Overridable Sub ToggleFadeState()
+  overload: DREditor.Fading.GlobalFadeHandler.ToggleFadeState*
+  attributes:
+  - type: DREditor.BehaviourButtonAttribute
+    ctor: DREditor.BehaviourButtonAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+- uid: DREditor.Fading.GlobalFadeHandler.ForceVisibility(System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFadeHandler.ForceVisibility(System.Boolean)
+  id: ForceVisibility(System.Boolean)
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: ForceVisibility(bool)
+  nameWithType: GlobalFadeHandler.ForceVisibility(bool)
+  fullName: DREditor.Fading.GlobalFadeHandler.ForceVisibility(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ForceVisibility(bool visible)
+    parameters:
+    - id: visible
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Sub ForceVisibility(visible As Boolean)
+  overload: DREditor.Fading.GlobalFadeHandler.ForceVisibility*
+  nameWithType.vb: GlobalFadeHandler.ForceVisibility(Boolean)
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.ForceVisibility(Boolean)
+  name.vb: ForceVisibility(Boolean)
+- uid: DREditor.Fading.GlobalFadeHandler.#ctor
+  commentId: M:DREditor.Fading.GlobalFadeHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Fading.GlobalFadeHandler
+  langs:
+  - csharp
+  - vb
+  name: GlobalFadeHandler()
+  nameWithType: GlobalFadeHandler.GlobalFadeHandler()
+  fullName: DREditor.Fading.GlobalFadeHandler.GlobalFadeHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Fading/GlobalFadeHandler.cs
+  assemblies:
+  - DREditor.Fading
+  namespace: DREditor.Fading
+  syntax:
+    content: public GlobalFadeHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Fading.GlobalFadeHandler.#ctor*
+  nameWithType.vb: GlobalFadeHandler.New()
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.Fading
+  commentId: N:DREditor.Fading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Fading
+  nameWithType: DREditor.Fading
+  fullName: DREditor.Fading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Fading
+    name: Fading
+    isExternal: true
+    href: DREditor.Fading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Fading
+    name: Fading
+    isExternal: true
+    href: DREditor.Fading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<GlobalFade>
+  nameWithType: ServiceHolder<GlobalFade>
+  fullName: DREditor.Services.ServiceHolder<DREditor.Fading.GlobalFade>
+  nameWithType.vb: ServiceHolder(Of GlobalFade)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Fading.GlobalFade)
+  name.vb: ServiceHolder(Of GlobalFade)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.Fading.GlobalFade
+    name: GlobalFade
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Fading.GlobalFade
+    name: GlobalFade
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html
+  - name: )
+- uid: DREditor.Fading.GlobalFade
+  commentId: T:DREditor.Fading.GlobalFade
+  parent: DREditor.Fading
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html
+  name: GlobalFade
+  nameWithType: GlobalFade
+  fullName: DREditor.Fading.GlobalFade
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.Fading.GlobalFade.screenIsDark
+  commentId: F:DREditor.Fading.GlobalFade.screenIsDark
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_screenIsDark
+  name: screenIsDark
+  nameWithType: GlobalFade.screenIsDark
+  fullName: DREditor.Fading.GlobalFade.screenIsDark
+- uid: DREditor.Fading.GlobalFade.isDark
+  commentId: F:DREditor.Fading.GlobalFade.isDark
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_isDark
+  name: isDark
+  nameWithType: GlobalFade.isDark
+  fullName: DREditor.Fading.GlobalFade.isDark
+- uid: DREditor.Fading.GlobalFade.isTransitioning
+  commentId: F:DREditor.Fading.GlobalFade.isTransitioning
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_isTransitioning
+  name: isTransitioning
+  nameWithType: GlobalFade.isTransitioning
+  fullName: DREditor.Fading.GlobalFade.isTransitioning
+- uid: DREditor.Fading.GlobalFade.IsDark
+  commentId: P:DREditor.Fading.GlobalFade.IsDark
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_IsDark
+  name: IsDark
+  nameWithType: GlobalFade.IsDark
+  fullName: DREditor.Fading.GlobalFade.IsDark
+- uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<GlobalFade>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.Fading.GlobalFade>.registerService
+  nameWithType.vb: ServiceHolder(Of GlobalFade).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Fading.GlobalFade).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<GlobalFade>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.Fading.GlobalFade>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of GlobalFade).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Fading.GlobalFade).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<GlobalFade>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Fading.GlobalFade>.Awake()
+  nameWithType.vb: ServiceHolder(Of GlobalFade).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Fading.GlobalFade).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<GlobalFade>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Fading.GlobalFade>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of GlobalFade).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Fading.GlobalFade).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<GlobalFade>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Fading.GlobalFade>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of GlobalFade).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Fading.GlobalFade).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<GlobalFade>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Fading.GlobalFade>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of GlobalFade).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Fading.GlobalFade).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Fading.GlobalFade}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<GlobalFadeHandler>(GlobalFadeHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<GlobalFadeHandler>(GlobalFadeHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Fading.GlobalFadeHandler>(DREditor.Fading.GlobalFadeHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of GlobalFadeHandler)(GlobalFadeHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Fading.GlobalFadeHandler)(DREditor.Fading.GlobalFadeHandler)
+  name.vb: GetFieldNames(Of GlobalFadeHandler)(GlobalFadeHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Fading.GlobalFadeHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Fading.GlobalFadeHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<GlobalFadeHandler>(GlobalFadeHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<GlobalFadeHandler>(GlobalFadeHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Fading.GlobalFadeHandler>(DREditor.Fading.GlobalFadeHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of GlobalFadeHandler)(GlobalFadeHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Fading.GlobalFadeHandler)(DREditor.Fading.GlobalFadeHandler)
+  name.vb: GetFieldValues(Of GlobalFadeHandler)(GlobalFadeHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Fading.GlobalFadeHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Fading.GlobalFadeHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<GlobalFadeHandler>(GlobalFadeHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<GlobalFadeHandler>(GlobalFadeHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Fading.GlobalFadeHandler>(DREditor.Fading.GlobalFadeHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of GlobalFadeHandler)(GlobalFadeHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Fading.GlobalFadeHandler)(DREditor.Fading.GlobalFadeHandler)
+  name.vb: DeepCopy(Of GlobalFadeHandler)(GlobalFadeHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Fading.GlobalFadeHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Fading.GlobalFadeHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Fading.GlobalFadeHandler
+    name: GlobalFadeHandler
+    isExternal: true
+    href: DREditor.Fading.GlobalFadeHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: UnityEngine.UI.Image
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.Coroutine
+  isExternal: true
+  name: Coroutine
+  nameWithType: Coroutine
+  fullName: UnityEngine.Coroutine
+- uid: DREditor.Fading.GlobalFade.IsUIDark
+  commentId: M:DREditor.Fading.GlobalFade.IsUIDark
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_IsUIDark
+  name: IsUIDark()
+  nameWithType: GlobalFade.IsUIDark()
+  fullName: DREditor.Fading.GlobalFade.IsUIDark()
+  spec.csharp:
+  - uid: DREditor.Fading.GlobalFade.IsUIDark
+    name: IsUIDark
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_IsUIDark
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Fading.GlobalFade.IsUIDark
+    name: IsUIDark
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_IsUIDark
+  - name: (
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.IsUIDark*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.IsUIDark
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_IsUIDark
+  name: IsUIDark
+  nameWithType: GlobalFadeHandler.IsUIDark
+  fullName: DREditor.Fading.GlobalFadeHandler.IsUIDark
+- uid: DREditor.Fading.GlobalFade.FadeTo(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFade.FadeTo(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeTo_System_Single_System_Boolean_System_Boolean_
+  name: FadeTo(float, bool, bool)
+  nameWithType: GlobalFade.FadeTo(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFade.FadeTo(float, bool, bool)
+  nameWithType.vb: GlobalFade.FadeTo(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFade.FadeTo(Single, Boolean, Boolean)
+  name.vb: FadeTo(Single, Boolean, Boolean)
+  spec.csharp:
+  - uid: DREditor.Fading.GlobalFade.FadeTo(System.Single,System.Boolean,System.Boolean)
+    name: FadeTo
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeTo_System_Single_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Fading.GlobalFade.FadeTo(System.Single,System.Boolean,System.Boolean)
+    name: FadeTo
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeTo_System_Single_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.FadeTo*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.FadeTo
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_FadeTo_System_Single_System_Boolean_System_Boolean_
+  name: FadeTo
+  nameWithType: GlobalFadeHandler.FadeTo
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeTo
+- uid: DREditor.Fading.GlobalFade.FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFade.FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeToRoutine_System_Single_System_Boolean_System_Boolean_
+  name: FadeToRoutine(float, bool, bool)
+  nameWithType: GlobalFade.FadeToRoutine(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFade.FadeToRoutine(float, bool, bool)
+  nameWithType.vb: GlobalFade.FadeToRoutine(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFade.FadeToRoutine(Single, Boolean, Boolean)
+  name.vb: FadeToRoutine(Single, Boolean, Boolean)
+  spec.csharp:
+  - uid: DREditor.Fading.GlobalFade.FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+    name: FadeToRoutine
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeToRoutine_System_Single_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Fading.GlobalFade.FadeToRoutine(System.Single,System.Boolean,System.Boolean)
+    name: FadeToRoutine
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeToRoutine_System_Single_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.FadeToRoutine*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.FadeToRoutine
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_FadeToRoutine_System_Single_System_Boolean_System_Boolean_
+  name: FadeToRoutine
+  nameWithType: GlobalFadeHandler.FadeToRoutine
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeToRoutine
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_FadeToRoutineInternal_System_Single_System_Boolean_System_Boolean_
+  name: FadeToRoutineInternal
+  nameWithType: GlobalFadeHandler.FadeToRoutineInternal
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeToRoutineInternal
+- uid: DREditor.Fading.GlobalFade.FadeOut(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFade.FadeOut(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeOut_System_Single_System_Boolean_System_Boolean_
+  name: FadeOut(float, bool, bool)
+  nameWithType: GlobalFade.FadeOut(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFade.FadeOut(float, bool, bool)
+  nameWithType.vb: GlobalFade.FadeOut(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFade.FadeOut(Single, Boolean, Boolean)
+  name.vb: FadeOut(Single, Boolean, Boolean)
+  spec.csharp:
+  - uid: DREditor.Fading.GlobalFade.FadeOut(System.Single,System.Boolean,System.Boolean)
+    name: FadeOut
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeOut_System_Single_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Fading.GlobalFade.FadeOut(System.Single,System.Boolean,System.Boolean)
+    name: FadeOut
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeOut_System_Single_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.FadeOut*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.FadeOut
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_FadeOut_System_Single_System_Boolean_System_Boolean_
+  name: FadeOut
+  nameWithType: GlobalFadeHandler.FadeOut
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeOut
+- uid: DREditor.Fading.GlobalFade.FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+  commentId: M:DREditor.Fading.GlobalFade.FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+  parent: DREditor.Fading.GlobalFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeOutRoutine_System_Single_System_Boolean_System_Boolean_
+  name: FadeOutRoutine(float, bool, bool)
+  nameWithType: GlobalFade.FadeOutRoutine(float, bool, bool)
+  fullName: DREditor.Fading.GlobalFade.FadeOutRoutine(float, bool, bool)
+  nameWithType.vb: GlobalFade.FadeOutRoutine(Single, Boolean, Boolean)
+  fullName.vb: DREditor.Fading.GlobalFade.FadeOutRoutine(Single, Boolean, Boolean)
+  name.vb: FadeOutRoutine(Single, Boolean, Boolean)
+  spec.csharp:
+  - uid: DREditor.Fading.GlobalFade.FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+    name: FadeOutRoutine
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeOutRoutine_System_Single_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Fading.GlobalFade.FadeOutRoutine(System.Single,System.Boolean,System.Boolean)
+    name: FadeOutRoutine
+    isExternal: true
+    href: DREditor.Fading.GlobalFade.html#DREditor_Fading_GlobalFade_FadeOutRoutine_System_Single_System_Boolean_System_Boolean_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.FadeOutRoutine*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.FadeOutRoutine
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_FadeOutRoutine_System_Single_System_Boolean_System_Boolean_
+  name: FadeOutRoutine
+  nameWithType: GlobalFadeHandler.FadeOutRoutine
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeOutRoutine
+- uid: DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_FadeOutRoutineInternal_System_Single_System_Boolean_System_Boolean_
+  name: FadeOutRoutineInternal
+  nameWithType: GlobalFadeHandler.FadeOutRoutineInternal
+  fullName: DREditor.Fading.GlobalFadeHandler.FadeOutRoutineInternal
+- uid: DREditor.Fading.GlobalFadeHandler.FailedFade*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.FailedFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_FailedFade_System_Boolean_System_String_
+  name: FailedFade
+  nameWithType: GlobalFadeHandler.FailedFade
+  fullName: DREditor.Fading.GlobalFadeHandler.FailedFade
+- uid: DREditor.Fading.GlobalFadeHandler.KillFade*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.KillFade
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_KillFade
+  name: KillFade
+  nameWithType: GlobalFadeHandler.KillFade
+  fullName: DREditor.Fading.GlobalFadeHandler.KillFade
+- uid: DREditor.Fading.GlobalFadeHandler.SetColor*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.SetColor
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_SetColor_System_Boolean_
+  name: SetColor
+  nameWithType: GlobalFadeHandler.SetColor
+  fullName: DREditor.Fading.GlobalFadeHandler.SetColor
+- uid: DREditor.Fading.GlobalFadeHandler.LogWarning*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.LogWarning
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_LogWarning_System_String_
+  name: LogWarning
+  nameWithType: GlobalFadeHandler.LogWarning
+  fullName: DREditor.Fading.GlobalFadeHandler.LogWarning
+- uid: DREditor.Fading.GlobalFadeHandler.ToTitleScreen*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.ToTitleScreen
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: GlobalFadeHandler.ToTitleScreen
+  fullName: DREditor.Fading.GlobalFadeHandler.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.Fading.GlobalFadeHandler.ToggleFadeState*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.ToggleFadeState
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_ToggleFadeState
+  name: ToggleFadeState
+  nameWithType: GlobalFadeHandler.ToggleFadeState
+  fullName: DREditor.Fading.GlobalFadeHandler.ToggleFadeState
+- uid: DREditor.Fading.GlobalFadeHandler.ForceVisibility*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.ForceVisibility
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler_ForceVisibility_System_Boolean_
+  name: ForceVisibility
+  nameWithType: GlobalFadeHandler.ForceVisibility
+  fullName: DREditor.Fading.GlobalFadeHandler.ForceVisibility
+- uid: DREditor.Fading.GlobalFadeHandler.#ctor*
+  commentId: Overload:DREditor.Fading.GlobalFadeHandler.#ctor
+  isExternal: true
+  href: DREditor.Fading.GlobalFadeHandler.html#DREditor_Fading_GlobalFadeHandler__ctor
+  name: GlobalFadeHandler
+  nameWithType: GlobalFadeHandler.GlobalFadeHandler
+  fullName: DREditor.Fading.GlobalFadeHandler.GlobalFadeHandler
+  nameWithType.vb: GlobalFadeHandler.New
+  fullName.vb: DREditor.Fading.GlobalFadeHandler.New
+  name.vb: New

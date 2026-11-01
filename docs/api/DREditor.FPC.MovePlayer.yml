@@ -11,7 +11,13 @@ items:
   - DREditor.FPC.MovePlayer.JumpSpeed
   - DREditor.FPC.MovePlayer.RunSpeed
   - DREditor.FPC.MovePlayer.Running
+  - DREditor.FPC.MovePlayer.SetMoveSpeed(System.Single)
+  - DREditor.FPC.MovePlayer.SetPlayerPosition
   - DREditor.FPC.MovePlayer.WalkSpeed
+  - DREditor.FPC.MovePlayer.move
+  - DREditor.FPC.MovePlayer.moveSpeed
+  - DREditor.FPC.MovePlayer.playerSpawnPoint
+  - DREditor.FPC.MovePlayer.sprint
   langs:
   - csharp
   - vb
@@ -20,7 +26,7 @@ items:
   fullName: DREditor.FPC.MovePlayer
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/MovePlayer.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -29,6 +35,31 @@ items:
     content.vb: Public Class MovePlayer Inherits MonoBehaviour
   inheritance:
   - System.Object
+  extensionMethods:
+  - DREditor.FPC.MovePlayer.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.FPC.MovePlayer.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.FPC.MovePlayer.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.FPC.MovePlayer.moveSpeed
+  commentId: F:DREditor.FPC.MovePlayer.moveSpeed
+  id: moveSpeed
+  parent: DREditor.FPC.MovePlayer
+  langs:
+  - csharp
+  - vb
+  name: moveSpeed
+  nameWithType: MovePlayer.moveSpeed
+  fullName: DREditor.FPC.MovePlayer.moveSpeed
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: protected float moveSpeed
+    return:
+      type: System.Single
+    content.vb: Protected moveSpeed As Single
 - uid: DREditor.FPC.MovePlayer.WalkSpeed
   commentId: F:DREditor.FPC.MovePlayer.WalkSpeed
   id: WalkSpeed
@@ -41,7 +72,7 @@ items:
   fullName: DREditor.FPC.MovePlayer.WalkSpeed
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/MovePlayer.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -62,7 +93,7 @@ items:
   fullName: DREditor.FPC.MovePlayer.RunSpeed
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/MovePlayer.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -83,7 +114,7 @@ items:
   fullName: DREditor.FPC.MovePlayer.JumpSpeed
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/MovePlayer.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -104,7 +135,7 @@ items:
   fullName: DREditor.FPC.MovePlayer.Gravity
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/MovePlayer.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -125,7 +156,7 @@ items:
   fullName: DREditor.FPC.MovePlayer.InDialogue
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/MovePlayer.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -146,7 +177,7 @@ items:
   fullName: DREditor.FPC.MovePlayer.Running
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/MovePlayer.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -155,6 +186,115 @@ items:
     return:
       type: DREditor.EventObjects.BoolWithEvent
     content.vb: Public Running As BoolWithEvent
+- uid: DREditor.FPC.MovePlayer.playerSpawnPoint
+  commentId: F:DREditor.FPC.MovePlayer.playerSpawnPoint
+  id: playerSpawnPoint
+  parent: DREditor.FPC.MovePlayer
+  langs:
+  - csharp
+  - vb
+  name: playerSpawnPoint
+  nameWithType: MovePlayer.playerSpawnPoint
+  fullName: DREditor.FPC.MovePlayer.playerSpawnPoint
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: protected TransformWithEvent playerSpawnPoint
+    return:
+      type: DREditor.EventObjects.TransformWithEvent
+    content.vb: Protected playerSpawnPoint As TransformWithEvent
+- uid: DREditor.FPC.MovePlayer.sprint
+  commentId: F:DREditor.FPC.MovePlayer.sprint
+  id: sprint
+  parent: DREditor.FPC.MovePlayer
+  langs:
+  - csharp
+  - vb
+  name: sprint
+  nameWithType: MovePlayer.sprint
+  fullName: DREditor.FPC.MovePlayer.sprint
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: protected InputActionReference sprint
+    return:
+      type: UnityEngine.InputSystem.InputActionReference
+    content.vb: Protected sprint As InputActionReference
+- uid: DREditor.FPC.MovePlayer.move
+  commentId: F:DREditor.FPC.MovePlayer.move
+  id: move
+  parent: DREditor.FPC.MovePlayer
+  langs:
+  - csharp
+  - vb
+  name: move
+  nameWithType: MovePlayer.move
+  fullName: DREditor.FPC.MovePlayer.move
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: protected InputActionReference move
+    return:
+      type: UnityEngine.InputSystem.InputActionReference
+    content.vb: Protected move As InputActionReference
+- uid: DREditor.FPC.MovePlayer.SetMoveSpeed(System.Single)
+  commentId: M:DREditor.FPC.MovePlayer.SetMoveSpeed(System.Single)
+  id: SetMoveSpeed(System.Single)
+  parent: DREditor.FPC.MovePlayer
+  langs:
+  - csharp
+  - vb
+  name: SetMoveSpeed(float)
+  nameWithType: MovePlayer.SetMoveSpeed(float)
+  fullName: DREditor.FPC.MovePlayer.SetMoveSpeed(float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: protected virtual void SetMoveSpeed(float moveSpeed)
+    parameters:
+    - id: moveSpeed
+      type: System.Single
+    content.vb: Protected Overridable Sub SetMoveSpeed(moveSpeed As Single)
+  overload: DREditor.FPC.MovePlayer.SetMoveSpeed*
+  nameWithType.vb: MovePlayer.SetMoveSpeed(Single)
+  fullName.vb: DREditor.FPC.MovePlayer.SetMoveSpeed(Single)
+  name.vb: SetMoveSpeed(Single)
+- uid: DREditor.FPC.MovePlayer.SetPlayerPosition
+  commentId: M:DREditor.FPC.MovePlayer.SetPlayerPosition
+  id: SetPlayerPosition
+  parent: DREditor.FPC.MovePlayer
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerPosition()
+  nameWithType: MovePlayer.SetPlayerPosition()
+  fullName: DREditor.FPC.MovePlayer.SetPlayerPosition()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.FPC
+  syntax:
+    content: public virtual void SetPlayerPosition()
+    content.vb: Public Overridable Sub SetPlayerPosition()
+  overload: DREditor.FPC.MovePlayer.SetPlayerPosition*
 - uid: DREditor.FPC.MovePlayer.#ctor
   commentId: M:DREditor.FPC.MovePlayer.#ctor
   id: '#ctor'
@@ -167,7 +307,7 @@ items:
   fullName: DREditor.FPC.MovePlayer.MovePlayer()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/FirstPersonController/MovePlayer.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/FPC/MovePlayer.cs
   assemblies:
   - DREditor
   namespace: DREditor.FPC
@@ -217,6 +357,147 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.FPC.MovePlayer.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<MovePlayer>(MovePlayer)
+  nameWithType: ReflectionHelper.GetFieldNames<MovePlayer>(MovePlayer)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.FPC.MovePlayer>(DREditor.FPC.MovePlayer)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of MovePlayer)(MovePlayer)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.FPC.MovePlayer)(DREditor.FPC.MovePlayer)
+  name.vb: GetFieldNames(Of MovePlayer)(MovePlayer)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.FPC.MovePlayer)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.FPC.MovePlayer)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
+- uid: DREditor.FPC.MovePlayer.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<MovePlayer>(MovePlayer)
+  nameWithType: ReflectionHelper.GetFieldValues<MovePlayer>(MovePlayer)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.FPC.MovePlayer>(DREditor.FPC.MovePlayer)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of MovePlayer)(MovePlayer)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.FPC.MovePlayer)(DREditor.FPC.MovePlayer)
+  name.vb: GetFieldValues(Of MovePlayer)(MovePlayer)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.FPC.MovePlayer)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.FPC.MovePlayer)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
+- uid: DREditor.FPC.MovePlayer.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<MovePlayer>(MovePlayer)
+  nameWithType: DeepCopyExtensions.DeepCopy<MovePlayer>(MovePlayer)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.FPC.MovePlayer>(DREditor.FPC.MovePlayer)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of MovePlayer)(MovePlayer)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.FPC.MovePlayer)(DREditor.FPC.MovePlayer)
+  name.vb: DeepCopy(Of MovePlayer)(MovePlayer)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.FPC.MovePlayer)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.FPC.MovePlayer)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
+  - name: (
+  - uid: DREditor.FPC.MovePlayer
+    name: MovePlayer
+    isExternal: true
+    href: DREditor.FPC.MovePlayer.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -224,6 +505,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.Single
   commentId: T:System.Single
   parent: System
@@ -239,7 +692,7 @@ references:
   commentId: T:DREditor.EventObjects.BoolWithEvent
   parent: DREditor.EventObjects
   isExternal: true
-  href: DREditor.EventObjects.BoolWithEvent.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
   name: BoolWithEvent
   nameWithType: BoolWithEvent
   fullName: DREditor.EventObjects.BoolWithEvent
@@ -270,6 +723,33 @@ references:
     name: EventObjects
     isExternal: true
     href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.TransformWithEvent
+  commentId: T:DREditor.EventObjects.TransformWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/TransformWithEvent.cs
+  name: TransformWithEvent
+  nameWithType: TransformWithEvent
+  fullName: DREditor.EventObjects.TransformWithEvent
+- uid: UnityEngine.InputSystem.InputActionReference
+  isExternal: true
+  name: InputActionReference
+  nameWithType: InputActionReference
+  fullName: UnityEngine.InputSystem.InputActionReference
+- uid: DREditor.FPC.MovePlayer.SetMoveSpeed*
+  commentId: Overload:DREditor.FPC.MovePlayer.SetMoveSpeed
+  isExternal: true
+  href: DREditor.FPC.MovePlayer.html#DREditor_FPC_MovePlayer_SetMoveSpeed_System_Single_
+  name: SetMoveSpeed
+  nameWithType: MovePlayer.SetMoveSpeed
+  fullName: DREditor.FPC.MovePlayer.SetMoveSpeed
+- uid: DREditor.FPC.MovePlayer.SetPlayerPosition*
+  commentId: Overload:DREditor.FPC.MovePlayer.SetPlayerPosition
+  isExternal: true
+  href: DREditor.FPC.MovePlayer.html#DREditor_FPC_MovePlayer_SetPlayerPosition
+  name: SetPlayerPosition
+  nameWithType: MovePlayer.SetPlayerPosition
+  fullName: DREditor.FPC.MovePlayer.SetPlayerPosition
 - uid: DREditor.FPC.MovePlayer.#ctor*
   commentId: Overload:DREditor.FPC.MovePlayer.#ctor
   isExternal: true

@@ -1,0 +1,1135 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Minigames.MinigameControlsUIHandler
+  commentId: T:DREditor.Minigames.MinigameControlsUIHandler
+  id: MinigameControlsUIHandler
+  parent: DREditor.Minigames
+  children:
+  - DREditor.Minigames.MinigameControlsUIHandler.#ctor
+  - DREditor.Minigames.MinigameControlsUIHandler.Awake
+  - DREditor.Minigames.MinigameControlsUIHandler.OnDisable
+  - DREditor.Minigames.MinigameControlsUIHandler.OnTimeUp
+  - DREditor.Minigames.MinigameControlsUIHandler.OnUIClosed
+  - DREditor.Minigames.MinigameControlsUIHandler.OpenControlsMenu
+  - DREditor.Minigames.MinigameControlsUIHandler.Start
+  - DREditor.Minigames.MinigameControlsUIHandler.SubscribeTimeUp
+  - DREditor.Minigames.MinigameControlsUIHandler.UnsubscribeTimeUp
+  - DREditor.Minigames.MinigameControlsUIHandler.currentControlsKey
+  - DREditor.Minigames.MinigameControlsUIHandler.minigameControlsKey
+  - DREditor.Minigames.MinigameControlsUIHandler.timedOut
+  - DREditor.Minigames.MinigameControlsUIHandler.trialTimer
+  langs:
+  - csharp
+  - vb
+  name: MinigameControlsUIHandler
+  nameWithType: MinigameControlsUIHandler
+  fullName: DREditor.Minigames.MinigameControlsUIHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("CallableControlledUI, CallableUIBase\n\n")]
+
+      public class MinigameControlsUIHandler : CallableControlledUI
+    content.vb: >-
+      <ClassHeader("CallableControlledUI, CallableUIBase" & vbLf & vbLf)>
+
+      Public Class MinigameControlsUIHandler Inherits CallableControlledUI
+  inheritance:
+  - System.Object
+  - DREditor.UI.UIControls.CallableUIBase
+  - DREditor.UI.UIControls.CallableControlledUI
+  inheritedMembers:
+  - DREditor.UI.UIControls.CallableControlledUI.inputAllowed
+  - DREditor.UI.UIControls.CallableControlledUI.OnEnable
+  - DREditor.UI.UIControls.CallableControlledUI.CallControls(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - DREditor.UI.UIControls.CallableControlledUI.OnUIOpened
+  - DREditor.UI.UIControls.CallableControlledUI.WaitForControlsEnd
+  - DREditor.UI.UIControls.CallableUIBase.input
+  - DREditor.UI.UIControls.CallableUIBase.callControlsUI
+  - DREditor.UI.UIControls.CallableUIBase.inMenu
+  - DREditor.UI.UIControls.CallableUIBase.condition
+  - DREditor.UI.UIControls.CallableUIBase.OnInputUpdated(System.Boolean)
+  extensionMethods:
+  - DREditor.Minigames.MinigameControlsUIHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Minigames.MinigameControlsUIHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Minigames.MinigameControlsUIHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        CallableControlledUI, CallableUIBase
+
+- uid: DREditor.Minigames.MinigameControlsUIHandler.currentControlsKey
+  commentId: F:DREditor.Minigames.MinigameControlsUIHandler.currentControlsKey
+  id: currentControlsKey
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: currentControlsKey
+  nameWithType: MinigameControlsUIHandler.currentControlsKey
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.currentControlsKey
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected StringWithEvent currentControlsKey
+    return:
+      type: DREditor.EventObjects.StringWithEvent
+    content.vb: Protected currentControlsKey As StringWithEvent
+- uid: DREditor.Minigames.MinigameControlsUIHandler.minigameControlsKey
+  commentId: F:DREditor.Minigames.MinigameControlsUIHandler.minigameControlsKey
+  id: minigameControlsKey
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: minigameControlsKey
+  nameWithType: MinigameControlsUIHandler.minigameControlsKey
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.minigameControlsKey
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected string minigameControlsKey
+    return:
+      type: System.String
+    content.vb: Protected minigameControlsKey As String
+- uid: DREditor.Minigames.MinigameControlsUIHandler.trialTimer
+  commentId: F:DREditor.Minigames.MinigameControlsUIHandler.trialTimer
+  id: trialTimer
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: trialTimer
+  nameWithType: MinigameControlsUIHandler.trialTimer
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.trialTimer
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected TrialTimerBase trialTimer
+    return:
+      type: DREditor.Minigames.TrialTimerBase
+    content.vb: Protected trialTimer As TrialTimerBase
+- uid: DREditor.Minigames.MinigameControlsUIHandler.timedOut
+  commentId: F:DREditor.Minigames.MinigameControlsUIHandler.timedOut
+  id: timedOut
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: timedOut
+  nameWithType: MinigameControlsUIHandler.timedOut
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.timedOut
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool timedOut
+    return:
+      type: System.Boolean
+    content.vb: Protected timedOut As Boolean
+- uid: DREditor.Minigames.MinigameControlsUIHandler.Awake
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.Awake
+  id: Awake
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: MinigameControlsUIHandler.Awake()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: DREditor.Minigames.MinigameControlsUIHandler.Awake*
+- uid: DREditor.Minigames.MinigameControlsUIHandler.Start
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.Start
+  id: Start
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: MinigameControlsUIHandler.Start()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.Minigames.MinigameControlsUIHandler.Start*
+- uid: DREditor.Minigames.MinigameControlsUIHandler.OnDisable
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.OnDisable
+  id: OnDisable
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: MinigameControlsUIHandler.OnDisable()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  example: []
+  syntax:
+    content: protected override void OnDisable()
+    content.vb: Protected Overrides Sub OnDisable()
+  overridden: DREditor.UI.UIControls.CallableControlledUI.OnDisable
+  overload: DREditor.Minigames.MinigameControlsUIHandler.OnDisable*
+- uid: DREditor.Minigames.MinigameControlsUIHandler.OpenControlsMenu
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.OpenControlsMenu
+  id: OpenControlsMenu
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: OpenControlsMenu()
+  nameWithType: MinigameControlsUIHandler.OpenControlsMenu()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.OpenControlsMenu()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void OpenControlsMenu()
+    content.vb: Protected Overrides Sub OpenControlsMenu()
+  overridden: DREditor.UI.UIControls.CallableControlledUI.OpenControlsMenu
+  overload: DREditor.Minigames.MinigameControlsUIHandler.OpenControlsMenu*
+- uid: DREditor.Minigames.MinigameControlsUIHandler.OnUIClosed
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.OnUIClosed
+  id: OnUIClosed
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: OnUIClosed()
+  nameWithType: MinigameControlsUIHandler.OnUIClosed()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.OnUIClosed()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void OnUIClosed()
+    content.vb: Protected Overrides Sub OnUIClosed()
+  overridden: DREditor.UI.UIControls.CallableControlledUI.OnUIClosed
+  overload: DREditor.Minigames.MinigameControlsUIHandler.OnUIClosed*
+- uid: DREditor.Minigames.MinigameControlsUIHandler.SubscribeTimeUp
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.SubscribeTimeUp
+  id: SubscribeTimeUp
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: SubscribeTimeUp()
+  nameWithType: MinigameControlsUIHandler.SubscribeTimeUp()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.SubscribeTimeUp()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SubscribeTimeUp()
+    content.vb: Protected Overridable Sub SubscribeTimeUp()
+  overload: DREditor.Minigames.MinigameControlsUIHandler.SubscribeTimeUp*
+- uid: DREditor.Minigames.MinigameControlsUIHandler.UnsubscribeTimeUp
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.UnsubscribeTimeUp
+  id: UnsubscribeTimeUp
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: UnsubscribeTimeUp()
+  nameWithType: MinigameControlsUIHandler.UnsubscribeTimeUp()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.UnsubscribeTimeUp()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void UnsubscribeTimeUp()
+    content.vb: Protected Overridable Sub UnsubscribeTimeUp()
+  overload: DREditor.Minigames.MinigameControlsUIHandler.UnsubscribeTimeUp*
+- uid: DREditor.Minigames.MinigameControlsUIHandler.OnTimeUp
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.OnTimeUp
+  id: OnTimeUp
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: OnTimeUp()
+  nameWithType: MinigameControlsUIHandler.OnTimeUp()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.OnTimeUp()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnTimeUp()
+    content.vb: Protected Overridable Sub OnTimeUp()
+  overload: DREditor.Minigames.MinigameControlsUIHandler.OnTimeUp*
+- uid: DREditor.Minigames.MinigameControlsUIHandler.#ctor
+  commentId: M:DREditor.Minigames.MinigameControlsUIHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Minigames.MinigameControlsUIHandler
+  langs:
+  - csharp
+  - vb
+  name: MinigameControlsUIHandler()
+  nameWithType: MinigameControlsUIHandler.MinigameControlsUIHandler()
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.MinigameControlsUIHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/MinigameControlsUIHandler.cs
+  assemblies:
+  - DREditor.Minigames
+  namespace: DREditor.Minigames
+  syntax:
+    content: public MinigameControlsUIHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Minigames.MinigameControlsUIHandler.#ctor*
+  nameWithType.vb: MinigameControlsUIHandler.New()
+  fullName.vb: DREditor.Minigames.MinigameControlsUIHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.Minigames
+  commentId: N:DREditor.Minigames
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Minigames
+  nameWithType: DREditor.Minigames
+  fullName: DREditor.Minigames
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Minigames
+    name: Minigames
+    isExternal: true
+    href: DREditor.Minigames.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.UI.UIControls.CallableUIBase
+  commentId: T:DREditor.UI.UIControls.CallableUIBase
+  parent: DREditor.UI.UIControls
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableUIBase.cs
+  name: CallableUIBase
+  nameWithType: CallableUIBase
+  fullName: DREditor.UI.UIControls.CallableUIBase
+- uid: DREditor.UI.UIControls.CallableControlledUI
+  commentId: T:DREditor.UI.UIControls.CallableControlledUI
+  parent: DREditor.UI.UIControls
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: CallableControlledUI
+  nameWithType: CallableControlledUI
+  fullName: DREditor.UI.UIControls.CallableControlledUI
+- uid: DREditor.UI.UIControls.CallableControlledUI.inputAllowed
+  commentId: F:DREditor.UI.UIControls.CallableControlledUI.inputAllowed
+  parent: DREditor.UI.UIControls.CallableControlledUI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: inputAllowed
+  nameWithType: CallableControlledUI.inputAllowed
+  fullName: DREditor.UI.UIControls.CallableControlledUI.inputAllowed
+- uid: DREditor.UI.UIControls.CallableControlledUI.OnEnable
+  commentId: M:DREditor.UI.UIControls.CallableControlledUI.OnEnable
+  parent: DREditor.UI.UIControls.CallableControlledUI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: OnEnable()
+  nameWithType: CallableControlledUI.OnEnable()
+  fullName: DREditor.UI.UIControls.CallableControlledUI.OnEnable()
+  spec.csharp:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.UIControls.CallableControlledUI.CallControls(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:DREditor.UI.UIControls.CallableControlledUI.CallControls(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: DREditor.UI.UIControls.CallableControlledUI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: CallControls(CallbackContext)
+  nameWithType: CallableControlledUI.CallControls(InputAction.CallbackContext)
+  fullName: DREditor.UI.UIControls.CallableControlledUI.CallControls(UnityEngine.InputSystem.InputAction.CallbackContext)
+  spec.csharp:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.CallControls(UnityEngine.InputSystem.InputAction.CallbackContext)
+    name: CallControls
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - uid: UnityEngine.InputSystem.InputAction.CallbackContext
+    name: CallbackContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.CallControls(UnityEngine.InputSystem.InputAction.CallbackContext)
+    name: CallControls
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - uid: UnityEngine.InputSystem.InputAction.CallbackContext
+    name: CallbackContext
+    isExternal: true
+  - name: )
+- uid: DREditor.UI.UIControls.CallableControlledUI.OnUIOpened
+  commentId: M:DREditor.UI.UIControls.CallableControlledUI.OnUIOpened
+  parent: DREditor.UI.UIControls.CallableControlledUI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: OnUIOpened()
+  nameWithType: CallableControlledUI.OnUIOpened()
+  fullName: DREditor.UI.UIControls.CallableControlledUI.OnUIOpened()
+  spec.csharp:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OnUIOpened
+    name: OnUIOpened
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OnUIOpened
+    name: OnUIOpened
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.UIControls.CallableControlledUI.WaitForControlsEnd
+  commentId: M:DREditor.UI.UIControls.CallableControlledUI.WaitForControlsEnd
+  parent: DREditor.UI.UIControls.CallableControlledUI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: WaitForControlsEnd()
+  nameWithType: CallableControlledUI.WaitForControlsEnd()
+  fullName: DREditor.UI.UIControls.CallableControlledUI.WaitForControlsEnd()
+  spec.csharp:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.WaitForControlsEnd
+    name: WaitForControlsEnd
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.WaitForControlsEnd
+    name: WaitForControlsEnd
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+- uid: DREditor.UI.UIControls.CallableUIBase.input
+  commentId: F:DREditor.UI.UIControls.CallableUIBase.input
+  parent: DREditor.UI.UIControls.CallableUIBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableUIBase.cs
+  name: input
+  nameWithType: CallableUIBase.input
+  fullName: DREditor.UI.UIControls.CallableUIBase.input
+- uid: DREditor.UI.UIControls.CallableUIBase.callControlsUI
+  commentId: F:DREditor.UI.UIControls.CallableUIBase.callControlsUI
+  parent: DREditor.UI.UIControls.CallableUIBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableUIBase.cs
+  name: callControlsUI
+  nameWithType: CallableUIBase.callControlsUI
+  fullName: DREditor.UI.UIControls.CallableUIBase.callControlsUI
+- uid: DREditor.UI.UIControls.CallableUIBase.inMenu
+  commentId: F:DREditor.UI.UIControls.CallableUIBase.inMenu
+  parent: DREditor.UI.UIControls.CallableUIBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableUIBase.cs
+  name: inMenu
+  nameWithType: CallableUIBase.inMenu
+  fullName: DREditor.UI.UIControls.CallableUIBase.inMenu
+- uid: DREditor.UI.UIControls.CallableUIBase.condition
+  commentId: F:DREditor.UI.UIControls.CallableUIBase.condition
+  parent: DREditor.UI.UIControls.CallableUIBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableUIBase.cs
+  name: condition
+  nameWithType: CallableUIBase.condition
+  fullName: DREditor.UI.UIControls.CallableUIBase.condition
+- uid: DREditor.UI.UIControls.CallableUIBase.OnInputUpdated(System.Boolean)
+  commentId: M:DREditor.UI.UIControls.CallableUIBase.OnInputUpdated(System.Boolean)
+  parent: DREditor.UI.UIControls.CallableUIBase
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableUIBase.cs
+  name: OnInputUpdated(bool)
+  nameWithType: CallableUIBase.OnInputUpdated(bool)
+  fullName: DREditor.UI.UIControls.CallableUIBase.OnInputUpdated(bool)
+  nameWithType.vb: CallableUIBase.OnInputUpdated(Boolean)
+  fullName.vb: DREditor.UI.UIControls.CallableUIBase.OnInputUpdated(Boolean)
+  name.vb: OnInputUpdated(Boolean)
+  spec.csharp:
+  - uid: DREditor.UI.UIControls.CallableUIBase.OnInputUpdated(System.Boolean)
+    name: OnInputUpdated
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableUIBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.UIControls.CallableUIBase.OnInputUpdated(System.Boolean)
+    name: OnInputUpdated
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableUIBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Minigames.MinigameControlsUIHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<MinigameControlsUIHandler>(MinigameControlsUIHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<MinigameControlsUIHandler>(MinigameControlsUIHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Minigames.MinigameControlsUIHandler>(DREditor.Minigames.MinigameControlsUIHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of MinigameControlsUIHandler)(MinigameControlsUIHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Minigames.MinigameControlsUIHandler)(DREditor.Minigames.MinigameControlsUIHandler)
+  name.vb: GetFieldNames(Of MinigameControlsUIHandler)(MinigameControlsUIHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Minigames.MinigameControlsUIHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Minigames.MinigameControlsUIHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+- uid: DREditor.Minigames.MinigameControlsUIHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<MinigameControlsUIHandler>(MinigameControlsUIHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<MinigameControlsUIHandler>(MinigameControlsUIHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Minigames.MinigameControlsUIHandler>(DREditor.Minigames.MinigameControlsUIHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of MinigameControlsUIHandler)(MinigameControlsUIHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Minigames.MinigameControlsUIHandler)(DREditor.Minigames.MinigameControlsUIHandler)
+  name.vb: GetFieldValues(Of MinigameControlsUIHandler)(MinigameControlsUIHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Minigames.MinigameControlsUIHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Minigames.MinigameControlsUIHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+- uid: DREditor.Minigames.MinigameControlsUIHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<MinigameControlsUIHandler>(MinigameControlsUIHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<MinigameControlsUIHandler>(MinigameControlsUIHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Minigames.MinigameControlsUIHandler>(DREditor.Minigames.MinigameControlsUIHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of MinigameControlsUIHandler)(MinigameControlsUIHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Minigames.MinigameControlsUIHandler)(DREditor.Minigames.MinigameControlsUIHandler)
+  name.vb: DeepCopy(Of MinigameControlsUIHandler)(MinigameControlsUIHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Minigames.MinigameControlsUIHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Minigames.MinigameControlsUIHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Minigames.MinigameControlsUIHandler
+    name: MinigameControlsUIHandler
+    isExternal: true
+    href: DREditor.Minigames.MinigameControlsUIHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.UI.UIControls
+  commentId: N:DREditor.UI.UIControls
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.UI.UIControls
+  nameWithType: DREditor.UI.UIControls
+  fullName: DREditor.UI.UIControls
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UI
+    name: UI
+    isExternal: true
+    href: DREditor.UI.html
+  - name: .
+  - uid: DREditor.UI.UIControls
+    name: UIControls
+    isExternal: true
+    href: DREditor.UI.UIControls.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UI
+    name: UI
+    isExternal: true
+    href: DREditor.UI.html
+  - name: .
+  - uid: DREditor.UI.UIControls
+    name: UIControls
+    isExternal: true
+    href: DREditor.UI.UIControls.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.StringWithEvent
+  commentId: T:DREditor.EventObjects.StringWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/StringWithEvent.cs
+  name: StringWithEvent
+  nameWithType: StringWithEvent
+  fullName: DREditor.EventObjects.StringWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Minigames.TrialTimerBase
+  commentId: T:DREditor.Minigames.TrialTimerBase
+  parent: DREditor.Minigames
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames/TrialTimerBase.cs
+  name: TrialTimerBase
+  nameWithType: TrialTimerBase
+  fullName: DREditor.Minigames.TrialTimerBase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Minigames.MinigameControlsUIHandler.Awake*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.Awake
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler_Awake
+  name: Awake
+  nameWithType: MinigameControlsUIHandler.Awake
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.Awake
+- uid: DREditor.Minigames.MinigameControlsUIHandler.Start*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.Start
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler_Start
+  name: Start
+  nameWithType: MinigameControlsUIHandler.Start
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.Start
+- uid: DREditor.UI.UIControls.CallableControlledUI.OnDisable
+  commentId: M:DREditor.UI.UIControls.CallableControlledUI.OnDisable
+  parent: DREditor.UI.UIControls.CallableControlledUI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: OnDisable()
+  nameWithType: CallableControlledUI.OnDisable()
+  fullName: DREditor.UI.UIControls.CallableControlledUI.OnDisable()
+  spec.csharp:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.MinigameControlsUIHandler.OnDisable*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.OnDisable
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler_OnDisable
+  name: OnDisable
+  nameWithType: MinigameControlsUIHandler.OnDisable
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.OnDisable
+- uid: DREditor.UI.UIControls.CallableControlledUI.OpenControlsMenu
+  commentId: M:DREditor.UI.UIControls.CallableControlledUI.OpenControlsMenu
+  parent: DREditor.UI.UIControls.CallableControlledUI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: OpenControlsMenu()
+  nameWithType: CallableControlledUI.OpenControlsMenu()
+  fullName: DREditor.UI.UIControls.CallableControlledUI.OpenControlsMenu()
+  spec.csharp:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OpenControlsMenu
+    name: OpenControlsMenu
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OpenControlsMenu
+    name: OpenControlsMenu
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.MinigameControlsUIHandler.OpenControlsMenu*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.OpenControlsMenu
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler_OpenControlsMenu
+  name: OpenControlsMenu
+  nameWithType: MinigameControlsUIHandler.OpenControlsMenu
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.OpenControlsMenu
+- uid: DREditor.UI.UIControls.CallableControlledUI.OnUIClosed
+  commentId: M:DREditor.UI.UIControls.CallableControlledUI.OnUIClosed
+  parent: DREditor.UI.UIControls.CallableControlledUI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  name: OnUIClosed()
+  nameWithType: CallableControlledUI.OnUIClosed()
+  fullName: DREditor.UI.UIControls.CallableControlledUI.OnUIClosed()
+  spec.csharp:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OnUIClosed
+    name: OnUIClosed
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.UI.UIControls.CallableControlledUI.OnUIClosed
+    name: OnUIClosed
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/UIControls/CallableControlledUI.cs
+  - name: (
+  - name: )
+- uid: DREditor.Minigames.MinigameControlsUIHandler.OnUIClosed*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.OnUIClosed
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler_OnUIClosed
+  name: OnUIClosed
+  nameWithType: MinigameControlsUIHandler.OnUIClosed
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.OnUIClosed
+- uid: DREditor.Minigames.MinigameControlsUIHandler.SubscribeTimeUp*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.SubscribeTimeUp
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler_SubscribeTimeUp
+  name: SubscribeTimeUp
+  nameWithType: MinigameControlsUIHandler.SubscribeTimeUp
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.SubscribeTimeUp
+- uid: DREditor.Minigames.MinigameControlsUIHandler.UnsubscribeTimeUp*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.UnsubscribeTimeUp
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler_UnsubscribeTimeUp
+  name: UnsubscribeTimeUp
+  nameWithType: MinigameControlsUIHandler.UnsubscribeTimeUp
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.UnsubscribeTimeUp
+- uid: DREditor.Minigames.MinigameControlsUIHandler.OnTimeUp*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.OnTimeUp
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler_OnTimeUp
+  name: OnTimeUp
+  nameWithType: MinigameControlsUIHandler.OnTimeUp
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.OnTimeUp
+- uid: DREditor.Minigames.MinigameControlsUIHandler.#ctor*
+  commentId: Overload:DREditor.Minigames.MinigameControlsUIHandler.#ctor
+  isExternal: true
+  href: DREditor.Minigames.MinigameControlsUIHandler.html#DREditor_Minigames_MinigameControlsUIHandler__ctor
+  name: MinigameControlsUIHandler
+  nameWithType: MinigameControlsUIHandler.MinigameControlsUIHandler
+  fullName: DREditor.Minigames.MinigameControlsUIHandler.MinigameControlsUIHandler
+  nameWithType.vb: MinigameControlsUIHandler.New
+  fullName.vb: DREditor.Minigames.MinigameControlsUIHandler.New
+  name.vb: New
