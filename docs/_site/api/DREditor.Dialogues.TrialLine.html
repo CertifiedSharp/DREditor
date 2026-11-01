@@ -89,7 +89,7 @@
 
 
   <h1 id="DREditor_Dialogues_TrialLine" data-uid="DREditor.Dialogues.TrialLine" class="text-break">
-Class TrialLine  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+Class TrialLine  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TrialLine : Line</code></pre>
+    <pre><code class="lang-csharp hljs">public class TrialLine : Line, ITrialLine</code></pre>
   </div>
 
 
@@ -111,12 +111,26 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.LineBase.html">LineBase</a></div>
       <div><a class="xref" href="DREditor.Dialogues.Line.html">Line</a></div>
       <div><span class="xref">TrialLine</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Dialogues.ITrialLine.html">ITrialLine</a></div>
+    </dd>
+  </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Dialogues.MultiTrialLine.html">MultiTrialLine</a></div>
+      <div><a class="xref" href="DREditor.Minigames.Debates.Panel.html">Panel</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -125,10 +139,88 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_translationKey">Line.translationKey</a>
     </div>
     <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_Speaker">Line.Speaker</a>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_text">Line.text</a>
     </div>
     <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SpeakerNumber">Line.SpeakerNumber</a>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_voiceSFX">Line.voiceSFX</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SFXs">Line.SFXs</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_envSFX">Line.envSFX</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_Events">Line.Events</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_timeToNextLine">Line.timeToNextLine</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_automaticLine">Line.automaticLine</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_aliasNumber">Line.aliasNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_DiaEvents">Line.DiaEvents</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_musicChange">Line.musicChange</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_music">Line.music</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_showOptions">Line.showOptions</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_dontPan">Line.dontPan</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_stopEnv">Line.stopEnv</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_stopSFX">Line.stopSFX</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_panToChar">Line.panToChar</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_charToPanNum">Line.charToPanNum</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_charToPan">Line.charToPan</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_showDiaEvents">Line.showDiaEvents</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SetText_System_String_">Line.SetText(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SetVoice_UnityEngine_AudioClip_">Line.SetVoice(AudioClip)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SetMusic_UnityEngine_AudioClip_">Line.SetMusic(AudioClip)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SetEnv_UnityEngine_AudioClip_">Line.SetEnv(AudioClip)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SetAliasNumber_System_Int32_">Line.SetAliasNumber(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SetDiaEvents_System_Collections_Generic_List_DREditor_Dialogues_Events_IDialogueEvent__">Line.SetDiaEvents(List&lt;IDialogueEvent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_ContainsEventType__1">Line.ContainsEventType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_HasEmptySceneEvents">Line.HasEmptySceneEvents()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_TranslationKey">Line.TranslationKey</a>
     </div>
     <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_Text">Line.Text</a>
@@ -140,28 +232,13 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_EnvSFX">Line.EnvSFX</a>
     </div>
     <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_SFX">Line.SFX</a>
-    </div>
-    <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_Events">Line.Events</a>
-    </div>
-    <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_TimeToNextLine">Line.TimeToNextLine</a>
     </div>
     <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_AutomaticLine">Line.AutomaticLine</a>
     </div>
     <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_Expression">Line.Expression</a>
-    </div>
-    <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_ExpressionNumber">Line.ExpressionNumber</a>
-    </div>
-    <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_AliasNumber">Line.AliasNumber</a>
-    </div>
-    <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_DiaEvents">Line.DiaEvents</a>
     </div>
     <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_MusicChange">Line.MusicChange</a>
@@ -170,25 +247,10 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_Music">Line.Music</a>
     </div>
     <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_VFX">Line.VFX</a>
-    </div>
-    <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_VFXNumber">Line.VFXNumber</a>
-    </div>
-    <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_ShowOptions">Line.ShowOptions</a>
     </div>
     <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_DontPan">Line.DontPan</a>
-    </div>
-    <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_Leave">Line.Leave</a>
-    </div>
-    <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_FlashWhite">Line.FlashWhite</a>
-    </div>
-    <div>
-      <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_BlurVision">Line.BlurVision</a>
     </div>
     <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_StopEnv">Line.StopEnv</a>
@@ -207,6 +269,30 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
     </div>
     <div>
       <a class="xref" href="DREditor.Dialogues.Line.html#DREditor_Dialogues_Line_ShowDiaEvents">Line.ShowDiaEvents</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineBase.html#DREditor_Dialogues_LineBase_Speaker">LineBase.Speaker</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineBase.html#DREditor_Dialogues_LineBase_SpeakerNumber">LineBase.SpeakerNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineBase.html#DREditor_Dialogues_LineBase_Expression">LineBase.Expression</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineBase.html#DREditor_Dialogues_LineBase_ExpressionNumber">LineBase.ExpressionNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineBase.html#DREditor_Dialogues_LineBase_SetSpeaker_DREditor_Characters_Character_">LineBase.SetSpeaker(Character)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineBase.html#DREditor_Dialogues_LineBase_SetSpeakerNum_System_Int32_">LineBase.SetSpeakerNum(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineBase.html#DREditor_Dialogues_LineBase_SetExpression_DREditor_Characters_Expression_">LineBase.SetExpression(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineBase.html#DREditor_Dialogues_LineBase_SetExpressionNum_System_Int32_">LineBase.SetExpressionNum(int)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -231,6 +317,19 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
 
 
 
@@ -244,7 +343,7 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_TrialLine__ctor" data-uid="DREditor.Dialogues.TrialLine.#ctor">
   TrialLine()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -266,6 +365,76 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <a id="DREditor_Dialogues_TrialLine__ctor_" data-uid="DREditor.Dialogues.TrialLine.#ctor*"></a>
+
+  <h3 id="DREditor_Dialogues_TrialLine__ctor_DREditor_Characters_Character_System_Int32_" data-uid="DREditor.Dialogues.TrialLine.#ctor(DREditor.Characters.Character,System.Int32)">
+  TrialLine(Character, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TrialLine(Character Speaker, int SpeakerNumber)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Speaker</code> <a class="xref" href="DREditor.Characters.Character.html">Character</a></dt>
+    <dd></dd>
+    <dt><code>SpeakerNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_TrialLine__ctor_" data-uid="DREditor.Dialogues.TrialLine.#ctor*"></a>
+
+  <h3 id="DREditor_Dialogues_TrialLine__ctor_DREditor_Characters_Character_System_Int32_DREditor_Characters_Expression_System_Int32_" data-uid="DREditor.Dialogues.TrialLine.#ctor(DREditor.Characters.Character,System.Int32,DREditor.Characters.Expression,System.Int32)">
+  TrialLine(Character, int, Expression, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TrialLine(Character Speaker, int SpeakerNumber, Expression Expression, int ExpressionNumber)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Speaker</code> <a class="xref" href="DREditor.Characters.Character.html">Character</a></dt>
+    <dd></dd>
+    <dt><code>SpeakerNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>Expression</code> <a class="xref" href="DREditor.Characters.Expression.html">Expression</a></dt>
+    <dd></dd>
+    <dt><code>ExpressionNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="fields">Fields
 </h2>
 
@@ -273,7 +442,7 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_TrialLine_camAnimIdx" data-uid="DREditor.Dialogues.TrialLine.camAnimIdx">
   camAnimIdx
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -303,7 +472,7 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_TrialLine_co" data-uid="DREditor.Dialogues.TrialLine.co">
   co
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -333,14 +502,14 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_TrialLine_edit" data-uid="DREditor.Dialogues.TrialLine.edit">
   edit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool edit</code></pre>
+    <pre><code class="lang-csharp hljs">protected bool edit</code></pre>
   </div>
 
 
@@ -360,23 +529,29 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
 
-  <h3 id="DREditor_Dialogues_TrialLine_vfxIdx" data-uid="DREditor.Dialogues.TrialLine.vfxIdx">
-  vfxIdx
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+
+  <a id="DREditor_Dialogues_TrialLine_CamAnimIdx_" data-uid="DREditor.Dialogues.TrialLine.CamAnimIdx*"></a>
+
+  <h3 id="DREditor_Dialogues_TrialLine_CamAnimIdx" data-uid="DREditor.Dialogues.TrialLine.CamAnimIdx">
+  CamAnimIdx
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int vfxIdx</code></pre>
+    <pre><code class="lang-csharp hljs">public int CamAnimIdx { get; set; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
@@ -389,12 +564,73 @@ Class TrialLine  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <a id="DREditor_Dialogues_TrialLine_Co_" data-uid="DREditor.Dialogues.TrialLine.Co*"></a>
+
+  <h3 id="DREditor_Dialogues_TrialLine_Co" data-uid="DREditor.Dialogues.TrialLine.Co">
+  Co
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TCO Co { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.TCO.html">TCO</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_TrialLine_Edit_" data-uid="DREditor.Dialogues.TrialLine.Edit*"></a>
+
+  <h3 id="DREditor_Dialogues_TrialLine_Edit" data-uid="DREditor.Dialogues.TrialLine.Edit">
+  Edit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Edit { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialDialogue.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialDialogue.cs" class="edit-link">Edit this page</a>
         </div>
 
 

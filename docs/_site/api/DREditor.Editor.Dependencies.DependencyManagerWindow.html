@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DependencyManagerWindow | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DependencyManagerWindow | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow">
+
+
+
+  <h1 id="DREditor_Editor_Dependencies_DependencyManagerWindow" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow" class="text-break">
+Class DependencyManagerWindow  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.Editor.html">Editor</a>.<a class="xref" href="DREditor.Editor.Dependencies.html">Dependencies</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DependencyManagerWindow : EditorWindow</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DependencyManagerWindow</span></div>
+    </dd>
+  </dl>
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow__ctor_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.#ctor*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow__ctor" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.#ctor">
+  DependencyManagerWindow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DependencyManagerWindow()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_currentDependency" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.currentDependency">
+  currentDependency
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DependencyInitializerBase currentDependency</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Editor.Dependencies.DependencyInitializerBase.html">DependencyInitializerBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_dependencies" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.dependencies">
+  dependencies
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DependencyInitializerBase&gt; dependencies</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.Editor.Dependencies.DependencyInitializerBase.html">DependencyInitializerBase</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_largeLabelStyle" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.largeLabelStyle">
+  largeLabelStyle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GUIStyle largeLabelStyle</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GUIStyle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_CurrentDependencyCompleted_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.CurrentDependencyCompleted*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_CurrentDependencyCompleted" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.CurrentDependencyCompleted">
+  CurrentDependencyCompleted()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CurrentDependencyCompleted()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DependenciesInitialized_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DependenciesInitialized*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DependenciesInitialized" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DependenciesInitialized">
+  DependenciesInitialized()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool DependenciesInitialized()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayButtons_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayButtons*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayButtons" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayButtons">
+  DisplayButtons()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayButtons()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayDependencies_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayDependencies*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayDependencies" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayDependencies">
+  DisplayDependencies()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayDependencies()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayDependency_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayDependency*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayDependency_DREditor_Editor_Dependencies_DependencyInitializerBase_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayDependency(DREditor.Editor.Dependencies.DependencyInitializerBase)">
+  DisplayDependency(DependencyInitializerBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayDependency(DependencyInitializerBase currentDependency)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentDependency</code> <a class="xref" href="DREditor.Editor.Dependencies.DependencyInitializerBase.html">DependencyInitializerBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayDependencyData_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayDependencyData*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayDependencyData" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayDependencyData">
+  DisplayDependencyData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayDependencyData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayInstallStateIcon_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayInstallStateIcon*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayInstallStateIcon" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayInstallStateIcon">
+  DisplayInstallStateIcon()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayInstallStateIcon()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayIssues_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayIssues*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayIssues" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayIssues">
+  DisplayIssues()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayIssues()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayManager_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayManager*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayManager" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayManager">
+  DisplayManager()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayManager()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayStartUpMessages_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayStartUpMessages*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayStartUpMessages" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayStartUpMessages">
+  DisplayStartUpMessages()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayStartUpMessages()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayTitle_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayTitle*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_DisplayTitle" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.DisplayTitle">
+  DisplayTitle()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayTitle()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_NextButton_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.NextButton*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_NextButton" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.NextButton">
+  NextButton()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void NextButton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_OnEnable_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.OnEnable*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_OnEnable" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_OnGUI_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.OnGUI*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_OnGUI" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.OnGUI">
+  OnGUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnGUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_OnSystemInitializationReset_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.OnSystemInitializationReset*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_OnSystemInitializationReset" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.OnSystemInitializationReset">
+  OnSystemInitializationReset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnSystemInitializationReset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_ResetButton_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.ResetButton*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_ResetButton" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.ResetButton">
+  ResetButton()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ResetButton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Editor_Dependencies_DependencyManagerWindow_SetCurrentDependency_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.SetCurrentDependency*"></a>
+
+  <h3 id="DREditor_Editor_Dependencies_DependencyManagerWindow_SetCurrentDependency_DREditor_Editor_Dependencies_DependencyInitializerBase_" data-uid="DREditor.Editor.Dependencies.DependencyManagerWindow.SetCurrentDependency(DREditor.Editor.Dependencies.DependencyInitializerBase)">
+  SetCurrentDependency(DependencyInitializerBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetCurrentDependency(DependencyInitializerBase currentDependency)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentDependency</code> <a class="xref" href="DREditor.Editor.Dependencies.DependencyInitializerBase.html">DependencyInitializerBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Dependencies/DependencyManagerWindow.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
