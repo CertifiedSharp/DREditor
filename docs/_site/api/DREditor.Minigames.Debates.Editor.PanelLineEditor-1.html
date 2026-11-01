@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PanelLineEditor&lt;T&gt; | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PanelLineEditor&lt;T&gt; | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1">
+
+
+
+  <h1 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1" class="text-break">
+Class PanelLineEditor&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.Minigames.html">Minigames</a>.<a class="xref" href="DREditor.Minigames.Debates.html">Debates</a>.<a class="xref" href="DREditor.Minigames.Debates.Editor.html">Editor</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.Minigames.Debates.Editor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PanelLineEditor&lt;T&gt; : TrialLineEditor&lt;T&gt; where T : Panel, new()</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html">LineEditorBase</a></div>
+      <div><a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html">LineEditor</a>&lt;T&gt;</div>
+      <div><a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html">TrialLineEditor</a>&lt;T&gt;</div>
+      <div><span class="xref">PanelLineEditor&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Minigames.Debates.Editor.MultiPanelLineEditor-1.html">MultiPanelLineEditor&lt;T&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_DropdownArrowPadding">TrialLineEditor&lt;T&gt;.DropdownArrowPadding</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_cam">TrialLineEditor&lt;T&gt;.cam</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_cameraAnimDatabase">TrialLineEditor&lt;T&gt;.cameraAnimDatabase</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_tcoEditor">TrialLineEditor&lt;T&gt;.tcoEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_displayText">TrialLineEditor&lt;T&gt;.displayText</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_DisplayLowerLine">TrialLineEditor&lt;T&gt;.DisplayLowerLine()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_EditCamAnim">TrialLineEditor&lt;T&gt;.EditCamAnim()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_AnimButton">TrialLineEditor&lt;T&gt;.AnimButton()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_TestCameraAnim_DREditor_Dialogues_TrialLine_System_Boolean_">TrialLineEditor&lt;T&gt;.TestCameraAnim(TrialLine, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_EditTCO">TrialLineEditor&lt;T&gt;.EditTCO()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_EvaluateDontPan_DREditor_Dialogues_LineBase_">TrialLineEditor&lt;T&gt;.EvaluateDontPan(LineBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.TrialLineEditor-1.html#DREditor_Editor_Dialogues_TrialLineEditor_1_SkipDisplayingText">TrialLineEditor&lt;T&gt;.SkipDisplayingText()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_serializedObject">LineEditor&lt;T&gt;.serializedObject</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_propLines">LineEditor&lt;T&gt;.propLines</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_parentEditor">LineEditor&lt;T&gt;.parentEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_characterColumnEditor">LineEditor&lt;T&gt;.characterColumnEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_expressionColumnEditor">LineEditor&lt;T&gt;.expressionColumnEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_textColumnEditor">LineEditor&lt;T&gt;.textColumnEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_buttonEditor">LineEditor&lt;T&gt;.buttonEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_lineLowerEditor">LineEditor&lt;T&gt;.lineLowerEditor</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_Lines">LineEditor&lt;T&gt;.Lines</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_dia">LineEditor&lt;T&gt;.dia</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DrawHoverSprite">LineEditor&lt;T&gt;.DrawHoverSprite()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayDialogueLine">LineEditor&lt;T&gt;.DisplayDialogueLine()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayColoredLine">LineEditor&lt;T&gt;.DisplayColoredLine()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayLineNumberSplitter">LineEditor&lt;T&gt;.DisplayLineNumberSplitter()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_ResolveColoredLine">LineEditor&lt;T&gt;.ResolveColoredLine()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_SetLineBGColor">LineEditor&lt;T&gt;.SetLineBGColor()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayLine">LineEditor&lt;T&gt;.DisplayLine()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayCharacterPanel">LineEditor&lt;T&gt;.DisplayCharacterPanel()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayCharacterColumn">LineEditor&lt;T&gt;.DisplayCharacterColumn()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayExpressionPanel">LineEditor&lt;T&gt;.DisplayExpressionPanel()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayExpressionColumn">LineEditor&lt;T&gt;.DisplayExpressionColumn()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayDialoguePanel">LineEditor&lt;T&gt;.DisplayDialoguePanel()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayTextColumn">LineEditor&lt;T&gt;.DisplayTextColumn()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditor-1.html#DREditor_Editor_Dialogues_LineEditor_1_DisplayLinePositionPanel">LineEditor&lt;T&gt;.DisplayLinePositionPanel()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_testLine">LineEditorBase.testLine</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_i">LineEditorBase.i</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_EditLine_System_Int32_">LineEditorBase.EditLine(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_EditTestLine_System_Int32_">LineEditorBase.EditTestLine(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_DisplayLineNumberBar">LineEditorBase.DisplayLineNumberBar()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_DisplayLineTestFocusBar">LineEditorBase.DisplayLineTestFocusBar()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_ExitFocusButton">LineEditorBase.ExitFocusButton()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_DisplayLineNumber">LineEditorBase.DisplayLineNumber()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_DisplayTestFocus">LineEditorBase.DisplayTestFocus()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_FocusButton">LineEditorBase.FocusButton()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Dialogues.LineEditorBase.html#DREditor_Editor_Dialogues_LineEditorBase_TestLine">LineEditorBase.TestLine</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1__ctor_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.#ctor*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1__ctor" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.#ctor">
+  PanelLineEditor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PanelLineEditor()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_debateEditor" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.debateEditor">
+  debateEditor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDebateEditor debateEditor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Minigames.Debates.Editor.IDebateEditor.html">IDebateEditor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_lineManager" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.lineManager">
+  lineManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDebateLineManager lineManager</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Minigames.Debates.Managers.IDebateLineManager.html">IDebateLineManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_panel" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.panel">
+  panel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T panel</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_phrasesEditor" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.phrasesEditor">
+  phrasesEditor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly PanelPhrasesEditor&lt;T&gt; phrasesEditor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Minigames.Debates.Editor.PanelPhrasesEditor-1.html">PanelPhrasesEditor</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_presetEditor" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.presetEditor">
+  presetEditor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly PhrasePresetEditor presetEditor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Minigames.Debates.Editor.PhrasePresetEditor.html">PhrasePresetEditor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayDirectionButton_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayDirectionButton*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayDirectionButton_System_String_System_Boolean_System_Int32_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayDirectionButton(System.String,System.Boolean,System.Int32)">
+  DisplayDirectionButton(string, bool, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayDirectionButton(string buttonText, bool enableCondition, int moveDirectionAmount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buttonText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>enableCondition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>moveDirectionAmount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayEditPanelButton_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayEditPanelButton*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayEditPanelButton" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayEditPanelButton">
+  DisplayEditPanelButton()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayEditPanelButton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayExitFocusButton_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayExitFocusButton*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayExitFocusButton" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayExitFocusButton">
+  DisplayExitFocusButton()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayExitFocusButton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayExitPanelWindowButton_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayExitPanelWindowButton*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayExitPanelWindowButton" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayExitPanelWindowButton">
+  DisplayExitPanelWindowButton()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayExitPanelWindowButton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayFocusMoveButtons_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayFocusMoveButtons*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayFocusMoveButtons" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayFocusMoveButtons">
+  DisplayFocusMoveButtons()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayFocusMoveButtons()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayFocusPhraseButtons_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayFocusPhraseButtons*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayFocusPhraseButtons" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayFocusPhraseButtons">
+  DisplayFocusPhraseButtons()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayFocusPhraseButtons()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayPanelData_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayPanelData*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayPanelData" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayPanelData">
+  DisplayPanelData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayPanelData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayPhrases_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayPhrases*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayPhrases" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayPhrases">
+  DisplayPhrases()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayPhrases()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayTestPanelButton_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayTestPanelButton*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_DisplayTestPanelButton" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.DisplayTestPanelButton">
+  DisplayTestPanelButton()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayTestPanelButton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_EditPanelModeWindow_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.EditPanelModeWindow*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_EditPanelModeWindow__0_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.EditPanelModeWindow(`0)">
+  EditPanelModeWindow(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void EditPanelModeWindow(T panel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>panel</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_InPlayMode_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.InPlayMode*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_InPlayMode" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.InPlayMode">
+  InPlayMode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool InPlayMode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_Initialize_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.Initialize*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_Initialize_DREditor_Dialogues_DialogueCore_UnityEditor_SerializedObject_UnityEditor_Editor_UnityEditor_SerializedProperty_System_Collections_Generic_List__0__" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.Initialize(DREditor.Dialogues.DialogueCore,UnityEditor.SerializedObject,UnityEditor.Editor,UnityEditor.SerializedProperty,System.Collections.Generic.List{`0})">
+  Initialize(DialogueCore, SerializedObject, Editor, SerializedProperty, List&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize(DialogueCore dia, SerializedObject serializedObject, Editor parentEditor, SerializedProperty linesProperty = null, List&lt;T&gt; lines = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dia</code> <a class="xref" href="DREditor.Dialogues.DialogueCore.html">DialogueCore</a></dt>
+    <dd></dd>
+    <dt><code>serializedObject</code> <span class="xref">SerializedObject</span></dt>
+    <dd></dd>
+    <dt><code>parentEditor</code> <span class="xref">Editor</span></dt>
+    <dd></dd>
+    <dt><code>linesProperty</code> <span class="xref">SerializedProperty</span></dt>
+    <dd></dd>
+    <dt><code>lines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_OnTestButtonPressed_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.OnTestButtonPressed*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_OnTestButtonPressed" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.OnTestButtonPressed">
+  OnTestButtonPressed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnTestButtonPressed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_TestButton_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.TestButton*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_TestButton" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.TestButton">
+  TestButton()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void TestButton()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_TestPanel_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.TestPanel*"></a>
+
+  <h3 id="DREditor_Minigames_Debates_Editor_PanelLineEditor_1_TestPanel__0_" data-uid="DREditor.Minigames.Debates.Editor.PanelLineEditor`1.TestPanel(`0)">
+  TestPanel(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void TestPanel(T panel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>panel</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/Editor/PanelLineEditor.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -89,19 +89,19 @@
 
 
   <h1 id="DREditor_Presents_Editor_PresentEditor" data-uid="DREditor.Presents.Editor.PresentEditor" class="text-break">
-Class PresentEditor  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+Class PresentEditor  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.Presents.html">Presents</a>.<a class="xref" href="DREditor.Presents.Editor.html">Editor</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>DREditor.Editor.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.Presents.Editor.dll</dd></dl>
   </div>
 
   <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PresentEditor : Editor</code></pre>
+    <pre><code class="lang-csharp hljs">public class PresentEditor : InventoryItemEditor, INestedEditorCacheable</code></pre>
   </div>
 
 
@@ -111,13 +111,82 @@ Class PresentEditor  <a class="header-action link-secondary" title="View source"
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html">InventoryItemEditor</a></div>
       <div><span class="xref">PresentEditor</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Editor.Utility.INestedEditorCacheable.html">INestedEditorCacheable</a></div>
+    </dd>
+  </dl>
 
 
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_propName">InventoryItemEditor.propName</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_propDescription">InventoryItemEditor.propDescription</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_propImage">InventoryItemEditor.propImage</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_VerticalBoxLayoutStyle">InventoryItemEditor.VerticalBoxLayoutStyle</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_NamePropertyString">InventoryItemEditor.NamePropertyString</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_DescriptionPropertyString">InventoryItemEditor.DescriptionPropertyString</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_ImagePropertyString">InventoryItemEditor.ImagePropertyString</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_DescriptionHeight">InventoryItemEditor.DescriptionHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_DescriptionWidth">InventoryItemEditor.DescriptionWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_NameLabel">InventoryItemEditor.NameLabel</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_DescriptionLabel">InventoryItemEditor.DescriptionLabel</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_ImageLabel">InventoryItemEditor.ImageLabel</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_DisplayData">InventoryItemEditor.DisplayData()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_DisplayDescription">InventoryItemEditor.DisplayDescription()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Editor.Toolbox.InventoryItemEditor.html#DREditor_Editor_Toolbox_InventoryItemEditor_DisplayImage">InventoryItemEditor.DisplayImage()</a>
+    </div>
+  </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
 
 
 
@@ -131,7 +200,7 @@ Class PresentEditor  <a class="header-action link-secondary" title="View source"
 
   <h3 id="DREditor_Presents_Editor_PresentEditor__ctor" data-uid="DREditor.Presents.Editor.PresentEditor.#ctor">
   PresentEditor()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -153,15 +222,542 @@ Class PresentEditor  <a class="header-action link-secondary" title="View source"
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_IDLabel" data-uid="DREditor.Presents.Editor.PresentEditor.IDLabel">
+  IDLabel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly string IDLabel</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_IDPropertyString" data-uid="DREditor.Presents.Editor.PresentEditor.IDPropertyString">
+  IDPropertyString
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly string IDPropertyString</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_dataCaches" data-uid="DREditor.Presents.Editor.PresentEditor.dataCaches">
+  dataCaches
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;object&gt; dataCaches</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_indexCaches" data-uid="DREditor.Presents.Editor.PresentEditor.indexCaches">
+  indexCaches
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Dictionary&lt;object, int&gt; indexCaches</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_present" data-uid="DREditor.Presents.Editor.PresentEditor.present">
+  present
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Present present</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Presents.Present.html">Present</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_presentDataEditor" data-uid="DREditor.Presents.Editor.PresentEditor.presentDataEditor">
+  presentDataEditor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InterfaceEditor&lt;IPresentData&gt; presentDataEditor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/InterfaceEditor.cs">InterfaceEditor</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/IPresentData.cs">IPresentData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_propID" data-uid="DREditor.Presents.Editor.PresentEditor.propID">
+  propID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SerializedProperty propID</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">SerializedProperty</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_showUI" data-uid="DREditor.Presents.Editor.PresentEditor.showUI">
+  showUI
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool showUI</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_visibilityCaches" data-uid="DREditor.Presents.Editor.PresentEditor.visibilityCaches">
+  visibilityCaches
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Dictionary&lt;object, bool&gt; visibilityCaches</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_IndexCaches_" data-uid="DREditor.Presents.Editor.PresentEditor.IndexCaches*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_IndexCaches" data-uid="DREditor.Presents.Editor.PresentEditor.IndexCaches">
+  IndexCaches
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;object, int&gt; IndexCaches { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_VisibilityCaches_" data-uid="DREditor.Presents.Editor.PresentEditor.VisibilityCaches*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_VisibilityCaches" data-uid="DREditor.Presents.Editor.PresentEditor.VisibilityCaches">
+  VisibilityCaches
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;object, bool&gt; VisibilityCaches { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_AddData_" data-uid="DREditor.Presents.Editor.PresentEditor.AddData*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_AddData_System_Object_" data-uid="DREditor.Presents.Editor.PresentEditor.AddData(System.Object)">
+  AddData(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AddData(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_DisplayAttributes_" data-uid="DREditor.Presents.Editor.PresentEditor.DisplayAttributes*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_DisplayAttributes" data-uid="DREditor.Presents.Editor.PresentEditor.DisplayAttributes">
+  DisplayAttributes()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayAttributes()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_DisplayID_" data-uid="DREditor.Presents.Editor.PresentEditor.DisplayID*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_DisplayID" data-uid="DREditor.Presents.Editor.PresentEditor.DisplayID">
+  DisplayID()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayID()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_DisplayItemData_" data-uid="DREditor.Presents.Editor.PresentEditor.DisplayItemData*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_DisplayItemData" data-uid="DREditor.Presents.Editor.PresentEditor.DisplayItemData">
+  DisplayItemData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void DisplayItemData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_DisplayName_" data-uid="DREditor.Presents.Editor.PresentEditor.DisplayName*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_DisplayName" data-uid="DREditor.Presents.Editor.PresentEditor.DisplayName">
+  DisplayName()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void DisplayName()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_InitializeSerializedProperties_" data-uid="DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_InitializeSerializedProperties" data-uid="DREditor.Presents.Editor.PresentEditor.InitializeSerializedProperties">
+  InitializeSerializedProperties()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InitializeSerializedProperties()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Presents_Editor_PresentEditor_OnEnable_" data-uid="DREditor.Presents.Editor.PresentEditor.OnEnable*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_OnEnable" data-uid="DREditor.Presents.Editor.PresentEditor.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
   <a id="DREditor_Presents_Editor_PresentEditor_OnInspectorGUI_" data-uid="DREditor.Presents.Editor.PresentEditor.OnInspectorGUI*"></a>
 
   <h3 id="DREditor_Presents_Editor_PresentEditor_OnInspectorGUI" data-uid="DREditor.Presents.Editor.PresentEditor.OnInspectorGUI">
   OnInspectorGUI()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -183,11 +779,52 @@ Class PresentEditor  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="DREditor_Presents_Editor_PresentEditor_TryGetData_" data-uid="DREditor.Presents.Editor.PresentEditor.TryGetData*"></a>
+
+  <h3 id="DREditor_Presents_Editor_PresentEditor_TryGetData__1___0__" data-uid="DREditor.Presents.Editor.PresentEditor.TryGetData``1(``0@)">
+  TryGetData&lt;T&gt;(out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool TryGetData&lt;T&gt;(out T data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Editor/Presents/PresentEditor.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Presents/Editor/PresentEditor.cs" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RSBuilder | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RSBuilder | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.Minigames.RS.Managers.RSBuilder">
+
+
+
+  <h1 id="DREditor_Minigames_RS_Managers_RSBuilder" data-uid="DREditor.Minigames.RS.Managers.RSBuilder" class="text-break">
+Class RSBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.Minigames.html">Minigames</a>.<a class="xref" href="DREditor.Minigames.RS.html">RS</a>.<a class="xref" href="DREditor.Minigames.RS.Managers.html">Managers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.Minigames.RS.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RSBuilder : DebateBuilder&lt;RSGroup&gt;, IConvertableDialogue, IDebateConverter, IDebateScanner, IDebateSequence, IDialogueHolder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.DialogueCore.html">DialogueCore</a></div>
+      <div><a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs">DialogueBase</a>&lt;<a class="xref" href="DREditor.Minigames.RS.Managers.RSGroup.html">RSGroup</a>&gt;</div>
+      <div><a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.Debates/DebateBuilder.cs">DebateBuilder</a>&lt;<a class="xref" href="DREditor.Minigames.RS.Managers.RSGroup.html">RSGroup</a>&gt;</div>
+      <div><span class="xref">RSBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Dialogues.IConvertableDialogue.html">IConvertableDialogue</a></div>
+      <div><a class="xref" href="DREditor.Minigames.Debates.IDebateConverter.html">IDebateConverter</a></div>
+      <div><a class="xref" href="DREditor.Minigames.Debates.IDebateScanner.html">IDebateScanner</a></div>
+      <div><a class="xref" href="DREditor.Minigames.Debates.IDebateSequence.html">IDebateSequence</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.IDialogueHolder.html">IDialogueHolder</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.Minigames.Debates.DebateBuilder-1.html#DREditor_Minigames_Debates_DebateBuilder_1_StartingMusic">DebateBuilder&lt;RSGroup&gt;.StartingMusic</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Minigames.Debates.DebateBuilder-1.html#DREditor_Minigames_Debates_DebateBuilder_1_TruthBullets">DebateBuilder&lt;RSGroup&gt;.TruthBullets</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Minigames.Debates.DebateBuilder-1.html#DREditor_Minigames_Debates_DebateBuilder_1_trialNumber">DebateBuilder&lt;RSGroup&gt;.trialNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Minigames.Debates.DebateBuilder-1.html#DREditor_Minigames_Debates_DebateBuilder_1_times">DebateBuilder&lt;RSGroup&gt;.times</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Minigames.Debates.DebateBuilder-1.html#DREditor_Minigames_Debates_DebateBuilder_1_skip">DebateBuilder&lt;RSGroup&gt;.skip</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Minigames.Debates.DebateBuilder-1.html#DREditor_Minigames_Debates_DebateBuilder_1_GetPanelCount">DebateBuilder&lt;RSGroup&gt;.GetPanelCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Minigames.Debates.DebateBuilder-1.html#DREditor_Minigames_Debates_DebateBuilder_1_Skip">DebateBuilder&lt;RSGroup&gt;.Skip</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_lines">DialogueBase&lt;RSGroup&gt;.lines</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SceneTransition">DialogueBase&lt;RSGroup&gt;.SceneTransition</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_FlagTrigger">DialogueBase&lt;RSGroup&gt;.FlagTrigger</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_Variable">DialogueBase&lt;RSGroup&gt;.Variable</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_DirectTo">DialogueBase&lt;RSGroup&gt;.DirectTo</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_InvokeDialogue_DREditor_Dialogues_ITypeCallback_">DialogueBase&lt;RSGroup&gt;.InvokeDialogue(ITypeCallback)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTranslationKey_System_String_">DialogueBase&lt;RSGroup&gt;.SetTranslationKey(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetColor_UnityEngine_Color_">DialogueBase&lt;RSGroup&gt;.SetColor(Color)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_AddNewLine">DialogueBase&lt;RSGroup&gt;.AddNewLine()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetVariable_DREditor_Dialogues_Variable__0__">DialogueBase&lt;RSGroup&gt;.SetVariable(Variable&lt;RSGroup&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetDirectTo_DREditor_Dialogues_DirectTo__0__">DialogueBase&lt;RSGroup&gt;.SetDirectTo(DirectTo&lt;RSGroup&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetSceneTransition_DREditor_Dialogues_SceneTransition_">DialogueBase&lt;RSGroup&gt;.SetSceneTransition(SceneTransition)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTriggerFlag_DREditor_Dialogues_TriggerFlag_">DialogueBase&lt;RSGroup&gt;.SetTriggerFlag(TriggerFlag)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_IsNested_DREditor_Dialogues_DialogueCore_System_Collections_Generic_List_DREditor_Dialogues_DialogueCore__">DialogueBase&lt;RSGroup&gt;.IsNested(DialogueCore, List&lt;DialogueCore&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_Lines">DialogueBase&lt;RSGroup&gt;.Lines</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_translationKey">DialogueCore.translationKey</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_DialogueName">DialogueCore.DialogueName</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_Color">DialogueCore.Color</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_ShowDialoguePanel">DialogueCore.ShowDialoguePanel</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_Speakers">DialogueCore.Speakers</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_InvokeDebugLine_DREditor_Dialogues_DialogueCore_DREditor_Dialogues_Line_">DialogueCore.InvokeDebugLine(DialogueCore, Line)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_SetName_System_String_">DialogueCore.SetName(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_SetSpeakers_DREditor_Characters_CharacterDatabase_">DialogueCore.SetSpeakers(CharacterDatabase)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_LoadSpeakers">DialogueCore.LoadSpeakers()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_GetCharacterNames">DialogueCore.GetCharacterNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_GetIntValues_System_Int32_">DialogueCore.GetIntValues(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_OnDebugLine">DialogueCore.OnDebugLine</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder__ctor_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.#ctor*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder__ctor" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.#ctor">
+  RSBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RSBuilder()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_assignedPanelNumbers" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.assignedPanelNumbers">
+  assignedPanelNumbers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;int&gt; assignedPanelNumbers</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_autoAssignPanelNums" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.autoAssignPanelNums">
+  autoAssignPanelNums
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool autoAssignPanelNums</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_defaultRetreatDialogue" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.defaultRetreatDialogue">
+  defaultRetreatDialogue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiTrialDialogue defaultRetreatDialogue</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.MultiTrialDialogue.html">MultiTrialDialogue</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_interjectObject" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.interjectObject">
+  interjectObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject interjectObject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_introPanels" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.introPanels">
+  introPanels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MultiPanel&gt; introPanels</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.Dialogues.MultiPanel.html">MultiPanel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_panelCharacterNumbers" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.panelCharacterNumbers">
+  panelCharacterNumbers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;int&gt; panelCharacterNumbers</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_sectionIndex" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.sectionIndex">
+  sectionIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int sectionIndex</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_showIntroPanels" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.showIntroPanels">
+  showIntroPanels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool showIntroPanels</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_startingRSDialogue" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.startingRSDialogue">
+  startingRSDialogue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiTrialDialogue startingRSDialogue</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.MultiTrialDialogue.html">MultiTrialDialogue</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_AutoAssignPanelNums_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.AutoAssignPanelNums*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_AutoAssignPanelNums" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.AutoAssignPanelNums">
+  AutoAssignPanelNums
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoAssignPanelNums { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_DefaultRetreatDialogue_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.DefaultRetreatDialogue*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_DefaultRetreatDialogue" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.DefaultRetreatDialogue">
+  DefaultRetreatDialogue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DialogueCore DefaultRetreatDialogue { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.DialogueCore.html">DialogueCore</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_InterjectObject_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.InterjectObject*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_InterjectObject" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.InterjectObject">
+  InterjectObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject InterjectObject { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_LineCount_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.LineCount*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_LineCount" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.LineCount">
+  LineCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int LineCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_PanelCharacterNumbers_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.PanelCharacterNumbers*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_PanelCharacterNumbers" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.PanelCharacterNumbers">
+  PanelCharacterNumbers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;int&gt; PanelCharacterNumbers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_SectionIndex_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.SectionIndex*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_SectionIndex" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.SectionIndex">
+  SectionIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SectionIndex { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_ShowIntroPanels_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.ShowIntroPanels*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_ShowIntroPanels" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.ShowIntroPanels">
+  ShowIntroPanels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowIntroPanels { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_StartingRSDialogue_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.StartingRSDialogue*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_StartingRSDialogue" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.StartingRSDialogue">
+  StartingRSDialogue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiTrialDialogue StartingRSDialogue { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.MultiTrialDialogue.html">MultiTrialDialogue</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_AssignPanelNums_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.AssignPanelNums*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_AssignPanelNums__1_System_Collections_Generic_List___0__" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.AssignPanelNums``1(System.Collections.Generic.List{``0})">
+  AssignPanelNums&lt;T&gt;(List&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AssignPanelNums&lt;T&gt;(List&lt;T&gt; lines) where T : LineBase</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_AssignedMultiPanelNums_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.AssignedMultiPanelNums*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_AssignedMultiPanelNums_DREditor_Dialogues_IMultiPanelHolder_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.AssignedMultiPanelNums(DREditor.Dialogues.IMultiPanelHolder)">
+  AssignedMultiPanelNums(IMultiPanelHolder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool AssignedMultiPanelNums(IMultiPanelHolder panelHolder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>panelHolder</code> <a class="xref" href="DREditor.Dialogues.IMultiPanelHolder.html">IMultiPanelHolder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_CheckIfSaveDialogue_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.CheckIfSaveDialogue*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_CheckIfSaveDialogue" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.CheckIfSaveDialogue">
+  CheckIfSaveDialogue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CheckIfSaveDialogue()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_Convert_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.Convert*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_Convert" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.Convert">
+  Convert()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Convert()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_GetLine_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.GetLine*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_GetLine_System_Int32_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.GetLine(System.Int32)">
+  GetLine(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Line GetLine(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_GetLines_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.GetLines*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_GetLines__1" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.GetLines``1">
+  GetLines&lt;T2&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override List&lt;T2&gt; GetLines&lt;T2&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T2</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_ImportSpeaker_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.ImportSpeaker*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_ImportSpeaker_System_Collections_Generic_List_System_Int32__DREditor_Dialogues_LineBase_DREditor_Dialogues_LineBase_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.ImportSpeaker(System.Collections.Generic.List{System.Int32},DREditor.Dialogues.LineBase,DREditor.Dialogues.LineBase)">
+  ImportSpeaker(List&lt;int&gt;, LineBase, LineBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ImportSpeaker(List&lt;int&gt; foundChars, LineBase panel, LineBase baseLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>foundChars</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>panel</code> <a class="xref" href="DREditor.Dialogues.LineBase.html">LineBase</a></dt>
+    <dd></dd>
+    <dt><code>baseLine</code> <a class="xref" href="DREditor.Dialogues.LineBase.html">LineBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_ImportSpeakers_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.ImportSpeakers*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_ImportSpeakers_System_Collections_Generic_List_System_Int32__DREditor_Dialogues_LineBase_DREditor_Dialogues_LineBase_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.ImportSpeakers(System.Collections.Generic.List{System.Int32},DREditor.Dialogues.LineBase,DREditor.Dialogues.LineBase)">
+  ImportSpeakers(List&lt;int&gt;, LineBase, LineBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ImportSpeakers(List&lt;int&gt; foundChars, LineBase panel, LineBase baseLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>foundChars</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>panel</code> <a class="xref" href="DREditor.Dialogues.LineBase.html">LineBase</a></dt>
+    <dd></dd>
+    <dt><code>baseLine</code> <a class="xref" href="DREditor.Dialogues.LineBase.html">LineBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_Scan_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.Scan*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_Scan_System_String__" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.Scan(System.String@)">
+  Scan(out string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Scan(out string log)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>log</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Minigames_RS_Managers_RSBuilder_TryAssignPanelNum_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.TryAssignPanelNum*"></a>
+
+  <h3 id="DREditor_Minigames_RS_Managers_RSBuilder_TryAssignPanelNum__1_System_Collections_Generic_List___0__System_Int32_" data-uid="DREditor.Minigames.RS.Managers.RSBuilder.TryAssignPanelNum``1(System.Collections.Generic.List{``0},System.Int32)">
+  TryAssignPanelNum&lt;T&gt;(List&lt;T&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool TryAssignPanelNum&lt;T&gt;(List&lt;T&gt; lines, int i) where T : LineBase</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lines</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>i</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Minigames.RS/Managers/RSBuilder.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
