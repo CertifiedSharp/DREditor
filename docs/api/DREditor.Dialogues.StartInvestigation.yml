@@ -6,9 +6,12 @@ items:
   parent: DREditor.Dialogues
   children:
   - DREditor.Dialogues.StartInvestigation.#ctor
-  - DREditor.Dialogues.StartInvestigation.Enabled
+  - DREditor.Dialogues.StartInvestigation.ID
   - DREditor.Dialogues.StartInvestigation.NewDialogue
   - DREditor.Dialogues.StartInvestigation.NextObjective
+  - DREditor.Dialogues.StartInvestigation.id
+  - DREditor.Dialogues.StartInvestigation.newDialogue
+  - DREditor.Dialogues.StartInvestigation.nextObjective
   langs:
   - csharp
   - vb
@@ -17,16 +20,19 @@ items:
   fullName: DREditor.Dialogues.StartInvestigation
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public class StartInvestigation
-    content.vb: Public Class StartInvestigation
+    content: 'public class StartInvestigation : EndEventBase'
+    content.vb: Public Class StartInvestigation Inherits EndEventBase
   inheritance:
   - System.Object
+  - DREditor.Dialogues.EndEventBase
   inheritedMembers:
+  - DREditor.Dialogues.EndEventBase.Enabled
+  - DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ToString
@@ -34,69 +40,73 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: DREditor.Dialogues.StartInvestigation.Enabled
-  commentId: F:DREditor.Dialogues.StartInvestigation.Enabled
-  id: Enabled
+  extensionMethods:
+  - DREditor.Dialogues.StartInvestigation.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.StartInvestigation.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.StartInvestigation.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.StartInvestigation.nextObjective
+  commentId: F:DREditor.Dialogues.StartInvestigation.nextObjective
+  id: nextObjective
   parent: DREditor.Dialogues.StartInvestigation
   langs:
   - csharp
   - vb
-  name: Enabled
-  nameWithType: StartInvestigation.Enabled
-  fullName: DREditor.Dialogues.StartInvestigation.Enabled
+  name: nextObjective
+  nameWithType: StartInvestigation.nextObjective
+  fullName: DREditor.Dialogues.StartInvestigation.nextObjective
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool Enabled
+    content: public bool nextObjective
     return:
       type: System.Boolean
-    content.vb: Public Enabled As Boolean
-- uid: DREditor.Dialogues.StartInvestigation.NextObjective
-  commentId: F:DREditor.Dialogues.StartInvestigation.NextObjective
-  id: NextObjective
+    content.vb: Public nextObjective As Boolean
+- uid: DREditor.Dialogues.StartInvestigation.newDialogue
+  commentId: F:DREditor.Dialogues.StartInvestigation.newDialogue
+  id: newDialogue
   parent: DREditor.Dialogues.StartInvestigation
   langs:
   - csharp
   - vb
-  name: NextObjective
-  nameWithType: StartInvestigation.NextObjective
-  fullName: DREditor.Dialogues.StartInvestigation.NextObjective
+  name: newDialogue
+  nameWithType: StartInvestigation.newDialogue
+  fullName: DREditor.Dialogues.StartInvestigation.newDialogue
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool NextObjective
-    return:
-      type: System.Boolean
-    content.vb: Public NextObjective As Boolean
-- uid: DREditor.Dialogues.StartInvestigation.NewDialogue
-  commentId: F:DREditor.Dialogues.StartInvestigation.NewDialogue
-  id: NewDialogue
-  parent: DREditor.Dialogues.StartInvestigation
-  langs:
-  - csharp
-  - vb
-  name: NewDialogue
-  nameWithType: StartInvestigation.NewDialogue
-  fullName: DREditor.Dialogues.StartInvestigation.NewDialogue
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public Dialogue NewDialogue
+    content: public Dialogue newDialogue
     return:
       type: DREditor.Dialogues.Dialogue
-    content.vb: Public NewDialogue As Dialogue
+    content.vb: Public newDialogue As Dialogue
+- uid: DREditor.Dialogues.StartInvestigation.id
+  commentId: F:DREditor.Dialogues.StartInvestigation.id
+  id: id
+  parent: DREditor.Dialogues.StartInvestigation
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: StartInvestigation.id
+  fullName: DREditor.Dialogues.StartInvestigation.id
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public int id
+    return:
+      type: System.Int32
+    content.vb: Public id As Integer
 - uid: DREditor.Dialogues.StartInvestigation.#ctor
   commentId: M:DREditor.Dialogues.StartInvestigation.#ctor
   id: '#ctor'
@@ -109,7 +119,7 @@ items:
   fullName: DREditor.Dialogues.StartInvestigation.StartInvestigation()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -120,6 +130,75 @@ items:
   nameWithType.vb: StartInvestigation.New()
   fullName.vb: DREditor.Dialogues.StartInvestigation.New()
   name.vb: New()
+- uid: DREditor.Dialogues.StartInvestigation.NextObjective
+  commentId: P:DREditor.Dialogues.StartInvestigation.NextObjective
+  id: NextObjective
+  parent: DREditor.Dialogues.StartInvestigation
+  langs:
+  - csharp
+  - vb
+  name: NextObjective
+  nameWithType: StartInvestigation.NextObjective
+  fullName: DREditor.Dialogues.StartInvestigation.NextObjective
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool NextObjective { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property NextObjective As Boolean
+  overload: DREditor.Dialogues.StartInvestigation.NextObjective*
+- uid: DREditor.Dialogues.StartInvestigation.NewDialogue
+  commentId: P:DREditor.Dialogues.StartInvestigation.NewDialogue
+  id: NewDialogue
+  parent: DREditor.Dialogues.StartInvestigation
+  langs:
+  - csharp
+  - vb
+  name: NewDialogue
+  nameWithType: StartInvestigation.NewDialogue
+  fullName: DREditor.Dialogues.StartInvestigation.NewDialogue
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public Dialogue NewDialogue { get; set; }
+    parameters: []
+    return:
+      type: DREditor.Dialogues.Dialogue
+    content.vb: Public Property NewDialogue As Dialogue
+  overload: DREditor.Dialogues.StartInvestigation.NewDialogue*
+- uid: DREditor.Dialogues.StartInvestigation.ID
+  commentId: P:DREditor.Dialogues.StartInvestigation.ID
+  id: ID
+  parent: DREditor.Dialogues.StartInvestigation
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: StartInvestigation.ID
+  fullName: DREditor.Dialogues.StartInvestigation.ID
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public int ID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ID As Integer
+  overload: DREditor.Dialogues.StartInvestigation.ID*
 references:
 - uid: DREditor.Dialogues
   commentId: N:DREditor.Dialogues
@@ -159,6 +238,55 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Dialogues.EndEventBase
+  commentId: T:DREditor.Dialogues.EndEventBase
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html
+  name: EndEventBase
+  nameWithType: EndEventBase
+  fullName: DREditor.Dialogues.EndEventBase
+- uid: DREditor.Dialogues.EndEventBase.Enabled
+  commentId: F:DREditor.Dialogues.EndEventBase.Enabled
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_Enabled
+  name: Enabled
+  nameWithType: EndEventBase.Enabled
+  fullName: DREditor.Dialogues.EndEventBase.Enabled
+- uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  commentId: M:DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  name: SetEnabled(bool)
+  nameWithType: EndEventBase.SetEnabled(bool)
+  fullName: DREditor.Dialogues.EndEventBase.SetEnabled(bool)
+  nameWithType.vb: EndEventBase.SetEnabled(Boolean)
+  fullName.vb: DREditor.Dialogues.EndEventBase.SetEnabled(Boolean)
+  name.vb: SetEnabled(Boolean)
+  spec.csharp:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -378,6 +506,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Dialogues.StartInvestigation.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<StartInvestigation>(StartInvestigation)
+  nameWithType: ReflectionHelper.GetFieldNames<StartInvestigation>(StartInvestigation)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.StartInvestigation>(DREditor.Dialogues.StartInvestigation)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of StartInvestigation)(StartInvestigation)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.StartInvestigation)(DREditor.Dialogues.StartInvestigation)
+  name.vb: GetFieldNames(Of StartInvestigation)(StartInvestigation)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.StartInvestigation)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.StartInvestigation)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
+- uid: DREditor.Dialogues.StartInvestigation.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<StartInvestigation>(StartInvestigation)
+  nameWithType: ReflectionHelper.GetFieldValues<StartInvestigation>(StartInvestigation)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.StartInvestigation>(DREditor.Dialogues.StartInvestigation)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of StartInvestigation)(StartInvestigation)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.StartInvestigation)(DREditor.Dialogues.StartInvestigation)
+  name.vb: GetFieldValues(Of StartInvestigation)(StartInvestigation)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.StartInvestigation)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.StartInvestigation)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
+- uid: DREditor.Dialogues.StartInvestigation.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<StartInvestigation>(StartInvestigation)
+  nameWithType: DeepCopyExtensions.DeepCopy<StartInvestigation>(StartInvestigation)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.StartInvestigation>(DREditor.Dialogues.StartInvestigation)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of StartInvestigation)(StartInvestigation)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.StartInvestigation)(DREditor.Dialogues.StartInvestigation)
+  name.vb: DeepCopy(Of StartInvestigation)(StartInvestigation)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.StartInvestigation)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.StartInvestigation)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.StartInvestigation
+    name: StartInvestigation
+    isExternal: true
+    href: DREditor.Dialogues.StartInvestigation.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -385,6 +654,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -400,10 +841,21 @@ references:
   commentId: T:DREditor.Dialogues.Dialogue
   parent: DREditor.Dialogues
   isExternal: true
-  href: DREditor.Dialogues.Dialogue.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   name: Dialogue
   nameWithType: Dialogue
   fullName: DREditor.Dialogues.Dialogue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: DREditor.Dialogues.StartInvestigation.#ctor*
   commentId: Overload:DREditor.Dialogues.StartInvestigation.#ctor
   isExternal: true
@@ -414,3 +866,24 @@ references:
   nameWithType.vb: StartInvestigation.New
   fullName.vb: DREditor.Dialogues.StartInvestigation.New
   name.vb: New
+- uid: DREditor.Dialogues.StartInvestigation.NextObjective*
+  commentId: Overload:DREditor.Dialogues.StartInvestigation.NextObjective
+  isExternal: true
+  href: DREditor.Dialogues.StartInvestigation.html#DREditor_Dialogues_StartInvestigation_NextObjective
+  name: NextObjective
+  nameWithType: StartInvestigation.NextObjective
+  fullName: DREditor.Dialogues.StartInvestigation.NextObjective
+- uid: DREditor.Dialogues.StartInvestigation.NewDialogue*
+  commentId: Overload:DREditor.Dialogues.StartInvestigation.NewDialogue
+  isExternal: true
+  href: DREditor.Dialogues.StartInvestigation.html#DREditor_Dialogues_StartInvestigation_NewDialogue
+  name: NewDialogue
+  nameWithType: StartInvestigation.NewDialogue
+  fullName: DREditor.Dialogues.StartInvestigation.NewDialogue
+- uid: DREditor.Dialogues.StartInvestigation.ID*
+  commentId: Overload:DREditor.Dialogues.StartInvestigation.ID
+  isExternal: true
+  href: DREditor.Dialogues.StartInvestigation.html#DREditor_Dialogues_StartInvestigation_ID
+  name: ID
+  nameWithType: StartInvestigation.ID
+  fullName: DREditor.Dialogues.StartInvestigation.ID

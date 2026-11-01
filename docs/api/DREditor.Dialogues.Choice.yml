@@ -6,9 +6,16 @@ items:
   parent: DREditor.Dialogues
   children:
   - DREditor.Dialogues.Choice.#ctor
+  - DREditor.Dialogues.Choice.CallBreak
   - DREditor.Dialogues.Choice.ChoiceText
+  - DREditor.Dialogues.Choice.CustomCall
   - DREditor.Dialogues.Choice.NextDialogue
   - DREditor.Dialogues.Choice.NextIndexInDialogue
+  - DREditor.Dialogues.Choice.callBreak
+  - DREditor.Dialogues.Choice.choiceText
+  - DREditor.Dialogues.Choice.customCall
+  - DREditor.Dialogues.Choice.nextDialogue
+  - DREditor.Dialogues.Choice.nextIndexInDialogue
   langs:
   - csharp
   - vb
@@ -17,16 +24,19 @@ items:
   fullName: DREditor.Dialogues.Choice
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public class Choice
-    content.vb: Public Class Choice
+    content: 'public class Choice : EndEventBase'
+    content.vb: Public Class Choice Inherits EndEventBase
   inheritance:
   - System.Object
+  - DREditor.Dialogues.EndEventBase
   inheritedMembers:
+  - DREditor.Dialogues.EndEventBase.Enabled
+  - DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ToString
@@ -34,69 +44,115 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: DREditor.Dialogues.Choice.ChoiceText
-  commentId: F:DREditor.Dialogues.Choice.ChoiceText
-  id: ChoiceText
+  extensionMethods:
+  - DREditor.Dialogues.Choice.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.Choice.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.Choice.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.Choice.choiceText
+  commentId: F:DREditor.Dialogues.Choice.choiceText
+  id: choiceText
   parent: DREditor.Dialogues.Choice
   langs:
   - csharp
   - vb
-  name: ChoiceText
-  nameWithType: Choice.ChoiceText
-  fullName: DREditor.Dialogues.Choice.ChoiceText
+  name: choiceText
+  nameWithType: Choice.choiceText
+  fullName: DREditor.Dialogues.Choice.choiceText
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public string ChoiceText
+    content: public string choiceText
     return:
       type: System.String
-    content.vb: Public ChoiceText As String
-- uid: DREditor.Dialogues.Choice.NextDialogue
-  commentId: F:DREditor.Dialogues.Choice.NextDialogue
-  id: NextDialogue
+    content.vb: Public choiceText As String
+- uid: DREditor.Dialogues.Choice.nextDialogue
+  commentId: F:DREditor.Dialogues.Choice.nextDialogue
+  id: nextDialogue
   parent: DREditor.Dialogues.Choice
   langs:
   - csharp
   - vb
-  name: NextDialogue
-  nameWithType: Choice.NextDialogue
-  fullName: DREditor.Dialogues.Choice.NextDialogue
+  name: nextDialogue
+  nameWithType: Choice.nextDialogue
+  fullName: DREditor.Dialogues.Choice.nextDialogue
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public Dialogue NextDialogue
+    content: public Dialogue nextDialogue
     return:
       type: DREditor.Dialogues.Dialogue
-    content.vb: Public NextDialogue As Dialogue
-- uid: DREditor.Dialogues.Choice.NextIndexInDialogue
-  commentId: F:DREditor.Dialogues.Choice.NextIndexInDialogue
-  id: NextIndexInDialogue
+    content.vb: Public nextDialogue As Dialogue
+- uid: DREditor.Dialogues.Choice.nextIndexInDialogue
+  commentId: F:DREditor.Dialogues.Choice.nextIndexInDialogue
+  id: nextIndexInDialogue
   parent: DREditor.Dialogues.Choice
   langs:
   - csharp
   - vb
-  name: NextIndexInDialogue
-  nameWithType: Choice.NextIndexInDialogue
-  fullName: DREditor.Dialogues.Choice.NextIndexInDialogue
+  name: nextIndexInDialogue
+  nameWithType: Choice.nextIndexInDialogue
+  fullName: DREditor.Dialogues.Choice.nextIndexInDialogue
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public int NextIndexInDialogue
+    content: public int nextIndexInDialogue
     return:
       type: System.Int32
-    content.vb: Public NextIndexInDialogue As Integer
+    content.vb: Public nextIndexInDialogue As Integer
+- uid: DREditor.Dialogues.Choice.customCall
+  commentId: F:DREditor.Dialogues.Choice.customCall
+  id: customCall
+  parent: DREditor.Dialogues.Choice
+  langs:
+  - csharp
+  - vb
+  name: customCall
+  nameWithType: Choice.customCall
+  fullName: DREditor.Dialogues.Choice.customCall
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public string customCall
+    return:
+      type: System.String
+    content.vb: Public customCall As String
+- uid: DREditor.Dialogues.Choice.callBreak
+  commentId: F:DREditor.Dialogues.Choice.callBreak
+  id: callBreak
+  parent: DREditor.Dialogues.Choice
+  langs:
+  - csharp
+  - vb
+  name: callBreak
+  nameWithType: Choice.callBreak
+  fullName: DREditor.Dialogues.Choice.callBreak
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool callBreak
+    return:
+      type: System.Boolean
+    content.vb: Public callBreak As Boolean
 - uid: DREditor.Dialogues.Choice.#ctor
   commentId: M:DREditor.Dialogues.Choice.#ctor
   id: '#ctor'
@@ -109,7 +165,7 @@ items:
   fullName: DREditor.Dialogues.Choice.Choice()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -120,6 +176,121 @@ items:
   nameWithType.vb: Choice.New()
   fullName.vb: DREditor.Dialogues.Choice.New()
   name.vb: New()
+- uid: DREditor.Dialogues.Choice.ChoiceText
+  commentId: P:DREditor.Dialogues.Choice.ChoiceText
+  id: ChoiceText
+  parent: DREditor.Dialogues.Choice
+  langs:
+  - csharp
+  - vb
+  name: ChoiceText
+  nameWithType: Choice.ChoiceText
+  fullName: DREditor.Dialogues.Choice.ChoiceText
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public string ChoiceText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChoiceText As String
+  overload: DREditor.Dialogues.Choice.ChoiceText*
+- uid: DREditor.Dialogues.Choice.NextDialogue
+  commentId: P:DREditor.Dialogues.Choice.NextDialogue
+  id: NextDialogue
+  parent: DREditor.Dialogues.Choice
+  langs:
+  - csharp
+  - vb
+  name: NextDialogue
+  nameWithType: Choice.NextDialogue
+  fullName: DREditor.Dialogues.Choice.NextDialogue
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public Dialogue NextDialogue { get; set; }
+    parameters: []
+    return:
+      type: DREditor.Dialogues.Dialogue
+    content.vb: Public Property NextDialogue As Dialogue
+  overload: DREditor.Dialogues.Choice.NextDialogue*
+- uid: DREditor.Dialogues.Choice.NextIndexInDialogue
+  commentId: P:DREditor.Dialogues.Choice.NextIndexInDialogue
+  id: NextIndexInDialogue
+  parent: DREditor.Dialogues.Choice
+  langs:
+  - csharp
+  - vb
+  name: NextIndexInDialogue
+  nameWithType: Choice.NextIndexInDialogue
+  fullName: DREditor.Dialogues.Choice.NextIndexInDialogue
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public int NextIndexInDialogue { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NextIndexInDialogue As Integer
+  overload: DREditor.Dialogues.Choice.NextIndexInDialogue*
+- uid: DREditor.Dialogues.Choice.CustomCall
+  commentId: P:DREditor.Dialogues.Choice.CustomCall
+  id: CustomCall
+  parent: DREditor.Dialogues.Choice
+  langs:
+  - csharp
+  - vb
+  name: CustomCall
+  nameWithType: Choice.CustomCall
+  fullName: DREditor.Dialogues.Choice.CustomCall
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public string CustomCall { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CustomCall As String
+  overload: DREditor.Dialogues.Choice.CustomCall*
+- uid: DREditor.Dialogues.Choice.CallBreak
+  commentId: P:DREditor.Dialogues.Choice.CallBreak
+  id: CallBreak
+  parent: DREditor.Dialogues.Choice
+  langs:
+  - csharp
+  - vb
+  name: CallBreak
+  nameWithType: Choice.CallBreak
+  fullName: DREditor.Dialogues.Choice.CallBreak
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Choice.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool CallBreak { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CallBreak As Boolean
+  overload: DREditor.Dialogues.Choice.CallBreak*
 references:
 - uid: DREditor.Dialogues
   commentId: N:DREditor.Dialogues
@@ -159,6 +330,55 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Dialogues.EndEventBase
+  commentId: T:DREditor.Dialogues.EndEventBase
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html
+  name: EndEventBase
+  nameWithType: EndEventBase
+  fullName: DREditor.Dialogues.EndEventBase
+- uid: DREditor.Dialogues.EndEventBase.Enabled
+  commentId: F:DREditor.Dialogues.EndEventBase.Enabled
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_Enabled
+  name: Enabled
+  nameWithType: EndEventBase.Enabled
+  fullName: DREditor.Dialogues.EndEventBase.Enabled
+- uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  commentId: M:DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  name: SetEnabled(bool)
+  nameWithType: EndEventBase.SetEnabled(bool)
+  fullName: DREditor.Dialogues.EndEventBase.SetEnabled(bool)
+  nameWithType.vb: EndEventBase.SetEnabled(Boolean)
+  fullName.vb: DREditor.Dialogues.EndEventBase.SetEnabled(Boolean)
+  name.vb: SetEnabled(Boolean)
+  spec.csharp:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -378,6 +598,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Dialogues.Choice.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<Choice>(Choice)
+  nameWithType: ReflectionHelper.GetFieldNames<Choice>(Choice)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.Choice>(DREditor.Dialogues.Choice)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of Choice)(Choice)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.Choice)(DREditor.Dialogues.Choice)
+  name.vb: GetFieldNames(Of Choice)(Choice)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Choice)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Choice)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
+- uid: DREditor.Dialogues.Choice.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<Choice>(Choice)
+  nameWithType: ReflectionHelper.GetFieldValues<Choice>(Choice)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.Choice>(DREditor.Dialogues.Choice)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of Choice)(Choice)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.Choice)(DREditor.Dialogues.Choice)
+  name.vb: GetFieldValues(Of Choice)(Choice)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Choice)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Choice)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
+- uid: DREditor.Dialogues.Choice.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<Choice>(Choice)
+  nameWithType: DeepCopyExtensions.DeepCopy<Choice>(Choice)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.Choice>(DREditor.Dialogues.Choice)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of Choice)(Choice)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.Choice)(DREditor.Dialogues.Choice)
+  name.vb: DeepCopy(Of Choice)(Choice)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Choice)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Choice)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
+    isExternal: true
+    href: DREditor.Dialogues.Choice.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -385,6 +746,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -400,7 +933,7 @@ references:
   commentId: T:DREditor.Dialogues.Dialogue
   parent: DREditor.Dialogues
   isExternal: true
-  href: DREditor.Dialogues.Dialogue.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   name: Dialogue
   nameWithType: Dialogue
   fullName: DREditor.Dialogues.Dialogue
@@ -415,6 +948,17 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: DREditor.Dialogues.Choice.#ctor*
   commentId: Overload:DREditor.Dialogues.Choice.#ctor
   isExternal: true
@@ -425,3 +969,38 @@ references:
   nameWithType.vb: Choice.New
   fullName.vb: DREditor.Dialogues.Choice.New
   name.vb: New
+- uid: DREditor.Dialogues.Choice.ChoiceText*
+  commentId: Overload:DREditor.Dialogues.Choice.ChoiceText
+  isExternal: true
+  href: DREditor.Dialogues.Choice.html#DREditor_Dialogues_Choice_ChoiceText
+  name: ChoiceText
+  nameWithType: Choice.ChoiceText
+  fullName: DREditor.Dialogues.Choice.ChoiceText
+- uid: DREditor.Dialogues.Choice.NextDialogue*
+  commentId: Overload:DREditor.Dialogues.Choice.NextDialogue
+  isExternal: true
+  href: DREditor.Dialogues.Choice.html#DREditor_Dialogues_Choice_NextDialogue
+  name: NextDialogue
+  nameWithType: Choice.NextDialogue
+  fullName: DREditor.Dialogues.Choice.NextDialogue
+- uid: DREditor.Dialogues.Choice.NextIndexInDialogue*
+  commentId: Overload:DREditor.Dialogues.Choice.NextIndexInDialogue
+  isExternal: true
+  href: DREditor.Dialogues.Choice.html#DREditor_Dialogues_Choice_NextIndexInDialogue
+  name: NextIndexInDialogue
+  nameWithType: Choice.NextIndexInDialogue
+  fullName: DREditor.Dialogues.Choice.NextIndexInDialogue
+- uid: DREditor.Dialogues.Choice.CustomCall*
+  commentId: Overload:DREditor.Dialogues.Choice.CustomCall
+  isExternal: true
+  href: DREditor.Dialogues.Choice.html#DREditor_Dialogues_Choice_CustomCall
+  name: CustomCall
+  nameWithType: Choice.CustomCall
+  fullName: DREditor.Dialogues.Choice.CustomCall
+- uid: DREditor.Dialogues.Choice.CallBreak*
+  commentId: Overload:DREditor.Dialogues.Choice.CallBreak
+  isExternal: true
+  href: DREditor.Dialogues.Choice.html#DREditor_Dialogues_Choice_CallBreak
+  name: CallBreak
+  nameWithType: Choice.CallBreak
+  fullName: DREditor.Dialogues.Choice.CallBreak

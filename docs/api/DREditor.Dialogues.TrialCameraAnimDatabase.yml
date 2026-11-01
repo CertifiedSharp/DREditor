@@ -6,10 +6,15 @@ items:
   parent: DREditor.Dialogues
   children:
   - DREditor.Dialogues.TrialCameraAnimDatabase.#ctor
+  - DREditor.Dialogues.TrialCameraAnimDatabase.Add
+  - DREditor.Dialogues.TrialCameraAnimDatabase.Add(UnityEngine.AnimationClip)
+  - DREditor.Dialogues.TrialCameraAnimDatabase.ClearAll
   - DREditor.Dialogues.TrialCameraAnimDatabase.GetNames
+  - DREditor.Dialogues.TrialCameraAnimDatabase.SetController(UnityEngine.RuntimeAnimatorController)
   - DREditor.Dialogues.TrialCameraAnimDatabase.animNames
   - DREditor.Dialogues.TrialCameraAnimDatabase.animValues
   - DREditor.Dialogues.TrialCameraAnimDatabase.anims
+  - DREditor.Dialogues.TrialCameraAnimDatabase.controller
   langs:
   - csharp
   - vb
@@ -18,7 +23,7 @@ items:
   fullName: DREditor.Dialogues.TrialCameraAnimDatabase
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -27,6 +32,31 @@ items:
     content.vb: Public Class TrialCameraAnimDatabase Inherits ScriptableObject
   inheritance:
   - System.Object
+  extensionMethods:
+  - DREditor.Dialogues.TrialCameraAnimDatabase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.TrialCameraAnimDatabase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.TrialCameraAnimDatabase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.controller
+  commentId: F:DREditor.Dialogues.TrialCameraAnimDatabase.controller
+  id: controller
+  parent: DREditor.Dialogues.TrialCameraAnimDatabase
+  langs:
+  - csharp
+  - vb
+  name: controller
+  nameWithType: TrialCameraAnimDatabase.controller
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase.controller
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public RuntimeAnimatorController controller
+    return:
+      type: UnityEngine.RuntimeAnimatorController
+    content.vb: Public controller As RuntimeAnimatorController
 - uid: DREditor.Dialogues.TrialCameraAnimDatabase.anims
   commentId: F:DREditor.Dialogues.TrialCameraAnimDatabase.anims
   id: anims
@@ -39,7 +69,7 @@ items:
   fullName: DREditor.Dialogues.TrialCameraAnimDatabase.anims
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -60,7 +90,7 @@ items:
   fullName: DREditor.Dialogues.TrialCameraAnimDatabase.animNames
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -81,7 +111,7 @@ items:
   fullName: DREditor.Dialogues.TrialCameraAnimDatabase.animValues
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -102,7 +132,7 @@ items:
   fullName: DREditor.Dialogues.TrialCameraAnimDatabase.GetNames()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -112,6 +142,92 @@ items:
       type: System.Collections.Generic.List{System.String}
     content.vb: Public Function GetNames() As List(Of String)
   overload: DREditor.Dialogues.TrialCameraAnimDatabase.GetNames*
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.ClearAll
+  commentId: M:DREditor.Dialogues.TrialCameraAnimDatabase.ClearAll
+  id: ClearAll
+  parent: DREditor.Dialogues.TrialCameraAnimDatabase
+  langs:
+  - csharp
+  - vb
+  name: ClearAll()
+  nameWithType: TrialCameraAnimDatabase.ClearAll()
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase.ClearAll()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public virtual void ClearAll()
+    content.vb: Public Overridable Sub ClearAll()
+  overload: DREditor.Dialogues.TrialCameraAnimDatabase.ClearAll*
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.Add
+  commentId: M:DREditor.Dialogues.TrialCameraAnimDatabase.Add
+  id: Add
+  parent: DREditor.Dialogues.TrialCameraAnimDatabase
+  langs:
+  - csharp
+  - vb
+  name: Add()
+  nameWithType: TrialCameraAnimDatabase.Add()
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase.Add()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public virtual void Add()
+    content.vb: Public Overridable Sub Add()
+  overload: DREditor.Dialogues.TrialCameraAnimDatabase.Add*
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.Add(UnityEngine.AnimationClip)
+  commentId: M:DREditor.Dialogues.TrialCameraAnimDatabase.Add(UnityEngine.AnimationClip)
+  id: Add(UnityEngine.AnimationClip)
+  parent: DREditor.Dialogues.TrialCameraAnimDatabase
+  langs:
+  - csharp
+  - vb
+  name: Add(AnimationClip)
+  nameWithType: TrialCameraAnimDatabase.Add(AnimationClip)
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase.Add(UnityEngine.AnimationClip)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public virtual void Add(AnimationClip clip)
+    parameters:
+    - id: clip
+      type: UnityEngine.AnimationClip
+    content.vb: Public Overridable Sub Add(clip As AnimationClip)
+  overload: DREditor.Dialogues.TrialCameraAnimDatabase.Add*
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.SetController(UnityEngine.RuntimeAnimatorController)
+  commentId: M:DREditor.Dialogues.TrialCameraAnimDatabase.SetController(UnityEngine.RuntimeAnimatorController)
+  id: SetController(UnityEngine.RuntimeAnimatorController)
+  parent: DREditor.Dialogues.TrialCameraAnimDatabase
+  langs:
+  - csharp
+  - vb
+  name: SetController(RuntimeAnimatorController)
+  nameWithType: TrialCameraAnimDatabase.SetController(RuntimeAnimatorController)
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase.SetController(UnityEngine.RuntimeAnimatorController)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public virtual void SetController(RuntimeAnimatorController controller)
+    parameters:
+    - id: controller
+      type: UnityEngine.RuntimeAnimatorController
+    content.vb: Public Overridable Sub SetController(controller As RuntimeAnimatorController)
+  overload: DREditor.Dialogues.TrialCameraAnimDatabase.SetController*
 - uid: DREditor.Dialogues.TrialCameraAnimDatabase.#ctor
   commentId: M:DREditor.Dialogues.TrialCameraAnimDatabase.#ctor
   id: '#ctor'
@@ -124,7 +240,7 @@ items:
   fullName: DREditor.Dialogues.TrialCameraAnimDatabase.TrialCameraAnimDatabase()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TrialCameraAnimDatabase.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -174,6 +290,147 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<TrialCameraAnimDatabase>(TrialCameraAnimDatabase)
+  nameWithType: ReflectionHelper.GetFieldNames<TrialCameraAnimDatabase>(TrialCameraAnimDatabase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.TrialCameraAnimDatabase>(DREditor.Dialogues.TrialCameraAnimDatabase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of TrialCameraAnimDatabase)(TrialCameraAnimDatabase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.TrialCameraAnimDatabase)(DREditor.Dialogues.TrialCameraAnimDatabase)
+  name.vb: GetFieldNames(Of TrialCameraAnimDatabase)(TrialCameraAnimDatabase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.TrialCameraAnimDatabase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.TrialCameraAnimDatabase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<TrialCameraAnimDatabase>(TrialCameraAnimDatabase)
+  nameWithType: ReflectionHelper.GetFieldValues<TrialCameraAnimDatabase>(TrialCameraAnimDatabase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.TrialCameraAnimDatabase>(DREditor.Dialogues.TrialCameraAnimDatabase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of TrialCameraAnimDatabase)(TrialCameraAnimDatabase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.TrialCameraAnimDatabase)(DREditor.Dialogues.TrialCameraAnimDatabase)
+  name.vb: GetFieldValues(Of TrialCameraAnimDatabase)(TrialCameraAnimDatabase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.TrialCameraAnimDatabase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.TrialCameraAnimDatabase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<TrialCameraAnimDatabase>(TrialCameraAnimDatabase)
+  nameWithType: DeepCopyExtensions.DeepCopy<TrialCameraAnimDatabase>(TrialCameraAnimDatabase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.TrialCameraAnimDatabase>(DREditor.Dialogues.TrialCameraAnimDatabase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of TrialCameraAnimDatabase)(TrialCameraAnimDatabase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.TrialCameraAnimDatabase)(DREditor.Dialogues.TrialCameraAnimDatabase)
+  name.vb: DeepCopy(Of TrialCameraAnimDatabase)(TrialCameraAnimDatabase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.TrialCameraAnimDatabase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.TrialCameraAnimDatabase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.TrialCameraAnimDatabase
+    name: TrialCameraAnimDatabase
+    isExternal: true
+    href: DREditor.Dialogues.TrialCameraAnimDatabase.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -181,6 +438,183 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.RuntimeAnimatorController
+  isExternal: true
+  name: RuntimeAnimatorController
+  nameWithType: RuntimeAnimatorController
+  fullName: UnityEngine.RuntimeAnimatorController
 - uid: System.Collections.Generic.List{UnityEngine.AnimationClip}
   commentId: T:System.Collections.Generic.List{UnityEngine.AnimationClip}
   parent: System.Collections.Generic
@@ -356,6 +790,32 @@ references:
   name: GetNames
   nameWithType: TrialCameraAnimDatabase.GetNames
   fullName: DREditor.Dialogues.TrialCameraAnimDatabase.GetNames
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.ClearAll*
+  commentId: Overload:DREditor.Dialogues.TrialCameraAnimDatabase.ClearAll
+  isExternal: true
+  href: DREditor.Dialogues.TrialCameraAnimDatabase.html#DREditor_Dialogues_TrialCameraAnimDatabase_ClearAll
+  name: ClearAll
+  nameWithType: TrialCameraAnimDatabase.ClearAll
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase.ClearAll
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.Add*
+  commentId: Overload:DREditor.Dialogues.TrialCameraAnimDatabase.Add
+  isExternal: true
+  href: DREditor.Dialogues.TrialCameraAnimDatabase.html#DREditor_Dialogues_TrialCameraAnimDatabase_Add
+  name: Add
+  nameWithType: TrialCameraAnimDatabase.Add
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase.Add
+- uid: UnityEngine.AnimationClip
+  isExternal: true
+  name: AnimationClip
+  nameWithType: AnimationClip
+  fullName: UnityEngine.AnimationClip
+- uid: DREditor.Dialogues.TrialCameraAnimDatabase.SetController*
+  commentId: Overload:DREditor.Dialogues.TrialCameraAnimDatabase.SetController
+  isExternal: true
+  href: DREditor.Dialogues.TrialCameraAnimDatabase.html#DREditor_Dialogues_TrialCameraAnimDatabase_SetController_UnityEngine_RuntimeAnimatorController_
+  name: SetController
+  nameWithType: TrialCameraAnimDatabase.SetController
+  fullName: DREditor.Dialogues.TrialCameraAnimDatabase.SetController
 - uid: DREditor.Dialogues.TrialCameraAnimDatabase.#ctor*
   commentId: Overload:DREditor.Dialogues.TrialCameraAnimDatabase.#ctor
   isExternal: true

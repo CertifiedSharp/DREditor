@@ -7,13 +7,23 @@ items:
   children:
   - DREditor.Dialogues.Dialogue.#ctor
   - DREditor.Dialogues.Dialogue.Choices
-  - DREditor.Dialogues.Dialogue.Copy
-  - DREditor.Dialogues.Dialogue.Lines
+  - DREditor.Dialogues.Dialogue.ContainsCharacterNamed(System.String)
+  - DREditor.Dialogues.Dialogue.EndEvent
+  - DREditor.Dialogues.Dialogue.GetInstant
+  - DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex(System.Int32)
+  - DREditor.Dialogues.Dialogue.IsInstant
+  - DREditor.Dialogues.Dialogue.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
   - DREditor.Dialogues.Dialogue.PauseOptionNum
   - DREditor.Dialogues.Dialogue.PauseOptionTo
+  - DREditor.Dialogues.Dialogue.SetEndEvent(DREditor.Dialogues.EndEvent)
+  - DREditor.Dialogues.Dialogue.SetInstant(System.Boolean)
   - DREditor.Dialogues.Dialogue.StartInvestigation
   - DREditor.Dialogues.Dialogue.UnlockPause
   - DREditor.Dialogues.Dialogue.UnlockPauseOption
+  - DREditor.Dialogues.Dialogue.pauseOptionNum
+  - DREditor.Dialogues.Dialogue.pauseOptionTo
+  - DREditor.Dialogues.Dialogue.unlockPause
+  - DREditor.Dialogues.Dialogue.unlockPauseOption
   langs:
   - csharp
   - vb
@@ -22,143 +32,140 @@ items:
   fullName: DREditor.Dialogues.Dialogue
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: 'public class Dialogue : DialogueBase'
-    content.vb: Public Class Dialogue Inherits DialogueBase
+    content: 'public class Dialogue : DialogueBased<Line>, IConvertableDialogue, IInstantAbleDialogue'
+    content.vb: Public Class Dialogue Inherits DialogueBased(Of Line) Implements IConvertableDialogue, IInstantAbleDialogue
   inheritance:
   - System.Object
-  - DREditor.Dialogues.DialogueBase
+  - DREditor.Dialogues.DialogueCore
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  - DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}
+  implements:
+  - DREditor.Dialogues.IConvertableDialogue
+  - DREditor.Dialogues.IInstantAbleDialogue
   inheritedMembers:
-  - DREditor.Dialogues.DialogueBase.DialogueMode
-  - DREditor.Dialogues.DialogueBase.translationKey
-  - DREditor.Dialogues.DialogueBase.DialogueName
-  - DREditor.Dialogues.DialogueBase.Color
-  - DREditor.Dialogues.DialogueBase.ShowDialoguePanel
-  - DREditor.Dialogues.DialogueBase.Variable
-  - DREditor.Dialogues.DialogueBase.DirectTo
-  - DREditor.Dialogues.DialogueBase.SceneTransition
-  - DREditor.Dialogues.DialogueBase.IsInstant
-  - DREditor.Dialogues.DialogueBase.FlagTrigger
-  - DREditor.Dialogues.DialogueBase.EndVidEnabled
-  - DREditor.Dialogues.DialogueBase.EndVideo
-  - DREditor.Dialogues.DialogueBase.ClearLock
-  - DREditor.Dialogues.DialogueBase.Speakers
-  - DREditor.Dialogues.DialogueBase.VFXDB
-  - DREditor.Dialogues.DialogueBase.GetCharacterNames
-  - DREditor.Dialogues.DialogueBase.GetVFXNames
-  - DREditor.Dialogues.DialogueBase.GetCharacterAliases(DREditor.Characters.Character)
-  - DREditor.Dialogues.DialogueBase.getNamesIntValues
-  - DREditor.Dialogues.DialogueBase.getExpressionIntValues(DREditor.Characters.Character)
-  - DREditor.Dialogues.DialogueBase.getAliasesIntValues(DREditor.Characters.Character)
-- uid: DREditor.Dialogues.Dialogue.UnlockPause
-  commentId: F:DREditor.Dialogues.Dialogue.UnlockPause
-  id: UnlockPause
+  - DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  - DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.AddNewLine
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.lines
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SceneTransition
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.FlagTrigger
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.Variable
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.DirectTo
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTranslationKey(System.String)
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetColor(UnityEngine.Color)
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLine(System.Int32)
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLines``1
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetVariable(DREditor.Dialogues.Variable{DREditor.Dialogues.Line})
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetDirectTo(DREditor.Dialogues.DirectTo{DREditor.Dialogues.Line})
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.Lines
+  - DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.LineCount
+  - DREditor.Dialogues.DialogueCore.translationKey
+  - DREditor.Dialogues.DialogueCore.DialogueName
+  - DREditor.Dialogues.DialogueCore.Color
+  - DREditor.Dialogues.DialogueCore.ShowDialoguePanel
+  - DREditor.Dialogues.DialogueCore.Speakers
+  - DREditor.Dialogues.DialogueCore.InvokeDebugLine(DREditor.Dialogues.DialogueCore,DREditor.Dialogues.Line)
+  - DREditor.Dialogues.DialogueCore.SetName(System.String)
+  - DREditor.Dialogues.DialogueCore.SetSpeakers(DREditor.Characters.CharacterDatabase)
+  - DREditor.Dialogues.DialogueCore.LoadSpeakers
+  - DREditor.Dialogues.DialogueCore.GetCharacterNames
+  - DREditor.Dialogues.DialogueCore.GetIntValues(System.Int32)
+  - DREditor.Dialogues.DialogueCore.OnDebugLine
+  extensionMethods:
+  - DREditor.Dialogues.Dialogue.DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue
+  - DREditor.Dialogues.Dialogue.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.Dialogue.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.Dialogue.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.Dialogue.unlockPause
+  commentId: F:DREditor.Dialogues.Dialogue.unlockPause
+  id: unlockPause
   parent: DREditor.Dialogues.Dialogue
   langs:
   - csharp
   - vb
-  name: UnlockPause
-  nameWithType: Dialogue.UnlockPause
-  fullName: DREditor.Dialogues.Dialogue.UnlockPause
+  name: unlockPause
+  nameWithType: Dialogue.unlockPause
+  fullName: DREditor.Dialogues.Dialogue.unlockPause
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool UnlockPause
+    content: public bool unlockPause
     return:
       type: System.Boolean
-    content.vb: Public UnlockPause As Boolean
-- uid: DREditor.Dialogues.Dialogue.UnlockPauseOption
-  commentId: F:DREditor.Dialogues.Dialogue.UnlockPauseOption
-  id: UnlockPauseOption
+    content.vb: Public unlockPause As Boolean
+- uid: DREditor.Dialogues.Dialogue.unlockPauseOption
+  commentId: F:DREditor.Dialogues.Dialogue.unlockPauseOption
+  id: unlockPauseOption
   parent: DREditor.Dialogues.Dialogue
   langs:
   - csharp
   - vb
-  name: UnlockPauseOption
-  nameWithType: Dialogue.UnlockPauseOption
-  fullName: DREditor.Dialogues.Dialogue.UnlockPauseOption
+  name: unlockPauseOption
+  nameWithType: Dialogue.unlockPauseOption
+  fullName: DREditor.Dialogues.Dialogue.unlockPauseOption
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool UnlockPauseOption
+    content: public bool unlockPauseOption
     return:
       type: System.Boolean
-    content.vb: Public UnlockPauseOption As Boolean
-- uid: DREditor.Dialogues.Dialogue.PauseOptionNum
-  commentId: F:DREditor.Dialogues.Dialogue.PauseOptionNum
-  id: PauseOptionNum
+    content.vb: Public unlockPauseOption As Boolean
+- uid: DREditor.Dialogues.Dialogue.pauseOptionNum
+  commentId: F:DREditor.Dialogues.Dialogue.pauseOptionNum
+  id: pauseOptionNum
   parent: DREditor.Dialogues.Dialogue
   langs:
   - csharp
   - vb
-  name: PauseOptionNum
-  nameWithType: Dialogue.PauseOptionNum
-  fullName: DREditor.Dialogues.Dialogue.PauseOptionNum
+  name: pauseOptionNum
+  nameWithType: Dialogue.pauseOptionNum
+  fullName: DREditor.Dialogues.Dialogue.pauseOptionNum
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public int PauseOptionNum
+    content: public int pauseOptionNum
     return:
       type: System.Int32
-    content.vb: Public PauseOptionNum As Integer
-- uid: DREditor.Dialogues.Dialogue.PauseOptionTo
-  commentId: F:DREditor.Dialogues.Dialogue.PauseOptionTo
-  id: PauseOptionTo
+    content.vb: Public pauseOptionNum As Integer
+- uid: DREditor.Dialogues.Dialogue.pauseOptionTo
+  commentId: F:DREditor.Dialogues.Dialogue.pauseOptionTo
+  id: pauseOptionTo
   parent: DREditor.Dialogues.Dialogue
   langs:
   - csharp
   - vb
-  name: PauseOptionTo
-  nameWithType: Dialogue.PauseOptionTo
-  fullName: DREditor.Dialogues.Dialogue.PauseOptionTo
+  name: pauseOptionTo
+  nameWithType: Dialogue.pauseOptionTo
+  fullName: DREditor.Dialogues.Dialogue.pauseOptionTo
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool PauseOptionTo
+    content: public bool pauseOptionTo
     return:
       type: System.Boolean
-    content.vb: Public PauseOptionTo As Boolean
-- uid: DREditor.Dialogues.Dialogue.Lines
-  commentId: F:DREditor.Dialogues.Dialogue.Lines
-  id: Lines
-  parent: DREditor.Dialogues.Dialogue
-  langs:
-  - csharp
-  - vb
-  name: Lines
-  nameWithType: Dialogue.Lines
-  fullName: DREditor.Dialogues.Dialogue.Lines
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public List<Line> Lines
-    return:
-      type: System.Collections.Generic.List{DREditor.Dialogues.Line}
-    content.vb: Public Lines As List(Of Line)
+    content.vb: Public pauseOptionTo As Boolean
 - uid: DREditor.Dialogues.Dialogue.Choices
   commentId: F:DREditor.Dialogues.Dialogue.Choices
   id: Choices
@@ -171,7 +178,7 @@ items:
   fullName: DREditor.Dialogues.Dialogue.Choices
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -192,7 +199,7 @@ items:
   fullName: DREditor.Dialogues.Dialogue.StartInvestigation
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -201,28 +208,217 @@ items:
     return:
       type: DREditor.Dialogues.StartInvestigation
     content.vb: Public StartInvestigation As StartInvestigation
-- uid: DREditor.Dialogues.Dialogue.Copy
-  commentId: M:DREditor.Dialogues.Dialogue.Copy
-  id: Copy
+- uid: DREditor.Dialogues.Dialogue.EndEvent
+  commentId: F:DREditor.Dialogues.Dialogue.EndEvent
+  id: EndEvent
   parent: DREditor.Dialogues.Dialogue
   langs:
   - csharp
   - vb
-  name: Copy()
-  nameWithType: Dialogue.Copy()
-  fullName: DREditor.Dialogues.Dialogue.Copy()
-  type: Method
+  name: EndEvent
+  nameWithType: Dialogue.EndEvent
+  fullName: DREditor.Dialogues.Dialogue.EndEvent
+  type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public Dialogue Copy()
+    content: public EndEvent EndEvent
     return:
-      type: DREditor.Dialogues.Dialogue
-    content.vb: Public Function Copy() As Dialogue
-  overload: DREditor.Dialogues.Dialogue.Copy*
+      type: DREditor.Dialogues.EndEvent
+    content.vb: Public EndEvent As EndEvent
+- uid: DREditor.Dialogues.Dialogue.IsInstant
+  commentId: F:DREditor.Dialogues.Dialogue.IsInstant
+  id: IsInstant
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: IsInstant
+  nameWithType: Dialogue.IsInstant
+  fullName: DREditor.Dialogues.Dialogue.IsInstant
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool IsInstant
+    return:
+      type: System.Boolean
+    content.vb: Public IsInstant As Boolean
+- uid: DREditor.Dialogues.Dialogue.SetEndEvent(DREditor.Dialogues.EndEvent)
+  commentId: M:DREditor.Dialogues.Dialogue.SetEndEvent(DREditor.Dialogues.EndEvent)
+  id: SetEndEvent(DREditor.Dialogues.EndEvent)
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: SetEndEvent(EndEvent)
+  nameWithType: Dialogue.SetEndEvent(EndEvent)
+  fullName: DREditor.Dialogues.Dialogue.SetEndEvent(DREditor.Dialogues.EndEvent)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public void SetEndEvent(EndEvent EndEvent)
+    parameters:
+    - id: EndEvent
+      type: DREditor.Dialogues.EndEvent
+    content.vb: Public Sub SetEndEvent(EndEvent As EndEvent)
+  overload: DREditor.Dialogues.Dialogue.SetEndEvent*
+- uid: DREditor.Dialogues.Dialogue.GetInstant
+  commentId: M:DREditor.Dialogues.Dialogue.GetInstant
+  id: GetInstant
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: GetInstant()
+  nameWithType: Dialogue.GetInstant()
+  fullName: DREditor.Dialogues.Dialogue.GetInstant()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  example: []
+  syntax:
+    content: public virtual bool GetInstant()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function GetInstant() As Boolean
+  overload: DREditor.Dialogues.Dialogue.GetInstant*
+  implements:
+  - DREditor.Dialogues.IInstantAbleDialogue.GetInstant
+- uid: DREditor.Dialogues.Dialogue.SetInstant(System.Boolean)
+  commentId: M:DREditor.Dialogues.Dialogue.SetInstant(System.Boolean)
+  id: SetInstant(System.Boolean)
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: SetInstant(bool)
+  nameWithType: Dialogue.SetInstant(bool)
+  fullName: DREditor.Dialogues.Dialogue.SetInstant(bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  example: []
+  syntax:
+    content: public virtual void SetInstant(bool IsInstant)
+    parameters:
+    - id: IsInstant
+      type: System.Boolean
+    content.vb: Public Overridable Sub SetInstant(IsInstant As Boolean)
+  overload: DREditor.Dialogues.Dialogue.SetInstant*
+  implements:
+  - DREditor.Dialogues.IInstantAbleDialogue.SetInstant(System.Boolean)
+  nameWithType.vb: Dialogue.SetInstant(Boolean)
+  fullName.vb: DREditor.Dialogues.Dialogue.SetInstant(Boolean)
+  name.vb: SetInstant(Boolean)
+- uid: DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex(System.Int32)
+  commentId: M:DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex(System.Int32)
+  id: HasChoiceDialogueAtIndex(System.Int32)
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: HasChoiceDialogueAtIndex(int)
+  nameWithType: Dialogue.HasChoiceDialogueAtIndex(int)
+  fullName: DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool HasChoiceDialogueAtIndex(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function HasChoiceDialogueAtIndex(index As Integer) As Boolean
+  overload: DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex*
+  nameWithType.vb: Dialogue.HasChoiceDialogueAtIndex(Integer)
+  fullName.vb: DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex(Integer)
+  name.vb: HasChoiceDialogueAtIndex(Integer)
+- uid: DREditor.Dialogues.Dialogue.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+  commentId: M:DREditor.Dialogues.Dialogue.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+  id: IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: IsNested(DialogueCore, List<DialogueCore>)
+  nameWithType: Dialogue.IsNested(DialogueCore, List<DialogueCore>)
+  fullName: DREditor.Dialogues.Dialogue.IsNested(DREditor.Dialogues.DialogueCore, System.Collections.Generic.List<DREditor.Dialogues.DialogueCore>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  example: []
+  syntax:
+    content: public override bool IsNested(DialogueCore dia, List<DialogueCore> history)
+    parameters:
+    - id: dia
+      type: DREditor.Dialogues.DialogueCore
+    - id: history
+      type: System.Collections.Generic.List{DREditor.Dialogues.DialogueCore}
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function IsNested(dia As DialogueCore, history As List(Of DialogueCore)) As Boolean
+  overridden: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+  overload: DREditor.Dialogues.Dialogue.IsNested*
+  nameWithType.vb: Dialogue.IsNested(DialogueCore, List(Of DialogueCore))
+  fullName.vb: DREditor.Dialogues.Dialogue.IsNested(DREditor.Dialogues.DialogueCore, System.Collections.Generic.List(Of DREditor.Dialogues.DialogueCore))
+  name.vb: IsNested(DialogueCore, List(Of DialogueCore))
+- uid: DREditor.Dialogues.Dialogue.ContainsCharacterNamed(System.String)
+  commentId: M:DREditor.Dialogues.Dialogue.ContainsCharacterNamed(System.String)
+  id: ContainsCharacterNamed(System.String)
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: ContainsCharacterNamed(string)
+  nameWithType: Dialogue.ContainsCharacterNamed(string)
+  fullName: DREditor.Dialogues.Dialogue.ContainsCharacterNamed(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool ContainsCharacterNamed(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function ContainsCharacterNamed(name As String) As Boolean
+  overload: DREditor.Dialogues.Dialogue.ContainsCharacterNamed*
+  nameWithType.vb: Dialogue.ContainsCharacterNamed(String)
+  fullName.vb: DREditor.Dialogues.Dialogue.ContainsCharacterNamed(String)
+  name.vb: ContainsCharacterNamed(String)
 - uid: DREditor.Dialogues.Dialogue.#ctor
   commentId: M:DREditor.Dialogues.Dialogue.#ctor
   id: '#ctor'
@@ -235,7 +431,7 @@ items:
   fullName: DREditor.Dialogues.Dialogue.Dialogue()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -246,6 +442,98 @@ items:
   nameWithType.vb: Dialogue.New()
   fullName.vb: DREditor.Dialogues.Dialogue.New()
   name.vb: New()
+- uid: DREditor.Dialogues.Dialogue.UnlockPause
+  commentId: P:DREditor.Dialogues.Dialogue.UnlockPause
+  id: UnlockPause
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: UnlockPause
+  nameWithType: Dialogue.UnlockPause
+  fullName: DREditor.Dialogues.Dialogue.UnlockPause
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool UnlockPause { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UnlockPause As Boolean
+  overload: DREditor.Dialogues.Dialogue.UnlockPause*
+- uid: DREditor.Dialogues.Dialogue.UnlockPauseOption
+  commentId: P:DREditor.Dialogues.Dialogue.UnlockPauseOption
+  id: UnlockPauseOption
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: UnlockPauseOption
+  nameWithType: Dialogue.UnlockPauseOption
+  fullName: DREditor.Dialogues.Dialogue.UnlockPauseOption
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool UnlockPauseOption { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UnlockPauseOption As Boolean
+  overload: DREditor.Dialogues.Dialogue.UnlockPauseOption*
+- uid: DREditor.Dialogues.Dialogue.PauseOptionNum
+  commentId: P:DREditor.Dialogues.Dialogue.PauseOptionNum
+  id: PauseOptionNum
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: PauseOptionNum
+  nameWithType: Dialogue.PauseOptionNum
+  fullName: DREditor.Dialogues.Dialogue.PauseOptionNum
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public int PauseOptionNum { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PauseOptionNum As Integer
+  overload: DREditor.Dialogues.Dialogue.PauseOptionNum*
+- uid: DREditor.Dialogues.Dialogue.PauseOptionTo
+  commentId: P:DREditor.Dialogues.Dialogue.PauseOptionTo
+  id: PauseOptionTo
+  parent: DREditor.Dialogues.Dialogue
+  langs:
+  - csharp
+  - vb
+  name: PauseOptionTo
+  nameWithType: Dialogue.PauseOptionTo
+  fullName: DREditor.Dialogues.Dialogue.PauseOptionTo
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool PauseOptionTo { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PauseOptionTo As Boolean
+  overload: DREditor.Dialogues.Dialogue.PauseOptionTo*
 references:
 - uid: DREditor.Dialogues
   commentId: N:DREditor.Dialogues
@@ -285,289 +573,913 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: DREditor.Dialogues.DialogueBase
-  commentId: T:DREditor.Dialogues.DialogueBase
+- uid: DREditor.Dialogues.DialogueCore
+  commentId: T:DREditor.Dialogues.DialogueCore
   parent: DREditor.Dialogues
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html
-  name: DialogueBase
-  nameWithType: DialogueBase
-  fullName: DREditor.Dialogues.DialogueBase
-- uid: DREditor.Dialogues.DialogueBase.DialogueMode
-  commentId: F:DREditor.Dialogues.DialogueBase.DialogueMode
-  parent: DREditor.Dialogues.DialogueBase
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueCore.cs
+  name: DialogueCore
+  nameWithType: DialogueCore
+  fullName: DREditor.Dialogues.DialogueCore
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  commentId: T:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  parent: DREditor.Dialogues
+  definition: DREditor.Dialogues.DialogueBase`1
+  href: DREditor.Dialogues.DialogueBase-1.html
+  name: DialogueBase<Line>
+  nameWithType: DialogueBase<Line>
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>
+  nameWithType.vb: DialogueBase(Of Line)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line)
+  name.vb: DialogueBase(Of Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html
+  - name: <
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}
+  commentId: T:DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}
+  parent: DREditor.Dialogues
+  definition: DREditor.Dialogues.DialogueBased`1
+  href: DREditor.Dialogues.DialogueBased-1.html
+  name: DialogueBased<Line>
+  nameWithType: DialogueBased<Line>
+  fullName: DREditor.Dialogues.DialogueBased<DREditor.Dialogues.Line>
+  nameWithType.vb: DialogueBased(Of Line)
+  fullName.vb: DREditor.Dialogues.DialogueBased(Of DREditor.Dialogues.Line)
+  name.vb: DialogueBased(Of Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBased`1
+    name: DialogueBased
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html
+  - name: <
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBased`1
+    name: DialogueBased
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: )
+- uid: DREditor.Dialogues.IConvertableDialogue
+  commentId: T:DREditor.Dialogues.IConvertableDialogue
+  parent: DREditor.Dialogues
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_DialogueMode
-  name: DialogueMode
-  nameWithType: DialogueBase.DialogueMode
-  fullName: DREditor.Dialogues.DialogueBase.DialogueMode
-- uid: DREditor.Dialogues.DialogueBase.translationKey
-  commentId: F:DREditor.Dialogues.DialogueBase.translationKey
-  parent: DREditor.Dialogues.DialogueBase
+  href: DREditor.Dialogues.IConvertableDialogue.html
+  name: IConvertableDialogue
+  nameWithType: IConvertableDialogue
+  fullName: DREditor.Dialogues.IConvertableDialogue
+- uid: DREditor.Dialogues.IInstantAbleDialogue
+  commentId: T:DREditor.Dialogues.IInstantAbleDialogue
+  parent: DREditor.Dialogues
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_translationKey
-  name: translationKey
-  nameWithType: DialogueBase.translationKey
-  fullName: DREditor.Dialogues.DialogueBase.translationKey
-- uid: DREditor.Dialogues.DialogueBase.DialogueName
-  commentId: F:DREditor.Dialogues.DialogueBase.DialogueName
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_DialogueName
-  name: DialogueName
-  nameWithType: DialogueBase.DialogueName
-  fullName: DREditor.Dialogues.DialogueBase.DialogueName
-- uid: DREditor.Dialogues.DialogueBase.Color
-  commentId: F:DREditor.Dialogues.DialogueBase.Color
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_Color
-  name: Color
-  nameWithType: DialogueBase.Color
-  fullName: DREditor.Dialogues.DialogueBase.Color
-- uid: DREditor.Dialogues.DialogueBase.ShowDialoguePanel
-  commentId: F:DREditor.Dialogues.DialogueBase.ShowDialoguePanel
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_ShowDialoguePanel
-  name: ShowDialoguePanel
-  nameWithType: DialogueBase.ShowDialoguePanel
-  fullName: DREditor.Dialogues.DialogueBase.ShowDialoguePanel
-- uid: DREditor.Dialogues.DialogueBase.Variable
-  commentId: F:DREditor.Dialogues.DialogueBase.Variable
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_Variable
-  name: Variable
-  nameWithType: DialogueBase.Variable
-  fullName: DREditor.Dialogues.DialogueBase.Variable
-- uid: DREditor.Dialogues.DialogueBase.DirectTo
-  commentId: F:DREditor.Dialogues.DialogueBase.DirectTo
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_DirectTo
-  name: DirectTo
-  nameWithType: DialogueBase.DirectTo
-  fullName: DREditor.Dialogues.DialogueBase.DirectTo
-- uid: DREditor.Dialogues.DialogueBase.SceneTransition
-  commentId: F:DREditor.Dialogues.DialogueBase.SceneTransition
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_SceneTransition
+  href: DREditor.Dialogues.IInstantAbleDialogue.html
+  name: IInstantAbleDialogue
+  nameWithType: IInstantAbleDialogue
+  fullName: DREditor.Dialogues.IInstantAbleDialogue
+- uid: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  commentId: M:DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  parent: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBased`1.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_InvokeDialogue_DREditor_Dialogues_ITypeCallback_
+  name: InvokeDialogue(ITypeCallback)
+  nameWithType: DialogueBased<Line>.InvokeDialogue(ITypeCallback)
+  fullName: DREditor.Dialogues.DialogueBased<DREditor.Dialogues.Line>.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  nameWithType.vb: DialogueBased(Of Line).InvokeDialogue(ITypeCallback)
+  fullName.vb: DREditor.Dialogues.DialogueBased(Of DREditor.Dialogues.Line).InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+    name: InvokeDialogue
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_InvokeDialogue_DREditor_Dialogues_ITypeCallback_
+  - name: (
+  - uid: DREditor.Dialogues.ITypeCallback
+    name: ITypeCallback
+    isExternal: true
+    href: DREditor.Dialogues.ITypeCallback.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+    name: InvokeDialogue
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_InvokeDialogue_DREditor_Dialogues_ITypeCallback_
+  - name: (
+  - uid: DREditor.Dialogues.ITypeCallback
+    name: ITypeCallback
+    isExternal: true
+    href: DREditor.Dialogues.ITypeCallback.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.AddNewLine
+  commentId: M:DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.AddNewLine
+  parent: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBased`1.AddNewLine
+  href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_AddNewLine
+  name: AddNewLine()
+  nameWithType: DialogueBased<Line>.AddNewLine()
+  fullName: DREditor.Dialogues.DialogueBased<DREditor.Dialogues.Line>.AddNewLine()
+  nameWithType.vb: DialogueBased(Of Line).AddNewLine()
+  fullName.vb: DREditor.Dialogues.DialogueBased(Of DREditor.Dialogues.Line).AddNewLine()
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.AddNewLine
+    name: AddNewLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_AddNewLine
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBased{DREditor.Dialogues.Line}.AddNewLine
+    name: AddNewLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_AddNewLine
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.lines
+  commentId: F:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.lines
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.lines
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_lines
+  name: lines
+  nameWithType: DialogueBase<Line>.lines
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.lines
+  nameWithType.vb: DialogueBase(Of Line).lines
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).lines
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SceneTransition
+  commentId: F:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SceneTransition
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.SceneTransition
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SceneTransition
   name: SceneTransition
-  nameWithType: DialogueBase.SceneTransition
-  fullName: DREditor.Dialogues.DialogueBase.SceneTransition
-- uid: DREditor.Dialogues.DialogueBase.IsInstant
-  commentId: F:DREditor.Dialogues.DialogueBase.IsInstant
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_IsInstant
-  name: IsInstant
-  nameWithType: DialogueBase.IsInstant
-  fullName: DREditor.Dialogues.DialogueBase.IsInstant
-- uid: DREditor.Dialogues.DialogueBase.FlagTrigger
-  commentId: F:DREditor.Dialogues.DialogueBase.FlagTrigger
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_FlagTrigger
+  nameWithType: DialogueBase<Line>.SceneTransition
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.SceneTransition
+  nameWithType.vb: DialogueBase(Of Line).SceneTransition
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).SceneTransition
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.FlagTrigger
+  commentId: F:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.FlagTrigger
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.FlagTrigger
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_FlagTrigger
   name: FlagTrigger
-  nameWithType: DialogueBase.FlagTrigger
-  fullName: DREditor.Dialogues.DialogueBase.FlagTrigger
-- uid: DREditor.Dialogues.DialogueBase.EndVidEnabled
-  commentId: F:DREditor.Dialogues.DialogueBase.EndVidEnabled
-  parent: DREditor.Dialogues.DialogueBase
+  nameWithType: DialogueBase<Line>.FlagTrigger
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.FlagTrigger
+  nameWithType.vb: DialogueBase(Of Line).FlagTrigger
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).FlagTrigger
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.Variable
+  commentId: F:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.Variable
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.Variable
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_Variable
+  name: Variable
+  nameWithType: DialogueBase<Line>.Variable
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.Variable
+  nameWithType.vb: DialogueBase(Of Line).Variable
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).Variable
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.DirectTo
+  commentId: F:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.DirectTo
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.DirectTo
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_DirectTo
+  name: DirectTo
+  nameWithType: DialogueBase<Line>.DirectTo
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.DirectTo
+  nameWithType.vb: DialogueBase(Of Line).DirectTo
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).DirectTo
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTranslationKey(System.String)
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTranslationKey(System.String)
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.SetTranslationKey(System.String)
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTranslationKey_System_String_
+  name: SetTranslationKey(string)
+  nameWithType: DialogueBase<Line>.SetTranslationKey(string)
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.SetTranslationKey(string)
+  nameWithType.vb: DialogueBase(Of Line).SetTranslationKey(String)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).SetTranslationKey(String)
+  name.vb: SetTranslationKey(String)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTranslationKey(System.String)
+    name: SetTranslationKey
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTranslationKey_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTranslationKey(System.String)
+    name: SetTranslationKey
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTranslationKey_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetColor(UnityEngine.Color)
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetColor(UnityEngine.Color)
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.SetColor(UnityEngine.Color)
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetColor_UnityEngine_Color_
+  name: SetColor(Color)
+  nameWithType: DialogueBase<Line>.SetColor(Color)
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.SetColor(UnityEngine.Color)
+  nameWithType.vb: DialogueBase(Of Line).SetColor(Color)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).SetColor(UnityEngine.Color)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetColor(UnityEngine.Color)
+    name: SetColor
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetColor_UnityEngine_Color_
+  - name: (
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetColor(UnityEngine.Color)
+    name: SetColor
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetColor_UnityEngine_Color_
+  - name: (
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLine(System.Int32)
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLine(System.Int32)
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.GetLine(System.Int32)
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLine_System_Int32_
+  name: GetLine(int)
+  nameWithType: DialogueBase<Line>.GetLine(int)
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.GetLine(int)
+  nameWithType.vb: DialogueBase(Of Line).GetLine(Integer)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).GetLine(Integer)
+  name.vb: GetLine(Integer)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLine(System.Int32)
+    name: GetLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLine_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLine(System.Int32)
+    name: GetLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLine_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLines``1
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLines``1
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.GetLines``1
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLines__1
+  name: GetLines<T2>()
+  nameWithType: DialogueBase<Line>.GetLines<T2>()
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.GetLines<T2>()
+  nameWithType.vb: DialogueBase(Of Line).GetLines(Of T2)()
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).GetLines(Of T2)()
+  name.vb: GetLines(Of T2)()
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLines``1
+    name: GetLines
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLines__1
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.GetLines``1
+    name: GetLines
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLines__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetVariable(DREditor.Dialogues.Variable{DREditor.Dialogues.Line})
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetVariable(DREditor.Dialogues.Variable{DREditor.Dialogues.Line})
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.SetVariable(DREditor.Dialogues.Variable{`0})
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetVariable_DREditor_Dialogues_Variable__0__
+  name: SetVariable(Variable<Line>)
+  nameWithType: DialogueBase<Line>.SetVariable(Variable<Line>)
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.SetVariable(DREditor.Dialogues.Variable<DREditor.Dialogues.Line>)
+  nameWithType.vb: DialogueBase(Of Line).SetVariable(Variable(Of Line))
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).SetVariable(DREditor.Dialogues.Variable(Of DREditor.Dialogues.Line))
+  name.vb: SetVariable(Variable(Of Line))
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetVariable(DREditor.Dialogues.Variable{DREditor.Dialogues.Line})
+    name: SetVariable
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetVariable_DREditor_Dialogues_Variable__0__
+  - name: (
+  - uid: DREditor.Dialogues.Variable`1
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable-1.html
+  - name: <
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetVariable(DREditor.Dialogues.Variable{DREditor.Dialogues.Line})
+    name: SetVariable
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetVariable_DREditor_Dialogues_Variable__0__
+  - name: (
+  - uid: DREditor.Dialogues.Variable`1
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: )
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetDirectTo(DREditor.Dialogues.DirectTo{DREditor.Dialogues.Line})
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetDirectTo(DREditor.Dialogues.DirectTo{DREditor.Dialogues.Line})
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.SetDirectTo(DREditor.Dialogues.DirectTo{`0})
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetDirectTo_DREditor_Dialogues_DirectTo__0__
+  name: SetDirectTo(DirectTo<Line>)
+  nameWithType: DialogueBase<Line>.SetDirectTo(DirectTo<Line>)
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.SetDirectTo(DREditor.Dialogues.DirectTo<DREditor.Dialogues.Line>)
+  nameWithType.vb: DialogueBase(Of Line).SetDirectTo(DirectTo(Of Line))
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).SetDirectTo(DREditor.Dialogues.DirectTo(Of DREditor.Dialogues.Line))
+  name.vb: SetDirectTo(DirectTo(Of Line))
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetDirectTo(DREditor.Dialogues.DirectTo{DREditor.Dialogues.Line})
+    name: SetDirectTo
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetDirectTo_DREditor_Dialogues_DirectTo__0__
+  - name: (
+  - uid: DREditor.Dialogues.DirectTo`1
+    name: DirectTo
+    isExternal: true
+    href: DREditor.Dialogues.DirectTo-1.html
+  - name: <
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetDirectTo(DREditor.Dialogues.DirectTo{DREditor.Dialogues.Line})
+    name: SetDirectTo
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetDirectTo_DREditor_Dialogues_DirectTo__0__
+  - name: (
+  - uid: DREditor.Dialogues.DirectTo`1
+    name: DirectTo
+    isExternal: true
+    href: DREditor.Dialogues.DirectTo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: )
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetSceneTransition_DREditor_Dialogues_SceneTransition_
+  name: SetSceneTransition(SceneTransition)
+  nameWithType: DialogueBase<Line>.SetSceneTransition(SceneTransition)
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  nameWithType.vb: DialogueBase(Of Line).SetSceneTransition(SceneTransition)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+    name: SetSceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetSceneTransition_DREditor_Dialogues_SceneTransition_
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+    name: SetSceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetSceneTransition_DREditor_Dialogues_SceneTransition_
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTriggerFlag_DREditor_Dialogues_TriggerFlag_
+  name: SetTriggerFlag(TriggerFlag)
+  nameWithType: DialogueBase<Line>.SetTriggerFlag(TriggerFlag)
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  nameWithType.vb: DialogueBase(Of Line).SetTriggerFlag(TriggerFlag)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+    name: SetTriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTriggerFlag_DREditor_Dialogues_TriggerFlag_
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+    name: SetTriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTriggerFlag_DREditor_Dialogues_TriggerFlag_
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.Lines
+  commentId: P:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.Lines
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.Lines
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_Lines
+  name: Lines
+  nameWithType: DialogueBase<Line>.Lines
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.Lines
+  nameWithType.vb: DialogueBase(Of Line).Lines
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).Lines
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.LineCount
+  commentId: P:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.LineCount
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.LineCount
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_LineCount
+  name: LineCount
+  nameWithType: DialogueBase<Line>.LineCount
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.LineCount
+  nameWithType.vb: DialogueBase(Of Line).LineCount
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).LineCount
+- uid: DREditor.Dialogues.DialogueCore.translationKey
+  commentId: F:DREditor.Dialogues.DialogueCore.translationKey
+  parent: DREditor.Dialogues.DialogueCore
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_EndVidEnabled
-  name: EndVidEnabled
-  nameWithType: DialogueBase.EndVidEnabled
-  fullName: DREditor.Dialogues.DialogueBase.EndVidEnabled
-- uid: DREditor.Dialogues.DialogueBase.EndVideo
-  commentId: F:DREditor.Dialogues.DialogueBase.EndVideo
-  parent: DREditor.Dialogues.DialogueBase
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_translationKey
+  name: translationKey
+  nameWithType: DialogueCore.translationKey
+  fullName: DREditor.Dialogues.DialogueCore.translationKey
+- uid: DREditor.Dialogues.DialogueCore.DialogueName
+  commentId: F:DREditor.Dialogues.DialogueCore.DialogueName
+  parent: DREditor.Dialogues.DialogueCore
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_EndVideo
-  name: EndVideo
-  nameWithType: DialogueBase.EndVideo
-  fullName: DREditor.Dialogues.DialogueBase.EndVideo
-- uid: DREditor.Dialogues.DialogueBase.ClearLock
-  commentId: F:DREditor.Dialogues.DialogueBase.ClearLock
-  parent: DREditor.Dialogues.DialogueBase
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_DialogueName
+  name: DialogueName
+  nameWithType: DialogueCore.DialogueName
+  fullName: DREditor.Dialogues.DialogueCore.DialogueName
+- uid: DREditor.Dialogues.DialogueCore.Color
+  commentId: F:DREditor.Dialogues.DialogueCore.Color
+  parent: DREditor.Dialogues.DialogueCore
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_ClearLock
-  name: ClearLock
-  nameWithType: DialogueBase.ClearLock
-  fullName: DREditor.Dialogues.DialogueBase.ClearLock
-- uid: DREditor.Dialogues.DialogueBase.Speakers
-  commentId: F:DREditor.Dialogues.DialogueBase.Speakers
-  parent: DREditor.Dialogues.DialogueBase
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_Color
+  name: Color
+  nameWithType: DialogueCore.Color
+  fullName: DREditor.Dialogues.DialogueCore.Color
+- uid: DREditor.Dialogues.DialogueCore.ShowDialoguePanel
+  commentId: F:DREditor.Dialogues.DialogueCore.ShowDialoguePanel
+  parent: DREditor.Dialogues.DialogueCore
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_Speakers
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_ShowDialoguePanel
+  name: ShowDialoguePanel
+  nameWithType: DialogueCore.ShowDialoguePanel
+  fullName: DREditor.Dialogues.DialogueCore.ShowDialoguePanel
+- uid: DREditor.Dialogues.DialogueCore.Speakers
+  commentId: F:DREditor.Dialogues.DialogueCore.Speakers
+  parent: DREditor.Dialogues.DialogueCore
+  isExternal: true
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_Speakers
   name: Speakers
-  nameWithType: DialogueBase.Speakers
-  fullName: DREditor.Dialogues.DialogueBase.Speakers
-- uid: DREditor.Dialogues.DialogueBase.VFXDB
-  commentId: F:DREditor.Dialogues.DialogueBase.VFXDB
-  parent: DREditor.Dialogues.DialogueBase
+  nameWithType: DialogueCore.Speakers
+  fullName: DREditor.Dialogues.DialogueCore.Speakers
+- uid: DREditor.Dialogues.DialogueCore.InvokeDebugLine(DREditor.Dialogues.DialogueCore,DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.DialogueCore.InvokeDebugLine(DREditor.Dialogues.DialogueCore,DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.DialogueCore
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_VFXDB
-  name: VFXDB
-  nameWithType: DialogueBase.VFXDB
-  fullName: DREditor.Dialogues.DialogueBase.VFXDB
-- uid: DREditor.Dialogues.DialogueBase.GetCharacterNames
-  commentId: M:DREditor.Dialogues.DialogueBase.GetCharacterNames
-  parent: DREditor.Dialogues.DialogueBase
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_InvokeDebugLine_DREditor_Dialogues_DialogueCore_DREditor_Dialogues_Line_
+  name: InvokeDebugLine(DialogueCore, Line)
+  nameWithType: DialogueCore.InvokeDebugLine(DialogueCore, Line)
+  fullName: DREditor.Dialogues.DialogueCore.InvokeDebugLine(DREditor.Dialogues.DialogueCore, DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueCore.InvokeDebugLine(DREditor.Dialogues.DialogueCore,DREditor.Dialogues.Line)
+    name: InvokeDebugLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_InvokeDebugLine_DREditor_Dialogues_DialogueCore_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueCore.InvokeDebugLine(DREditor.Dialogues.DialogueCore,DREditor.Dialogues.Line)
+    name: InvokeDebugLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_InvokeDebugLine_DREditor_Dialogues_DialogueCore_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueCore.SetName(System.String)
+  commentId: M:DREditor.Dialogues.DialogueCore.SetName(System.String)
+  parent: DREditor.Dialogues.DialogueCore
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetCharacterNames
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_SetName_System_String_
+  name: SetName(string)
+  nameWithType: DialogueCore.SetName(string)
+  fullName: DREditor.Dialogues.DialogueCore.SetName(string)
+  nameWithType.vb: DialogueCore.SetName(String)
+  fullName.vb: DREditor.Dialogues.DialogueCore.SetName(String)
+  name.vb: SetName(String)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueCore.SetName(System.String)
+    name: SetName
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_SetName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueCore.SetName(System.String)
+    name: SetName
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_SetName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.Dialogues.DialogueCore.SetSpeakers(DREditor.Characters.CharacterDatabase)
+  commentId: M:DREditor.Dialogues.DialogueCore.SetSpeakers(DREditor.Characters.CharacterDatabase)
+  parent: DREditor.Dialogues.DialogueCore
+  isExternal: true
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_SetSpeakers_DREditor_Characters_CharacterDatabase_
+  name: SetSpeakers(CharacterDatabase)
+  nameWithType: DialogueCore.SetSpeakers(CharacterDatabase)
+  fullName: DREditor.Dialogues.DialogueCore.SetSpeakers(DREditor.Characters.CharacterDatabase)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueCore.SetSpeakers(DREditor.Characters.CharacterDatabase)
+    name: SetSpeakers
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_SetSpeakers_DREditor_Characters_CharacterDatabase_
+  - name: (
+  - uid: DREditor.Characters.CharacterDatabase
+    name: CharacterDatabase
+    isExternal: true
+    href: DREditor.Characters.CharacterDatabase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueCore.SetSpeakers(DREditor.Characters.CharacterDatabase)
+    name: SetSpeakers
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_SetSpeakers_DREditor_Characters_CharacterDatabase_
+  - name: (
+  - uid: DREditor.Characters.CharacterDatabase
+    name: CharacterDatabase
+    isExternal: true
+    href: DREditor.Characters.CharacterDatabase.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueCore.LoadSpeakers
+  commentId: M:DREditor.Dialogues.DialogueCore.LoadSpeakers
+  parent: DREditor.Dialogues.DialogueCore
+  isExternal: true
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_LoadSpeakers
+  name: LoadSpeakers()
+  nameWithType: DialogueCore.LoadSpeakers()
+  fullName: DREditor.Dialogues.DialogueCore.LoadSpeakers()
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueCore.LoadSpeakers
+    name: LoadSpeakers
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_LoadSpeakers
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueCore.LoadSpeakers
+    name: LoadSpeakers
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_LoadSpeakers
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.DialogueCore.GetCharacterNames
+  commentId: M:DREditor.Dialogues.DialogueCore.GetCharacterNames
+  parent: DREditor.Dialogues.DialogueCore
+  isExternal: true
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_GetCharacterNames
   name: GetCharacterNames()
-  nameWithType: DialogueBase.GetCharacterNames()
-  fullName: DREditor.Dialogues.DialogueBase.GetCharacterNames()
+  nameWithType: DialogueCore.GetCharacterNames()
+  fullName: DREditor.Dialogues.DialogueCore.GetCharacterNames()
   spec.csharp:
-  - uid: DREditor.Dialogues.DialogueBase.GetCharacterNames
+  - uid: DREditor.Dialogues.DialogueCore.GetCharacterNames
     name: GetCharacterNames
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetCharacterNames
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_GetCharacterNames
   - name: (
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.DialogueBase.GetCharacterNames
+  - uid: DREditor.Dialogues.DialogueCore.GetCharacterNames
     name: GetCharacterNames
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetCharacterNames
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_GetCharacterNames
   - name: (
   - name: )
-- uid: DREditor.Dialogues.DialogueBase.GetVFXNames
-  commentId: M:DREditor.Dialogues.DialogueBase.GetVFXNames
-  parent: DREditor.Dialogues.DialogueBase
+- uid: DREditor.Dialogues.DialogueCore.GetIntValues(System.Int32)
+  commentId: M:DREditor.Dialogues.DialogueCore.GetIntValues(System.Int32)
+  parent: DREditor.Dialogues.DialogueCore
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetVFXNames
-  name: GetVFXNames()
-  nameWithType: DialogueBase.GetVFXNames()
-  fullName: DREditor.Dialogues.DialogueBase.GetVFXNames()
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_GetIntValues_System_Int32_
+  name: GetIntValues(int)
+  nameWithType: DialogueCore.GetIntValues(int)
+  fullName: DREditor.Dialogues.DialogueCore.GetIntValues(int)
+  nameWithType.vb: DialogueCore.GetIntValues(Integer)
+  fullName.vb: DREditor.Dialogues.DialogueCore.GetIntValues(Integer)
+  name.vb: GetIntValues(Integer)
   spec.csharp:
-  - uid: DREditor.Dialogues.DialogueBase.GetVFXNames
-    name: GetVFXNames
+  - uid: DREditor.Dialogues.DialogueCore.GetIntValues(System.Int32)
+    name: GetIntValues
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetVFXNames
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_GetIntValues_System_Int32_
   - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.DialogueBase.GetVFXNames
-    name: GetVFXNames
+  - uid: DREditor.Dialogues.DialogueCore.GetIntValues(System.Int32)
+    name: GetIntValues
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetVFXNames
+    href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_GetIntValues_System_Int32_
   - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: DREditor.Dialogues.DialogueBase.GetCharacterAliases(DREditor.Characters.Character)
-  commentId: M:DREditor.Dialogues.DialogueBase.GetCharacterAliases(DREditor.Characters.Character)
-  parent: DREditor.Dialogues.DialogueBase
+- uid: DREditor.Dialogues.DialogueCore.OnDebugLine
+  commentId: E:DREditor.Dialogues.DialogueCore.OnDebugLine
+  parent: DREditor.Dialogues.DialogueCore
   isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetCharacterAliases_DREditor_Characters_Character_
-  name: GetCharacterAliases(Character)
-  nameWithType: DialogueBase.GetCharacterAliases(Character)
-  fullName: DREditor.Dialogues.DialogueBase.GetCharacterAliases(DREditor.Characters.Character)
+  href: DREditor.Dialogues.DialogueCore.html#DREditor_Dialogues_DialogueCore_OnDebugLine
+  name: OnDebugLine
+  nameWithType: DialogueCore.OnDebugLine
+  fullName: DREditor.Dialogues.DialogueCore.OnDebugLine
+- uid: DREditor.Dialogues.Dialogue.DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue
+  commentId: M:DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+  parent: DREditor.Dialogues.DialogueExtensions
+  definition: DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+  href: DREditor.Dialogues.DialogueExtensions.html#DREditor_Dialogues_DialogueExtensions_GetCharactersInDialogue_DREditor_Dialogues_Dialogue_
+  name: GetCharactersInDialogue(Dialogue)
+  nameWithType: DialogueExtensions.GetCharactersInDialogue(Dialogue)
+  fullName: DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
   spec.csharp:
-  - uid: DREditor.Dialogues.DialogueBase.GetCharacterAliases(DREditor.Characters.Character)
-    name: GetCharacterAliases
+  - uid: DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+    name: GetCharactersInDialogue
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetCharacterAliases_DREditor_Characters_Character_
+    href: DREditor.Dialogues.DialogueExtensions.html#DREditor_Dialogues_DialogueExtensions_GetCharactersInDialogue_DREditor_Dialogues_Dialogue_
   - name: (
-  - uid: DREditor.Characters.Character
-    name: Character
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
     isExternal: true
-    href: DREditor.Characters.Character.html
+    href: DREditor.Dialogues.Dialogue.html
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.DialogueBase.GetCharacterAliases(DREditor.Characters.Character)
-    name: GetCharacterAliases
+  - uid: DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+    name: GetCharactersInDialogue
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_GetCharacterAliases_DREditor_Characters_Character_
+    href: DREditor.Dialogues.DialogueExtensions.html#DREditor_Dialogues_DialogueExtensions_GetCharactersInDialogue_DREditor_Dialogues_Dialogue_
   - name: (
-  - uid: DREditor.Characters.Character
-    name: Character
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
     isExternal: true
-    href: DREditor.Characters.Character.html
+    href: DREditor.Dialogues.Dialogue.html
   - name: )
-- uid: DREditor.Dialogues.DialogueBase.getNamesIntValues
-  commentId: M:DREditor.Dialogues.DialogueBase.getNamesIntValues
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getNamesIntValues
-  name: getNamesIntValues()
-  nameWithType: DialogueBase.getNamesIntValues()
-  fullName: DREditor.Dialogues.DialogueBase.getNamesIntValues()
+- uid: DREditor.Dialogues.Dialogue.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<Dialogue>(Dialogue)
+  nameWithType: ReflectionHelper.GetFieldNames<Dialogue>(Dialogue)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.Dialogue>(DREditor.Dialogues.Dialogue)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of Dialogue)(Dialogue)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.Dialogue)(DREditor.Dialogues.Dialogue)
+  name.vb: GetFieldNames(Of Dialogue)(Dialogue)
   spec.csharp:
-  - uid: DREditor.Dialogues.DialogueBase.getNamesIntValues
-    name: getNamesIntValues
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Dialogue)
+    name: GetFieldNames
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getNamesIntValues
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
+  - name: '>'
   - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.DialogueBase.getNamesIntValues
-    name: getNamesIntValues
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Dialogue)
+    name: GetFieldNames
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getNamesIntValues
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
   - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
   - name: )
-- uid: DREditor.Dialogues.DialogueBase.getExpressionIntValues(DREditor.Characters.Character)
-  commentId: M:DREditor.Dialogues.DialogueBase.getExpressionIntValues(DREditor.Characters.Character)
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getExpressionIntValues_DREditor_Characters_Character_
-  name: getExpressionIntValues(Character)
-  nameWithType: DialogueBase.getExpressionIntValues(Character)
-  fullName: DREditor.Dialogues.DialogueBase.getExpressionIntValues(DREditor.Characters.Character)
-  spec.csharp:
-  - uid: DREditor.Dialogues.DialogueBase.getExpressionIntValues(DREditor.Characters.Character)
-    name: getExpressionIntValues
-    isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getExpressionIntValues_DREditor_Characters_Character_
   - name: (
-  - uid: DREditor.Characters.Character
-    name: Character
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
     isExternal: true
-    href: DREditor.Characters.Character.html
+    href: DREditor.Dialogues.Dialogue.html
+  - name: )
+- uid: DREditor.Dialogues.Dialogue.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<Dialogue>(Dialogue)
+  nameWithType: ReflectionHelper.GetFieldValues<Dialogue>(Dialogue)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.Dialogue>(DREditor.Dialogues.Dialogue)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of Dialogue)(Dialogue)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.Dialogue)(DREditor.Dialogues.Dialogue)
+  name.vb: GetFieldValues(Of Dialogue)(Dialogue)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Dialogue)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.DialogueBase.getExpressionIntValues(DREditor.Characters.Character)
-    name: getExpressionIntValues
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Dialogue)
+    name: GetFieldValues
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getExpressionIntValues_DREditor_Characters_Character_
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
   - name: (
-  - uid: DREditor.Characters.Character
-    name: Character
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
     isExternal: true
-    href: DREditor.Characters.Character.html
+    href: DREditor.Dialogues.Dialogue.html
   - name: )
-- uid: DREditor.Dialogues.DialogueBase.getAliasesIntValues(DREditor.Characters.Character)
-  commentId: M:DREditor.Dialogues.DialogueBase.getAliasesIntValues(DREditor.Characters.Character)
-  parent: DREditor.Dialogues.DialogueBase
-  isExternal: true
-  href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getAliasesIntValues_DREditor_Characters_Character_
-  name: getAliasesIntValues(Character)
-  nameWithType: DialogueBase.getAliasesIntValues(Character)
-  fullName: DREditor.Dialogues.DialogueBase.getAliasesIntValues(DREditor.Characters.Character)
-  spec.csharp:
-  - uid: DREditor.Dialogues.DialogueBase.getAliasesIntValues(DREditor.Characters.Character)
-    name: getAliasesIntValues
-    isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getAliasesIntValues_DREditor_Characters_Character_
   - name: (
-  - uid: DREditor.Characters.Character
-    name: Character
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
     isExternal: true
-    href: DREditor.Characters.Character.html
+    href: DREditor.Dialogues.Dialogue.html
+  - name: )
+- uid: DREditor.Dialogues.Dialogue.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<Dialogue>(Dialogue)
+  nameWithType: DeepCopyExtensions.DeepCopy<Dialogue>(Dialogue)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.Dialogue>(DREditor.Dialogues.Dialogue)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of Dialogue)(Dialogue)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.Dialogue)(DREditor.Dialogues.Dialogue)
+  name.vb: DeepCopy(Of Dialogue)(Dialogue)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Dialogue)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.DialogueBase.getAliasesIntValues(DREditor.Characters.Character)
-    name: getAliasesIntValues
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Dialogue)
+    name: DeepCopy
     isExternal: true
-    href: DREditor.Dialogues.DialogueBase.html#DREditor_Dialogues_DialogueBase_getAliasesIntValues_DREditor_Characters_Character_
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
   - name: (
-  - uid: DREditor.Characters.Character
-    name: Character
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
     isExternal: true
-    href: DREditor.Characters.Character.html
+    href: DREditor.Dialogues.Dialogue.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
   - name: )
 - uid: System
   commentId: N:System
@@ -576,6 +1488,655 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Dialogues.DialogueBase`1
+  commentId: T:DREditor.Dialogues.DialogueBase`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  name: DialogueBase<T>
+  nameWithType: DialogueBase<T>
+  fullName: DREditor.Dialogues.DialogueBase<T>
+  nameWithType.vb: DialogueBase(Of T)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T)
+  name.vb: DialogueBase(Of T)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Dialogues.DialogueBased`1
+  commentId: T:DREditor.Dialogues.DialogueBased`1
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBased-1.html
+  name: DialogueBased<T>
+  nameWithType: DialogueBased<T>
+  fullName: DREditor.Dialogues.DialogueBased<T>
+  nameWithType.vb: DialogueBased(Of T)
+  fullName.vb: DREditor.Dialogues.DialogueBased(Of T)
+  name.vb: DialogueBased(Of T)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBased`1
+    name: DialogueBased
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBased`1
+    name: DialogueBased
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Dialogues.DialogueBased`1.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  commentId: M:DREditor.Dialogues.DialogueBased`1.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_InvokeDialogue_DREditor_Dialogues_ITypeCallback_
+  name: InvokeDialogue(ITypeCallback)
+  nameWithType: DialogueBased<T>.InvokeDialogue(ITypeCallback)
+  fullName: DREditor.Dialogues.DialogueBased<T>.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  nameWithType.vb: DialogueBased(Of T).InvokeDialogue(ITypeCallback)
+  fullName.vb: DREditor.Dialogues.DialogueBased(Of T).InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBased`1.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+    name: InvokeDialogue
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_InvokeDialogue_DREditor_Dialogues_ITypeCallback_
+  - name: (
+  - uid: DREditor.Dialogues.ITypeCallback
+    name: ITypeCallback
+    isExternal: true
+    href: DREditor.Dialogues.ITypeCallback.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBased`1.InvokeDialogue(DREditor.Dialogues.ITypeCallback)
+    name: InvokeDialogue
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_InvokeDialogue_DREditor_Dialogues_ITypeCallback_
+  - name: (
+  - uid: DREditor.Dialogues.ITypeCallback
+    name: ITypeCallback
+    isExternal: true
+    href: DREditor.Dialogues.ITypeCallback.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueBased`1.AddNewLine
+  commentId: M:DREditor.Dialogues.DialogueBased`1.AddNewLine
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_AddNewLine
+  name: AddNewLine()
+  nameWithType: DialogueBased<T>.AddNewLine()
+  fullName: DREditor.Dialogues.DialogueBased<T>.AddNewLine()
+  nameWithType.vb: DialogueBased(Of T).AddNewLine()
+  fullName.vb: DREditor.Dialogues.DialogueBased(Of T).AddNewLine()
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBased`1.AddNewLine
+    name: AddNewLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_AddNewLine
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBased`1.AddNewLine
+    name: AddNewLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBased-1.html#DREditor_Dialogues_DialogueBased_1_AddNewLine
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.lines
+  commentId: F:DREditor.Dialogues.DialogueBase`1.lines
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_lines
+  name: lines
+  nameWithType: DialogueBase<T>.lines
+  fullName: DREditor.Dialogues.DialogueBase<T>.lines
+  nameWithType.vb: DialogueBase(Of T).lines
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).lines
+- uid: DREditor.Dialogues.DialogueBase`1.SceneTransition
+  commentId: F:DREditor.Dialogues.DialogueBase`1.SceneTransition
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SceneTransition
+  name: SceneTransition
+  nameWithType: DialogueBase<T>.SceneTransition
+  fullName: DREditor.Dialogues.DialogueBase<T>.SceneTransition
+  nameWithType.vb: DialogueBase(Of T).SceneTransition
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).SceneTransition
+- uid: DREditor.Dialogues.DialogueBase`1.FlagTrigger
+  commentId: F:DREditor.Dialogues.DialogueBase`1.FlagTrigger
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_FlagTrigger
+  name: FlagTrigger
+  nameWithType: DialogueBase<T>.FlagTrigger
+  fullName: DREditor.Dialogues.DialogueBase<T>.FlagTrigger
+  nameWithType.vb: DialogueBase(Of T).FlagTrigger
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).FlagTrigger
+- uid: DREditor.Dialogues.DialogueBase`1.Variable
+  commentId: F:DREditor.Dialogues.DialogueBase`1.Variable
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_Variable
+  name: Variable
+  nameWithType: DialogueBase<T>.Variable
+  fullName: DREditor.Dialogues.DialogueBase<T>.Variable
+  nameWithType.vb: DialogueBase(Of T).Variable
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).Variable
+- uid: DREditor.Dialogues.DialogueBase`1.DirectTo
+  commentId: F:DREditor.Dialogues.DialogueBase`1.DirectTo
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_DirectTo
+  name: DirectTo
+  nameWithType: DialogueBase<T>.DirectTo
+  fullName: DREditor.Dialogues.DialogueBase<T>.DirectTo
+  nameWithType.vb: DialogueBase(Of T).DirectTo
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).DirectTo
+- uid: DREditor.Dialogues.DialogueBase`1.SetTranslationKey(System.String)
+  commentId: M:DREditor.Dialogues.DialogueBase`1.SetTranslationKey(System.String)
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTranslationKey_System_String_
+  name: SetTranslationKey(string)
+  nameWithType: DialogueBase<T>.SetTranslationKey(string)
+  fullName: DREditor.Dialogues.DialogueBase<T>.SetTranslationKey(string)
+  nameWithType.vb: DialogueBase(Of T).SetTranslationKey(String)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).SetTranslationKey(String)
+  name.vb: SetTranslationKey(String)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetTranslationKey(System.String)
+    name: SetTranslationKey
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTranslationKey_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetTranslationKey(System.String)
+    name: SetTranslationKey
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTranslationKey_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.SetColor(UnityEngine.Color)
+  commentId: M:DREditor.Dialogues.DialogueBase`1.SetColor(UnityEngine.Color)
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetColor_UnityEngine_Color_
+  name: SetColor(Color)
+  nameWithType: DialogueBase<T>.SetColor(Color)
+  fullName: DREditor.Dialogues.DialogueBase<T>.SetColor(UnityEngine.Color)
+  nameWithType.vb: DialogueBase(Of T).SetColor(Color)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).SetColor(UnityEngine.Color)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetColor(UnityEngine.Color)
+    name: SetColor
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetColor_UnityEngine_Color_
+  - name: (
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetColor(UnityEngine.Color)
+    name: SetColor
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetColor_UnityEngine_Color_
+  - name: (
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.GetLine(System.Int32)
+  commentId: M:DREditor.Dialogues.DialogueBase`1.GetLine(System.Int32)
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLine_System_Int32_
+  name: GetLine(int)
+  nameWithType: DialogueBase<T>.GetLine(int)
+  fullName: DREditor.Dialogues.DialogueBase<T>.GetLine(int)
+  nameWithType.vb: DialogueBase(Of T).GetLine(Integer)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).GetLine(Integer)
+  name.vb: GetLine(Integer)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.GetLine(System.Int32)
+    name: GetLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLine_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.GetLine(System.Int32)
+    name: GetLine
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLine_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.GetLines``1
+  commentId: M:DREditor.Dialogues.DialogueBase`1.GetLines``1
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLines__1
+  name: GetLines<T2>()
+  nameWithType: DialogueBase<T>.GetLines<T2>()
+  fullName: DREditor.Dialogues.DialogueBase<T>.GetLines<T2>()
+  nameWithType.vb: DialogueBase(Of T).GetLines(Of T2)()
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).GetLines(Of T2)()
+  name.vb: GetLines(Of T2)()
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.GetLines``1
+    name: GetLines
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLines__1
+  - name: <
+  - name: T2
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.GetLines``1
+    name: GetLines
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_GetLines__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.SetVariable(DREditor.Dialogues.Variable{`0})
+  commentId: M:DREditor.Dialogues.DialogueBase`1.SetVariable(DREditor.Dialogues.Variable{`0})
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetVariable_DREditor_Dialogues_Variable__0__
+  name: SetVariable(Variable<T>)
+  nameWithType: DialogueBase<T>.SetVariable(Variable<T>)
+  fullName: DREditor.Dialogues.DialogueBase<T>.SetVariable(DREditor.Dialogues.Variable<T>)
+  nameWithType.vb: DialogueBase(Of T).SetVariable(Variable(Of T))
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).SetVariable(DREditor.Dialogues.Variable(Of T))
+  name.vb: SetVariable(Variable(Of T))
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetVariable(DREditor.Dialogues.Variable{`0})
+    name: SetVariable
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetVariable_DREditor_Dialogues_Variable__0__
+  - name: (
+  - uid: DREditor.Dialogues.Variable`1
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetVariable(DREditor.Dialogues.Variable{`0})
+    name: SetVariable
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetVariable_DREditor_Dialogues_Variable__0__
+  - name: (
+  - uid: DREditor.Dialogues.Variable`1
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.SetDirectTo(DREditor.Dialogues.DirectTo{`0})
+  commentId: M:DREditor.Dialogues.DialogueBase`1.SetDirectTo(DREditor.Dialogues.DirectTo{`0})
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetDirectTo_DREditor_Dialogues_DirectTo__0__
+  name: SetDirectTo(DirectTo<T>)
+  nameWithType: DialogueBase<T>.SetDirectTo(DirectTo<T>)
+  fullName: DREditor.Dialogues.DialogueBase<T>.SetDirectTo(DREditor.Dialogues.DirectTo<T>)
+  nameWithType.vb: DialogueBase(Of T).SetDirectTo(DirectTo(Of T))
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).SetDirectTo(DREditor.Dialogues.DirectTo(Of T))
+  name.vb: SetDirectTo(DirectTo(Of T))
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetDirectTo(DREditor.Dialogues.DirectTo{`0})
+    name: SetDirectTo
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetDirectTo_DREditor_Dialogues_DirectTo__0__
+  - name: (
+  - uid: DREditor.Dialogues.DirectTo`1
+    name: DirectTo
+    isExternal: true
+    href: DREditor.Dialogues.DirectTo-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetDirectTo(DREditor.Dialogues.DirectTo{`0})
+    name: SetDirectTo
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetDirectTo_DREditor_Dialogues_DirectTo__0__
+  - name: (
+  - uid: DREditor.Dialogues.DirectTo`1
+    name: DirectTo
+    isExternal: true
+    href: DREditor.Dialogues.DirectTo-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  commentId: M:DREditor.Dialogues.DialogueBase`1.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetSceneTransition_DREditor_Dialogues_SceneTransition_
+  name: SetSceneTransition(SceneTransition)
+  nameWithType: DialogueBase<T>.SetSceneTransition(SceneTransition)
+  fullName: DREditor.Dialogues.DialogueBase<T>.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  nameWithType.vb: DialogueBase(Of T).SetSceneTransition(SceneTransition)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).SetSceneTransition(DREditor.Dialogues.SceneTransition)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+    name: SetSceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetSceneTransition_DREditor_Dialogues_SceneTransition_
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetSceneTransition(DREditor.Dialogues.SceneTransition)
+    name: SetSceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetSceneTransition_DREditor_Dialogues_SceneTransition_
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  commentId: M:DREditor.Dialogues.DialogueBase`1.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTriggerFlag_DREditor_Dialogues_TriggerFlag_
+  name: SetTriggerFlag(TriggerFlag)
+  nameWithType: DialogueBase<T>.SetTriggerFlag(TriggerFlag)
+  fullName: DREditor.Dialogues.DialogueBase<T>.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  nameWithType.vb: DialogueBase(Of T).SetTriggerFlag(TriggerFlag)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+    name: SetTriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTriggerFlag_DREditor_Dialogues_TriggerFlag_
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.SetTriggerFlag(DREditor.Dialogues.TriggerFlag)
+    name: SetTriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_SetTriggerFlag_DREditor_Dialogues_TriggerFlag_
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1.Lines
+  commentId: P:DREditor.Dialogues.DialogueBase`1.Lines
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_Lines
+  name: Lines
+  nameWithType: DialogueBase<T>.Lines
+  fullName: DREditor.Dialogues.DialogueBase<T>.Lines
+  nameWithType.vb: DialogueBase(Of T).Lines
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).Lines
+- uid: DREditor.Dialogues.DialogueBase`1.LineCount
+  commentId: P:DREditor.Dialogues.DialogueBase`1.LineCount
+  isExternal: true
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_LineCount
+  name: LineCount
+  nameWithType: DialogueBase<T>.LineCount
+  fullName: DREditor.Dialogues.DialogueBase<T>.LineCount
+  nameWithType.vb: DialogueBase(Of T).LineCount
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).LineCount
+- uid: DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+  commentId: M:DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+  isExternal: true
+  href: DREditor.Dialogues.DialogueExtensions.html#DREditor_Dialogues_DialogueExtensions_GetCharactersInDialogue_DREditor_Dialogues_Dialogue_
+  name: GetCharactersInDialogue(Dialogue)
+  nameWithType: DialogueExtensions.GetCharactersInDialogue(Dialogue)
+  fullName: DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+    name: GetCharactersInDialogue
+    isExternal: true
+    href: DREditor.Dialogues.DialogueExtensions.html#DREditor_Dialogues_DialogueExtensions_GetCharactersInDialogue_DREditor_Dialogues_Dialogue_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueExtensions.GetCharactersInDialogue(DREditor.Dialogues.Dialogue)
+    name: GetCharactersInDialogue
+    isExternal: true
+    href: DREditor.Dialogues.DialogueExtensions.html#DREditor_Dialogues_DialogueExtensions_GetCharactersInDialogue_DREditor_Dialogues_Dialogue_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: DREditor.Dialogues.Dialogue.html
+  - name: )
+- uid: DREditor.Dialogues.DialogueExtensions
+  commentId: T:DREditor.Dialogues.DialogueExtensions
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.DialogueExtensions.html
+  name: DialogueExtensions
+  nameWithType: DialogueExtensions
+  fullName: DREditor.Dialogues.DialogueExtensions
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -598,27 +2159,27 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: System.Collections.Generic.List{DREditor.Dialogues.Line}
-  commentId: T:System.Collections.Generic.List{DREditor.Dialogues.Line}
+- uid: System.Collections.Generic.List{DREditor.Dialogues.Choice}
+  commentId: T:System.Collections.Generic.List{DREditor.Dialogues.Choice}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<Line>
-  nameWithType: List<Line>
-  fullName: System.Collections.Generic.List<DREditor.Dialogues.Line>
-  nameWithType.vb: List(Of Line)
-  fullName.vb: System.Collections.Generic.List(Of DREditor.Dialogues.Line)
-  name.vb: List(Of Line)
+  name: List<Choice>
+  nameWithType: List<Choice>
+  fullName: System.Collections.Generic.List<DREditor.Dialogues.Choice>
+  nameWithType.vb: List(Of Choice)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Dialogues.Choice)
+  name.vb: List(Of Choice)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - uid: DREditor.Dialogues.Line
-    name: Line
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
     isExternal: true
-    href: DREditor.Dialogues.Line.html
+    href: DREditor.Dialogues.Choice.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
@@ -628,10 +2189,10 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: DREditor.Dialogues.Line
-    name: Line
+  - uid: DREditor.Dialogues.Choice
+    name: Choice
     isExternal: true
-    href: DREditor.Dialogues.Line.html
+    href: DREditor.Dialogues.Choice.html
   - name: )
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
@@ -698,27 +2259,192 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: System.Collections.Generic.List{DREditor.Dialogues.Choice}
-  commentId: T:System.Collections.Generic.List{DREditor.Dialogues.Choice}
+- uid: DREditor.Dialogues.StartInvestigation
+  commentId: T:DREditor.Dialogues.StartInvestigation
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/StartInvestigation.cs
+  name: StartInvestigation
+  nameWithType: StartInvestigation
+  fullName: DREditor.Dialogues.StartInvestigation
+- uid: DREditor.Dialogues.EndEvent
+  commentId: T:DREditor.Dialogues.EndEvent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.EndEvent.html
+  name: EndEvent
+  nameWithType: EndEvent
+  fullName: DREditor.Dialogues.EndEvent
+- uid: DREditor.Dialogues.Dialogue.SetEndEvent*
+  commentId: Overload:DREditor.Dialogues.Dialogue.SetEndEvent
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_SetEndEvent_DREditor_Dialogues_EndEvent_
+  name: SetEndEvent
+  nameWithType: Dialogue.SetEndEvent
+  fullName: DREditor.Dialogues.Dialogue.SetEndEvent
+- uid: DREditor.Dialogues.Dialogue.GetInstant*
+  commentId: Overload:DREditor.Dialogues.Dialogue.GetInstant
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_GetInstant
+  name: GetInstant
+  nameWithType: Dialogue.GetInstant
+  fullName: DREditor.Dialogues.Dialogue.GetInstant
+- uid: DREditor.Dialogues.IInstantAbleDialogue.GetInstant
+  commentId: M:DREditor.Dialogues.IInstantAbleDialogue.GetInstant
+  parent: DREditor.Dialogues.IInstantAbleDialogue
+  isExternal: true
+  href: DREditor.Dialogues.IInstantAbleDialogue.html#DREditor_Dialogues_IInstantAbleDialogue_GetInstant
+  name: GetInstant()
+  nameWithType: IInstantAbleDialogue.GetInstant()
+  fullName: DREditor.Dialogues.IInstantAbleDialogue.GetInstant()
+  spec.csharp:
+  - uid: DREditor.Dialogues.IInstantAbleDialogue.GetInstant
+    name: GetInstant
+    isExternal: true
+    href: DREditor.Dialogues.IInstantAbleDialogue.html#DREditor_Dialogues_IInstantAbleDialogue_GetInstant
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.IInstantAbleDialogue.GetInstant
+    name: GetInstant
+    isExternal: true
+    href: DREditor.Dialogues.IInstantAbleDialogue.html#DREditor_Dialogues_IInstantAbleDialogue_GetInstant
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.Dialogue.SetInstant*
+  commentId: Overload:DREditor.Dialogues.Dialogue.SetInstant
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_SetInstant_System_Boolean_
+  name: SetInstant
+  nameWithType: Dialogue.SetInstant
+  fullName: DREditor.Dialogues.Dialogue.SetInstant
+- uid: DREditor.Dialogues.IInstantAbleDialogue.SetInstant(System.Boolean)
+  commentId: M:DREditor.Dialogues.IInstantAbleDialogue.SetInstant(System.Boolean)
+  parent: DREditor.Dialogues.IInstantAbleDialogue
+  isExternal: true
+  href: DREditor.Dialogues.IInstantAbleDialogue.html#DREditor_Dialogues_IInstantAbleDialogue_SetInstant_System_Boolean_
+  name: SetInstant(bool)
+  nameWithType: IInstantAbleDialogue.SetInstant(bool)
+  fullName: DREditor.Dialogues.IInstantAbleDialogue.SetInstant(bool)
+  nameWithType.vb: IInstantAbleDialogue.SetInstant(Boolean)
+  fullName.vb: DREditor.Dialogues.IInstantAbleDialogue.SetInstant(Boolean)
+  name.vb: SetInstant(Boolean)
+  spec.csharp:
+  - uid: DREditor.Dialogues.IInstantAbleDialogue.SetInstant(System.Boolean)
+    name: SetInstant
+    isExternal: true
+    href: DREditor.Dialogues.IInstantAbleDialogue.html#DREditor_Dialogues_IInstantAbleDialogue_SetInstant_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.IInstantAbleDialogue.SetInstant(System.Boolean)
+    name: SetInstant
+    isExternal: true
+    href: DREditor.Dialogues.IInstantAbleDialogue.html#DREditor_Dialogues_IInstantAbleDialogue_SetInstant_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex*
+  commentId: Overload:DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_HasChoiceDialogueAtIndex_System_Int32_
+  name: HasChoiceDialogueAtIndex
+  nameWithType: Dialogue.HasChoiceDialogueAtIndex
+  fullName: DREditor.Dialogues.Dialogue.HasChoiceDialogueAtIndex
+- uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+  commentId: M:DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+  parent: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.DialogueBase`1.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_IsNested_DREditor_Dialogues_DialogueCore_System_Collections_Generic_List_DREditor_Dialogues_DialogueCore__
+  name: IsNested(DialogueCore, List<DialogueCore>)
+  nameWithType: DialogueBase<Line>.IsNested(DialogueCore, List<DialogueCore>)
+  fullName: DREditor.Dialogues.DialogueBase<DREditor.Dialogues.Line>.IsNested(DREditor.Dialogues.DialogueCore, System.Collections.Generic.List<DREditor.Dialogues.DialogueCore>)
+  nameWithType.vb: DialogueBase(Of Line).IsNested(DialogueCore, List(Of DialogueCore))
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of DREditor.Dialogues.Line).IsNested(DREditor.Dialogues.DialogueCore, System.Collections.Generic.List(Of DREditor.Dialogues.DialogueCore))
+  name.vb: IsNested(DialogueCore, List(Of DialogueCore))
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+    name: IsNested
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_IsNested_DREditor_Dialogues_DialogueCore_System_Collections_Generic_List_DREditor_Dialogues_DialogueCore__
+  - name: (
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase{DREditor.Dialogues.Line}.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+    name: IsNested
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_IsNested_DREditor_Dialogues_DialogueCore_System_Collections_Generic_List_DREditor_Dialogues_DialogueCore__
+  - name: (
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: )
+  - name: )
+- uid: DREditor.Dialogues.Dialogue.IsNested*
+  commentId: Overload:DREditor.Dialogues.Dialogue.IsNested
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_IsNested_DREditor_Dialogues_DialogueCore_System_Collections_Generic_List_DREditor_Dialogues_DialogueCore__
+  name: IsNested
+  nameWithType: Dialogue.IsNested
+  fullName: DREditor.Dialogues.Dialogue.IsNested
+- uid: System.Collections.Generic.List{DREditor.Dialogues.DialogueCore}
+  commentId: T:System.Collections.Generic.List{DREditor.Dialogues.DialogueCore}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<Choice>
-  nameWithType: List<Choice>
-  fullName: System.Collections.Generic.List<DREditor.Dialogues.Choice>
-  nameWithType.vb: List(Of Choice)
-  fullName.vb: System.Collections.Generic.List(Of DREditor.Dialogues.Choice)
-  name.vb: List(Of Choice)
+  name: List<DialogueCore>
+  nameWithType: List<DialogueCore>
+  fullName: System.Collections.Generic.List<DREditor.Dialogues.DialogueCore>
+  nameWithType.vb: List(Of DialogueCore)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Dialogues.DialogueCore)
+  name.vb: List(Of DialogueCore)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - uid: DREditor.Dialogues.Choice
-    name: Choice
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
     isExternal: true
-    href: DREditor.Dialogues.Choice.html
+    href: DREditor.Dialogues.DialogueCore.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.List`1
@@ -728,34 +2454,87 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: DREditor.Dialogues.Choice
-    name: Choice
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
     isExternal: true
-    href: DREditor.Dialogues.Choice.html
+    href: DREditor.Dialogues.DialogueCore.html
   - name: )
-- uid: DREditor.Dialogues.StartInvestigation
-  commentId: T:DREditor.Dialogues.StartInvestigation
-  parent: DREditor.Dialogues
+- uid: DREditor.Dialogues.DialogueBase`1.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+  commentId: M:DREditor.Dialogues.DialogueBase`1.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
   isExternal: true
-  href: DREditor.Dialogues.StartInvestigation.html
-  name: StartInvestigation
-  nameWithType: StartInvestigation
-  fullName: DREditor.Dialogues.StartInvestigation
-- uid: DREditor.Dialogues.Dialogue.Copy*
-  commentId: Overload:DREditor.Dialogues.Dialogue.Copy
+  href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_IsNested_DREditor_Dialogues_DialogueCore_System_Collections_Generic_List_DREditor_Dialogues_DialogueCore__
+  name: IsNested(DialogueCore, List<DialogueCore>)
+  nameWithType: DialogueBase<T>.IsNested(DialogueCore, List<DialogueCore>)
+  fullName: DREditor.Dialogues.DialogueBase<T>.IsNested(DREditor.Dialogues.DialogueCore, System.Collections.Generic.List<DREditor.Dialogues.DialogueCore>)
+  nameWithType.vb: DialogueBase(Of T).IsNested(DialogueCore, List(Of DialogueCore))
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T).IsNested(DREditor.Dialogues.DialogueCore, System.Collections.Generic.List(Of DREditor.Dialogues.DialogueCore))
+  name.vb: IsNested(DialogueCore, List(Of DialogueCore))
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+    name: IsNested
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_IsNested_DREditor_Dialogues_DialogueCore_System_Collections_Generic_List_DREditor_Dialogues_DialogueCore__
+  - name: (
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1.IsNested(DREditor.Dialogues.DialogueCore,System.Collections.Generic.List{DREditor.Dialogues.DialogueCore})
+    name: IsNested
+    isExternal: true
+    href: DREditor.Dialogues.DialogueBase-1.html#DREditor_Dialogues_DialogueBase_1_IsNested_DREditor_Dialogues_DialogueCore_System_Collections_Generic_List_DREditor_Dialogues_DialogueCore__
+  - name: (
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: DREditor.Dialogues.DialogueCore.html
+  - name: )
+  - name: )
+- uid: DREditor.Dialogues.Dialogue.ContainsCharacterNamed*
+  commentId: Overload:DREditor.Dialogues.Dialogue.ContainsCharacterNamed
   isExternal: true
-  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_Copy
-  name: Copy
-  nameWithType: Dialogue.Copy
-  fullName: DREditor.Dialogues.Dialogue.Copy
-- uid: DREditor.Dialogues.Dialogue
-  commentId: T:DREditor.Dialogues.Dialogue
-  parent: DREditor.Dialogues
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_ContainsCharacterNamed_System_String_
+  name: ContainsCharacterNamed
+  nameWithType: Dialogue.ContainsCharacterNamed
+  fullName: DREditor.Dialogues.Dialogue.ContainsCharacterNamed
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
-  href: DREditor.Dialogues.Dialogue.html
-  name: Dialogue
-  nameWithType: Dialogue
-  fullName: DREditor.Dialogues.Dialogue
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: DREditor.Dialogues.Dialogue.#ctor*
   commentId: Overload:DREditor.Dialogues.Dialogue.#ctor
   isExternal: true
@@ -766,3 +2545,31 @@ references:
   nameWithType.vb: Dialogue.New
   fullName.vb: DREditor.Dialogues.Dialogue.New
   name.vb: New
+- uid: DREditor.Dialogues.Dialogue.UnlockPause*
+  commentId: Overload:DREditor.Dialogues.Dialogue.UnlockPause
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_UnlockPause
+  name: UnlockPause
+  nameWithType: Dialogue.UnlockPause
+  fullName: DREditor.Dialogues.Dialogue.UnlockPause
+- uid: DREditor.Dialogues.Dialogue.UnlockPauseOption*
+  commentId: Overload:DREditor.Dialogues.Dialogue.UnlockPauseOption
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_UnlockPauseOption
+  name: UnlockPauseOption
+  nameWithType: Dialogue.UnlockPauseOption
+  fullName: DREditor.Dialogues.Dialogue.UnlockPauseOption
+- uid: DREditor.Dialogues.Dialogue.PauseOptionNum*
+  commentId: Overload:DREditor.Dialogues.Dialogue.PauseOptionNum
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_PauseOptionNum
+  name: PauseOptionNum
+  nameWithType: Dialogue.PauseOptionNum
+  fullName: DREditor.Dialogues.Dialogue.PauseOptionNum
+- uid: DREditor.Dialogues.Dialogue.PauseOptionTo*
+  commentId: Overload:DREditor.Dialogues.Dialogue.PauseOptionTo
+  isExternal: true
+  href: DREditor.Dialogues.Dialogue.html#DREditor_Dialogues_Dialogue_PauseOptionTo
+  name: PauseOptionTo
+  nameWithType: Dialogue.PauseOptionTo
+  fullName: DREditor.Dialogues.Dialogue.PauseOptionTo

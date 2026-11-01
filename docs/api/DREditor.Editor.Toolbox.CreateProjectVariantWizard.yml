@@ -1,0 +1,1373 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  commentId: T:DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  id: CreateProjectVariantWizard
+  parent: DREditor.Editor.Toolbox
+  children:
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.#ctor
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.CheckAutoApply
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectPrefabVariant
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.DisplayValidState
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.DrawWizardGUI
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue(System.Boolean,System.Action)
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundNoIssues
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.InitializeUpdate
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.IsSelectingPrefab
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnDisable
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSourceEmpty
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixEmpty
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixInvalid
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardCreate
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardUpdate
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.OpenWizard
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.ResolveUpdate
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceAssetValid
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceIsEmpty
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixInvalid
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixIsEmpty
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder(System.String@)
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.VariantCanBeCreated
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.assetPath
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.cachedEditor
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.running
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.settings
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.sourceAsset
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.sourceName
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.target
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.trimmed
+  langs:
+  - csharp
+  - vb
+  name: CreateProjectVariantWizard
+  nameWithType: CreateProjectVariantWizard
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: 'public class CreateProjectVariantWizard : ScriptableWizard'
+    content.vb: Public Class CreateProjectVariantWizard Inherits ScriptableWizard
+  inheritance:
+  - System.Object
+  extensionMethods:
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Editor.Toolbox.CreateProjectVariantWizard.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.settings
+  commentId: F:DREditor.Editor.Toolbox.CreateProjectVariantWizard.settings
+  id: settings
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: settings
+  nameWithType: CreateProjectVariantWizard.settings
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.settings
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected ProjectPrefabVariantSettings settings
+    return:
+      type: DREditor.Editor.Toolbox.ProjectPrefabVariantSettings
+    content.vb: Protected settings As ProjectPrefabVariantSettings
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.target
+  commentId: F:DREditor.Editor.Toolbox.CreateProjectVariantWizard.target
+  id: target
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: target
+  nameWithType: CreateProjectVariantWizard.target
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.target
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  remarks: Purposly made a serialize field so the reference stays during a project reload when the wizard is open.
+  example: []
+  syntax:
+    content: protected GameObject target
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Protected target As GameObject
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.sourceAsset
+  commentId: F:DREditor.Editor.Toolbox.CreateProjectVariantWizard.sourceAsset
+  id: sourceAsset
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: sourceAsset
+  nameWithType: CreateProjectVariantWizard.sourceAsset
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.sourceAsset
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected GameObject sourceAsset
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Protected sourceAsset As GameObject
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.assetPath
+  commentId: F:DREditor.Editor.Toolbox.CreateProjectVariantWizard.assetPath
+  id: assetPath
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: assetPath
+  nameWithType: CreateProjectVariantWizard.assetPath
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.assetPath
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected string assetPath
+    return:
+      type: System.String
+    content.vb: Protected assetPath As String
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.sourceName
+  commentId: F:DREditor.Editor.Toolbox.CreateProjectVariantWizard.sourceName
+  id: sourceName
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: sourceName
+  nameWithType: CreateProjectVariantWizard.sourceName
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.sourceName
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected string sourceName
+    return:
+      type: System.String
+    content.vb: Protected sourceName As String
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.trimmed
+  commentId: F:DREditor.Editor.Toolbox.CreateProjectVariantWizard.trimmed
+  id: trimmed
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: trimmed
+  nameWithType: CreateProjectVariantWizard.trimmed
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.trimmed
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected string trimmed
+    return:
+      type: System.String
+    content.vb: Protected trimmed As String
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.running
+  commentId: F:DREditor.Editor.Toolbox.CreateProjectVariantWizard.running
+  id: running
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: running
+  nameWithType: CreateProjectVariantWizard.running
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.running
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool running
+    return:
+      type: System.Boolean
+    content.vb: Protected running As Boolean
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.cachedEditor
+  commentId: F:DREditor.Editor.Toolbox.CreateProjectVariantWizard.cachedEditor
+  id: cachedEditor
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: cachedEditor
+  nameWithType: CreateProjectVariantWizard.cachedEditor
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.cachedEditor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected Editor cachedEditor
+    return:
+      type: UnityEditor.Editor
+    content.vb: Protected cachedEditor As Editor
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnDisable
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnDisable
+  id: OnDisable
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: CreateProjectVariantWizard.OnDisable()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnDisable*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DrawWizardGUI
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.DrawWizardGUI
+  id: DrawWizardGUI
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: DrawWizardGUI()
+  nameWithType: CreateProjectVariantWizard.DrawWizardGUI()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DrawWizardGUI()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  example: []
+  syntax:
+    content: protected override bool DrawWizardGUI()
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function DrawWizardGUI() As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DrawWizardGUI*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.IsSelectingPrefab
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.IsSelectingPrefab
+  id: IsSelectingPrefab
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: IsSelectingPrefab()
+  nameWithType: CreateProjectVariantWizard.IsSelectingPrefab()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.IsSelectingPrefab()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: public static bool IsSelectingPrefab()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsSelectingPrefab() As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.IsSelectingPrefab*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OpenWizard
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OpenWizard
+  id: OpenWizard
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: OpenWizard()
+  nameWithType: CreateProjectVariantWizard.OpenWizard()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OpenWizard()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: public static void OpenWizard()
+    content.vb: Public Shared Sub OpenWizard()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OpenWizard*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardUpdate
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardUpdate
+  id: OnWizardUpdate
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: OnWizardUpdate()
+  nameWithType: CreateProjectVariantWizard.OnWizardUpdate()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardUpdate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  syntax:
+    content: protected virtual void OnWizardUpdate()
+    content.vb: Protected Overridable Sub OnWizardUpdate()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardUpdate*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.InitializeUpdate
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.InitializeUpdate
+  id: InitializeUpdate
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: InitializeUpdate()
+  nameWithType: CreateProjectVariantWizard.InitializeUpdate()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.InitializeUpdate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializeUpdate()
+    content.vb: Protected Overridable Sub InitializeUpdate()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.InitializeUpdate*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundNoIssues
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundNoIssues
+  id: FoundNoIssues
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: FoundNoIssues()
+  nameWithType: CreateProjectVariantWizard.FoundNoIssues()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundNoIssues()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool FoundNoIssues()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function FoundNoIssues() As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundNoIssues*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue(System.Boolean,System.Action)
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue(System.Boolean,System.Action)
+  id: FoundIssue(System.Boolean,System.Action)
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: FoundIssue(bool, Action)
+  nameWithType: CreateProjectVariantWizard.FoundIssue(bool, Action)
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue(bool, System.Action)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool FoundIssue(bool issuePresent, Action setWizardString)
+    parameters:
+    - id: issuePresent
+      type: System.Boolean
+      description: ''
+    - id: setWizardString
+      type: System.Action
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function FoundIssue(issuePresent As Boolean, setWizardString As Action) As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue*
+  nameWithType.vb: CreateProjectVariantWizard.FoundIssue(Boolean, Action)
+  fullName.vb: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue(Boolean, System.Action)
+  name.vb: FoundIssue(Boolean, Action)
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSourceEmpty
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSourceEmpty
+  id: OnSourceEmpty
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: OnSourceEmpty()
+  nameWithType: CreateProjectVariantWizard.OnSourceEmpty()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSourceEmpty()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnSourceEmpty()
+    content.vb: Protected Overridable Sub OnSourceEmpty()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSourceEmpty*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixEmpty
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixEmpty
+  id: OnSuffixEmpty
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: OnSuffixEmpty()
+  nameWithType: CreateProjectVariantWizard.OnSuffixEmpty()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixEmpty()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnSuffixEmpty()
+    content.vb: Protected Overridable Sub OnSuffixEmpty()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixEmpty*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixInvalid
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixInvalid
+  id: OnSuffixInvalid
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: OnSuffixInvalid()
+  nameWithType: CreateProjectVariantWizard.OnSuffixInvalid()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixInvalid()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnSuffixInvalid()
+    content.vb: Protected Overridable Sub OnSuffixInvalid()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixInvalid*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DisplayValidState
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.DisplayValidState
+  id: DisplayValidState
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: DisplayValidState()
+  nameWithType: CreateProjectVariantWizard.DisplayValidState()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DisplayValidState()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void DisplayValidState()
+    content.vb: Protected Overridable Sub DisplayValidState()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DisplayValidState*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.ResolveUpdate
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.ResolveUpdate
+  id: ResolveUpdate
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: ResolveUpdate()
+  nameWithType: CreateProjectVariantWizard.ResolveUpdate()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.ResolveUpdate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ResolveUpdate()
+    content.vb: Protected Overridable Sub ResolveUpdate()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.ResolveUpdate*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CheckAutoApply
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.CheckAutoApply
+  id: CheckAutoApply
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: CheckAutoApply()
+  nameWithType: CreateProjectVariantWizard.CheckAutoApply()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CheckAutoApply()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void CheckAutoApply()
+    content.vb: Protected Overridable Sub CheckAutoApply()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CheckAutoApply*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardCreate
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardCreate
+  id: OnWizardCreate
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: OnWizardCreate()
+  nameWithType: CreateProjectVariantWizard.OnWizardCreate()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardCreate()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  syntax:
+    content: protected virtual void OnWizardCreate()
+    content.vb: Protected Overridable Sub OnWizardCreate()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardCreate*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.VariantCanBeCreated
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.VariantCanBeCreated
+  id: VariantCanBeCreated
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: VariantCanBeCreated()
+  nameWithType: CreateProjectVariantWizard.VariantCanBeCreated()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.VariantCanBeCreated()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool VariantCanBeCreated()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function VariantCanBeCreated() As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.VariantCanBeCreated*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceAssetValid
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceAssetValid
+  id: SourceAssetValid
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: SourceAssetValid()
+  nameWithType: CreateProjectVariantWizard.SourceAssetValid()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceAssetValid()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool SourceAssetValid()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function SourceAssetValid() As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceAssetValid*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder(System.String@)
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder(System.String@)
+  id: TrySelectingOutputFolder(System.String@)
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: TrySelectingOutputFolder(out string)
+  nameWithType: CreateProjectVariantWizard.TrySelectingOutputFolder(out string)
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder(out string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool TrySelectingOutputFolder(out string assetPath)
+    parameters:
+    - id: assetPath
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function TrySelectingOutputFolder(assetPath As String) As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder*
+  nameWithType.vb: CreateProjectVariantWizard.TrySelectingOutputFolder(String)
+  fullName.vb: DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder(String)
+  name.vb: TrySelectingOutputFolder(String)
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectPrefabVariant
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectPrefabVariant
+  id: CreateProjectPrefabVariant
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: CreateProjectPrefabVariant()
+  nameWithType: CreateProjectVariantWizard.CreateProjectPrefabVariant()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectPrefabVariant()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void CreateProjectPrefabVariant()
+    content.vb: Protected Overridable Sub CreateProjectPrefabVariant()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectPrefabVariant*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.#ctor
+  commentId: M:DREditor.Editor.Toolbox.CreateProjectVariantWizard.#ctor
+  id: '#ctor'
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: CreateProjectVariantWizard()
+  nameWithType: CreateProjectVariantWizard.CreateProjectVariantWizard()
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectVariantWizard()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  syntax:
+    content: public CreateProjectVariantWizard()
+    content.vb: Public Sub New()
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.#ctor*
+  nameWithType.vb: CreateProjectVariantWizard.New()
+  fullName.vb: DREditor.Editor.Toolbox.CreateProjectVariantWizard.New()
+  name.vb: New()
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceIsEmpty
+  commentId: P:DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceIsEmpty
+  id: SourceIsEmpty
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: SourceIsEmpty
+  nameWithType: CreateProjectVariantWizard.SourceIsEmpty
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceIsEmpty
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool SourceIsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable ReadOnly Property SourceIsEmpty As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceIsEmpty*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixIsEmpty
+  commentId: P:DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixIsEmpty
+  id: SuffixIsEmpty
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: SuffixIsEmpty
+  nameWithType: CreateProjectVariantWizard.SuffixIsEmpty
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixIsEmpty
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool SuffixIsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable ReadOnly Property SuffixIsEmpty As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixIsEmpty*
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixInvalid
+  commentId: P:DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixInvalid
+  id: SuffixInvalid
+  parent: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+  langs:
+  - csharp
+  - vb
+  name: SuffixInvalid
+  nameWithType: CreateProjectVariantWizard.SuffixInvalid
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixInvalid
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/CreateProjectVariantWizard.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool SuffixInvalid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable ReadOnly Property SuffixInvalid As Boolean
+  overload: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixInvalid*
+references:
+- uid: DREditor.Editor.Toolbox
+  commentId: N:DREditor.Editor.Toolbox
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Editor.Toolbox
+  nameWithType: DREditor.Editor.Toolbox
+  fullName: DREditor.Editor.Toolbox
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Editor
+    name: Editor
+    isExternal: true
+    href: DREditor.Editor.html
+  - name: .
+  - uid: DREditor.Editor.Toolbox
+    name: Toolbox
+    isExternal: true
+    href: DREditor.Editor.Toolbox.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Editor
+    name: Editor
+    isExternal: true
+    href: DREditor.Editor.html
+  - name: .
+  - uid: DREditor.Editor.Toolbox
+    name: Toolbox
+    isExternal: true
+    href: DREditor.Editor.Toolbox.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<CreateProjectVariantWizard>(CreateProjectVariantWizard)
+  nameWithType: ReflectionHelper.GetFieldNames<CreateProjectVariantWizard>(CreateProjectVariantWizard)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Editor.Toolbox.CreateProjectVariantWizard>(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of CreateProjectVariantWizard)(CreateProjectVariantWizard)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Editor.Toolbox.CreateProjectVariantWizard)(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+  name.vb: GetFieldNames(Of CreateProjectVariantWizard)(CreateProjectVariantWizard)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+  - name: (
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<CreateProjectVariantWizard>(CreateProjectVariantWizard)
+  nameWithType: ReflectionHelper.GetFieldValues<CreateProjectVariantWizard>(CreateProjectVariantWizard)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Editor.Toolbox.CreateProjectVariantWizard>(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of CreateProjectVariantWizard)(CreateProjectVariantWizard)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Editor.Toolbox.CreateProjectVariantWizard)(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+  name.vb: GetFieldValues(Of CreateProjectVariantWizard)(CreateProjectVariantWizard)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+  - name: (
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<CreateProjectVariantWizard>(CreateProjectVariantWizard)
+  nameWithType: DeepCopyExtensions.DeepCopy<CreateProjectVariantWizard>(CreateProjectVariantWizard)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Editor.Toolbox.CreateProjectVariantWizard>(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of CreateProjectVariantWizard)(CreateProjectVariantWizard)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Editor.Toolbox.CreateProjectVariantWizard)(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+  name.vb: DeepCopy(Of CreateProjectVariantWizard)(CreateProjectVariantWizard)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Editor.Toolbox.CreateProjectVariantWizard)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+  - name: (
+  - uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard
+    name: CreateProjectVariantWizard
+    isExternal: true
+    href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Editor.Toolbox.ProjectPrefabVariantSettings
+  commentId: T:DREditor.Editor.Toolbox.ProjectPrefabVariantSettings
+  parent: DREditor.Editor.Toolbox
+  isExternal: true
+  href: DREditor.Editor.Toolbox.ProjectPrefabVariantSettings.html
+  name: ProjectPrefabVariantSettings
+  nameWithType: ProjectPrefabVariantSettings
+  fullName: DREditor.Editor.Toolbox.ProjectPrefabVariantSettings
+- uid: UnityEngine.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEditor.Editor
+  isExternal: true
+  name: Editor
+  nameWithType: Editor
+  fullName: UnityEditor.Editor
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnDisable*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnDisable
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_OnDisable
+  name: OnDisable
+  nameWithType: CreateProjectVariantWizard.OnDisable
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnDisable
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DrawWizardGUI*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.DrawWizardGUI
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_DrawWizardGUI
+  name: DrawWizardGUI
+  nameWithType: CreateProjectVariantWizard.DrawWizardGUI
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DrawWizardGUI
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.IsSelectingPrefab*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.IsSelectingPrefab
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_IsSelectingPrefab
+  name: IsSelectingPrefab
+  nameWithType: CreateProjectVariantWizard.IsSelectingPrefab
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.IsSelectingPrefab
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OpenWizard*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OpenWizard
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_OpenWizard
+  name: OpenWizard
+  nameWithType: CreateProjectVariantWizard.OpenWizard
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OpenWizard
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardUpdate*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardUpdate
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_OnWizardUpdate
+  name: OnWizardUpdate
+  nameWithType: CreateProjectVariantWizard.OnWizardUpdate
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardUpdate
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.InitializeUpdate*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.InitializeUpdate
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_InitializeUpdate
+  name: InitializeUpdate
+  nameWithType: CreateProjectVariantWizard.InitializeUpdate
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.InitializeUpdate
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundNoIssues*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundNoIssues
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_FoundNoIssues
+  name: FoundNoIssues
+  nameWithType: CreateProjectVariantWizard.FoundNoIssues
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundNoIssues
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_FoundIssue_System_Boolean_System_Action_
+  name: FoundIssue
+  nameWithType: CreateProjectVariantWizard.FoundIssue
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.FoundIssue
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSourceEmpty*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSourceEmpty
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_OnSourceEmpty
+  name: OnSourceEmpty
+  nameWithType: CreateProjectVariantWizard.OnSourceEmpty
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSourceEmpty
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixEmpty*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixEmpty
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_OnSuffixEmpty
+  name: OnSuffixEmpty
+  nameWithType: CreateProjectVariantWizard.OnSuffixEmpty
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixEmpty
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixInvalid*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixInvalid
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_OnSuffixInvalid
+  name: OnSuffixInvalid
+  nameWithType: CreateProjectVariantWizard.OnSuffixInvalid
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnSuffixInvalid
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DisplayValidState*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.DisplayValidState
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_DisplayValidState
+  name: DisplayValidState
+  nameWithType: CreateProjectVariantWizard.DisplayValidState
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.DisplayValidState
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.ResolveUpdate*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.ResolveUpdate
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_ResolveUpdate
+  name: ResolveUpdate
+  nameWithType: CreateProjectVariantWizard.ResolveUpdate
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.ResolveUpdate
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CheckAutoApply*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.CheckAutoApply
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_CheckAutoApply
+  name: CheckAutoApply
+  nameWithType: CreateProjectVariantWizard.CheckAutoApply
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CheckAutoApply
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardCreate*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardCreate
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_OnWizardCreate
+  name: OnWizardCreate
+  nameWithType: CreateProjectVariantWizard.OnWizardCreate
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.OnWizardCreate
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.VariantCanBeCreated*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.VariantCanBeCreated
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_VariantCanBeCreated
+  name: VariantCanBeCreated
+  nameWithType: CreateProjectVariantWizard.VariantCanBeCreated
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.VariantCanBeCreated
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceAssetValid*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceAssetValid
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_SourceAssetValid
+  name: SourceAssetValid
+  nameWithType: CreateProjectVariantWizard.SourceAssetValid
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceAssetValid
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_TrySelectingOutputFolder_System_String__
+  name: TrySelectingOutputFolder
+  nameWithType: CreateProjectVariantWizard.TrySelectingOutputFolder
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.TrySelectingOutputFolder
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectPrefabVariant*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectPrefabVariant
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_CreateProjectPrefabVariant
+  name: CreateProjectPrefabVariant
+  nameWithType: CreateProjectVariantWizard.CreateProjectPrefabVariant
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectPrefabVariant
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.#ctor*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.#ctor
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard__ctor
+  name: CreateProjectVariantWizard
+  nameWithType: CreateProjectVariantWizard.CreateProjectVariantWizard
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.CreateProjectVariantWizard
+  nameWithType.vb: CreateProjectVariantWizard.New
+  fullName.vb: DREditor.Editor.Toolbox.CreateProjectVariantWizard.New
+  name.vb: New
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceIsEmpty*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceIsEmpty
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_SourceIsEmpty
+  name: SourceIsEmpty
+  nameWithType: CreateProjectVariantWizard.SourceIsEmpty
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SourceIsEmpty
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixIsEmpty*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixIsEmpty
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_SuffixIsEmpty
+  name: SuffixIsEmpty
+  nameWithType: CreateProjectVariantWizard.SuffixIsEmpty
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixIsEmpty
+- uid: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixInvalid*
+  commentId: Overload:DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixInvalid
+  isExternal: true
+  href: DREditor.Editor.Toolbox.CreateProjectVariantWizard.html#DREditor_Editor_Toolbox_CreateProjectVariantWizard_SuffixInvalid
+  name: SuffixInvalid
+  nameWithType: CreateProjectVariantWizard.SuffixInvalid
+  fullName: DREditor.Editor.Toolbox.CreateProjectVariantWizard.SuffixInvalid

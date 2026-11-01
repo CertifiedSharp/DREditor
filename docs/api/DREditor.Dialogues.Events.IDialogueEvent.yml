@@ -5,9 +5,6 @@ items:
   id: IDialogueEvent
   parent: DREditor.Dialogues.Events
   children:
-  - DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
-  - DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-  - DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
   - DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
   langs:
   - csharp
@@ -17,7 +14,7 @@ items:
   fullName: DREditor.Dialogues.Events.IDialogueEvent
   type: Interface
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -25,16 +22,17 @@ items:
     content: public interface IDialogueEvent
     content.vb: Public Interface IDialogueEvent
   derivedClasses:
+  - DREditor.ChapterSelection.UnlockChapterSelectScene
+  - DREditor.DialogueMechanics.Investigation.KillCharacter
+  - DREditor.Dialogues.Events.AnimationEvent
   - DREditor.Dialogues.Events.CGDisplay
   - DREditor.Dialogues.Events.CGFlash
   - DREditor.Dialogues.Events.CamToPosition
-  - DREditor.Dialogues.Events.ChangeCharacterFocus
   - DREditor.Dialogues.Events.ChangeItemSelect
   - DREditor.Dialogues.Events.ChangeWindowPattern
   - DREditor.Dialogues.Events.CharIntro
   - DREditor.Dialogues.Events.CharacterLeave
   - DREditor.Dialogues.Events.CustomEvent
-  - DREditor.Dialogues.Events.DisplayTruthBullet
   - DREditor.Dialogues.Events.FaintAnim
   - DREditor.Dialogues.Events.Flashback
   - DREditor.Dialogues.Events.LastActorSprite
@@ -46,8 +44,13 @@ items:
   - DREditor.Dialogues.Events.SpriteFlash
   - DREditor.Dialogues.Events.ToggleBlur
   - DREditor.Dialogues.Events.TrialTutorial
-  - DREditor.Dialogues.Events.TruthBulletGet
   - DREditor.Dialogues.Events.VideoDisplay
+  - DREditor.Flairs.FlairEvent
+  - DREditor.Investigations.TruthBulletGet
+  extensionMethods:
+  - DREditor.Dialogues.Events.IDialogueEvent.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.Events.IDialogueEvent.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.Events.IDialogueEvent.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
   commentId: M:DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
   id: TriggerDialogueEvent
@@ -60,7 +63,7 @@ items:
   fullName: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -68,72 +71,6 @@ items:
     content: void TriggerDialogueEvent()
     content.vb: Sub TriggerDialogueEvent()
   overload: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent*
-- uid: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
-  id: EditorUI(System.Object)
-  parent: DREditor.Dialogues.Events.IDialogueEvent
-  langs:
-  - csharp
-  - vb
-  name: EditorUI(object)
-  nameWithType: IDialogueEvent.EditorUI(object)
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(object)
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues.Events
-  syntax:
-    content: void EditorUI(object value = null)
-    parameters:
-    - id: value
-      type: System.Object
-    content.vb: Sub EditorUI(value As Object = Nothing)
-  overload: DREditor.Dialogues.Events.IDialogueEvent.EditorUI*
-  nameWithType.vb: IDialogueEvent.EditorUI(Object)
-  fullName.vb: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(Object)
-  name.vb: EditorUI(Object)
-- uid: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
-  id: ToggleHelpBox
-  parent: DREditor.Dialogues.Events.IDialogueEvent
-  langs:
-  - csharp
-  - vb
-  name: ToggleHelpBox()
-  nameWithType: IDialogueEvent.ToggleHelpBox()
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues.Events
-  syntax:
-    content: void ToggleHelpBox()
-    content.vb: Sub ToggleHelpBox()
-  overload: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox*
-- uid: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-  id: ShowHelpBox
-  parent: DREditor.Dialogues.Events.IDialogueEvent
-  langs:
-  - csharp
-  - vb
-  name: ShowHelpBox()
-  nameWithType: IDialogueEvent.ShowHelpBox()
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues.Events
-  syntax:
-    content: void ShowHelpBox()
-    content.vb: Sub ShowHelpBox()
-  overload: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox*
 references:
 - uid: DREditor.Dialogues.Events
   commentId: N:DREditor.Dialogues.Events
@@ -172,6 +109,319 @@ references:
     name: Events
     isExternal: true
     href: DREditor.Dialogues.Events.html
+- uid: DREditor.Dialogues.Events.IDialogueEvent.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<IDialogueEvent>(IDialogueEvent)
+  nameWithType: ReflectionHelper.GetFieldNames<IDialogueEvent>(IDialogueEvent)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.Events.IDialogueEvent>(DREditor.Dialogues.Events.IDialogueEvent)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of IDialogueEvent)(IDialogueEvent)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.Events.IDialogueEvent)(DREditor.Dialogues.Events.IDialogueEvent)
+  name.vb: GetFieldNames(Of IDialogueEvent)(IDialogueEvent)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Events.IDialogueEvent)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Events.IDialogueEvent)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+- uid: DREditor.Dialogues.Events.IDialogueEvent.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<IDialogueEvent>(IDialogueEvent)
+  nameWithType: ReflectionHelper.GetFieldValues<IDialogueEvent>(IDialogueEvent)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.Events.IDialogueEvent>(DREditor.Dialogues.Events.IDialogueEvent)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of IDialogueEvent)(IDialogueEvent)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.Events.IDialogueEvent)(DREditor.Dialogues.Events.IDialogueEvent)
+  name.vb: GetFieldValues(Of IDialogueEvent)(IDialogueEvent)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Events.IDialogueEvent)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Events.IDialogueEvent)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+- uid: DREditor.Dialogues.Events.IDialogueEvent.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<IDialogueEvent>(IDialogueEvent)
+  nameWithType: DeepCopyExtensions.DeepCopy<IDialogueEvent>(IDialogueEvent)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.Events.IDialogueEvent>(DREditor.Dialogues.Events.IDialogueEvent)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of IDialogueEvent)(IDialogueEvent)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.Events.IDialogueEvent)(DREditor.Dialogues.Events.IDialogueEvent)
+  name.vb: DeepCopy(Of IDialogueEvent)(IDialogueEvent)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Events.IDialogueEvent)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Events.IDialogueEvent)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent*
   commentId: Overload:DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
   isExternal: true
@@ -179,42 +429,3 @@ references:
   name: TriggerDialogueEvent
   nameWithType: IDialogueEvent.TriggerDialogueEvent
   fullName: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
-- uid: DREditor.Dialogues.Events.IDialogueEvent.EditorUI*
-  commentId: Overload:DREditor.Dialogues.Events.IDialogueEvent.EditorUI
-  isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_EditorUI_System_Object_
-  name: EditorUI
-  nameWithType: IDialogueEvent.EditorUI
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.EditorUI
-- uid: System.Object
-  commentId: T:System.Object
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox*
-  commentId: Overload:DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
-  isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ToggleHelpBox
-  name: ToggleHelpBox
-  nameWithType: IDialogueEvent.ToggleHelpBox
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
-- uid: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox*
-  commentId: Overload:DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-  isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ShowHelpBox
-  name: ShowHelpBox
-  nameWithType: IDialogueEvent.ShowHelpBox
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox

@@ -6,9 +6,6 @@ items:
   parent: DREditor.Dialogues.Events
   children:
   - DREditor.Dialogues.Events.DialogueEventList.#ctor
-  - DREditor.Dialogues.Events.DialogueEventList.GetInheritedClasses
-  - DREditor.Dialogues.Events.DialogueEventList.ListOfClasses
-  - DREditor.Dialogues.Events.DialogueEventList.UpdateList
   langs:
   - csharp
   - vb
@@ -17,16 +14,25 @@ items:
   fullName: DREditor.Dialogues.Events.DialogueEventList
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEventList.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEventList.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
+  summary: ''
+  example: []
   syntax:
-    content: public class DialogueEventList
-    content.vb: Public Class DialogueEventList
+    content: 'public class DialogueEventList : TypeListBase<IDialogueEvent>'
+    content.vb: Public Class DialogueEventList Inherits TypeListBase(Of IDialogueEvent)
   inheritance:
   - System.Object
+  - DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
   inheritedMembers:
+  - DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.ListOfClasses
+  - DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetList
+  - DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetInheritedClasses
+  - DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateList
+  - DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+  - DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ToString
@@ -34,69 +40,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: DREditor.Dialogues.Events.DialogueEventList.ListOfClasses
-  commentId: F:DREditor.Dialogues.Events.DialogueEventList.ListOfClasses
-  id: ListOfClasses
-  parent: DREditor.Dialogues.Events.DialogueEventList
-  langs:
-  - csharp
-  - vb
-  name: ListOfClasses
-  nameWithType: DialogueEventList.ListOfClasses
-  fullName: DREditor.Dialogues.Events.DialogueEventList.ListOfClasses
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEventList.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues.Events
-  syntax:
-    content: public static List<Type> ListOfClasses
-    return:
-      type: System.Collections.Generic.List{System.Type}
-    content.vb: Public Shared ListOfClasses As List(Of Type)
-- uid: DREditor.Dialogues.Events.DialogueEventList.GetInheritedClasses
-  commentId: M:DREditor.Dialogues.Events.DialogueEventList.GetInheritedClasses
-  id: GetInheritedClasses
-  parent: DREditor.Dialogues.Events.DialogueEventList
-  langs:
-  - csharp
-  - vb
-  name: GetInheritedClasses()
-  nameWithType: DialogueEventList.GetInheritedClasses()
-  fullName: DREditor.Dialogues.Events.DialogueEventList.GetInheritedClasses()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEventList.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues.Events
-  syntax:
-    content: public static List<Type> GetInheritedClasses()
-    return:
-      type: System.Collections.Generic.List{System.Type}
-    content.vb: Public Shared Function GetInheritedClasses() As List(Of Type)
-  overload: DREditor.Dialogues.Events.DialogueEventList.GetInheritedClasses*
-- uid: DREditor.Dialogues.Events.DialogueEventList.UpdateList
-  commentId: M:DREditor.Dialogues.Events.DialogueEventList.UpdateList
-  id: UpdateList
-  parent: DREditor.Dialogues.Events.DialogueEventList
-  langs:
-  - csharp
-  - vb
-  name: UpdateList()
-  nameWithType: DialogueEventList.UpdateList()
-  fullName: DREditor.Dialogues.Events.DialogueEventList.UpdateList()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEventList.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues.Events
-  syntax:
-    content: public static void UpdateList()
-    content.vb: Public Shared Sub UpdateList()
-  overload: DREditor.Dialogues.Events.DialogueEventList.UpdateList*
+  extensionMethods:
+  - DREditor.Dialogues.Events.DialogueEventList.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.Events.DialogueEventList.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.Events.DialogueEventList.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.Dialogues.Events.DialogueEventList.#ctor
   commentId: M:DREditor.Dialogues.Events.DialogueEventList.#ctor
   id: '#ctor'
@@ -109,7 +56,7 @@ items:
   fullName: DREditor.Dialogues.Events.DialogueEventList.DialogueEventList()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/DialogueEventList.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEventList.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -169,6 +116,239 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
+  commentId: T:DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
+  parent: DREditor
+  definition: DREditor.TypeListBase`1
+  href: DREditor.TypeListBase-1.html
+  name: TypeListBase<IDialogueEvent>
+  nameWithType: TypeListBase<IDialogueEvent>
+  fullName: DREditor.TypeListBase<DREditor.Dialogues.Events.IDialogueEvent>
+  nameWithType.vb: TypeListBase(Of IDialogueEvent)
+  fullName.vb: DREditor.TypeListBase(Of DREditor.Dialogues.Events.IDialogueEvent)
+  name.vb: TypeListBase(Of IDialogueEvent)
+  spec.csharp:
+  - uid: DREditor.TypeListBase`1
+    name: TypeListBase
+    isExternal: true
+    href: DREditor.TypeListBase-1.html
+  - name: <
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.TypeListBase`1
+    name: TypeListBase
+    isExternal: true
+    href: DREditor.TypeListBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.IDialogueEvent.html
+  - name: )
+- uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.ListOfClasses
+  commentId: F:DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.ListOfClasses
+  parent: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
+  definition: DREditor.TypeListBase`1.ListOfClasses
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_ListOfClasses
+  name: ListOfClasses
+  nameWithType: TypeListBase<IDialogueEvent>.ListOfClasses
+  fullName: DREditor.TypeListBase<DREditor.Dialogues.Events.IDialogueEvent>.ListOfClasses
+  nameWithType.vb: TypeListBase(Of IDialogueEvent).ListOfClasses
+  fullName.vb: DREditor.TypeListBase(Of DREditor.Dialogues.Events.IDialogueEvent).ListOfClasses
+- uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetList
+  commentId: M:DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetList
+  parent: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
+  definition: DREditor.TypeListBase`1.GetList
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetList
+  name: GetList()
+  nameWithType: TypeListBase<IDialogueEvent>.GetList()
+  fullName: DREditor.TypeListBase<DREditor.Dialogues.Events.IDialogueEvent>.GetList()
+  nameWithType.vb: TypeListBase(Of IDialogueEvent).GetList()
+  fullName.vb: DREditor.TypeListBase(Of DREditor.Dialogues.Events.IDialogueEvent).GetList()
+  spec.csharp:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetList
+    name: GetList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetList
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetList
+    name: GetList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetList
+  - name: (
+  - name: )
+- uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetInheritedClasses
+  commentId: M:DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetInheritedClasses
+  parent: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
+  definition: DREditor.TypeListBase`1.GetInheritedClasses
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetInheritedClasses
+  name: GetInheritedClasses()
+  nameWithType: TypeListBase<IDialogueEvent>.GetInheritedClasses()
+  fullName: DREditor.TypeListBase<DREditor.Dialogues.Events.IDialogueEvent>.GetInheritedClasses()
+  nameWithType.vb: TypeListBase(Of IDialogueEvent).GetInheritedClasses()
+  fullName.vb: DREditor.TypeListBase(Of DREditor.Dialogues.Events.IDialogueEvent).GetInheritedClasses()
+  spec.csharp:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetInheritedClasses
+    name: GetInheritedClasses
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetInheritedClasses
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.GetInheritedClasses
+    name: GetInheritedClasses
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetInheritedClasses
+  - name: (
+  - name: )
+- uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateList
+  commentId: M:DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateList
+  parent: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
+  definition: DREditor.TypeListBase`1.UpdateList
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateList
+  name: UpdateList()
+  nameWithType: TypeListBase<IDialogueEvent>.UpdateList()
+  fullName: DREditor.TypeListBase<DREditor.Dialogues.Events.IDialogueEvent>.UpdateList()
+  nameWithType.vb: TypeListBase(Of IDialogueEvent).UpdateList()
+  fullName.vb: DREditor.TypeListBase(Of DREditor.Dialogues.Events.IDialogueEvent).UpdateList()
+  spec.csharp:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateList
+    name: UpdateList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateList
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateList
+    name: UpdateList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateList
+  - name: (
+  - name: )
+- uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+  commentId: M:DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+  parent: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
+  definition: DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___System_String____
+  name: UpdateTypeList(out List<Type>, out string[])
+  nameWithType: TypeListBase<IDialogueEvent>.UpdateTypeList(out List<Type>, out string[])
+  fullName: DREditor.TypeListBase<DREditor.Dialogues.Events.IDialogueEvent>.UpdateTypeList(out System.Collections.Generic.List<System.Type>, out string[])
+  nameWithType.vb: TypeListBase(Of IDialogueEvent).UpdateTypeList(List(Of Type), String())
+  fullName.vb: DREditor.TypeListBase(Of DREditor.Dialogues.Events.IDialogueEvent).UpdateTypeList(System.Collections.Generic.List(Of System.Type), String())
+  name.vb: UpdateTypeList(List(Of Type), String())
+  spec.csharp:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+    name: UpdateTypeList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___System_String____
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+    name: UpdateTypeList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___System_String____
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
+  commentId: M:DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
+  parent: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}
+  definition: DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___
+  name: UpdateTypeList(out List<Type>)
+  nameWithType: TypeListBase<IDialogueEvent>.UpdateTypeList(out List<Type>)
+  fullName: DREditor.TypeListBase<DREditor.Dialogues.Events.IDialogueEvent>.UpdateTypeList(out System.Collections.Generic.List<System.Type>)
+  nameWithType.vb: TypeListBase(Of IDialogueEvent).UpdateTypeList(List(Of Type))
+  fullName.vb: DREditor.TypeListBase(Of DREditor.Dialogues.Events.IDialogueEvent).UpdateTypeList(System.Collections.Generic.List(Of System.Type))
+  name.vb: UpdateTypeList(List(Of Type))
+  spec.csharp:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
+    name: UpdateTypeList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___
+  - name: (
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.TypeListBase{DREditor.Dialogues.Events.IDialogueEvent}.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
+    name: UpdateTypeList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -388,6 +568,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Dialogues.Events.DialogueEventList.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<DialogueEventList>(DialogueEventList)
+  nameWithType: ReflectionHelper.GetFieldNames<DialogueEventList>(DialogueEventList)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.Events.DialogueEventList>(DREditor.Dialogues.Events.DialogueEventList)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of DialogueEventList)(DialogueEventList)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.Events.DialogueEventList)(DREditor.Dialogues.Events.DialogueEventList)
+  name.vb: GetFieldNames(Of DialogueEventList)(DialogueEventList)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Events.DialogueEventList)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Events.DialogueEventList)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
+- uid: DREditor.Dialogues.Events.DialogueEventList.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<DialogueEventList>(DialogueEventList)
+  nameWithType: ReflectionHelper.GetFieldValues<DialogueEventList>(DialogueEventList)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.Events.DialogueEventList>(DREditor.Dialogues.Events.DialogueEventList)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of DialogueEventList)(DialogueEventList)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.Events.DialogueEventList)(DREditor.Dialogues.Events.DialogueEventList)
+  name.vb: GetFieldValues(Of DialogueEventList)(DialogueEventList)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Events.DialogueEventList)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Events.DialogueEventList)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
+- uid: DREditor.Dialogues.Events.DialogueEventList.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<DialogueEventList>(DialogueEventList)
+  nameWithType: DeepCopyExtensions.DeepCopy<DialogueEventList>(DialogueEventList)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.Events.DialogueEventList>(DREditor.Dialogues.Events.DialogueEventList)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of DialogueEventList)(DialogueEventList)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.Events.DialogueEventList)(DREditor.Dialogues.Events.DialogueEventList)
+  name.vb: DeepCopy(Of DialogueEventList)(DialogueEventList)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Events.DialogueEventList)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Events.DialogueEventList)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.DialogueEventList
+    name: DialogueEventList
+    isExternal: true
+    href: DREditor.Dialogues.Events.DialogueEventList.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -395,18 +716,137 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Collections.Generic.List{System.Type}
-  commentId: T:System.Collections.Generic.List{System.Type}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<Type>
-  nameWithType: List<Type>
-  fullName: System.Collections.Generic.List<System.Type>
-  nameWithType.vb: List(Of Type)
-  fullName.vb: System.Collections.Generic.List(Of System.Type)
-  name.vb: List(Of Type)
+- uid: DREditor.TypeListBase`1
+  commentId: T:DREditor.TypeListBase`1
+  isExternal: true
+  href: DREditor.TypeListBase-1.html
+  name: TypeListBase<T>
+  nameWithType: TypeListBase<T>
+  fullName: DREditor.TypeListBase<T>
+  nameWithType.vb: TypeListBase(Of T)
+  fullName.vb: DREditor.TypeListBase(Of T)
+  name.vb: TypeListBase(Of T)
   spec.csharp:
+  - uid: DREditor.TypeListBase`1
+    name: TypeListBase
+    isExternal: true
+    href: DREditor.TypeListBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.TypeListBase`1
+    name: TypeListBase
+    isExternal: true
+    href: DREditor.TypeListBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor
+  commentId: N:DREditor
+  isExternal: true
+  href: DREditor.html
+  name: DREditor
+  nameWithType: DREditor
+  fullName: DREditor
+- uid: DREditor.TypeListBase`1.ListOfClasses
+  commentId: F:DREditor.TypeListBase`1.ListOfClasses
+  isExternal: true
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_ListOfClasses
+  name: ListOfClasses
+  nameWithType: TypeListBase<T>.ListOfClasses
+  fullName: DREditor.TypeListBase<T>.ListOfClasses
+  nameWithType.vb: TypeListBase(Of T).ListOfClasses
+  fullName.vb: DREditor.TypeListBase(Of T).ListOfClasses
+- uid: DREditor.TypeListBase`1.GetList
+  commentId: M:DREditor.TypeListBase`1.GetList
+  isExternal: true
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetList
+  name: GetList()
+  nameWithType: TypeListBase<T>.GetList()
+  fullName: DREditor.TypeListBase<T>.GetList()
+  nameWithType.vb: TypeListBase(Of T).GetList()
+  fullName.vb: DREditor.TypeListBase(Of T).GetList()
+  spec.csharp:
+  - uid: DREditor.TypeListBase`1.GetList
+    name: GetList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetList
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.TypeListBase`1.GetList
+    name: GetList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetList
+  - name: (
+  - name: )
+- uid: DREditor.TypeListBase`1.GetInheritedClasses
+  commentId: M:DREditor.TypeListBase`1.GetInheritedClasses
+  isExternal: true
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetInheritedClasses
+  name: GetInheritedClasses()
+  nameWithType: TypeListBase<T>.GetInheritedClasses()
+  fullName: DREditor.TypeListBase<T>.GetInheritedClasses()
+  nameWithType.vb: TypeListBase(Of T).GetInheritedClasses()
+  fullName.vb: DREditor.TypeListBase(Of T).GetInheritedClasses()
+  spec.csharp:
+  - uid: DREditor.TypeListBase`1.GetInheritedClasses
+    name: GetInheritedClasses
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetInheritedClasses
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.TypeListBase`1.GetInheritedClasses
+    name: GetInheritedClasses
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_GetInheritedClasses
+  - name: (
+  - name: )
+- uid: DREditor.TypeListBase`1.UpdateList
+  commentId: M:DREditor.TypeListBase`1.UpdateList
+  isExternal: true
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateList
+  name: UpdateList()
+  nameWithType: TypeListBase<T>.UpdateList()
+  fullName: DREditor.TypeListBase<T>.UpdateList()
+  nameWithType.vb: TypeListBase(Of T).UpdateList()
+  fullName.vb: DREditor.TypeListBase(Of T).UpdateList()
+  spec.csharp:
+  - uid: DREditor.TypeListBase`1.UpdateList
+    name: UpdateList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateList
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.TypeListBase`1.UpdateList
+    name: UpdateList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateList
+  - name: (
+  - name: )
+- uid: DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+  commentId: M:DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+  isExternal: true
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___System_String____
+  name: UpdateTypeList(out List<Type>, out string[])
+  nameWithType: TypeListBase<T>.UpdateTypeList(out List<Type>, out string[])
+  fullName: DREditor.TypeListBase<T>.UpdateTypeList(out System.Collections.Generic.List<System.Type>, out string[])
+  nameWithType.vb: TypeListBase(Of T).UpdateTypeList(List(Of Type), String())
+  fullName.vb: DREditor.TypeListBase(Of T).UpdateTypeList(System.Collections.Generic.List(Of System.Type), String())
+  name.vb: UpdateTypeList(List(Of Type), String())
+  spec.csharp:
+  - uid: DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+    name: UpdateTypeList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___System_String____
+  - name: (
+  - name: out
+  - name: " "
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
@@ -417,7 +857,23 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.type
   - name: '>'
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
   spec.vb:
+  - uid: DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@,System.String[]@)
+    name: UpdateTypeList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___System_String____
+  - name: (
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
@@ -430,25 +886,50 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.type
   - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
+  commentId: M:DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___
+  name: UpdateTypeList(out List<Type>)
+  nameWithType: TypeListBase<T>.UpdateTypeList(out List<Type>)
+  fullName: DREditor.TypeListBase<T>.UpdateTypeList(out System.Collections.Generic.List<System.Type>)
+  nameWithType.vb: TypeListBase(Of T).UpdateTypeList(List(Of Type))
+  fullName.vb: DREditor.TypeListBase(Of T).UpdateTypeList(System.Collections.Generic.List(Of System.Type))
+  name.vb: UpdateTypeList(List(Of Type))
   spec.csharp:
+  - uid: DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
+    name: UpdateTypeList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___
+  - name: (
+  - name: out
+  - name: " "
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
   - name: <
-  - name: T
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
   - name: '>'
+  - name: )
   spec.vb:
+  - uid: DREditor.TypeListBase`1.UpdateTypeList(System.Collections.Generic.List{System.Type}@)
+    name: UpdateTypeList
+    isExternal: true
+    href: DREditor.TypeListBase-1.html#DREditor_TypeListBase_1_UpdateTypeList_System_Collections_Generic_List_System_Type___
+  - name: (
   - uid: System.Collections.Generic.List`1
     name: List
     isExternal: true
@@ -456,59 +937,184 @@ references:
   - name: (
   - name: Of
   - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
   - name: T
   - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
   spec.vb:
-  - uid: System
-    name: System
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: DREditor.Dialogues.Events.DialogueEventList.GetInheritedClasses*
-  commentId: Overload:DREditor.Dialogues.Events.DialogueEventList.GetInheritedClasses
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
   isExternal: true
-  href: DREditor.Dialogues.Events.DialogueEventList.html#DREditor_Dialogues_Events_DialogueEventList_GetInheritedClasses
-  name: GetInheritedClasses
-  nameWithType: DialogueEventList.GetInheritedClasses
-  fullName: DREditor.Dialogues.Events.DialogueEventList.GetInheritedClasses
-- uid: DREditor.Dialogues.Events.DialogueEventList.UpdateList*
-  commentId: Overload:DREditor.Dialogues.Events.DialogueEventList.UpdateList
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
   isExternal: true
-  href: DREditor.Dialogues.Events.DialogueEventList.html#DREditor_Dialogues_Events_DialogueEventList_UpdateList
-  name: UpdateList
-  nameWithType: DialogueEventList.UpdateList
-  fullName: DREditor.Dialogues.Events.DialogueEventList.UpdateList
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: DREditor.Dialogues.Events.DialogueEventList.#ctor*
   commentId: Overload:DREditor.Dialogues.Events.DialogueEventList.#ctor
   isExternal: true

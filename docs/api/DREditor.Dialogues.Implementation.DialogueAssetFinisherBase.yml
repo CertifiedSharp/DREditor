@@ -1,0 +1,1122 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  commentId: T:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  id: DialogueAssetFinisherBase
+  parent: DREditor.Dialogues.Implementation
+  children:
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.#ctor
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.FinishableComponents
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsUIBasedOnCurrentMode
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetNoLongerInDialogueValues
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.hasMenuAccess
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.hasStartedDialogue
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.inDialogue
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.inTrialMode
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.isWaitingForDialogueToFinish
+  langs:
+  - csharp
+  - vb
+  name: DialogueAssetFinisherBase
+  nameWithType: DialogueAssetFinisherBase
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: 'public abstract class DialogueAssetFinisherBase : DialogueFinisher, IEndDialogueEvent, IDialogueFinisher'
+    content.vb: Public MustInherit Class DialogueAssetFinisherBase Inherits DialogueFinisher Implements IEndDialogueEvent, IDialogueFinisher
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.Finishing.DialogueFinisher
+  derivedClasses:
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisher
+  - DREditor.Dialogues.Implementation.InstantDialogueFinisher
+  implements:
+  - DREditor.Dialogues.Finishing.IEndDialogueEvent
+  - DREditor.Dialogues.IDialogueFinisher
+  inheritedMembers:
+  - DREditor.Dialogues.Finishing.DialogueFinisher.OnDialogueFinished
+  - DREditor.Dialogues.Finishing.DialogueFinisher.OnFinishedDialogue
+  - DREditor.Dialogues.Finishing.DialogueFinisher.CallOnDialogueEnd
+  - DREditor.Dialogues.Finishing.DialogueFinisher.CallOnFinishedDialogue
+  - DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogue
+  - DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogueRoutine(System.Boolean)
+  - DREditor.Dialogues.Finishing.DialogueFinisher.SubscribeToOnFinishOfDialogue(System.Action)
+  - DREditor.Dialogues.Finishing.DialogueFinisher.UnsubscribeToOnFinishOfDialogue(System.Action)
+  - DREditor.Dialogues.Finishing.DialogueFinisher.OnDialogueEnd
+  extensionMethods:
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.hasStartedDialogue
+  commentId: F:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.hasStartedDialogue
+  id: hasStartedDialogue
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: hasStartedDialogue
+  nameWithType: DialogueAssetFinisherBase.hasStartedDialogue
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.hasStartedDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent hasStartedDialogue
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected hasStartedDialogue As BoolWithEvent
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.inDialogue
+  commentId: F:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.inDialogue
+  id: inDialogue
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: inDialogue
+  nameWithType: DialogueAssetFinisherBase.inDialogue
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.inDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inDialogue
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inDialogue As BoolWithEvent
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.hasMenuAccess
+  commentId: F:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.hasMenuAccess
+  id: hasMenuAccess
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: hasMenuAccess
+  nameWithType: DialogueAssetFinisherBase.hasMenuAccess
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.hasMenuAccess
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent hasMenuAccess
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected hasMenuAccess As BoolWithEvent
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.inTrialMode
+  commentId: F:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.inTrialMode
+  id: inTrialMode
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: inTrialMode
+  nameWithType: DialogueAssetFinisherBase.inTrialMode
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.inTrialMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inTrialMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inTrialMode As BoolWithEvent
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.isWaitingForDialogueToFinish
+  commentId: F:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.isWaitingForDialogueToFinish
+  id: isWaitingForDialogueToFinish
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: isWaitingForDialogueToFinish
+  nameWithType: DialogueAssetFinisherBase.isWaitingForDialogueToFinish
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.isWaitingForDialogueToFinish
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isWaitingForDialogueToFinish
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isWaitingForDialogueToFinish As BoolWithEvent
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsUIBasedOnCurrentMode
+  commentId: F:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsUIBasedOnCurrentMode
+  id: SetControlsUIBasedOnCurrentMode
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: SetControlsUIBasedOnCurrentMode
+  nameWithType: DialogueAssetFinisherBase.SetControlsUIBasedOnCurrentMode
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsUIBasedOnCurrentMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent SetControlsUIBasedOnCurrentMode
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected SetControlsUIBasedOnCurrentMode As SceneEvent
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.FinishableComponents
+  commentId: F:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.FinishableComponents
+  id: FinishableComponents
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: FinishableComponents
+  nameWithType: DialogueAssetFinisherBase.FinishableComponents
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.FinishableComponents
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<DialogueComponent> FinishableComponents
+    return:
+      type: System.Collections.Generic.List{DREditor.Dialogues.DialogueComponent}
+    content.vb: Protected FinishableComponents As List(Of DialogueComponent)
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetNoLongerInDialogueValues
+  commentId: M:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetNoLongerInDialogueValues
+  id: SetNoLongerInDialogueValues
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: SetNoLongerInDialogueValues()
+  nameWithType: DialogueAssetFinisherBase.SetNoLongerInDialogueValues()
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetNoLongerInDialogueValues()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SetNoLongerInDialogueValues()
+    content.vb: Protected Overridable Sub SetNoLongerInDialogueValues()
+  overload: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetNoLongerInDialogueValues*
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial
+  commentId: M:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial
+  id: EnableMenuAccessIfNotInTrial
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: EnableMenuAccessIfNotInTrial()
+  nameWithType: DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial()
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void EnableMenuAccessIfNotInTrial()
+    content.vb: Protected Overridable Sub EnableMenuAccessIfNotInTrial()
+  overload: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial*
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode
+  commentId: M:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode
+  id: SetControlsBasedOnCurrentMode
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: SetControlsBasedOnCurrentMode()
+  nameWithType: DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode()
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SetControlsBasedOnCurrentMode()
+    content.vb: Protected Overridable Sub SetControlsBasedOnCurrentMode()
+  overload: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode*
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.#ctor
+  commentId: M:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.#ctor
+  id: '#ctor'
+  parent: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+  langs:
+  - csharp
+  - vb
+  name: DialogueAssetFinisherBase()
+  nameWithType: DialogueAssetFinisherBase.DialogueAssetFinisherBase()
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.DialogueAssetFinisherBase()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueAssetFinisherBase.cs
+  assemblies:
+  - DREditor.Dialogues.Implementation
+  namespace: DREditor.Dialogues.Implementation
+  syntax:
+    content: protected DialogueAssetFinisherBase()
+    content.vb: Protected Sub New()
+  overload: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.#ctor*
+  nameWithType.vb: DialogueAssetFinisherBase.New()
+  fullName.vb: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.New()
+  name.vb: New()
+references:
+- uid: DREditor.Dialogues.Implementation
+  commentId: N:DREditor.Dialogues.Implementation
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Implementation
+  nameWithType: DREditor.Dialogues.Implementation
+  fullName: DREditor.Dialogues.Implementation
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher
+  commentId: T:DREditor.Dialogues.Finishing.DialogueFinisher
+  parent: DREditor.Dialogues.Finishing
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: DialogueFinisher
+  nameWithType: DialogueFinisher
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher
+- uid: DREditor.Dialogues.Finishing.IEndDialogueEvent
+  commentId: T:DREditor.Dialogues.Finishing.IEndDialogueEvent
+  parent: DREditor.Dialogues.Finishing
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/IEndDialogueEvent.cs
+  name: IEndDialogueEvent
+  nameWithType: IEndDialogueEvent
+  fullName: DREditor.Dialogues.Finishing.IEndDialogueEvent
+- uid: DREditor.Dialogues.IDialogueFinisher
+  commentId: T:DREditor.Dialogues.IDialogueFinisher
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueFinisher.cs
+  name: IDialogueFinisher
+  nameWithType: IDialogueFinisher
+  fullName: DREditor.Dialogues.IDialogueFinisher
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.OnDialogueFinished
+  commentId: F:DREditor.Dialogues.Finishing.DialogueFinisher.OnDialogueFinished
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: OnDialogueFinished
+  nameWithType: DialogueFinisher.OnDialogueFinished
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.OnDialogueFinished
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.OnFinishedDialogue
+  commentId: F:DREditor.Dialogues.Finishing.DialogueFinisher.OnFinishedDialogue
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: OnFinishedDialogue
+  nameWithType: DialogueFinisher.OnFinishedDialogue
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.OnFinishedDialogue
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.CallOnDialogueEnd
+  commentId: M:DREditor.Dialogues.Finishing.DialogueFinisher.CallOnDialogueEnd
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: CallOnDialogueEnd()
+  nameWithType: DialogueFinisher.CallOnDialogueEnd()
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.CallOnDialogueEnd()
+  spec.csharp:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.CallOnDialogueEnd
+    name: CallOnDialogueEnd
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.CallOnDialogueEnd
+    name: CallOnDialogueEnd
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.CallOnFinishedDialogue
+  commentId: M:DREditor.Dialogues.Finishing.DialogueFinisher.CallOnFinishedDialogue
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: CallOnFinishedDialogue()
+  nameWithType: DialogueFinisher.CallOnFinishedDialogue()
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.CallOnFinishedDialogue()
+  spec.csharp:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.CallOnFinishedDialogue
+    name: CallOnFinishedDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.CallOnFinishedDialogue
+    name: CallOnFinishedDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogue
+  commentId: M:DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogue
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: FinishDialogue()
+  nameWithType: DialogueFinisher.FinishDialogue()
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogue()
+  spec.csharp:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogue
+    name: FinishDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogue
+    name: FinishDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogueRoutine(System.Boolean)
+  commentId: M:DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogueRoutine(System.Boolean)
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: FinishDialogueRoutine(bool)
+  nameWithType: DialogueFinisher.FinishDialogueRoutine(bool)
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogueRoutine(bool)
+  nameWithType.vb: DialogueFinisher.FinishDialogueRoutine(Boolean)
+  fullName.vb: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogueRoutine(Boolean)
+  name.vb: FinishDialogueRoutine(Boolean)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogueRoutine(System.Boolean)
+    name: FinishDialogueRoutine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.FinishDialogueRoutine(System.Boolean)
+    name: FinishDialogueRoutine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.SubscribeToOnFinishOfDialogue(System.Action)
+  commentId: M:DREditor.Dialogues.Finishing.DialogueFinisher.SubscribeToOnFinishOfDialogue(System.Action)
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: SubscribeToOnFinishOfDialogue(Action)
+  nameWithType: DialogueFinisher.SubscribeToOnFinishOfDialogue(Action)
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.SubscribeToOnFinishOfDialogue(System.Action)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.SubscribeToOnFinishOfDialogue(System.Action)
+    name: SubscribeToOnFinishOfDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.SubscribeToOnFinishOfDialogue(System.Action)
+    name: SubscribeToOnFinishOfDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.UnsubscribeToOnFinishOfDialogue(System.Action)
+  commentId: M:DREditor.Dialogues.Finishing.DialogueFinisher.UnsubscribeToOnFinishOfDialogue(System.Action)
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: UnsubscribeToOnFinishOfDialogue(Action)
+  nameWithType: DialogueFinisher.UnsubscribeToOnFinishOfDialogue(Action)
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.UnsubscribeToOnFinishOfDialogue(System.Action)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.UnsubscribeToOnFinishOfDialogue(System.Action)
+    name: UnsubscribeToOnFinishOfDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Finishing.DialogueFinisher.UnsubscribeToOnFinishOfDialogue(System.Action)
+    name: UnsubscribeToOnFinishOfDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.Dialogues.Finishing.DialogueFinisher.OnDialogueEnd
+  commentId: E:DREditor.Dialogues.Finishing.DialogueFinisher.OnDialogueEnd
+  parent: DREditor.Dialogues.Finishing.DialogueFinisher
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Finishing/DialogueFinisher.cs
+  name: OnDialogueEnd
+  nameWithType: DialogueFinisher.OnDialogueEnd
+  fullName: DREditor.Dialogues.Finishing.DialogueFinisher.OnDialogueEnd
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<DialogueAssetFinisherBase>(DialogueAssetFinisherBase)
+  nameWithType: ReflectionHelper.GetFieldNames<DialogueAssetFinisherBase>(DialogueAssetFinisherBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.Implementation.DialogueAssetFinisherBase>(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of DialogueAssetFinisherBase)(DialogueAssetFinisherBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+  name.vb: GetFieldNames(Of DialogueAssetFinisherBase)(DialogueAssetFinisherBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<DialogueAssetFinisherBase>(DialogueAssetFinisherBase)
+  nameWithType: ReflectionHelper.GetFieldValues<DialogueAssetFinisherBase>(DialogueAssetFinisherBase)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.Implementation.DialogueAssetFinisherBase>(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of DialogueAssetFinisherBase)(DialogueAssetFinisherBase)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+  name.vb: GetFieldValues(Of DialogueAssetFinisherBase)(DialogueAssetFinisherBase)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<DialogueAssetFinisherBase>(DialogueAssetFinisherBase)
+  nameWithType: DeepCopyExtensions.DeepCopy<DialogueAssetFinisherBase>(DialogueAssetFinisherBase)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.Implementation.DialogueAssetFinisherBase>(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of DialogueAssetFinisherBase)(DialogueAssetFinisherBase)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+  name.vb: DeepCopy(Of DialogueAssetFinisherBase)(DialogueAssetFinisherBase)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Implementation.DialogueAssetFinisherBase)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase
+    name: DialogueAssetFinisherBase
+    isExternal: true
+    href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues.Finishing
+  commentId: N:DREditor.Dialogues.Finishing
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Finishing
+  nameWithType: DREditor.Dialogues.Finishing
+  fullName: DREditor.Dialogues.Finishing
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Finishing
+    name: Finishing
+    isExternal: true
+    href: DREditor.Dialogues.Finishing.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Finishing
+    name: Finishing
+    isExternal: true
+    href: DREditor.Dialogues.Finishing.html
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: System.Collections.Generic.List{DREditor.Dialogues.DialogueComponent}
+  commentId: T:System.Collections.Generic.List{DREditor.Dialogues.DialogueComponent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<DialogueComponent>
+  nameWithType: List<DialogueComponent>
+  fullName: System.Collections.Generic.List<DREditor.Dialogues.DialogueComponent>
+  nameWithType.vb: List(Of DialogueComponent)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Dialogues.DialogueComponent)
+  name.vb: List(Of DialogueComponent)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Dialogues.DialogueComponent
+    name: DialogueComponent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.DialogueComponent
+    name: DialogueComponent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetNoLongerInDialogueValues*
+  commentId: Overload:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetNoLongerInDialogueValues
+  isExternal: true
+  href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html#DREditor_Dialogues_Implementation_DialogueAssetFinisherBase_SetNoLongerInDialogueValues
+  name: SetNoLongerInDialogueValues
+  nameWithType: DialogueAssetFinisherBase.SetNoLongerInDialogueValues
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetNoLongerInDialogueValues
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial*
+  commentId: Overload:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial
+  isExternal: true
+  href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html#DREditor_Dialogues_Implementation_DialogueAssetFinisherBase_EnableMenuAccessIfNotInTrial
+  name: EnableMenuAccessIfNotInTrial
+  nameWithType: DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.EnableMenuAccessIfNotInTrial
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode*
+  commentId: Overload:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode
+  isExternal: true
+  href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html#DREditor_Dialogues_Implementation_DialogueAssetFinisherBase_SetControlsBasedOnCurrentMode
+  name: SetControlsBasedOnCurrentMode
+  nameWithType: DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.SetControlsBasedOnCurrentMode
+- uid: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.#ctor*
+  commentId: Overload:DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.#ctor
+  isExternal: true
+  href: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.html#DREditor_Dialogues_Implementation_DialogueAssetFinisherBase__ctor
+  name: DialogueAssetFinisherBase
+  nameWithType: DialogueAssetFinisherBase.DialogueAssetFinisherBase
+  fullName: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.DialogueAssetFinisherBase
+  nameWithType.vb: DialogueAssetFinisherBase.New
+  fullName.vb: DREditor.Dialogues.Implementation.DialogueAssetFinisherBase.New
+  name.vb: New

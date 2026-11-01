@@ -1,0 +1,2160 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Doors.Door
+  commentId: T:DREditor.Doors.Door
+  id: Door
+  parent: DREditor.Doors
+  children:
+  - DREditor.Doors.Door.#ctor
+  - DREditor.Doors.Door.AddDoorControl
+  - DREditor.Doors.Door.CheckIfBeenThroughDoor
+  - DREditor.Doors.Door.CheckIfSaveDialogue
+  - DREditor.Doors.Door.ClearLockData
+  - DREditor.Doors.Door.EvaluateLock(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - DREditor.Doors.Door.GetDoorName
+  - DREditor.Doors.Door.GetGameObjectName
+  - DREditor.Doors.Door.GetSaveDisplayName
+  - DREditor.Doors.Door.IsTPFD
+  - DREditor.Doors.Door.Load(System.Object)
+  - DREditor.Doors.Door.LockCheck
+  - DREditor.Doors.Door.OnDestroy
+  - DREditor.Doors.Door.OnEventRaised
+  - DREditor.Doors.Door.OnTriggerEnter(UnityEngine.Collider)
+  - DREditor.Doors.Door.RemoveDoorControl
+  - DREditor.Doors.Door.Save
+  - DREditor.Doors.Door.SelectObject
+  - DREditor.Doors.Door.Start
+  - DREditor.Doors.Door.changingObserve
+  - DREditor.Doors.Door.inDialogue
+  - DREditor.Doors.Door.inMenu
+  - DREditor.Doors.Door.isLoadingToRoom
+  - DREditor.Doors.Door.leaveAskEvent
+  - DREditor.Doors.Door.onFinishedLoadingRoom
+  langs:
+  - csharp
+  - vb
+  name: Door
+  nameWithType: Door
+  fullName: DREditor.Doors.Door
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DoorBase, IDoor, IDialogueHolder, ISelectableObject, ISceneEventListener\n\n")]
+
+      public class Door : DoorBase, IGateHolder, INameDisplayable, IDoor, IDialogueHolder, ISelectableObject, ISceneEventListener
+    content.vb: >-
+      <ClassHeader("DoorBase, IDoor, IDialogueHolder, ISelectableObject, ISceneEventListener" & vbLf & vbLf)>
+
+      Public Class Door Inherits DoorBase Implements IGateHolder, INameDisplayable, IDoor, IDialogueHolder, ISelectableObject, ISceneEventListener
+  inheritance:
+  - System.Object
+  - DREditor.Doors.DoorBase
+  implements:
+  - DREditor.Gates.IGateHolder
+  - DREditor.Processables.INameDisplayable
+  - DREditor.Doors.IDoor
+  - DREditor.Dialogues.IDialogueHolder
+  - DREditor.EventObjects.ISelectableObject
+  - DREditor.EventObjects.ISceneEventListener
+  inheritedMembers:
+  - DREditor.Doors.DoorBase.setGateway
+  - DREditor.Doors.DoorBase.tpfdControlsKey
+  - DREditor.Doors.DoorBase.isHitbox
+  - DREditor.Doors.DoorBase.isTPFD
+  - DREditor.Doors.DoorBase.data
+  - DREditor.Doors.DoorBase.disableAbilityEvent
+  - DREditor.Doors.DoorBase.inLeaveProcess
+  - DREditor.Doors.DoorBase.hasMenuAccess
+  - DREditor.Doors.DoorBase.currentControlsKey
+  - DREditor.Doors.DoorBase.checkOverlay
+  - DREditor.Doors.DoorBase.DialogueManager
+  - DREditor.Doors.DoorBase.CheckLocks
+  - DREditor.Doors.DoorBase.DoorIsLocked
+  - DREditor.Doors.DoorBase.EvaluateLock
+  - DREditor.Doors.DoorBase.DialogueIsValid(DREditor.Dialogues.Dialogue)
+  - DREditor.Doors.DoorBase.DoorLocked(DREditor.Dialogues.Dialogue)
+  - DREditor.Doors.DoorBase.PassedLock
+  - DREditor.Doors.DoorBase.PassedLockTPFD
+  - DREditor.Doors.DoorBase.DummyNoOption
+  - DREditor.Doors.DoorBase.PassedLockThreeD
+  - DREditor.Doors.DoorBase.EvaluateUnlockDialogue
+  - DREditor.Doors.DoorBase.PlayUnlockedDialogue(DREditor.Dialogues.Dialogue)
+  - DREditor.Doors.DoorBase.ChangeRoom
+  - DREditor.Doors.DoorBase.SetIdentified(System.Boolean)
+  - DREditor.Doors.DoorBase.GetSetGateway
+  - DREditor.Doors.DoorBase.DisplayName
+  extensionMethods:
+  - DREditor.Doors.Door.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Doors.Door.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Doors.Door.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DoorBase, IDoor, IDialogueHolder, ISelectableObject, ISceneEventListener
+
+- uid: DREditor.Doors.Door.onFinishedLoadingRoom
+  commentId: F:DREditor.Doors.Door.onFinishedLoadingRoom
+  id: onFinishedLoadingRoom
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: onFinishedLoadingRoom
+  nameWithType: Door.onFinishedLoadingRoom
+  fullName: DREditor.Doors.Door.onFinishedLoadingRoom
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onFinishedLoadingRoom
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onFinishedLoadingRoom As SceneEvent
+- uid: DREditor.Doors.Door.changingObserve
+  commentId: F:DREditor.Doors.Door.changingObserve
+  id: changingObserve
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: changingObserve
+  nameWithType: Door.changingObserve
+  fullName: DREditor.Doors.Door.changingObserve
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent changingObserve
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected changingObserve As BoolWithEvent
+- uid: DREditor.Doors.Door.inMenu
+  commentId: F:DREditor.Doors.Door.inMenu
+  id: inMenu
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: inMenu
+  nameWithType: Door.inMenu
+  fullName: DREditor.Doors.Door.inMenu
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inMenu
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inMenu As BoolWithEvent
+- uid: DREditor.Doors.Door.isLoadingToRoom
+  commentId: F:DREditor.Doors.Door.isLoadingToRoom
+  id: isLoadingToRoom
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: isLoadingToRoom
+  nameWithType: Door.isLoadingToRoom
+  fullName: DREditor.Doors.Door.isLoadingToRoom
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isLoadingToRoom
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isLoadingToRoom As BoolWithEvent
+- uid: DREditor.Doors.Door.inDialogue
+  commentId: F:DREditor.Doors.Door.inDialogue
+  id: inDialogue
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: inDialogue
+  nameWithType: Door.inDialogue
+  fullName: DREditor.Doors.Door.inDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inDialogue
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inDialogue As BoolWithEvent
+- uid: DREditor.Doors.Door.leaveAskEvent
+  commentId: F:DREditor.Doors.Door.leaveAskEvent
+  id: leaveAskEvent
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: leaveAskEvent
+  nameWithType: Door.leaveAskEvent
+  fullName: DREditor.Doors.Door.leaveAskEvent
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected string leaveAskEvent
+    return:
+      type: System.String
+    content.vb: Protected leaveAskEvent As String
+- uid: DREditor.Doors.Door.Start
+  commentId: M:DREditor.Doors.Door.Start
+  id: Start
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Door.Start()
+  fullName: DREditor.Doors.Door.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void Start()
+    content.vb: Protected Overrides Sub Start()
+  overridden: DREditor.Doors.DoorBase.Start
+  overload: DREditor.Doors.Door.Start*
+- uid: DREditor.Doors.Door.OnEventRaised
+  commentId: M:DREditor.Doors.Door.OnEventRaised
+  id: OnEventRaised
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: OnEventRaised()
+  nameWithType: Door.OnEventRaised()
+  fullName: DREditor.Doors.Door.OnEventRaised()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnEventRaised()
+    content.vb: Public Overridable Sub OnEventRaised()
+  overload: DREditor.Doors.Door.OnEventRaised*
+  implements:
+  - DREditor.EventObjects.ISceneEventListener.OnEventRaised
+- uid: DREditor.Doors.Door.AddDoorControl
+  commentId: M:DREditor.Doors.Door.AddDoorControl
+  id: AddDoorControl
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: AddDoorControl()
+  nameWithType: Door.AddDoorControl()
+  fullName: DREditor.Doors.Door.AddDoorControl()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void AddDoorControl()
+    content.vb: Public Overridable Sub AddDoorControl()
+  overload: DREditor.Doors.Door.AddDoorControl*
+  implements:
+  - DREditor.Doors.IDoor.AddDoorControl
+- uid: DREditor.Doors.Door.OnDestroy
+  commentId: M:DREditor.Doors.Door.OnDestroy
+  id: OnDestroy
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: Door.OnDestroy()
+  fullName: DREditor.Doors.Door.OnDestroy()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnDestroy()
+    content.vb: Protected Overridable Sub OnDestroy()
+  overload: DREditor.Doors.Door.OnDestroy*
+- uid: DREditor.Doors.Door.RemoveDoorControl
+  commentId: M:DREditor.Doors.Door.RemoveDoorControl
+  id: RemoveDoorControl
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: RemoveDoorControl()
+  nameWithType: Door.RemoveDoorControl()
+  fullName: DREditor.Doors.Door.RemoveDoorControl()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void RemoveDoorControl()
+    content.vb: Public Overridable Sub RemoveDoorControl()
+  overload: DREditor.Doors.Door.RemoveDoorControl*
+  implements:
+  - DREditor.Doors.IDoor.RemoveDoorControl
+- uid: DREditor.Doors.Door.EvaluateLock(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:DREditor.Doors.Door.EvaluateLock(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: EvaluateLock(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: EvaluateLock(CallbackContext)
+  nameWithType: Door.EvaluateLock(InputAction.CallbackContext)
+  fullName: DREditor.Doors.Door.EvaluateLock(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void EvaluateLock(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Protected Overridable Sub EvaluateLock(context As InputAction.CallbackContext)
+  overload: DREditor.Doors.Door.EvaluateLock*
+- uid: DREditor.Doors.Door.OnTriggerEnter(UnityEngine.Collider)
+  commentId: M:DREditor.Doors.Door.OnTriggerEnter(UnityEngine.Collider)
+  id: OnTriggerEnter(UnityEngine.Collider)
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: OnTriggerEnter(Collider)
+  nameWithType: Door.OnTriggerEnter(Collider)
+  fullName: DREditor.Doors.Door.OnTriggerEnter(UnityEngine.Collider)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnTriggerEnter(Collider other)
+    parameters:
+    - id: other
+      type: UnityEngine.Collider
+    content.vb: Protected Overridable Sub OnTriggerEnter(other As Collider)
+  overload: DREditor.Doors.Door.OnTriggerEnter*
+- uid: DREditor.Doors.Door.SelectObject
+  commentId: M:DREditor.Doors.Door.SelectObject
+  id: SelectObject
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: SelectObject()
+  nameWithType: Door.SelectObject()
+  fullName: DREditor.Doors.Door.SelectObject()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void SelectObject()
+    content.vb: Public Overridable Sub SelectObject()
+  overload: DREditor.Doors.Door.SelectObject*
+  implements:
+  - DREditor.EventObjects.ISelectableObject.SelectObject
+- uid: DREditor.Doors.Door.LockCheck
+  commentId: M:DREditor.Doors.Door.LockCheck
+  id: LockCheck
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: LockCheck()
+  nameWithType: Door.LockCheck()
+  fullName: DREditor.Doors.Door.LockCheck()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void LockCheck()
+    content.vb: Protected Overridable Sub LockCheck()
+  overload: DREditor.Doors.Door.LockCheck*
+- uid: DREditor.Doors.Door.ClearLockData
+  commentId: M:DREditor.Doors.Door.ClearLockData
+  id: ClearLockData
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: ClearLockData()
+  nameWithType: Door.ClearLockData()
+  fullName: DREditor.Doors.Door.ClearLockData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ClearLockData()
+    content.vb: Public Overridable Sub ClearLockData()
+  overload: DREditor.Doors.Door.ClearLockData*
+  implements:
+  - DREditor.Doors.IDoor.ClearLockData
+- uid: DREditor.Doors.Door.GetGameObjectName
+  commentId: M:DREditor.Doors.Door.GetGameObjectName
+  id: GetGameObjectName
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: GetGameObjectName()
+  nameWithType: Door.GetGameObjectName()
+  fullName: DREditor.Doors.Door.GetGameObjectName()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual string GetGameObjectName()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overridable Function GetGameObjectName() As String
+  overload: DREditor.Doors.Door.GetGameObjectName*
+  implements:
+  - DREditor.Doors.IDoor.GetGameObjectName
+- uid: DREditor.Doors.Door.IsTPFD
+  commentId: M:DREditor.Doors.Door.IsTPFD
+  id: IsTPFD
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: IsTPFD()
+  nameWithType: Door.IsTPFD()
+  fullName: DREditor.Doors.Door.IsTPFD()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool IsTPFD()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function IsTPFD() As Boolean
+  overload: DREditor.Doors.Door.IsTPFD*
+  implements:
+  - DREditor.Doors.IDoor.IsTPFD
+- uid: DREditor.Doors.Door.GetDoorName
+  commentId: M:DREditor.Doors.Door.GetDoorName
+  id: GetDoorName
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: GetDoorName()
+  nameWithType: Door.GetDoorName()
+  fullName: DREditor.Doors.Door.GetDoorName()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual string GetDoorName()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overridable Function GetDoorName() As String
+  overload: DREditor.Doors.Door.GetDoorName*
+  implements:
+  - DREditor.Doors.IDoor.GetDoorName
+- uid: DREditor.Doors.Door.GetSaveDisplayName
+  commentId: M:DREditor.Doors.Door.GetSaveDisplayName
+  id: GetSaveDisplayName
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: GetSaveDisplayName()
+  nameWithType: Door.GetSaveDisplayName()
+  fullName: DREditor.Doors.Door.GetSaveDisplayName()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual string GetSaveDisplayName()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overridable Function GetSaveDisplayName() As String
+  overload: DREditor.Doors.Door.GetSaveDisplayName*
+  implements:
+  - DREditor.Doors.IDoor.GetSaveDisplayName
+- uid: DREditor.Doors.Door.Save
+  commentId: M:DREditor.Doors.Door.Save
+  id: Save
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: Save()
+  nameWithType: Door.Save()
+  fullName: DREditor.Doors.Door.Save()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual object Save()
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Overridable Function Save() As Object
+  overload: DREditor.Doors.Door.Save*
+  implements:
+  - DREditor.Doors.IDoor.Save
+- uid: DREditor.Doors.Door.Load(System.Object)
+  commentId: M:DREditor.Doors.Door.Load(System.Object)
+  id: Load(System.Object)
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: Load(object)
+  nameWithType: Door.Load(object)
+  fullName: DREditor.Doors.Door.Load(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Load(object data)
+    parameters:
+    - id: data
+      type: System.Object
+      description: ''
+    content.vb: Public Overridable Sub Load(data As Object)
+  overload: DREditor.Doors.Door.Load*
+  implements:
+  - DREditor.Doors.IDoor.Load(System.Object)
+  nameWithType.vb: Door.Load(Object)
+  fullName.vb: DREditor.Doors.Door.Load(Object)
+  name.vb: Load(Object)
+- uid: DREditor.Doors.Door.CheckIfBeenThroughDoor
+  commentId: M:DREditor.Doors.Door.CheckIfBeenThroughDoor
+  id: CheckIfBeenThroughDoor
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: CheckIfBeenThroughDoor()
+  nameWithType: Door.CheckIfBeenThroughDoor()
+  fullName: DREditor.Doors.Door.CheckIfBeenThroughDoor()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: protected virtual void CheckIfBeenThroughDoor()
+    content.vb: Protected Overridable Sub CheckIfBeenThroughDoor()
+  overload: DREditor.Doors.Door.CheckIfBeenThroughDoor*
+- uid: DREditor.Doors.Door.CheckIfSaveDialogue
+  commentId: M:DREditor.Doors.Door.CheckIfSaveDialogue
+  id: CheckIfSaveDialogue
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: CheckIfSaveDialogue()
+  nameWithType: Door.CheckIfSaveDialogue()
+  fullName: DREditor.Doors.Door.CheckIfSaveDialogue()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool CheckIfSaveDialogue()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function CheckIfSaveDialogue() As Boolean
+  overload: DREditor.Doors.Door.CheckIfSaveDialogue*
+  implements:
+  - DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+- uid: DREditor.Doors.Door.#ctor
+  commentId: M:DREditor.Doors.Door.#ctor
+  id: '#ctor'
+  parent: DREditor.Doors.Door
+  langs:
+  - csharp
+  - vb
+  name: Door()
+  nameWithType: Door.Door()
+  fullName: DREditor.Doors.Door.Door()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Doors/Door.cs
+  assemblies:
+  - DREditor.Doors
+  namespace: DREditor.Doors
+  syntax:
+    content: public Door()
+    content.vb: Public Sub New()
+  overload: DREditor.Doors.Door.#ctor*
+  nameWithType.vb: Door.New()
+  fullName.vb: DREditor.Doors.Door.New()
+  name.vb: New()
+references:
+- uid: DREditor.Doors
+  commentId: N:DREditor.Doors
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Doors
+  nameWithType: DREditor.Doors
+  fullName: DREditor.Doors
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Doors
+    name: Doors
+    isExternal: true
+    href: DREditor.Doors.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Doors
+    name: Doors
+    isExternal: true
+    href: DREditor.Doors.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Doors.DoorBase
+  commentId: T:DREditor.Doors.DoorBase
+  parent: DREditor.Doors
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html
+  name: DoorBase
+  nameWithType: DoorBase
+  fullName: DREditor.Doors.DoorBase
+- uid: DREditor.Gates.IGateHolder
+  commentId: T:DREditor.Gates.IGateHolder
+  parent: DREditor.Gates
+  isExternal: true
+  href: DREditor.Gates.IGateHolder.html
+  name: IGateHolder
+  nameWithType: IGateHolder
+  fullName: DREditor.Gates.IGateHolder
+- uid: DREditor.Processables.INameDisplayable
+  commentId: T:DREditor.Processables.INameDisplayable
+  parent: DREditor.Processables
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Processables/INameDisplayable.cs
+  name: INameDisplayable
+  nameWithType: INameDisplayable
+  fullName: DREditor.Processables.INameDisplayable
+- uid: DREditor.Doors.IDoor
+  commentId: T:DREditor.Doors.IDoor
+  parent: DREditor.Doors
+  isExternal: true
+  href: DREditor.Doors.IDoor.html
+  name: IDoor
+  nameWithType: IDoor
+  fullName: DREditor.Doors.IDoor
+- uid: DREditor.Dialogues.IDialogueHolder
+  commentId: T:DREditor.Dialogues.IDialogueHolder
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: IDialogueHolder
+  nameWithType: IDialogueHolder
+  fullName: DREditor.Dialogues.IDialogueHolder
+- uid: DREditor.EventObjects.ISelectableObject
+  commentId: T:DREditor.EventObjects.ISelectableObject
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISelectableObject.cs
+  name: ISelectableObject
+  nameWithType: ISelectableObject
+  fullName: DREditor.EventObjects.ISelectableObject
+- uid: DREditor.EventObjects.ISceneEventListener
+  commentId: T:DREditor.EventObjects.ISceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: ISceneEventListener
+  nameWithType: ISceneEventListener
+  fullName: DREditor.EventObjects.ISceneEventListener
+- uid: DREditor.Doors.DoorBase.setGateway
+  commentId: F:DREditor.Doors.DoorBase.setGateway
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_setGateway
+  name: setGateway
+  nameWithType: DoorBase.setGateway
+  fullName: DREditor.Doors.DoorBase.setGateway
+- uid: DREditor.Doors.DoorBase.tpfdControlsKey
+  commentId: F:DREditor.Doors.DoorBase.tpfdControlsKey
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_tpfdControlsKey
+  name: tpfdControlsKey
+  nameWithType: DoorBase.tpfdControlsKey
+  fullName: DREditor.Doors.DoorBase.tpfdControlsKey
+- uid: DREditor.Doors.DoorBase.isHitbox
+  commentId: F:DREditor.Doors.DoorBase.isHitbox
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_isHitbox
+  name: isHitbox
+  nameWithType: DoorBase.isHitbox
+  fullName: DREditor.Doors.DoorBase.isHitbox
+- uid: DREditor.Doors.DoorBase.isTPFD
+  commentId: F:DREditor.Doors.DoorBase.isTPFD
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_isTPFD
+  name: isTPFD
+  nameWithType: DoorBase.isTPFD
+  fullName: DREditor.Doors.DoorBase.isTPFD
+- uid: DREditor.Doors.DoorBase.data
+  commentId: F:DREditor.Doors.DoorBase.data
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_data
+  name: data
+  nameWithType: DoorBase.data
+  fullName: DREditor.Doors.DoorBase.data
+- uid: DREditor.Doors.DoorBase.disableAbilityEvent
+  commentId: F:DREditor.Doors.DoorBase.disableAbilityEvent
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_disableAbilityEvent
+  name: disableAbilityEvent
+  nameWithType: DoorBase.disableAbilityEvent
+  fullName: DREditor.Doors.DoorBase.disableAbilityEvent
+- uid: DREditor.Doors.DoorBase.inLeaveProcess
+  commentId: F:DREditor.Doors.DoorBase.inLeaveProcess
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_inLeaveProcess
+  name: inLeaveProcess
+  nameWithType: DoorBase.inLeaveProcess
+  fullName: DREditor.Doors.DoorBase.inLeaveProcess
+- uid: DREditor.Doors.DoorBase.hasMenuAccess
+  commentId: F:DREditor.Doors.DoorBase.hasMenuAccess
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_hasMenuAccess
+  name: hasMenuAccess
+  nameWithType: DoorBase.hasMenuAccess
+  fullName: DREditor.Doors.DoorBase.hasMenuAccess
+- uid: DREditor.Doors.DoorBase.currentControlsKey
+  commentId: F:DREditor.Doors.DoorBase.currentControlsKey
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_currentControlsKey
+  name: currentControlsKey
+  nameWithType: DoorBase.currentControlsKey
+  fullName: DREditor.Doors.DoorBase.currentControlsKey
+- uid: DREditor.Doors.DoorBase.checkOverlay
+  commentId: F:DREditor.Doors.DoorBase.checkOverlay
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_checkOverlay
+  name: checkOverlay
+  nameWithType: DoorBase.checkOverlay
+  fullName: DREditor.Doors.DoorBase.checkOverlay
+- uid: DREditor.Doors.DoorBase.DialogueManager
+  commentId: F:DREditor.Doors.DoorBase.DialogueManager
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DialogueManager
+  name: DialogueManager
+  nameWithType: DoorBase.DialogueManager
+  fullName: DREditor.Doors.DoorBase.DialogueManager
+- uid: DREditor.Doors.DoorBase.CheckLocks
+  commentId: M:DREditor.Doors.DoorBase.CheckLocks
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_CheckLocks
+  name: CheckLocks()
+  nameWithType: DoorBase.CheckLocks()
+  fullName: DREditor.Doors.DoorBase.CheckLocks()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.CheckLocks
+    name: CheckLocks
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_CheckLocks
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.CheckLocks
+    name: CheckLocks
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_CheckLocks
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.DoorIsLocked
+  commentId: M:DREditor.Doors.DoorBase.DoorIsLocked
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DoorIsLocked
+  name: DoorIsLocked()
+  nameWithType: DoorBase.DoorIsLocked()
+  fullName: DREditor.Doors.DoorBase.DoorIsLocked()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.DoorIsLocked
+    name: DoorIsLocked
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DoorIsLocked
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.DoorIsLocked
+    name: DoorIsLocked
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DoorIsLocked
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.EvaluateLock
+  commentId: M:DREditor.Doors.DoorBase.EvaluateLock
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_EvaluateLock
+  name: EvaluateLock()
+  nameWithType: DoorBase.EvaluateLock()
+  fullName: DREditor.Doors.DoorBase.EvaluateLock()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.EvaluateLock
+    name: EvaluateLock
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_EvaluateLock
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.EvaluateLock
+    name: EvaluateLock
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_EvaluateLock
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.DialogueIsValid(DREditor.Dialogues.Dialogue)
+  commentId: M:DREditor.Doors.DoorBase.DialogueIsValid(DREditor.Dialogues.Dialogue)
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DialogueIsValid_DREditor_Dialogues_Dialogue_
+  name: DialogueIsValid(Dialogue)
+  nameWithType: DoorBase.DialogueIsValid(Dialogue)
+  fullName: DREditor.Doors.DoorBase.DialogueIsValid(DREditor.Dialogues.Dialogue)
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.DialogueIsValid(DREditor.Dialogues.Dialogue)
+    name: DialogueIsValid
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DialogueIsValid_DREditor_Dialogues_Dialogue_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.DialogueIsValid(DREditor.Dialogues.Dialogue)
+    name: DialogueIsValid
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DialogueIsValid_DREditor_Dialogues_Dialogue_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: )
+- uid: DREditor.Doors.DoorBase.DoorLocked(DREditor.Dialogues.Dialogue)
+  commentId: M:DREditor.Doors.DoorBase.DoorLocked(DREditor.Dialogues.Dialogue)
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DoorLocked_DREditor_Dialogues_Dialogue_
+  name: DoorLocked(Dialogue)
+  nameWithType: DoorBase.DoorLocked(Dialogue)
+  fullName: DREditor.Doors.DoorBase.DoorLocked(DREditor.Dialogues.Dialogue)
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.DoorLocked(DREditor.Dialogues.Dialogue)
+    name: DoorLocked
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DoorLocked_DREditor_Dialogues_Dialogue_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.DoorLocked(DREditor.Dialogues.Dialogue)
+    name: DoorLocked
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DoorLocked_DREditor_Dialogues_Dialogue_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: )
+- uid: DREditor.Doors.DoorBase.PassedLock
+  commentId: M:DREditor.Doors.DoorBase.PassedLock
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLock
+  name: PassedLock()
+  nameWithType: DoorBase.PassedLock()
+  fullName: DREditor.Doors.DoorBase.PassedLock()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.PassedLock
+    name: PassedLock
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLock
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.PassedLock
+    name: PassedLock
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLock
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.PassedLockTPFD
+  commentId: M:DREditor.Doors.DoorBase.PassedLockTPFD
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLockTPFD
+  name: PassedLockTPFD()
+  nameWithType: DoorBase.PassedLockTPFD()
+  fullName: DREditor.Doors.DoorBase.PassedLockTPFD()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.PassedLockTPFD
+    name: PassedLockTPFD
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLockTPFD
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.PassedLockTPFD
+    name: PassedLockTPFD
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLockTPFD
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.DummyNoOption
+  commentId: M:DREditor.Doors.DoorBase.DummyNoOption
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DummyNoOption
+  name: DummyNoOption()
+  nameWithType: DoorBase.DummyNoOption()
+  fullName: DREditor.Doors.DoorBase.DummyNoOption()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.DummyNoOption
+    name: DummyNoOption
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DummyNoOption
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.DummyNoOption
+    name: DummyNoOption
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DummyNoOption
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.PassedLockThreeD
+  commentId: M:DREditor.Doors.DoorBase.PassedLockThreeD
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLockThreeD
+  name: PassedLockThreeD()
+  nameWithType: DoorBase.PassedLockThreeD()
+  fullName: DREditor.Doors.DoorBase.PassedLockThreeD()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.PassedLockThreeD
+    name: PassedLockThreeD
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLockThreeD
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.PassedLockThreeD
+    name: PassedLockThreeD
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PassedLockThreeD
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.EvaluateUnlockDialogue
+  commentId: M:DREditor.Doors.DoorBase.EvaluateUnlockDialogue
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_EvaluateUnlockDialogue
+  name: EvaluateUnlockDialogue()
+  nameWithType: DoorBase.EvaluateUnlockDialogue()
+  fullName: DREditor.Doors.DoorBase.EvaluateUnlockDialogue()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.EvaluateUnlockDialogue
+    name: EvaluateUnlockDialogue
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_EvaluateUnlockDialogue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.EvaluateUnlockDialogue
+    name: EvaluateUnlockDialogue
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_EvaluateUnlockDialogue
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.PlayUnlockedDialogue(DREditor.Dialogues.Dialogue)
+  commentId: M:DREditor.Doors.DoorBase.PlayUnlockedDialogue(DREditor.Dialogues.Dialogue)
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PlayUnlockedDialogue_DREditor_Dialogues_Dialogue_
+  name: PlayUnlockedDialogue(Dialogue)
+  nameWithType: DoorBase.PlayUnlockedDialogue(Dialogue)
+  fullName: DREditor.Doors.DoorBase.PlayUnlockedDialogue(DREditor.Dialogues.Dialogue)
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.PlayUnlockedDialogue(DREditor.Dialogues.Dialogue)
+    name: PlayUnlockedDialogue
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PlayUnlockedDialogue_DREditor_Dialogues_Dialogue_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.PlayUnlockedDialogue(DREditor.Dialogues.Dialogue)
+    name: PlayUnlockedDialogue
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_PlayUnlockedDialogue_DREditor_Dialogues_Dialogue_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: )
+- uid: DREditor.Doors.DoorBase.ChangeRoom
+  commentId: M:DREditor.Doors.DoorBase.ChangeRoom
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_ChangeRoom
+  name: ChangeRoom()
+  nameWithType: DoorBase.ChangeRoom()
+  fullName: DREditor.Doors.DoorBase.ChangeRoom()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.ChangeRoom
+    name: ChangeRoom
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_ChangeRoom
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.ChangeRoom
+    name: ChangeRoom
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_ChangeRoom
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.SetIdentified(System.Boolean)
+  commentId: M:DREditor.Doors.DoorBase.SetIdentified(System.Boolean)
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_SetIdentified_System_Boolean_
+  name: SetIdentified(bool)
+  nameWithType: DoorBase.SetIdentified(bool)
+  fullName: DREditor.Doors.DoorBase.SetIdentified(bool)
+  nameWithType.vb: DoorBase.SetIdentified(Boolean)
+  fullName.vb: DREditor.Doors.DoorBase.SetIdentified(Boolean)
+  name.vb: SetIdentified(Boolean)
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.SetIdentified(System.Boolean)
+    name: SetIdentified
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_SetIdentified_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.SetIdentified(System.Boolean)
+    name: SetIdentified
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_SetIdentified_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Doors.DoorBase.GetSetGateway
+  commentId: M:DREditor.Doors.DoorBase.GetSetGateway
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_GetSetGateway
+  name: GetSetGateway()
+  nameWithType: DoorBase.GetSetGateway()
+  fullName: DREditor.Doors.DoorBase.GetSetGateway()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.GetSetGateway
+    name: GetSetGateway
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_GetSetGateway
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.GetSetGateway
+    name: GetSetGateway
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_GetSetGateway
+  - name: (
+  - name: )
+- uid: DREditor.Doors.DoorBase.DisplayName
+  commentId: P:DREditor.Doors.DoorBase.DisplayName
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_DisplayName
+  name: DisplayName
+  nameWithType: DoorBase.DisplayName
+  fullName: DREditor.Doors.DoorBase.DisplayName
+- uid: DREditor.Doors.Door.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<Door>(Door)
+  nameWithType: ReflectionHelper.GetFieldNames<Door>(Door)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Doors.Door>(DREditor.Doors.Door)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of Door)(Door)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Doors.Door)(DREditor.Doors.Door)
+  name.vb: GetFieldNames(Of Door)(Door)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Doors.Door)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Doors.Door)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+  - name: (
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+- uid: DREditor.Doors.Door.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<Door>(Door)
+  nameWithType: ReflectionHelper.GetFieldValues<Door>(Door)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Doors.Door>(DREditor.Doors.Door)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of Door)(Door)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Doors.Door)(DREditor.Doors.Door)
+  name.vb: GetFieldValues(Of Door)(Door)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Doors.Door)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Doors.Door)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+  - name: (
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+- uid: DREditor.Doors.Door.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<Door>(Door)
+  nameWithType: DeepCopyExtensions.DeepCopy<Door>(Door)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Doors.Door>(DREditor.Doors.Door)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of Door)(Door)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Doors.Door)(DREditor.Doors.Door)
+  name.vb: DeepCopy(Of Door)(Door)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Doors.Door)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Doors.Door)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+  - name: (
+  - uid: DREditor.Doors.Door
+    name: Door
+    isExternal: true
+    href: DREditor.Doors.Door.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Gates
+  commentId: N:DREditor.Gates
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Gates
+  nameWithType: DREditor.Gates
+  fullName: DREditor.Gates
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Gates
+    name: Gates
+    isExternal: true
+    href: DREditor.Gates.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Gates
+    name: Gates
+    isExternal: true
+    href: DREditor.Gates.html
+- uid: DREditor.Processables
+  commentId: N:DREditor.Processables
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Processables
+  nameWithType: DREditor.Processables
+  fullName: DREditor.Processables
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Processables
+    name: Processables
+    isExternal: true
+    href: DREditor.Processables.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Processables
+    name: Processables
+    isExternal: true
+    href: DREditor.Processables.html
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Doors.DoorBase.Start
+  commentId: M:DREditor.Doors.DoorBase.Start
+  parent: DREditor.Doors.DoorBase
+  isExternal: true
+  href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_Start
+  name: Start()
+  nameWithType: DoorBase.Start()
+  fullName: DREditor.Doors.DoorBase.Start()
+  spec.csharp:
+  - uid: DREditor.Doors.DoorBase.Start
+    name: Start
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.DoorBase.Start
+    name: Start
+    isExternal: true
+    href: DREditor.Doors.DoorBase.html#DREditor_Doors_DoorBase_Start
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.Start*
+  commentId: Overload:DREditor.Doors.Door.Start
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_Start
+  name: Start
+  nameWithType: Door.Start
+  fullName: DREditor.Doors.Door.Start
+- uid: DREditor.Doors.Door.OnEventRaised*
+  commentId: Overload:DREditor.Doors.Door.OnEventRaised
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_OnEventRaised
+  name: OnEventRaised
+  nameWithType: Door.OnEventRaised
+  fullName: DREditor.Doors.Door.OnEventRaised
+- uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  commentId: M:DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  parent: DREditor.EventObjects.ISceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: OnEventRaised()
+  nameWithType: ISceneEventListener.OnEventRaised()
+  fullName: DREditor.EventObjects.ISceneEventListener.OnEventRaised()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.AddDoorControl*
+  commentId: Overload:DREditor.Doors.Door.AddDoorControl
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_AddDoorControl
+  name: AddDoorControl
+  nameWithType: Door.AddDoorControl
+  fullName: DREditor.Doors.Door.AddDoorControl
+- uid: DREditor.Doors.IDoor.AddDoorControl
+  commentId: M:DREditor.Doors.IDoor.AddDoorControl
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_AddDoorControl
+  name: AddDoorControl()
+  nameWithType: IDoor.AddDoorControl()
+  fullName: DREditor.Doors.IDoor.AddDoorControl()
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.AddDoorControl
+    name: AddDoorControl
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_AddDoorControl
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.AddDoorControl
+    name: AddDoorControl
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_AddDoorControl
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.OnDestroy*
+  commentId: Overload:DREditor.Doors.Door.OnDestroy
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_OnDestroy
+  name: OnDestroy
+  nameWithType: Door.OnDestroy
+  fullName: DREditor.Doors.Door.OnDestroy
+- uid: DREditor.Doors.Door.RemoveDoorControl*
+  commentId: Overload:DREditor.Doors.Door.RemoveDoorControl
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_RemoveDoorControl
+  name: RemoveDoorControl
+  nameWithType: Door.RemoveDoorControl
+  fullName: DREditor.Doors.Door.RemoveDoorControl
+- uid: DREditor.Doors.IDoor.RemoveDoorControl
+  commentId: M:DREditor.Doors.IDoor.RemoveDoorControl
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_RemoveDoorControl
+  name: RemoveDoorControl()
+  nameWithType: IDoor.RemoveDoorControl()
+  fullName: DREditor.Doors.IDoor.RemoveDoorControl()
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.RemoveDoorControl
+    name: RemoveDoorControl
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_RemoveDoorControl
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.RemoveDoorControl
+    name: RemoveDoorControl
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_RemoveDoorControl
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.EvaluateLock*
+  commentId: Overload:DREditor.Doors.Door.EvaluateLock
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_EvaluateLock_UnityEngine_InputSystem_InputAction_CallbackContext_
+  name: EvaluateLock
+  nameWithType: Door.EvaluateLock
+  fullName: DREditor.Doors.Door.EvaluateLock
+- uid: UnityEngine.InputSystem.InputAction.CallbackContext
+  isExternal: true
+  name: CallbackContext
+  nameWithType: InputAction.CallbackContext
+  fullName: UnityEngine.InputSystem.InputAction.CallbackContext
+- uid: DREditor.Doors.Door.OnTriggerEnter*
+  commentId: Overload:DREditor.Doors.Door.OnTriggerEnter
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_OnTriggerEnter_UnityEngine_Collider_
+  name: OnTriggerEnter
+  nameWithType: Door.OnTriggerEnter
+  fullName: DREditor.Doors.Door.OnTriggerEnter
+- uid: UnityEngine.Collider
+  isExternal: true
+  name: Collider
+  nameWithType: Collider
+  fullName: UnityEngine.Collider
+- uid: DREditor.Doors.Door.SelectObject*
+  commentId: Overload:DREditor.Doors.Door.SelectObject
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_SelectObject
+  name: SelectObject
+  nameWithType: Door.SelectObject
+  fullName: DREditor.Doors.Door.SelectObject
+- uid: DREditor.EventObjects.ISelectableObject.SelectObject
+  commentId: M:DREditor.EventObjects.ISelectableObject.SelectObject
+  parent: DREditor.EventObjects.ISelectableObject
+  isExternal: true
+  href: DREditor.EventObjects.ISelectableObject.html#DREditor_EventObjects_ISelectableObject_SelectObject
+  name: SelectObject()
+  nameWithType: ISelectableObject.SelectObject()
+  fullName: DREditor.EventObjects.ISelectableObject.SelectObject()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ISelectableObject.SelectObject
+    name: SelectObject
+    isExternal: true
+    href: DREditor.EventObjects.ISelectableObject.html#DREditor_EventObjects_ISelectableObject_SelectObject
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ISelectableObject.SelectObject
+    name: SelectObject
+    isExternal: true
+    href: DREditor.EventObjects.ISelectableObject.html#DREditor_EventObjects_ISelectableObject_SelectObject
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.LockCheck*
+  commentId: Overload:DREditor.Doors.Door.LockCheck
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_LockCheck
+  name: LockCheck
+  nameWithType: Door.LockCheck
+  fullName: DREditor.Doors.Door.LockCheck
+- uid: DREditor.Doors.Door.ClearLockData*
+  commentId: Overload:DREditor.Doors.Door.ClearLockData
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_ClearLockData
+  name: ClearLockData
+  nameWithType: Door.ClearLockData
+  fullName: DREditor.Doors.Door.ClearLockData
+- uid: DREditor.Doors.IDoor.ClearLockData
+  commentId: M:DREditor.Doors.IDoor.ClearLockData
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_ClearLockData
+  name: ClearLockData()
+  nameWithType: IDoor.ClearLockData()
+  fullName: DREditor.Doors.IDoor.ClearLockData()
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.ClearLockData
+    name: ClearLockData
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_ClearLockData
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.ClearLockData
+    name: ClearLockData
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_ClearLockData
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.GetGameObjectName*
+  commentId: Overload:DREditor.Doors.Door.GetGameObjectName
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_GetGameObjectName
+  name: GetGameObjectName
+  nameWithType: Door.GetGameObjectName
+  fullName: DREditor.Doors.Door.GetGameObjectName
+- uid: DREditor.Doors.IDoor.GetGameObjectName
+  commentId: M:DREditor.Doors.IDoor.GetGameObjectName
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetGameObjectName
+  name: GetGameObjectName()
+  nameWithType: IDoor.GetGameObjectName()
+  fullName: DREditor.Doors.IDoor.GetGameObjectName()
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.GetGameObjectName
+    name: GetGameObjectName
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetGameObjectName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.GetGameObjectName
+    name: GetGameObjectName
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetGameObjectName
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.IsTPFD*
+  commentId: Overload:DREditor.Doors.Door.IsTPFD
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_IsTPFD
+  name: IsTPFD
+  nameWithType: Door.IsTPFD
+  fullName: DREditor.Doors.Door.IsTPFD
+- uid: DREditor.Doors.IDoor.IsTPFD
+  commentId: M:DREditor.Doors.IDoor.IsTPFD
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_IsTPFD
+  name: IsTPFD()
+  nameWithType: IDoor.IsTPFD()
+  fullName: DREditor.Doors.IDoor.IsTPFD()
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.IsTPFD
+    name: IsTPFD
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_IsTPFD
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.IsTPFD
+    name: IsTPFD
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_IsTPFD
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Doors.Door.GetDoorName*
+  commentId: Overload:DREditor.Doors.Door.GetDoorName
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_GetDoorName
+  name: GetDoorName
+  nameWithType: Door.GetDoorName
+  fullName: DREditor.Doors.Door.GetDoorName
+- uid: DREditor.Doors.IDoor.GetDoorName
+  commentId: M:DREditor.Doors.IDoor.GetDoorName
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetDoorName
+  name: GetDoorName()
+  nameWithType: IDoor.GetDoorName()
+  fullName: DREditor.Doors.IDoor.GetDoorName()
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.GetDoorName
+    name: GetDoorName
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetDoorName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.GetDoorName
+    name: GetDoorName
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetDoorName
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.GetSaveDisplayName*
+  commentId: Overload:DREditor.Doors.Door.GetSaveDisplayName
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_GetSaveDisplayName
+  name: GetSaveDisplayName
+  nameWithType: Door.GetSaveDisplayName
+  fullName: DREditor.Doors.Door.GetSaveDisplayName
+- uid: DREditor.Doors.IDoor.GetSaveDisplayName
+  commentId: M:DREditor.Doors.IDoor.GetSaveDisplayName
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetSaveDisplayName
+  name: GetSaveDisplayName()
+  nameWithType: IDoor.GetSaveDisplayName()
+  fullName: DREditor.Doors.IDoor.GetSaveDisplayName()
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.GetSaveDisplayName
+    name: GetSaveDisplayName
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetSaveDisplayName
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.GetSaveDisplayName
+    name: GetSaveDisplayName
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_GetSaveDisplayName
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.Save*
+  commentId: Overload:DREditor.Doors.Door.Save
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_Save
+  name: Save
+  nameWithType: Door.Save
+  fullName: DREditor.Doors.Door.Save
+- uid: DREditor.Doors.IDoor.Save
+  commentId: M:DREditor.Doors.IDoor.Save
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_Save
+  name: Save()
+  nameWithType: IDoor.Save()
+  fullName: DREditor.Doors.IDoor.Save()
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.Save
+    name: Save
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_Save
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.Save
+    name: Save
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_Save
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.Load*
+  commentId: Overload:DREditor.Doors.Door.Load
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_Load_System_Object_
+  name: Load
+  nameWithType: Door.Load
+  fullName: DREditor.Doors.Door.Load
+- uid: DREditor.Doors.IDoor.Load(System.Object)
+  commentId: M:DREditor.Doors.IDoor.Load(System.Object)
+  parent: DREditor.Doors.IDoor
+  isExternal: true
+  href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_Load_System_Object_
+  name: Load(object)
+  nameWithType: IDoor.Load(object)
+  fullName: DREditor.Doors.IDoor.Load(object)
+  nameWithType.vb: IDoor.Load(Object)
+  fullName.vb: DREditor.Doors.IDoor.Load(Object)
+  name.vb: Load(Object)
+  spec.csharp:
+  - uid: DREditor.Doors.IDoor.Load(System.Object)
+    name: Load
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_Load_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.Doors.IDoor.Load(System.Object)
+    name: Load
+    isExternal: true
+    href: DREditor.Doors.IDoor.html#DREditor_Doors_IDoor_Load_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.Doors.Door.CheckIfBeenThroughDoor*
+  commentId: Overload:DREditor.Doors.Door.CheckIfBeenThroughDoor
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_CheckIfBeenThroughDoor
+  name: CheckIfBeenThroughDoor
+  nameWithType: Door.CheckIfBeenThroughDoor
+  fullName: DREditor.Doors.Door.CheckIfBeenThroughDoor
+- uid: DREditor.Doors.Door.CheckIfSaveDialogue*
+  commentId: Overload:DREditor.Doors.Door.CheckIfSaveDialogue
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door_CheckIfSaveDialogue
+  name: CheckIfSaveDialogue
+  nameWithType: Door.CheckIfSaveDialogue
+  fullName: DREditor.Doors.Door.CheckIfSaveDialogue
+- uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+  commentId: M:DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+  parent: DREditor.Dialogues.IDialogueHolder
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  name: CheckIfSaveDialogue()
+  nameWithType: IDialogueHolder.CheckIfSaveDialogue()
+  fullName: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue()
+  spec.csharp:
+  - uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.IDialogueHolder.CheckIfSaveDialogue
+    name: CheckIfSaveDialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Doors.Door.#ctor*
+  commentId: Overload:DREditor.Doors.Door.#ctor
+  isExternal: true
+  href: DREditor.Doors.Door.html#DREditor_Doors_Door__ctor
+  name: Door
+  nameWithType: Door.Door
+  fullName: DREditor.Doors.Door.Door
+  nameWithType.vb: Door.New
+  fullName.vb: DREditor.Doors.Door.New
+  name.vb: New

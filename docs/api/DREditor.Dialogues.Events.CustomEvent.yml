@@ -6,12 +6,25 @@ items:
   parent: DREditor.Dialogues.Events
   children:
   - DREditor.Dialogues.Events.CustomEvent.#ctor
-  - DREditor.Dialogues.Events.CustomEvent.CEValue
+  - DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent
+  - DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData
+  - DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle
+  - DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup
   - DREditor.Dialogues.Events.CustomEvent.EditorUI(System.Object)
+  - DREditor.Dialogues.Events.CustomEvent.EventName
+  - DREditor.Dialogues.Events.CustomEvent.ExecutionOrder
+  - DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom
+  - DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed(System.Exception)
+  - DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex
+  - DREditor.Dialogues.Events.CustomEvent.ReplaceList(System.Collections.Generic.List{System.String})
+  - DREditor.Dialogues.Events.CustomEvent.SetIndex(System.Int32)
   - DREditor.Dialogues.Events.CustomEvent.ShowHelpBox
+  - DREditor.Dialogues.Events.CustomEvent.SpawnReleventData
   - DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox
   - DREditor.Dialogues.Events.CustomEvent.TriggerDialogueEvent
-  - DREditor.Dialogues.Events.CustomEvent._ShowHelp
+  - DREditor.Dialogues.Events.CustomEvent._showHelp
+  - DREditor.Dialogues.Events.CustomEvent.index
+  - DREditor.Dialogues.Events.CustomEvent.toggleCustom
   langs:
   - csharp
   - vb
@@ -20,16 +33,17 @@ items:
   fullName: DREditor.Dialogues.Events.CustomEvent
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
   syntax:
-    content: 'public class CustomEvent : IDialogueEvent'
-    content.vb: Public Class CustomEvent Implements IDialogueEvent
+    content: 'public class CustomEvent : IDisplayableDialogueEvent, IDialogueEvent'
+    content.vb: Public Class CustomEvent Implements IDisplayableDialogueEvent, IDialogueEvent
   inheritance:
   - System.Object
   implements:
+  - DREditor.Dialogues.Events.IDisplayableDialogueEvent
   - DREditor.Dialogues.Events.IDialogueEvent
   inheritedMembers:
   - System.Object.GetType
@@ -39,48 +53,141 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: DREditor.Dialogues.Events.CustomEvent._ShowHelp
-  commentId: F:DREditor.Dialogues.Events.CustomEvent._ShowHelp
-  id: _ShowHelp
+  extensionMethods:
+  - DREditor.Dialogues.Events.CustomEvent.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.Events.CustomEvent.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.Events.CustomEvent.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.Events.CustomEvent._showHelp
+  commentId: F:DREditor.Dialogues.Events.CustomEvent._showHelp
+  id: _showHelp
   parent: DREditor.Dialogues.Events.CustomEvent
   langs:
   - csharp
   - vb
-  name: _ShowHelp
-  nameWithType: CustomEvent._ShowHelp
-  fullName: DREditor.Dialogues.Events.CustomEvent._ShowHelp
+  name: _showHelp
+  nameWithType: CustomEvent._showHelp
+  fullName: DREditor.Dialogues.Events.CustomEvent._showHelp
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
   syntax:
-    content: public bool _ShowHelp
+    content: public bool _showHelp
     return:
       type: System.Boolean
-    content.vb: Public _ShowHelp As Boolean
-- uid: DREditor.Dialogues.Events.CustomEvent.CEValue
-  commentId: F:DREditor.Dialogues.Events.CustomEvent.CEValue
-  id: CEValue
+    content.vb: Public _showHelp As Boolean
+- uid: DREditor.Dialogues.Events.CustomEvent.EventName
+  commentId: F:DREditor.Dialogues.Events.CustomEvent.EventName
+  id: EventName
   parent: DREditor.Dialogues.Events.CustomEvent
   langs:
   - csharp
   - vb
-  name: CEValue
-  nameWithType: CustomEvent.CEValue
-  fullName: DREditor.Dialogues.Events.CustomEvent.CEValue
+  name: EventName
+  nameWithType: CustomEvent.EventName
+  fullName: DREditor.Dialogues.Events.CustomEvent.EventName
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
   syntax:
-    content: public CETuple CEValue
+    content: public string EventName
     return:
-      type: DREditor.Dialogues.Events.CETuple
-    content.vb: Public CEValue As CETuple
+      type: System.String
+    content.vb: Public EventName As String
+- uid: DREditor.Dialogues.Events.CustomEvent.ExecutionOrder
+  commentId: F:DREditor.Dialogues.Events.CustomEvent.ExecutionOrder
+  id: ExecutionOrder
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: ExecutionOrder
+  nameWithType: CustomEvent.ExecutionOrder
+  fullName: DREditor.Dialogues.Events.CustomEvent.ExecutionOrder
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public int ExecutionOrder
+    return:
+      type: System.Int32
+    content.vb: Public ExecutionOrder As Integer
+- uid: DREditor.Dialogues.Events.CustomEvent.toggleCustom
+  commentId: F:DREditor.Dialogues.Events.CustomEvent.toggleCustom
+  id: toggleCustom
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: toggleCustom
+  nameWithType: CustomEvent.toggleCustom
+  fullName: DREditor.Dialogues.Events.CustomEvent.toggleCustom
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public bool toggleCustom
+    return:
+      type: System.Boolean
+    content.vb: Public toggleCustom As Boolean
+- uid: DREditor.Dialogues.Events.CustomEvent.index
+  commentId: F:DREditor.Dialogues.Events.CustomEvent.index
+  id: index
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: index
+  nameWithType: CustomEvent.index
+  fullName: DREditor.Dialogues.Events.CustomEvent.index
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public int index
+    return:
+      type: System.Int32
+    content.vb: Public index As Integer
+- uid: DREditor.Dialogues.Events.CustomEvent.SetIndex(System.Int32)
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.SetIndex(System.Int32)
+  id: SetIndex(System.Int32)
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: SetIndex(int)
+  nameWithType: CustomEvent.SetIndex(int)
+  fullName: DREditor.Dialogues.Events.CustomEvent.SetIndex(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public virtual void SetIndex(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    content.vb: Public Overridable Sub SetIndex(index As Integer)
+  overload: DREditor.Dialogues.Events.CustomEvent.SetIndex*
+  nameWithType.vb: CustomEvent.SetIndex(Integer)
+  fullName.vb: DREditor.Dialogues.Events.CustomEvent.SetIndex(Integer)
+  name.vb: SetIndex(Integer)
 - uid: DREditor.Dialogues.Events.CustomEvent.TriggerDialogueEvent
   commentId: M:DREditor.Dialogues.Events.CustomEvent.TriggerDialogueEvent
   id: TriggerDialogueEvent
@@ -93,7 +200,7 @@ items:
   fullName: DREditor.Dialogues.Events.CustomEvent.TriggerDialogueEvent()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -104,6 +211,32 @@ items:
   overload: DREditor.Dialogues.Events.CustomEvent.TriggerDialogueEvent*
   implements:
   - DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
+- uid: DREditor.Dialogues.Events.CustomEvent.ReplaceList(System.Collections.Generic.List{System.String})
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.ReplaceList(System.Collections.Generic.List{System.String})
+  id: ReplaceList(System.Collections.Generic.List{System.String})
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: ReplaceList(List<string>)
+  nameWithType: CustomEvent.ReplaceList(List<string>)
+  fullName: DREditor.Dialogues.Events.CustomEvent.ReplaceList(System.Collections.Generic.List<string>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public void ReplaceList(List<string> list)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Sub ReplaceList(list As List(Of String))
+  overload: DREditor.Dialogues.Events.CustomEvent.ReplaceList*
+  nameWithType.vb: CustomEvent.ReplaceList(List(Of String))
+  fullName.vb: DREditor.Dialogues.Events.CustomEvent.ReplaceList(System.Collections.Generic.List(Of String))
+  name.vb: ReplaceList(List(Of String))
 - uid: DREditor.Dialogues.Events.CustomEvent.EditorUI(System.Object)
   commentId: M:DREditor.Dialogues.Events.CustomEvent.EditorUI(System.Object)
   id: EditorUI(System.Object)
@@ -116,7 +249,7 @@ items:
   fullName: DREditor.Dialogues.Events.CustomEvent.EditorUI(object)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -129,10 +262,173 @@ items:
     content.vb: Public Sub EditorUI(value As Object = Nothing)
   overload: DREditor.Dialogues.Events.CustomEvent.EditorUI*
   implements:
-  - DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
+  - DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
   nameWithType.vb: CustomEvent.EditorUI(Object)
   fullName.vb: DREditor.Dialogues.Events.CustomEvent.EditorUI(Object)
   name.vb: EditorUI(Object)
+- uid: DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle
+  id: DisplayCustomToggle
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: DisplayCustomToggle()
+  nameWithType: CustomEvent.DisplayCustomToggle()
+  fullName: DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: protected virtual void DisplayCustomToggle()
+    content.vb: Protected Overridable Sub DisplayCustomToggle()
+  overload: DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle*
+- uid: DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex
+  id: RefreshPopupIndex
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: RefreshPopupIndex()
+  nameWithType: CustomEvent.RefreshPopupIndex()
+  fullName: DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: protected virtual void RefreshPopupIndex()
+    content.vb: Protected Overridable Sub RefreshPopupIndex()
+  overload: DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex*
+- uid: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent
+  id: DisplayCustomEvent
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: DisplayCustomEvent()
+  nameWithType: CustomEvent.DisplayCustomEvent()
+  fullName: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: protected virtual void DisplayCustomEvent()
+    content.vb: Protected Overridable Sub DisplayCustomEvent()
+  overload: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent*
+- uid: DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup
+  id: DisplayEventNamePopup
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: DisplayEventNamePopup()
+  nameWithType: CustomEvent.DisplayEventNamePopup()
+  fullName: DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: protected virtual void DisplayEventNamePopup()
+    content.vb: Protected Overridable Sub DisplayEventNamePopup()
+  overload: DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup*
+- uid: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData
+  id: DisplayCustomEventData
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: DisplayCustomEventData()
+  nameWithType: CustomEvent.DisplayCustomEventData()
+  fullName: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: protected virtual void DisplayCustomEventData()
+    content.vb: Protected Overridable Sub DisplayCustomEventData()
+  overload: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData*
+- uid: DREditor.Dialogues.Events.CustomEvent.SpawnReleventData
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.SpawnReleventData
+  id: SpawnReleventData
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: SpawnReleventData()
+  nameWithType: CustomEvent.SpawnReleventData()
+  fullName: DREditor.Dialogues.Events.CustomEvent.SpawnReleventData()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: protected virtual void SpawnReleventData()
+    content.vb: Protected Overridable Sub SpawnReleventData()
+  overload: DREditor.Dialogues.Events.CustomEvent.SpawnReleventData*
+- uid: DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed(System.Exception)
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed(System.Exception)
+  id: OnSpawningFailed(System.Exception)
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: OnSpawningFailed(Exception)
+  nameWithType: CustomEvent.OnSpawningFailed(Exception)
+  fullName: DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed(System.Exception)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: protected virtual void OnSpawningFailed(Exception exception)
+    parameters:
+    - id: exception
+      type: System.Exception
+    content.vb: Protected Overridable Sub OnSpawningFailed(exception As Exception)
+  overload: DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed*
+- uid: DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom
+  commentId: M:DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom
+  id: OnNotUsingCustom
+  parent: DREditor.Dialogues.Events.CustomEvent
+  langs:
+  - csharp
+  - vb
+  name: OnNotUsingCustom()
+  nameWithType: CustomEvent.OnNotUsingCustom()
+  fullName: DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: protected virtual void OnNotUsingCustom()
+    content.vb: Protected Overridable Sub OnNotUsingCustom()
+  overload: DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom*
 - uid: DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox
   commentId: M:DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox
   id: ToggleHelpBox
@@ -145,7 +441,7 @@ items:
   fullName: DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -155,7 +451,7 @@ items:
     content.vb: Public Sub ToggleHelpBox()
   overload: DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox*
   implements:
-  - DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
+  - DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
 - uid: DREditor.Dialogues.Events.CustomEvent.ShowHelpBox
   commentId: M:DREditor.Dialogues.Events.CustomEvent.ShowHelpBox
   id: ShowHelpBox
@@ -168,7 +464,7 @@ items:
   fullName: DREditor.Dialogues.Events.CustomEvent.ShowHelpBox()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -178,7 +474,7 @@ items:
     content.vb: Public Sub ShowHelpBox()
   overload: DREditor.Dialogues.Events.CustomEvent.ShowHelpBox*
   implements:
-  - DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
+  - DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
 - uid: DREditor.Dialogues.Events.CustomEvent.#ctor
   commentId: M:DREditor.Dialogues.Events.CustomEvent.#ctor
   id: '#ctor'
@@ -191,7 +487,7 @@ items:
   fullName: DREditor.Dialogues.Events.CustomEvent.CustomEvent()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -251,11 +547,19 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent
+  commentId: T:DREditor.Dialogues.Events.IDisplayableDialogueEvent
+  parent: DREditor.Dialogues.Events
+  isExternal: true
+  href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html
+  name: IDisplayableDialogueEvent
+  nameWithType: IDisplayableDialogueEvent
+  fullName: DREditor.Dialogues.Events.IDisplayableDialogueEvent
 - uid: DREditor.Dialogues.Events.IDialogueEvent
   commentId: T:DREditor.Dialogues.Events.IDialogueEvent
   parent: DREditor.Dialogues.Events
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   name: IDialogueEvent
   nameWithType: IDialogueEvent
   fullName: DREditor.Dialogues.Events.IDialogueEvent
@@ -478,6 +782,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Dialogues.Events.CustomEvent.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<CustomEvent>(CustomEvent)
+  nameWithType: ReflectionHelper.GetFieldNames<CustomEvent>(CustomEvent)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.Events.CustomEvent>(DREditor.Dialogues.Events.CustomEvent)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of CustomEvent)(CustomEvent)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.Events.CustomEvent)(DREditor.Dialogues.Events.CustomEvent)
+  name.vb: GetFieldNames(Of CustomEvent)(CustomEvent)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Events.CustomEvent)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Events.CustomEvent)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
+- uid: DREditor.Dialogues.Events.CustomEvent.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<CustomEvent>(CustomEvent)
+  nameWithType: ReflectionHelper.GetFieldValues<CustomEvent>(CustomEvent)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.Events.CustomEvent>(DREditor.Dialogues.Events.CustomEvent)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of CustomEvent)(CustomEvent)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.Events.CustomEvent)(DREditor.Dialogues.Events.CustomEvent)
+  name.vb: GetFieldValues(Of CustomEvent)(CustomEvent)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Events.CustomEvent)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Events.CustomEvent)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
+- uid: DREditor.Dialogues.Events.CustomEvent.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<CustomEvent>(CustomEvent)
+  nameWithType: DeepCopyExtensions.DeepCopy<CustomEvent>(CustomEvent)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.Events.CustomEvent>(DREditor.Dialogues.Events.CustomEvent)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of CustomEvent)(CustomEvent)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.Events.CustomEvent)(DREditor.Dialogues.Events.CustomEvent)
+  name.vb: DeepCopy(Of CustomEvent)(CustomEvent)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Events.CustomEvent)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Events.CustomEvent)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.CustomEvent
+    name: CustomEvent
+    isExternal: true
+    href: DREditor.Dialogues.Events.CustomEvent.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -485,6 +930,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -496,14 +1113,35 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: DREditor.Dialogues.Events.CETuple
-  commentId: T:DREditor.Dialogues.Events.CETuple
-  parent: DREditor.Dialogues.Events
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
-  href: DREditor.Dialogues.Events.CETuple.html
-  name: CETuple
-  nameWithType: CETuple
-  fullName: DREditor.Dialogues.Events.CETuple
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Dialogues.Events.CustomEvent.SetIndex*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.SetIndex
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_SetIndex_System_Int32_
+  name: SetIndex
+  nameWithType: CustomEvent.SetIndex
+  fullName: DREditor.Dialogues.Events.CustomEvent.SetIndex
 - uid: DREditor.Dialogues.Events.CustomEvent.TriggerDialogueEvent*
   commentId: Overload:DREditor.Dialogues.Events.CustomEvent.TriggerDialogueEvent
   isExternal: true
@@ -515,7 +1153,7 @@ references:
   commentId: M:DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
   parent: DREditor.Dialogues.Events.IDialogueEvent
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_TriggerDialogueEvent
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   name: TriggerDialogueEvent()
   nameWithType: IDialogueEvent.TriggerDialogueEvent()
   fullName: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent()
@@ -523,16 +1161,123 @@ references:
   - uid: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
     name: TriggerDialogueEvent
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_TriggerDialogueEvent
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   - name: (
   - name: )
   spec.vb:
   - uid: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
     name: TriggerDialogueEvent
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_TriggerDialogueEvent
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   - name: (
   - name: )
+- uid: DREditor.Dialogues.Events.CustomEvent.ReplaceList*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.ReplaceList
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_ReplaceList_System_Collections_Generic_List_System_String__
+  name: ReplaceList
+  nameWithType: CustomEvent.ReplaceList
+  fullName: DREditor.Dialogues.Events.CustomEvent.ReplaceList
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: DREditor.Dialogues.Events.CustomEvent.EditorUI*
   commentId: Overload:DREditor.Dialogues.Events.CustomEvent.EditorUI
   isExternal: true
@@ -540,22 +1285,22 @@ references:
   name: EditorUI
   nameWithType: CustomEvent.EditorUI
   fullName: DREditor.Dialogues.Events.CustomEvent.EditorUI
-- uid: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
-  parent: DREditor.Dialogues.Events.IDialogueEvent
+- uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
+  commentId: M:DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
+  parent: DREditor.Dialogues.Events.IDisplayableDialogueEvent
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_EditorUI_System_Object_
+  href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_EditorUI_System_Object_
   name: EditorUI(object)
-  nameWithType: IDialogueEvent.EditorUI(object)
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(object)
-  nameWithType.vb: IDialogueEvent.EditorUI(Object)
-  fullName.vb: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(Object)
+  nameWithType: IDisplayableDialogueEvent.EditorUI(object)
+  fullName: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(object)
+  nameWithType.vb: IDisplayableDialogueEvent.EditorUI(Object)
+  fullName.vb: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(Object)
   name.vb: EditorUI(Object)
   spec.csharp:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
     name: EditorUI
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_EditorUI_System_Object_
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_EditorUI_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -563,16 +1308,80 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
     name: EditorUI
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_EditorUI_System_Object_
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_EditorUI_System_Object_
   - name: (
   - uid: System.Object
     name: Object
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
+- uid: DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_DisplayCustomToggle
+  name: DisplayCustomToggle
+  nameWithType: CustomEvent.DisplayCustomToggle
+  fullName: DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle
+- uid: DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_RefreshPopupIndex
+  name: RefreshPopupIndex
+  nameWithType: CustomEvent.RefreshPopupIndex
+  fullName: DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex
+- uid: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_DisplayCustomEvent
+  name: DisplayCustomEvent
+  nameWithType: CustomEvent.DisplayCustomEvent
+  fullName: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent
+- uid: DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_DisplayEventNamePopup
+  name: DisplayEventNamePopup
+  nameWithType: CustomEvent.DisplayEventNamePopup
+  fullName: DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup
+- uid: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_DisplayCustomEventData
+  name: DisplayCustomEventData
+  nameWithType: CustomEvent.DisplayCustomEventData
+  fullName: DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData
+- uid: DREditor.Dialogues.Events.CustomEvent.SpawnReleventData*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.SpawnReleventData
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_SpawnReleventData
+  name: SpawnReleventData
+  nameWithType: CustomEvent.SpawnReleventData
+  fullName: DREditor.Dialogues.Events.CustomEvent.SpawnReleventData
+- uid: DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_OnSpawningFailed_System_Exception_
+  name: OnSpawningFailed
+  nameWithType: CustomEvent.OnSpawningFailed
+  fullName: DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom*
+  commentId: Overload:DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom
+  isExternal: true
+  href: DREditor.Dialogues.Events.CustomEvent.html#DREditor_Dialogues_Events_CustomEvent_OnNotUsingCustom
+  name: OnNotUsingCustom
+  nameWithType: CustomEvent.OnNotUsingCustom
+  fullName: DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom
 - uid: DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox*
   commentId: Overload:DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox
   isExternal: true
@@ -580,26 +1389,26 @@ references:
   name: ToggleHelpBox
   nameWithType: CustomEvent.ToggleHelpBox
   fullName: DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox
-- uid: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
-  parent: DREditor.Dialogues.Events.IDialogueEvent
+- uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
+  commentId: M:DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
+  parent: DREditor.Dialogues.Events.IDisplayableDialogueEvent
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ToggleHelpBox
+  href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ToggleHelpBox
   name: ToggleHelpBox()
-  nameWithType: IDialogueEvent.ToggleHelpBox()
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox()
+  nameWithType: IDisplayableDialogueEvent.ToggleHelpBox()
+  fullName: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox()
   spec.csharp:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
     name: ToggleHelpBox
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ToggleHelpBox
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ToggleHelpBox
   - name: (
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
     name: ToggleHelpBox
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ToggleHelpBox
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ToggleHelpBox
   - name: (
   - name: )
 - uid: DREditor.Dialogues.Events.CustomEvent.ShowHelpBox*
@@ -609,26 +1418,26 @@ references:
   name: ShowHelpBox
   nameWithType: CustomEvent.ShowHelpBox
   fullName: DREditor.Dialogues.Events.CustomEvent.ShowHelpBox
-- uid: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-  parent: DREditor.Dialogues.Events.IDialogueEvent
+- uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
+  commentId: M:DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
+  parent: DREditor.Dialogues.Events.IDisplayableDialogueEvent
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ShowHelpBox
+  href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ShowHelpBox
   name: ShowHelpBox()
-  nameWithType: IDialogueEvent.ShowHelpBox()
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox()
+  nameWithType: IDisplayableDialogueEvent.ShowHelpBox()
+  fullName: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox()
   spec.csharp:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
     name: ShowHelpBox
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ShowHelpBox
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ShowHelpBox
   - name: (
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
     name: ShowHelpBox
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ShowHelpBox
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ShowHelpBox
   - name: (
   - name: )
 - uid: DREditor.Dialogues.Events.CustomEvent.#ctor*

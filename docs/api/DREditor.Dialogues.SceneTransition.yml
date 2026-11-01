@@ -7,12 +7,20 @@ items:
   children:
   - DREditor.Dialogues.SceneTransition.#ctor
   - DREditor.Dialogues.SceneTransition.AtEnd
-  - DREditor.Dialogues.SceneTransition.Enabled
+  - DREditor.Dialogues.SceneTransition.MoveToNextNaturalObjective
+  - DREditor.Dialogues.SceneTransition.MoveToObjective
   - DREditor.Dialogues.SceneTransition.OnLoadNoDark
   - DREditor.Dialogues.SceneTransition.OnlySceneEnabled
   - DREditor.Dialogues.SceneTransition.Scene
   - DREditor.Dialogues.SceneTransition.ToDark
   - DREditor.Dialogues.SceneTransition.ToMenu
+  - DREditor.Dialogues.SceneTransition.atEnd
+  - DREditor.Dialogues.SceneTransition.moveToNextNaturalObjective
+  - DREditor.Dialogues.SceneTransition.moveToObjective
+  - DREditor.Dialogues.SceneTransition.onLoadNoDark
+  - DREditor.Dialogues.SceneTransition.scene
+  - DREditor.Dialogues.SceneTransition.toDark
+  - DREditor.Dialogues.SceneTransition.toMenu
   langs:
   - csharp
   - vb
@@ -21,16 +29,19 @@ items:
   fullName: DREditor.Dialogues.SceneTransition
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public class SceneTransition
-    content.vb: Public Class SceneTransition
+    content: 'public class SceneTransition : EndEventBase'
+    content.vb: Public Class SceneTransition Inherits EndEventBase
   inheritance:
   - System.Object
+  - DREditor.Dialogues.EndEventBase
   inheritedMembers:
+  - DREditor.Dialogues.EndEventBase.Enabled
+  - DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ToString
@@ -38,132 +49,157 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: DREditor.Dialogues.SceneTransition.Enabled
-  commentId: F:DREditor.Dialogues.SceneTransition.Enabled
-  id: Enabled
+  extensionMethods:
+  - DREditor.Dialogues.SceneTransition.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.SceneTransition.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.SceneTransition.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.SceneTransition.scene
+  commentId: F:DREditor.Dialogues.SceneTransition.scene
+  id: scene
   parent: DREditor.Dialogues.SceneTransition
   langs:
   - csharp
   - vb
-  name: Enabled
-  nameWithType: SceneTransition.Enabled
-  fullName: DREditor.Dialogues.SceneTransition.Enabled
+  name: scene
+  nameWithType: SceneTransition.scene
+  fullName: DREditor.Dialogues.SceneTransition.scene
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool Enabled
-    return:
-      type: System.Boolean
-    content.vb: Public Enabled As Boolean
-- uid: DREditor.Dialogues.SceneTransition.Scene
-  commentId: F:DREditor.Dialogues.SceneTransition.Scene
-  id: Scene
-  parent: DREditor.Dialogues.SceneTransition
-  langs:
-  - csharp
-  - vb
-  name: Scene
-  nameWithType: SceneTransition.Scene
-  fullName: DREditor.Dialogues.SceneTransition.Scene
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public string Scene
+    content: public string scene
     return:
       type: System.String
-    content.vb: Public Scene As String
-- uid: DREditor.Dialogues.SceneTransition.ToDark
-  commentId: F:DREditor.Dialogues.SceneTransition.ToDark
-  id: ToDark
+    content.vb: Public scene As String
+- uid: DREditor.Dialogues.SceneTransition.toDark
+  commentId: F:DREditor.Dialogues.SceneTransition.toDark
+  id: toDark
   parent: DREditor.Dialogues.SceneTransition
   langs:
   - csharp
   - vb
-  name: ToDark
-  nameWithType: SceneTransition.ToDark
-  fullName: DREditor.Dialogues.SceneTransition.ToDark
+  name: toDark
+  nameWithType: SceneTransition.toDark
+  fullName: DREditor.Dialogues.SceneTransition.toDark
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool ToDark
+    content: public bool toDark
     return:
       type: System.Boolean
-    content.vb: Public ToDark As Boolean
-- uid: DREditor.Dialogues.SceneTransition.ToMenu
-  commentId: F:DREditor.Dialogues.SceneTransition.ToMenu
-  id: ToMenu
+    content.vb: Public toDark As Boolean
+- uid: DREditor.Dialogues.SceneTransition.toMenu
+  commentId: F:DREditor.Dialogues.SceneTransition.toMenu
+  id: toMenu
   parent: DREditor.Dialogues.SceneTransition
   langs:
   - csharp
   - vb
-  name: ToMenu
-  nameWithType: SceneTransition.ToMenu
-  fullName: DREditor.Dialogues.SceneTransition.ToMenu
+  name: toMenu
+  nameWithType: SceneTransition.toMenu
+  fullName: DREditor.Dialogues.SceneTransition.toMenu
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool ToMenu
+    content: public bool toMenu
     return:
       type: System.Boolean
-    content.vb: Public ToMenu As Boolean
-- uid: DREditor.Dialogues.SceneTransition.AtEnd
-  commentId: F:DREditor.Dialogues.SceneTransition.AtEnd
-  id: AtEnd
+    content.vb: Public toMenu As Boolean
+- uid: DREditor.Dialogues.SceneTransition.atEnd
+  commentId: F:DREditor.Dialogues.SceneTransition.atEnd
+  id: atEnd
   parent: DREditor.Dialogues.SceneTransition
   langs:
   - csharp
   - vb
-  name: AtEnd
-  nameWithType: SceneTransition.AtEnd
-  fullName: DREditor.Dialogues.SceneTransition.AtEnd
+  name: atEnd
+  nameWithType: SceneTransition.atEnd
+  fullName: DREditor.Dialogues.SceneTransition.atEnd
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public Gate AtEnd
+    content: public Gate atEnd
     return:
       type: DREditor.Gates.Gate
-    content.vb: Public AtEnd As Gate
-- uid: DREditor.Dialogues.SceneTransition.OnLoadNoDark
-  commentId: F:DREditor.Dialogues.SceneTransition.OnLoadNoDark
-  id: OnLoadNoDark
+    content.vb: Public atEnd As Gate
+- uid: DREditor.Dialogues.SceneTransition.onLoadNoDark
+  commentId: F:DREditor.Dialogues.SceneTransition.onLoadNoDark
+  id: onLoadNoDark
   parent: DREditor.Dialogues.SceneTransition
   langs:
   - csharp
   - vb
-  name: OnLoadNoDark
-  nameWithType: SceneTransition.OnLoadNoDark
-  fullName: DREditor.Dialogues.SceneTransition.OnLoadNoDark
+  name: onLoadNoDark
+  nameWithType: SceneTransition.onLoadNoDark
+  fullName: DREditor.Dialogues.SceneTransition.onLoadNoDark
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool OnLoadNoDark
+    content: public bool onLoadNoDark
     return:
       type: System.Boolean
-    content.vb: Public OnLoadNoDark As Boolean
+    content.vb: Public onLoadNoDark As Boolean
+- uid: DREditor.Dialogues.SceneTransition.moveToObjective
+  commentId: F:DREditor.Dialogues.SceneTransition.moveToObjective
+  id: moveToObjective
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: moveToObjective
+  nameWithType: SceneTransition.moveToObjective
+  fullName: DREditor.Dialogues.SceneTransition.moveToObjective
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public string moveToObjective
+    return:
+      type: System.String
+    content.vb: Public moveToObjective As String
+- uid: DREditor.Dialogues.SceneTransition.moveToNextNaturalObjective
+  commentId: F:DREditor.Dialogues.SceneTransition.moveToNextNaturalObjective
+  id: moveToNextNaturalObjective
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: moveToNextNaturalObjective
+  nameWithType: SceneTransition.moveToNextNaturalObjective
+  fullName: DREditor.Dialogues.SceneTransition.moveToNextNaturalObjective
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool moveToNextNaturalObjective
+    return:
+      type: System.Boolean
+    content.vb: Public moveToNextNaturalObjective As Boolean
 - uid: DREditor.Dialogues.SceneTransition.OnlySceneEnabled
   commentId: M:DREditor.Dialogues.SceneTransition.OnlySceneEnabled
   id: OnlySceneEnabled
@@ -176,7 +212,7 @@ items:
   fullName: DREditor.Dialogues.SceneTransition.OnlySceneEnabled()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -198,7 +234,7 @@ items:
   fullName: DREditor.Dialogues.SceneTransition.SceneTransition()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -209,6 +245,167 @@ items:
   nameWithType.vb: SceneTransition.New()
   fullName.vb: DREditor.Dialogues.SceneTransition.New()
   name.vb: New()
+- uid: DREditor.Dialogues.SceneTransition.Scene
+  commentId: P:DREditor.Dialogues.SceneTransition.Scene
+  id: Scene
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: Scene
+  nameWithType: SceneTransition.Scene
+  fullName: DREditor.Dialogues.SceneTransition.Scene
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public string Scene { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Scene As String
+  overload: DREditor.Dialogues.SceneTransition.Scene*
+- uid: DREditor.Dialogues.SceneTransition.ToDark
+  commentId: P:DREditor.Dialogues.SceneTransition.ToDark
+  id: ToDark
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: ToDark
+  nameWithType: SceneTransition.ToDark
+  fullName: DREditor.Dialogues.SceneTransition.ToDark
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool ToDark { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ToDark As Boolean
+  overload: DREditor.Dialogues.SceneTransition.ToDark*
+- uid: DREditor.Dialogues.SceneTransition.ToMenu
+  commentId: P:DREditor.Dialogues.SceneTransition.ToMenu
+  id: ToMenu
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: ToMenu
+  nameWithType: SceneTransition.ToMenu
+  fullName: DREditor.Dialogues.SceneTransition.ToMenu
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool ToMenu { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ToMenu As Boolean
+  overload: DREditor.Dialogues.SceneTransition.ToMenu*
+- uid: DREditor.Dialogues.SceneTransition.AtEnd
+  commentId: P:DREditor.Dialogues.SceneTransition.AtEnd
+  id: AtEnd
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: AtEnd
+  nameWithType: SceneTransition.AtEnd
+  fullName: DREditor.Dialogues.SceneTransition.AtEnd
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public Gate AtEnd { get; set; }
+    parameters: []
+    return:
+      type: DREditor.Gates.Gate
+    content.vb: Public Property AtEnd As Gate
+  overload: DREditor.Dialogues.SceneTransition.AtEnd*
+- uid: DREditor.Dialogues.SceneTransition.OnLoadNoDark
+  commentId: P:DREditor.Dialogues.SceneTransition.OnLoadNoDark
+  id: OnLoadNoDark
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: OnLoadNoDark
+  nameWithType: SceneTransition.OnLoadNoDark
+  fullName: DREditor.Dialogues.SceneTransition.OnLoadNoDark
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool OnLoadNoDark { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property OnLoadNoDark As Boolean
+  overload: DREditor.Dialogues.SceneTransition.OnLoadNoDark*
+- uid: DREditor.Dialogues.SceneTransition.MoveToObjective
+  commentId: P:DREditor.Dialogues.SceneTransition.MoveToObjective
+  id: MoveToObjective
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: MoveToObjective
+  nameWithType: SceneTransition.MoveToObjective
+  fullName: DREditor.Dialogues.SceneTransition.MoveToObjective
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public string MoveToObjective { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MoveToObjective As String
+  overload: DREditor.Dialogues.SceneTransition.MoveToObjective*
+- uid: DREditor.Dialogues.SceneTransition.MoveToNextNaturalObjective
+  commentId: P:DREditor.Dialogues.SceneTransition.MoveToNextNaturalObjective
+  id: MoveToNextNaturalObjective
+  parent: DREditor.Dialogues.SceneTransition
+  langs:
+  - csharp
+  - vb
+  name: MoveToNextNaturalObjective
+  nameWithType: SceneTransition.MoveToNextNaturalObjective
+  fullName: DREditor.Dialogues.SceneTransition.MoveToNextNaturalObjective
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/SceneTransition.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public bool MoveToNextNaturalObjective { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property MoveToNextNaturalObjective As Boolean
+  overload: DREditor.Dialogues.SceneTransition.MoveToNextNaturalObjective*
 references:
 - uid: DREditor.Dialogues
   commentId: N:DREditor.Dialogues
@@ -248,6 +445,55 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Dialogues.EndEventBase
+  commentId: T:DREditor.Dialogues.EndEventBase
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html
+  name: EndEventBase
+  nameWithType: EndEventBase
+  fullName: DREditor.Dialogues.EndEventBase
+- uid: DREditor.Dialogues.EndEventBase.Enabled
+  commentId: F:DREditor.Dialogues.EndEventBase.Enabled
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_Enabled
+  name: Enabled
+  nameWithType: EndEventBase.Enabled
+  fullName: DREditor.Dialogues.EndEventBase.Enabled
+- uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  commentId: M:DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  name: SetEnabled(bool)
+  nameWithType: EndEventBase.SetEnabled(bool)
+  fullName: DREditor.Dialogues.EndEventBase.SetEnabled(bool)
+  nameWithType.vb: EndEventBase.SetEnabled(Boolean)
+  fullName.vb: DREditor.Dialogues.EndEventBase.SetEnabled(Boolean)
+  name.vb: SetEnabled(Boolean)
+  spec.csharp:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -467,6 +713,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Dialogues.SceneTransition.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<SceneTransition>(SceneTransition)
+  nameWithType: ReflectionHelper.GetFieldNames<SceneTransition>(SceneTransition)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.SceneTransition>(DREditor.Dialogues.SceneTransition)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of SceneTransition)(SceneTransition)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.SceneTransition)(DREditor.Dialogues.SceneTransition)
+  name.vb: GetFieldNames(Of SceneTransition)(SceneTransition)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.SceneTransition)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.SceneTransition)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+- uid: DREditor.Dialogues.SceneTransition.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<SceneTransition>(SceneTransition)
+  nameWithType: ReflectionHelper.GetFieldValues<SceneTransition>(SceneTransition)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.SceneTransition>(DREditor.Dialogues.SceneTransition)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of SceneTransition)(SceneTransition)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.SceneTransition)(DREditor.Dialogues.SceneTransition)
+  name.vb: GetFieldValues(Of SceneTransition)(SceneTransition)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.SceneTransition)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.SceneTransition)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+- uid: DREditor.Dialogues.SceneTransition.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<SceneTransition>(SceneTransition)
+  nameWithType: DeepCopyExtensions.DeepCopy<SceneTransition>(SceneTransition)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.SceneTransition>(DREditor.Dialogues.SceneTransition)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of SceneTransition)(SceneTransition)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.SceneTransition)(DREditor.Dialogues.SceneTransition)
+  name.vb: DeepCopy(Of SceneTransition)(SceneTransition)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.SceneTransition)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.SceneTransition)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.SceneTransition
+    name: SceneTransition
+    isExternal: true
+    href: DREditor.Dialogues.SceneTransition.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -474,17 +861,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -496,11 +1044,22 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: DREditor.Gates.Gate
   commentId: T:DREditor.Gates.Gate
   parent: DREditor.Gates
   isExternal: true
-  href: DREditor.Gates.Gate.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Gates/Gate.cs
   name: Gate
   nameWithType: Gate
   fullName: DREditor.Gates.Gate
@@ -548,3 +1107,52 @@ references:
   nameWithType.vb: SceneTransition.New
   fullName.vb: DREditor.Dialogues.SceneTransition.New
   name.vb: New
+- uid: DREditor.Dialogues.SceneTransition.Scene*
+  commentId: Overload:DREditor.Dialogues.SceneTransition.Scene
+  isExternal: true
+  href: DREditor.Dialogues.SceneTransition.html#DREditor_Dialogues_SceneTransition_Scene
+  name: Scene
+  nameWithType: SceneTransition.Scene
+  fullName: DREditor.Dialogues.SceneTransition.Scene
+- uid: DREditor.Dialogues.SceneTransition.ToDark*
+  commentId: Overload:DREditor.Dialogues.SceneTransition.ToDark
+  isExternal: true
+  href: DREditor.Dialogues.SceneTransition.html#DREditor_Dialogues_SceneTransition_ToDark
+  name: ToDark
+  nameWithType: SceneTransition.ToDark
+  fullName: DREditor.Dialogues.SceneTransition.ToDark
+- uid: DREditor.Dialogues.SceneTransition.ToMenu*
+  commentId: Overload:DREditor.Dialogues.SceneTransition.ToMenu
+  isExternal: true
+  href: DREditor.Dialogues.SceneTransition.html#DREditor_Dialogues_SceneTransition_ToMenu
+  name: ToMenu
+  nameWithType: SceneTransition.ToMenu
+  fullName: DREditor.Dialogues.SceneTransition.ToMenu
+- uid: DREditor.Dialogues.SceneTransition.AtEnd*
+  commentId: Overload:DREditor.Dialogues.SceneTransition.AtEnd
+  isExternal: true
+  href: DREditor.Dialogues.SceneTransition.html#DREditor_Dialogues_SceneTransition_AtEnd
+  name: AtEnd
+  nameWithType: SceneTransition.AtEnd
+  fullName: DREditor.Dialogues.SceneTransition.AtEnd
+- uid: DREditor.Dialogues.SceneTransition.OnLoadNoDark*
+  commentId: Overload:DREditor.Dialogues.SceneTransition.OnLoadNoDark
+  isExternal: true
+  href: DREditor.Dialogues.SceneTransition.html#DREditor_Dialogues_SceneTransition_OnLoadNoDark
+  name: OnLoadNoDark
+  nameWithType: SceneTransition.OnLoadNoDark
+  fullName: DREditor.Dialogues.SceneTransition.OnLoadNoDark
+- uid: DREditor.Dialogues.SceneTransition.MoveToObjective*
+  commentId: Overload:DREditor.Dialogues.SceneTransition.MoveToObjective
+  isExternal: true
+  href: DREditor.Dialogues.SceneTransition.html#DREditor_Dialogues_SceneTransition_MoveToObjective
+  name: MoveToObjective
+  nameWithType: SceneTransition.MoveToObjective
+  fullName: DREditor.Dialogues.SceneTransition.MoveToObjective
+- uid: DREditor.Dialogues.SceneTransition.MoveToNextNaturalObjective*
+  commentId: Overload:DREditor.Dialogues.SceneTransition.MoveToNextNaturalObjective
+  isExternal: true
+  href: DREditor.Dialogues.SceneTransition.html#DREditor_Dialogues_SceneTransition_MoveToNextNaturalObjective
+  name: MoveToNextNaturalObjective
+  nameWithType: SceneTransition.MoveToNextNaturalObjective
+  fullName: DREditor.Dialogues.SceneTransition.MoveToNextNaturalObjective

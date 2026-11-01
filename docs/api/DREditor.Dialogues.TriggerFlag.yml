@@ -7,9 +7,11 @@ items:
   children:
   - DREditor.Dialogues.TriggerFlag.#ctor
   - DREditor.Dialogues.TriggerFlag.Chapter
-  - DREditor.Dialogues.TriggerFlag.Enabled
   - DREditor.Dialogues.TriggerFlag.Flags
   - DREditor.Dialogues.TriggerFlag.Objective
+  - DREditor.Dialogues.TriggerFlag.SetObjective(System.Int32)
+  - DREditor.Dialogues.TriggerFlag.chapter
+  - DREditor.Dialogues.TriggerFlag.objective
   langs:
   - csharp
   - vb
@@ -18,16 +20,19 @@ items:
   fullName: DREditor.Dialogues.TriggerFlag
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TriggerFlag.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public class TriggerFlag
-    content.vb: Public Class TriggerFlag
+    content: 'public class TriggerFlag : EndEventBase'
+    content.vb: Public Class TriggerFlag Inherits EndEventBase
   inheritance:
   - System.Object
+  - DREditor.Dialogues.EndEventBase
   inheritedMembers:
+  - DREditor.Dialogues.EndEventBase.Enabled
+  - DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ToString
@@ -35,69 +40,52 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: DREditor.Dialogues.TriggerFlag.Enabled
-  commentId: F:DREditor.Dialogues.TriggerFlag.Enabled
-  id: Enabled
+  extensionMethods:
+  - DREditor.Dialogues.TriggerFlag.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.TriggerFlag.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.TriggerFlag.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.TriggerFlag.chapter
+  commentId: F:DREditor.Dialogues.TriggerFlag.chapter
+  id: chapter
   parent: DREditor.Dialogues.TriggerFlag
   langs:
   - csharp
   - vb
-  name: Enabled
-  nameWithType: TriggerFlag.Enabled
-  fullName: DREditor.Dialogues.TriggerFlag.Enabled
+  name: chapter
+  nameWithType: TriggerFlag.chapter
+  fullName: DREditor.Dialogues.TriggerFlag.chapter
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TriggerFlag.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public bool Enabled
-    return:
-      type: System.Boolean
-    content.vb: Public Enabled As Boolean
-- uid: DREditor.Dialogues.TriggerFlag.Chapter
-  commentId: F:DREditor.Dialogues.TriggerFlag.Chapter
-  id: Chapter
-  parent: DREditor.Dialogues.TriggerFlag
-  langs:
-  - csharp
-  - vb
-  name: Chapter
-  nameWithType: TriggerFlag.Chapter
-  fullName: DREditor.Dialogues.TriggerFlag.Chapter
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public int Chapter
+    content: public int chapter
     return:
       type: System.Int32
-    content.vb: Public Chapter As Integer
-- uid: DREditor.Dialogues.TriggerFlag.Objective
-  commentId: F:DREditor.Dialogues.TriggerFlag.Objective
-  id: Objective
+    content.vb: Public chapter As Integer
+- uid: DREditor.Dialogues.TriggerFlag.objective
+  commentId: F:DREditor.Dialogues.TriggerFlag.objective
+  id: objective
   parent: DREditor.Dialogues.TriggerFlag
   langs:
   - csharp
   - vb
-  name: Objective
-  nameWithType: TriggerFlag.Objective
-  fullName: DREditor.Dialogues.TriggerFlag.Objective
+  name: objective
+  nameWithType: TriggerFlag.objective
+  fullName: DREditor.Dialogues.TriggerFlag.objective
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TriggerFlag.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public int Objective
+    content: public int objective
     return:
       type: System.Int32
-    content.vb: Public Objective As Integer
+    content.vb: Public objective As Integer
 - uid: DREditor.Dialogues.TriggerFlag.Flags
   commentId: F:DREditor.Dialogues.TriggerFlag.Flags
   id: Flags
@@ -110,7 +98,7 @@ items:
   fullName: DREditor.Dialogues.TriggerFlag.Flags
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TriggerFlag.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -119,6 +107,32 @@ items:
     return:
       type: System.Collections.Generic.List{System.Int32}
     content.vb: Public Flags As List(Of Integer)
+- uid: DREditor.Dialogues.TriggerFlag.SetObjective(System.Int32)
+  commentId: M:DREditor.Dialogues.TriggerFlag.SetObjective(System.Int32)
+  id: SetObjective(System.Int32)
+  parent: DREditor.Dialogues.TriggerFlag
+  langs:
+  - csharp
+  - vb
+  name: SetObjective(int)
+  nameWithType: TriggerFlag.SetObjective(int)
+  fullName: DREditor.Dialogues.TriggerFlag.SetObjective(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TriggerFlag.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public void SetObjective(int Objective)
+    parameters:
+    - id: Objective
+      type: System.Int32
+    content.vb: Public Sub SetObjective(Objective As Integer)
+  overload: DREditor.Dialogues.TriggerFlag.SetObjective*
+  nameWithType.vb: TriggerFlag.SetObjective(Integer)
+  fullName.vb: DREditor.Dialogues.TriggerFlag.SetObjective(Integer)
+  name.vb: SetObjective(Integer)
 - uid: DREditor.Dialogues.TriggerFlag.#ctor
   commentId: M:DREditor.Dialogues.TriggerFlag.#ctor
   id: '#ctor'
@@ -131,7 +145,7 @@ items:
   fullName: DREditor.Dialogues.TriggerFlag.TriggerFlag()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TriggerFlag.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -142,6 +156,52 @@ items:
   nameWithType.vb: TriggerFlag.New()
   fullName.vb: DREditor.Dialogues.TriggerFlag.New()
   name.vb: New()
+- uid: DREditor.Dialogues.TriggerFlag.Chapter
+  commentId: P:DREditor.Dialogues.TriggerFlag.Chapter
+  id: Chapter
+  parent: DREditor.Dialogues.TriggerFlag
+  langs:
+  - csharp
+  - vb
+  name: Chapter
+  nameWithType: TriggerFlag.Chapter
+  fullName: DREditor.Dialogues.TriggerFlag.Chapter
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TriggerFlag.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public int Chapter { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Chapter As Integer
+  overload: DREditor.Dialogues.TriggerFlag.Chapter*
+- uid: DREditor.Dialogues.TriggerFlag.Objective
+  commentId: P:DREditor.Dialogues.TriggerFlag.Objective
+  id: Objective
+  parent: DREditor.Dialogues.TriggerFlag
+  langs:
+  - csharp
+  - vb
+  name: Objective
+  nameWithType: TriggerFlag.Objective
+  fullName: DREditor.Dialogues.TriggerFlag.Objective
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/TriggerFlag.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues
+  syntax:
+    content: public int Objective { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Objective As Integer
+  overload: DREditor.Dialogues.TriggerFlag.Objective*
 references:
 - uid: DREditor.Dialogues
   commentId: N:DREditor.Dialogues
@@ -181,6 +241,55 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Dialogues.EndEventBase
+  commentId: T:DREditor.Dialogues.EndEventBase
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html
+  name: EndEventBase
+  nameWithType: EndEventBase
+  fullName: DREditor.Dialogues.EndEventBase
+- uid: DREditor.Dialogues.EndEventBase.Enabled
+  commentId: F:DREditor.Dialogues.EndEventBase.Enabled
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_Enabled
+  name: Enabled
+  nameWithType: EndEventBase.Enabled
+  fullName: DREditor.Dialogues.EndEventBase.Enabled
+- uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  commentId: M:DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  name: SetEnabled(bool)
+  nameWithType: EndEventBase.SetEnabled(bool)
+  fullName: DREditor.Dialogues.EndEventBase.SetEnabled(bool)
+  nameWithType.vb: EndEventBase.SetEnabled(Boolean)
+  fullName.vb: DREditor.Dialogues.EndEventBase.SetEnabled(Boolean)
+  name.vb: SetEnabled(Boolean)
+  spec.csharp:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -400,6 +509,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Dialogues.TriggerFlag.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<TriggerFlag>(TriggerFlag)
+  nameWithType: ReflectionHelper.GetFieldNames<TriggerFlag>(TriggerFlag)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.TriggerFlag>(DREditor.Dialogues.TriggerFlag)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of TriggerFlag)(TriggerFlag)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.TriggerFlag)(DREditor.Dialogues.TriggerFlag)
+  name.vb: GetFieldNames(Of TriggerFlag)(TriggerFlag)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.TriggerFlag)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.TriggerFlag)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+- uid: DREditor.Dialogues.TriggerFlag.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<TriggerFlag>(TriggerFlag)
+  nameWithType: ReflectionHelper.GetFieldValues<TriggerFlag>(TriggerFlag)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.TriggerFlag>(DREditor.Dialogues.TriggerFlag)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of TriggerFlag)(TriggerFlag)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.TriggerFlag)(DREditor.Dialogues.TriggerFlag)
+  name.vb: GetFieldValues(Of TriggerFlag)(TriggerFlag)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.TriggerFlag)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.TriggerFlag)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+- uid: DREditor.Dialogues.TriggerFlag.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<TriggerFlag>(TriggerFlag)
+  nameWithType: DeepCopyExtensions.DeepCopy<TriggerFlag>(TriggerFlag)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.TriggerFlag>(DREditor.Dialogues.TriggerFlag)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of TriggerFlag)(TriggerFlag)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.TriggerFlag)(DREditor.Dialogues.TriggerFlag)
+  name.vb: DeepCopy(Of TriggerFlag)(TriggerFlag)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.TriggerFlag)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.TriggerFlag)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.TriggerFlag
+    name: TriggerFlag
+    isExternal: true
+    href: DREditor.Dialogues.TriggerFlag.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -407,17 +657,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -529,6 +940,13 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Dialogues.TriggerFlag.SetObjective*
+  commentId: Overload:DREditor.Dialogues.TriggerFlag.SetObjective
+  isExternal: true
+  href: DREditor.Dialogues.TriggerFlag.html#DREditor_Dialogues_TriggerFlag_SetObjective_System_Int32_
+  name: SetObjective
+  nameWithType: TriggerFlag.SetObjective
+  fullName: DREditor.Dialogues.TriggerFlag.SetObjective
 - uid: DREditor.Dialogues.TriggerFlag.#ctor*
   commentId: Overload:DREditor.Dialogues.TriggerFlag.#ctor
   isExternal: true
@@ -539,3 +957,17 @@ references:
   nameWithType.vb: TriggerFlag.New
   fullName.vb: DREditor.Dialogues.TriggerFlag.New
   name.vb: New
+- uid: DREditor.Dialogues.TriggerFlag.Chapter*
+  commentId: Overload:DREditor.Dialogues.TriggerFlag.Chapter
+  isExternal: true
+  href: DREditor.Dialogues.TriggerFlag.html#DREditor_Dialogues_TriggerFlag_Chapter
+  name: Chapter
+  nameWithType: TriggerFlag.Chapter
+  fullName: DREditor.Dialogues.TriggerFlag.Chapter
+- uid: DREditor.Dialogues.TriggerFlag.Objective*
+  commentId: Overload:DREditor.Dialogues.TriggerFlag.Objective
+  isExternal: true
+  href: DREditor.Dialogues.TriggerFlag.html#DREditor_Dialogues_TriggerFlag_Objective
+  name: Objective
+  nameWithType: TriggerFlag.Objective
+  fullName: DREditor.Dialogues.TriggerFlag.Objective

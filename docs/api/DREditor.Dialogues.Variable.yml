@@ -6,15 +6,6 @@ items:
   parent: DREditor.Dialogues
   children:
   - DREditor.Dialogues.Variable.#ctor
-  - DREditor.Dialogues.Variable.BoolVariable
-  - DREditor.Dialogues.Variable.Chapter
-  - DREditor.Dialogues.Variable.Enabled
-  - DREditor.Dialogues.Variable.Flags
-  - DREditor.Dialogues.Variable.NextDialogueFalse
-  - DREditor.Dialogues.Variable.NextDialogueTrue
-  - DREditor.Dialogues.Variable.NextIndexInDialogueFalse
-  - DREditor.Dialogues.Variable.NextIndexInDialogueTrue
-  - DREditor.Dialogues.Variable.Objective
   langs:
   - csharp
   - vb
@@ -23,16 +14,33 @@ items:
   fullName: DREditor.Dialogues.Variable
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Variable.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
   syntax:
-    content: public class Variable
-    content.vb: Public Class Variable
+    content: 'public class Variable : Variable<Line>'
+    content.vb: Public Class Variable Inherits Variable(Of Line)
   inheritance:
   - System.Object
+  - DREditor.Dialogues.EndEventBase
+  - DREditor.Dialogues.VariableBase
+  - DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
   inheritedMembers:
+  - DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.boolVariable
+  - DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextDialogueTrue
+  - DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextIndexInDialogueTrue
+  - DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextDialogueFalse
+  - DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextIndexInDialogueFalse
+  - DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.BoolVariable
+  - DREditor.Dialogues.VariableBase.chapter
+  - DREditor.Dialogues.VariableBase.objective
+  - DREditor.Dialogues.VariableBase.Flags
+  - DREditor.Dialogues.VariableBase.FalseFlags
+  - DREditor.Dialogues.VariableBase.Chapter
+  - DREditor.Dialogues.VariableBase.Objective
+  - DREditor.Dialogues.EndEventBase.Enabled
+  - DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ToString
@@ -40,195 +48,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: DREditor.Dialogues.Variable.Enabled
-  commentId: F:DREditor.Dialogues.Variable.Enabled
-  id: Enabled
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: Enabled
-  nameWithType: Variable.Enabled
-  fullName: DREditor.Dialogues.Variable.Enabled
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public bool Enabled
-    return:
-      type: System.Boolean
-    content.vb: Public Enabled As Boolean
-- uid: DREditor.Dialogues.Variable.BoolVariable
-  commentId: F:DREditor.Dialogues.Variable.BoolVariable
-  id: BoolVariable
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: BoolVariable
-  nameWithType: Variable.BoolVariable
-  fullName: DREditor.Dialogues.Variable.BoolVariable
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public BoolWithEvent BoolVariable
-    return:
-      type: DREditor.EventObjects.BoolWithEvent
-    content.vb: Public BoolVariable As BoolWithEvent
-- uid: DREditor.Dialogues.Variable.Chapter
-  commentId: F:DREditor.Dialogues.Variable.Chapter
-  id: Chapter
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: Chapter
-  nameWithType: Variable.Chapter
-  fullName: DREditor.Dialogues.Variable.Chapter
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public int Chapter
-    return:
-      type: System.Int32
-    content.vb: Public Chapter As Integer
-- uid: DREditor.Dialogues.Variable.Objective
-  commentId: F:DREditor.Dialogues.Variable.Objective
-  id: Objective
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: Objective
-  nameWithType: Variable.Objective
-  fullName: DREditor.Dialogues.Variable.Objective
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public int Objective
-    return:
-      type: System.Int32
-    content.vb: Public Objective As Integer
-- uid: DREditor.Dialogues.Variable.Flags
-  commentId: F:DREditor.Dialogues.Variable.Flags
-  id: Flags
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: Flags
-  nameWithType: Variable.Flags
-  fullName: DREditor.Dialogues.Variable.Flags
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public List<int> Flags
-    return:
-      type: System.Collections.Generic.List{System.Int32}
-    content.vb: Public Flags As List(Of Integer)
-- uid: DREditor.Dialogues.Variable.NextDialogueTrue
-  commentId: F:DREditor.Dialogues.Variable.NextDialogueTrue
-  id: NextDialogueTrue
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: NextDialogueTrue
-  nameWithType: Variable.NextDialogueTrue
-  fullName: DREditor.Dialogues.Variable.NextDialogueTrue
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public Dialogue NextDialogueTrue
-    return:
-      type: DREditor.Dialogues.Dialogue
-    content.vb: Public NextDialogueTrue As Dialogue
-- uid: DREditor.Dialogues.Variable.NextIndexInDialogueTrue
-  commentId: F:DREditor.Dialogues.Variable.NextIndexInDialogueTrue
-  id: NextIndexInDialogueTrue
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: NextIndexInDialogueTrue
-  nameWithType: Variable.NextIndexInDialogueTrue
-  fullName: DREditor.Dialogues.Variable.NextIndexInDialogueTrue
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public int NextIndexInDialogueTrue
-    return:
-      type: System.Int32
-    content.vb: Public NextIndexInDialogueTrue As Integer
-- uid: DREditor.Dialogues.Variable.NextDialogueFalse
-  commentId: F:DREditor.Dialogues.Variable.NextDialogueFalse
-  id: NextDialogueFalse
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: NextDialogueFalse
-  nameWithType: Variable.NextDialogueFalse
-  fullName: DREditor.Dialogues.Variable.NextDialogueFalse
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public Dialogue NextDialogueFalse
-    return:
-      type: DREditor.Dialogues.Dialogue
-    content.vb: Public NextDialogueFalse As Dialogue
-- uid: DREditor.Dialogues.Variable.NextIndexInDialogueFalse
-  commentId: F:DREditor.Dialogues.Variable.NextIndexInDialogueFalse
-  id: NextIndexInDialogueFalse
-  parent: DREditor.Dialogues.Variable
-  langs:
-  - csharp
-  - vb
-  name: NextIndexInDialogueFalse
-  nameWithType: Variable.NextIndexInDialogueFalse
-  fullName: DREditor.Dialogues.Variable.NextIndexInDialogueFalse
-  type: Field
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues
-  syntax:
-    content: public int NextIndexInDialogueFalse
-    return:
-      type: System.Int32
-    content.vb: Public NextIndexInDialogueFalse As Integer
+  extensionMethods:
+  - DREditor.Dialogues.Variable.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.Variable.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.Variable.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.Dialogues.Variable.#ctor
   commentId: M:DREditor.Dialogues.Variable.#ctor
   id: '#ctor'
@@ -241,7 +64,7 @@ items:
   fullName: DREditor.Dialogues.Variable.Variable()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Dialogue.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Variable.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues
@@ -291,6 +114,206 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Dialogues.EndEventBase
+  commentId: T:DREditor.Dialogues.EndEventBase
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html
+  name: EndEventBase
+  nameWithType: EndEventBase
+  fullName: DREditor.Dialogues.EndEventBase
+- uid: DREditor.Dialogues.VariableBase
+  commentId: T:DREditor.Dialogues.VariableBase
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: DREditor.Dialogues.VariableBase.html
+  name: VariableBase
+  nameWithType: VariableBase
+  fullName: DREditor.Dialogues.VariableBase
+- uid: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
+  commentId: T:DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
+  parent: DREditor.Dialogues
+  definition: DREditor.Dialogues.Variable`1
+  href: DREditor.Dialogues.Variable-1.html
+  name: Variable<Line>
+  nameWithType: Variable<Line>
+  fullName: DREditor.Dialogues.Variable<DREditor.Dialogues.Line>
+  nameWithType.vb: Variable(Of Line)
+  fullName.vb: DREditor.Dialogues.Variable(Of DREditor.Dialogues.Line)
+  name.vb: Variable(Of Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Variable`1
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable-1.html
+  - name: <
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Dialogues.Variable`1
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: DREditor.Dialogues.Line.html
+  - name: )
+- uid: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.boolVariable
+  commentId: F:DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.boolVariable
+  parent: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.Variable`1.boolVariable
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_boolVariable
+  name: boolVariable
+  nameWithType: Variable<Line>.boolVariable
+  fullName: DREditor.Dialogues.Variable<DREditor.Dialogues.Line>.boolVariable
+  nameWithType.vb: Variable(Of Line).boolVariable
+  fullName.vb: DREditor.Dialogues.Variable(Of DREditor.Dialogues.Line).boolVariable
+- uid: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextDialogueTrue
+  commentId: F:DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextDialogueTrue
+  parent: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.Variable`1.NextDialogueTrue
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_NextDialogueTrue
+  name: NextDialogueTrue
+  nameWithType: Variable<Line>.NextDialogueTrue
+  fullName: DREditor.Dialogues.Variable<DREditor.Dialogues.Line>.NextDialogueTrue
+  nameWithType.vb: Variable(Of Line).NextDialogueTrue
+  fullName.vb: DREditor.Dialogues.Variable(Of DREditor.Dialogues.Line).NextDialogueTrue
+- uid: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextIndexInDialogueTrue
+  commentId: F:DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextIndexInDialogueTrue
+  parent: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.Variable`1.NextIndexInDialogueTrue
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_NextIndexInDialogueTrue
+  name: NextIndexInDialogueTrue
+  nameWithType: Variable<Line>.NextIndexInDialogueTrue
+  fullName: DREditor.Dialogues.Variable<DREditor.Dialogues.Line>.NextIndexInDialogueTrue
+  nameWithType.vb: Variable(Of Line).NextIndexInDialogueTrue
+  fullName.vb: DREditor.Dialogues.Variable(Of DREditor.Dialogues.Line).NextIndexInDialogueTrue
+- uid: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextDialogueFalse
+  commentId: F:DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextDialogueFalse
+  parent: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.Variable`1.NextDialogueFalse
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_NextDialogueFalse
+  name: NextDialogueFalse
+  nameWithType: Variable<Line>.NextDialogueFalse
+  fullName: DREditor.Dialogues.Variable<DREditor.Dialogues.Line>.NextDialogueFalse
+  nameWithType.vb: Variable(Of Line).NextDialogueFalse
+  fullName.vb: DREditor.Dialogues.Variable(Of DREditor.Dialogues.Line).NextDialogueFalse
+- uid: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextIndexInDialogueFalse
+  commentId: F:DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.NextIndexInDialogueFalse
+  parent: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.Variable`1.NextIndexInDialogueFalse
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_NextIndexInDialogueFalse
+  name: NextIndexInDialogueFalse
+  nameWithType: Variable<Line>.NextIndexInDialogueFalse
+  fullName: DREditor.Dialogues.Variable<DREditor.Dialogues.Line>.NextIndexInDialogueFalse
+  nameWithType.vb: Variable(Of Line).NextIndexInDialogueFalse
+  fullName.vb: DREditor.Dialogues.Variable(Of DREditor.Dialogues.Line).NextIndexInDialogueFalse
+- uid: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.BoolVariable
+  commentId: P:DREditor.Dialogues.Variable{DREditor.Dialogues.Line}.BoolVariable
+  parent: DREditor.Dialogues.Variable{DREditor.Dialogues.Line}
+  definition: DREditor.Dialogues.Variable`1.BoolVariable
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_BoolVariable
+  name: BoolVariable
+  nameWithType: Variable<Line>.BoolVariable
+  fullName: DREditor.Dialogues.Variable<DREditor.Dialogues.Line>.BoolVariable
+  nameWithType.vb: Variable(Of Line).BoolVariable
+  fullName.vb: DREditor.Dialogues.Variable(Of DREditor.Dialogues.Line).BoolVariable
+- uid: DREditor.Dialogues.VariableBase.chapter
+  commentId: F:DREditor.Dialogues.VariableBase.chapter
+  parent: DREditor.Dialogues.VariableBase
+  isExternal: true
+  href: DREditor.Dialogues.VariableBase.html#DREditor_Dialogues_VariableBase_chapter
+  name: chapter
+  nameWithType: VariableBase.chapter
+  fullName: DREditor.Dialogues.VariableBase.chapter
+- uid: DREditor.Dialogues.VariableBase.objective
+  commentId: F:DREditor.Dialogues.VariableBase.objective
+  parent: DREditor.Dialogues.VariableBase
+  isExternal: true
+  href: DREditor.Dialogues.VariableBase.html#DREditor_Dialogues_VariableBase_objective
+  name: objective
+  nameWithType: VariableBase.objective
+  fullName: DREditor.Dialogues.VariableBase.objective
+- uid: DREditor.Dialogues.VariableBase.Flags
+  commentId: F:DREditor.Dialogues.VariableBase.Flags
+  parent: DREditor.Dialogues.VariableBase
+  isExternal: true
+  href: DREditor.Dialogues.VariableBase.html#DREditor_Dialogues_VariableBase_Flags
+  name: Flags
+  nameWithType: VariableBase.Flags
+  fullName: DREditor.Dialogues.VariableBase.Flags
+- uid: DREditor.Dialogues.VariableBase.FalseFlags
+  commentId: F:DREditor.Dialogues.VariableBase.FalseFlags
+  parent: DREditor.Dialogues.VariableBase
+  isExternal: true
+  href: DREditor.Dialogues.VariableBase.html#DREditor_Dialogues_VariableBase_FalseFlags
+  name: FalseFlags
+  nameWithType: VariableBase.FalseFlags
+  fullName: DREditor.Dialogues.VariableBase.FalseFlags
+- uid: DREditor.Dialogues.VariableBase.Chapter
+  commentId: P:DREditor.Dialogues.VariableBase.Chapter
+  parent: DREditor.Dialogues.VariableBase
+  isExternal: true
+  href: DREditor.Dialogues.VariableBase.html#DREditor_Dialogues_VariableBase_Chapter
+  name: Chapter
+  nameWithType: VariableBase.Chapter
+  fullName: DREditor.Dialogues.VariableBase.Chapter
+- uid: DREditor.Dialogues.VariableBase.Objective
+  commentId: P:DREditor.Dialogues.VariableBase.Objective
+  parent: DREditor.Dialogues.VariableBase
+  isExternal: true
+  href: DREditor.Dialogues.VariableBase.html#DREditor_Dialogues_VariableBase_Objective
+  name: Objective
+  nameWithType: VariableBase.Objective
+  fullName: DREditor.Dialogues.VariableBase.Objective
+- uid: DREditor.Dialogues.EndEventBase.Enabled
+  commentId: F:DREditor.Dialogues.EndEventBase.Enabled
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_Enabled
+  name: Enabled
+  nameWithType: EndEventBase.Enabled
+  fullName: DREditor.Dialogues.EndEventBase.Enabled
+- uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  commentId: M:DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+  parent: DREditor.Dialogues.EndEventBase
+  isExternal: true
+  href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  name: SetEnabled(bool)
+  nameWithType: EndEventBase.SetEnabled(bool)
+  fullName: DREditor.Dialogues.EndEventBase.SetEnabled(bool)
+  nameWithType.vb: EndEventBase.SetEnabled(Boolean)
+  fullName.vb: DREditor.Dialogues.EndEventBase.SetEnabled(Boolean)
+  name.vb: SetEnabled(Boolean)
+  spec.csharp:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.EndEventBase.SetEnabled(System.Boolean)
+    name: SetEnabled
+    isExternal: true
+    href: DREditor.Dialogues.EndEventBase.html#DREditor_Dialogues_EndEventBase_SetEnabled_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -510,6 +533,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Dialogues.Variable.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<Variable>(Variable)
+  nameWithType: ReflectionHelper.GetFieldNames<Variable>(Variable)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.Variable>(DREditor.Dialogues.Variable)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of Variable)(Variable)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.Variable)(DREditor.Dialogues.Variable)
+  name.vb: GetFieldNames(Of Variable)(Variable)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Variable)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Variable)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
+- uid: DREditor.Dialogues.Variable.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<Variable>(Variable)
+  nameWithType: ReflectionHelper.GetFieldValues<Variable>(Variable)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.Variable>(DREditor.Dialogues.Variable)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of Variable)(Variable)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.Variable)(DREditor.Dialogues.Variable)
+  name.vb: GetFieldValues(Of Variable)(Variable)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Variable)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Variable)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
+- uid: DREditor.Dialogues.Variable.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<Variable>(Variable)
+  nameWithType: DeepCopyExtensions.DeepCopy<Variable>(Variable)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.Variable>(DREditor.Dialogues.Variable)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of Variable)(Variable)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.Variable)(DREditor.Dialogues.Variable)
+  name.vb: DeepCopy(Of Variable)(Variable)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Variable)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Variable)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Variable
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -517,171 +681,260 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+- uid: DREditor.Dialogues.Variable`1
+  commentId: T:DREditor.Dialogues.Variable`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: DREditor.EventObjects.BoolWithEvent
-  commentId: T:DREditor.EventObjects.BoolWithEvent
-  parent: DREditor.EventObjects
+  href: DREditor.Dialogues.Variable-1.html
+  name: Variable<T2>
+  nameWithType: Variable<T2>
+  fullName: DREditor.Dialogues.Variable<T2>
+  nameWithType.vb: Variable(Of T2)
+  fullName.vb: DREditor.Dialogues.Variable(Of T2)
+  name.vb: Variable(Of T2)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Variable`1
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable-1.html
+  - name: <
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Dialogues.Variable`1
+    name: Variable
+    isExternal: true
+    href: DREditor.Dialogues.Variable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T2
+  - name: )
+- uid: DREditor.Dialogues.Variable`1.boolVariable
+  commentId: F:DREditor.Dialogues.Variable`1.boolVariable
   isExternal: true
-  href: DREditor.EventObjects.BoolWithEvent.html
-  name: BoolWithEvent
-  nameWithType: BoolWithEvent
-  fullName: DREditor.EventObjects.BoolWithEvent
-- uid: DREditor.EventObjects
-  commentId: N:DREditor.EventObjects
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_boolVariable
+  name: boolVariable
+  nameWithType: Variable<T2>.boolVariable
+  fullName: DREditor.Dialogues.Variable<T2>.boolVariable
+  nameWithType.vb: Variable(Of T2).boolVariable
+  fullName.vb: DREditor.Dialogues.Variable(Of T2).boolVariable
+- uid: DREditor.Dialogues.Variable`1.NextDialogueTrue
+  commentId: F:DREditor.Dialogues.Variable`1.NextDialogueTrue
+  isExternal: true
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_NextDialogueTrue
+  name: NextDialogueTrue
+  nameWithType: Variable<T2>.NextDialogueTrue
+  fullName: DREditor.Dialogues.Variable<T2>.NextDialogueTrue
+  nameWithType.vb: Variable(Of T2).NextDialogueTrue
+  fullName.vb: DREditor.Dialogues.Variable(Of T2).NextDialogueTrue
+- uid: DREditor.Dialogues.Variable`1.NextIndexInDialogueTrue
+  commentId: F:DREditor.Dialogues.Variable`1.NextIndexInDialogueTrue
+  isExternal: true
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_NextIndexInDialogueTrue
+  name: NextIndexInDialogueTrue
+  nameWithType: Variable<T2>.NextIndexInDialogueTrue
+  fullName: DREditor.Dialogues.Variable<T2>.NextIndexInDialogueTrue
+  nameWithType.vb: Variable(Of T2).NextIndexInDialogueTrue
+  fullName.vb: DREditor.Dialogues.Variable(Of T2).NextIndexInDialogueTrue
+- uid: DREditor.Dialogues.Variable`1.NextDialogueFalse
+  commentId: F:DREditor.Dialogues.Variable`1.NextDialogueFalse
+  isExternal: true
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_NextDialogueFalse
+  name: NextDialogueFalse
+  nameWithType: Variable<T2>.NextDialogueFalse
+  fullName: DREditor.Dialogues.Variable<T2>.NextDialogueFalse
+  nameWithType.vb: Variable(Of T2).NextDialogueFalse
+  fullName.vb: DREditor.Dialogues.Variable(Of T2).NextDialogueFalse
+- uid: DREditor.Dialogues.Variable`1.NextIndexInDialogueFalse
+  commentId: F:DREditor.Dialogues.Variable`1.NextIndexInDialogueFalse
+  isExternal: true
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_NextIndexInDialogueFalse
+  name: NextIndexInDialogueFalse
+  nameWithType: Variable<T2>.NextIndexInDialogueFalse
+  fullName: DREditor.Dialogues.Variable<T2>.NextIndexInDialogueFalse
+  nameWithType.vb: Variable(Of T2).NextIndexInDialogueFalse
+  fullName.vb: DREditor.Dialogues.Variable(Of T2).NextIndexInDialogueFalse
+- uid: DREditor.Dialogues.Variable`1.BoolVariable
+  commentId: P:DREditor.Dialogues.Variable`1.BoolVariable
+  isExternal: true
+  href: DREditor.Dialogues.Variable-1.html#DREditor_Dialogues_Variable_1_BoolVariable
+  name: BoolVariable
+  nameWithType: Variable<T2>.BoolVariable
+  fullName: DREditor.Dialogues.Variable<T2>.BoolVariable
+  nameWithType.vb: Variable(Of T2).BoolVariable
+  fullName.vb: DREditor.Dialogues.Variable(Of T2).BoolVariable
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
   isExternal: true
   href: DREditor.html
-  name: DREditor.EventObjects
-  nameWithType: DREditor.EventObjects
-  fullName: DREditor.EventObjects
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
   spec.csharp:
   - uid: DREditor
     name: DREditor
     isExternal: true
     href: DREditor.html
   - name: .
-  - uid: DREditor.EventObjects
-    name: EventObjects
+  - uid: DREditor.Saving
+    name: Saving
     isExternal: true
-    href: DREditor.EventObjects.html
+    href: DREditor.Saving.html
   spec.vb:
   - uid: DREditor
     name: DREditor
     isExternal: true
     href: DREditor.html
   - name: .
-  - uid: DREditor.EventObjects
-    name: EventObjects
+  - uid: DREditor.Saving
+    name: Saving
     isExternal: true
-    href: DREditor.EventObjects.html
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: System.Collections.Generic.List{System.Int32}
-  commentId: T:System.Collections.Generic.List{System.Int32}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<int>
-  nameWithType: List<int>
-  fullName: System.Collections.Generic.List<int>
-  nameWithType.vb: List(Of Integer)
-  fullName.vb: System.Collections.Generic.List(Of Integer)
-  name.vb: List(Of Integer)
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: DREditor
+    name: DREditor
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: System.Int32
-    name: int
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '>'
+    href: DREditor.Utility.html
   spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: DREditor
+    name: DREditor
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
+    href: DREditor.html
   - name: .
-  - uid: System.Collections
-    name: Collections
+  - uid: DREditor.Utility
+    name: Utility
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: DREditor.Dialogues.Dialogue
-  commentId: T:DREditor.Dialogues.Dialogue
-  parent: DREditor.Dialogues
-  isExternal: true
-  href: DREditor.Dialogues.Dialogue.html
-  name: Dialogue
-  nameWithType: Dialogue
-  fullName: DREditor.Dialogues.Dialogue
+    href: DREditor.Utility.html
 - uid: DREditor.Dialogues.Variable.#ctor*
   commentId: Overload:DREditor.Dialogues.Variable.#ctor
   isExternal: true

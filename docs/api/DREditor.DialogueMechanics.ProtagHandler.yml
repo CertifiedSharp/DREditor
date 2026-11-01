@@ -1,0 +1,957 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.DialogueMechanics.ProtagHandler
+  commentId: T:DREditor.DialogueMechanics.ProtagHandler
+  id: ProtagHandler
+  parent: DREditor.DialogueMechanics
+  children:
+  - DREditor.DialogueMechanics.ProtagHandler.#ctor
+  - DREditor.DialogueMechanics.ProtagHandler.EvaluateIfProtagSpeaking(DREditor.Dialogues.Line)
+  - DREditor.DialogueMechanics.ProtagHandler.LineProcess(DREditor.Dialogues.Line)
+  - DREditor.DialogueMechanics.ProtagHandler.OnLoadToLine(DREditor.Dialogues.Line)
+  - DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName(System.String)
+  - DREditor.DialogueMechanics.ProtagHandler.Start
+  - DREditor.DialogueMechanics.ProtagHandler.isProtagSpeaking
+  - DREditor.DialogueMechanics.ProtagHandler.protagFirstName
+  - DREditor.DialogueMechanics.ProtagHandler.startingProtagFirstName
+  - DREditor.DialogueMechanics.ProtagHandler.tutorialCharacterFirstName
+  langs:
+  - csharp
+  - vb
+  name: ProtagHandler
+  nameWithType: ProtagHandler
+  fullName: DREditor.DialogueMechanics.ProtagHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueComponent, ILineProcessor, ILoadToLineable\n\n")]
+
+      public class ProtagHandler : DialogueComponent, ILineProcessor, ILoadToLineable
+    content.vb: >-
+      <ClassHeader("DialogueComponent, ILineProcessor, ILoadToLineable" & vbLf & vbLf)>
+
+      Public Class ProtagHandler Inherits DialogueComponent Implements ILineProcessor, ILoadToLineable
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessor
+  - DREditor.Dialogues.Loading.ILoadToLineable
+  extensionMethods:
+  - DREditor.DialogueMechanics.ProtagHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.DialogueMechanics.ProtagHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.DialogueMechanics.ProtagHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueComponent, ILineProcessor, ILoadToLineable
+
+- uid: DREditor.DialogueMechanics.ProtagHandler.isProtagSpeaking
+  commentId: F:DREditor.DialogueMechanics.ProtagHandler.isProtagSpeaking
+  id: isProtagSpeaking
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: isProtagSpeaking
+  nameWithType: ProtagHandler.isProtagSpeaking
+  fullName: DREditor.DialogueMechanics.ProtagHandler.isProtagSpeaking
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isProtagSpeaking
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isProtagSpeaking As BoolWithEvent
+- uid: DREditor.DialogueMechanics.ProtagHandler.protagFirstName
+  commentId: F:DREditor.DialogueMechanics.ProtagHandler.protagFirstName
+  id: protagFirstName
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: protagFirstName
+  nameWithType: ProtagHandler.protagFirstName
+  fullName: DREditor.DialogueMechanics.ProtagHandler.protagFirstName
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: protected StringWithEvent protagFirstName
+    return:
+      type: DREditor.EventObjects.StringWithEvent
+    content.vb: Protected protagFirstName As StringWithEvent
+- uid: DREditor.DialogueMechanics.ProtagHandler.tutorialCharacterFirstName
+  commentId: F:DREditor.DialogueMechanics.ProtagHandler.tutorialCharacterFirstName
+  id: tutorialCharacterFirstName
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: tutorialCharacterFirstName
+  nameWithType: ProtagHandler.tutorialCharacterFirstName
+  fullName: DREditor.DialogueMechanics.ProtagHandler.tutorialCharacterFirstName
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: protected string tutorialCharacterFirstName
+    return:
+      type: System.String
+    content.vb: Protected tutorialCharacterFirstName As String
+- uid: DREditor.DialogueMechanics.ProtagHandler.startingProtagFirstName
+  commentId: F:DREditor.DialogueMechanics.ProtagHandler.startingProtagFirstName
+  id: startingProtagFirstName
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: startingProtagFirstName
+  nameWithType: ProtagHandler.startingProtagFirstName
+  fullName: DREditor.DialogueMechanics.ProtagHandler.startingProtagFirstName
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: protected string startingProtagFirstName
+    return:
+      type: System.String
+    content.vb: Protected startingProtagFirstName As String
+- uid: DREditor.DialogueMechanics.ProtagHandler.Start
+  commentId: M:DREditor.DialogueMechanics.ProtagHandler.Start
+  id: Start
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ProtagHandler.Start()
+  fullName: DREditor.DialogueMechanics.ProtagHandler.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.DialogueMechanics.ProtagHandler.Start*
+- uid: DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName(System.String)
+  commentId: M:DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName(System.String)
+  id: SetProtagFirstName(System.String)
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: SetProtagFirstName(string)
+  nameWithType: ProtagHandler.SetProtagFirstName(string)
+  fullName: DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SetProtagFirstName(string firstName)
+    parameters:
+    - id: firstName
+      type: System.String
+      description: ''
+    content.vb: Protected Overridable Sub SetProtagFirstName(firstName As String)
+  overload: DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName*
+  nameWithType.vb: ProtagHandler.SetProtagFirstName(String)
+  fullName.vb: DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName(String)
+  name.vb: SetProtagFirstName(String)
+- uid: DREditor.DialogueMechanics.ProtagHandler.EvaluateIfProtagSpeaking(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueMechanics.ProtagHandler.EvaluateIfProtagSpeaking(DREditor.Dialogues.Line)
+  id: EvaluateIfProtagSpeaking(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateIfProtagSpeaking(Line)
+  nameWithType: ProtagHandler.EvaluateIfProtagSpeaking(Line)
+  fullName: DREditor.DialogueMechanics.ProtagHandler.EvaluateIfProtagSpeaking(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void EvaluateIfProtagSpeaking(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Protected Overridable Sub EvaluateIfProtagSpeaking(currentLine As Line)
+  overload: DREditor.DialogueMechanics.ProtagHandler.EvaluateIfProtagSpeaking*
+- uid: DREditor.DialogueMechanics.ProtagHandler.LineProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueMechanics.ProtagHandler.LineProcess(DREditor.Dialogues.Line)
+  id: LineProcess(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: LineProcess(Line)
+  nameWithType: ProtagHandler.LineProcess(Line)
+  fullName: DREditor.DialogueMechanics.ProtagHandler.LineProcess(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LineProcess(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub LineProcess(currentLine As Line)
+  overload: DREditor.DialogueMechanics.ProtagHandler.LineProcess*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+- uid: DREditor.DialogueMechanics.ProtagHandler.OnLoadToLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueMechanics.ProtagHandler.OnLoadToLine(DREditor.Dialogues.Line)
+  id: OnLoadToLine(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: OnLoadToLine(Line)
+  nameWithType: ProtagHandler.OnLoadToLine(Line)
+  fullName: DREditor.DialogueMechanics.ProtagHandler.OnLoadToLine(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnLoadToLine(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub OnLoadToLine(currentLine As Line)
+  overload: DREditor.DialogueMechanics.ProtagHandler.OnLoadToLine*
+  implements:
+  - DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+- uid: DREditor.DialogueMechanics.ProtagHandler.#ctor
+  commentId: M:DREditor.DialogueMechanics.ProtagHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.DialogueMechanics.ProtagHandler
+  langs:
+  - csharp
+  - vb
+  name: ProtagHandler()
+  nameWithType: ProtagHandler.ProtagHandler()
+  fullName: DREditor.DialogueMechanics.ProtagHandler.ProtagHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics/ProtagHandler.cs
+  assemblies:
+  - DREditor.DialogueMechanics
+  namespace: DREditor.DialogueMechanics
+  syntax:
+    content: public ProtagHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.DialogueMechanics.ProtagHandler.#ctor*
+  nameWithType.vb: ProtagHandler.New()
+  fullName.vb: DREditor.DialogueMechanics.ProtagHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.DialogueMechanics
+  commentId: N:DREditor.DialogueMechanics
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.DialogueMechanics
+  nameWithType: DREditor.DialogueMechanics
+  fullName: DREditor.DialogueMechanics
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueMechanics
+    name: DialogueMechanics
+    isExternal: true
+    href: DREditor.DialogueMechanics.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueMechanics
+    name: DialogueMechanics
+    isExternal: true
+    href: DREditor.DialogueMechanics.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.Dialogues.LineReading.ILineProcessor
+  commentId: T:DREditor.Dialogues.LineReading.ILineProcessor
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  name: ILineProcessor
+  nameWithType: ILineProcessor
+  fullName: DREditor.Dialogues.LineReading.ILineProcessor
+- uid: DREditor.Dialogues.Loading.ILoadToLineable
+  commentId: T:DREditor.Dialogues.Loading.ILoadToLineable
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  name: ILoadToLineable
+  nameWithType: ILoadToLineable
+  fullName: DREditor.Dialogues.Loading.ILoadToLineable
+- uid: DREditor.DialogueMechanics.ProtagHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ProtagHandler>(ProtagHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<ProtagHandler>(ProtagHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.DialogueMechanics.ProtagHandler>(DREditor.DialogueMechanics.ProtagHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ProtagHandler)(ProtagHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.DialogueMechanics.ProtagHandler)(DREditor.DialogueMechanics.ProtagHandler)
+  name.vb: GetFieldNames(Of ProtagHandler)(ProtagHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueMechanics.ProtagHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueMechanics.ProtagHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+- uid: DREditor.DialogueMechanics.ProtagHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ProtagHandler>(ProtagHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<ProtagHandler>(ProtagHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.DialogueMechanics.ProtagHandler>(DREditor.DialogueMechanics.ProtagHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ProtagHandler)(ProtagHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.DialogueMechanics.ProtagHandler)(DREditor.DialogueMechanics.ProtagHandler)
+  name.vb: GetFieldValues(Of ProtagHandler)(ProtagHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueMechanics.ProtagHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueMechanics.ProtagHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+- uid: DREditor.DialogueMechanics.ProtagHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ProtagHandler>(ProtagHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<ProtagHandler>(ProtagHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.DialogueMechanics.ProtagHandler>(DREditor.DialogueMechanics.ProtagHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ProtagHandler)(ProtagHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.DialogueMechanics.ProtagHandler)(DREditor.DialogueMechanics.ProtagHandler)
+  name.vb: DeepCopy(Of ProtagHandler)(ProtagHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueMechanics.ProtagHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueMechanics.ProtagHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.ProtagHandler
+    name: ProtagHandler
+    isExternal: true
+    href: DREditor.DialogueMechanics.ProtagHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Dialogues.Loading
+  commentId: N:DREditor.Dialogues.Loading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Loading
+  nameWithType: DREditor.Dialogues.Loading
+  fullName: DREditor.Dialogues.Loading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.StringWithEvent
+  commentId: T:DREditor.EventObjects.StringWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/StringWithEvent.cs
+  name: StringWithEvent
+  nameWithType: StringWithEvent
+  fullName: DREditor.EventObjects.StringWithEvent
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.DialogueMechanics.ProtagHandler.Start*
+  commentId: Overload:DREditor.DialogueMechanics.ProtagHandler.Start
+  isExternal: true
+  href: DREditor.DialogueMechanics.ProtagHandler.html#DREditor_DialogueMechanics_ProtagHandler_Start
+  name: Start
+  nameWithType: ProtagHandler.Start
+  fullName: DREditor.DialogueMechanics.ProtagHandler.Start
+- uid: DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName*
+  commentId: Overload:DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName
+  isExternal: true
+  href: DREditor.DialogueMechanics.ProtagHandler.html#DREditor_DialogueMechanics_ProtagHandler_SetProtagFirstName_System_String_
+  name: SetProtagFirstName
+  nameWithType: ProtagHandler.SetProtagFirstName
+  fullName: DREditor.DialogueMechanics.ProtagHandler.SetProtagFirstName
+- uid: DREditor.DialogueMechanics.ProtagHandler.EvaluateIfProtagSpeaking*
+  commentId: Overload:DREditor.DialogueMechanics.ProtagHandler.EvaluateIfProtagSpeaking
+  isExternal: true
+  href: DREditor.DialogueMechanics.ProtagHandler.html#DREditor_DialogueMechanics_ProtagHandler_EvaluateIfProtagSpeaking_DREditor_Dialogues_Line_
+  name: EvaluateIfProtagSpeaking
+  nameWithType: ProtagHandler.EvaluateIfProtagSpeaking
+  fullName: DREditor.DialogueMechanics.ProtagHandler.EvaluateIfProtagSpeaking
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: DREditor.DialogueMechanics.ProtagHandler.LineProcess*
+  commentId: Overload:DREditor.DialogueMechanics.ProtagHandler.LineProcess
+  isExternal: true
+  href: DREditor.DialogueMechanics.ProtagHandler.html#DREditor_DialogueMechanics_ProtagHandler_LineProcess_DREditor_Dialogues_Line_
+  name: LineProcess
+  nameWithType: ProtagHandler.LineProcess
+  fullName: DREditor.DialogueMechanics.ProtagHandler.LineProcess
+- uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineProcessor
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  name: LineProcess(Line)
+  nameWithType: ILineProcessor.LineProcess(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+    name: LineProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessor.LineProcess(DREditor.Dialogues.Line)
+    name: LineProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.DialogueMechanics.ProtagHandler.OnLoadToLine*
+  commentId: Overload:DREditor.DialogueMechanics.ProtagHandler.OnLoadToLine
+  isExternal: true
+  href: DREditor.DialogueMechanics.ProtagHandler.html#DREditor_DialogueMechanics_ProtagHandler_OnLoadToLine_DREditor_Dialogues_Line_
+  name: OnLoadToLine
+  nameWithType: ProtagHandler.OnLoadToLine
+  fullName: DREditor.DialogueMechanics.ProtagHandler.OnLoadToLine
+- uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.ILoadToLineable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  name: OnLoadToLine(Line)
+  nameWithType: ILoadToLineable.OnLoadToLine(Line)
+  fullName: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+    name: OnLoadToLine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+    name: OnLoadToLine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.DialogueMechanics.ProtagHandler.#ctor*
+  commentId: Overload:DREditor.DialogueMechanics.ProtagHandler.#ctor
+  isExternal: true
+  href: DREditor.DialogueMechanics.ProtagHandler.html#DREditor_DialogueMechanics_ProtagHandler__ctor
+  name: ProtagHandler
+  nameWithType: ProtagHandler.ProtagHandler
+  fullName: DREditor.DialogueMechanics.ProtagHandler.ProtagHandler
+  nameWithType.vb: ProtagHandler.New
+  fullName.vb: DREditor.DialogueMechanics.ProtagHandler.New
+  name.vb: New

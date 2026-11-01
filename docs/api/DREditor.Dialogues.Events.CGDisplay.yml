@@ -6,11 +6,17 @@ items:
   parent: DREditor.Dialogues.Events
   children:
   - DREditor.Dialogues.Events.CGDisplay.#ctor
+  - DREditor.Dialogues.Events.CGDisplay.#ctor(UnityEngine.Sprite)
+  - DREditor.Dialogues.Events.CGDisplay.CG
   - DREditor.Dialogues.Events.CGDisplay.EditorUI(System.Object)
-  - DREditor.Dialogues.Events.CGDisplay.SCGValue
+  - DREditor.Dialogues.Events.CGDisplay.ScreenFadeOut
   - DREditor.Dialogues.Events.CGDisplay.ShowHelpBox
   - DREditor.Dialogues.Events.CGDisplay.ToggleHelpBox
   - DREditor.Dialogues.Events.CGDisplay.TriggerDialogueEvent
+  - DREditor.Dialogues.Events.CGDisplay.eventName
+  - DREditor.Dialogues.Events.CGDisplay.playOnly
+  - DREditor.Dialogues.Events.CGDisplay.prefab
+  - DREditor.Dialogues.Events.CGDisplay.transitionInstant
   langs:
   - csharp
   - vb
@@ -19,21 +25,19 @@ items:
   fullName: DREditor.Dialogues.Events.CGDisplay
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
-  summary: >-
-    For Displaying CG's 
-
-    Script has the Editor Field Class
+  summary: ''
   example: []
   syntax:
-    content: 'public class CGDisplay : IDialogueEvent'
-    content.vb: Public Class CGDisplay Implements IDialogueEvent
+    content: 'public class CGDisplay : IDisplayableDialogueEvent, IDialogueEvent'
+    content.vb: Public Class CGDisplay Implements IDisplayableDialogueEvent, IDialogueEvent
   inheritance:
   - System.Object
   implements:
+  - DREditor.Dialogues.Events.IDisplayableDialogueEvent
   - DREditor.Dialogues.Events.IDialogueEvent
   inheritedMembers:
   - System.Object.GetType
@@ -43,27 +47,185 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-- uid: DREditor.Dialogues.Events.CGDisplay.SCGValue
-  commentId: F:DREditor.Dialogues.Events.CGDisplay.SCGValue
-  id: SCGValue
+  extensionMethods:
+  - DREditor.Dialogues.Events.CGDisplay.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Dialogues.Events.CGDisplay.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Dialogues.Events.CGDisplay.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+- uid: DREditor.Dialogues.Events.CGDisplay.CG
+  commentId: F:DREditor.Dialogues.Events.CGDisplay.CG
+  id: CG
   parent: DREditor.Dialogues.Events.CGDisplay
   langs:
   - csharp
   - vb
-  name: SCGValue
-  nameWithType: CGDisplay.SCGValue
-  fullName: DREditor.Dialogues.Events.CGDisplay.SCGValue
+  name: CG
+  nameWithType: CGDisplay.CG
+  fullName: DREditor.Dialogues.Events.CGDisplay.CG
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
   syntax:
-    content: public SCGTuple SCGValue
+    content: public Sprite CG
     return:
-      type: DREditor.Dialogues.Events.SCGTuple
-    content.vb: Public SCGValue As SCGTuple
+      type: UnityEngine.Sprite
+    content.vb: Public CG As Sprite
+- uid: DREditor.Dialogues.Events.CGDisplay.transitionInstant
+  commentId: F:DREditor.Dialogues.Events.CGDisplay.transitionInstant
+  id: transitionInstant
+  parent: DREditor.Dialogues.Events.CGDisplay
+  langs:
+  - csharp
+  - vb
+  name: transitionInstant
+  nameWithType: CGDisplay.transitionInstant
+  fullName: DREditor.Dialogues.Events.CGDisplay.transitionInstant
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public bool transitionInstant
+    return:
+      type: System.Boolean
+    content.vb: Public transitionInstant As Boolean
+- uid: DREditor.Dialogues.Events.CGDisplay.eventName
+  commentId: F:DREditor.Dialogues.Events.CGDisplay.eventName
+  id: eventName
+  parent: DREditor.Dialogues.Events.CGDisplay
+  langs:
+  - csharp
+  - vb
+  name: eventName
+  nameWithType: CGDisplay.eventName
+  fullName: DREditor.Dialogues.Events.CGDisplay.eventName
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public AudioClip eventName
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public eventName As AudioClip
+- uid: DREditor.Dialogues.Events.CGDisplay.ScreenFadeOut
+  commentId: F:DREditor.Dialogues.Events.CGDisplay.ScreenFadeOut
+  id: ScreenFadeOut
+  parent: DREditor.Dialogues.Events.CGDisplay
+  langs:
+  - csharp
+  - vb
+  name: ScreenFadeOut
+  nameWithType: CGDisplay.ScreenFadeOut
+  fullName: DREditor.Dialogues.Events.CGDisplay.ScreenFadeOut
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public bool ScreenFadeOut
+    return:
+      type: System.Boolean
+    content.vb: Public ScreenFadeOut As Boolean
+- uid: DREditor.Dialogues.Events.CGDisplay.prefab
+  commentId: F:DREditor.Dialogues.Events.CGDisplay.prefab
+  id: prefab
+  parent: DREditor.Dialogues.Events.CGDisplay
+  langs:
+  - csharp
+  - vb
+  name: prefab
+  nameWithType: CGDisplay.prefab
+  fullName: DREditor.Dialogues.Events.CGDisplay.prefab
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public GameObject prefab
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public prefab As GameObject
+- uid: DREditor.Dialogues.Events.CGDisplay.playOnly
+  commentId: F:DREditor.Dialogues.Events.CGDisplay.playOnly
+  id: playOnly
+  parent: DREditor.Dialogues.Events.CGDisplay
+  langs:
+  - csharp
+  - vb
+  name: playOnly
+  nameWithType: CGDisplay.playOnly
+  fullName: DREditor.Dialogues.Events.CGDisplay.playOnly
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public bool playOnly
+    return:
+      type: System.Boolean
+    content.vb: Public playOnly As Boolean
+- uid: DREditor.Dialogues.Events.CGDisplay.#ctor
+  commentId: M:DREditor.Dialogues.Events.CGDisplay.#ctor
+  id: '#ctor'
+  parent: DREditor.Dialogues.Events.CGDisplay
+  langs:
+  - csharp
+  - vb
+  name: CGDisplay()
+  nameWithType: CGDisplay.CGDisplay()
+  fullName: DREditor.Dialogues.Events.CGDisplay.CGDisplay()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public CGDisplay()
+    content.vb: Public Sub New()
+  overload: DREditor.Dialogues.Events.CGDisplay.#ctor*
+  nameWithType.vb: CGDisplay.New()
+  fullName.vb: DREditor.Dialogues.Events.CGDisplay.New()
+  name.vb: New()
+- uid: DREditor.Dialogues.Events.CGDisplay.#ctor(UnityEngine.Sprite)
+  commentId: M:DREditor.Dialogues.Events.CGDisplay.#ctor(UnityEngine.Sprite)
+  id: '#ctor(UnityEngine.Sprite)'
+  parent: DREditor.Dialogues.Events.CGDisplay
+  langs:
+  - csharp
+  - vb
+  name: CGDisplay(Sprite)
+  nameWithType: CGDisplay.CGDisplay(Sprite)
+  fullName: DREditor.Dialogues.Events.CGDisplay.CGDisplay(UnityEngine.Sprite)
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Dialogues.Events
+  syntax:
+    content: public CGDisplay(Sprite CG)
+    parameters:
+    - id: CG
+      type: UnityEngine.Sprite
+    content.vb: Public Sub New(CG As Sprite)
+  overload: DREditor.Dialogues.Events.CGDisplay.#ctor*
+  nameWithType.vb: CGDisplay.New(Sprite)
+  fullName.vb: DREditor.Dialogues.Events.CGDisplay.New(UnityEngine.Sprite)
+  name.vb: New(Sprite)
 - uid: DREditor.Dialogues.Events.CGDisplay.TriggerDialogueEvent
   commentId: M:DREditor.Dialogues.Events.CGDisplay.TriggerDialogueEvent
   id: TriggerDialogueEvent
@@ -76,7 +238,7 @@ items:
   fullName: DREditor.Dialogues.Events.CGDisplay.TriggerDialogueEvent()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -99,7 +261,7 @@ items:
   fullName: DREditor.Dialogues.Events.CGDisplay.EditorUI(object)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -112,7 +274,7 @@ items:
     content.vb: Public Sub EditorUI(value As Object = Nothing)
   overload: DREditor.Dialogues.Events.CGDisplay.EditorUI*
   implements:
-  - DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
+  - DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
   nameWithType.vb: CGDisplay.EditorUI(Object)
   fullName.vb: DREditor.Dialogues.Events.CGDisplay.EditorUI(Object)
   name.vb: EditorUI(Object)
@@ -128,7 +290,7 @@ items:
   fullName: DREditor.Dialogues.Events.CGDisplay.ToggleHelpBox()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -138,7 +300,7 @@ items:
     content.vb: Public Sub ToggleHelpBox()
   overload: DREditor.Dialogues.Events.CGDisplay.ToggleHelpBox*
   implements:
-  - DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
+  - DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
 - uid: DREditor.Dialogues.Events.CGDisplay.ShowHelpBox
   commentId: M:DREditor.Dialogues.Events.CGDisplay.ShowHelpBox
   id: ShowHelpBox
@@ -151,7 +313,7 @@ items:
   fullName: DREditor.Dialogues.Events.CGDisplay.ShowHelpBox()
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
   assemblies:
   - DREditor
   namespace: DREditor.Dialogues.Events
@@ -161,30 +323,7 @@ items:
     content.vb: Public Sub ShowHelpBox()
   overload: DREditor.Dialogues.Events.CGDisplay.ShowHelpBox*
   implements:
-  - DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-- uid: DREditor.Dialogues.Events.CGDisplay.#ctor
-  commentId: M:DREditor.Dialogues.Events.CGDisplay.#ctor
-  id: '#ctor'
-  parent: DREditor.Dialogues.Events.CGDisplay
-  langs:
-  - csharp
-  - vb
-  name: CGDisplay()
-  nameWithType: CGDisplay.CGDisplay()
-  fullName: DREditor.Dialogues.Events.CGDisplay.CGDisplay()
-  type: Constructor
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
-  assemblies:
-  - DREditor
-  namespace: DREditor.Dialogues.Events
-  syntax:
-    content: public CGDisplay()
-    content.vb: Public Sub New()
-  overload: DREditor.Dialogues.Events.CGDisplay.#ctor*
-  nameWithType.vb: CGDisplay.New()
-  fullName.vb: DREditor.Dialogues.Events.CGDisplay.New()
-  name.vb: New()
+  - DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
 references:
 - uid: DREditor.Dialogues.Events
   commentId: N:DREditor.Dialogues.Events
@@ -234,11 +373,19 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent
+  commentId: T:DREditor.Dialogues.Events.IDisplayableDialogueEvent
+  parent: DREditor.Dialogues.Events
+  isExternal: true
+  href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html
+  name: IDisplayableDialogueEvent
+  nameWithType: IDisplayableDialogueEvent
+  fullName: DREditor.Dialogues.Events.IDisplayableDialogueEvent
 - uid: DREditor.Dialogues.Events.IDialogueEvent
   commentId: T:DREditor.Dialogues.Events.IDialogueEvent
   parent: DREditor.Dialogues.Events
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   name: IDialogueEvent
   nameWithType: IDialogueEvent
   fullName: DREditor.Dialogues.Events.IDialogueEvent
@@ -461,6 +608,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Dialogues.Events.CGDisplay.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<CGDisplay>(CGDisplay)
+  nameWithType: ReflectionHelper.GetFieldNames<CGDisplay>(CGDisplay)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Dialogues.Events.CGDisplay>(DREditor.Dialogues.Events.CGDisplay)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of CGDisplay)(CGDisplay)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Dialogues.Events.CGDisplay)(DREditor.Dialogues.Events.CGDisplay)
+  name.vb: GetFieldNames(Of CGDisplay)(CGDisplay)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Events.CGDisplay)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Dialogues.Events.CGDisplay)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
+- uid: DREditor.Dialogues.Events.CGDisplay.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<CGDisplay>(CGDisplay)
+  nameWithType: ReflectionHelper.GetFieldValues<CGDisplay>(CGDisplay)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Dialogues.Events.CGDisplay>(DREditor.Dialogues.Events.CGDisplay)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of CGDisplay)(CGDisplay)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Dialogues.Events.CGDisplay)(DREditor.Dialogues.Events.CGDisplay)
+  name.vb: GetFieldValues(Of CGDisplay)(CGDisplay)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Events.CGDisplay)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Dialogues.Events.CGDisplay)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
+- uid: DREditor.Dialogues.Events.CGDisplay.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<CGDisplay>(CGDisplay)
+  nameWithType: DeepCopyExtensions.DeepCopy<CGDisplay>(CGDisplay)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Dialogues.Events.CGDisplay>(DREditor.Dialogues.Events.CGDisplay)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of CGDisplay)(CGDisplay)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Dialogues.Events.CGDisplay)(DREditor.Dialogues.Events.CGDisplay)
+  name.vb: DeepCopy(Of CGDisplay)(CGDisplay)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Events.CGDisplay)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Dialogues.Events.CGDisplay)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Events.CGDisplay
+    name: CGDisplay
+    isExternal: true
+    href: DREditor.Dialogues.Events.CGDisplay.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -468,14 +756,214 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: DREditor.Dialogues.Events.SCGTuple
-  commentId: T:DREditor.Dialogues.Events.SCGTuple
-  parent: DREditor.Dialogues.Events
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
   isExternal: true
-  href: DREditor.Dialogues.Events.SCGTuple.html
-  name: SCGTuple
-  nameWithType: SCGTuple
-  fullName: DREditor.Dialogues.Events.SCGTuple
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: UnityEngine.AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: UnityEngine.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: DREditor.Dialogues.Events.CGDisplay.#ctor*
+  commentId: Overload:DREditor.Dialogues.Events.CGDisplay.#ctor
+  isExternal: true
+  href: DREditor.Dialogues.Events.CGDisplay.html#DREditor_Dialogues_Events_CGDisplay__ctor
+  name: CGDisplay
+  nameWithType: CGDisplay.CGDisplay
+  fullName: DREditor.Dialogues.Events.CGDisplay.CGDisplay
+  nameWithType.vb: CGDisplay.New
+  fullName.vb: DREditor.Dialogues.Events.CGDisplay.New
+  name.vb: New
 - uid: DREditor.Dialogues.Events.CGDisplay.TriggerDialogueEvent*
   commentId: Overload:DREditor.Dialogues.Events.CGDisplay.TriggerDialogueEvent
   isExternal: true
@@ -487,7 +975,7 @@ references:
   commentId: M:DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
   parent: DREditor.Dialogues.Events.IDialogueEvent
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_TriggerDialogueEvent
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   name: TriggerDialogueEvent()
   nameWithType: IDialogueEvent.TriggerDialogueEvent()
   fullName: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent()
@@ -495,14 +983,14 @@ references:
   - uid: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
     name: TriggerDialogueEvent
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_TriggerDialogueEvent
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   - name: (
   - name: )
   spec.vb:
   - uid: DREditor.Dialogues.Events.IDialogueEvent.TriggerDialogueEvent
     name: TriggerDialogueEvent
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_TriggerDialogueEvent
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
   - name: (
   - name: )
 - uid: DREditor.Dialogues.Events.CGDisplay.EditorUI*
@@ -512,22 +1000,22 @@ references:
   name: EditorUI
   nameWithType: CGDisplay.EditorUI
   fullName: DREditor.Dialogues.Events.CGDisplay.EditorUI
-- uid: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
-  parent: DREditor.Dialogues.Events.IDialogueEvent
+- uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
+  commentId: M:DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
+  parent: DREditor.Dialogues.Events.IDisplayableDialogueEvent
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_EditorUI_System_Object_
+  href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_EditorUI_System_Object_
   name: EditorUI(object)
-  nameWithType: IDialogueEvent.EditorUI(object)
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(object)
-  nameWithType.vb: IDialogueEvent.EditorUI(Object)
-  fullName.vb: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(Object)
+  nameWithType: IDisplayableDialogueEvent.EditorUI(object)
+  fullName: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(object)
+  nameWithType.vb: IDisplayableDialogueEvent.EditorUI(Object)
+  fullName.vb: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(Object)
   name.vb: EditorUI(Object)
   spec.csharp:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
     name: EditorUI
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_EditorUI_System_Object_
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_EditorUI_System_Object_
   - name: (
   - uid: System.Object
     name: object
@@ -535,10 +1023,10 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.EditorUI(System.Object)
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.EditorUI(System.Object)
     name: EditorUI
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_EditorUI_System_Object_
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_EditorUI_System_Object_
   - name: (
   - uid: System.Object
     name: Object
@@ -552,26 +1040,26 @@ references:
   name: ToggleHelpBox
   nameWithType: CGDisplay.ToggleHelpBox
   fullName: DREditor.Dialogues.Events.CGDisplay.ToggleHelpBox
-- uid: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
-  parent: DREditor.Dialogues.Events.IDialogueEvent
+- uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
+  commentId: M:DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
+  parent: DREditor.Dialogues.Events.IDisplayableDialogueEvent
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ToggleHelpBox
+  href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ToggleHelpBox
   name: ToggleHelpBox()
-  nameWithType: IDialogueEvent.ToggleHelpBox()
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox()
+  nameWithType: IDisplayableDialogueEvent.ToggleHelpBox()
+  fullName: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox()
   spec.csharp:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
     name: ToggleHelpBox
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ToggleHelpBox
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ToggleHelpBox
   - name: (
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.ToggleHelpBox
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ToggleHelpBox
     name: ToggleHelpBox
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ToggleHelpBox
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ToggleHelpBox
   - name: (
   - name: )
 - uid: DREditor.Dialogues.Events.CGDisplay.ShowHelpBox*
@@ -581,35 +1069,25 @@ references:
   name: ShowHelpBox
   nameWithType: CGDisplay.ShowHelpBox
   fullName: DREditor.Dialogues.Events.CGDisplay.ShowHelpBox
-- uid: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-  commentId: M:DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
-  parent: DREditor.Dialogues.Events.IDialogueEvent
+- uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
+  commentId: M:DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
+  parent: DREditor.Dialogues.Events.IDisplayableDialogueEvent
   isExternal: true
-  href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ShowHelpBox
+  href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ShowHelpBox
   name: ShowHelpBox()
-  nameWithType: IDialogueEvent.ShowHelpBox()
-  fullName: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox()
+  nameWithType: IDisplayableDialogueEvent.ShowHelpBox()
+  fullName: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox()
   spec.csharp:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
     name: ShowHelpBox
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ShowHelpBox
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ShowHelpBox
   - name: (
   - name: )
   spec.vb:
-  - uid: DREditor.Dialogues.Events.IDialogueEvent.ShowHelpBox
+  - uid: DREditor.Dialogues.Events.IDisplayableDialogueEvent.ShowHelpBox
     name: ShowHelpBox
     isExternal: true
-    href: DREditor.Dialogues.Events.IDialogueEvent.html#DREditor_Dialogues_Events_IDialogueEvent_ShowHelpBox
+    href: DREditor.Dialogues.Events.IDisplayableDialogueEvent.html#DREditor_Dialogues_Events_IDisplayableDialogueEvent_ShowHelpBox
   - name: (
   - name: )
-- uid: DREditor.Dialogues.Events.CGDisplay.#ctor*
-  commentId: Overload:DREditor.Dialogues.Events.CGDisplay.#ctor
-  isExternal: true
-  href: DREditor.Dialogues.Events.CGDisplay.html#DREditor_Dialogues_Events_CGDisplay__ctor
-  name: CGDisplay
-  nameWithType: CGDisplay.CGDisplay
-  fullName: DREditor.Dialogues.Events.CGDisplay.CGDisplay
-  nameWithType.vb: CGDisplay.New
-  fullName.vb: DREditor.Dialogues.Events.CGDisplay.New
-  name.vb: New
