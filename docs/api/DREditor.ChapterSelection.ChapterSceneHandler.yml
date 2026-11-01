@@ -1,0 +1,1614 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.ChapterSelection.ChapterSceneHandler
+  commentId: T:DREditor.ChapterSelection.ChapterSceneHandler
+  id: ChapterSceneHandler
+  parent: DREditor.ChapterSelection
+  children:
+  - DREditor.ChapterSelection.ChapterSceneHandler.#ctor
+  - DREditor.ChapterSelection.ChapterSceneHandler.ActivateValidSceneMoments
+  - DREditor.ChapterSelection.ChapterSceneHandler.CheckValidChapterSceneData(DREditor.ChapterSelection.SceneDataProviderBase)
+  - DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene(System.Int32)
+  - DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterSelectMoments
+  - DREditor.ChapterSelection.ChapterSceneHandler.GetMaxLoadedScene
+  - DREditor.ChapterSelection.ChapterSceneHandler.InitializeDefault
+  - DREditor.ChapterSelection.ChapterSceneHandler.InitializeLoaded
+  - DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex(System.Int32)
+  - DREditor.ChapterSelection.ChapterSceneHandler.SceneIsValid(DREditor.ChapterSelection.SceneDataProviderBase)
+  - DREditor.ChapterSelection.ChapterSceneHandler.chapterSelectData
+  - DREditor.ChapterSelection.ChapterSceneHandler.fallbackEvaluator
+  - DREditor.ChapterSelection.ChapterSceneHandler.inDefaultMode
+  - DREditor.ChapterSelection.ChapterSceneHandler.moments
+  - DREditor.ChapterSelection.ChapterSceneHandler.parentSection
+  langs:
+  - csharp
+  - vb
+  name: ChapterSceneHandler
+  nameWithType: ChapterSceneHandler
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("ChapterSubSectionBase, ChapterSectionBase, IDRELoadableManager\n\n")]
+
+      public class ChapterSceneHandler : ChapterSubSectionBase, IDRELoadableManager
+    content.vb: >-
+      <ClassHeader("ChapterSubSectionBase, ChapterSectionBase, IDRELoadableManager" & vbLf & vbLf)>
+
+      Public Class ChapterSceneHandler Inherits ChapterSubSectionBase Implements IDRELoadableManager
+  inheritance:
+  - System.Object
+  - DREditor.ChapterSelection.ChapterSectionBase
+  - DREditor.ChapterSelection.ChapterSubSectionBase
+  implements:
+  - DREditor.Saving.IDRELoadableManager
+  inheritedMembers:
+  - DREditor.ChapterSelection.ChapterSubSectionBase.startGameGroup
+  - DREditor.ChapterSelection.ChapterSubSectionBase.buttonActions
+  - DREditor.ChapterSelection.ChapterSubSectionBase.OnEnable
+  - DREditor.ChapterSelection.ChapterSubSectionBase.SubscribeButtonSelection
+  - DREditor.ChapterSelection.ChapterSubSectionBase.ChangeGroup
+  - DREditor.ChapterSelection.ChapterSubSectionBase.OnDisable
+  - DREditor.ChapterSelection.ChapterSubSectionBase.UnsubscribeButtonSelection
+  - DREditor.ChapterSelection.ChapterSectionBase.chapterSelectDatabase
+  - DREditor.ChapterSelection.ChapterSectionBase.chapterKey
+  - DREditor.ChapterSelection.ChapterSectionBase.defaultUnlockedSections
+  - DREditor.ChapterSelection.ChapterSectionBase.sectionButtons
+  - DREditor.ChapterSelection.ChapterSectionBase.maxSection
+  - DREditor.ChapterSelection.ChapterSectionBase.selectedSection
+  - DREditor.ChapterSelection.ChapterSectionBase.loadedChapter
+  - DREditor.ChapterSelection.ChapterSectionBase.GetSelectedSection
+  - DREditor.ChapterSelection.ChapterSectionBase.GetMaxSection
+  - DREditor.ChapterSelection.ChapterSectionBase.SetMaxSection(System.Int32)
+  - DREditor.ChapterSelection.ChapterSectionBase.AllowsChapterSelect
+  - DREditor.ChapterSelection.ChapterSectionBase.SetSelectedSection(UnityEngine.UI.Button)
+  - DREditor.ChapterSelection.ChapterSectionBase.SectionIsDefaultUnlocked
+  - DREditor.ChapterSelection.ChapterSectionBase.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  - DREditor.ChapterSelection.ChapterSectionBase.BufferLoad(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  - DREditor.ChapterSelection.ChapterSectionBase.DefaultUnlockedSections
+  extensionMethods:
+  - DREditor.ChapterSelection.ChapterSceneHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.ChapterSelection.ChapterSceneHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.ChapterSelection.ChapterSceneHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        ChapterSubSectionBase, ChapterSectionBase, IDRELoadableManager
+
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.parentSection
+  commentId: F:DREditor.ChapterSelection.ChapterSceneHandler.parentSection
+  id: parentSection
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: parentSection
+  nameWithType: ChapterSceneHandler.parentSection
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.parentSection
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected ChapterSectionBase parentSection
+    return:
+      type: DREditor.ChapterSelection.ChapterSectionBase
+    content.vb: Protected parentSection As ChapterSectionBase
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.fallbackEvaluator
+  commentId: F:DREditor.ChapterSelection.ChapterSceneHandler.fallbackEvaluator
+  id: fallbackEvaluator
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: fallbackEvaluator
+  nameWithType: ChapterSceneHandler.fallbackEvaluator
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.fallbackEvaluator
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected ChapterSelectFallbackEvaluator fallbackEvaluator
+    return:
+      type: DREditor.ChapterSelection.ChapterSelectFallbackEvaluator
+    content.vb: Protected fallbackEvaluator As ChapterSelectFallbackEvaluator
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.inDefaultMode
+  commentId: F:DREditor.ChapterSelection.ChapterSceneHandler.inDefaultMode
+  id: inDefaultMode
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: inDefaultMode
+  nameWithType: ChapterSceneHandler.inDefaultMode
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.inDefaultMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool inDefaultMode
+    return:
+      type: System.Boolean
+    content.vb: Protected inDefaultMode As Boolean
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.chapterSelectData
+  commentId: F:DREditor.ChapterSelection.ChapterSceneHandler.chapterSelectData
+  id: chapterSelectData
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: chapterSelectData
+  nameWithType: ChapterSceneHandler.chapterSelectData
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.chapterSelectData
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected ChapterSelectData chapterSelectData
+    return:
+      type: DREditor.ChapterSelection.ChapterSelectData
+    content.vb: Protected chapterSelectData As ChapterSelectData
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.moments
+  commentId: F:DREditor.ChapterSelection.ChapterSceneHandler.moments
+  id: moments
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: moments
+  nameWithType: ChapterSceneHandler.moments
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.moments
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<int> moments
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+    content.vb: Protected moments As List(Of Integer)
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.InitializeDefault
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.InitializeDefault
+  id: InitializeDefault
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: InitializeDefault()
+  nameWithType: ChapterSceneHandler.InitializeDefault()
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.InitializeDefault()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: public override void InitializeDefault()
+    content.vb: Public Overrides Sub InitializeDefault()
+  overridden: DREditor.ChapterSelection.ChapterSectionBase.InitializeDefault
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.InitializeDefault*
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.InitializeLoaded
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.InitializeLoaded
+  id: InitializeLoaded
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: InitializeLoaded()
+  nameWithType: ChapterSceneHandler.InitializeLoaded()
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.InitializeLoaded()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: public override void InitializeLoaded()
+    content.vb: Public Overrides Sub InitializeLoaded()
+  overridden: DREditor.ChapterSelection.ChapterSectionBase.InitializeLoaded
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.InitializeLoaded*
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.GetMaxLoadedScene
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.GetMaxLoadedScene
+  id: GetMaxLoadedScene
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: GetMaxLoadedScene()
+  nameWithType: ChapterSceneHandler.GetMaxLoadedScene()
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.GetMaxLoadedScene()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected int GetMaxLoadedScene()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Protected Function GetMaxLoadedScene() As Integer
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.GetMaxLoadedScene*
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex(System.Int32)
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex(System.Int32)
+  id: OnParentSubmittedIndex(System.Int32)
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: OnParentSubmittedIndex(int)
+  nameWithType: ChapterSceneHandler.OnParentSubmittedIndex(int)
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: public override void OnParentSubmittedIndex(int selectedIndex)
+    parameters:
+    - id: selectedIndex
+      type: System.Int32
+      description: ''
+    content.vb: Public Overrides Sub OnParentSubmittedIndex(selectedIndex As Integer)
+  overridden: DREditor.ChapterSelection.ChapterSectionBase.OnParentSubmittedIndex(System.Int32)
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex*
+  nameWithType.vb: ChapterSceneHandler.OnParentSubmittedIndex(Integer)
+  fullName.vb: DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex(Integer)
+  name.vb: OnParentSubmittedIndex(Integer)
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene(System.Int32)
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene(System.Int32)
+  id: EvaluateChapterScene(System.Int32)
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateChapterScene(int)
+  nameWithType: ChapterSceneHandler.EvaluateChapterScene(int)
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene(int)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void EvaluateChapterScene(int currentButtonIndex)
+    parameters:
+    - id: currentButtonIndex
+      type: System.Int32
+      description: ''
+    content.vb: Public Overridable Sub EvaluateChapterScene(currentButtonIndex As Integer)
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene*
+  nameWithType.vb: ChapterSceneHandler.EvaluateChapterScene(Integer)
+  fullName.vb: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene(Integer)
+  name.vb: EvaluateChapterScene(Integer)
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterSelectMoments
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterSelectMoments
+  id: EvaluateChapterSelectMoments
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateChapterSelectMoments()
+  nameWithType: ChapterSceneHandler.EvaluateChapterSelectMoments()
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterSelectMoments()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void EvaluateChapterSelectMoments()
+    content.vb: Protected Overridable Sub EvaluateChapterSelectMoments()
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterSelectMoments*
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.CheckValidChapterSceneData(DREditor.ChapterSelection.SceneDataProviderBase)
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.CheckValidChapterSceneData(DREditor.ChapterSelection.SceneDataProviderBase)
+  id: CheckValidChapterSceneData(DREditor.ChapterSelection.SceneDataProviderBase)
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: CheckValidChapterSceneData(SceneDataProviderBase)
+  nameWithType: ChapterSceneHandler.CheckValidChapterSceneData(SceneDataProviderBase)
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.CheckValidChapterSceneData(DREditor.ChapterSelection.SceneDataProviderBase)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void CheckValidChapterSceneData(SceneDataProviderBase sceneData)
+    parameters:
+    - id: sceneData
+      type: DREditor.ChapterSelection.SceneDataProviderBase
+      description: ''
+    content.vb: Protected Overridable Sub CheckValidChapterSceneData(sceneData As SceneDataProviderBase)
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.CheckValidChapterSceneData*
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.SceneIsValid(DREditor.ChapterSelection.SceneDataProviderBase)
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.SceneIsValid(DREditor.ChapterSelection.SceneDataProviderBase)
+  id: SceneIsValid(DREditor.ChapterSelection.SceneDataProviderBase)
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: SceneIsValid(SceneDataProviderBase)
+  nameWithType: ChapterSceneHandler.SceneIsValid(SceneDataProviderBase)
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.SceneIsValid(DREditor.ChapterSelection.SceneDataProviderBase)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool SceneIsValid(SceneDataProviderBase sceneData)
+    parameters:
+    - id: sceneData
+      type: DREditor.ChapterSelection.SceneDataProviderBase
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function SceneIsValid(sceneData As SceneDataProviderBase) As Boolean
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.SceneIsValid*
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.ActivateValidSceneMoments
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.ActivateValidSceneMoments
+  id: ActivateValidSceneMoments
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: ActivateValidSceneMoments()
+  nameWithType: ChapterSceneHandler.ActivateValidSceneMoments()
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.ActivateValidSceneMoments()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ActivateValidSceneMoments()
+    content.vb: Protected Overridable Sub ActivateValidSceneMoments()
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.ActivateValidSceneMoments*
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.#ctor
+  commentId: M:DREditor.ChapterSelection.ChapterSceneHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.ChapterSelection.ChapterSceneHandler
+  langs:
+  - csharp
+  - vb
+  name: ChapterSceneHandler()
+  nameWithType: ChapterSceneHandler.ChapterSceneHandler()
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.ChapterSceneHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.ChapterSelection/ChapterSceneHandler.cs
+  assemblies:
+  - DREditor.ChapterSelection
+  namespace: DREditor.ChapterSelection
+  syntax:
+    content: public ChapterSceneHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.ChapterSelection.ChapterSceneHandler.#ctor*
+  nameWithType.vb: ChapterSceneHandler.New()
+  fullName.vb: DREditor.ChapterSelection.ChapterSceneHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.ChapterSelection
+  commentId: N:DREditor.ChapterSelection
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.ChapterSelection
+  nameWithType: DREditor.ChapterSelection
+  fullName: DREditor.ChapterSelection
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.ChapterSelection
+    name: ChapterSelection
+    isExternal: true
+    href: DREditor.ChapterSelection.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.ChapterSelection
+    name: ChapterSelection
+    isExternal: true
+    href: DREditor.ChapterSelection.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.ChapterSelection.ChapterSectionBase
+  commentId: T:DREditor.ChapterSelection.ChapterSectionBase
+  parent: DREditor.ChapterSelection
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html
+  name: ChapterSectionBase
+  nameWithType: ChapterSectionBase
+  fullName: DREditor.ChapterSelection.ChapterSectionBase
+- uid: DREditor.ChapterSelection.ChapterSubSectionBase
+  commentId: T:DREditor.ChapterSelection.ChapterSubSectionBase
+  parent: DREditor.ChapterSelection
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSubSectionBase.html
+  name: ChapterSubSectionBase
+  nameWithType: ChapterSubSectionBase
+  fullName: DREditor.ChapterSelection.ChapterSubSectionBase
+- uid: DREditor.Saving.IDRELoadableManager
+  commentId: T:DREditor.Saving.IDRELoadableManager
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadableManager.cs
+  name: IDRELoadableManager
+  nameWithType: IDRELoadableManager
+  fullName: DREditor.Saving.IDRELoadableManager
+- uid: DREditor.ChapterSelection.ChapterSubSectionBase.startGameGroup
+  commentId: F:DREditor.ChapterSelection.ChapterSubSectionBase.startGameGroup
+  parent: DREditor.ChapterSelection.ChapterSubSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_startGameGroup
+  name: startGameGroup
+  nameWithType: ChapterSubSectionBase.startGameGroup
+  fullName: DREditor.ChapterSelection.ChapterSubSectionBase.startGameGroup
+- uid: DREditor.ChapterSelection.ChapterSubSectionBase.buttonActions
+  commentId: F:DREditor.ChapterSelection.ChapterSubSectionBase.buttonActions
+  parent: DREditor.ChapterSelection.ChapterSubSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_buttonActions
+  name: buttonActions
+  nameWithType: ChapterSubSectionBase.buttonActions
+  fullName: DREditor.ChapterSelection.ChapterSubSectionBase.buttonActions
+- uid: DREditor.ChapterSelection.ChapterSubSectionBase.OnEnable
+  commentId: M:DREditor.ChapterSelection.ChapterSubSectionBase.OnEnable
+  parent: DREditor.ChapterSelection.ChapterSubSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_OnEnable
+  name: OnEnable()
+  nameWithType: ChapterSubSectionBase.OnEnable()
+  fullName: DREditor.ChapterSelection.ChapterSubSectionBase.OnEnable()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_OnEnable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_OnEnable
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSubSectionBase.SubscribeButtonSelection
+  commentId: M:DREditor.ChapterSelection.ChapterSubSectionBase.SubscribeButtonSelection
+  parent: DREditor.ChapterSelection.ChapterSubSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_SubscribeButtonSelection
+  name: SubscribeButtonSelection()
+  nameWithType: ChapterSubSectionBase.SubscribeButtonSelection()
+  fullName: DREditor.ChapterSelection.ChapterSubSectionBase.SubscribeButtonSelection()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.SubscribeButtonSelection
+    name: SubscribeButtonSelection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_SubscribeButtonSelection
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.SubscribeButtonSelection
+    name: SubscribeButtonSelection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_SubscribeButtonSelection
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSubSectionBase.ChangeGroup
+  commentId: M:DREditor.ChapterSelection.ChapterSubSectionBase.ChangeGroup
+  parent: DREditor.ChapterSelection.ChapterSubSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_ChangeGroup
+  name: ChangeGroup()
+  nameWithType: ChapterSubSectionBase.ChangeGroup()
+  fullName: DREditor.ChapterSelection.ChapterSubSectionBase.ChangeGroup()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.ChangeGroup
+    name: ChangeGroup
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_ChangeGroup
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.ChangeGroup
+    name: ChangeGroup
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_ChangeGroup
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSubSectionBase.OnDisable
+  commentId: M:DREditor.ChapterSelection.ChapterSubSectionBase.OnDisable
+  parent: DREditor.ChapterSelection.ChapterSubSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_OnDisable
+  name: OnDisable()
+  nameWithType: ChapterSubSectionBase.OnDisable()
+  fullName: DREditor.ChapterSelection.ChapterSubSectionBase.OnDisable()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_OnDisable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_OnDisable
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSubSectionBase.UnsubscribeButtonSelection
+  commentId: M:DREditor.ChapterSelection.ChapterSubSectionBase.UnsubscribeButtonSelection
+  parent: DREditor.ChapterSelection.ChapterSubSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_UnsubscribeButtonSelection
+  name: UnsubscribeButtonSelection()
+  nameWithType: ChapterSubSectionBase.UnsubscribeButtonSelection()
+  fullName: DREditor.ChapterSelection.ChapterSubSectionBase.UnsubscribeButtonSelection()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.UnsubscribeButtonSelection
+    name: UnsubscribeButtonSelection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_UnsubscribeButtonSelection
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSubSectionBase.UnsubscribeButtonSelection
+    name: UnsubscribeButtonSelection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSubSectionBase.html#DREditor_ChapterSelection_ChapterSubSectionBase_UnsubscribeButtonSelection
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.chapterSelectDatabase
+  commentId: F:DREditor.ChapterSelection.ChapterSectionBase.chapterSelectDatabase
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_chapterSelectDatabase
+  name: chapterSelectDatabase
+  nameWithType: ChapterSectionBase.chapterSelectDatabase
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.chapterSelectDatabase
+- uid: DREditor.ChapterSelection.ChapterSectionBase.chapterKey
+  commentId: F:DREditor.ChapterSelection.ChapterSectionBase.chapterKey
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_chapterKey
+  name: chapterKey
+  nameWithType: ChapterSectionBase.chapterKey
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.chapterKey
+- uid: DREditor.ChapterSelection.ChapterSectionBase.defaultUnlockedSections
+  commentId: F:DREditor.ChapterSelection.ChapterSectionBase.defaultUnlockedSections
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_defaultUnlockedSections
+  name: defaultUnlockedSections
+  nameWithType: ChapterSectionBase.defaultUnlockedSections
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.defaultUnlockedSections
+- uid: DREditor.ChapterSelection.ChapterSectionBase.sectionButtons
+  commentId: F:DREditor.ChapterSelection.ChapterSectionBase.sectionButtons
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_sectionButtons
+  name: sectionButtons
+  nameWithType: ChapterSectionBase.sectionButtons
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.sectionButtons
+- uid: DREditor.ChapterSelection.ChapterSectionBase.maxSection
+  commentId: F:DREditor.ChapterSelection.ChapterSectionBase.maxSection
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_maxSection
+  name: maxSection
+  nameWithType: ChapterSectionBase.maxSection
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.maxSection
+- uid: DREditor.ChapterSelection.ChapterSectionBase.selectedSection
+  commentId: F:DREditor.ChapterSelection.ChapterSectionBase.selectedSection
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_selectedSection
+  name: selectedSection
+  nameWithType: ChapterSectionBase.selectedSection
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.selectedSection
+- uid: DREditor.ChapterSelection.ChapterSectionBase.loadedChapter
+  commentId: F:DREditor.ChapterSelection.ChapterSectionBase.loadedChapter
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_loadedChapter
+  name: loadedChapter
+  nameWithType: ChapterSectionBase.loadedChapter
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.loadedChapter
+- uid: DREditor.ChapterSelection.ChapterSectionBase.GetSelectedSection
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.GetSelectedSection
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_GetSelectedSection
+  name: GetSelectedSection()
+  nameWithType: ChapterSectionBase.GetSelectedSection()
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.GetSelectedSection()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.GetSelectedSection
+    name: GetSelectedSection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_GetSelectedSection
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.GetSelectedSection
+    name: GetSelectedSection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_GetSelectedSection
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.GetMaxSection
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.GetMaxSection
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_GetMaxSection
+  name: GetMaxSection()
+  nameWithType: ChapterSectionBase.GetMaxSection()
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.GetMaxSection()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.GetMaxSection
+    name: GetMaxSection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_GetMaxSection
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.GetMaxSection
+    name: GetMaxSection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_GetMaxSection
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.SetMaxSection(System.Int32)
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.SetMaxSection(System.Int32)
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SetMaxSection_System_Int32_
+  name: SetMaxSection(int)
+  nameWithType: ChapterSectionBase.SetMaxSection(int)
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.SetMaxSection(int)
+  nameWithType.vb: ChapterSectionBase.SetMaxSection(Integer)
+  fullName.vb: DREditor.ChapterSelection.ChapterSectionBase.SetMaxSection(Integer)
+  name.vb: SetMaxSection(Integer)
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.SetMaxSection(System.Int32)
+    name: SetMaxSection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SetMaxSection_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.SetMaxSection(System.Int32)
+    name: SetMaxSection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SetMaxSection_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.AllowsChapterSelect
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.AllowsChapterSelect
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_AllowsChapterSelect
+  name: AllowsChapterSelect()
+  nameWithType: ChapterSectionBase.AllowsChapterSelect()
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.AllowsChapterSelect()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.AllowsChapterSelect
+    name: AllowsChapterSelect
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_AllowsChapterSelect
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.AllowsChapterSelect
+    name: AllowsChapterSelect
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_AllowsChapterSelect
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.SetSelectedSection(UnityEngine.UI.Button)
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.SetSelectedSection(UnityEngine.UI.Button)
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SetSelectedSection_UnityEngine_UI_Button_
+  name: SetSelectedSection(Button)
+  nameWithType: ChapterSectionBase.SetSelectedSection(Button)
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.SetSelectedSection(UnityEngine.UI.Button)
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.SetSelectedSection(UnityEngine.UI.Button)
+    name: SetSelectedSection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SetSelectedSection_UnityEngine_UI_Button_
+  - name: (
+  - uid: UnityEngine.UI.Button
+    name: Button
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.SetSelectedSection(UnityEngine.UI.Button)
+    name: SetSelectedSection
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SetSelectedSection_UnityEngine_UI_Button_
+  - name: (
+  - uid: UnityEngine.UI.Button
+    name: Button
+    isExternal: true
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.SectionIsDefaultUnlocked
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.SectionIsDefaultUnlocked
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SectionIsDefaultUnlocked
+  name: SectionIsDefaultUnlocked()
+  nameWithType: ChapterSectionBase.SectionIsDefaultUnlocked()
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.SectionIsDefaultUnlocked()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.SectionIsDefaultUnlocked
+    name: SectionIsDefaultUnlocked
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SectionIsDefaultUnlocked
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.SectionIsDefaultUnlocked
+    name: SectionIsDefaultUnlocked
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_SectionIsDefaultUnlocked
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_LoadManager_System_Collections_Generic_Dictionary_System_String_System_Object__System_Boolean_
+  name: LoadManager(Dictionary<string, object>, bool)
+  nameWithType: ChapterSectionBase.LoadManager(Dictionary<string, object>, bool)
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.LoadManager(System.Collections.Generic.Dictionary<string, object>, bool)
+  nameWithType.vb: ChapterSectionBase.LoadManager(Dictionary(Of String, Object), Boolean)
+  fullName.vb: DREditor.ChapterSelection.ChapterSectionBase.LoadManager(System.Collections.Generic.Dictionary(Of String, Object), Boolean)
+  name.vb: LoadManager(Dictionary(Of String, Object), Boolean)
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+    name: LoadManager
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_LoadManager_System_Collections_Generic_Dictionary_System_String_System_Object__System_Boolean_
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.LoadManager(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+    name: LoadManager
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_LoadManager_System_Collections_Generic_Dictionary_System_String_System_Object__System_Boolean_
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.BufferLoad(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.BufferLoad(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_BufferLoad_System_Collections_Generic_Dictionary_System_String_System_Object__System_Boolean_
+  name: BufferLoad(Dictionary<string, object>, bool)
+  nameWithType: ChapterSectionBase.BufferLoad(Dictionary<string, object>, bool)
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.BufferLoad(System.Collections.Generic.Dictionary<string, object>, bool)
+  nameWithType.vb: ChapterSectionBase.BufferLoad(Dictionary(Of String, Object), Boolean)
+  fullName.vb: DREditor.ChapterSelection.ChapterSectionBase.BufferLoad(System.Collections.Generic.Dictionary(Of String, Object), Boolean)
+  name.vb: BufferLoad(Dictionary(Of String, Object), Boolean)
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.BufferLoad(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+    name: BufferLoad
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_BufferLoad_System_Collections_Generic_Dictionary_System_String_System_Object__System_Boolean_
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.BufferLoad(System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)
+    name: BufferLoad
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_BufferLoad_System_Collections_Generic_Dictionary_System_String_System_Object__System_Boolean_
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSectionBase.DefaultUnlockedSections
+  commentId: P:DREditor.ChapterSelection.ChapterSectionBase.DefaultUnlockedSections
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_DefaultUnlockedSections
+  name: DefaultUnlockedSections
+  nameWithType: ChapterSectionBase.DefaultUnlockedSections
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.DefaultUnlockedSections
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ChapterSceneHandler>(ChapterSceneHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<ChapterSceneHandler>(ChapterSceneHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.ChapterSelection.ChapterSceneHandler>(DREditor.ChapterSelection.ChapterSceneHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ChapterSceneHandler)(ChapterSceneHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.ChapterSelection.ChapterSceneHandler)(DREditor.ChapterSelection.ChapterSceneHandler)
+  name.vb: GetFieldNames(Of ChapterSceneHandler)(ChapterSceneHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.ChapterSelection.ChapterSceneHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.ChapterSelection.ChapterSceneHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ChapterSceneHandler>(ChapterSceneHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<ChapterSceneHandler>(ChapterSceneHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.ChapterSelection.ChapterSceneHandler>(DREditor.ChapterSelection.ChapterSceneHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ChapterSceneHandler)(ChapterSceneHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.ChapterSelection.ChapterSceneHandler)(DREditor.ChapterSelection.ChapterSceneHandler)
+  name.vb: GetFieldValues(Of ChapterSceneHandler)(ChapterSceneHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.ChapterSelection.ChapterSceneHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.ChapterSelection.ChapterSceneHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ChapterSceneHandler>(ChapterSceneHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<ChapterSceneHandler>(ChapterSceneHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.ChapterSelection.ChapterSceneHandler>(DREditor.ChapterSelection.ChapterSceneHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ChapterSceneHandler)(ChapterSceneHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.ChapterSelection.ChapterSceneHandler)(DREditor.ChapterSelection.ChapterSceneHandler)
+  name.vb: DeepCopy(Of ChapterSceneHandler)(ChapterSceneHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.ChapterSelection.ChapterSceneHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.ChapterSelection.ChapterSceneHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.ChapterSelection.ChapterSceneHandler
+    name: ChapterSceneHandler
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSceneHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.ChapterSelection.ChapterSelectFallbackEvaluator
+  commentId: T:DREditor.ChapterSelection.ChapterSelectFallbackEvaluator
+  parent: DREditor.ChapterSelection
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSelectFallbackEvaluator.html
+  name: ChapterSelectFallbackEvaluator
+  nameWithType: ChapterSelectFallbackEvaluator
+  fullName: DREditor.ChapterSelection.ChapterSelectFallbackEvaluator
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.ChapterSelection.ChapterSelectData
+  commentId: T:DREditor.ChapterSelection.ChapterSelectData
+  parent: DREditor.ChapterSelection
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSelectData.html
+  name: ChapterSelectData
+  nameWithType: ChapterSelectData
+  fullName: DREditor.ChapterSelection.ChapterSelectData
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.ChapterSelection.ChapterSectionBase.InitializeDefault
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.InitializeDefault
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_InitializeDefault
+  name: InitializeDefault()
+  nameWithType: ChapterSectionBase.InitializeDefault()
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.InitializeDefault()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.InitializeDefault
+    name: InitializeDefault
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_InitializeDefault
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.InitializeDefault
+    name: InitializeDefault
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_InitializeDefault
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.InitializeDefault*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.InitializeDefault
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_InitializeDefault
+  name: InitializeDefault
+  nameWithType: ChapterSceneHandler.InitializeDefault
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.InitializeDefault
+- uid: DREditor.ChapterSelection.ChapterSectionBase.InitializeLoaded
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.InitializeLoaded
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_InitializeLoaded
+  name: InitializeLoaded()
+  nameWithType: ChapterSectionBase.InitializeLoaded()
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.InitializeLoaded()
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.InitializeLoaded
+    name: InitializeLoaded
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_InitializeLoaded
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.InitializeLoaded
+    name: InitializeLoaded
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_InitializeLoaded
+  - name: (
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.InitializeLoaded*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.InitializeLoaded
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_InitializeLoaded
+  name: InitializeLoaded
+  nameWithType: ChapterSceneHandler.InitializeLoaded
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.InitializeLoaded
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.GetMaxLoadedScene*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.GetMaxLoadedScene
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_GetMaxLoadedScene
+  name: GetMaxLoadedScene
+  nameWithType: ChapterSceneHandler.GetMaxLoadedScene
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.GetMaxLoadedScene
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.ChapterSelection.ChapterSectionBase.OnParentSubmittedIndex(System.Int32)
+  commentId: M:DREditor.ChapterSelection.ChapterSectionBase.OnParentSubmittedIndex(System.Int32)
+  parent: DREditor.ChapterSelection.ChapterSectionBase
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_OnParentSubmittedIndex_System_Int32_
+  name: OnParentSubmittedIndex(int)
+  nameWithType: ChapterSectionBase.OnParentSubmittedIndex(int)
+  fullName: DREditor.ChapterSelection.ChapterSectionBase.OnParentSubmittedIndex(int)
+  nameWithType.vb: ChapterSectionBase.OnParentSubmittedIndex(Integer)
+  fullName.vb: DREditor.ChapterSelection.ChapterSectionBase.OnParentSubmittedIndex(Integer)
+  name.vb: OnParentSubmittedIndex(Integer)
+  spec.csharp:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.OnParentSubmittedIndex(System.Int32)
+    name: OnParentSubmittedIndex
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_OnParentSubmittedIndex_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: DREditor.ChapterSelection.ChapterSectionBase.OnParentSubmittedIndex(System.Int32)
+    name: OnParentSubmittedIndex
+    isExternal: true
+    href: DREditor.ChapterSelection.ChapterSectionBase.html#DREditor_ChapterSelection_ChapterSectionBase_OnParentSubmittedIndex_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_OnParentSubmittedIndex_System_Int32_
+  name: OnParentSubmittedIndex
+  nameWithType: ChapterSceneHandler.OnParentSubmittedIndex
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.OnParentSubmittedIndex
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_EvaluateChapterScene_System_Int32_
+  name: EvaluateChapterScene
+  nameWithType: ChapterSceneHandler.EvaluateChapterScene
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterScene
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterSelectMoments*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterSelectMoments
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_EvaluateChapterSelectMoments
+  name: EvaluateChapterSelectMoments
+  nameWithType: ChapterSceneHandler.EvaluateChapterSelectMoments
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.EvaluateChapterSelectMoments
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.CheckValidChapterSceneData*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.CheckValidChapterSceneData
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_CheckValidChapterSceneData_DREditor_ChapterSelection_SceneDataProviderBase_
+  name: CheckValidChapterSceneData
+  nameWithType: ChapterSceneHandler.CheckValidChapterSceneData
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.CheckValidChapterSceneData
+- uid: DREditor.ChapterSelection.SceneDataProviderBase
+  commentId: T:DREditor.ChapterSelection.SceneDataProviderBase
+  parent: DREditor.ChapterSelection
+  isExternal: true
+  href: DREditor.ChapterSelection.SceneDataProviderBase.html
+  name: SceneDataProviderBase
+  nameWithType: SceneDataProviderBase
+  fullName: DREditor.ChapterSelection.SceneDataProviderBase
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.SceneIsValid*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.SceneIsValid
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_SceneIsValid_DREditor_ChapterSelection_SceneDataProviderBase_
+  name: SceneIsValid
+  nameWithType: ChapterSceneHandler.SceneIsValid
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.SceneIsValid
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.ActivateValidSceneMoments*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.ActivateValidSceneMoments
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler_ActivateValidSceneMoments
+  name: ActivateValidSceneMoments
+  nameWithType: ChapterSceneHandler.ActivateValidSceneMoments
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.ActivateValidSceneMoments
+- uid: DREditor.ChapterSelection.ChapterSceneHandler.#ctor*
+  commentId: Overload:DREditor.ChapterSelection.ChapterSceneHandler.#ctor
+  isExternal: true
+  href: DREditor.ChapterSelection.ChapterSceneHandler.html#DREditor_ChapterSelection_ChapterSceneHandler__ctor
+  name: ChapterSceneHandler
+  nameWithType: ChapterSceneHandler.ChapterSceneHandler
+  fullName: DREditor.ChapterSelection.ChapterSceneHandler.ChapterSceneHandler
+  nameWithType.vb: ChapterSceneHandler.New
+  fullName.vb: DREditor.ChapterSelection.ChapterSceneHandler.New
+  name.vb: New

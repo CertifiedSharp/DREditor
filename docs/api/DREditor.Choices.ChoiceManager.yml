@@ -1,0 +1,2402 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Choices.ChoiceManager
+  commentId: T:DREditor.Choices.ChoiceManager
+  id: ChoiceManager
+  parent: DREditor.Choices
+  children:
+  - DREditor.Choices.ChoiceManager.#ctor
+  - DREditor.Choices.ChoiceManager.Awake
+  - DREditor.Choices.ChoiceManager.ChoiceGroup
+  - DREditor.Choices.ChoiceManager.ClearChoiceText
+  - DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  - DREditor.Choices.ChoiceManager.EvaluateSelectedChoice
+  - DREditor.Choices.ChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+  - DREditor.Choices.ChoiceManager.InitializeChoices
+  - DREditor.Choices.ChoiceManager.OnChoiceConfirmed
+  - DREditor.Choices.ChoiceManager.OnChoiceStarted
+  - DREditor.Choices.ChoiceManager.OnInteruptWithNewDialogue
+  - DREditor.Choices.ChoiceManager.PlayChoiceDialogue
+  - DREditor.Choices.ChoiceManager.SubscribeAllChoices(System.Action[])
+  - DREditor.Choices.ChoiceManager.SubscribeChoice(System.Int32,System.Action)
+  - DREditor.Choices.ChoiceManager.ToTitleScreen
+  - DREditor.Choices.ChoiceManager.TriggerCustomChoiceDialogueEvent
+  - DREditor.Choices.ChoiceManager.TriggerDialogueFlag
+  - DREditor.Choices.ChoiceManager.UnsubscribeAllChoices
+  - DREditor.Choices.ChoiceManager.UnsubscribeChoice(System.Int32,System.Action)
+  - DREditor.Choices.ChoiceManager.WaitForPlayerClick
+  - DREditor.Choices.ChoiceManager.allChoiceActions
+  - DREditor.Choices.ChoiceManager.choiceOptions
+  - DREditor.Choices.ChoiceManager.choiceSaveHandler
+  - DREditor.Choices.ChoiceManager.currentDialogue
+  - DREditor.Choices.ChoiceManager.displayChoiceBufferTime
+  - DREditor.Choices.ChoiceManager.exitParentRoutine
+  - DREditor.Choices.ChoiceManager.fastForwardModeWasEnabled
+  - DREditor.Choices.ChoiceManager.isLeaving
+  - DREditor.Choices.ChoiceManager.selectedChoiceIndex
+  - DREditor.Choices.ChoiceManager.submit
+  langs:
+  - csharp
+  - vb
+  name: ChoiceManager
+  nameWithType: ChoiceManager
+  fullName: DREditor.Choices.ChoiceManager
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("ServiceHolder for type: IChoiceManager\n\n")]
+
+      public class ChoiceManager : ServiceHolder<IChoiceManager>, IChoiceManager, IDialogueInteruptable, IToTitleScreen
+    content.vb: >-
+      <ClassHeader("ServiceHolder for type: IChoiceManager" & vbLf & vbLf)>
+
+      Public Class ChoiceManager Inherits ServiceHolder(Of IChoiceManager) Implements IChoiceManager, IDialogueInteruptable, IToTitleScreen
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  implements:
+  - DREditor.Choices.IChoiceManager
+  - DREditor.Dialogues.Ending.IDialogueInteruptable
+  - DREditor.Services.IToTitleScreen
+  inheritedMembers:
+  - DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.InitializeService
+  - DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.OnDestroy
+  extensionMethods:
+  - DREditor.Choices.ChoiceManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Choices.ChoiceManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Choices.ChoiceManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        ServiceHolder for type: IChoiceManager
+
+- uid: DREditor.Choices.ChoiceManager.submit
+  commentId: F:DREditor.Choices.ChoiceManager.submit
+  id: submit
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: submit
+  nameWithType: ChoiceManager.submit
+  fullName: DREditor.Choices.ChoiceManager.submit
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected InputActionReference submit
+    return:
+      type: UnityEngine.InputSystem.InputActionReference
+    content.vb: >-
+      <Divider>
+
+      Protected submit As InputActionReference
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Choices.ChoiceManager.isLeaving
+  commentId: F:DREditor.Choices.ChoiceManager.isLeaving
+  id: isLeaving
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: isLeaving
+  nameWithType: ChoiceManager.isLeaving
+  fullName: DREditor.Choices.ChoiceManager.isLeaving
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isLeaving
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isLeaving As BoolWithEvent
+- uid: DREditor.Choices.ChoiceManager.fastForwardModeWasEnabled
+  commentId: F:DREditor.Choices.ChoiceManager.fastForwardModeWasEnabled
+  id: fastForwardModeWasEnabled
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: fastForwardModeWasEnabled
+  nameWithType: ChoiceManager.fastForwardModeWasEnabled
+  fullName: DREditor.Choices.ChoiceManager.fastForwardModeWasEnabled
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent fastForwardModeWasEnabled
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected fastForwardModeWasEnabled As BoolWithEvent
+- uid: DREditor.Choices.ChoiceManager.ChoiceGroup
+  commentId: F:DREditor.Choices.ChoiceManager.ChoiceGroup
+  id: ChoiceGroup
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: ChoiceGroup
+  nameWithType: ChoiceManager.ChoiceGroup
+  fullName: DREditor.Choices.ChoiceManager.ChoiceGroup
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected MenuGroupBase ChoiceGroup
+    return:
+      type: DREditor.UI.MenuGroupBase
+    content.vb: >-
+      <Divider>
+
+      Protected ChoiceGroup As MenuGroupBase
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Choices.ChoiceManager.choiceSaveHandler
+  commentId: F:DREditor.Choices.ChoiceManager.choiceSaveHandler
+  id: choiceSaveHandler
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: choiceSaveHandler
+  nameWithType: ChoiceManager.choiceSaveHandler
+  fullName: DREditor.Choices.ChoiceManager.choiceSaveHandler
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected ChoiceSaveHandler choiceSaveHandler
+    return:
+      type: DREditor.Choices.ChoiceSaveHandler
+    content.vb: Protected choiceSaveHandler As ChoiceSaveHandler
+- uid: DREditor.Choices.ChoiceManager.displayChoiceBufferTime
+  commentId: F:DREditor.Choices.ChoiceManager.displayChoiceBufferTime
+  id: displayChoiceBufferTime
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: displayChoiceBufferTime
+  nameWithType: ChoiceManager.displayChoiceBufferTime
+  fullName: DREditor.Choices.ChoiceManager.displayChoiceBufferTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected float displayChoiceBufferTime
+    return:
+      type: System.Single
+    content.vb: Protected displayChoiceBufferTime As Single
+- uid: DREditor.Choices.ChoiceManager.choiceOptions
+  commentId: F:DREditor.Choices.ChoiceManager.choiceOptions
+  id: choiceOptions
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: choiceOptions
+  nameWithType: ChoiceManager.choiceOptions
+  fullName: DREditor.Choices.ChoiceManager.choiceOptions
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<ChoiceOptionUI> choiceOptions
+    return:
+      type: System.Collections.Generic.List{DREditor.Choices.ChoiceOptionUI}
+    content.vb: Protected choiceOptions As List(Of ChoiceOptionUI)
+- uid: DREditor.Choices.ChoiceManager.OnChoiceStarted
+  commentId: F:DREditor.Choices.ChoiceManager.OnChoiceStarted
+  id: OnChoiceStarted
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: OnChoiceStarted
+  nameWithType: ChoiceManager.OnChoiceStarted
+  fullName: DREditor.Choices.ChoiceManager.OnChoiceStarted
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  syntax:
+    content: protected UnityEvent OnChoiceStarted
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: Protected OnChoiceStarted As UnityEvent
+- uid: DREditor.Choices.ChoiceManager.OnChoiceConfirmed
+  commentId: F:DREditor.Choices.ChoiceManager.OnChoiceConfirmed
+  id: OnChoiceConfirmed
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: OnChoiceConfirmed
+  nameWithType: ChoiceManager.OnChoiceConfirmed
+  fullName: DREditor.Choices.ChoiceManager.OnChoiceConfirmed
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  syntax:
+    content: protected UnityEvent OnChoiceConfirmed
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: Protected OnChoiceConfirmed As UnityEvent
+- uid: DREditor.Choices.ChoiceManager.allChoiceActions
+  commentId: F:DREditor.Choices.ChoiceManager.allChoiceActions
+  id: allChoiceActions
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: allChoiceActions
+  nameWithType: ChoiceManager.allChoiceActions
+  fullName: DREditor.Choices.ChoiceManager.allChoiceActions
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected List<Action> allChoiceActions
+    return:
+      type: System.Collections.Generic.List{System.Action}
+    content.vb: Protected allChoiceActions As List(Of Action)
+- uid: DREditor.Choices.ChoiceManager.currentDialogue
+  commentId: F:DREditor.Choices.ChoiceManager.currentDialogue
+  id: currentDialogue
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: currentDialogue
+  nameWithType: ChoiceManager.currentDialogue
+  fullName: DREditor.Choices.ChoiceManager.currentDialogue
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected Dialogue currentDialogue
+    return:
+      type: DREditor.Dialogues.Dialogue
+    content.vb: Protected currentDialogue As Dialogue
+- uid: DREditor.Choices.ChoiceManager.exitParentRoutine
+  commentId: F:DREditor.Choices.ChoiceManager.exitParentRoutine
+  id: exitParentRoutine
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: exitParentRoutine
+  nameWithType: ChoiceManager.exitParentRoutine
+  fullName: DREditor.Choices.ChoiceManager.exitParentRoutine
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected Action exitParentRoutine
+    return:
+      type: System.Action
+    content.vb: Protected exitParentRoutine As Action
+- uid: DREditor.Choices.ChoiceManager.selectedChoiceIndex
+  commentId: F:DREditor.Choices.ChoiceManager.selectedChoiceIndex
+  id: selectedChoiceIndex
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: selectedChoiceIndex
+  nameWithType: ChoiceManager.selectedChoiceIndex
+  fullName: DREditor.Choices.ChoiceManager.selectedChoiceIndex
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected int selectedChoiceIndex
+    return:
+      type: System.Int32
+    content.vb: Protected selectedChoiceIndex As Integer
+- uid: DREditor.Choices.ChoiceManager.Awake
+  commentId: M:DREditor.Choices.ChoiceManager.Awake
+  id: Awake
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: ChoiceManager.Awake()
+  fullName: DREditor.Choices.ChoiceManager.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void Awake()
+    content.vb: Protected Overrides Sub Awake()
+  overridden: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.Awake
+  overload: DREditor.Choices.ChoiceManager.Awake*
+- uid: DREditor.Choices.ChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+  commentId: M:DREditor.Choices.ChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+  id: ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: ExecuteChoiceHandling(Dialogue, Action)
+  nameWithType: ChoiceManager.ExecuteChoiceHandling(Dialogue, Action)
+  fullName: DREditor.Choices.ChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue, System.Action)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual IEnumerator ExecuteChoiceHandling(Dialogue currentDialogue, Action exitParentRoutine = null)
+    parameters:
+    - id: currentDialogue
+      type: DREditor.Dialogues.Dialogue
+    - id: exitParentRoutine
+      type: System.Action
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Overridable Function ExecuteChoiceHandling(currentDialogue As Dialogue, exitParentRoutine As Action = Nothing) As IEnumerator
+  overload: DREditor.Choices.ChoiceManager.ExecuteChoiceHandling*
+  implements:
+  - DREditor.Choices.IChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+- uid: DREditor.Choices.ChoiceManager.InitializeChoices
+  commentId: M:DREditor.Choices.ChoiceManager.InitializeChoices
+  id: InitializeChoices
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: InitializeChoices()
+  nameWithType: ChoiceManager.InitializeChoices()
+  fullName: DREditor.Choices.ChoiceManager.InitializeChoices()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializeChoices()
+    content.vb: Protected Overridable Sub InitializeChoices()
+  overload: DREditor.Choices.ChoiceManager.InitializeChoices*
+- uid: DREditor.Choices.ChoiceManager.WaitForPlayerClick
+  commentId: M:DREditor.Choices.ChoiceManager.WaitForPlayerClick
+  id: WaitForPlayerClick
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: WaitForPlayerClick()
+  nameWithType: ChoiceManager.WaitForPlayerClick()
+  fullName: DREditor.Choices.ChoiceManager.WaitForPlayerClick()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator WaitForPlayerClick()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function WaitForPlayerClick() As IEnumerator
+  overload: DREditor.Choices.ChoiceManager.WaitForPlayerClick*
+- uid: DREditor.Choices.ChoiceManager.EvaluateSelectedChoice
+  commentId: M:DREditor.Choices.ChoiceManager.EvaluateSelectedChoice
+  id: EvaluateSelectedChoice
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: EvaluateSelectedChoice()
+  nameWithType: ChoiceManager.EvaluateSelectedChoice()
+  fullName: DREditor.Choices.ChoiceManager.EvaluateSelectedChoice()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void EvaluateSelectedChoice()
+    content.vb: Protected Overridable Sub EvaluateSelectedChoice()
+  overload: DREditor.Choices.ChoiceManager.EvaluateSelectedChoice*
+- uid: DREditor.Choices.ChoiceManager.PlayChoiceDialogue
+  commentId: M:DREditor.Choices.ChoiceManager.PlayChoiceDialogue
+  id: PlayChoiceDialogue
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: PlayChoiceDialogue()
+  nameWithType: ChoiceManager.PlayChoiceDialogue()
+  fullName: DREditor.Choices.ChoiceManager.PlayChoiceDialogue()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void PlayChoiceDialogue()
+    content.vb: Protected Overridable Sub PlayChoiceDialogue()
+  overload: DREditor.Choices.ChoiceManager.PlayChoiceDialogue*
+- uid: DREditor.Choices.ChoiceManager.TriggerCustomChoiceDialogueEvent
+  commentId: M:DREditor.Choices.ChoiceManager.TriggerCustomChoiceDialogueEvent
+  id: TriggerCustomChoiceDialogueEvent
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: TriggerCustomChoiceDialogueEvent()
+  nameWithType: ChoiceManager.TriggerCustomChoiceDialogueEvent()
+  fullName: DREditor.Choices.ChoiceManager.TriggerCustomChoiceDialogueEvent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void TriggerCustomChoiceDialogueEvent()
+    content.vb: Protected Overridable Sub TriggerCustomChoiceDialogueEvent()
+  overload: DREditor.Choices.ChoiceManager.TriggerCustomChoiceDialogueEvent*
+- uid: DREditor.Choices.ChoiceManager.TriggerDialogueFlag
+  commentId: M:DREditor.Choices.ChoiceManager.TriggerDialogueFlag
+  id: TriggerDialogueFlag
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: TriggerDialogueFlag()
+  nameWithType: ChoiceManager.TriggerDialogueFlag()
+  fullName: DREditor.Choices.ChoiceManager.TriggerDialogueFlag()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void TriggerDialogueFlag()
+    content.vb: Protected Overridable Sub TriggerDialogueFlag()
+  overload: DREditor.Choices.ChoiceManager.TriggerDialogueFlag*
+- uid: DREditor.Choices.ChoiceManager.SubscribeAllChoices(System.Action[])
+  commentId: M:DREditor.Choices.ChoiceManager.SubscribeAllChoices(System.Action[])
+  id: SubscribeAllChoices(System.Action[])
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: SubscribeAllChoices(Action[])
+  nameWithType: ChoiceManager.SubscribeAllChoices(Action[])
+  fullName: DREditor.Choices.ChoiceManager.SubscribeAllChoices(System.Action[])
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void SubscribeAllChoices(Action[] actionArray)
+    parameters:
+    - id: actionArray
+      type: System.Action[]
+      description: ''
+    content.vb: Public Overridable Sub SubscribeAllChoices(actionArray As Action())
+  overload: DREditor.Choices.ChoiceManager.SubscribeAllChoices*
+  implements:
+  - DREditor.Choices.IChoiceManager.SubscribeAllChoices(System.Action[])
+  nameWithType.vb: ChoiceManager.SubscribeAllChoices(Action())
+  fullName.vb: DREditor.Choices.ChoiceManager.SubscribeAllChoices(System.Action())
+  name.vb: SubscribeAllChoices(Action())
+- uid: DREditor.Choices.ChoiceManager.SubscribeChoice(System.Int32,System.Action)
+  commentId: M:DREditor.Choices.ChoiceManager.SubscribeChoice(System.Int32,System.Action)
+  id: SubscribeChoice(System.Int32,System.Action)
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: SubscribeChoice(int, Action)
+  nameWithType: ChoiceManager.SubscribeChoice(int, Action)
+  fullName: DREditor.Choices.ChoiceManager.SubscribeChoice(int, System.Action)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void SubscribeChoice(int index, Action action)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: action
+      type: System.Action
+    content.vb: Public Overridable Sub SubscribeChoice(index As Integer, action As Action)
+  overload: DREditor.Choices.ChoiceManager.SubscribeChoice*
+  implements:
+  - DREditor.Choices.IChoiceManager.SubscribeChoice(System.Int32,System.Action)
+  nameWithType.vb: ChoiceManager.SubscribeChoice(Integer, Action)
+  fullName.vb: DREditor.Choices.ChoiceManager.SubscribeChoice(Integer, System.Action)
+  name.vb: SubscribeChoice(Integer, Action)
+- uid: DREditor.Choices.ChoiceManager.UnsubscribeChoice(System.Int32,System.Action)
+  commentId: M:DREditor.Choices.ChoiceManager.UnsubscribeChoice(System.Int32,System.Action)
+  id: UnsubscribeChoice(System.Int32,System.Action)
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: UnsubscribeChoice(int, Action)
+  nameWithType: ChoiceManager.UnsubscribeChoice(int, Action)
+  fullName: DREditor.Choices.ChoiceManager.UnsubscribeChoice(int, System.Action)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void UnsubscribeChoice(int index, Action action)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: action
+      type: System.Action
+    content.vb: Public Overridable Sub UnsubscribeChoice(index As Integer, action As Action)
+  overload: DREditor.Choices.ChoiceManager.UnsubscribeChoice*
+  implements:
+  - DREditor.Choices.IChoiceManager.UnsubscribeChoice(System.Int32,System.Action)
+  nameWithType.vb: ChoiceManager.UnsubscribeChoice(Integer, Action)
+  fullName.vb: DREditor.Choices.ChoiceManager.UnsubscribeChoice(Integer, System.Action)
+  name.vb: UnsubscribeChoice(Integer, Action)
+- uid: DREditor.Choices.ChoiceManager.UnsubscribeAllChoices
+  commentId: M:DREditor.Choices.ChoiceManager.UnsubscribeAllChoices
+  id: UnsubscribeAllChoices
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: UnsubscribeAllChoices()
+  nameWithType: ChoiceManager.UnsubscribeAllChoices()
+  fullName: DREditor.Choices.ChoiceManager.UnsubscribeAllChoices()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void UnsubscribeAllChoices()
+    content.vb: Public Overridable Sub UnsubscribeAllChoices()
+  overload: DREditor.Choices.ChoiceManager.UnsubscribeAllChoices*
+  implements:
+  - DREditor.Choices.IChoiceManager.UnsubscribeAllChoices
+- uid: DREditor.Choices.ChoiceManager.ClearChoiceText
+  commentId: M:DREditor.Choices.ChoiceManager.ClearChoiceText
+  id: ClearChoiceText
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: ClearChoiceText()
+  nameWithType: ChoiceManager.ClearChoiceText()
+  fullName: DREditor.Choices.ChoiceManager.ClearChoiceText()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ClearChoiceText()
+    content.vb: Public Overridable Sub ClearChoiceText()
+  overload: DREditor.Choices.ChoiceManager.ClearChoiceText*
+  implements:
+  - DREditor.Choices.IChoiceManager.ClearChoiceText
+- uid: DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  commentId: M:DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  id: DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: DialogueInterruptedInvoke(DialogueCore[])
+  nameWithType: ChoiceManager.DialogueInterruptedInvoke(DialogueCore[])
+  fullName: DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void DialogueInterruptedInvoke(DialogueCore[] dialogues)
+    parameters:
+    - id: dialogues
+      type: DREditor.Dialogues.DialogueCore[]
+      description: ''
+    content.vb: Public Overridable Sub DialogueInterruptedInvoke(dialogues As DialogueCore())
+  overload: DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke*
+  implements:
+  - DREditor.Dialogues.Ending.IDialogueInteruptable.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  nameWithType.vb: ChoiceManager.DialogueInterruptedInvoke(DialogueCore())
+  fullName.vb: DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore())
+  name.vb: DialogueInterruptedInvoke(DialogueCore())
+- uid: DREditor.Choices.ChoiceManager.ToTitleScreen
+  commentId: M:DREditor.Choices.ChoiceManager.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: ChoiceManager.ToTitleScreen()
+  fullName: DREditor.Choices.ChoiceManager.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.Choices.ChoiceManager.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.Choices.ChoiceManager.#ctor
+  commentId: M:DREditor.Choices.ChoiceManager.#ctor
+  id: '#ctor'
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: ChoiceManager()
+  nameWithType: ChoiceManager.ChoiceManager()
+  fullName: DREditor.Choices.ChoiceManager.ChoiceManager()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  syntax:
+    content: public ChoiceManager()
+    content.vb: Public Sub New()
+  overload: DREditor.Choices.ChoiceManager.#ctor*
+  nameWithType.vb: ChoiceManager.New()
+  fullName.vb: DREditor.Choices.ChoiceManager.New()
+  name.vb: New()
+- uid: DREditor.Choices.ChoiceManager.OnInteruptWithNewDialogue
+  commentId: E:DREditor.Choices.ChoiceManager.OnInteruptWithNewDialogue
+  id: OnInteruptWithNewDialogue
+  parent: DREditor.Choices.ChoiceManager
+  langs:
+  - csharp
+  - vb
+  name: OnInteruptWithNewDialogue
+  nameWithType: ChoiceManager.OnInteruptWithNewDialogue
+  fullName: DREditor.Choices.ChoiceManager.OnInteruptWithNewDialogue
+  type: Event
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/ChoiceManager.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public event Action<DialogueCore[]> OnInteruptWithNewDialogue
+    return:
+      type: System.Action{DREditor.Dialogues.DialogueCore[]}
+    content.vb: Public Event OnInteruptWithNewDialogue As Action(Of DialogueCore())
+  implements:
+  - DREditor.Dialogues.Ending.IDialogueInteruptable.OnInteruptWithNewDialogue
+references:
+- uid: DREditor.Choices
+  commentId: N:DREditor.Choices
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Choices
+  nameWithType: DREditor.Choices
+  fullName: DREditor.Choices
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Choices
+    name: Choices
+    isExternal: true
+    href: DREditor.Choices.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Choices
+    name: Choices
+    isExternal: true
+    href: DREditor.Choices.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<IChoiceManager>
+  nameWithType: ServiceHolder<IChoiceManager>
+  fullName: DREditor.Services.ServiceHolder<DREditor.Choices.IChoiceManager>
+  nameWithType.vb: ServiceHolder(Of IChoiceManager)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Choices.IChoiceManager)
+  name.vb: ServiceHolder(Of IChoiceManager)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.Choices.IChoiceManager
+    name: IChoiceManager
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Choices.IChoiceManager
+    name: IChoiceManager
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html
+  - name: )
+- uid: DREditor.Choices.IChoiceManager
+  commentId: T:DREditor.Choices.IChoiceManager
+  parent: DREditor.Choices
+  isExternal: true
+  href: DREditor.Choices.IChoiceManager.html
+  name: IChoiceManager
+  nameWithType: IChoiceManager
+  fullName: DREditor.Choices.IChoiceManager
+- uid: DREditor.Dialogues.Ending.IDialogueInteruptable
+  commentId: T:DREditor.Dialogues.Ending.IDialogueInteruptable
+  parent: DREditor.Dialogues.Ending
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Ending/IDialogueInteruptable.cs
+  name: IDialogueInteruptable
+  nameWithType: IDialogueInteruptable
+  fullName: DREditor.Dialogues.Ending.IDialogueInteruptable
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<IChoiceManager>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.Choices.IChoiceManager>.registerService
+  nameWithType.vb: ServiceHolder(Of IChoiceManager).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Choices.IChoiceManager).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<IChoiceManager>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.Choices.IChoiceManager>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of IChoiceManager).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Choices.IChoiceManager).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<IChoiceManager>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Choices.IChoiceManager>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of IChoiceManager).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Choices.IChoiceManager).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<IChoiceManager>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Choices.IChoiceManager>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of IChoiceManager).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Choices.IChoiceManager).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<IChoiceManager>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Choices.IChoiceManager>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of IChoiceManager).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Choices.IChoiceManager).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ChoiceManager>(ChoiceManager)
+  nameWithType: ReflectionHelper.GetFieldNames<ChoiceManager>(ChoiceManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Choices.ChoiceManager>(DREditor.Choices.ChoiceManager)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ChoiceManager)(ChoiceManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Choices.ChoiceManager)(DREditor.Choices.ChoiceManager)
+  name.vb: GetFieldNames(Of ChoiceManager)(ChoiceManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Choices.ChoiceManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Choices.ChoiceManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ChoiceManager>(ChoiceManager)
+  nameWithType: ReflectionHelper.GetFieldValues<ChoiceManager>(ChoiceManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Choices.ChoiceManager>(DREditor.Choices.ChoiceManager)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ChoiceManager)(ChoiceManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Choices.ChoiceManager)(DREditor.Choices.ChoiceManager)
+  name.vb: GetFieldValues(Of ChoiceManager)(ChoiceManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Choices.ChoiceManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Choices.ChoiceManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ChoiceManager>(ChoiceManager)
+  nameWithType: DeepCopyExtensions.DeepCopy<ChoiceManager>(ChoiceManager)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Choices.ChoiceManager>(DREditor.Choices.ChoiceManager)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ChoiceManager)(ChoiceManager)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Choices.ChoiceManager)(DREditor.Choices.ChoiceManager)
+  name.vb: DeepCopy(Of ChoiceManager)(ChoiceManager)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Choices.ChoiceManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Choices.ChoiceManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Choices.ChoiceManager
+    name: ChoiceManager
+    isExternal: true
+    href: DREditor.Choices.ChoiceManager.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Dialogues.Ending
+  commentId: N:DREditor.Dialogues.Ending
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Ending
+  nameWithType: DREditor.Dialogues.Ending
+  fullName: DREditor.Dialogues.Ending
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Ending
+    name: Ending
+    isExternal: true
+    href: DREditor.Dialogues.Ending.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Ending
+    name: Ending
+    isExternal: true
+    href: DREditor.Dialogues.Ending.html
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.InputSystem.InputActionReference
+  isExternal: true
+  name: InputActionReference
+  nameWithType: InputActionReference
+  fullName: UnityEngine.InputSystem.InputActionReference
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.UI.MenuGroupBase
+  commentId: T:DREditor.UI.MenuGroupBase
+  parent: DREditor.UI
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/MenuGroupBase.cs
+  name: MenuGroupBase
+  nameWithType: MenuGroupBase
+  fullName: DREditor.UI.MenuGroupBase
+- uid: DREditor.UI
+  commentId: N:DREditor.UI
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.UI
+  nameWithType: DREditor.UI
+  fullName: DREditor.UI
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UI
+    name: UI
+    isExternal: true
+    href: DREditor.UI.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.UI
+    name: UI
+    isExternal: true
+    href: DREditor.UI.html
+- uid: DREditor.Choices.ChoiceSaveHandler
+  commentId: T:DREditor.Choices.ChoiceSaveHandler
+  parent: DREditor.Choices
+  isExternal: true
+  href: DREditor.Choices.ChoiceSaveHandler.html
+  name: ChoiceSaveHandler
+  nameWithType: ChoiceSaveHandler
+  fullName: DREditor.Choices.ChoiceSaveHandler
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Collections.Generic.List{DREditor.Choices.ChoiceOptionUI}
+  commentId: T:System.Collections.Generic.List{DREditor.Choices.ChoiceOptionUI}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ChoiceOptionUI>
+  nameWithType: List<ChoiceOptionUI>
+  fullName: System.Collections.Generic.List<DREditor.Choices.ChoiceOptionUI>
+  nameWithType.vb: List(Of ChoiceOptionUI)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Choices.ChoiceOptionUI)
+  name.vb: List(Of ChoiceOptionUI)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Choices.ChoiceOptionUI
+    name: ChoiceOptionUI
+    isExternal: true
+    href: DREditor.Choices.ChoiceOptionUI.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Choices.ChoiceOptionUI
+    name: ChoiceOptionUI
+    isExternal: true
+    href: DREditor.Choices.ChoiceOptionUI.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: UnityEngine.Events.UnityEvent
+  isExternal: true
+  name: UnityEvent
+  nameWithType: UnityEvent
+  fullName: UnityEngine.Events.UnityEvent
+- uid: System.Collections.Generic.List{System.Action}
+  commentId: T:System.Collections.Generic.List{System.Action}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Action>
+  nameWithType: List<Action>
+  fullName: System.Collections.Generic.List<System.Action>
+  nameWithType.vb: List(Of Action)
+  fullName.vb: System.Collections.Generic.List(Of System.Action)
+  name.vb: List(Of Action)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.Dialogues.Dialogue
+  commentId: T:DREditor.Dialogues.Dialogue
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  name: Dialogue
+  nameWithType: Dialogue
+  fullName: DREditor.Dialogues.Dialogue
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<IChoiceManager>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Choices.IChoiceManager>.Awake()
+  nameWithType.vb: ServiceHolder(Of IChoiceManager).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Choices.IChoiceManager).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Choices.IChoiceManager}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.Awake*
+  commentId: Overload:DREditor.Choices.ChoiceManager.Awake
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_Awake
+  name: Awake
+  nameWithType: ChoiceManager.Awake
+  fullName: DREditor.Choices.ChoiceManager.Awake
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.ExecuteChoiceHandling*
+  commentId: Overload:DREditor.Choices.ChoiceManager.ExecuteChoiceHandling
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_ExecuteChoiceHandling_DREditor_Dialogues_Dialogue_System_Action_
+  name: ExecuteChoiceHandling
+  nameWithType: ChoiceManager.ExecuteChoiceHandling
+  fullName: DREditor.Choices.ChoiceManager.ExecuteChoiceHandling
+- uid: DREditor.Choices.IChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+  commentId: M:DREditor.Choices.IChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+  parent: DREditor.Choices.IChoiceManager
+  isExternal: true
+  href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_ExecuteChoiceHandling_DREditor_Dialogues_Dialogue_System_Action_
+  name: ExecuteChoiceHandling(Dialogue, Action)
+  nameWithType: IChoiceManager.ExecuteChoiceHandling(Dialogue, Action)
+  fullName: DREditor.Choices.IChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue, System.Action)
+  spec.csharp:
+  - uid: DREditor.Choices.IChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+    name: ExecuteChoiceHandling
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_ExecuteChoiceHandling_DREditor_Dialogues_Dialogue_System_Action_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.Choices.IChoiceManager.ExecuteChoiceHandling(DREditor.Dialogues.Dialogue,System.Action)
+    name: ExecuteChoiceHandling
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_ExecuteChoiceHandling_DREditor_Dialogues_Dialogue_System_Action_
+  - name: (
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Choices.ChoiceManager.InitializeChoices*
+  commentId: Overload:DREditor.Choices.ChoiceManager.InitializeChoices
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_InitializeChoices
+  name: InitializeChoices
+  nameWithType: ChoiceManager.InitializeChoices
+  fullName: DREditor.Choices.ChoiceManager.InitializeChoices
+- uid: DREditor.Choices.ChoiceManager.WaitForPlayerClick*
+  commentId: Overload:DREditor.Choices.ChoiceManager.WaitForPlayerClick
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_WaitForPlayerClick
+  name: WaitForPlayerClick
+  nameWithType: ChoiceManager.WaitForPlayerClick
+  fullName: DREditor.Choices.ChoiceManager.WaitForPlayerClick
+- uid: DREditor.Choices.ChoiceManager.EvaluateSelectedChoice*
+  commentId: Overload:DREditor.Choices.ChoiceManager.EvaluateSelectedChoice
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_EvaluateSelectedChoice
+  name: EvaluateSelectedChoice
+  nameWithType: ChoiceManager.EvaluateSelectedChoice
+  fullName: DREditor.Choices.ChoiceManager.EvaluateSelectedChoice
+- uid: DREditor.Choices.ChoiceManager.PlayChoiceDialogue*
+  commentId: Overload:DREditor.Choices.ChoiceManager.PlayChoiceDialogue
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_PlayChoiceDialogue
+  name: PlayChoiceDialogue
+  nameWithType: ChoiceManager.PlayChoiceDialogue
+  fullName: DREditor.Choices.ChoiceManager.PlayChoiceDialogue
+- uid: DREditor.Choices.ChoiceManager.TriggerCustomChoiceDialogueEvent*
+  commentId: Overload:DREditor.Choices.ChoiceManager.TriggerCustomChoiceDialogueEvent
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_TriggerCustomChoiceDialogueEvent
+  name: TriggerCustomChoiceDialogueEvent
+  nameWithType: ChoiceManager.TriggerCustomChoiceDialogueEvent
+  fullName: DREditor.Choices.ChoiceManager.TriggerCustomChoiceDialogueEvent
+- uid: DREditor.Choices.ChoiceManager.TriggerDialogueFlag*
+  commentId: Overload:DREditor.Choices.ChoiceManager.TriggerDialogueFlag
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_TriggerDialogueFlag
+  name: TriggerDialogueFlag
+  nameWithType: ChoiceManager.TriggerDialogueFlag
+  fullName: DREditor.Choices.ChoiceManager.TriggerDialogueFlag
+- uid: DREditor.Choices.ChoiceManager.SubscribeAllChoices*
+  commentId: Overload:DREditor.Choices.ChoiceManager.SubscribeAllChoices
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_SubscribeAllChoices_System_Action___
+  name: SubscribeAllChoices
+  nameWithType: ChoiceManager.SubscribeAllChoices
+  fullName: DREditor.Choices.ChoiceManager.SubscribeAllChoices
+- uid: DREditor.Choices.IChoiceManager.SubscribeAllChoices(System.Action[])
+  commentId: M:DREditor.Choices.IChoiceManager.SubscribeAllChoices(System.Action[])
+  parent: DREditor.Choices.IChoiceManager
+  isExternal: true
+  href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_SubscribeAllChoices_System_Action___
+  name: SubscribeAllChoices(Action[])
+  nameWithType: IChoiceManager.SubscribeAllChoices(Action[])
+  fullName: DREditor.Choices.IChoiceManager.SubscribeAllChoices(System.Action[])
+  nameWithType.vb: IChoiceManager.SubscribeAllChoices(Action())
+  fullName.vb: DREditor.Choices.IChoiceManager.SubscribeAllChoices(System.Action())
+  name.vb: SubscribeAllChoices(Action())
+  spec.csharp:
+  - uid: DREditor.Choices.IChoiceManager.SubscribeAllChoices(System.Action[])
+    name: SubscribeAllChoices
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_SubscribeAllChoices_System_Action___
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Choices.IChoiceManager.SubscribeAllChoices(System.Action[])
+    name: SubscribeAllChoices
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_SubscribeAllChoices_System_Action___
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Action[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action[]
+  nameWithType: Action[]
+  fullName: System.Action[]
+  nameWithType.vb: Action()
+  fullName.vb: System.Action()
+  name.vb: Action()
+  spec.csharp:
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: (
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.SubscribeChoice*
+  commentId: Overload:DREditor.Choices.ChoiceManager.SubscribeChoice
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_SubscribeChoice_System_Int32_System_Action_
+  name: SubscribeChoice
+  nameWithType: ChoiceManager.SubscribeChoice
+  fullName: DREditor.Choices.ChoiceManager.SubscribeChoice
+- uid: DREditor.Choices.IChoiceManager.SubscribeChoice(System.Int32,System.Action)
+  commentId: M:DREditor.Choices.IChoiceManager.SubscribeChoice(System.Int32,System.Action)
+  parent: DREditor.Choices.IChoiceManager
+  isExternal: true
+  href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_SubscribeChoice_System_Int32_System_Action_
+  name: SubscribeChoice(int, Action)
+  nameWithType: IChoiceManager.SubscribeChoice(int, Action)
+  fullName: DREditor.Choices.IChoiceManager.SubscribeChoice(int, System.Action)
+  nameWithType.vb: IChoiceManager.SubscribeChoice(Integer, Action)
+  fullName.vb: DREditor.Choices.IChoiceManager.SubscribeChoice(Integer, System.Action)
+  name.vb: SubscribeChoice(Integer, Action)
+  spec.csharp:
+  - uid: DREditor.Choices.IChoiceManager.SubscribeChoice(System.Int32,System.Action)
+    name: SubscribeChoice
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_SubscribeChoice_System_Int32_System_Action_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.Choices.IChoiceManager.SubscribeChoice(System.Int32,System.Action)
+    name: SubscribeChoice
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_SubscribeChoice_System_Int32_System_Action_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.UnsubscribeChoice*
+  commentId: Overload:DREditor.Choices.ChoiceManager.UnsubscribeChoice
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_UnsubscribeChoice_System_Int32_System_Action_
+  name: UnsubscribeChoice
+  nameWithType: ChoiceManager.UnsubscribeChoice
+  fullName: DREditor.Choices.ChoiceManager.UnsubscribeChoice
+- uid: DREditor.Choices.IChoiceManager.UnsubscribeChoice(System.Int32,System.Action)
+  commentId: M:DREditor.Choices.IChoiceManager.UnsubscribeChoice(System.Int32,System.Action)
+  parent: DREditor.Choices.IChoiceManager
+  isExternal: true
+  href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_UnsubscribeChoice_System_Int32_System_Action_
+  name: UnsubscribeChoice(int, Action)
+  nameWithType: IChoiceManager.UnsubscribeChoice(int, Action)
+  fullName: DREditor.Choices.IChoiceManager.UnsubscribeChoice(int, System.Action)
+  nameWithType.vb: IChoiceManager.UnsubscribeChoice(Integer, Action)
+  fullName.vb: DREditor.Choices.IChoiceManager.UnsubscribeChoice(Integer, System.Action)
+  name.vb: UnsubscribeChoice(Integer, Action)
+  spec.csharp:
+  - uid: DREditor.Choices.IChoiceManager.UnsubscribeChoice(System.Int32,System.Action)
+    name: UnsubscribeChoice
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_UnsubscribeChoice_System_Int32_System_Action_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.Choices.IChoiceManager.UnsubscribeChoice(System.Int32,System.Action)
+    name: UnsubscribeChoice
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_UnsubscribeChoice_System_Int32_System_Action_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.UnsubscribeAllChoices*
+  commentId: Overload:DREditor.Choices.ChoiceManager.UnsubscribeAllChoices
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_UnsubscribeAllChoices
+  name: UnsubscribeAllChoices
+  nameWithType: ChoiceManager.UnsubscribeAllChoices
+  fullName: DREditor.Choices.ChoiceManager.UnsubscribeAllChoices
+- uid: DREditor.Choices.IChoiceManager.UnsubscribeAllChoices
+  commentId: M:DREditor.Choices.IChoiceManager.UnsubscribeAllChoices
+  parent: DREditor.Choices.IChoiceManager
+  isExternal: true
+  href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_UnsubscribeAllChoices
+  name: UnsubscribeAllChoices()
+  nameWithType: IChoiceManager.UnsubscribeAllChoices()
+  fullName: DREditor.Choices.IChoiceManager.UnsubscribeAllChoices()
+  spec.csharp:
+  - uid: DREditor.Choices.IChoiceManager.UnsubscribeAllChoices
+    name: UnsubscribeAllChoices
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_UnsubscribeAllChoices
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Choices.IChoiceManager.UnsubscribeAllChoices
+    name: UnsubscribeAllChoices
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_UnsubscribeAllChoices
+  - name: (
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.ClearChoiceText*
+  commentId: Overload:DREditor.Choices.ChoiceManager.ClearChoiceText
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_ClearChoiceText
+  name: ClearChoiceText
+  nameWithType: ChoiceManager.ClearChoiceText
+  fullName: DREditor.Choices.ChoiceManager.ClearChoiceText
+- uid: DREditor.Choices.IChoiceManager.ClearChoiceText
+  commentId: M:DREditor.Choices.IChoiceManager.ClearChoiceText
+  parent: DREditor.Choices.IChoiceManager
+  isExternal: true
+  href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_ClearChoiceText
+  name: ClearChoiceText()
+  nameWithType: IChoiceManager.ClearChoiceText()
+  fullName: DREditor.Choices.IChoiceManager.ClearChoiceText()
+  spec.csharp:
+  - uid: DREditor.Choices.IChoiceManager.ClearChoiceText
+    name: ClearChoiceText
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_ClearChoiceText
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Choices.IChoiceManager.ClearChoiceText
+    name: ClearChoiceText
+    isExternal: true
+    href: DREditor.Choices.IChoiceManager.html#DREditor_Choices_IChoiceManager_ClearChoiceText
+  - name: (
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke*
+  commentId: Overload:DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_DialogueInterruptedInvoke_DREditor_Dialogues_DialogueCore___
+  name: DialogueInterruptedInvoke
+  nameWithType: ChoiceManager.DialogueInterruptedInvoke
+  fullName: DREditor.Choices.ChoiceManager.DialogueInterruptedInvoke
+- uid: DREditor.Dialogues.Ending.IDialogueInteruptable.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  commentId: M:DREditor.Dialogues.Ending.IDialogueInteruptable.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  parent: DREditor.Dialogues.Ending.IDialogueInteruptable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Ending/IDialogueInteruptable.cs
+  name: DialogueInterruptedInvoke(DialogueCore[])
+  nameWithType: IDialogueInteruptable.DialogueInterruptedInvoke(DialogueCore[])
+  fullName: DREditor.Dialogues.Ending.IDialogueInteruptable.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+  nameWithType.vb: IDialogueInteruptable.DialogueInterruptedInvoke(DialogueCore())
+  fullName.vb: DREditor.Dialogues.Ending.IDialogueInteruptable.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore())
+  name.vb: DialogueInterruptedInvoke(DialogueCore())
+  spec.csharp:
+  - uid: DREditor.Dialogues.Ending.IDialogueInteruptable.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+    name: DialogueInterruptedInvoke
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Ending/IDialogueInteruptable.cs
+  - name: (
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueCore.cs
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Ending.IDialogueInteruptable.DialogueInterruptedInvoke(DREditor.Dialogues.DialogueCore[])
+    name: DialogueInterruptedInvoke
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Ending/IDialogueInteruptable.cs
+  - name: (
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueCore.cs
+  - name: (
+  - name: )
+  - name: )
+- uid: DREditor.Dialogues.DialogueCore[]
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueCore.cs
+  name: DialogueCore[]
+  nameWithType: DialogueCore[]
+  fullName: DREditor.Dialogues.DialogueCore[]
+  nameWithType.vb: DialogueCore()
+  fullName.vb: DREditor.Dialogues.DialogueCore()
+  name.vb: DialogueCore()
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueCore.cs
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueCore.cs
+  - name: (
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.ToTitleScreen*
+  commentId: Overload:DREditor.Choices.ChoiceManager.ToTitleScreen
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: ChoiceManager.ToTitleScreen
+  fullName: DREditor.Choices.ChoiceManager.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.Choices.ChoiceManager.#ctor*
+  commentId: Overload:DREditor.Choices.ChoiceManager.#ctor
+  isExternal: true
+  href: DREditor.Choices.ChoiceManager.html#DREditor_Choices_ChoiceManager__ctor
+  name: ChoiceManager
+  nameWithType: ChoiceManager.ChoiceManager
+  fullName: DREditor.Choices.ChoiceManager.ChoiceManager
+  nameWithType.vb: ChoiceManager.New
+  fullName.vb: DREditor.Choices.ChoiceManager.New
+  name.vb: New
+- uid: DREditor.Dialogues.Ending.IDialogueInteruptable.OnInteruptWithNewDialogue
+  commentId: E:DREditor.Dialogues.Ending.IDialogueInteruptable.OnInteruptWithNewDialogue
+  parent: DREditor.Dialogues.Ending.IDialogueInteruptable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Ending/IDialogueInteruptable.cs
+  name: OnInteruptWithNewDialogue
+  nameWithType: IDialogueInteruptable.OnInteruptWithNewDialogue
+  fullName: DREditor.Dialogues.Ending.IDialogueInteruptable.OnInteruptWithNewDialogue
+- uid: System.Action{DREditor.Dialogues.DialogueCore[]}
+  commentId: T:System.Action{DREditor.Dialogues.DialogueCore[]}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<DialogueCore[]>
+  nameWithType: Action<DialogueCore[]>
+  fullName: System.Action<DREditor.Dialogues.DialogueCore[]>
+  nameWithType.vb: Action(Of DialogueCore())
+  fullName.vb: System.Action(Of DREditor.Dialogues.DialogueCore())
+  name.vb: Action(Of DialogueCore())
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueCore.cs
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.DialogueCore
+    name: DialogueCore
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueCore.cs
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

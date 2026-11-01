@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SavePointUI | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SavePointUI | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.UI.SavingLoading.SavePointUI">
+
+
+
+  <h1 id="DREditor_UI_SavingLoading_SavePointUI" data-uid="DREditor.UI.SavingLoading.SavePointUI" class="text-break">
+Class SavePointUI  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.UI.html">UI</a>.<a class="xref" href="DREditor.UI.SavingLoading.html">SavingLoading</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.UI.SavingLoading.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ClassHeader(&quot;SavePointUIBase, SceneEventListener\n\n&quot;)]
+public class SavePointUI : SavePointUIBase, ISceneEventListener, IPrioritizable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.EventObjects.SceneEventListener.html">SceneEventListener</a></div>
+      <div><a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html">SavePointUIBase</a></div>
+      <div><span class="xref">SavePointUI</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.EventObjects.ISceneEventListener.html">ISceneEventListener</a></div>
+      <div><a class="xref" href="DREditor.Processables.IPrioritizable.html">IPrioritizable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_roomIsSavePoint">SavePointUIBase.roomIsSavePoint</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_savePointGroup">SavePointUIBase.savePointGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_saveLoadMenu">SavePointUIBase.saveLoadMenu</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_returnToMenuHandler">SavePointUIBase.returnToMenuHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_isLoadingFile">SavePointUIBase.isLoadingFile</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_hasLeaveAbility">SavePointUIBase.hasLeaveAbility</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_OnDisable">SavePointUIBase.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_ExecuteValidSavePoint">SavePointUIBase.ExecuteValidSavePoint()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.SavingLoading.SavePointUIBase.html#DREditor_UI_SavingLoading_SavePointUIBase_MoveToSavePointOnBack">SavePointUIBase.MoveToSavePointOnBack()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_Event">SceneEventListener.Event</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_Condition">SceneEventListener.Condition</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_conditionMustBe">SceneEventListener.conditionMustBe</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_priority">SceneEventListener.priority</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_Response">SceneEventListener.Response</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_OnEventRaised">SceneEventListener.OnEventRaised()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_AddListener_UnityEngine_Events_UnityAction_">SceneEventListener.AddListener(UnityAction)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_RemoveListener_UnityEngine_Events_UnityAction_">SceneEventListener.RemoveListener(UnityAction)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_OnResponseInvoked">SceneEventListener.OnResponseInvoked()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_ConditionAssigned">SceneEventListener.ConditionAssigned()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SceneEventListener.html#DREditor_EventObjects_SceneEventListener_Priority">SceneEventListener.Priority</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI__ctor_" data-uid="DREditor.UI.SavingLoading.SavePointUI.#ctor*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI__ctor" data-uid="DREditor.UI.SavingLoading.SavePointUI.#ctor">
+  SavePointUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SavePointUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_currentAddState" data-uid="DREditor.UI.SavingLoading.SavePointUI.currentAddState">
+  currentAddState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IntWithEvent currentAddState</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.IntWithEvent.html">IntWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_currentObjectiveName" data-uid="DREditor.UI.SavingLoading.SavePointUI.currentObjectiveName">
+  currentObjectiveName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StringWithEvent currentObjectiveName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.StringWithEvent.html">StringWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_delayLoadPointDuration" data-uid="DREditor.UI.SavingLoading.SavePointUI.delayLoadPointDuration">
+  delayLoadPointDuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected float delayLoadPointDuration</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_fadeToPointDuration" data-uid="DREditor.UI.SavingLoading.SavePointUI.fadeToPointDuration">
+  fadeToPointDuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float fadeToPointDuration</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_hasMenuAccess" data-uid="DREditor.UI.SavingLoading.SavePointUI.hasMenuAccess">
+  hasMenuAccess
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent hasMenuAccess</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_inDialogue" data-uid="DREditor.UI.SavingLoading.SavePointUI.inDialogue">
+  inDialogue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent inDialogue</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_inLeaveProcess" data-uid="DREditor.UI.SavingLoading.SavePointUI.inLeaveProcess">
+  inLeaveProcess
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent inLeaveProcess</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_inTrialMode" data-uid="DREditor.UI.SavingLoading.SavePointUI.inTrialMode">
+  inTrialMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent inTrialMode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_moveToNextNaturalObjective" data-uid="DREditor.UI.SavingLoading.SavePointUI.moveToNextNaturalObjective">
+  moveToNextNaturalObjective
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected SceneEvent moveToNextNaturalObjective</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.SceneEvent.html">SceneEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_playHideDialogueSFX" data-uid="DREditor.UI.SavingLoading.SavePointUI.playHideDialogueSFX">
+  playHideDialogueSFX
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent playHideDialogueSFX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_requiredFlagsTriggered" data-uid="DREditor.UI.SavingLoading.SavePointUI.requiredFlagsTriggered">
+  requiredFlagsTriggered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent requiredFlagsTriggered</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_savePoints" data-uid="DREditor.UI.SavingLoading.SavePointUI.savePoints">
+  savePoints
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected PostSavePoint[] savePoints</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.UI.SavingLoading.PostSavePoint.html">PostSavePoint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_scenePoints" data-uid="DREditor.UI.SavingLoading.SavePointUI.scenePoints">
+  scenePoints
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly Dictionary&lt;string, string&gt; scenePoints</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_threeDUIVisible" data-uid="DREditor.UI.SavingLoading.SavePointUI.threeDUIVisible">
+  threeDUIVisible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent threeDUIVisible</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_Awake_" data-uid="DREditor.UI.SavingLoading.SavePointUI.Awake*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_Awake" data-uid="DREditor.UI.SavingLoading.SavePointUI.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_BufferLoadSavePoint_" data-uid="DREditor.UI.SavingLoading.SavePointUI.BufferLoadSavePoint*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_BufferLoadSavePoint" data-uid="DREditor.UI.SavingLoading.SavePointUI.BufferLoadSavePoint">
+  BufferLoadSavePoint()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator BufferLoadSavePoint()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_ExecuteSavePointSettings_" data-uid="DREditor.UI.SavingLoading.SavePointUI.ExecuteSavePointSettings*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_ExecuteSavePointSettings" data-uid="DREditor.UI.SavingLoading.SavePointUI.ExecuteSavePointSettings">
+  ExecuteSavePointSettings()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ExecuteSavePointSettings()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_InitializeSavePointDictionary_" data-uid="DREditor.UI.SavingLoading.SavePointUI.InitializeSavePointDictionary*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_InitializeSavePointDictionary" data-uid="DREditor.UI.SavingLoading.SavePointUI.InitializeSavePointDictionary">
+  InitializeSavePointDictionary()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeSavePointDictionary()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_LoadSavePoint_" data-uid="DREditor.UI.SavingLoading.SavePointUI.LoadSavePoint*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_LoadSavePoint" data-uid="DREditor.UI.SavingLoading.SavePointUI.LoadSavePoint">
+  LoadSavePoint()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void LoadSavePoint()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_LoadScene_" data-uid="DREditor.UI.SavingLoading.SavePointUI.LoadScene*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_LoadScene_System_String_" data-uid="DREditor.UI.SavingLoading.SavePointUI.LoadScene(System.String)">
+  LoadScene(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LoadScene(string scene)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_OnEnable_" data-uid="DREditor.UI.SavingLoading.SavePointUI.OnEnable*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_OnEnable" data-uid="DREditor.UI.SavingLoading.SavePointUI.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_SavePointIsValid_" data-uid="DREditor.UI.SavingLoading.SavePointUI.SavePointIsValid*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_SavePointIsValid" data-uid="DREditor.UI.SavingLoading.SavePointUI.SavePointIsValid">
+  SavePointIsValid()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool SavePointIsValid()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_ShowSavePointUI_" data-uid="DREditor.UI.SavingLoading.SavePointUI.ShowSavePointUI*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_ShowSavePointUI" data-uid="DREditor.UI.SavingLoading.SavePointUI.ShowSavePointUI">
+  ShowSavePointUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void ShowSavePointUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_StartSavePointTransition_" data-uid="DREditor.UI.SavingLoading.SavePointUI.StartSavePointTransition*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_StartSavePointTransition" data-uid="DREditor.UI.SavingLoading.SavePointUI.StartSavePointTransition">
+  StartSavePointTransition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void StartSavePointTransition()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_SavingLoading_SavePointUI_WaitForDialogueToFinish_" data-uid="DREditor.UI.SavingLoading.SavePointUI.WaitForDialogueToFinish*"></a>
+
+  <h3 id="DREditor_UI_SavingLoading_SavePointUI_WaitForDialogueToFinish" data-uid="DREditor.UI.SavingLoading.SavePointUI.WaitForDialogueToFinish">
+  WaitForDialogueToFinish()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator WaitForDialogueToFinish()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI.SavingLoading/SavePointUI.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

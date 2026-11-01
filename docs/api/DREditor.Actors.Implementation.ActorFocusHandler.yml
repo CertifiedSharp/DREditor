@@ -1,0 +1,1274 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Actors.Implementation.ActorFocusHandler
+  commentId: T:DREditor.Actors.Implementation.ActorFocusHandler
+  id: ActorFocusHandler
+  parent: DREditor.Actors.Implementation
+  children:
+  - DREditor.Actors.Implementation.ActorFocusHandler.#ctor
+  - DREditor.Actors.Implementation.ActorFocusHandler.EvaluateCameraMovement(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorFocusHandler.FocusCharacter
+  - DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent``1(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorFocusHandler.LineProcessRoutine(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorFocusHandler.PanToCharacterEvent(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorFocusHandler.ShouldProcess(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorFocusHandler.ShouldUsePanBufferTime(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorFocusHandler.characterPanWaitTime
+  - DREditor.Actors.Implementation.ActorFocusHandler.currentActor
+  - DREditor.Actors.Implementation.ActorFocusHandler.fastForwardBufferedFrames
+  - DREditor.Actors.Implementation.ActorFocusHandler.focusHandler
+  - DREditor.Actors.Implementation.ActorFocusHandler.inCGMode
+  - DREditor.Actors.Implementation.ActorFocusHandler.inFastForwardMode
+  - DREditor.Actors.Implementation.ActorFocusHandler.inVideoMode
+  - DREditor.Actors.Implementation.ActorFocusHandler.isLoadingFile
+  - DREditor.Actors.Implementation.ActorFocusHandler.isProtagSpeaking
+  - DREditor.Actors.Implementation.ActorFocusHandler.lastActor
+  langs:
+  - csharp
+  - vb
+  name: ActorFocusHandler
+  nameWithType: ActorFocusHandler
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueComponent, ILineProcessorRoutine\n\n")]
+
+      public class ActorFocusHandler : DialogueComponent, ILineProcessorRoutine, ILineRoutine
+    content.vb: >-
+      <ClassHeader("DialogueComponent, ILineProcessorRoutine" & vbLf & vbLf)>
+
+      Public Class ActorFocusHandler Inherits DialogueComponent Implements ILineProcessorRoutine, ILineRoutine
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  - DREditor.Dialogues.LineReading.ILineRoutine
+  extensionMethods:
+  - DREditor.Actors.Implementation.ActorFocusHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Actors.Implementation.ActorFocusHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Actors.Implementation.ActorFocusHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueComponent, ILineProcessorRoutine
+
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.inFastForwardMode
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.inFastForwardMode
+  id: inFastForwardMode
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: inFastForwardMode
+  nameWithType: ActorFocusHandler.inFastForwardMode
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.inFastForwardMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent inFastForwardMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected inFastForwardMode As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.isProtagSpeaking
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.isProtagSpeaking
+  id: isProtagSpeaking
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: isProtagSpeaking
+  nameWithType: ActorFocusHandler.isProtagSpeaking
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.isProtagSpeaking
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isProtagSpeaking
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isProtagSpeaking As BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.isLoadingFile
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.isLoadingFile
+  id: isLoadingFile
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: isLoadingFile
+  nameWithType: ActorFocusHandler.isLoadingFile
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.isLoadingFile
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isLoadingFile
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isLoadingFile As BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.inCGMode
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.inCGMode
+  id: inCGMode
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: inCGMode
+  nameWithType: ActorFocusHandler.inCGMode
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.inCGMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inCGMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inCGMode As BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.currentActor
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.currentActor
+  id: currentActor
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: currentActor
+  nameWithType: ActorFocusHandler.currentActor
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.currentActor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected SelectableObjectWithEvent currentActor
+    return:
+      type: DREditor.EventObjects.SelectableObjectWithEvent
+    content.vb: Protected currentActor As SelectableObjectWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.lastActor
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.lastActor
+  id: lastActor
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: lastActor
+  nameWithType: ActorFocusHandler.lastActor
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.lastActor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected SelectableObjectWithEvent lastActor
+    return:
+      type: DREditor.EventObjects.SelectableObjectWithEvent
+    content.vb: Protected lastActor As SelectableObjectWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.inVideoMode
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.inVideoMode
+  id: inVideoMode
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: inVideoMode
+  nameWithType: ActorFocusHandler.inVideoMode
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.inVideoMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inVideoMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inVideoMode As BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.characterPanWaitTime
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.characterPanWaitTime
+  id: characterPanWaitTime
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: characterPanWaitTime
+  nameWithType: ActorFocusHandler.characterPanWaitTime
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.characterPanWaitTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected float characterPanWaitTime
+    return:
+      type: System.Single
+    content.vb: >-
+      <Divider>
+
+      Protected characterPanWaitTime As Single
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.fastForwardBufferedFrames
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.fastForwardBufferedFrames
+  id: fastForwardBufferedFrames
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: fastForwardBufferedFrames
+  nameWithType: ActorFocusHandler.fastForwardBufferedFrames
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.fastForwardBufferedFrames
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected int fastForwardBufferedFrames
+    return:
+      type: System.Int32
+    content.vb: Protected fastForwardBufferedFrames As Integer
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.focusHandler
+  commentId: F:DREditor.Actors.Implementation.ActorFocusHandler.focusHandler
+  id: focusHandler
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: focusHandler
+  nameWithType: ActorFocusHandler.focusHandler
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.focusHandler
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected FocusHandler focusHandler
+    return:
+      type: DREditor.Actors.FocusHandler
+    content.vb: Protected focusHandler As FocusHandler
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.ShouldProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorFocusHandler.ShouldProcess(DREditor.Dialogues.Line)
+  id: ShouldProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: ShouldProcess(Line)
+  nameWithType: ActorFocusHandler.ShouldProcess(Line)
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.ShouldProcess(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool ShouldProcess(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function ShouldProcess(currentLine As Line) As Boolean
+  overload: DREditor.Actors.Implementation.ActorFocusHandler.ShouldProcess*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.LineProcessRoutine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorFocusHandler.LineProcessRoutine(DREditor.Dialogues.Line)
+  id: LineProcessRoutine(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: LineProcessRoutine(Line)
+  nameWithType: ActorFocusHandler.LineProcessRoutine(Line)
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.LineProcessRoutine(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual IEnumerator LineProcessRoutine(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Overridable Function LineProcessRoutine(currentLine As Line) As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorFocusHandler.LineProcessRoutine*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.EvaluateCameraMovement(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorFocusHandler.EvaluateCameraMovement(DREditor.Dialogues.Line)
+  id: EvaluateCameraMovement(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateCameraMovement(Line)
+  nameWithType: ActorFocusHandler.EvaluateCameraMovement(Line)
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.EvaluateCameraMovement(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator EvaluateCameraMovement(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function EvaluateCameraMovement(currentLine As Line) As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorFocusHandler.EvaluateCameraMovement*
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.PanToCharacterEvent(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorFocusHandler.PanToCharacterEvent(DREditor.Dialogues.Line)
+  id: PanToCharacterEvent(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: PanToCharacterEvent(Line)
+  nameWithType: ActorFocusHandler.PanToCharacterEvent(Line)
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.PanToCharacterEvent(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator PanToCharacterEvent(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function PanToCharacterEvent(currentLine As Line) As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorFocusHandler.PanToCharacterEvent*
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.ShouldUsePanBufferTime(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorFocusHandler.ShouldUsePanBufferTime(DREditor.Dialogues.Line)
+  id: ShouldUsePanBufferTime(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: ShouldUsePanBufferTime(Line)
+  nameWithType: ActorFocusHandler.ShouldUsePanBufferTime(Line)
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.ShouldUsePanBufferTime(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool ShouldUsePanBufferTime(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function ShouldUsePanBufferTime(currentLine As Line) As Boolean
+  overload: DREditor.Actors.Implementation.ActorFocusHandler.ShouldUsePanBufferTime*
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.FocusCharacter
+  commentId: M:DREditor.Actors.Implementation.ActorFocusHandler.FocusCharacter
+  id: FocusCharacter
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: FocusCharacter()
+  nameWithType: ActorFocusHandler.FocusCharacter()
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.FocusCharacter()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator FocusCharacter()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function FocusCharacter() As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorFocusHandler.FocusCharacter*
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent``1(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent``1(DREditor.Dialogues.Line)
+  id: InvokeCameraDialogueEvent``1(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: InvokeCameraDialogueEvent<T>(Line)
+  nameWithType: ActorFocusHandler.InvokeCameraDialogueEvent<T>(Line)
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent<T>(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator InvokeCameraDialogueEvent<T>(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function InvokeCameraDialogueEvent(Of T)(currentLine As Line) As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent*
+  nameWithType.vb: ActorFocusHandler.InvokeCameraDialogueEvent(Of T)(Line)
+  fullName.vb: DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent(Of T)(DREditor.Dialogues.Line)
+  name.vb: InvokeCameraDialogueEvent(Of T)(Line)
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.#ctor
+  commentId: M:DREditor.Actors.Implementation.ActorFocusHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Actors.Implementation.ActorFocusHandler
+  langs:
+  - csharp
+  - vb
+  name: ActorFocusHandler()
+  nameWithType: ActorFocusHandler.ActorFocusHandler()
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.ActorFocusHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  syntax:
+    content: public ActorFocusHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Actors.Implementation.ActorFocusHandler.#ctor*
+  nameWithType.vb: ActorFocusHandler.New()
+  fullName.vb: DREditor.Actors.Implementation.ActorFocusHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.Actors.Implementation
+  commentId: N:DREditor.Actors.Implementation
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors.Implementation
+  nameWithType: DREditor.Actors.Implementation
+  fullName: DREditor.Actors.Implementation
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  - name: .
+  - uid: DREditor.Actors.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.Actors.Implementation.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  - name: .
+  - uid: DREditor.Actors.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.Actors.Implementation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  commentId: T:DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  name: ILineProcessorRoutine
+  nameWithType: ILineProcessorRoutine
+  fullName: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+- uid: DREditor.Dialogues.LineReading.ILineRoutine
+  commentId: T:DREditor.Dialogues.LineReading.ILineRoutine
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  name: ILineRoutine
+  nameWithType: ILineRoutine
+  fullName: DREditor.Dialogues.LineReading.ILineRoutine
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ActorFocusHandler>(ActorFocusHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<ActorFocusHandler>(ActorFocusHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Actors.Implementation.ActorFocusHandler>(DREditor.Actors.Implementation.ActorFocusHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ActorFocusHandler)(ActorFocusHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Actors.Implementation.ActorFocusHandler)(DREditor.Actors.Implementation.ActorFocusHandler)
+  name.vb: GetFieldNames(Of ActorFocusHandler)(ActorFocusHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.Implementation.ActorFocusHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.Implementation.ActorFocusHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ActorFocusHandler>(ActorFocusHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<ActorFocusHandler>(ActorFocusHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Actors.Implementation.ActorFocusHandler>(DREditor.Actors.Implementation.ActorFocusHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ActorFocusHandler)(ActorFocusHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Actors.Implementation.ActorFocusHandler)(DREditor.Actors.Implementation.ActorFocusHandler)
+  name.vb: GetFieldValues(Of ActorFocusHandler)(ActorFocusHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.Implementation.ActorFocusHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.Implementation.ActorFocusHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ActorFocusHandler>(ActorFocusHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<ActorFocusHandler>(ActorFocusHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Actors.Implementation.ActorFocusHandler>(DREditor.Actors.Implementation.ActorFocusHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ActorFocusHandler)(ActorFocusHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Actors.Implementation.ActorFocusHandler)(DREditor.Actors.Implementation.ActorFocusHandler)
+  name.vb: DeepCopy(Of ActorFocusHandler)(ActorFocusHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.Implementation.ActorFocusHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.Implementation.ActorFocusHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusHandler
+    name: ActorFocusHandler
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.SelectableObjectWithEvent
+  commentId: T:DREditor.EventObjects.SelectableObjectWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObjectWithEvent.cs
+  name: SelectableObjectWithEvent
+  nameWithType: SelectableObjectWithEvent
+  fullName: DREditor.EventObjects.SelectableObjectWithEvent
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: DREditor.Actors.FocusHandler
+  commentId: T:DREditor.Actors.FocusHandler
+  parent: DREditor.Actors
+  isExternal: true
+  href: DREditor.Actors.FocusHandler.html
+  name: FocusHandler
+  nameWithType: FocusHandler
+  fullName: DREditor.Actors.FocusHandler
+- uid: DREditor.Actors
+  commentId: N:DREditor.Actors
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors
+  nameWithType: DREditor.Actors
+  fullName: DREditor.Actors
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.ShouldProcess*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusHandler.ShouldProcess
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusHandler.html#DREditor_Actors_Implementation_ActorFocusHandler_ShouldProcess_DREditor_Dialogues_Line_
+  name: ShouldProcess
+  nameWithType: ActorFocusHandler.ShouldProcess
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.ShouldProcess
+- uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineRoutine
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  name: ShouldProcess(Line)
+  nameWithType: ILineRoutine.ShouldProcess(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+    name: ShouldProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+    name: ShouldProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.LineProcessRoutine*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusHandler.LineProcessRoutine
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusHandler.html#DREditor_Actors_Implementation_ActorFocusHandler_LineProcessRoutine_DREditor_Dialogues_Line_
+  name: LineProcessRoutine
+  nameWithType: ActorFocusHandler.LineProcessRoutine
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.LineProcessRoutine
+- uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  name: LineProcessRoutine(Line)
+  nameWithType: ILineProcessorRoutine.LineProcessRoutine(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+    name: LineProcessRoutine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+    name: LineProcessRoutine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.EvaluateCameraMovement*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusHandler.EvaluateCameraMovement
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusHandler.html#DREditor_Actors_Implementation_ActorFocusHandler_EvaluateCameraMovement_DREditor_Dialogues_Line_
+  name: EvaluateCameraMovement
+  nameWithType: ActorFocusHandler.EvaluateCameraMovement
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.EvaluateCameraMovement
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.PanToCharacterEvent*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusHandler.PanToCharacterEvent
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusHandler.html#DREditor_Actors_Implementation_ActorFocusHandler_PanToCharacterEvent_DREditor_Dialogues_Line_
+  name: PanToCharacterEvent
+  nameWithType: ActorFocusHandler.PanToCharacterEvent
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.PanToCharacterEvent
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.ShouldUsePanBufferTime*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusHandler.ShouldUsePanBufferTime
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusHandler.html#DREditor_Actors_Implementation_ActorFocusHandler_ShouldUsePanBufferTime_DREditor_Dialogues_Line_
+  name: ShouldUsePanBufferTime
+  nameWithType: ActorFocusHandler.ShouldUsePanBufferTime
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.ShouldUsePanBufferTime
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.FocusCharacter*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusHandler.FocusCharacter
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusHandler.html#DREditor_Actors_Implementation_ActorFocusHandler_FocusCharacter
+  name: FocusCharacter
+  nameWithType: ActorFocusHandler.FocusCharacter
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.FocusCharacter
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusHandler.html#DREditor_Actors_Implementation_ActorFocusHandler_InvokeCameraDialogueEvent__1_DREditor_Dialogues_Line_
+  name: InvokeCameraDialogueEvent
+  nameWithType: ActorFocusHandler.InvokeCameraDialogueEvent
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.InvokeCameraDialogueEvent
+- uid: DREditor.Actors.Implementation.ActorFocusHandler.#ctor*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusHandler.#ctor
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusHandler.html#DREditor_Actors_Implementation_ActorFocusHandler__ctor
+  name: ActorFocusHandler
+  nameWithType: ActorFocusHandler.ActorFocusHandler
+  fullName: DREditor.Actors.Implementation.ActorFocusHandler.ActorFocusHandler
+  nameWithType.vb: ActorFocusHandler.New
+  fullName.vb: DREditor.Actors.Implementation.ActorFocusHandler.New
+  name.vb: New

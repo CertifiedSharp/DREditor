@@ -1,0 +1,952 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Choices.DialogueChoiceHandler
+  commentId: T:DREditor.Choices.DialogueChoiceHandler
+  id: DialogueChoiceHandler
+  parent: DREditor.Choices
+  children:
+  - DREditor.Choices.DialogueChoiceHandler.#ctor
+  - DREditor.Choices.DialogueChoiceHandler.LineEndProcess(DREditor.Dialogues.Line)
+  - DREditor.Choices.DialogueChoiceHandler.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+  - DREditor.Choices.DialogueChoiceHandler.SkipOnFastForward
+  langs:
+  - csharp
+  - vb
+  name: DialogueChoiceHandler
+  nameWithType: DialogueChoiceHandler
+  fullName: DREditor.Choices.DialogueChoiceHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/DialogueChoiceHandler.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueComponent, ILineEndProcess, ILineWaitForClick\n\n")]
+
+      public class DialogueChoiceHandler : DialogueComponent, ILineEndProcess, ILineWaitForClick
+    content.vb: >-
+      <ClassHeader("DialogueComponent, ILineEndProcess, ILineWaitForClick" & vbLf & vbLf)>
+
+      Public Class DialogueChoiceHandler Inherits DialogueComponent Implements ILineEndProcess, ILineWaitForClick
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  implements:
+  - DREditor.Dialogues.LineReading.ILineEndProcess
+  - DREditor.Dialogues.LineReading.ILineWaitForClick
+  extensionMethods:
+  - DREditor.Choices.DialogueChoiceHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Choices.DialogueChoiceHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Choices.DialogueChoiceHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueComponent, ILineEndProcess, ILineWaitForClick
+
+- uid: DREditor.Choices.DialogueChoiceHandler.LineEndProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Choices.DialogueChoiceHandler.LineEndProcess(DREditor.Dialogues.Line)
+  id: LineEndProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Choices.DialogueChoiceHandler
+  langs:
+  - csharp
+  - vb
+  name: LineEndProcess(Line)
+  nameWithType: DialogueChoiceHandler.LineEndProcess(Line)
+  fullName: DREditor.Choices.DialogueChoiceHandler.LineEndProcess(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/DialogueChoiceHandler.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LineEndProcess(Line currentLine = null)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub LineEndProcess(currentLine As Line = Nothing)
+  overload: DREditor.Choices.DialogueChoiceHandler.LineEndProcess*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+- uid: DREditor.Choices.DialogueChoiceHandler.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+  commentId: M:DREditor.Choices.DialogueChoiceHandler.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+  id: LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+  parent: DREditor.Choices.DialogueChoiceHandler
+  langs:
+  - csharp
+  - vb
+  name: LineWaitForClick<T>(DialogueBase<T>, Line, Action)
+  nameWithType: DialogueChoiceHandler.LineWaitForClick<T>(DialogueBase<T>, Line, Action)
+  fullName: DREditor.Choices.DialogueChoiceHandler.LineWaitForClick<T>(DREditor.Dialogues.DialogueBase<T>, DREditor.Dialogues.Line, System.Action)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/DialogueChoiceHandler.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: 'public virtual IEnumerator LineWaitForClick<T>(DialogueBase<T> currentDialogue, Line currentLine, Action exitParentCallback = null) where T : Line'
+    parameters:
+    - id: currentDialogue
+      type: DREditor.Dialogues.DialogueBase{{T}}
+      description: ''
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    - id: exitParentCallback
+      type: System.Action
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Overridable Function LineWaitForClick(Of T As Line)(currentDialogue As DialogueBase(Of T), currentLine As Line, exitParentCallback As Action = Nothing) As IEnumerator
+  overload: DREditor.Choices.DialogueChoiceHandler.LineWaitForClick*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{{T}},DREditor.Dialogues.Line,System.Action)
+  nameWithType.vb: DialogueChoiceHandler.LineWaitForClick(Of T)(DialogueBase(Of T), Line, Action)
+  fullName.vb: DREditor.Choices.DialogueChoiceHandler.LineWaitForClick(Of T)(DREditor.Dialogues.DialogueBase(Of T), DREditor.Dialogues.Line, System.Action)
+  name.vb: LineWaitForClick(Of T)(DialogueBase(Of T), Line, Action)
+- uid: DREditor.Choices.DialogueChoiceHandler.#ctor
+  commentId: M:DREditor.Choices.DialogueChoiceHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Choices.DialogueChoiceHandler
+  langs:
+  - csharp
+  - vb
+  name: DialogueChoiceHandler()
+  nameWithType: DialogueChoiceHandler.DialogueChoiceHandler()
+  fullName: DREditor.Choices.DialogueChoiceHandler.DialogueChoiceHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/DialogueChoiceHandler.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  syntax:
+    content: public DialogueChoiceHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Choices.DialogueChoiceHandler.#ctor*
+  nameWithType.vb: DialogueChoiceHandler.New()
+  fullName.vb: DREditor.Choices.DialogueChoiceHandler.New()
+  name.vb: New()
+- uid: DREditor.Choices.DialogueChoiceHandler.SkipOnFastForward
+  commentId: P:DREditor.Choices.DialogueChoiceHandler.SkipOnFastForward
+  id: SkipOnFastForward
+  parent: DREditor.Choices.DialogueChoiceHandler
+  langs:
+  - csharp
+  - vb
+  name: SkipOnFastForward
+  nameWithType: DialogueChoiceHandler.SkipOnFastForward
+  fullName: DREditor.Choices.DialogueChoiceHandler.SkipOnFastForward
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Choices/DialogueChoiceHandler.cs
+  assemblies:
+  - DREditor.Choices
+  namespace: DREditor.Choices
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool SkipOnFastForward { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable ReadOnly Property SkipOnFastForward As Boolean
+  overload: DREditor.Choices.DialogueChoiceHandler.SkipOnFastForward*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineWaitForClick.SkipOnFastForward
+references:
+- uid: DREditor.Choices
+  commentId: N:DREditor.Choices
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Choices
+  nameWithType: DREditor.Choices
+  fullName: DREditor.Choices
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Choices
+    name: Choices
+    isExternal: true
+    href: DREditor.Choices.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Choices
+    name: Choices
+    isExternal: true
+    href: DREditor.Choices.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.Dialogues.LineReading.ILineEndProcess
+  commentId: T:DREditor.Dialogues.LineReading.ILineEndProcess
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineEndProcess.cs
+  name: ILineEndProcess
+  nameWithType: ILineEndProcess
+  fullName: DREditor.Dialogues.LineReading.ILineEndProcess
+- uid: DREditor.Dialogues.LineReading.ILineWaitForClick
+  commentId: T:DREditor.Dialogues.LineReading.ILineWaitForClick
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineWaitForClick.cs
+  name: ILineWaitForClick
+  nameWithType: ILineWaitForClick
+  fullName: DREditor.Dialogues.LineReading.ILineWaitForClick
+- uid: DREditor.Choices.DialogueChoiceHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<DialogueChoiceHandler>(DialogueChoiceHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<DialogueChoiceHandler>(DialogueChoiceHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Choices.DialogueChoiceHandler>(DREditor.Choices.DialogueChoiceHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of DialogueChoiceHandler)(DialogueChoiceHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Choices.DialogueChoiceHandler)(DREditor.Choices.DialogueChoiceHandler)
+  name.vb: GetFieldNames(Of DialogueChoiceHandler)(DialogueChoiceHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Choices.DialogueChoiceHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Choices.DialogueChoiceHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+- uid: DREditor.Choices.DialogueChoiceHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<DialogueChoiceHandler>(DialogueChoiceHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<DialogueChoiceHandler>(DialogueChoiceHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Choices.DialogueChoiceHandler>(DREditor.Choices.DialogueChoiceHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of DialogueChoiceHandler)(DialogueChoiceHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Choices.DialogueChoiceHandler)(DREditor.Choices.DialogueChoiceHandler)
+  name.vb: GetFieldValues(Of DialogueChoiceHandler)(DialogueChoiceHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Choices.DialogueChoiceHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Choices.DialogueChoiceHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+- uid: DREditor.Choices.DialogueChoiceHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<DialogueChoiceHandler>(DialogueChoiceHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<DialogueChoiceHandler>(DialogueChoiceHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Choices.DialogueChoiceHandler>(DREditor.Choices.DialogueChoiceHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of DialogueChoiceHandler)(DialogueChoiceHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Choices.DialogueChoiceHandler)(DREditor.Choices.DialogueChoiceHandler)
+  name.vb: DeepCopy(Of DialogueChoiceHandler)(DialogueChoiceHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Choices.DialogueChoiceHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Choices.DialogueChoiceHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Choices.DialogueChoiceHandler
+    name: DialogueChoiceHandler
+    isExternal: true
+    href: DREditor.Choices.DialogueChoiceHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Choices.DialogueChoiceHandler.LineEndProcess*
+  commentId: Overload:DREditor.Choices.DialogueChoiceHandler.LineEndProcess
+  isExternal: true
+  href: DREditor.Choices.DialogueChoiceHandler.html#DREditor_Choices_DialogueChoiceHandler_LineEndProcess_DREditor_Dialogues_Line_
+  name: LineEndProcess
+  nameWithType: DialogueChoiceHandler.LineEndProcess
+  fullName: DREditor.Choices.DialogueChoiceHandler.LineEndProcess
+- uid: DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineEndProcess
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineEndProcess.cs
+  name: LineEndProcess(Line)
+  nameWithType: ILineEndProcess.LineEndProcess(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+    name: LineEndProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineEndProcess.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+    name: LineEndProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineEndProcess.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: DREditor.Choices.DialogueChoiceHandler.LineWaitForClick*
+  commentId: Overload:DREditor.Choices.DialogueChoiceHandler.LineWaitForClick
+  isExternal: true
+  href: DREditor.Choices.DialogueChoiceHandler.html#DREditor_Choices_DialogueChoiceHandler_LineWaitForClick__1_DREditor_Dialogues_DialogueBase___0__DREditor_Dialogues_Line_System_Action_
+  name: LineWaitForClick
+  nameWithType: DialogueChoiceHandler.LineWaitForClick
+  fullName: DREditor.Choices.DialogueChoiceHandler.LineWaitForClick
+- uid: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{{T}},DREditor.Dialogues.Line,System.Action)
+  commentId: M:DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+  parent: DREditor.Dialogues.LineReading.ILineWaitForClick
+  definition: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineWaitForClick.cs
+  name: LineWaitForClick<T>(DialogueBase<T>, Line, Action)
+  nameWithType: ILineWaitForClick.LineWaitForClick<T>(DialogueBase<T>, Line, Action)
+  fullName: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick<T>(DREditor.Dialogues.DialogueBase<T>, DREditor.Dialogues.Line, System.Action)
+  nameWithType.vb: ILineWaitForClick.LineWaitForClick(Of T)(DialogueBase(Of T), Line, Action)
+  fullName.vb: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick(Of T)(DREditor.Dialogues.DialogueBase(Of T), DREditor.Dialogues.Line, System.Action)
+  name.vb: LineWaitForClick(Of T)(DialogueBase(Of T), Line, Action)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+    name: LineWaitForClick
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineWaitForClick.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+    name: LineWaitForClick
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineWaitForClick.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase{{T}}
+  commentId: T:DREditor.Dialogues.DialogueBase{``0}
+  parent: DREditor.Dialogues
+  definition: DREditor.Dialogues.DialogueBase`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  name: DialogueBase<T>
+  nameWithType: DialogueBase<T>
+  fullName: DREditor.Dialogues.DialogueBase<T>
+  nameWithType.vb: DialogueBase(Of T)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T)
+  name.vb: DialogueBase(Of T)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+  commentId: M:DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineWaitForClick.cs
+  name: LineWaitForClick<T>(DialogueBase<T>, Line, Action)
+  nameWithType: ILineWaitForClick.LineWaitForClick<T>(DialogueBase<T>, Line, Action)
+  fullName: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick<T>(DREditor.Dialogues.DialogueBase<T>, DREditor.Dialogues.Line, System.Action)
+  nameWithType.vb: ILineWaitForClick.LineWaitForClick(Of T)(DialogueBase(Of T), Line, Action)
+  fullName.vb: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick(Of T)(DREditor.Dialogues.DialogueBase(Of T), DREditor.Dialogues.Line, System.Action)
+  name.vb: LineWaitForClick(Of T)(DialogueBase(Of T), Line, Action)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+    name: LineWaitForClick
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineWaitForClick.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineWaitForClick.LineWaitForClick``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)
+    name: LineWaitForClick
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineWaitForClick.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: DREditor.Dialogues.DialogueBase`1
+  commentId: T:DREditor.Dialogues.DialogueBase`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  name: DialogueBase<T>
+  nameWithType: DialogueBase<T>
+  fullName: DREditor.Dialogues.DialogueBase<T>
+  nameWithType.vb: DialogueBase(Of T)
+  fullName.vb: DREditor.Dialogues.DialogueBase(Of T)
+  name.vb: DialogueBase(Of T)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueBase`1
+    name: DialogueBase
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Choices.DialogueChoiceHandler.#ctor*
+  commentId: Overload:DREditor.Choices.DialogueChoiceHandler.#ctor
+  isExternal: true
+  href: DREditor.Choices.DialogueChoiceHandler.html#DREditor_Choices_DialogueChoiceHandler__ctor
+  name: DialogueChoiceHandler
+  nameWithType: DialogueChoiceHandler.DialogueChoiceHandler
+  fullName: DREditor.Choices.DialogueChoiceHandler.DialogueChoiceHandler
+  nameWithType.vb: DialogueChoiceHandler.New
+  fullName.vb: DREditor.Choices.DialogueChoiceHandler.New
+  name.vb: New
+- uid: DREditor.Choices.DialogueChoiceHandler.SkipOnFastForward*
+  commentId: Overload:DREditor.Choices.DialogueChoiceHandler.SkipOnFastForward
+  isExternal: true
+  href: DREditor.Choices.DialogueChoiceHandler.html#DREditor_Choices_DialogueChoiceHandler_SkipOnFastForward
+  name: SkipOnFastForward
+  nameWithType: DialogueChoiceHandler.SkipOnFastForward
+  fullName: DREditor.Choices.DialogueChoiceHandler.SkipOnFastForward
+- uid: DREditor.Dialogues.LineReading.ILineWaitForClick.SkipOnFastForward
+  commentId: P:DREditor.Dialogues.LineReading.ILineWaitForClick.SkipOnFastForward
+  parent: DREditor.Dialogues.LineReading.ILineWaitForClick
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineWaitForClick.cs
+  name: SkipOnFastForward
+  nameWithType: ILineWaitForClick.SkipOnFastForward
+  fullName: DREditor.Dialogues.LineReading.ILineWaitForClick.SkipOnFastForward
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

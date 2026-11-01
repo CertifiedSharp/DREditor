@@ -1,0 +1,1003 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  commentId: T:DREditor.Actors.Implementation.ActorFocusLoadEnd
+  id: ActorFocusLoadEnd
+  parent: DREditor.Actors.Implementation
+  children:
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.#ctor
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.EvaluateActorFocus
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusCurrentActor
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusHandler
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusPanToCharacterProcess
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.InitializeActorFocus(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.LinePansToCharacter
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.NotSkippingPanning
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.currentActor
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.currentLine
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.lastActor
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.loadingToLine
+  langs:
+  - csharp
+  - vb
+  name: ActorFocusLoadEnd
+  nameWithType: ActorFocusLoadEnd
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueComponent, ILoadToLineEnd\n\n")]
+
+      public class ActorFocusLoadEnd : DialogueComponent, ILoadToLineEnd
+    content.vb: >-
+      <ClassHeader("DialogueComponent, ILoadToLineEnd" & vbLf & vbLf)>
+
+      Public Class ActorFocusLoadEnd Inherits DialogueComponent Implements ILoadToLineEnd
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  implements:
+  - DREditor.Dialogues.Loading.ILoadToLineEnd
+  extensionMethods:
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Actors.Implementation.ActorFocusLoadEnd.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueComponent, ILoadToLineEnd
+
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.loadingToLine
+  commentId: F:DREditor.Actors.Implementation.ActorFocusLoadEnd.loadingToLine
+  id: loadingToLine
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: loadingToLine
+  nameWithType: ActorFocusLoadEnd.loadingToLine
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.loadingToLine
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent loadingToLine
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected loadingToLine As BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.currentActor
+  commentId: F:DREditor.Actors.Implementation.ActorFocusLoadEnd.currentActor
+  id: currentActor
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: currentActor
+  nameWithType: ActorFocusLoadEnd.currentActor
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.currentActor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected SelectableObjectWithEvent currentActor
+    return:
+      type: DREditor.EventObjects.SelectableObjectWithEvent
+    content.vb: Protected currentActor As SelectableObjectWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.lastActor
+  commentId: F:DREditor.Actors.Implementation.ActorFocusLoadEnd.lastActor
+  id: lastActor
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: lastActor
+  nameWithType: ActorFocusLoadEnd.lastActor
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.lastActor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected SelectableObjectWithEvent lastActor
+    return:
+      type: DREditor.EventObjects.SelectableObjectWithEvent
+    content.vb: Protected lastActor As SelectableObjectWithEvent
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusHandler
+  commentId: F:DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusHandler
+  id: FocusHandler
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: FocusHandler
+  nameWithType: ActorFocusLoadEnd.FocusHandler
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusHandler
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected FocusHandler FocusHandler
+    return:
+      type: DREditor.Actors.FocusHandler
+    content.vb: Protected FocusHandler As FocusHandler
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.currentLine
+  commentId: F:DREditor.Actors.Implementation.ActorFocusLoadEnd.currentLine
+  id: currentLine
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: currentLine
+  nameWithType: ActorFocusLoadEnd.currentLine
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.currentLine
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected Line currentLine
+    return:
+      type: DREditor.Dialogues.Line
+    content.vb: Protected currentLine As Line
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorFocusLoadEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  id: OnLoadToLineEnd(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: OnLoadToLineEnd(Line)
+  nameWithType: ActorFocusLoadEnd.OnLoadToLineEnd(Line)
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnLoadToLineEnd(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub OnLoadToLineEnd(currentLine As Line)
+  overload: DREditor.Actors.Implementation.ActorFocusLoadEnd.OnLoadToLineEnd*
+  implements:
+  - DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.InitializeActorFocus(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorFocusLoadEnd.InitializeActorFocus(DREditor.Dialogues.Line)
+  id: InitializeActorFocus(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: InitializeActorFocus(Line)
+  nameWithType: ActorFocusLoadEnd.InitializeActorFocus(Line)
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.InitializeActorFocus(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void InitializeActorFocus(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Protected Overridable Sub InitializeActorFocus(currentLine As Line)
+  overload: DREditor.Actors.Implementation.ActorFocusLoadEnd.InitializeActorFocus*
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.EvaluateActorFocus
+  commentId: M:DREditor.Actors.Implementation.ActorFocusLoadEnd.EvaluateActorFocus
+  id: EvaluateActorFocus
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: EvaluateActorFocus()
+  nameWithType: ActorFocusLoadEnd.EvaluateActorFocus()
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.EvaluateActorFocus()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void EvaluateActorFocus()
+    content.vb: Protected Overridable Sub EvaluateActorFocus()
+  overload: DREditor.Actors.Implementation.ActorFocusLoadEnd.EvaluateActorFocus*
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.LinePansToCharacter
+  commentId: M:DREditor.Actors.Implementation.ActorFocusLoadEnd.LinePansToCharacter
+  id: LinePansToCharacter
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: LinePansToCharacter()
+  nameWithType: ActorFocusLoadEnd.LinePansToCharacter()
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.LinePansToCharacter()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool LinePansToCharacter()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function LinePansToCharacter() As Boolean
+  overload: DREditor.Actors.Implementation.ActorFocusLoadEnd.LinePansToCharacter*
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusPanToCharacterProcess
+  commentId: M:DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusPanToCharacterProcess
+  id: FocusPanToCharacterProcess
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: FocusPanToCharacterProcess()
+  nameWithType: ActorFocusLoadEnd.FocusPanToCharacterProcess()
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusPanToCharacterProcess()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void FocusPanToCharacterProcess()
+    content.vb: Protected Overridable Sub FocusPanToCharacterProcess()
+  overload: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusPanToCharacterProcess*
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.NotSkippingPanning
+  commentId: M:DREditor.Actors.Implementation.ActorFocusLoadEnd.NotSkippingPanning
+  id: NotSkippingPanning
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: NotSkippingPanning()
+  nameWithType: ActorFocusLoadEnd.NotSkippingPanning()
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.NotSkippingPanning()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool NotSkippingPanning()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function NotSkippingPanning() As Boolean
+  overload: DREditor.Actors.Implementation.ActorFocusLoadEnd.NotSkippingPanning*
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusCurrentActor
+  commentId: M:DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusCurrentActor
+  id: FocusCurrentActor
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: FocusCurrentActor()
+  nameWithType: ActorFocusLoadEnd.FocusCurrentActor()
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusCurrentActor()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void FocusCurrentActor()
+    content.vb: Protected Overridable Sub FocusCurrentActor()
+  overload: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusCurrentActor*
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.#ctor
+  commentId: M:DREditor.Actors.Implementation.ActorFocusLoadEnd.#ctor
+  id: '#ctor'
+  parent: DREditor.Actors.Implementation.ActorFocusLoadEnd
+  langs:
+  - csharp
+  - vb
+  name: ActorFocusLoadEnd()
+  nameWithType: ActorFocusLoadEnd.ActorFocusLoadEnd()
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.ActorFocusLoadEnd()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorFocusLoadEnd.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  syntax:
+    content: public ActorFocusLoadEnd()
+    content.vb: Public Sub New()
+  overload: DREditor.Actors.Implementation.ActorFocusLoadEnd.#ctor*
+  nameWithType.vb: ActorFocusLoadEnd.New()
+  fullName.vb: DREditor.Actors.Implementation.ActorFocusLoadEnd.New()
+  name.vb: New()
+references:
+- uid: DREditor.Actors.Implementation
+  commentId: N:DREditor.Actors.Implementation
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors.Implementation
+  nameWithType: DREditor.Actors.Implementation
+  fullName: DREditor.Actors.Implementation
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  - name: .
+  - uid: DREditor.Actors.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.Actors.Implementation.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  - name: .
+  - uid: DREditor.Actors.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.Actors.Implementation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.Dialogues.Loading.ILoadToLineEnd
+  commentId: T:DREditor.Dialogues.Loading.ILoadToLineEnd
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEnd.cs
+  name: ILoadToLineEnd
+  nameWithType: ILoadToLineEnd
+  fullName: DREditor.Dialogues.Loading.ILoadToLineEnd
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ActorFocusLoadEnd>(ActorFocusLoadEnd)
+  nameWithType: ReflectionHelper.GetFieldNames<ActorFocusLoadEnd>(ActorFocusLoadEnd)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Actors.Implementation.ActorFocusLoadEnd>(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ActorFocusLoadEnd)(ActorFocusLoadEnd)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Actors.Implementation.ActorFocusLoadEnd)(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+  name.vb: GetFieldNames(Of ActorFocusLoadEnd)(ActorFocusLoadEnd)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ActorFocusLoadEnd>(ActorFocusLoadEnd)
+  nameWithType: ReflectionHelper.GetFieldValues<ActorFocusLoadEnd>(ActorFocusLoadEnd)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Actors.Implementation.ActorFocusLoadEnd>(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ActorFocusLoadEnd)(ActorFocusLoadEnd)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Actors.Implementation.ActorFocusLoadEnd)(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+  name.vb: GetFieldValues(Of ActorFocusLoadEnd)(ActorFocusLoadEnd)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ActorFocusLoadEnd>(ActorFocusLoadEnd)
+  nameWithType: DeepCopyExtensions.DeepCopy<ActorFocusLoadEnd>(ActorFocusLoadEnd)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Actors.Implementation.ActorFocusLoadEnd>(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ActorFocusLoadEnd)(ActorFocusLoadEnd)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Actors.Implementation.ActorFocusLoadEnd)(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+  name.vb: DeepCopy(Of ActorFocusLoadEnd)(ActorFocusLoadEnd)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.Implementation.ActorFocusLoadEnd)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorFocusLoadEnd
+    name: ActorFocusLoadEnd
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.Loading
+  commentId: N:DREditor.Dialogues.Loading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Loading
+  nameWithType: DREditor.Dialogues.Loading
+  fullName: DREditor.Dialogues.Loading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.SelectableObjectWithEvent
+  commentId: T:DREditor.EventObjects.SelectableObjectWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObjectWithEvent.cs
+  name: SelectableObjectWithEvent
+  nameWithType: SelectableObjectWithEvent
+  fullName: DREditor.EventObjects.SelectableObjectWithEvent
+- uid: DREditor.Actors.FocusHandler
+  commentId: T:DREditor.Actors.FocusHandler
+  parent: DREditor.Actors
+  isExternal: true
+  href: DREditor.Actors.FocusHandler.html
+  name: FocusHandler
+  nameWithType: FocusHandler
+  fullName: DREditor.Actors.FocusHandler
+- uid: DREditor.Actors
+  commentId: N:DREditor.Actors
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors
+  nameWithType: DREditor.Actors
+  fullName: DREditor.Actors
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.OnLoadToLineEnd*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusLoadEnd.OnLoadToLineEnd
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html#DREditor_Actors_Implementation_ActorFocusLoadEnd_OnLoadToLineEnd_DREditor_Dialogues_Line_
+  name: OnLoadToLineEnd
+  nameWithType: ActorFocusLoadEnd.OnLoadToLineEnd
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.OnLoadToLineEnd
+- uid: DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.ILoadToLineEnd
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEnd.cs
+  name: OnLoadToLineEnd(Line)
+  nameWithType: ILoadToLineEnd.OnLoadToLineEnd(Line)
+  fullName: DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+    name: OnLoadToLineEnd
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEnd.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineEnd.OnLoadToLineEnd(DREditor.Dialogues.Line)
+    name: OnLoadToLineEnd
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEnd.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.InitializeActorFocus*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusLoadEnd.InitializeActorFocus
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html#DREditor_Actors_Implementation_ActorFocusLoadEnd_InitializeActorFocus_DREditor_Dialogues_Line_
+  name: InitializeActorFocus
+  nameWithType: ActorFocusLoadEnd.InitializeActorFocus
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.InitializeActorFocus
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.EvaluateActorFocus*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusLoadEnd.EvaluateActorFocus
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html#DREditor_Actors_Implementation_ActorFocusLoadEnd_EvaluateActorFocus
+  name: EvaluateActorFocus
+  nameWithType: ActorFocusLoadEnd.EvaluateActorFocus
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.EvaluateActorFocus
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.LinePansToCharacter*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusLoadEnd.LinePansToCharacter
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html#DREditor_Actors_Implementation_ActorFocusLoadEnd_LinePansToCharacter
+  name: LinePansToCharacter
+  nameWithType: ActorFocusLoadEnd.LinePansToCharacter
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.LinePansToCharacter
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusPanToCharacterProcess*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusPanToCharacterProcess
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html#DREditor_Actors_Implementation_ActorFocusLoadEnd_FocusPanToCharacterProcess
+  name: FocusPanToCharacterProcess
+  nameWithType: ActorFocusLoadEnd.FocusPanToCharacterProcess
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusPanToCharacterProcess
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.NotSkippingPanning*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusLoadEnd.NotSkippingPanning
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html#DREditor_Actors_Implementation_ActorFocusLoadEnd_NotSkippingPanning
+  name: NotSkippingPanning
+  nameWithType: ActorFocusLoadEnd.NotSkippingPanning
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.NotSkippingPanning
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusCurrentActor*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusCurrentActor
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html#DREditor_Actors_Implementation_ActorFocusLoadEnd_FocusCurrentActor
+  name: FocusCurrentActor
+  nameWithType: ActorFocusLoadEnd.FocusCurrentActor
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.FocusCurrentActor
+- uid: DREditor.Actors.Implementation.ActorFocusLoadEnd.#ctor*
+  commentId: Overload:DREditor.Actors.Implementation.ActorFocusLoadEnd.#ctor
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorFocusLoadEnd.html#DREditor_Actors_Implementation_ActorFocusLoadEnd__ctor
+  name: ActorFocusLoadEnd
+  nameWithType: ActorFocusLoadEnd.ActorFocusLoadEnd
+  fullName: DREditor.Actors.Implementation.ActorFocusLoadEnd.ActorFocusLoadEnd
+  nameWithType.vb: ActorFocusLoadEnd.New
+  fullName.vb: DREditor.Actors.Implementation.ActorFocusLoadEnd.New
+  name.vb: New

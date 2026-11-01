@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ScrollGridUI | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ScrollGridUI | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.UI.ScrollGridUI">
+
+
+
+  <h1 id="DREditor_UI_ScrollGridUI" data-uid="DREditor.UI.ScrollGridUI" class="text-break">
+Class ScrollGridUI  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ScrollGridUI : MenuGroupBase, IUIVisibility, IToTitleScreen</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.UI.MenuGroupBase.html">MenuGroupBase</a></div>
+      <div><span class="xref">ScrollGridUI</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.UIHandling.IUIVisibility.html">IUIVisibility</a></div>
+      <div><a class="xref" href="DREditor.Services.IToTitleScreen.html">IToTitleScreen</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Backlogging.BacklogUI.html">BacklogUI</a></div>
+      <div><a class="xref" href="DREditor.Presents.UI.PresentUI.html">PresentUI</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_debugShow">MenuGroupBase.debugShow</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_isActive">MenuGroupBase.isActive</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_BeforeStart">MenuGroupBase.BeforeStart</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_StartEvents">MenuGroupBase.StartEvents</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_EndEvents">MenuGroupBase.EndEvents</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_backGroup">MenuGroupBase.backGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_hasBackInput">MenuGroupBase.hasBackInput</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_OnBack">MenuGroupBase.OnBack</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_Awake">MenuGroupBase.Awake()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_OnEnable">MenuGroupBase.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_OnDisable">MenuGroupBase.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_OnDestroy">MenuGroupBase.OnDestroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_ResetGroup">MenuGroupBase.ResetGroup()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_SetEvaluateSelect">MenuGroupBase.SetEvaluateSelect()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_Show">MenuGroupBase.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_Hide">MenuGroupBase.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_WaitForChangeToComplete">MenuGroupBase.WaitForChangeToComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_SetActive_System_Boolean_">MenuGroupBase.SetActive(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_BackGroup_UnityEngine_InputSystem_InputAction_CallbackContext_">MenuGroupBase.BackGroup(InputAction.CallbackContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_AddBackInput">MenuGroupBase.AddBackInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_RemoveBackInput">MenuGroupBase.RemoveBackInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_SetBackInput_System_Boolean_">MenuGroupBase.SetBackInput(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_ToTitleScreen">MenuGroupBase.ToTitleScreen()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_DebugShow">MenuGroupBase.DebugShow()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_Changing">MenuGroupBase.Changing</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_UI_ScrollGridUI__ctor_" data-uid="DREditor.UI.ScrollGridUI.#ctor*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI__ctor" data-uid="DREditor.UI.ScrollGridUI.#ctor">
+  ScrollGridUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ScrollGridUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_OnHover" data-uid="DREditor.UI.ScrollGridUI.OnHover">
+  OnHover
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent OnHover</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UnityEvent</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_globalIndex" data-uid="DREditor.UI.ScrollGridUI.globalIndex">
+  globalIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int globalIndex</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_gridSlots" data-uid="DREditor.UI.ScrollGridUI.gridSlots">
+  gridSlots
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IGridIconSlot[] gridSlots</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.UI.IGridIconSlot.html">IGridIconSlot</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_m_gridX" data-uid="DREditor.UI.ScrollGridUI.m_gridX">
+  m_gridX
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int m_gridX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_m_lastMoveInput" data-uid="DREditor.UI.ScrollGridUI.m_lastMoveInput">
+  m_lastMoveInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector2 m_lastMoveInput</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_m_max" data-uid="DREditor.UI.ScrollGridUI.m_max">
+  m_max
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int m_max</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_m_min" data-uid="DREditor.UI.ScrollGridUI.m_min">
+  m_min
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int m_min</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_navigate" data-uid="DREditor.UI.ScrollGridUI.navigate">
+  navigate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InputActionReference navigate</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_reverseOrder" data-uid="DREditor.UI.ScrollGridUI.reverseOrder">
+  reverseOrder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected bool reverseOrder</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_scrollBar" data-uid="DREditor.UI.ScrollGridUI.scrollBar">
+  scrollBar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected Transform scrollBar</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_scrollBarBoundsBottom" data-uid="DREditor.UI.ScrollGridUI.scrollBarBoundsBottom">
+  scrollBarBoundsBottom
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector2 scrollBarBoundsBottom</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_scrollBarBoundsTop" data-uid="DREditor.UI.ScrollGridUI.scrollBarBoundsTop">
+  scrollBarBoundsTop
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector2 scrollBarBoundsTop</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_selectedSlotIndex" data-uid="DREditor.UI.ScrollGridUI.selectedSlotIndex">
+  selectedSlotIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int selectedSlotIndex</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_singleTapInput" data-uid="DREditor.UI.ScrollGridUI.singleTapInput">
+  singleTapInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool singleTapInput</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_slots" data-uid="DREditor.UI.ScrollGridUI.slots">
+  slots
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Transform[] slots</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_ScrollGridUI_totalObjectCount" data-uid="DREditor.UI.ScrollGridUI.totalObjectCount">
+  totalObjectCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int totalObjectCount</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_UI_ScrollGridUI_ChangeGroup_" data-uid="DREditor.UI.ScrollGridUI.ChangeGroup*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_ChangeGroup_DREditor_UI_MenuGroupBase_" data-uid="DREditor.UI.ScrollGridUI.ChangeGroup(DREditor.UI.MenuGroupBase)">
+  ChangeGroup(MenuGroupBase)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ChangeGroup(MenuGroupBase group)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>group</code> <a class="xref" href="DREditor.UI.MenuGroupBase.html">MenuGroupBase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_ClearSlotState_" data-uid="DREditor.UI.ScrollGridUI.ClearSlotState*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_ClearSlotState" data-uid="DREditor.UI.ScrollGridUI.ClearSlotState">
+  ClearSlotState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ClearSlotState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_GetContinuousIndex_" data-uid="DREditor.UI.ScrollGridUI.GetContinuousIndex*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_GetContinuousIndex_UnityEngine_Vector2_" data-uid="DREditor.UI.ScrollGridUI.GetContinuousIndex(UnityEngine.Vector2)">
+  GetContinuousIndex(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetContinuousIndex(Vector2 moveInput)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>moveInput</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_GetHorizontalIndex_" data-uid="DREditor.UI.ScrollGridUI.GetHorizontalIndex*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_GetHorizontalIndex_System_Int32_" data-uid="DREditor.UI.ScrollGridUI.GetHorizontalIndex(System.Int32)">
+  GetHorizontalIndex(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetHorizontalIndex(int horizontalInput)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>horizontalInput</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_GetSingleTapIndex_" data-uid="DREditor.UI.ScrollGridUI.GetSingleTapIndex*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_GetSingleTapIndex_UnityEngine_Vector2_" data-uid="DREditor.UI.ScrollGridUI.GetSingleTapIndex(UnityEngine.Vector2)">
+  GetSingleTapIndex(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetSingleTapIndex(Vector2 moveInput)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>moveInput</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_GetSlotIndex_" data-uid="DREditor.UI.ScrollGridUI.GetSlotIndex*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_GetSlotIndex" data-uid="DREditor.UI.ScrollGridUI.GetSlotIndex">
+  GetSlotIndex()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetSlotIndex()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_GetVerticalIndex_" data-uid="DREditor.UI.ScrollGridUI.GetVerticalIndex*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_GetVerticalIndex_System_Int32_" data-uid="DREditor.UI.ScrollGridUI.GetVerticalIndex(System.Int32)">
+  GetVerticalIndex(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int GetVerticalIndex(int verticalInput)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>verticalInput</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_InitializeGridValues_" data-uid="DREditor.UI.ScrollGridUI.InitializeGridValues*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_InitializeGridValues" data-uid="DREditor.UI.ScrollGridUI.InitializeGridValues">
+  InitializeGridValues()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeGridValues()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_InitializeScrollBar_" data-uid="DREditor.UI.ScrollGridUI.InitializeScrollBar*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_InitializeScrollBar" data-uid="DREditor.UI.ScrollGridUI.InitializeScrollBar">
+  InitializeScrollBar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeScrollBar()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_InitializeScrollGrid_" data-uid="DREditor.UI.ScrollGridUI.InitializeScrollGrid*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_InitializeScrollGrid" data-uid="DREditor.UI.ScrollGridUI.InitializeScrollGrid">
+  InitializeScrollGrid()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeScrollGrid()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_InitializeTotalObjectCount_" data-uid="DREditor.UI.ScrollGridUI.InitializeTotalObjectCount*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_InitializeTotalObjectCount" data-uid="DREditor.UI.ScrollGridUI.InitializeTotalObjectCount">
+  InitializeTotalObjectCount()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract int InitializeTotalObjectCount()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_OnSlotHovered_" data-uid="DREditor.UI.ScrollGridUI.OnSlotHovered*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_OnSlotHovered" data-uid="DREditor.UI.ScrollGridUI.OnSlotHovered">
+  OnSlotHovered()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnSlotHovered()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_OnUINavigated_" data-uid="DREditor.UI.ScrollGridUI.OnUINavigated*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_OnUINavigated_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="DREditor.UI.ScrollGridUI.OnUINavigated(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnUINavigated(CallbackContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnUINavigated(InputAction.CallbackContext ctx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctx</code> <span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_RegenerateUI_" data-uid="DREditor.UI.ScrollGridUI.RegenerateUI*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_RegenerateUI" data-uid="DREditor.UI.ScrollGridUI.RegenerateUI">
+  RegenerateUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RegenerateUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_Start_" data-uid="DREditor.UI.ScrollGridUI.Start*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_Start" data-uid="DREditor.UI.ScrollGridUI.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_SubscribeControls_" data-uid="DREditor.UI.ScrollGridUI.SubscribeControls*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_SubscribeControls" data-uid="DREditor.UI.ScrollGridUI.SubscribeControls">
+  SubscribeControls()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SubscribeControls()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_UnsubscribeControls_" data-uid="DREditor.UI.ScrollGridUI.UnsubscribeControls*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_UnsubscribeControls" data-uid="DREditor.UI.ScrollGridUI.UnsubscribeControls">
+  UnsubscribeControls()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UnsubscribeControls()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_UpdateGridValues_" data-uid="DREditor.UI.ScrollGridUI.UpdateGridValues*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_UpdateGridValues_System_Int32_" data-uid="DREditor.UI.ScrollGridUI.UpdateGridValues(System.Int32)">
+  UpdateGridValues(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateGridValues(int newIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_UpdateScrollBarPosition_" data-uid="DREditor.UI.ScrollGridUI.UpdateScrollBarPosition*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_UpdateScrollBarPosition" data-uid="DREditor.UI.ScrollGridUI.UpdateScrollBarPosition">
+  UpdateScrollBarPosition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateScrollBarPosition()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_ScrollGridUI_UpdateSlotState_" data-uid="DREditor.UI.ScrollGridUI.UpdateSlotState*"></a>
+
+  <h3 id="DREditor_UI_ScrollGridUI_UpdateSlotState_System_Boolean_" data-uid="DREditor.UI.ScrollGridUI.UpdateSlotState(System.Boolean)">
+  UpdateSlotState(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateSlotState(bool selected)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selected</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/ScrollGridUI.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

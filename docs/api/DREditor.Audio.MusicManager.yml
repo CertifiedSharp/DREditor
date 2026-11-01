@@ -1,0 +1,2093 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Audio.MusicManager
+  commentId: T:DREditor.Audio.MusicManager
+  id: MusicManager
+  parent: DREditor.Audio
+  children:
+  - DREditor.Audio.MusicManager.#ctor
+  - DREditor.Audio.MusicManager.FadeMusic(System.Single)
+  - DREditor.Audio.MusicManager.FadeOut``1(``0,System.Single)
+  - DREditor.Audio.MusicManager.GetLastPlayedMusic
+  - DREditor.Audio.MusicManager.InitializeService
+  - DREditor.Audio.MusicManager.LastPlayedMusic
+  - DREditor.Audio.MusicManager.MusicIsPlaying
+  - DREditor.Audio.MusicManager.OnLoadedMusicMissing
+  - DREditor.Audio.MusicManager.OnPlayedInvalidMusic
+  - DREditor.Audio.MusicManager.PlayLastMusic
+  - DREditor.Audio.MusicManager.PlayMusic``1(``0,System.Boolean)
+  - DREditor.Audio.MusicManager.PlaySource(UnityEngine.AudioSource,UnityEngine.AudioClip)
+  - DREditor.Audio.MusicManager.PlayValidMusic(UnityEngine.AudioClip,System.Boolean)
+  - DREditor.Audio.MusicManager.ResetLastPlayedMusic
+  - DREditor.Audio.MusicManager.SetCurrentlyPlayingMusicText(UnityEngine.AudioClip)
+  - DREditor.Audio.MusicManager.Start
+  - DREditor.Audio.MusicManager.StopMusic
+  - DREditor.Audio.MusicManager.StopPlayingMusic
+  - DREditor.Audio.MusicManager.StopSound
+  - DREditor.Audio.MusicManager.ToTitleScreen
+  - DREditor.Audio.MusicManager.fading
+  - DREditor.Audio.MusicManager.jukeBox
+  - DREditor.Audio.MusicManager.musicSource
+  - DREditor.Audio.MusicManager.playOnStart
+  - DREditor.Audio.MusicManager.startMusic
+  langs:
+  - csharp
+  - vb
+  name: MusicManager
+  nameWithType: MusicManager
+  fullName: DREditor.Audio.MusicManager
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("MusicManagerBase, IToTitleScreen\n\n")]
+
+      public class MusicManager : MusicManagerBase, IToTitleScreen
+    content.vb: >-
+      <ClassHeader("MusicManagerBase, IToTitleScreen" & vbLf & vbLf)>
+
+      Public Class MusicManager Inherits MusicManagerBase Implements IToTitleScreen
+  inheritance:
+  - System.Object
+  - DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  - DREditor.Audio.SoundService{DREditor.Audio.MusicManagerBase}
+  - DREditor.Audio.MusicManagerBase
+  implements:
+  - DREditor.Services.IToTitleScreen
+  inheritedMembers:
+  - DREditor.Audio.MusicManagerBase.SetMusicText
+  - DREditor.Audio.MusicManagerBase.ClearMusicText
+  - DREditor.Audio.MusicManagerBase.ResetMusicText
+  - DREditor.Audio.MusicManagerBase.InvokeMusicChange(UnityEngine.AudioSource)
+  - DREditor.Audio.MusicManagerBase.OnMusicChange
+  - DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.registerService
+  - DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.dontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.Awake
+  - DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.AttemptDontDestroyOnLoad
+  - DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.OnDestroy
+  extensionMethods:
+  - DREditor.Audio.MusicManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Audio.MusicManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Audio.MusicManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        MusicManagerBase, IToTitleScreen
+
+- uid: DREditor.Audio.MusicManager.LastPlayedMusic
+  commentId: F:DREditor.Audio.MusicManager.LastPlayedMusic
+  id: LastPlayedMusic
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: LastPlayedMusic
+  nameWithType: MusicManager.LastPlayedMusic
+  fullName: DREditor.Audio.MusicManager.LastPlayedMusic
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected AudioClip LastPlayedMusic
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Protected LastPlayedMusic As AudioClip
+- uid: DREditor.Audio.MusicManager.jukeBox
+  commentId: F:DREditor.Audio.MusicManager.jukeBox
+  id: jukeBox
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: jukeBox
+  nameWithType: MusicManager.jukeBox
+  fullName: DREditor.Audio.MusicManager.jukeBox
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected Playlist jukeBox
+    return:
+      type: DREditor.Audio.Playlist
+    content.vb: >-
+      <Divider>
+
+      Protected jukeBox As Playlist
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Audio.MusicManager.musicSource
+  commentId: F:DREditor.Audio.MusicManager.musicSource
+  id: musicSource
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: musicSource
+  nameWithType: MusicManager.musicSource
+  fullName: DREditor.Audio.MusicManager.musicSource
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected AudioSource musicSource
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: >-
+      <Divider>
+
+      Protected musicSource As AudioSource
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Audio.MusicManager.playOnStart
+  commentId: F:DREditor.Audio.MusicManager.playOnStart
+  id: playOnStart
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: playOnStart
+  nameWithType: MusicManager.playOnStart
+  fullName: DREditor.Audio.MusicManager.playOnStart
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected bool playOnStart
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Divider>
+
+      Protected playOnStart As Boolean
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Audio.MusicManager.startMusic
+  commentId: F:DREditor.Audio.MusicManager.startMusic
+  id: startMusic
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: startMusic
+  nameWithType: MusicManager.startMusic
+  fullName: DREditor.Audio.MusicManager.startMusic
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected AudioClip startMusic
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Protected startMusic As AudioClip
+- uid: DREditor.Audio.MusicManager.fading
+  commentId: F:DREditor.Audio.MusicManager.fading
+  id: fading
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: fading
+  nameWithType: MusicManager.fading
+  fullName: DREditor.Audio.MusicManager.fading
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool fading
+    return:
+      type: System.Boolean
+    content.vb: Protected fading As Boolean
+- uid: DREditor.Audio.MusicManager.InitializeService
+  commentId: M:DREditor.Audio.MusicManager.InitializeService
+  id: InitializeService
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: InitializeService()
+  nameWithType: MusicManager.InitializeService()
+  fullName: DREditor.Audio.MusicManager.InitializeService()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void InitializeService()
+    content.vb: Protected Overrides Sub InitializeService()
+  overridden: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.InitializeService
+  overload: DREditor.Audio.MusicManager.InitializeService*
+- uid: DREditor.Audio.MusicManager.Start
+  commentId: M:DREditor.Audio.MusicManager.Start
+  id: Start
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: MusicManager.Start()
+  fullName: DREditor.Audio.MusicManager.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.Audio.MusicManager.Start*
+- uid: DREditor.Audio.MusicManager.PlayMusic``1(``0,System.Boolean)
+  commentId: M:DREditor.Audio.MusicManager.PlayMusic``1(``0,System.Boolean)
+  id: PlayMusic``1(``0,System.Boolean)
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: PlayMusic<T>(T, bool)
+  nameWithType: MusicManager.PlayMusic<T>(T, bool)
+  fullName: DREditor.Audio.MusicManager.PlayMusic<T>(T, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public override void PlayMusic<T>(T name, bool skip = false)
+    parameters:
+    - id: name
+      type: '{T}'
+    - id: skip
+      type: System.Boolean
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Public Overrides Sub PlayMusic(Of T)(name As T, skip As Boolean = False)
+  overridden: DREditor.Audio.MusicManagerBase.PlayMusic``1({T},System.Boolean)
+  overload: DREditor.Audio.MusicManager.PlayMusic*
+  nameWithType.vb: MusicManager.PlayMusic(Of T)(T, Boolean)
+  fullName.vb: DREditor.Audio.MusicManager.PlayMusic(Of T)(T, Boolean)
+  name.vb: PlayMusic(Of T)(T, Boolean)
+- uid: DREditor.Audio.MusicManager.MusicIsPlaying
+  commentId: M:DREditor.Audio.MusicManager.MusicIsPlaying
+  id: MusicIsPlaying
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: MusicIsPlaying()
+  nameWithType: MusicManager.MusicIsPlaying()
+  fullName: DREditor.Audio.MusicManager.MusicIsPlaying()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public override bool MusicIsPlaying()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function MusicIsPlaying() As Boolean
+  overridden: DREditor.Audio.MusicManagerBase.MusicIsPlaying
+  overload: DREditor.Audio.MusicManager.MusicIsPlaying*
+- uid: DREditor.Audio.MusicManager.StopPlayingMusic
+  commentId: M:DREditor.Audio.MusicManager.StopPlayingMusic
+  id: StopPlayingMusic
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: StopPlayingMusic()
+  nameWithType: MusicManager.StopPlayingMusic()
+  fullName: DREditor.Audio.MusicManager.StopPlayingMusic()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public override void StopPlayingMusic()
+    content.vb: Public Overrides Sub StopPlayingMusic()
+  overridden: DREditor.Audio.MusicManagerBase.StopPlayingMusic
+  overload: DREditor.Audio.MusicManager.StopPlayingMusic*
+- uid: DREditor.Audio.MusicManager.OnPlayedInvalidMusic
+  commentId: M:DREditor.Audio.MusicManager.OnPlayedInvalidMusic
+  id: OnPlayedInvalidMusic
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: OnPlayedInvalidMusic()
+  nameWithType: MusicManager.OnPlayedInvalidMusic()
+  fullName: DREditor.Audio.MusicManager.OnPlayedInvalidMusic()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnPlayedInvalidMusic()
+    content.vb: Protected Overridable Sub OnPlayedInvalidMusic()
+  overload: DREditor.Audio.MusicManager.OnPlayedInvalidMusic*
+- uid: DREditor.Audio.MusicManager.PlayValidMusic(UnityEngine.AudioClip,System.Boolean)
+  commentId: M:DREditor.Audio.MusicManager.PlayValidMusic(UnityEngine.AudioClip,System.Boolean)
+  id: PlayValidMusic(UnityEngine.AudioClip,System.Boolean)
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: PlayValidMusic(AudioClip, bool)
+  nameWithType: MusicManager.PlayValidMusic(AudioClip, bool)
+  fullName: DREditor.Audio.MusicManager.PlayValidMusic(UnityEngine.AudioClip, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void PlayValidMusic(AudioClip clip, bool skip = false)
+    parameters:
+    - id: clip
+      type: UnityEngine.AudioClip
+      description: ''
+    - id: skip
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Sub PlayValidMusic(clip As AudioClip, skip As Boolean = False)
+  overload: DREditor.Audio.MusicManager.PlayValidMusic*
+  nameWithType.vb: MusicManager.PlayValidMusic(AudioClip, Boolean)
+  fullName.vb: DREditor.Audio.MusicManager.PlayValidMusic(UnityEngine.AudioClip, Boolean)
+  name.vb: PlayValidMusic(AudioClip, Boolean)
+- uid: DREditor.Audio.MusicManager.SetCurrentlyPlayingMusicText(UnityEngine.AudioClip)
+  commentId: M:DREditor.Audio.MusicManager.SetCurrentlyPlayingMusicText(UnityEngine.AudioClip)
+  id: SetCurrentlyPlayingMusicText(UnityEngine.AudioClip)
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: SetCurrentlyPlayingMusicText(AudioClip)
+  nameWithType: MusicManager.SetCurrentlyPlayingMusicText(AudioClip)
+  fullName: DREditor.Audio.MusicManager.SetCurrentlyPlayingMusicText(UnityEngine.AudioClip)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void SetCurrentlyPlayingMusicText(AudioClip clip)
+    parameters:
+    - id: clip
+      type: UnityEngine.AudioClip
+      description: ''
+    content.vb: Protected Overridable Sub SetCurrentlyPlayingMusicText(clip As AudioClip)
+  overload: DREditor.Audio.MusicManager.SetCurrentlyPlayingMusicText*
+- uid: DREditor.Audio.MusicManager.StopMusic
+  commentId: M:DREditor.Audio.MusicManager.StopMusic
+  id: StopMusic
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: StopMusic()
+  nameWithType: MusicManager.StopMusic()
+  fullName: DREditor.Audio.MusicManager.StopMusic()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public override void StopMusic()
+    content.vb: Public Overrides Sub StopMusic()
+  overridden: DREditor.Audio.MusicManagerBase.StopMusic
+  overload: DREditor.Audio.MusicManager.StopMusic*
+- uid: DREditor.Audio.MusicManager.StopSound
+  commentId: M:DREditor.Audio.MusicManager.StopSound
+  id: StopSound
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: StopSound()
+  nameWithType: MusicManager.StopSound()
+  fullName: DREditor.Audio.MusicManager.StopSound()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public override void StopSound()
+    content.vb: Public Overrides Sub StopSound()
+  overridden: DREditor.Audio.MusicManagerBase.StopSound
+  overload: DREditor.Audio.MusicManager.StopSound*
+- uid: DREditor.Audio.MusicManager.PlayLastMusic
+  commentId: M:DREditor.Audio.MusicManager.PlayLastMusic
+  id: PlayLastMusic
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: PlayLastMusic()
+  nameWithType: MusicManager.PlayLastMusic()
+  fullName: DREditor.Audio.MusicManager.PlayLastMusic()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public override void PlayLastMusic()
+    content.vb: Public Overrides Sub PlayLastMusic()
+  overridden: DREditor.Audio.MusicManagerBase.PlayLastMusic
+  overload: DREditor.Audio.MusicManager.PlayLastMusic*
+- uid: DREditor.Audio.MusicManager.ResetLastPlayedMusic
+  commentId: M:DREditor.Audio.MusicManager.ResetLastPlayedMusic
+  id: ResetLastPlayedMusic
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: ResetLastPlayedMusic()
+  nameWithType: MusicManager.ResetLastPlayedMusic()
+  fullName: DREditor.Audio.MusicManager.ResetLastPlayedMusic()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void ResetLastPlayedMusic()
+    content.vb: Protected Overrides Sub ResetLastPlayedMusic()
+  overridden: DREditor.Audio.MusicManagerBase.ResetLastPlayedMusic
+  overload: DREditor.Audio.MusicManager.ResetLastPlayedMusic*
+- uid: DREditor.Audio.MusicManager.FadeMusic(System.Single)
+  commentId: M:DREditor.Audio.MusicManager.FadeMusic(System.Single)
+  id: FadeMusic(System.Single)
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: FadeMusic(float)
+  nameWithType: MusicManager.FadeMusic(float)
+  fullName: DREditor.Audio.MusicManager.FadeMusic(float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public override void FadeMusic(float FadeTime)
+    parameters:
+    - id: FadeTime
+      type: System.Single
+    content.vb: Public Overrides Sub FadeMusic(FadeTime As Single)
+  overridden: DREditor.Audio.MusicManagerBase.FadeMusic(System.Single)
+  overload: DREditor.Audio.MusicManager.FadeMusic*
+  nameWithType.vb: MusicManager.FadeMusic(Single)
+  fullName.vb: DREditor.Audio.MusicManager.FadeMusic(Single)
+  name.vb: FadeMusic(Single)
+- uid: DREditor.Audio.MusicManager.FadeOut``1(``0,System.Single)
+  commentId: M:DREditor.Audio.MusicManager.FadeOut``1(``0,System.Single)
+  id: FadeOut``1(``0,System.Single)
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: FadeOut<T>(T, float)
+  nameWithType: MusicManager.FadeOut<T>(T, float)
+  fullName: DREditor.Audio.MusicManager.FadeOut<T>(T, float)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator FadeOut<T>(T source, float duration)
+    parameters:
+    - id: source
+      type: '{T}'
+      description: ''
+    - id: duration
+      type: System.Single
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Protected Overridable Function FadeOut(Of T)(source As T, duration As Single) As IEnumerator
+  overload: DREditor.Audio.MusicManager.FadeOut*
+  nameWithType.vb: MusicManager.FadeOut(Of T)(T, Single)
+  fullName.vb: DREditor.Audio.MusicManager.FadeOut(Of T)(T, Single)
+  name.vb: FadeOut(Of T)(T, Single)
+- uid: DREditor.Audio.MusicManager.GetLastPlayedMusic
+  commentId: M:DREditor.Audio.MusicManager.GetLastPlayedMusic
+  id: GetLastPlayedMusic
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: GetLastPlayedMusic()
+  nameWithType: MusicManager.GetLastPlayedMusic()
+  fullName: DREditor.Audio.MusicManager.GetLastPlayedMusic()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public override string GetLastPlayedMusic()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function GetLastPlayedMusic() As String
+  overridden: DREditor.Audio.MusicManagerBase.GetLastPlayedMusic
+  overload: DREditor.Audio.MusicManager.GetLastPlayedMusic*
+- uid: DREditor.Audio.MusicManager.OnLoadedMusicMissing
+  commentId: M:DREditor.Audio.MusicManager.OnLoadedMusicMissing
+  id: OnLoadedMusicMissing
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: OnLoadedMusicMissing()
+  nameWithType: MusicManager.OnLoadedMusicMissing()
+  fullName: DREditor.Audio.MusicManager.OnLoadedMusicMissing()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnLoadedMusicMissing()
+    content.vb: Public Overridable Sub OnLoadedMusicMissing()
+  overload: DREditor.Audio.MusicManager.OnLoadedMusicMissing*
+- uid: DREditor.Audio.MusicManager.PlaySource(UnityEngine.AudioSource,UnityEngine.AudioClip)
+  commentId: M:DREditor.Audio.MusicManager.PlaySource(UnityEngine.AudioSource,UnityEngine.AudioClip)
+  id: PlaySource(UnityEngine.AudioSource,UnityEngine.AudioClip)
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: PlaySource(AudioSource, AudioClip)
+  nameWithType: MusicManager.PlaySource(AudioSource, AudioClip)
+  fullName: DREditor.Audio.MusicManager.PlaySource(UnityEngine.AudioSource, UnityEngine.AudioClip)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void PlaySource(AudioSource source, AudioClip clip)
+    parameters:
+    - id: source
+      type: UnityEngine.AudioSource
+      description: ''
+    - id: clip
+      type: UnityEngine.AudioClip
+      description: ''
+    content.vb: Protected Overridable Sub PlaySource(source As AudioSource, clip As AudioClip)
+  overload: DREditor.Audio.MusicManager.PlaySource*
+- uid: DREditor.Audio.MusicManager.ToTitleScreen
+  commentId: M:DREditor.Audio.MusicManager.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: MusicManager.ToTitleScreen()
+  fullName: DREditor.Audio.MusicManager.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.Audio.MusicManager.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.Audio.MusicManager.#ctor
+  commentId: M:DREditor.Audio.MusicManager.#ctor
+  id: '#ctor'
+  parent: DREditor.Audio.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: MusicManager()
+  nameWithType: MusicManager.MusicManager()
+  fullName: DREditor.Audio.MusicManager.MusicManager()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicManager.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  syntax:
+    content: public MusicManager()
+    content.vb: Public Sub New()
+  overload: DREditor.Audio.MusicManager.#ctor*
+  nameWithType.vb: MusicManager.New()
+  fullName.vb: DREditor.Audio.MusicManager.New()
+  name.vb: New()
+references:
+- uid: DREditor.Audio
+  commentId: N:DREditor.Audio
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Audio
+  nameWithType: DREditor.Audio
+  fullName: DREditor.Audio
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Audio
+    name: Audio
+    isExternal: true
+    href: DREditor.Audio.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Audio
+    name: Audio
+    isExternal: true
+    href: DREditor.Audio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  commentId: T:DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  parent: DREditor.Services
+  definition: DREditor.Services.ServiceHolder`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<MusicManagerBase>
+  nameWithType: ServiceHolder<MusicManagerBase>
+  fullName: DREditor.Services.ServiceHolder<DREditor.Audio.MusicManagerBase>
+  nameWithType.vb: ServiceHolder(Of MusicManagerBase)
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Audio.MusicManagerBase)
+  name.vb: ServiceHolder(Of MusicManagerBase)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - uid: DREditor.Audio.MusicManagerBase
+    name: MusicManagerBase
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Audio.MusicManagerBase
+    name: MusicManagerBase
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html
+  - name: )
+- uid: DREditor.Audio.SoundService{DREditor.Audio.MusicManagerBase}
+  commentId: T:DREditor.Audio.SoundService{DREditor.Audio.MusicManagerBase}
+  parent: DREditor.Audio
+  definition: DREditor.Audio.SoundService`1
+  href: DREditor.Audio.SoundService-1.html
+  name: SoundService<MusicManagerBase>
+  nameWithType: SoundService<MusicManagerBase>
+  fullName: DREditor.Audio.SoundService<DREditor.Audio.MusicManagerBase>
+  nameWithType.vb: SoundService(Of MusicManagerBase)
+  fullName.vb: DREditor.Audio.SoundService(Of DREditor.Audio.MusicManagerBase)
+  name.vb: SoundService(Of MusicManagerBase)
+  spec.csharp:
+  - uid: DREditor.Audio.SoundService`1
+    name: SoundService
+    isExternal: true
+    href: DREditor.Audio.SoundService-1.html
+  - name: <
+  - uid: DREditor.Audio.MusicManagerBase
+    name: MusicManagerBase
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Audio.SoundService`1
+    name: SoundService
+    isExternal: true
+    href: DREditor.Audio.SoundService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Audio.MusicManagerBase
+    name: MusicManagerBase
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html
+  - name: )
+- uid: DREditor.Audio.MusicManagerBase
+  commentId: T:DREditor.Audio.MusicManagerBase
+  parent: DREditor.Audio
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html
+  name: MusicManagerBase
+  nameWithType: MusicManagerBase
+  fullName: DREditor.Audio.MusicManagerBase
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.Audio.MusicManagerBase.SetMusicText
+  commentId: F:DREditor.Audio.MusicManagerBase.SetMusicText
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_SetMusicText
+  name: SetMusicText
+  nameWithType: MusicManagerBase.SetMusicText
+  fullName: DREditor.Audio.MusicManagerBase.SetMusicText
+- uid: DREditor.Audio.MusicManagerBase.ClearMusicText
+  commentId: F:DREditor.Audio.MusicManagerBase.ClearMusicText
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_ClearMusicText
+  name: ClearMusicText
+  nameWithType: MusicManagerBase.ClearMusicText
+  fullName: DREditor.Audio.MusicManagerBase.ClearMusicText
+- uid: DREditor.Audio.MusicManagerBase.ResetMusicText
+  commentId: F:DREditor.Audio.MusicManagerBase.ResetMusicText
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_ResetMusicText
+  name: ResetMusicText
+  nameWithType: MusicManagerBase.ResetMusicText
+  fullName: DREditor.Audio.MusicManagerBase.ResetMusicText
+- uid: DREditor.Audio.MusicManagerBase.InvokeMusicChange(UnityEngine.AudioSource)
+  commentId: M:DREditor.Audio.MusicManagerBase.InvokeMusicChange(UnityEngine.AudioSource)
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_InvokeMusicChange_UnityEngine_AudioSource_
+  name: InvokeMusicChange(AudioSource)
+  nameWithType: MusicManagerBase.InvokeMusicChange(AudioSource)
+  fullName: DREditor.Audio.MusicManagerBase.InvokeMusicChange(UnityEngine.AudioSource)
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.InvokeMusicChange(UnityEngine.AudioSource)
+    name: InvokeMusicChange
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_InvokeMusicChange_UnityEngine_AudioSource_
+  - name: (
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.InvokeMusicChange(UnityEngine.AudioSource)
+    name: InvokeMusicChange
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_InvokeMusicChange_UnityEngine_AudioSource_
+  - name: (
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    isExternal: true
+  - name: )
+- uid: DREditor.Audio.MusicManagerBase.OnMusicChange
+  commentId: E:DREditor.Audio.MusicManagerBase.OnMusicChange
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_OnMusicChange
+  name: OnMusicChange
+  nameWithType: MusicManagerBase.OnMusicChange
+  fullName: DREditor.Audio.MusicManagerBase.OnMusicChange
+- uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.registerService
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.registerService
+  parent: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  definition: DREditor.Services.ServiceHolder`1.registerService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<MusicManagerBase>.registerService
+  fullName: DREditor.Services.ServiceHolder<DREditor.Audio.MusicManagerBase>.registerService
+  nameWithType.vb: ServiceHolder(Of MusicManagerBase).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Audio.MusicManagerBase).registerService
+- uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.dontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  definition: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<MusicManagerBase>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<DREditor.Audio.MusicManagerBase>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of MusicManagerBase).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Audio.MusicManagerBase).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.Awake
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.Awake
+  parent: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  definition: DREditor.Services.ServiceHolder`1.Awake
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<MusicManagerBase>.Awake()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Audio.MusicManagerBase>.Awake()
+  nameWithType.vb: ServiceHolder(Of MusicManagerBase).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Audio.MusicManagerBase).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.AttemptDontDestroyOnLoad
+  parent: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  definition: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<MusicManagerBase>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Audio.MusicManagerBase>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of MusicManagerBase).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Audio.MusicManagerBase).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.OnDestroy
+  parent: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  definition: DREditor.Services.ServiceHolder`1.OnDestroy
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<MusicManagerBase>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Audio.MusicManagerBase>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of MusicManagerBase).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Audio.MusicManagerBase).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<MusicManager>(MusicManager)
+  nameWithType: ReflectionHelper.GetFieldNames<MusicManager>(MusicManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Audio.MusicManager>(DREditor.Audio.MusicManager)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of MusicManager)(MusicManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Audio.MusicManager)(DREditor.Audio.MusicManager)
+  name.vb: GetFieldNames(Of MusicManager)(MusicManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Audio.MusicManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Audio.MusicManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+- uid: DREditor.Audio.MusicManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<MusicManager>(MusicManager)
+  nameWithType: ReflectionHelper.GetFieldValues<MusicManager>(MusicManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Audio.MusicManager>(DREditor.Audio.MusicManager)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of MusicManager)(MusicManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Audio.MusicManager)(DREditor.Audio.MusicManager)
+  name.vb: GetFieldValues(Of MusicManager)(MusicManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Audio.MusicManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Audio.MusicManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+- uid: DREditor.Audio.MusicManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<MusicManager>(MusicManager)
+  nameWithType: DeepCopyExtensions.DeepCopy<MusicManager>(MusicManager)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Audio.MusicManager>(DREditor.Audio.MusicManager)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of MusicManager)(MusicManager)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Audio.MusicManager)(DREditor.Audio.MusicManager)
+  name.vb: DeepCopy(Of MusicManager)(MusicManager)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Audio.MusicManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Audio.MusicManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Audio.MusicManager
+    name: MusicManager
+    isExternal: true
+    href: DREditor.Audio.MusicManager.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services.ServiceHolder`1
+  commentId: T:DREditor.Services.ServiceHolder`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: ServiceHolder<T>
+  nameWithType: ServiceHolder<T>
+  fullName: DREditor.Services.ServiceHolder<T>
+  nameWithType.vb: ServiceHolder(Of T)
+  fullName.vb: DREditor.Services.ServiceHolder(Of T)
+  name.vb: ServiceHolder(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1
+    name: ServiceHolder
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Audio.SoundService`1
+  commentId: T:DREditor.Audio.SoundService`1
+  isExternal: true
+  href: DREditor.Audio.SoundService-1.html
+  name: SoundService<T>
+  nameWithType: SoundService<T>
+  fullName: DREditor.Audio.SoundService<T>
+  nameWithType.vb: SoundService(Of T)
+  fullName.vb: DREditor.Audio.SoundService(Of T)
+  name.vb: SoundService(Of T)
+  spec.csharp:
+  - uid: DREditor.Audio.SoundService`1
+    name: SoundService
+    isExternal: true
+    href: DREditor.Audio.SoundService-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Audio.SoundService`1
+    name: SoundService
+    isExternal: true
+    href: DREditor.Audio.SoundService-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.registerService
+  commentId: F:DREditor.Services.ServiceHolder`1.registerService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: registerService
+  nameWithType: ServiceHolder<T>.registerService
+  fullName: DREditor.Services.ServiceHolder<T>.registerService
+  nameWithType.vb: ServiceHolder(Of T).registerService
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).registerService
+- uid: DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  commentId: F:DREditor.Services.ServiceHolder`1.dontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: dontDestroyOnLoad
+  nameWithType: ServiceHolder<T>.dontDestroyOnLoad
+  fullName: DREditor.Services.ServiceHolder<T>.dontDestroyOnLoad
+  nameWithType.vb: ServiceHolder(Of T).dontDestroyOnLoad
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).dontDestroyOnLoad
+- uid: DREditor.Services.ServiceHolder`1.Awake
+  commentId: M:DREditor.Services.ServiceHolder`1.Awake
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: Awake()
+  nameWithType: ServiceHolder<T>.Awake()
+  fullName: DREditor.Services.ServiceHolder<T>.Awake()
+  nameWithType.vb: ServiceHolder(Of T).Awake()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).Awake()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.Awake
+    name: Awake
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  commentId: M:DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: AttemptDontDestroyOnLoad()
+  nameWithType: ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  fullName: DREditor.Services.ServiceHolder<T>.AttemptDontDestroyOnLoad()
+  nameWithType.vb: ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).AttemptDontDestroyOnLoad()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.AttemptDontDestroyOnLoad
+    name: AttemptDontDestroyOnLoad
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.ServiceHolder`1.OnDestroy
+  commentId: M:DREditor.Services.ServiceHolder`1.OnDestroy
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: OnDestroy()
+  nameWithType: ServiceHolder<T>.OnDestroy()
+  fullName: DREditor.Services.ServiceHolder<T>.OnDestroy()
+  nameWithType.vb: ServiceHolder(Of T).OnDestroy()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).OnDestroy()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.OnDestroy
+    name: OnDestroy
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: DREditor.Audio.Playlist
+  commentId: T:DREditor.Audio.Playlist
+  parent: DREditor.Audio
+  isExternal: true
+  href: DREditor.Audio.Playlist.html
+  name: Playlist
+  nameWithType: Playlist
+  fullName: DREditor.Audio.Playlist
+- uid: UnityEngine.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.InitializeService
+  parent: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}
+  definition: DREditor.Services.ServiceHolder`1.InitializeService
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<MusicManagerBase>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<DREditor.Audio.MusicManagerBase>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of MusicManagerBase).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of DREditor.Audio.MusicManagerBase).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder{DREditor.Audio.MusicManagerBase}.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.InitializeService*
+  commentId: Overload:DREditor.Audio.MusicManager.InitializeService
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_InitializeService
+  name: InitializeService
+  nameWithType: MusicManager.InitializeService
+  fullName: DREditor.Audio.MusicManager.InitializeService
+- uid: DREditor.Services.ServiceHolder`1.InitializeService
+  commentId: M:DREditor.Services.ServiceHolder`1.InitializeService
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  name: InitializeService()
+  nameWithType: ServiceHolder<T>.InitializeService()
+  fullName: DREditor.Services.ServiceHolder<T>.InitializeService()
+  nameWithType.vb: ServiceHolder(Of T).InitializeService()
+  fullName.vb: DREditor.Services.ServiceHolder(Of T).InitializeService()
+  spec.csharp:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.ServiceHolder`1.InitializeService
+    name: InitializeService
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.Start*
+  commentId: Overload:DREditor.Audio.MusicManager.Start
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_Start
+  name: Start
+  nameWithType: MusicManager.Start
+  fullName: DREditor.Audio.MusicManager.Start
+- uid: DREditor.Audio.MusicManagerBase.PlayMusic``1({T},System.Boolean)
+  commentId: M:DREditor.Audio.MusicManagerBase.PlayMusic``1(``0,System.Boolean)
+  parent: DREditor.Audio.MusicManagerBase
+  definition: DREditor.Audio.MusicManagerBase.PlayMusic``1(``0,System.Boolean)
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayMusic__1___0_System_Boolean_
+  name: PlayMusic<T>(T, bool)
+  nameWithType: MusicManagerBase.PlayMusic<T>(T, bool)
+  fullName: DREditor.Audio.MusicManagerBase.PlayMusic<T>(T, bool)
+  nameWithType.vb: MusicManagerBase.PlayMusic(Of T)(T, Boolean)
+  fullName.vb: DREditor.Audio.MusicManagerBase.PlayMusic(Of T)(T, Boolean)
+  name.vb: PlayMusic(Of T)(T, Boolean)
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.PlayMusic``1(``0,System.Boolean)
+    name: PlayMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayMusic__1___0_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.PlayMusic``1(``0,System.Boolean)
+    name: PlayMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayMusic__1___0_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.Audio.MusicManager.PlayMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.PlayMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_PlayMusic__1___0_System_Boolean_
+  name: PlayMusic
+  nameWithType: MusicManager.PlayMusic
+  fullName: DREditor.Audio.MusicManager.PlayMusic
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DREditor.Audio.MusicManagerBase.PlayMusic``1(``0,System.Boolean)
+  commentId: M:DREditor.Audio.MusicManagerBase.PlayMusic``1(``0,System.Boolean)
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayMusic__1___0_System_Boolean_
+  name: PlayMusic<T>(T, bool)
+  nameWithType: MusicManagerBase.PlayMusic<T>(T, bool)
+  fullName: DREditor.Audio.MusicManagerBase.PlayMusic<T>(T, bool)
+  nameWithType.vb: MusicManagerBase.PlayMusic(Of T)(T, Boolean)
+  fullName.vb: DREditor.Audio.MusicManagerBase.PlayMusic(Of T)(T, Boolean)
+  name.vb: PlayMusic(Of T)(T, Boolean)
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.PlayMusic``1(``0,System.Boolean)
+    name: PlayMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayMusic__1___0_System_Boolean_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.PlayMusic``1(``0,System.Boolean)
+    name: PlayMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayMusic__1___0_System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DREditor.Audio.MusicManagerBase.MusicIsPlaying
+  commentId: M:DREditor.Audio.MusicManagerBase.MusicIsPlaying
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_MusicIsPlaying
+  name: MusicIsPlaying()
+  nameWithType: MusicManagerBase.MusicIsPlaying()
+  fullName: DREditor.Audio.MusicManagerBase.MusicIsPlaying()
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.MusicIsPlaying
+    name: MusicIsPlaying
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_MusicIsPlaying
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.MusicIsPlaying
+    name: MusicIsPlaying
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_MusicIsPlaying
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.MusicIsPlaying*
+  commentId: Overload:DREditor.Audio.MusicManager.MusicIsPlaying
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_MusicIsPlaying
+  name: MusicIsPlaying
+  nameWithType: MusicManager.MusicIsPlaying
+  fullName: DREditor.Audio.MusicManager.MusicIsPlaying
+- uid: DREditor.Audio.MusicManagerBase.StopPlayingMusic
+  commentId: M:DREditor.Audio.MusicManagerBase.StopPlayingMusic
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopPlayingMusic
+  name: StopPlayingMusic()
+  nameWithType: MusicManagerBase.StopPlayingMusic()
+  fullName: DREditor.Audio.MusicManagerBase.StopPlayingMusic()
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.StopPlayingMusic
+    name: StopPlayingMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopPlayingMusic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.StopPlayingMusic
+    name: StopPlayingMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopPlayingMusic
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.StopPlayingMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.StopPlayingMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_StopPlayingMusic
+  name: StopPlayingMusic
+  nameWithType: MusicManager.StopPlayingMusic
+  fullName: DREditor.Audio.MusicManager.StopPlayingMusic
+- uid: DREditor.Audio.MusicManager.OnPlayedInvalidMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.OnPlayedInvalidMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_OnPlayedInvalidMusic
+  name: OnPlayedInvalidMusic
+  nameWithType: MusicManager.OnPlayedInvalidMusic
+  fullName: DREditor.Audio.MusicManager.OnPlayedInvalidMusic
+- uid: DREditor.Audio.MusicManager.PlayValidMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.PlayValidMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_PlayValidMusic_UnityEngine_AudioClip_System_Boolean_
+  name: PlayValidMusic
+  nameWithType: MusicManager.PlayValidMusic
+  fullName: DREditor.Audio.MusicManager.PlayValidMusic
+- uid: DREditor.Audio.MusicManager.SetCurrentlyPlayingMusicText*
+  commentId: Overload:DREditor.Audio.MusicManager.SetCurrentlyPlayingMusicText
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_SetCurrentlyPlayingMusicText_UnityEngine_AudioClip_
+  name: SetCurrentlyPlayingMusicText
+  nameWithType: MusicManager.SetCurrentlyPlayingMusicText
+  fullName: DREditor.Audio.MusicManager.SetCurrentlyPlayingMusicText
+- uid: DREditor.Audio.MusicManagerBase.StopMusic
+  commentId: M:DREditor.Audio.MusicManagerBase.StopMusic
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopMusic
+  name: StopMusic()
+  nameWithType: MusicManagerBase.StopMusic()
+  fullName: DREditor.Audio.MusicManagerBase.StopMusic()
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.StopMusic
+    name: StopMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopMusic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.StopMusic
+    name: StopMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopMusic
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.StopMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.StopMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_StopMusic
+  name: StopMusic
+  nameWithType: MusicManager.StopMusic
+  fullName: DREditor.Audio.MusicManager.StopMusic
+- uid: DREditor.Audio.MusicManagerBase.StopSound
+  commentId: M:DREditor.Audio.MusicManagerBase.StopSound
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopSound
+  name: StopSound()
+  nameWithType: MusicManagerBase.StopSound()
+  fullName: DREditor.Audio.MusicManagerBase.StopSound()
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.StopSound
+    name: StopSound
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopSound
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.StopSound
+    name: StopSound
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_StopSound
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.StopSound*
+  commentId: Overload:DREditor.Audio.MusicManager.StopSound
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_StopSound
+  name: StopSound
+  nameWithType: MusicManager.StopSound
+  fullName: DREditor.Audio.MusicManager.StopSound
+- uid: DREditor.Audio.MusicManagerBase.PlayLastMusic
+  commentId: M:DREditor.Audio.MusicManagerBase.PlayLastMusic
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayLastMusic
+  name: PlayLastMusic()
+  nameWithType: MusicManagerBase.PlayLastMusic()
+  fullName: DREditor.Audio.MusicManagerBase.PlayLastMusic()
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.PlayLastMusic
+    name: PlayLastMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayLastMusic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.PlayLastMusic
+    name: PlayLastMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_PlayLastMusic
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.PlayLastMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.PlayLastMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_PlayLastMusic
+  name: PlayLastMusic
+  nameWithType: MusicManager.PlayLastMusic
+  fullName: DREditor.Audio.MusicManager.PlayLastMusic
+- uid: DREditor.Audio.MusicManagerBase.ResetLastPlayedMusic
+  commentId: M:DREditor.Audio.MusicManagerBase.ResetLastPlayedMusic
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_ResetLastPlayedMusic
+  name: ResetLastPlayedMusic()
+  nameWithType: MusicManagerBase.ResetLastPlayedMusic()
+  fullName: DREditor.Audio.MusicManagerBase.ResetLastPlayedMusic()
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.ResetLastPlayedMusic
+    name: ResetLastPlayedMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_ResetLastPlayedMusic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.ResetLastPlayedMusic
+    name: ResetLastPlayedMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_ResetLastPlayedMusic
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.ResetLastPlayedMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.ResetLastPlayedMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_ResetLastPlayedMusic
+  name: ResetLastPlayedMusic
+  nameWithType: MusicManager.ResetLastPlayedMusic
+  fullName: DREditor.Audio.MusicManager.ResetLastPlayedMusic
+- uid: DREditor.Audio.MusicManagerBase.FadeMusic(System.Single)
+  commentId: M:DREditor.Audio.MusicManagerBase.FadeMusic(System.Single)
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_FadeMusic_System_Single_
+  name: FadeMusic(float)
+  nameWithType: MusicManagerBase.FadeMusic(float)
+  fullName: DREditor.Audio.MusicManagerBase.FadeMusic(float)
+  nameWithType.vb: MusicManagerBase.FadeMusic(Single)
+  fullName.vb: DREditor.Audio.MusicManagerBase.FadeMusic(Single)
+  name.vb: FadeMusic(Single)
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.FadeMusic(System.Single)
+    name: FadeMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_FadeMusic_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.FadeMusic(System.Single)
+    name: FadeMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_FadeMusic_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: DREditor.Audio.MusicManager.FadeMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.FadeMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_FadeMusic_System_Single_
+  name: FadeMusic
+  nameWithType: MusicManager.FadeMusic
+  fullName: DREditor.Audio.MusicManager.FadeMusic
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: DREditor.Audio.MusicManager.FadeOut*
+  commentId: Overload:DREditor.Audio.MusicManager.FadeOut
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_FadeOut__1___0_System_Single_
+  name: FadeOut
+  nameWithType: MusicManager.FadeOut
+  fullName: DREditor.Audio.MusicManager.FadeOut
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Audio.MusicManagerBase.GetLastPlayedMusic
+  commentId: M:DREditor.Audio.MusicManagerBase.GetLastPlayedMusic
+  parent: DREditor.Audio.MusicManagerBase
+  isExternal: true
+  href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_GetLastPlayedMusic
+  name: GetLastPlayedMusic()
+  nameWithType: MusicManagerBase.GetLastPlayedMusic()
+  fullName: DREditor.Audio.MusicManagerBase.GetLastPlayedMusic()
+  spec.csharp:
+  - uid: DREditor.Audio.MusicManagerBase.GetLastPlayedMusic
+    name: GetLastPlayedMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_GetLastPlayedMusic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Audio.MusicManagerBase.GetLastPlayedMusic
+    name: GetLastPlayedMusic
+    isExternal: true
+    href: DREditor.Audio.MusicManagerBase.html#DREditor_Audio_MusicManagerBase_GetLastPlayedMusic
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.GetLastPlayedMusic*
+  commentId: Overload:DREditor.Audio.MusicManager.GetLastPlayedMusic
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_GetLastPlayedMusic
+  name: GetLastPlayedMusic
+  nameWithType: MusicManager.GetLastPlayedMusic
+  fullName: DREditor.Audio.MusicManager.GetLastPlayedMusic
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DREditor.Audio.MusicManager.OnLoadedMusicMissing*
+  commentId: Overload:DREditor.Audio.MusicManager.OnLoadedMusicMissing
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_OnLoadedMusicMissing
+  name: OnLoadedMusicMissing
+  nameWithType: MusicManager.OnLoadedMusicMissing
+  fullName: DREditor.Audio.MusicManager.OnLoadedMusicMissing
+- uid: DREditor.Audio.MusicManager.PlaySource*
+  commentId: Overload:DREditor.Audio.MusicManager.PlaySource
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_PlaySource_UnityEngine_AudioSource_UnityEngine_AudioClip_
+  name: PlaySource
+  nameWithType: MusicManager.PlaySource
+  fullName: DREditor.Audio.MusicManager.PlaySource
+- uid: DREditor.Audio.MusicManager.ToTitleScreen*
+  commentId: Overload:DREditor.Audio.MusicManager.ToTitleScreen
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: MusicManager.ToTitleScreen
+  fullName: DREditor.Audio.MusicManager.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicManager.#ctor*
+  commentId: Overload:DREditor.Audio.MusicManager.#ctor
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html#DREditor_Audio_MusicManager__ctor
+  name: MusicManager
+  nameWithType: MusicManager.MusicManager
+  fullName: DREditor.Audio.MusicManager.MusicManager
+  nameWithType.vb: MusicManager.New
+  fullName.vb: DREditor.Audio.MusicManager.New
+  name.vb: New

@@ -1,0 +1,1403 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+  commentId: T:DREditor.DialogueEventManaging.DialogueLineEventManager
+  id: DialogueLineEventManager
+  parent: DREditor.DialogueEventManaging
+  children:
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.#ctor
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.EvaluateDialogueEvents(DREditor.Dialogues.Line)
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters(DREditor.Dialogues.Line,System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}@)
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.LineProcessRoutine(DREditor.Dialogues.Line)
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.OnLoadToLineEvents(DREditor.Dialogues.Line)
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.ShouldProcess(DREditor.Dialogues.Line)
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents(DREditor.Dialogues.Line,System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent})
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters(System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent})
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerNonEventWaiters(DREditor.Dialogues.Line)
+  langs:
+  - csharp
+  - vb
+  name: DialogueLineEventManager
+  nameWithType: DialogueLineEventManager
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("FilteredDialogueEventManager, ILineProcessorRoutine, ILoadToLineEvents\n\n")]
+
+      public class DialogueLineEventManager : FilteredDialogueEventManager, ILineProcessorRoutine, ILineRoutine, ILoadToLineEvents
+    content.vb: >-
+      <ClassHeader("FilteredDialogueEventManager, ILineProcessorRoutine, ILoadToLineEvents" & vbLf & vbLf)>
+
+      Public Class DialogueLineEventManager Inherits FilteredDialogueEventManager Implements ILineProcessorRoutine, ILineRoutine, ILoadToLineEvents
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  - DREditor.DialogueEventManaging.DialogueEventManager
+  - DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  - DREditor.Dialogues.LineReading.ILineRoutine
+  - DREditor.Dialogues.Loading.ILoadToLineEvents
+  inheritedMembers:
+  - DREditor.DialogueEventManaging.FilteredDialogueEventManager.eventIgnorers
+  - DREditor.DialogueEventManaging.FilteredDialogueEventManager.eventTypeExcluders
+  - DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventShouldBeTriggered(DREditor.Dialogues.Events.IDialogueEvent)
+  - DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventTypeIsExcluded(DREditor.Dialogues.Events.IDialogueEvent)
+  - DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventIsToBeIgnored(DREditor.Dialogues.Events.IDialogueEvent)
+  - DREditor.DialogueEventManaging.FilteredDialogueEventManager.TriggerDialogueLineEvents(DREditor.Dialogues.Line)
+  - DREditor.DialogueEventManaging.FilteredDialogueEventManager.ClearIgnorers
+  - DREditor.DialogueEventManaging.DialogueEventManager.TriggerDialogueEvents(System.Collections.Generic.IEnumerable{DREditor.Dialogues.Events.IDialogueEvent})
+  - DREditor.DialogueEventManaging.DialogueEventManager.TriggerAllDialogueEventsOfType``1(DREditor.Dialogues.Line)
+  extensionMethods:
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.DialogueEventManaging.DialogueLineEventManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        FilteredDialogueEventManager, ILineProcessorRoutine, ILoadToLineEvents
+
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.ShouldProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.ShouldProcess(DREditor.Dialogues.Line)
+  id: ShouldProcess(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: ShouldProcess(Line)
+  nameWithType: DialogueLineEventManager.ShouldProcess(Line)
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.ShouldProcess(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool ShouldProcess(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function ShouldProcess(currentLine As Line) As Boolean
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.ShouldProcess*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.LineProcessRoutine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.LineProcessRoutine(DREditor.Dialogues.Line)
+  id: LineProcessRoutine(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: LineProcessRoutine(Line)
+  nameWithType: DialogueLineEventManager.LineProcessRoutine(Line)
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.LineProcessRoutine(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public IEnumerator LineProcessRoutine(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function LineProcessRoutine(currentLine As Line) As IEnumerator
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.LineProcessRoutine*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.EvaluateDialogueEvents(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.EvaluateDialogueEvents(DREditor.Dialogues.Line)
+  id: EvaluateDialogueEvents(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: EvaluateDialogueEvents(Line)
+  nameWithType: DialogueLineEventManager.EvaluateDialogueEvents(Line)
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.EvaluateDialogueEvents(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator EvaluateDialogueEvents(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Protected Overridable Function EvaluateDialogueEvents(currentLine As Line) As IEnumerator
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.EvaluateDialogueEvents*
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters(DREditor.Dialogues.Line,System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}@)
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters(DREditor.Dialogues.Line,System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}@)
+  id: LineContainsEventWaiters(DREditor.Dialogues.Line,System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}@)
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: LineContainsEventWaiters(Line, out List<IDialogueEvent>)
+  nameWithType: DialogueLineEventManager.LineContainsEventWaiters(Line, out List<IDialogueEvent>)
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters(DREditor.Dialogues.Line, out System.Collections.Generic.List<DREditor.Dialogues.Events.IDialogueEvent>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool LineContainsEventWaiters(Line currentLine, out List<IDialogueEvent> dialogueEvents)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    - id: dialogueEvents
+      type: System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function LineContainsEventWaiters(currentLine As Line, dialogueEvents As List(Of IDialogueEvent)) As Boolean
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters*
+  nameWithType.vb: DialogueLineEventManager.LineContainsEventWaiters(Line, List(Of IDialogueEvent))
+  fullName.vb: DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters(DREditor.Dialogues.Line, System.Collections.Generic.List(Of DREditor.Dialogues.Events.IDialogueEvent))
+  name.vb: LineContainsEventWaiters(Line, List(Of IDialogueEvent))
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents(DREditor.Dialogues.Line,System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent})
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents(DREditor.Dialogues.Line,System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent})
+  id: SplitTriggeringWaiterEvents(DREditor.Dialogues.Line,System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent})
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: SplitTriggeringWaiterEvents(Line, List<IDialogueEvent>)
+  nameWithType: DialogueLineEventManager.SplitTriggeringWaiterEvents(Line, List<IDialogueEvent>)
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents(DREditor.Dialogues.Line, System.Collections.Generic.List<DREditor.Dialogues.Events.IDialogueEvent>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator SplitTriggeringWaiterEvents(Line currentLine, List<IDialogueEvent> dialogueEvents)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    - id: dialogueEvents
+      type: System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Protected Overridable Function SplitTriggeringWaiterEvents(currentLine As Line, dialogueEvents As List(Of IDialogueEvent)) As IEnumerator
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents*
+  nameWithType.vb: DialogueLineEventManager.SplitTriggeringWaiterEvents(Line, List(Of IDialogueEvent))
+  fullName.vb: DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents(DREditor.Dialogues.Line, System.Collections.Generic.List(Of DREditor.Dialogues.Events.IDialogueEvent))
+  name.vb: SplitTriggeringWaiterEvents(Line, List(Of IDialogueEvent))
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters(System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent})
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters(System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent})
+  id: TriggerEventWaiters(System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent})
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: TriggerEventWaiters(List<IDialogueEvent>)
+  nameWithType: DialogueLineEventManager.TriggerEventWaiters(List<IDialogueEvent>)
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters(System.Collections.Generic.List<DREditor.Dialogues.Events.IDialogueEvent>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator TriggerEventWaiters(List<IDialogueEvent> dialogueEvents)
+    parameters:
+    - id: dialogueEvents
+      type: System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Protected Overridable Function TriggerEventWaiters(dialogueEvents As List(Of IDialogueEvent)) As IEnumerator
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters*
+  nameWithType.vb: DialogueLineEventManager.TriggerEventWaiters(List(Of IDialogueEvent))
+  fullName.vb: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters(System.Collections.Generic.List(Of DREditor.Dialogues.Events.IDialogueEvent))
+  name.vb: TriggerEventWaiters(List(Of IDialogueEvent))
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerNonEventWaiters(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerNonEventWaiters(DREditor.Dialogues.Line)
+  id: TriggerNonEventWaiters(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: TriggerNonEventWaiters(Line)
+  nameWithType: DialogueLineEventManager.TriggerNonEventWaiters(Line)
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerNonEventWaiters(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void TriggerNonEventWaiters(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Protected Overridable Sub TriggerNonEventWaiters(currentLine As Line)
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerNonEventWaiters*
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.OnLoadToLineEvents(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.OnLoadToLineEvents(DREditor.Dialogues.Line)
+  id: OnLoadToLineEvents(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: OnLoadToLineEvents(Line)
+  nameWithType: DialogueLineEventManager.OnLoadToLineEvents(Line)
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.OnLoadToLineEvents(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnLoadToLineEvents(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub OnLoadToLineEvents(currentLine As Line)
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.OnLoadToLineEvents*
+  implements:
+  - DREditor.Dialogues.Loading.ILoadToLineEvents.OnLoadToLineEvents(DREditor.Dialogues.Line)
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.#ctor
+  commentId: M:DREditor.DialogueEventManaging.DialogueLineEventManager.#ctor
+  id: '#ctor'
+  parent: DREditor.DialogueEventManaging.DialogueLineEventManager
+  langs:
+  - csharp
+  - vb
+  name: DialogueLineEventManager()
+  nameWithType: DialogueLineEventManager.DialogueLineEventManager()
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.DialogueLineEventManager()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventManaging/DialogueLineEventManager.cs
+  assemblies:
+  - DREditor.DialogueEventManaging
+  namespace: DREditor.DialogueEventManaging
+  syntax:
+    content: public DialogueLineEventManager()
+    content.vb: Public Sub New()
+  overload: DREditor.DialogueEventManaging.DialogueLineEventManager.#ctor*
+  nameWithType.vb: DialogueLineEventManager.New()
+  fullName.vb: DREditor.DialogueEventManaging.DialogueLineEventManager.New()
+  name.vb: New()
+references:
+- uid: DREditor.DialogueEventManaging
+  commentId: N:DREditor.DialogueEventManaging
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.DialogueEventManaging
+  nameWithType: DREditor.DialogueEventManaging
+  fullName: DREditor.DialogueEventManaging
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueEventManaging
+    name: DialogueEventManaging
+    isExternal: true
+    href: DREditor.DialogueEventManaging.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueEventManaging
+    name: DialogueEventManaging
+    isExternal: true
+    href: DREditor.DialogueEventManaging.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.DialogueEventManaging.DialogueEventManager
+  commentId: T:DREditor.DialogueEventManaging.DialogueEventManager
+  parent: DREditor.DialogueEventManaging
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueEventManager.html
+  name: DialogueEventManager
+  nameWithType: DialogueEventManager
+  fullName: DREditor.DialogueEventManaging.DialogueEventManager
+- uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  commentId: T:DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  parent: DREditor.DialogueEventManaging
+  isExternal: true
+  href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html
+  name: FilteredDialogueEventManager
+  nameWithType: FilteredDialogueEventManager
+  fullName: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+- uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  commentId: T:DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  name: ILineProcessorRoutine
+  nameWithType: ILineProcessorRoutine
+  fullName: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+- uid: DREditor.Dialogues.LineReading.ILineRoutine
+  commentId: T:DREditor.Dialogues.LineReading.ILineRoutine
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  name: ILineRoutine
+  nameWithType: ILineRoutine
+  fullName: DREditor.Dialogues.LineReading.ILineRoutine
+- uid: DREditor.Dialogues.Loading.ILoadToLineEvents
+  commentId: T:DREditor.Dialogues.Loading.ILoadToLineEvents
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEvents.cs
+  name: ILoadToLineEvents
+  nameWithType: ILoadToLineEvents
+  fullName: DREditor.Dialogues.Loading.ILoadToLineEvents
+- uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.eventIgnorers
+  commentId: F:DREditor.DialogueEventManaging.FilteredDialogueEventManager.eventIgnorers
+  parent: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_eventIgnorers
+  name: eventIgnorers
+  nameWithType: FilteredDialogueEventManager.eventIgnorers
+  fullName: DREditor.DialogueEventManaging.FilteredDialogueEventManager.eventIgnorers
+- uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.eventTypeExcluders
+  commentId: F:DREditor.DialogueEventManaging.FilteredDialogueEventManager.eventTypeExcluders
+  parent: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_eventTypeExcluders
+  name: eventTypeExcluders
+  nameWithType: FilteredDialogueEventManager.eventTypeExcluders
+  fullName: DREditor.DialogueEventManaging.FilteredDialogueEventManager.eventTypeExcluders
+- uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventShouldBeTriggered(DREditor.Dialogues.Events.IDialogueEvent)
+  commentId: M:DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventShouldBeTriggered(DREditor.Dialogues.Events.IDialogueEvent)
+  parent: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventShouldBeTriggered_DREditor_Dialogues_Events_IDialogueEvent_
+  name: EventShouldBeTriggered(IDialogueEvent)
+  nameWithType: FilteredDialogueEventManager.EventShouldBeTriggered(IDialogueEvent)
+  fullName: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventShouldBeTriggered(DREditor.Dialogues.Events.IDialogueEvent)
+  spec.csharp:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventShouldBeTriggered(DREditor.Dialogues.Events.IDialogueEvent)
+    name: EventShouldBeTriggered
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventShouldBeTriggered_DREditor_Dialogues_Events_IDialogueEvent_
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventShouldBeTriggered(DREditor.Dialogues.Events.IDialogueEvent)
+    name: EventShouldBeTriggered
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventShouldBeTriggered_DREditor_Dialogues_Events_IDialogueEvent_
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: )
+- uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventTypeIsExcluded(DREditor.Dialogues.Events.IDialogueEvent)
+  commentId: M:DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventTypeIsExcluded(DREditor.Dialogues.Events.IDialogueEvent)
+  parent: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventTypeIsExcluded_DREditor_Dialogues_Events_IDialogueEvent_
+  name: EventTypeIsExcluded(IDialogueEvent)
+  nameWithType: FilteredDialogueEventManager.EventTypeIsExcluded(IDialogueEvent)
+  fullName: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventTypeIsExcluded(DREditor.Dialogues.Events.IDialogueEvent)
+  spec.csharp:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventTypeIsExcluded(DREditor.Dialogues.Events.IDialogueEvent)
+    name: EventTypeIsExcluded
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventTypeIsExcluded_DREditor_Dialogues_Events_IDialogueEvent_
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventTypeIsExcluded(DREditor.Dialogues.Events.IDialogueEvent)
+    name: EventTypeIsExcluded
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventTypeIsExcluded_DREditor_Dialogues_Events_IDialogueEvent_
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: )
+- uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventIsToBeIgnored(DREditor.Dialogues.Events.IDialogueEvent)
+  commentId: M:DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventIsToBeIgnored(DREditor.Dialogues.Events.IDialogueEvent)
+  parent: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventIsToBeIgnored_DREditor_Dialogues_Events_IDialogueEvent_
+  name: EventIsToBeIgnored(IDialogueEvent)
+  nameWithType: FilteredDialogueEventManager.EventIsToBeIgnored(IDialogueEvent)
+  fullName: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventIsToBeIgnored(DREditor.Dialogues.Events.IDialogueEvent)
+  spec.csharp:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventIsToBeIgnored(DREditor.Dialogues.Events.IDialogueEvent)
+    name: EventIsToBeIgnored
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventIsToBeIgnored_DREditor_Dialogues_Events_IDialogueEvent_
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.EventIsToBeIgnored(DREditor.Dialogues.Events.IDialogueEvent)
+    name: EventIsToBeIgnored
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_EventIsToBeIgnored_DREditor_Dialogues_Events_IDialogueEvent_
+  - name: (
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: )
+- uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.TriggerDialogueLineEvents(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueEventManaging.FilteredDialogueEventManager.TriggerDialogueLineEvents(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_TriggerDialogueLineEvents_DREditor_Dialogues_Line_
+  name: TriggerDialogueLineEvents(Line)
+  nameWithType: FilteredDialogueEventManager.TriggerDialogueLineEvents(Line)
+  fullName: DREditor.DialogueEventManaging.FilteredDialogueEventManager.TriggerDialogueLineEvents(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.TriggerDialogueLineEvents(DREditor.Dialogues.Line)
+    name: TriggerDialogueLineEvents
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_TriggerDialogueLineEvents_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.TriggerDialogueLineEvents(DREditor.Dialogues.Line)
+    name: TriggerDialogueLineEvents
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_TriggerDialogueLineEvents_DREditor_Dialogues_Line_
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.ClearIgnorers
+  commentId: M:DREditor.DialogueEventManaging.FilteredDialogueEventManager.ClearIgnorers
+  parent: DREditor.DialogueEventManaging.FilteredDialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_ClearIgnorers
+  name: ClearIgnorers()
+  nameWithType: FilteredDialogueEventManager.ClearIgnorers()
+  fullName: DREditor.DialogueEventManaging.FilteredDialogueEventManager.ClearIgnorers()
+  spec.csharp:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.ClearIgnorers
+    name: ClearIgnorers
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_ClearIgnorers
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventManaging.FilteredDialogueEventManager.ClearIgnorers
+    name: ClearIgnorers
+    isExternal: true
+    href: DREditor.DialogueEventManaging.FilteredDialogueEventManager.html#DREditor_DialogueEventManaging_FilteredDialogueEventManager_ClearIgnorers
+  - name: (
+  - name: )
+- uid: DREditor.DialogueEventManaging.DialogueEventManager.TriggerDialogueEvents(System.Collections.Generic.IEnumerable{DREditor.Dialogues.Events.IDialogueEvent})
+  commentId: M:DREditor.DialogueEventManaging.DialogueEventManager.TriggerDialogueEvents(System.Collections.Generic.IEnumerable{DREditor.Dialogues.Events.IDialogueEvent})
+  parent: DREditor.DialogueEventManaging.DialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueEventManager.html#DREditor_DialogueEventManaging_DialogueEventManager_TriggerDialogueEvents_System_Collections_Generic_IEnumerable_DREditor_Dialogues_Events_IDialogueEvent__
+  name: TriggerDialogueEvents(IEnumerable<IDialogueEvent>)
+  nameWithType: DialogueEventManager.TriggerDialogueEvents(IEnumerable<IDialogueEvent>)
+  fullName: DREditor.DialogueEventManaging.DialogueEventManager.TriggerDialogueEvents(System.Collections.Generic.IEnumerable<DREditor.Dialogues.Events.IDialogueEvent>)
+  nameWithType.vb: DialogueEventManager.TriggerDialogueEvents(IEnumerable(Of IDialogueEvent))
+  fullName.vb: DREditor.DialogueEventManaging.DialogueEventManager.TriggerDialogueEvents(System.Collections.Generic.IEnumerable(Of DREditor.Dialogues.Events.IDialogueEvent))
+  name.vb: TriggerDialogueEvents(IEnumerable(Of IDialogueEvent))
+  spec.csharp:
+  - uid: DREditor.DialogueEventManaging.DialogueEventManager.TriggerDialogueEvents(System.Collections.Generic.IEnumerable{DREditor.Dialogues.Events.IDialogueEvent})
+    name: TriggerDialogueEvents
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueEventManager.html#DREditor_DialogueEventManaging_DialogueEventManager_TriggerDialogueEvents_System_Collections_Generic_IEnumerable_DREditor_Dialogues_Events_IDialogueEvent__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventManaging.DialogueEventManager.TriggerDialogueEvents(System.Collections.Generic.IEnumerable{DREditor.Dialogues.Events.IDialogueEvent})
+    name: TriggerDialogueEvents
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueEventManager.html#DREditor_DialogueEventManaging_DialogueEventManager_TriggerDialogueEvents_System_Collections_Generic_IEnumerable_DREditor_Dialogues_Events_IDialogueEvent__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: )
+  - name: )
+- uid: DREditor.DialogueEventManaging.DialogueEventManager.TriggerAllDialogueEventsOfType``1(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueEventManaging.DialogueEventManager.TriggerAllDialogueEventsOfType``1(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueEventManaging.DialogueEventManager
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueEventManager.html#DREditor_DialogueEventManaging_DialogueEventManager_TriggerAllDialogueEventsOfType__1_DREditor_Dialogues_Line_
+  name: TriggerAllDialogueEventsOfType<T>(Line)
+  nameWithType: DialogueEventManager.TriggerAllDialogueEventsOfType<T>(Line)
+  fullName: DREditor.DialogueEventManaging.DialogueEventManager.TriggerAllDialogueEventsOfType<T>(DREditor.Dialogues.Line)
+  nameWithType.vb: DialogueEventManager.TriggerAllDialogueEventsOfType(Of T)(Line)
+  fullName.vb: DREditor.DialogueEventManaging.DialogueEventManager.TriggerAllDialogueEventsOfType(Of T)(DREditor.Dialogues.Line)
+  name.vb: TriggerAllDialogueEventsOfType(Of T)(Line)
+  spec.csharp:
+  - uid: DREditor.DialogueEventManaging.DialogueEventManager.TriggerAllDialogueEventsOfType``1(DREditor.Dialogues.Line)
+    name: TriggerAllDialogueEventsOfType
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueEventManager.html#DREditor_DialogueEventManaging_DialogueEventManager_TriggerAllDialogueEventsOfType__1_DREditor_Dialogues_Line_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventManaging.DialogueEventManager.TriggerAllDialogueEventsOfType``1(DREditor.Dialogues.Line)
+    name: TriggerAllDialogueEventsOfType
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueEventManager.html#DREditor_DialogueEventManaging_DialogueEventManager_TriggerAllDialogueEventsOfType__1_DREditor_Dialogues_Line_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<DialogueLineEventManager>(DialogueLineEventManager)
+  nameWithType: ReflectionHelper.GetFieldNames<DialogueLineEventManager>(DialogueLineEventManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.DialogueEventManaging.DialogueLineEventManager>(DREditor.DialogueEventManaging.DialogueLineEventManager)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of DialogueLineEventManager)(DialogueLineEventManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.DialogueEventManaging.DialogueLineEventManager)(DREditor.DialogueEventManaging.DialogueLineEventManager)
+  name.vb: GetFieldNames(Of DialogueLineEventManager)(DialogueLineEventManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueEventManaging.DialogueLineEventManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueEventManaging.DialogueLineEventManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<DialogueLineEventManager>(DialogueLineEventManager)
+  nameWithType: ReflectionHelper.GetFieldValues<DialogueLineEventManager>(DialogueLineEventManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.DialogueEventManaging.DialogueLineEventManager>(DREditor.DialogueEventManaging.DialogueLineEventManager)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of DialogueLineEventManager)(DialogueLineEventManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.DialogueEventManaging.DialogueLineEventManager)(DREditor.DialogueEventManaging.DialogueLineEventManager)
+  name.vb: GetFieldValues(Of DialogueLineEventManager)(DialogueLineEventManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueEventManaging.DialogueLineEventManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueEventManaging.DialogueLineEventManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<DialogueLineEventManager>(DialogueLineEventManager)
+  nameWithType: DeepCopyExtensions.DeepCopy<DialogueLineEventManager>(DialogueLineEventManager)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.DialogueEventManaging.DialogueLineEventManager>(DREditor.DialogueEventManaging.DialogueLineEventManager)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of DialogueLineEventManager)(DialogueLineEventManager)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.DialogueEventManaging.DialogueLineEventManager)(DREditor.DialogueEventManaging.DialogueLineEventManager)
+  name.vb: DeepCopy(Of DialogueLineEventManager)(DialogueLineEventManager)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueEventManaging.DialogueLineEventManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueEventManaging.DialogueLineEventManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueEventManaging.DialogueLineEventManager
+    name: DialogueLineEventManager
+    isExternal: true
+    href: DREditor.DialogueEventManaging.DialogueLineEventManager.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Dialogues.Loading
+  commentId: N:DREditor.Dialogues.Loading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Loading
+  nameWithType: DREditor.Dialogues.Loading
+  fullName: DREditor.Dialogues.Loading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.ShouldProcess*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.ShouldProcess
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager_ShouldProcess_DREditor_Dialogues_Line_
+  name: ShouldProcess
+  nameWithType: DialogueLineEventManager.ShouldProcess
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.ShouldProcess
+- uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineRoutine
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  name: ShouldProcess(Line)
+  nameWithType: ILineRoutine.ShouldProcess(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+    name: ShouldProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+    name: ShouldProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.LineProcessRoutine*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.LineProcessRoutine
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager_LineProcessRoutine_DREditor_Dialogues_Line_
+  name: LineProcessRoutine
+  nameWithType: DialogueLineEventManager.LineProcessRoutine
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.LineProcessRoutine
+- uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  name: LineProcessRoutine(Line)
+  nameWithType: ILineProcessorRoutine.LineProcessRoutine(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+    name: LineProcessRoutine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+    name: LineProcessRoutine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.EvaluateDialogueEvents*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.EvaluateDialogueEvents
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager_EvaluateDialogueEvents_DREditor_Dialogues_Line_
+  name: EvaluateDialogueEvents
+  nameWithType: DialogueLineEventManager.EvaluateDialogueEvents
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.EvaluateDialogueEvents
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager_LineContainsEventWaiters_DREditor_Dialogues_Line_System_Collections_Generic_List_DREditor_Dialogues_Events_IDialogueEvent___
+  name: LineContainsEventWaiters
+  nameWithType: DialogueLineEventManager.LineContainsEventWaiters
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.LineContainsEventWaiters
+- uid: System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}
+  commentId: T:System.Collections.Generic.List{DREditor.Dialogues.Events.IDialogueEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<IDialogueEvent>
+  nameWithType: List<IDialogueEvent>
+  fullName: System.Collections.Generic.List<DREditor.Dialogues.Events.IDialogueEvent>
+  nameWithType.vb: List(Of IDialogueEvent)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Dialogues.Events.IDialogueEvent)
+  name.vb: List(Of IDialogueEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Dialogues.Events.IDialogueEvent
+    name: IDialogueEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/DialogueEvent.cs
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager_SplitTriggeringWaiterEvents_DREditor_Dialogues_Line_System_Collections_Generic_List_DREditor_Dialogues_Events_IDialogueEvent__
+  name: SplitTriggeringWaiterEvents
+  nameWithType: DialogueLineEventManager.SplitTriggeringWaiterEvents
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.SplitTriggeringWaiterEvents
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager_TriggerEventWaiters_System_Collections_Generic_List_DREditor_Dialogues_Events_IDialogueEvent__
+  name: TriggerEventWaiters
+  nameWithType: DialogueLineEventManager.TriggerEventWaiters
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerEventWaiters
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerNonEventWaiters*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerNonEventWaiters
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager_TriggerNonEventWaiters_DREditor_Dialogues_Line_
+  name: TriggerNonEventWaiters
+  nameWithType: DialogueLineEventManager.TriggerNonEventWaiters
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.TriggerNonEventWaiters
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.OnLoadToLineEvents*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.OnLoadToLineEvents
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager_OnLoadToLineEvents_DREditor_Dialogues_Line_
+  name: OnLoadToLineEvents
+  nameWithType: DialogueLineEventManager.OnLoadToLineEvents
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.OnLoadToLineEvents
+- uid: DREditor.Dialogues.Loading.ILoadToLineEvents.OnLoadToLineEvents(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.ILoadToLineEvents.OnLoadToLineEvents(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.ILoadToLineEvents
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEvents.cs
+  name: OnLoadToLineEvents(Line)
+  nameWithType: ILoadToLineEvents.OnLoadToLineEvents(Line)
+  fullName: DREditor.Dialogues.Loading.ILoadToLineEvents.OnLoadToLineEvents(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineEvents.OnLoadToLineEvents(DREditor.Dialogues.Line)
+    name: OnLoadToLineEvents
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEvents.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineEvents.OnLoadToLineEvents(DREditor.Dialogues.Line)
+    name: OnLoadToLineEvents
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineEvents.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.DialogueEventManaging.DialogueLineEventManager.#ctor*
+  commentId: Overload:DREditor.DialogueEventManaging.DialogueLineEventManager.#ctor
+  isExternal: true
+  href: DREditor.DialogueEventManaging.DialogueLineEventManager.html#DREditor_DialogueEventManaging_DialogueLineEventManager__ctor
+  name: DialogueLineEventManager
+  nameWithType: DialogueLineEventManager.DialogueLineEventManager
+  fullName: DREditor.DialogueEventManaging.DialogueLineEventManager.DialogueLineEventManager
+  nameWithType.vb: DialogueLineEventManager.New
+  fullName.vb: DREditor.DialogueEventManaging.DialogueLineEventManager.New
+  name.vb: New

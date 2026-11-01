@@ -1,0 +1,1471 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Actors.ActorManager
+  commentId: T:DREditor.Actors.ActorManager
+  id: ActorManager
+  parent: DREditor.Actors
+  children:
+  - DREditor.Actors.ActorManager.#ctor
+  - DREditor.Actors.ActorManager.Evaluate(DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[])
+  - DREditor.Actors.ActorManager.GetObjectByName(System.String)
+  - DREditor.Actors.ActorManager.GetRegisteredObjects
+  - DREditor.Actors.ActorManager.OnDisable
+  - DREditor.Actors.ActorManager.OnEnable
+  - DREditor.Actors.ActorManager.RegisterObject(DREditor.Talkables.Talkable)
+  - DREditor.Actors.ActorManager.RegisterService``1(``0)
+  - DREditor.Actors.ActorManager.UnregisterObject(DREditor.Talkables.Talkable)
+  - DREditor.Actors.ActorManager.actors
+  - DREditor.Actors.ActorManager.dialogueManager
+  - DREditor.Actors.ActorManager.logActorsNotFound
+  - DREditor.Actors.ActorManager.tutorialCharacterFirstName
+  langs:
+  - csharp
+  - vb
+  name: ActorManager
+  nameWithType: ActorManager
+  fullName: DREditor.Actors.ActorManager
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueObjectManager, IObjectPooler\n\n")]
+
+      public class ActorManager : DialogueObjectManager, IObjectPooler<Talkable>
+    content.vb: >-
+      <ClassHeader("DialogueObjectManager, IObjectPooler" & vbLf & vbLf)>
+
+      Public Class ActorManager Inherits DialogueObjectManager Implements IObjectPooler(Of Talkable)
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueObjectManager
+  implements:
+  - DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}
+  inheritedMembers:
+  - DREditor.Dialogues.DialogueObjectManager.startObject
+  - DREditor.Dialogues.DialogueObjectManager.AttemptSetStartingDialogueObject(DREditor.EventObjects.SelectableObject)
+  - DREditor.Dialogues.DialogueObjectManager.SetStartObjectNull
+  - DREditor.Dialogues.DialogueObjectManager.GetStartObject
+  extensionMethods:
+  - DREditor.Actors.ActorManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Actors.ActorManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Actors.ActorManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueObjectManager, IObjectPooler
+
+- uid: DREditor.Actors.ActorManager.tutorialCharacterFirstName
+  commentId: F:DREditor.Actors.ActorManager.tutorialCharacterFirstName
+  id: tutorialCharacterFirstName
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: tutorialCharacterFirstName
+  nameWithType: ActorManager.tutorialCharacterFirstName
+  fullName: DREditor.Actors.ActorManager.tutorialCharacterFirstName
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected string tutorialCharacterFirstName
+    return:
+      type: System.String
+    content.vb: Protected tutorialCharacterFirstName As String
+- uid: DREditor.Actors.ActorManager.logActorsNotFound
+  commentId: F:DREditor.Actors.ActorManager.logActorsNotFound
+  id: logActorsNotFound
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: logActorsNotFound
+  nameWithType: ActorManager.logActorsNotFound
+  fullName: DREditor.Actors.ActorManager.logActorsNotFound
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool logActorsNotFound
+    return:
+      type: System.Boolean
+    content.vb: Protected logActorsNotFound As Boolean
+- uid: DREditor.Actors.ActorManager.actors
+  commentId: F:DREditor.Actors.ActorManager.actors
+  id: actors
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: actors
+  nameWithType: ActorManager.actors
+  fullName: DREditor.Actors.ActorManager.actors
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected List<Talkable> actors
+    return:
+      type: System.Collections.Generic.List{DREditor.Talkables.Talkable}
+    content.vb: >-
+      <Divider>
+
+      Protected actors As List(Of Talkable)
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Actors.ActorManager.dialogueManager
+  commentId: F:DREditor.Actors.ActorManager.dialogueManager
+  id: dialogueManager
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: dialogueManager
+  nameWithType: ActorManager.dialogueManager
+  fullName: DREditor.Actors.ActorManager.dialogueManager
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected IDialogueManager dialogueManager
+    return:
+      type: DREditor.Dialogues.IDialogueManager
+    content.vb: Protected dialogueManager As IDialogueManager
+- uid: DREditor.Actors.ActorManager.OnEnable
+  commentId: M:DREditor.Actors.ActorManager.OnEnable
+  id: OnEnable
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: ActorManager.OnEnable()
+  fullName: DREditor.Actors.ActorManager.OnEnable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: DREditor.Actors.ActorManager.OnEnable*
+- uid: DREditor.Actors.ActorManager.RegisterService``1(``0)
+  commentId: M:DREditor.Actors.ActorManager.RegisterService``1(``0)
+  id: RegisterService``1(``0)
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: RegisterService<T>(T)
+  nameWithType: ActorManager.RegisterService<T>(T)
+  fullName: DREditor.Actors.ActorManager.RegisterService<T>(T)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: 'protected virtual void RegisterService<T>(T service) where T : class'
+    parameters:
+    - id: service
+      type: '{T}'
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Protected Overridable Sub RegisterService(Of T As Class)(service As T)
+  overload: DREditor.Actors.ActorManager.RegisterService*
+  nameWithType.vb: ActorManager.RegisterService(Of T)(T)
+  fullName.vb: DREditor.Actors.ActorManager.RegisterService(Of T)(T)
+  name.vb: RegisterService(Of T)(T)
+- uid: DREditor.Actors.ActorManager.OnDisable
+  commentId: M:DREditor.Actors.ActorManager.OnDisable
+  id: OnDisable
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: ActorManager.OnDisable()
+  fullName: DREditor.Actors.ActorManager.OnDisable()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: DREditor.Actors.ActorManager.OnDisable*
+- uid: DREditor.Actors.ActorManager.RegisterObject(DREditor.Talkables.Talkable)
+  commentId: M:DREditor.Actors.ActorManager.RegisterObject(DREditor.Talkables.Talkable)
+  id: RegisterObject(DREditor.Talkables.Talkable)
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: RegisterObject(Talkable)
+  nameWithType: ActorManager.RegisterObject(Talkable)
+  fullName: DREditor.Actors.ActorManager.RegisterObject(DREditor.Talkables.Talkable)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void RegisterObject(Talkable obj)
+    parameters:
+    - id: obj
+      type: DREditor.Talkables.Talkable
+      description: ''
+    content.vb: Public Overridable Sub RegisterObject(obj As Talkable)
+  overload: DREditor.Actors.ActorManager.RegisterObject*
+  implements:
+  - DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.RegisterObject(DREditor.Talkables.Talkable)
+- uid: DREditor.Actors.ActorManager.UnregisterObject(DREditor.Talkables.Talkable)
+  commentId: M:DREditor.Actors.ActorManager.UnregisterObject(DREditor.Talkables.Talkable)
+  id: UnregisterObject(DREditor.Talkables.Talkable)
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: UnregisterObject(Talkable)
+  nameWithType: ActorManager.UnregisterObject(Talkable)
+  fullName: DREditor.Actors.ActorManager.UnregisterObject(DREditor.Talkables.Talkable)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void UnregisterObject(Talkable obj)
+    parameters:
+    - id: obj
+      type: DREditor.Talkables.Talkable
+      description: ''
+    content.vb: Public Overridable Sub UnregisterObject(obj As Talkable)
+  overload: DREditor.Actors.ActorManager.UnregisterObject*
+  implements:
+  - DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.UnregisterObject(DREditor.Talkables.Talkable)
+- uid: DREditor.Actors.ActorManager.Evaluate(DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[])
+  commentId: M:DREditor.Actors.ActorManager.Evaluate(DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[])
+  id: Evaluate(DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[])
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(Talkable, Dialogue[])
+  nameWithType: ActorManager.Evaluate(Talkable, Dialogue[])
+  fullName: DREditor.Actors.ActorManager.Evaluate(DREditor.Talkables.Talkable, DREditor.Dialogues.Dialogue[])
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Evaluate(Talkable talkable, Dialogue[] Conversation)
+    parameters:
+    - id: talkable
+      type: DREditor.Talkables.Talkable
+      description: ''
+    - id: Conversation
+      type: DREditor.Dialogues.Dialogue[]
+      description: ''
+    content.vb: Protected Overridable Sub Evaluate(talkable As Talkable, Conversation As Dialogue())
+  overload: DREditor.Actors.ActorManager.Evaluate*
+  nameWithType.vb: ActorManager.Evaluate(Talkable, Dialogue())
+  fullName.vb: DREditor.Actors.ActorManager.Evaluate(DREditor.Talkables.Talkable, DREditor.Dialogues.Dialogue())
+  name.vb: Evaluate(Talkable, Dialogue())
+- uid: DREditor.Actors.ActorManager.GetObjectByName(System.String)
+  commentId: M:DREditor.Actors.ActorManager.GetObjectByName(System.String)
+  id: GetObjectByName(System.String)
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: GetObjectByName(string)
+  nameWithType: ActorManager.GetObjectByName(string)
+  fullName: DREditor.Actors.ActorManager.GetObjectByName(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual Talkable GetObjectByName(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    return:
+      type: DREditor.Talkables.Talkable
+      description: ''
+    content.vb: Public Overridable Function GetObjectByName(name As String) As Talkable
+  overload: DREditor.Actors.ActorManager.GetObjectByName*
+  implements:
+  - DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetObjectByName(System.String)
+  nameWithType.vb: ActorManager.GetObjectByName(String)
+  fullName.vb: DREditor.Actors.ActorManager.GetObjectByName(String)
+  name.vb: GetObjectByName(String)
+- uid: DREditor.Actors.ActorManager.GetRegisteredObjects
+  commentId: M:DREditor.Actors.ActorManager.GetRegisteredObjects
+  id: GetRegisteredObjects
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: GetRegisteredObjects()
+  nameWithType: ActorManager.GetRegisteredObjects()
+  fullName: DREditor.Actors.ActorManager.GetRegisteredObjects()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual List<Talkable> GetRegisteredObjects()
+    return:
+      type: System.Collections.Generic.List{DREditor.Talkables.Talkable}
+      description: ''
+    content.vb: Public Overridable Function GetRegisteredObjects() As List(Of Talkable)
+  overload: DREditor.Actors.ActorManager.GetRegisteredObjects*
+  implements:
+  - DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetRegisteredObjects
+- uid: DREditor.Actors.ActorManager.#ctor
+  commentId: M:DREditor.Actors.ActorManager.#ctor
+  id: '#ctor'
+  parent: DREditor.Actors.ActorManager
+  langs:
+  - csharp
+  - vb
+  name: ActorManager()
+  nameWithType: ActorManager.ActorManager()
+  fullName: DREditor.Actors.ActorManager.ActorManager()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/ActorManager.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors
+  syntax:
+    content: public ActorManager()
+    content.vb: Public Sub New()
+  overload: DREditor.Actors.ActorManager.#ctor*
+  nameWithType.vb: ActorManager.New()
+  fullName.vb: DREditor.Actors.ActorManager.New()
+  name.vb: New()
+references:
+- uid: DREditor.Actors
+  commentId: N:DREditor.Actors
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors
+  nameWithType: DREditor.Actors
+  fullName: DREditor.Actors
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueObjectManager
+  commentId: T:DREditor.Dialogues.DialogueObjectManager
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  name: DialogueObjectManager
+  nameWithType: DialogueObjectManager
+  fullName: DREditor.Dialogues.DialogueObjectManager
+- uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}
+  commentId: T:DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}
+  parent: DREditor.Services
+  definition: DREditor.Services.IObjectPooler`1
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: IObjectPooler<Talkable>
+  nameWithType: IObjectPooler<Talkable>
+  fullName: DREditor.Services.IObjectPooler<DREditor.Talkables.Talkable>
+  nameWithType.vb: IObjectPooler(Of Talkable)
+  fullName.vb: DREditor.Services.IObjectPooler(Of DREditor.Talkables.Talkable)
+  name.vb: IObjectPooler(Of Talkable)
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler`1
+    name: IObjectPooler
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: <
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler`1
+    name: IObjectPooler
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: )
+- uid: DREditor.Dialogues.DialogueObjectManager.startObject
+  commentId: F:DREditor.Dialogues.DialogueObjectManager.startObject
+  parent: DREditor.Dialogues.DialogueObjectManager
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  name: startObject
+  nameWithType: DialogueObjectManager.startObject
+  fullName: DREditor.Dialogues.DialogueObjectManager.startObject
+- uid: DREditor.Dialogues.DialogueObjectManager.AttemptSetStartingDialogueObject(DREditor.EventObjects.SelectableObject)
+  commentId: M:DREditor.Dialogues.DialogueObjectManager.AttemptSetStartingDialogueObject(DREditor.EventObjects.SelectableObject)
+  parent: DREditor.Dialogues.DialogueObjectManager
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  name: AttemptSetStartingDialogueObject(SelectableObject)
+  nameWithType: DialogueObjectManager.AttemptSetStartingDialogueObject(SelectableObject)
+  fullName: DREditor.Dialogues.DialogueObjectManager.AttemptSetStartingDialogueObject(DREditor.EventObjects.SelectableObject)
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueObjectManager.AttemptSetStartingDialogueObject(DREditor.EventObjects.SelectableObject)
+    name: AttemptSetStartingDialogueObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  - name: (
+  - uid: DREditor.EventObjects.SelectableObject
+    name: SelectableObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueObjectManager.AttemptSetStartingDialogueObject(DREditor.EventObjects.SelectableObject)
+    name: AttemptSetStartingDialogueObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  - name: (
+  - uid: DREditor.EventObjects.SelectableObject
+    name: SelectableObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObject.cs
+  - name: )
+- uid: DREditor.Dialogues.DialogueObjectManager.SetStartObjectNull
+  commentId: M:DREditor.Dialogues.DialogueObjectManager.SetStartObjectNull
+  parent: DREditor.Dialogues.DialogueObjectManager
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  name: SetStartObjectNull()
+  nameWithType: DialogueObjectManager.SetStartObjectNull()
+  fullName: DREditor.Dialogues.DialogueObjectManager.SetStartObjectNull()
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueObjectManager.SetStartObjectNull
+    name: SetStartObjectNull
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueObjectManager.SetStartObjectNull
+    name: SetStartObjectNull
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  - name: (
+  - name: )
+- uid: DREditor.Dialogues.DialogueObjectManager.GetStartObject
+  commentId: M:DREditor.Dialogues.DialogueObjectManager.GetStartObject
+  parent: DREditor.Dialogues.DialogueObjectManager
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  name: GetStartObject()
+  nameWithType: DialogueObjectManager.GetStartObject()
+  fullName: DREditor.Dialogues.DialogueObjectManager.GetStartObject()
+  spec.csharp:
+  - uid: DREditor.Dialogues.DialogueObjectManager.GetStartObject
+    name: GetStartObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.DialogueObjectManager.GetStartObject
+    name: GetStartObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueObjectManager.cs
+  - name: (
+  - name: )
+- uid: DREditor.Actors.ActorManager.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ActorManager>(ActorManager)
+  nameWithType: ReflectionHelper.GetFieldNames<ActorManager>(ActorManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Actors.ActorManager>(DREditor.Actors.ActorManager)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ActorManager)(ActorManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Actors.ActorManager)(DREditor.Actors.ActorManager)
+  name.vb: GetFieldNames(Of ActorManager)(ActorManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.ActorManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.ActorManager)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+- uid: DREditor.Actors.ActorManager.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ActorManager>(ActorManager)
+  nameWithType: ReflectionHelper.GetFieldValues<ActorManager>(ActorManager)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Actors.ActorManager>(DREditor.Actors.ActorManager)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ActorManager)(ActorManager)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Actors.ActorManager)(DREditor.Actors.ActorManager)
+  name.vb: GetFieldValues(Of ActorManager)(ActorManager)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.ActorManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.ActorManager)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+- uid: DREditor.Actors.ActorManager.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ActorManager>(ActorManager)
+  nameWithType: DeepCopyExtensions.DeepCopy<ActorManager>(ActorManager)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Actors.ActorManager>(DREditor.Actors.ActorManager)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ActorManager)(ActorManager)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Actors.ActorManager)(DREditor.Actors.ActorManager)
+  name.vb: DeepCopy(Of ActorManager)(ActorManager)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.ActorManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.ActorManager)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.ActorManager
+    name: ActorManager
+    isExternal: true
+    href: DREditor.Actors.ActorManager.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Services.IObjectPooler`1
+  commentId: T:DREditor.Services.IObjectPooler`1
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: IObjectPooler<T>
+  nameWithType: IObjectPooler<T>
+  fullName: DREditor.Services.IObjectPooler<T>
+  nameWithType.vb: IObjectPooler(Of T)
+  fullName.vb: DREditor.Services.IObjectPooler(Of T)
+  name.vb: IObjectPooler(Of T)
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler`1
+    name: IObjectPooler
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler`1
+    name: IObjectPooler
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.List{DREditor.Talkables.Talkable}
+  commentId: T:System.Collections.Generic.List{DREditor.Talkables.Talkable}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Talkable>
+  nameWithType: List<Talkable>
+  fullName: System.Collections.Generic.List<DREditor.Talkables.Talkable>
+  nameWithType.vb: List(Of Talkable)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Talkables.Talkable)
+  name.vb: List(Of Talkable)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Dialogues.IDialogueManager
+  commentId: T:DREditor.Dialogues.IDialogueManager
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueManager.cs
+  name: IDialogueManager
+  nameWithType: IDialogueManager
+  fullName: DREditor.Dialogues.IDialogueManager
+- uid: DREditor.Actors.ActorManager.OnEnable*
+  commentId: Overload:DREditor.Actors.ActorManager.OnEnable
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager_OnEnable
+  name: OnEnable
+  nameWithType: ActorManager.OnEnable
+  fullName: DREditor.Actors.ActorManager.OnEnable
+- uid: DREditor.Actors.ActorManager.RegisterService*
+  commentId: Overload:DREditor.Actors.ActorManager.RegisterService
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager_RegisterService__1___0_
+  name: RegisterService
+  nameWithType: ActorManager.RegisterService
+  fullName: DREditor.Actors.ActorManager.RegisterService
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DREditor.Actors.ActorManager.OnDisable*
+  commentId: Overload:DREditor.Actors.ActorManager.OnDisable
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager_OnDisable
+  name: OnDisable
+  nameWithType: ActorManager.OnDisable
+  fullName: DREditor.Actors.ActorManager.OnDisable
+- uid: DREditor.Actors.ActorManager.RegisterObject*
+  commentId: Overload:DREditor.Actors.ActorManager.RegisterObject
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager_RegisterObject_DREditor_Talkables_Talkable_
+  name: RegisterObject
+  nameWithType: ActorManager.RegisterObject
+  fullName: DREditor.Actors.ActorManager.RegisterObject
+- uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.RegisterObject(DREditor.Talkables.Talkable)
+  commentId: M:DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.RegisterObject(DREditor.Talkables.Talkable)
+  parent: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}
+  definition: DREditor.Services.IObjectPooler`1.RegisterObject(`0)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: RegisterObject(Talkable)
+  nameWithType: IObjectPooler<Talkable>.RegisterObject(Talkable)
+  fullName: DREditor.Services.IObjectPooler<DREditor.Talkables.Talkable>.RegisterObject(DREditor.Talkables.Talkable)
+  nameWithType.vb: IObjectPooler(Of Talkable).RegisterObject(Talkable)
+  fullName.vb: DREditor.Services.IObjectPooler(Of DREditor.Talkables.Talkable).RegisterObject(DREditor.Talkables.Talkable)
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.RegisterObject(DREditor.Talkables.Talkable)
+    name: RegisterObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.RegisterObject(DREditor.Talkables.Talkable)
+    name: RegisterObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: )
+- uid: DREditor.Talkables.Talkable
+  commentId: T:DREditor.Talkables.Talkable
+  parent: DREditor.Talkables
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: Talkable
+  nameWithType: Talkable
+  fullName: DREditor.Talkables.Talkable
+- uid: DREditor.Services.IObjectPooler`1.RegisterObject(`0)
+  commentId: M:DREditor.Services.IObjectPooler`1.RegisterObject(`0)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: RegisterObject(T)
+  nameWithType: IObjectPooler<T>.RegisterObject(T)
+  fullName: DREditor.Services.IObjectPooler<T>.RegisterObject(T)
+  nameWithType.vb: IObjectPooler(Of T).RegisterObject(T)
+  fullName.vb: DREditor.Services.IObjectPooler(Of T).RegisterObject(T)
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler`1.RegisterObject(`0)
+    name: RegisterObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler`1.RegisterObject(`0)
+    name: RegisterObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Talkables
+  commentId: N:DREditor.Talkables
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Talkables
+  nameWithType: DREditor.Talkables
+  fullName: DREditor.Talkables
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Talkables
+    name: Talkables
+    isExternal: true
+    href: DREditor.Talkables.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Talkables
+    name: Talkables
+    isExternal: true
+    href: DREditor.Talkables.html
+- uid: DREditor.Actors.ActorManager.UnregisterObject*
+  commentId: Overload:DREditor.Actors.ActorManager.UnregisterObject
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager_UnregisterObject_DREditor_Talkables_Talkable_
+  name: UnregisterObject
+  nameWithType: ActorManager.UnregisterObject
+  fullName: DREditor.Actors.ActorManager.UnregisterObject
+- uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.UnregisterObject(DREditor.Talkables.Talkable)
+  commentId: M:DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.UnregisterObject(DREditor.Talkables.Talkable)
+  parent: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}
+  definition: DREditor.Services.IObjectPooler`1.UnregisterObject(`0)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: UnregisterObject(Talkable)
+  nameWithType: IObjectPooler<Talkable>.UnregisterObject(Talkable)
+  fullName: DREditor.Services.IObjectPooler<DREditor.Talkables.Talkable>.UnregisterObject(DREditor.Talkables.Talkable)
+  nameWithType.vb: IObjectPooler(Of Talkable).UnregisterObject(Talkable)
+  fullName.vb: DREditor.Services.IObjectPooler(Of DREditor.Talkables.Talkable).UnregisterObject(DREditor.Talkables.Talkable)
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.UnregisterObject(DREditor.Talkables.Talkable)
+    name: UnregisterObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.UnregisterObject(DREditor.Talkables.Talkable)
+    name: UnregisterObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - uid: DREditor.Talkables.Talkable
+    name: Talkable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  - name: )
+- uid: DREditor.Services.IObjectPooler`1.UnregisterObject(`0)
+  commentId: M:DREditor.Services.IObjectPooler`1.UnregisterObject(`0)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: UnregisterObject(T)
+  nameWithType: IObjectPooler<T>.UnregisterObject(T)
+  fullName: DREditor.Services.IObjectPooler<T>.UnregisterObject(T)
+  nameWithType.vb: IObjectPooler(Of T).UnregisterObject(T)
+  fullName.vb: DREditor.Services.IObjectPooler(Of T).UnregisterObject(T)
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler`1.UnregisterObject(`0)
+    name: UnregisterObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler`1.UnregisterObject(`0)
+    name: UnregisterObject
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Actors.ActorManager.Evaluate*
+  commentId: Overload:DREditor.Actors.ActorManager.Evaluate
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager_Evaluate_DREditor_Talkables_Talkable_DREditor_Dialogues_Dialogue___
+  name: Evaluate
+  nameWithType: ActorManager.Evaluate
+  fullName: DREditor.Actors.ActorManager.Evaluate
+- uid: DREditor.Dialogues.Dialogue[]
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  name: Dialogue[]
+  nameWithType: Dialogue[]
+  fullName: DREditor.Dialogues.Dialogue[]
+  nameWithType.vb: Dialogue()
+  fullName.vb: DREditor.Dialogues.Dialogue()
+  name.vb: Dialogue()
+  spec.csharp:
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: DREditor.Dialogues.Dialogue
+    name: Dialogue
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs
+  - name: (
+  - name: )
+- uid: DREditor.Actors.ActorManager.GetObjectByName*
+  commentId: Overload:DREditor.Actors.ActorManager.GetObjectByName
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager_GetObjectByName_System_String_
+  name: GetObjectByName
+  nameWithType: ActorManager.GetObjectByName
+  fullName: DREditor.Actors.ActorManager.GetObjectByName
+- uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetObjectByName(System.String)
+  commentId: M:DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetObjectByName(System.String)
+  parent: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}
+  definition: DREditor.Services.IObjectPooler`1.GetObjectByName(System.String)
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: GetObjectByName(string)
+  nameWithType: IObjectPooler<Talkable>.GetObjectByName(string)
+  fullName: DREditor.Services.IObjectPooler<DREditor.Talkables.Talkable>.GetObjectByName(string)
+  nameWithType.vb: IObjectPooler(Of Talkable).GetObjectByName(String)
+  fullName.vb: DREditor.Services.IObjectPooler(Of DREditor.Talkables.Talkable).GetObjectByName(String)
+  name.vb: GetObjectByName(String)
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetObjectByName(System.String)
+    name: GetObjectByName
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetObjectByName(System.String)
+    name: GetObjectByName
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.Services.IObjectPooler`1.GetObjectByName(System.String)
+  commentId: M:DREditor.Services.IObjectPooler`1.GetObjectByName(System.String)
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: GetObjectByName(string)
+  nameWithType: IObjectPooler<T>.GetObjectByName(string)
+  fullName: DREditor.Services.IObjectPooler<T>.GetObjectByName(string)
+  nameWithType.vb: IObjectPooler(Of T).GetObjectByName(String)
+  fullName.vb: DREditor.Services.IObjectPooler(Of T).GetObjectByName(String)
+  name.vb: GetObjectByName(String)
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler`1.GetObjectByName(System.String)
+    name: GetObjectByName
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler`1.GetObjectByName(System.String)
+    name: GetObjectByName
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.Actors.ActorManager.GetRegisteredObjects*
+  commentId: Overload:DREditor.Actors.ActorManager.GetRegisteredObjects
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager_GetRegisteredObjects
+  name: GetRegisteredObjects
+  nameWithType: ActorManager.GetRegisteredObjects
+  fullName: DREditor.Actors.ActorManager.GetRegisteredObjects
+- uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetRegisteredObjects
+  commentId: M:DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetRegisteredObjects
+  parent: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}
+  definition: DREditor.Services.IObjectPooler`1.GetRegisteredObjects
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: GetRegisteredObjects()
+  nameWithType: IObjectPooler<Talkable>.GetRegisteredObjects()
+  fullName: DREditor.Services.IObjectPooler<DREditor.Talkables.Talkable>.GetRegisteredObjects()
+  nameWithType.vb: IObjectPooler(Of Talkable).GetRegisteredObjects()
+  fullName.vb: DREditor.Services.IObjectPooler(Of DREditor.Talkables.Talkable).GetRegisteredObjects()
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetRegisteredObjects
+    name: GetRegisteredObjects
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler{DREditor.Talkables.Talkable}.GetRegisteredObjects
+    name: GetRegisteredObjects
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: )
+- uid: DREditor.Services.IObjectPooler`1.GetRegisteredObjects
+  commentId: M:DREditor.Services.IObjectPooler`1.GetRegisteredObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  name: GetRegisteredObjects()
+  nameWithType: IObjectPooler<T>.GetRegisteredObjects()
+  fullName: DREditor.Services.IObjectPooler<T>.GetRegisteredObjects()
+  nameWithType.vb: IObjectPooler(Of T).GetRegisteredObjects()
+  fullName.vb: DREditor.Services.IObjectPooler(Of T).GetRegisteredObjects()
+  spec.csharp:
+  - uid: DREditor.Services.IObjectPooler`1.GetRegisteredObjects
+    name: GetRegisteredObjects
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IObjectPooler`1.GetRegisteredObjects
+    name: GetRegisteredObjects
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IObjectPooler.cs
+  - name: (
+  - name: )
+- uid: DREditor.Actors.ActorManager.#ctor*
+  commentId: Overload:DREditor.Actors.ActorManager.#ctor
+  isExternal: true
+  href: DREditor.Actors.ActorManager.html#DREditor_Actors_ActorManager__ctor
+  name: ActorManager
+  nameWithType: ActorManager.ActorManager
+  fullName: DREditor.Actors.ActorManager.ActorManager
+  nameWithType.vb: ActorManager.New
+  fullName.vb: DREditor.Actors.ActorManager.New
+  name.vb: New

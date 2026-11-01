@@ -1,0 +1,2036 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer
+  commentId: T:DREditor.DialogueMechanics.CGs.CGPlayer
+  id: CGPlayer
+  parent: DREditor.DialogueMechanics.CGs
+  children:
+  - DREditor.DialogueMechanics.CGs.CGPlayer.#ctor
+  - DREditor.DialogueMechanics.CGs.CGPlayer.BufferFadeOut
+  - DREditor.DialogueMechanics.CGs.CGPlayer.CGEndFadeOutTime
+  - DREditor.DialogueMechanics.CGs.CGPlayer.CGEndFadeToTime
+  - DREditor.DialogueMechanics.CGs.CGPlayer.CGEventProcess
+  - DREditor.DialogueMechanics.CGs.CGPlayer.CGStartFadeOutTime
+  - DREditor.DialogueMechanics.CGs.CGPlayer.CGStartFadeToTime
+  - DREditor.DialogueMechanics.CGs.CGPlayer.CheckFadeToFlashback
+  - DREditor.DialogueMechanics.CGs.CGPlayer.EndCGRoutine(DREditor.Dialogues.Events.CGDisplay)
+  - DREditor.DialogueMechanics.CGs.CGPlayer.EvaluateEventState
+  - DREditor.DialogueMechanics.CGs.CGPlayer.FadeOutOnDark
+  - DREditor.DialogueMechanics.CGs.CGPlayer.InCGStateMode
+  - DREditor.DialogueMechanics.CGs.CGPlayer.InMiddleOfCG
+  - DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent(System.Object,System.Boolean)
+  - DREditor.DialogueMechanics.CGs.CGPlayer.PrepareCGUI
+  - DREditor.DialogueMechanics.CGs.CGPlayer.PreparingStartCGRoutine
+  - DREditor.DialogueMechanics.CGs.CGPlayer.SetUIVisibleState
+  - DREditor.DialogueMechanics.CGs.CGPlayer.StartFadeIn
+  - DREditor.DialogueMechanics.CGs.CGPlayer.StartingCG
+  - DREditor.DialogueMechanics.CGs.CGPlayer.TransitionOffState
+  - DREditor.DialogueMechanics.CGs.CGPlayer.cgDisplayHandler
+  - DREditor.DialogueMechanics.CGs.CGPlayer.data
+  - DREditor.DialogueMechanics.CGs.CGPlayer.flashbackEndFadeOutTime
+  - DREditor.DialogueMechanics.CGs.CGPlayer.flashbackEndFadeToTime
+  - DREditor.DialogueMechanics.CGs.CGPlayer.flashbackStartFadeOutTime
+  - DREditor.DialogueMechanics.CGs.CGPlayer.flashbackStartFadeToTime
+  - DREditor.DialogueMechanics.CGs.CGPlayer.isLoadingFile
+  - DREditor.DialogueMechanics.CGs.CGPlayer.onFlashbackEnd
+  - DREditor.DialogueMechanics.CGs.CGPlayer.onFlashbackStart
+  - DREditor.DialogueMechanics.CGs.CGPlayer.trialBufferFadeOutTime
+  langs:
+  - csharp
+  - vb
+  name: CGPlayer
+  nameWithType: CGPlayer
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("CGHandler, CGHandlerBase, ICGHandler, IToTitleScreen\n\n")]
+
+      public class CGPlayer : CGHandler, IToTitleScreen, ICGHandler
+    content.vb: >-
+      <ClassHeader("CGHandler, CGHandlerBase, ICGHandler, IToTitleScreen" & vbLf & vbLf)>
+
+      Public Class CGPlayer Inherits CGHandler Implements IToTitleScreen, ICGHandler
+  inheritance:
+  - System.Object
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase
+  - DREditor.DialogueMechanics.CGs.CGHandler
+  implements:
+  - DREditor.Services.IToTitleScreen
+  - DREditor.DialogueMechanics.CGs.ICGHandler
+  inheritedMembers:
+  - DREditor.DialogueMechanics.CGs.CGHandler.showCGStateEventString
+  - DREditor.DialogueMechanics.CGs.CGHandler.hideCGStateEventString
+  - DREditor.DialogueMechanics.CGs.CGHandler.allNameplatesTransparent
+  - DREditor.DialogueMechanics.CGs.CGHandler.showMainUIEventString
+  - DREditor.DialogueMechanics.CGs.CGHandler.hideMainUIEventString
+  - DREditor.DialogueMechanics.CGs.CGHandler.hideNonCGUIWaitTime
+  - DREditor.DialogueMechanics.CGs.CGHandler.stopBlurVisionEventString
+  - DREditor.DialogueMechanics.CGs.CGHandler.endState
+  - DREditor.DialogueMechanics.CGs.CGHandler.OnEnable
+  - DREditor.DialogueMechanics.CGs.CGHandler.OnDisable
+  - DREditor.DialogueMechanics.CGs.CGHandler.StartCGEvent(System.Object)
+  - DREditor.DialogueMechanics.CGs.CGHandler.EndCGEvent(System.Object)
+  - DREditor.DialogueMechanics.CGs.CGHandler.SetNameplatesTransparent
+  - DREditor.DialogueMechanics.CGs.CGHandler.ResolveCGEvent
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.inCGStateMode
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.cgUIVisible
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.cgDialogueUIVisible
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.cgStateEnded
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.inTrialMode
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.isGoingToMainMenu
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.Start
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.Initialize
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.TurnOffOtherHandlers
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.OtherHandlersActive
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.GetOtherActiveHandlers
+  - DREditor.DialogueMechanics.CGs.CGHandlerBase.ToTitleScreen
+  extensionMethods:
+  - DREditor.DialogueMechanics.CGs.CGPlayer.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.DialogueMechanics.CGs.CGPlayer.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.DialogueMechanics.CGs.CGPlayer.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        CGHandler, CGHandlerBase, ICGHandler, IToTitleScreen
+
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.cgDisplayHandler
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.cgDisplayHandler
+  id: cgDisplayHandler
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: cgDisplayHandler
+  nameWithType: CGPlayer.cgDisplayHandler
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.cgDisplayHandler
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected CGDisplayHandler cgDisplayHandler
+    return:
+      type: DREditor.DialogueMechanics.CGs.CGDisplayHandler
+    content.vb: >-
+      <Divider>
+
+      Protected cgDisplayHandler As CGDisplayHandler
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.isLoadingFile
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.isLoadingFile
+  id: isLoadingFile
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: isLoadingFile
+  nameWithType: CGPlayer.isLoadingFile
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.isLoadingFile
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isLoadingFile
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isLoadingFile As BoolWithEvent
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.CGStartFadeToTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.CGStartFadeToTime
+  id: CGStartFadeToTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: CGStartFadeToTime
+  nameWithType: CGPlayer.CGStartFadeToTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CGStartFadeToTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected float CGStartFadeToTime
+    return:
+      type: System.Single
+    content.vb: >-
+      <Divider>
+
+      Protected CGStartFadeToTime As Single
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.CGStartFadeOutTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.CGStartFadeOutTime
+  id: CGStartFadeOutTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: CGStartFadeOutTime
+  nameWithType: CGPlayer.CGStartFadeOutTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CGStartFadeOutTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected float CGStartFadeOutTime
+    return:
+      type: System.Single
+    content.vb: Protected CGStartFadeOutTime As Single
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.CGEndFadeToTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.CGEndFadeToTime
+  id: CGEndFadeToTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: CGEndFadeToTime
+  nameWithType: CGPlayer.CGEndFadeToTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CGEndFadeToTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected float CGEndFadeToTime
+    return:
+      type: System.Single
+    content.vb: Protected CGEndFadeToTime As Single
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.CGEndFadeOutTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.CGEndFadeOutTime
+  id: CGEndFadeOutTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: CGEndFadeOutTime
+  nameWithType: CGPlayer.CGEndFadeOutTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CGEndFadeOutTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected float CGEndFadeOutTime
+    return:
+      type: System.Single
+    content.vb: Protected CGEndFadeOutTime As Single
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.trialBufferFadeOutTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.trialBufferFadeOutTime
+  id: trialBufferFadeOutTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: trialBufferFadeOutTime
+  nameWithType: CGPlayer.trialBufferFadeOutTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.trialBufferFadeOutTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected float trialBufferFadeOutTime
+    return:
+      type: System.Single
+    content.vb: Protected trialBufferFadeOutTime As Single
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.flashbackStartFadeToTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.flashbackStartFadeToTime
+  id: flashbackStartFadeToTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: flashbackStartFadeToTime
+  nameWithType: CGPlayer.flashbackStartFadeToTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.flashbackStartFadeToTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected float flashbackStartFadeToTime
+    return:
+      type: System.Single
+    content.vb: >-
+      <Divider>
+
+      Protected flashbackStartFadeToTime As Single
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.flashbackStartFadeOutTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.flashbackStartFadeOutTime
+  id: flashbackStartFadeOutTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: flashbackStartFadeOutTime
+  nameWithType: CGPlayer.flashbackStartFadeOutTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.flashbackStartFadeOutTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected float flashbackStartFadeOutTime
+    return:
+      type: System.Single
+    content.vb: Protected flashbackStartFadeOutTime As Single
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.flashbackEndFadeToTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.flashbackEndFadeToTime
+  id: flashbackEndFadeToTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: flashbackEndFadeToTime
+  nameWithType: CGPlayer.flashbackEndFadeToTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.flashbackEndFadeToTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected float flashbackEndFadeToTime
+    return:
+      type: System.Single
+    content.vb: Protected flashbackEndFadeToTime As Single
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.flashbackEndFadeOutTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.flashbackEndFadeOutTime
+  id: flashbackEndFadeOutTime
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: flashbackEndFadeOutTime
+  nameWithType: CGPlayer.flashbackEndFadeOutTime
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.flashbackEndFadeOutTime
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected float flashbackEndFadeOutTime
+    return:
+      type: System.Single
+    content.vb: Protected flashbackEndFadeOutTime As Single
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.onFlashbackStart
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.onFlashbackStart
+  id: onFlashbackStart
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: onFlashbackStart
+  nameWithType: CGPlayer.onFlashbackStart
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.onFlashbackStart
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  syntax:
+    content: protected UnityEvent onFlashbackStart
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: Protected onFlashbackStart As UnityEvent
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.onFlashbackEnd
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.onFlashbackEnd
+  id: onFlashbackEnd
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: onFlashbackEnd
+  nameWithType: CGPlayer.onFlashbackEnd
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.onFlashbackEnd
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  syntax:
+    content: protected UnityEvent onFlashbackEnd
+    return:
+      type: UnityEngine.Events.UnityEvent
+    content.vb: Protected onFlashbackEnd As UnityEvent
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.data
+  commentId: F:DREditor.DialogueMechanics.CGs.CGPlayer.data
+  id: data
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: data
+  nameWithType: CGPlayer.data
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.data
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected CGDisplay data
+    return:
+      type: DREditor.Dialogues.Events.CGDisplay
+    content.vb: Protected data As CGDisplay
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent(System.Object,System.Boolean)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent(System.Object,System.Boolean)
+  id: PlayCGEvent(System.Object,System.Boolean)
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: PlayCGEvent(object, bool)
+  nameWithType: CGPlayer.PlayCGEvent(object, bool)
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent(object, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected override IEnumerator PlayCGEvent(object o, bool endState)
+    parameters:
+    - id: o
+      type: System.Object
+      description: ''
+    - id: endState
+      type: System.Boolean
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Protected Overrides Function PlayCGEvent(o As Object, endState As Boolean) As IEnumerator
+  overridden: DREditor.DialogueMechanics.CGs.CGHandler.PlayCGEvent(System.Object,System.Boolean)
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent*
+  nameWithType.vb: CGPlayer.PlayCGEvent(Object, Boolean)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent(Object, Boolean)
+  name.vb: PlayCGEvent(Object, Boolean)
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.CGEventProcess
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.CGEventProcess
+  id: CGEventProcess
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: CGEventProcess()
+  nameWithType: CGPlayer.CGEventProcess()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CGEventProcess()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator CGEventProcess()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function CGEventProcess() As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.CGEventProcess*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.SetUIVisibleState
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.SetUIVisibleState
+  id: SetUIVisibleState
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: SetUIVisibleState()
+  nameWithType: CGPlayer.SetUIVisibleState()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.SetUIVisibleState()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool SetUIVisibleState()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function SetUIVisibleState() As Boolean
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.SetUIVisibleState*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.PreparingStartCGRoutine
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.PreparingStartCGRoutine
+  id: PreparingStartCGRoutine
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: PreparingStartCGRoutine()
+  nameWithType: CGPlayer.PreparingStartCGRoutine()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.PreparingStartCGRoutine()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator PreparingStartCGRoutine()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function PreparingStartCGRoutine() As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.PreparingStartCGRoutine*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.CheckFadeToFlashback
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.CheckFadeToFlashback
+  id: CheckFadeToFlashback
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: CheckFadeToFlashback()
+  nameWithType: CGPlayer.CheckFadeToFlashback()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CheckFadeToFlashback()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator CheckFadeToFlashback()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function CheckFadeToFlashback() As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.CheckFadeToFlashback*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.PrepareCGUI
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.PrepareCGUI
+  id: PrepareCGUI
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: PrepareCGUI()
+  nameWithType: CGPlayer.PrepareCGUI()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.PrepareCGUI()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void PrepareCGUI()
+    content.vb: Protected Overridable Sub PrepareCGUI()
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.PrepareCGUI*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.StartFadeIn
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.StartFadeIn
+  id: StartFadeIn
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: StartFadeIn()
+  nameWithType: CGPlayer.StartFadeIn()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.StartFadeIn()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator StartFadeIn()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function StartFadeIn() As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.StartFadeIn*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.EvaluateEventState
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.EvaluateEventState
+  id: EvaluateEventState
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: EvaluateEventState()
+  nameWithType: CGPlayer.EvaluateEventState()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.EvaluateEventState()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator EvaluateEventState()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function EvaluateEventState() As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.EvaluateEventState*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.StartingCG
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.StartingCG
+  id: StartingCG
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: StartingCG()
+  nameWithType: CGPlayer.StartingCG()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.StartingCG()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool StartingCG()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function StartingCG() As Boolean
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.StartingCG*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.InMiddleOfCG
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.InMiddleOfCG
+  id: InMiddleOfCG
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: InMiddleOfCG()
+  nameWithType: CGPlayer.InMiddleOfCG()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.InMiddleOfCG()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool InMiddleOfCG()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function InMiddleOfCG() As Boolean
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.InMiddleOfCG*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.EndCGRoutine(DREditor.Dialogues.Events.CGDisplay)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.EndCGRoutine(DREditor.Dialogues.Events.CGDisplay)
+  id: EndCGRoutine(DREditor.Dialogues.Events.CGDisplay)
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: EndCGRoutine(CGDisplay)
+  nameWithType: CGPlayer.EndCGRoutine(CGDisplay)
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.EndCGRoutine(DREditor.Dialogues.Events.CGDisplay)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator EndCGRoutine(CGDisplay data)
+    parameters:
+    - id: data
+      type: DREditor.Dialogues.Events.CGDisplay
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function EndCGRoutine(data As CGDisplay) As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.EndCGRoutine*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.FadeOutOnDark
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.FadeOutOnDark
+  id: FadeOutOnDark
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: FadeOutOnDark()
+  nameWithType: CGPlayer.FadeOutOnDark()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.FadeOutOnDark()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator FadeOutOnDark()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function FadeOutOnDark() As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.FadeOutOnDark*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.BufferFadeOut
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.BufferFadeOut
+  id: BufferFadeOut
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: BufferFadeOut()
+  nameWithType: CGPlayer.BufferFadeOut()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.BufferFadeOut()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator BufferFadeOut()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function BufferFadeOut() As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.BufferFadeOut*
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.TransitionOffState
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.TransitionOffState
+  id: TransitionOffState
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: TransitionOffState()
+  nameWithType: CGPlayer.TransitionOffState()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.TransitionOffState()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void TransitionOffState()
+    content.vb: Public Overridable Sub TransitionOffState()
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.TransitionOffState*
+  implements:
+  - DREditor.DialogueMechanics.CGs.ICGHandler.TransitionOffState
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.InCGStateMode
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.InCGStateMode
+  id: InCGStateMode
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: InCGStateMode()
+  nameWithType: CGPlayer.InCGStateMode()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.InCGStateMode()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual BoolWithEvent InCGStateMode()
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+      description: ''
+    content.vb: Public Overridable Function InCGStateMode() As BoolWithEvent
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.InCGStateMode*
+  implements:
+  - DREditor.DialogueMechanics.CGs.ICGHandler.InCGStateMode
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.#ctor
+  commentId: M:DREditor.DialogueMechanics.CGs.CGPlayer.#ctor
+  id: '#ctor'
+  parent: DREditor.DialogueMechanics.CGs.CGPlayer
+  langs:
+  - csharp
+  - vb
+  name: CGPlayer()
+  nameWithType: CGPlayer.CGPlayer()
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CGPlayer()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGPlayer.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  syntax:
+    content: public CGPlayer()
+    content.vb: Public Sub New()
+  overload: DREditor.DialogueMechanics.CGs.CGPlayer.#ctor*
+  nameWithType.vb: CGPlayer.New()
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGPlayer.New()
+  name.vb: New()
+references:
+- uid: DREditor.DialogueMechanics.CGs
+  commentId: N:DREditor.DialogueMechanics.CGs
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.DialogueMechanics.CGs
+  nameWithType: DREditor.DialogueMechanics.CGs
+  fullName: DREditor.DialogueMechanics.CGs
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueMechanics
+    name: DialogueMechanics
+    isExternal: true
+    href: DREditor.DialogueMechanics.html
+  - name: .
+  - uid: DREditor.DialogueMechanics.CGs
+    name: CGs
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueMechanics
+    name: DialogueMechanics
+    isExternal: true
+    href: DREditor.DialogueMechanics.html
+  - name: .
+  - uid: DREditor.DialogueMechanics.CGs
+    name: CGs
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  commentId: T:DREditor.DialogueMechanics.CGs.CGHandlerBase
+  parent: DREditor.DialogueMechanics.CGs
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html
+  name: CGHandlerBase
+  nameWithType: CGHandlerBase
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase
+- uid: DREditor.DialogueMechanics.CGs.CGHandler
+  commentId: T:DREditor.DialogueMechanics.CGs.CGHandler
+  parent: DREditor.DialogueMechanics.CGs
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html
+  name: CGHandler
+  nameWithType: CGHandler
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.DialogueMechanics.CGs.ICGHandler
+  commentId: T:DREditor.DialogueMechanics.CGs.ICGHandler
+  parent: DREditor.DialogueMechanics.CGs
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.ICGHandler.html
+  name: ICGHandler
+  nameWithType: ICGHandler
+  fullName: DREditor.DialogueMechanics.CGs.ICGHandler
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.showCGStateEventString
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandler.showCGStateEventString
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_showCGStateEventString
+  name: showCGStateEventString
+  nameWithType: CGHandler.showCGStateEventString
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.showCGStateEventString
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.hideCGStateEventString
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandler.hideCGStateEventString
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_hideCGStateEventString
+  name: hideCGStateEventString
+  nameWithType: CGHandler.hideCGStateEventString
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.hideCGStateEventString
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.allNameplatesTransparent
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandler.allNameplatesTransparent
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_allNameplatesTransparent
+  name: allNameplatesTransparent
+  nameWithType: CGHandler.allNameplatesTransparent
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.allNameplatesTransparent
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.showMainUIEventString
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandler.showMainUIEventString
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_showMainUIEventString
+  name: showMainUIEventString
+  nameWithType: CGHandler.showMainUIEventString
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.showMainUIEventString
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.hideMainUIEventString
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandler.hideMainUIEventString
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_hideMainUIEventString
+  name: hideMainUIEventString
+  nameWithType: CGHandler.hideMainUIEventString
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.hideMainUIEventString
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.hideNonCGUIWaitTime
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandler.hideNonCGUIWaitTime
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_hideNonCGUIWaitTime
+  name: hideNonCGUIWaitTime
+  nameWithType: CGHandler.hideNonCGUIWaitTime
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.hideNonCGUIWaitTime
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.stopBlurVisionEventString
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandler.stopBlurVisionEventString
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_stopBlurVisionEventString
+  name: stopBlurVisionEventString
+  nameWithType: CGHandler.stopBlurVisionEventString
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.stopBlurVisionEventString
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.endState
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandler.endState
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_endState
+  name: endState
+  nameWithType: CGHandler.endState
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.endState
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.OnEnable
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandler.OnEnable
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_OnEnable
+  name: OnEnable()
+  nameWithType: CGHandler.OnEnable()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.OnEnable()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_OnEnable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_OnEnable
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.OnDisable
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandler.OnDisable
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_OnDisable
+  name: OnDisable()
+  nameWithType: CGHandler.OnDisable()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.OnDisable()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_OnDisable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_OnDisable
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.StartCGEvent(System.Object)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandler.StartCGEvent(System.Object)
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_StartCGEvent_System_Object_
+  name: StartCGEvent(object)
+  nameWithType: CGHandler.StartCGEvent(object)
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.StartCGEvent(object)
+  nameWithType.vb: CGHandler.StartCGEvent(Object)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGHandler.StartCGEvent(Object)
+  name.vb: StartCGEvent(Object)
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.StartCGEvent(System.Object)
+    name: StartCGEvent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_StartCGEvent_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.StartCGEvent(System.Object)
+    name: StartCGEvent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_StartCGEvent_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.EndCGEvent(System.Object)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandler.EndCGEvent(System.Object)
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_EndCGEvent_System_Object_
+  name: EndCGEvent(object)
+  nameWithType: CGHandler.EndCGEvent(object)
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.EndCGEvent(object)
+  nameWithType.vb: CGHandler.EndCGEvent(Object)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGHandler.EndCGEvent(Object)
+  name.vb: EndCGEvent(Object)
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.EndCGEvent(System.Object)
+    name: EndCGEvent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_EndCGEvent_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.EndCGEvent(System.Object)
+    name: EndCGEvent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_EndCGEvent_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.SetNameplatesTransparent
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandler.SetNameplatesTransparent
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_SetNameplatesTransparent
+  name: SetNameplatesTransparent()
+  nameWithType: CGHandler.SetNameplatesTransparent()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.SetNameplatesTransparent()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.SetNameplatesTransparent
+    name: SetNameplatesTransparent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_SetNameplatesTransparent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.SetNameplatesTransparent
+    name: SetNameplatesTransparent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_SetNameplatesTransparent
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.ResolveCGEvent
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandler.ResolveCGEvent
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_ResolveCGEvent
+  name: ResolveCGEvent()
+  nameWithType: CGHandler.ResolveCGEvent()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.ResolveCGEvent()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.ResolveCGEvent
+    name: ResolveCGEvent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_ResolveCGEvent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.ResolveCGEvent
+    name: ResolveCGEvent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_ResolveCGEvent
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.inCGStateMode
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandlerBase.inCGStateMode
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_inCGStateMode
+  name: inCGStateMode
+  nameWithType: CGHandlerBase.inCGStateMode
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.inCGStateMode
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.cgUIVisible
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandlerBase.cgUIVisible
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_cgUIVisible
+  name: cgUIVisible
+  nameWithType: CGHandlerBase.cgUIVisible
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.cgUIVisible
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.cgDialogueUIVisible
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandlerBase.cgDialogueUIVisible
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_cgDialogueUIVisible
+  name: cgDialogueUIVisible
+  nameWithType: CGHandlerBase.cgDialogueUIVisible
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.cgDialogueUIVisible
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.cgStateEnded
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandlerBase.cgStateEnded
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_cgStateEnded
+  name: cgStateEnded
+  nameWithType: CGHandlerBase.cgStateEnded
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.cgStateEnded
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.inTrialMode
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandlerBase.inTrialMode
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_inTrialMode
+  name: inTrialMode
+  nameWithType: CGHandlerBase.inTrialMode
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.inTrialMode
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.isGoingToMainMenu
+  commentId: F:DREditor.DialogueMechanics.CGs.CGHandlerBase.isGoingToMainMenu
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_isGoingToMainMenu
+  name: isGoingToMainMenu
+  nameWithType: CGHandlerBase.isGoingToMainMenu
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.isGoingToMainMenu
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.Start
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandlerBase.Start
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_Start
+  name: Start()
+  nameWithType: CGHandlerBase.Start()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.Start()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.Start
+    name: Start
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.Start
+    name: Start
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_Start
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.Initialize
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandlerBase.Initialize
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_Initialize
+  name: Initialize()
+  nameWithType: CGHandlerBase.Initialize()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.Initialize()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.Initialize
+    name: Initialize
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_Initialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.Initialize
+    name: Initialize
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_Initialize
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.TurnOffOtherHandlers
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandlerBase.TurnOffOtherHandlers
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_TurnOffOtherHandlers
+  name: TurnOffOtherHandlers()
+  nameWithType: CGHandlerBase.TurnOffOtherHandlers()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.TurnOffOtherHandlers()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.TurnOffOtherHandlers
+    name: TurnOffOtherHandlers
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_TurnOffOtherHandlers
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.TurnOffOtherHandlers
+    name: TurnOffOtherHandlers
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_TurnOffOtherHandlers
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.OtherHandlersActive
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandlerBase.OtherHandlersActive
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_OtherHandlersActive
+  name: OtherHandlersActive()
+  nameWithType: CGHandlerBase.OtherHandlersActive()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.OtherHandlersActive()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.OtherHandlersActive
+    name: OtherHandlersActive
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_OtherHandlersActive
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.OtherHandlersActive
+    name: OtherHandlersActive
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_OtherHandlersActive
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.GetOtherActiveHandlers
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandlerBase.GetOtherActiveHandlers
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_GetOtherActiveHandlers
+  name: GetOtherActiveHandlers()
+  nameWithType: CGHandlerBase.GetOtherActiveHandlers()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.GetOtherActiveHandlers()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.GetOtherActiveHandlers
+    name: GetOtherActiveHandlers
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_GetOtherActiveHandlers
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.GetOtherActiveHandlers
+    name: GetOtherActiveHandlers
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_GetOtherActiveHandlers
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.ToTitleScreen
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandlerBase.ToTitleScreen
+  parent: DREditor.DialogueMechanics.CGs.CGHandlerBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_ToTitleScreen
+  name: ToTitleScreen()
+  nameWithType: CGHandlerBase.ToTitleScreen()
+  fullName: DREditor.DialogueMechanics.CGs.CGHandlerBase.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_ToTitleScreen
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandlerBase.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandlerBase.html#DREditor_DialogueMechanics_CGs_CGHandlerBase_ToTitleScreen
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<CGPlayer>(CGPlayer)
+  nameWithType: ReflectionHelper.GetFieldNames<CGPlayer>(CGPlayer)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.DialogueMechanics.CGs.CGPlayer>(DREditor.DialogueMechanics.CGs.CGPlayer)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of CGPlayer)(CGPlayer)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.DialogueMechanics.CGs.CGPlayer)(DREditor.DialogueMechanics.CGs.CGPlayer)
+  name.vb: GetFieldNames(Of CGPlayer)(CGPlayer)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueMechanics.CGs.CGPlayer)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueMechanics.CGs.CGPlayer)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<CGPlayer>(CGPlayer)
+  nameWithType: ReflectionHelper.GetFieldValues<CGPlayer>(CGPlayer)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.DialogueMechanics.CGs.CGPlayer>(DREditor.DialogueMechanics.CGs.CGPlayer)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of CGPlayer)(CGPlayer)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.DialogueMechanics.CGs.CGPlayer)(DREditor.DialogueMechanics.CGs.CGPlayer)
+  name.vb: GetFieldValues(Of CGPlayer)(CGPlayer)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueMechanics.CGs.CGPlayer)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueMechanics.CGs.CGPlayer)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<CGPlayer>(CGPlayer)
+  nameWithType: DeepCopyExtensions.DeepCopy<CGPlayer>(CGPlayer)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.DialogueMechanics.CGs.CGPlayer>(DREditor.DialogueMechanics.CGs.CGPlayer)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of CGPlayer)(CGPlayer)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.DialogueMechanics.CGs.CGPlayer)(DREditor.DialogueMechanics.CGs.CGPlayer)
+  name.vb: DeepCopy(Of CGPlayer)(CGPlayer)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueMechanics.CGs.CGPlayer)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueMechanics.CGs.CGPlayer)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGPlayer
+    name: CGPlayer
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGPlayer.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.DialogueMechanics.CGs.CGDisplayHandler
+  commentId: T:DREditor.DialogueMechanics.CGs.CGDisplayHandler
+  parent: DREditor.DialogueMechanics.CGs
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGDisplayHandler.html
+  name: CGDisplayHandler
+  nameWithType: CGDisplayHandler
+  fullName: DREditor.DialogueMechanics.CGs.CGDisplayHandler
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.Events.UnityEvent
+  isExternal: true
+  name: UnityEvent
+  nameWithType: UnityEvent
+  fullName: UnityEngine.Events.UnityEvent
+- uid: DREditor.Dialogues.Events.CGDisplay
+  commentId: T:DREditor.Dialogues.Events.CGDisplay
+  parent: DREditor.Dialogues.Events
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CGDisplay.cs
+  name: CGDisplay
+  nameWithType: CGDisplay
+  fullName: DREditor.Dialogues.Events.CGDisplay
+- uid: DREditor.Dialogues.Events
+  commentId: N:DREditor.Dialogues.Events
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Events
+  nameWithType: DREditor.Dialogues.Events
+  fullName: DREditor.Dialogues.Events
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Events
+    name: Events
+    isExternal: true
+    href: DREditor.Dialogues.Events.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Events
+    name: Events
+    isExternal: true
+    href: DREditor.Dialogues.Events.html
+- uid: DREditor.DialogueMechanics.CGs.CGHandler.PlayCGEvent(System.Object,System.Boolean)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGHandler.PlayCGEvent(System.Object,System.Boolean)
+  parent: DREditor.DialogueMechanics.CGs.CGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_PlayCGEvent_System_Object_System_Boolean_
+  name: PlayCGEvent(object, bool)
+  nameWithType: CGHandler.PlayCGEvent(object, bool)
+  fullName: DREditor.DialogueMechanics.CGs.CGHandler.PlayCGEvent(object, bool)
+  nameWithType.vb: CGHandler.PlayCGEvent(Object, Boolean)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGHandler.PlayCGEvent(Object, Boolean)
+  name.vb: PlayCGEvent(Object, Boolean)
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.PlayCGEvent(System.Object,System.Boolean)
+    name: PlayCGEvent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_PlayCGEvent_System_Object_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGHandler.PlayCGEvent(System.Object,System.Boolean)
+    name: PlayCGEvent
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGHandler.html#DREditor_DialogueMechanics_CGs_CGHandler_PlayCGEvent_System_Object_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_PlayCGEvent_System_Object_System_Boolean_
+  name: PlayCGEvent
+  nameWithType: CGPlayer.PlayCGEvent
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.PlayCGEvent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.CGEventProcess*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.CGEventProcess
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_CGEventProcess
+  name: CGEventProcess
+  nameWithType: CGPlayer.CGEventProcess
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CGEventProcess
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.SetUIVisibleState*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.SetUIVisibleState
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_SetUIVisibleState
+  name: SetUIVisibleState
+  nameWithType: CGPlayer.SetUIVisibleState
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.SetUIVisibleState
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.PreparingStartCGRoutine*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.PreparingStartCGRoutine
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_PreparingStartCGRoutine
+  name: PreparingStartCGRoutine
+  nameWithType: CGPlayer.PreparingStartCGRoutine
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.PreparingStartCGRoutine
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.CheckFadeToFlashback*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.CheckFadeToFlashback
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_CheckFadeToFlashback
+  name: CheckFadeToFlashback
+  nameWithType: CGPlayer.CheckFadeToFlashback
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CheckFadeToFlashback
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.PrepareCGUI*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.PrepareCGUI
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_PrepareCGUI
+  name: PrepareCGUI
+  nameWithType: CGPlayer.PrepareCGUI
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.PrepareCGUI
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.StartFadeIn*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.StartFadeIn
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_StartFadeIn
+  name: StartFadeIn
+  nameWithType: CGPlayer.StartFadeIn
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.StartFadeIn
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.EvaluateEventState*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.EvaluateEventState
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_EvaluateEventState
+  name: EvaluateEventState
+  nameWithType: CGPlayer.EvaluateEventState
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.EvaluateEventState
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.StartingCG*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.StartingCG
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_StartingCG
+  name: StartingCG
+  nameWithType: CGPlayer.StartingCG
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.StartingCG
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.InMiddleOfCG*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.InMiddleOfCG
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_InMiddleOfCG
+  name: InMiddleOfCG
+  nameWithType: CGPlayer.InMiddleOfCG
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.InMiddleOfCG
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.EndCGRoutine*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.EndCGRoutine
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_EndCGRoutine_DREditor_Dialogues_Events_CGDisplay_
+  name: EndCGRoutine
+  nameWithType: CGPlayer.EndCGRoutine
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.EndCGRoutine
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.FadeOutOnDark*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.FadeOutOnDark
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_FadeOutOnDark
+  name: FadeOutOnDark
+  nameWithType: CGPlayer.FadeOutOnDark
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.FadeOutOnDark
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.BufferFadeOut*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.BufferFadeOut
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_BufferFadeOut
+  name: BufferFadeOut
+  nameWithType: CGPlayer.BufferFadeOut
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.BufferFadeOut
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.TransitionOffState*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.TransitionOffState
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_TransitionOffState
+  name: TransitionOffState
+  nameWithType: CGPlayer.TransitionOffState
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.TransitionOffState
+- uid: DREditor.DialogueMechanics.CGs.ICGHandler.TransitionOffState
+  commentId: M:DREditor.DialogueMechanics.CGs.ICGHandler.TransitionOffState
+  parent: DREditor.DialogueMechanics.CGs.ICGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.ICGHandler.html#DREditor_DialogueMechanics_CGs_ICGHandler_TransitionOffState
+  name: TransitionOffState()
+  nameWithType: ICGHandler.TransitionOffState()
+  fullName: DREditor.DialogueMechanics.CGs.ICGHandler.TransitionOffState()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.ICGHandler.TransitionOffState
+    name: TransitionOffState
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.ICGHandler.html#DREditor_DialogueMechanics_CGs_ICGHandler_TransitionOffState
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.ICGHandler.TransitionOffState
+    name: TransitionOffState
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.ICGHandler.html#DREditor_DialogueMechanics_CGs_ICGHandler_TransitionOffState
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.InCGStateMode*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.InCGStateMode
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer_InCGStateMode
+  name: InCGStateMode
+  nameWithType: CGPlayer.InCGStateMode
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.InCGStateMode
+- uid: DREditor.DialogueMechanics.CGs.ICGHandler.InCGStateMode
+  commentId: M:DREditor.DialogueMechanics.CGs.ICGHandler.InCGStateMode
+  parent: DREditor.DialogueMechanics.CGs.ICGHandler
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.ICGHandler.html#DREditor_DialogueMechanics_CGs_ICGHandler_InCGStateMode
+  name: InCGStateMode()
+  nameWithType: ICGHandler.InCGStateMode()
+  fullName: DREditor.DialogueMechanics.CGs.ICGHandler.InCGStateMode()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.ICGHandler.InCGStateMode
+    name: InCGStateMode
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.ICGHandler.html#DREditor_DialogueMechanics_CGs_ICGHandler_InCGStateMode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.ICGHandler.InCGStateMode
+    name: InCGStateMode
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.ICGHandler.html#DREditor_DialogueMechanics_CGs_ICGHandler_InCGStateMode
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGPlayer.#ctor*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGPlayer.#ctor
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGPlayer.html#DREditor_DialogueMechanics_CGs_CGPlayer__ctor
+  name: CGPlayer
+  nameWithType: CGPlayer.CGPlayer
+  fullName: DREditor.DialogueMechanics.CGs.CGPlayer.CGPlayer
+  nameWithType.vb: CGPlayer.New
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGPlayer.New
+  name.vb: New

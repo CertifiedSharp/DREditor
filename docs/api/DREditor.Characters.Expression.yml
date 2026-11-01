@@ -6,7 +6,10 @@ items:
   parent: DREditor.Characters
   children:
   - DREditor.Characters.Expression.#ctor
+  - DREditor.Characters.Expression.#ctor(System.String,UnityEngine.Material)
   - DREditor.Characters.Expression.Name
+  - DREditor.Characters.Expression.SetName(System.String)
+  - DREditor.Characters.Expression.SetSprite(UnityEngine.Material)
   - DREditor.Characters.Expression.Sprite
   langs:
   - csharp
@@ -16,7 +19,7 @@ items:
   fullName: DREditor.Characters.Expression
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Expression.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Expression.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -33,6 +36,10 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
+  extensionMethods:
+  - DREditor.Characters.Expression.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Characters.Expression.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Characters.Expression.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.Characters.Expression.Sprite
   commentId: F:DREditor.Characters.Expression.Sprite
   id: Sprite
@@ -45,7 +52,7 @@ items:
   fullName: DREditor.Characters.Expression.Sprite
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Expression.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Expression.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -66,7 +73,7 @@ items:
   fullName: DREditor.Characters.Expression.Name
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Expression.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Expression.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -87,7 +94,7 @@ items:
   fullName: DREditor.Characters.Expression.Expression()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Expression.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Expression.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -98,6 +105,83 @@ items:
   nameWithType.vb: Expression.New()
   fullName.vb: DREditor.Characters.Expression.New()
   name.vb: New()
+- uid: DREditor.Characters.Expression.#ctor(System.String,UnityEngine.Material)
+  commentId: M:DREditor.Characters.Expression.#ctor(System.String,UnityEngine.Material)
+  id: '#ctor(System.String,UnityEngine.Material)'
+  parent: DREditor.Characters.Expression
+  langs:
+  - csharp
+  - vb
+  name: Expression(string, Material)
+  nameWithType: Expression.Expression(string, Material)
+  fullName: DREditor.Characters.Expression.Expression(string, UnityEngine.Material)
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Expression.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Expression(string Name, Material Sprite)
+    parameters:
+    - id: Name
+      type: System.String
+    - id: Sprite
+      type: UnityEngine.Material
+    content.vb: Public Sub New(Name As String, Sprite As Material)
+  overload: DREditor.Characters.Expression.#ctor*
+  nameWithType.vb: Expression.New(String, Material)
+  fullName.vb: DREditor.Characters.Expression.New(String, UnityEngine.Material)
+  name.vb: New(String, Material)
+- uid: DREditor.Characters.Expression.SetSprite(UnityEngine.Material)
+  commentId: M:DREditor.Characters.Expression.SetSprite(UnityEngine.Material)
+  id: SetSprite(UnityEngine.Material)
+  parent: DREditor.Characters.Expression
+  langs:
+  - csharp
+  - vb
+  name: SetSprite(Material)
+  nameWithType: Expression.SetSprite(Material)
+  fullName: DREditor.Characters.Expression.SetSprite(UnityEngine.Material)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Expression.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public void SetSprite(Material Sprite)
+    parameters:
+    - id: Sprite
+      type: UnityEngine.Material
+    content.vb: Public Sub SetSprite(Sprite As Material)
+  overload: DREditor.Characters.Expression.SetSprite*
+- uid: DREditor.Characters.Expression.SetName(System.String)
+  commentId: M:DREditor.Characters.Expression.SetName(System.String)
+  id: SetName(System.String)
+  parent: DREditor.Characters.Expression
+  langs:
+  - csharp
+  - vb
+  name: SetName(string)
+  nameWithType: Expression.SetName(string)
+  fullName: DREditor.Characters.Expression.SetName(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Expression.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public void SetName(string Name)
+    parameters:
+    - id: Name
+      type: System.String
+    content.vb: Public Sub SetName(Name As String)
+  overload: DREditor.Characters.Expression.SetName*
+  nameWithType.vb: Expression.SetName(String)
+  fullName.vb: DREditor.Characters.Expression.SetName(String)
+  name.vb: SetName(String)
 references:
 - uid: DREditor.Characters
   commentId: N:DREditor.Characters
@@ -356,6 +440,147 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
   - name: (
   - name: )
+- uid: DREditor.Characters.Expression.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<Expression>(Expression)
+  nameWithType: ReflectionHelper.GetFieldNames<Expression>(Expression)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Characters.Expression>(DREditor.Characters.Expression)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of Expression)(Expression)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Characters.Expression)(DREditor.Characters.Expression)
+  name.vb: GetFieldNames(Of Expression)(Expression)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Characters.Expression)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Characters.Expression)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
+  - name: (
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
+- uid: DREditor.Characters.Expression.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<Expression>(Expression)
+  nameWithType: ReflectionHelper.GetFieldValues<Expression>(Expression)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Characters.Expression>(DREditor.Characters.Expression)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of Expression)(Expression)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Characters.Expression)(DREditor.Characters.Expression)
+  name.vb: GetFieldValues(Of Expression)(Expression)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Characters.Expression)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Characters.Expression)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
+  - name: (
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
+- uid: DREditor.Characters.Expression.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<Expression>(Expression)
+  nameWithType: DeepCopyExtensions.DeepCopy<Expression>(Expression)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Characters.Expression>(DREditor.Characters.Expression)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of Expression)(Expression)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Characters.Expression)(DREditor.Characters.Expression)
+  name.vb: DeepCopy(Of Expression)(Expression)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Characters.Expression)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Characters.Expression)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
+  - name: (
+  - uid: DREditor.Characters.Expression
+    name: Expression
+    isExternal: true
+    href: DREditor.Characters.Expression.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -363,6 +588,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: UnityEngine.Material
   isExternal: true
   name: Material
@@ -389,3 +786,17 @@ references:
   nameWithType.vb: Expression.New
   fullName.vb: DREditor.Characters.Expression.New
   name.vb: New
+- uid: DREditor.Characters.Expression.SetSprite*
+  commentId: Overload:DREditor.Characters.Expression.SetSprite
+  isExternal: true
+  href: DREditor.Characters.Expression.html#DREditor_Characters_Expression_SetSprite_UnityEngine_Material_
+  name: SetSprite
+  nameWithType: Expression.SetSprite
+  fullName: DREditor.Characters.Expression.SetSprite
+- uid: DREditor.Characters.Expression.SetName*
+  commentId: Overload:DREditor.Characters.Expression.SetName
+  isExternal: true
+  href: DREditor.Characters.Expression.html#DREditor_Characters_Expression_SetName_System_String_
+  name: SetName
+  nameWithType: Expression.SetName
+  fullName: DREditor.Characters.Expression.SetName

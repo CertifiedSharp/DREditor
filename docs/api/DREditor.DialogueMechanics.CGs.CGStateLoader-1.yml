@@ -1,0 +1,1382 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  commentId: T:DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  id: CGStateLoader`1
+  parent: DREditor.DialogueMechanics.CGs
+  children:
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.#ctor
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.ClearTracking
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.LoadEndStates(DREditor.Dialogues.Line)
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLasting(DREditor.Dialogues.Line)
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLastingComplete(`0)
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLineComplete(`0)
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.SetLastEventNull
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.ShouldBeTracked(`0)
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.StartTracking(`0)
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.cgStateEnded
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.inCGStateMode
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.lastCGEvent
+  langs:
+  - csharp
+  - vb
+  name: CGStateLoader<T>
+  nameWithType: CGStateLoader<T>
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: 'public abstract class CGStateLoader<T> : CGStateLoaderBase, IToTitleScreen, ILoadToLineLastingEvent, IOnPrepareLoadedLine, ILoadEndState where T : IDialogueEvent'
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: Public MustInherit Class CGStateLoader(Of T As IDialogueEvent) Inherits CGStateLoaderBase Implements IToTitleScreen, ILoadToLineLastingEvent, IOnPrepareLoadedLine, ILoadEndState
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  - DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  derivedClasses:
+  - DREditor.DialogueMechanics.CGs.CGLoader
+  - DREditor.DialogueMechanics.CGs.CGVideoLoader
+  implements:
+  - DREditor.Services.IToTitleScreen
+  - DREditor.Dialogues.Loading.ILoadToLineLastingEvent
+  - DREditor.Dialogues.Loading.IOnPrepareLoadedLine
+  - DREditor.Dialogues.Loading.ILoadEndState
+  inheritedMembers:
+  - DREditor.DialogueMechanics.CGs.CGStateLoaderBase.inLoadCGState
+  - DREditor.DialogueMechanics.CGs.CGStateLoaderBase.cachedLoaders
+  - DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearAllOtherCGLoaders
+  - DREditor.DialogueMechanics.CGs.CGStateLoaderBase.SetLoadingCGState(System.Boolean)
+  - DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ToTitleScreen
+  extensionMethods:
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.DialogueMechanics.CGs.CGStateLoader`1.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  nameWithType.vb: CGStateLoader(Of T)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T)
+  name.vb: CGStateLoader(Of T)
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.inCGStateMode
+  commentId: F:DREditor.DialogueMechanics.CGs.CGStateLoader`1.inCGStateMode
+  id: inCGStateMode
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: inCGStateMode
+  nameWithType: CGStateLoader<T>.inCGStateMode
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.inCGStateMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent inCGStateMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected inCGStateMode As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+  nameWithType.vb: CGStateLoader(Of T).inCGStateMode
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).inCGStateMode
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.cgStateEnded
+  commentId: F:DREditor.DialogueMechanics.CGs.CGStateLoader`1.cgStateEnded
+  id: cgStateEnded
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: cgStateEnded
+  nameWithType: CGStateLoader<T>.cgStateEnded
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.cgStateEnded
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent cgStateEnded
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected cgStateEnded As BoolWithEvent
+  nameWithType.vb: CGStateLoader(Of T).cgStateEnded
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).cgStateEnded
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.lastCGEvent
+  commentId: F:DREditor.DialogueMechanics.CGs.CGStateLoader`1.lastCGEvent
+  id: lastCGEvent
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: lastCGEvent
+  nameWithType: CGStateLoader<T>.lastCGEvent
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.lastCGEvent
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected T lastCGEvent
+    return:
+      type: '{T}'
+    content.vb: Protected lastCGEvent As T
+  nameWithType.vb: CGStateLoader(Of T).lastCGEvent
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).lastCGEvent
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.LoadEndStates(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.LoadEndStates(DREditor.Dialogues.Line)
+  id: LoadEndStates(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: LoadEndStates(Line)
+  nameWithType: CGStateLoader<T>.LoadEndStates(Line)
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.LoadEndStates(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual IEnumerator LoadEndStates(Line currentLine = null)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Overridable Function LoadEndStates(currentLine As Line = Nothing) As IEnumerator
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.LoadEndStates*
+  implements:
+  - DREditor.Dialogues.Loading.ILoadEndState.LoadEndStates(DREditor.Dialogues.Line)
+  nameWithType.vb: CGStateLoader(Of T).LoadEndStates(Line)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).LoadEndStates(DREditor.Dialogues.Line)
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  id: OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: OnPrepareLoadedLine(Line)
+  nameWithType: CGStateLoader<T>.OnPrepareLoadedLine(Line)
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnPrepareLoadedLine(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub OnPrepareLoadedLine(currentLine As Line)
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLine*
+  implements:
+  - DREditor.Dialogues.Loading.IOnPrepareLoadedLine.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  nameWithType.vb: CGStateLoader(Of T).OnPrepareLoadedLine(Line)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).OnPrepareLoadedLine(DREditor.Dialogues.Line)
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLineComplete(`0)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLineComplete(`0)
+  id: OnPrepareLoadedLineComplete(`0)
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: OnPrepareLoadedLineComplete(T)
+  nameWithType: CGStateLoader<T>.OnPrepareLoadedLineComplete(T)
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.OnPrepareLoadedLineComplete(T)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected abstract void OnPrepareLoadedLineComplete(T display)
+    parameters:
+    - id: display
+      type: '{T}'
+      description: ''
+    content.vb: Protected MustOverride Sub OnPrepareLoadedLineComplete(display As T)
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLineComplete*
+  nameWithType.vb: CGStateLoader(Of T).OnPrepareLoadedLineComplete(T)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).OnPrepareLoadedLineComplete(T)
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLasting(DREditor.Dialogues.Line)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLasting(DREditor.Dialogues.Line)
+  id: OnLoadToLineLasting(DREditor.Dialogues.Line)
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: OnLoadToLineLasting(Line)
+  nameWithType: CGStateLoader<T>.OnLoadToLineLasting(Line)
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.OnLoadToLineLasting(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnLoadToLineLasting(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub OnLoadToLineLasting(currentLine As Line)
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLasting*
+  implements:
+  - DREditor.Dialogues.Loading.ILoadToLineLastingEvent.OnLoadToLineLasting(DREditor.Dialogues.Line)
+  nameWithType.vb: CGStateLoader(Of T).OnLoadToLineLasting(Line)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).OnLoadToLineLasting(DREditor.Dialogues.Line)
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLastingComplete(`0)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLastingComplete(`0)
+  id: OnLoadToLineLastingComplete(`0)
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: OnLoadToLineLastingComplete(T)
+  nameWithType: CGStateLoader<T>.OnLoadToLineLastingComplete(T)
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.OnLoadToLineLastingComplete(T)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void OnLoadToLineLastingComplete(T display)
+    parameters:
+    - id: display
+      type: '{T}'
+      description: ''
+    content.vb: Protected Overridable Sub OnLoadToLineLastingComplete(display As T)
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLastingComplete*
+  nameWithType.vb: CGStateLoader(Of T).OnLoadToLineLastingComplete(T)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).OnLoadToLineLastingComplete(T)
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.StartTracking(`0)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.StartTracking(`0)
+  id: StartTracking(`0)
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: StartTracking(T)
+  nameWithType: CGStateLoader<T>.StartTracking(T)
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.StartTracking(T)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void StartTracking(T display)
+    parameters:
+    - id: display
+      type: '{T}'
+      description: ''
+    content.vb: Protected Overridable Sub StartTracking(display As T)
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.StartTracking*
+  nameWithType.vb: CGStateLoader(Of T).StartTracking(T)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).StartTracking(T)
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.ClearTracking
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.ClearTracking
+  id: ClearTracking
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: ClearTracking()
+  nameWithType: CGStateLoader<T>.ClearTracking()
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.ClearTracking()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void ClearTracking()
+    content.vb: Protected Overrides Sub ClearTracking()
+  overridden: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearTracking
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.ClearTracking*
+  nameWithType.vb: CGStateLoader(Of T).ClearTracking()
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).ClearTracking()
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.SetLastEventNull
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.SetLastEventNull
+  id: SetLastEventNull
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: SetLastEventNull()
+  nameWithType: CGStateLoader<T>.SetLastEventNull()
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.SetLastEventNull()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: protected virtual void SetLastEventNull()
+    content.vb: Protected Overridable Sub SetLastEventNull()
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.SetLastEventNull*
+  nameWithType.vb: CGStateLoader(Of T).SetLastEventNull()
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).SetLastEventNull()
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.ShouldBeTracked(`0)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.ShouldBeTracked(`0)
+  id: ShouldBeTracked(`0)
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: ShouldBeTracked(T)
+  nameWithType: CGStateLoader<T>.ShouldBeTracked(T)
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.ShouldBeTracked(T)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  summary: ''
+  example: []
+  syntax:
+    content: protected abstract bool ShouldBeTracked(T display)
+    parameters:
+    - id: display
+      type: '{T}'
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected MustOverride Function ShouldBeTracked(display As T) As Boolean
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.ShouldBeTracked*
+  nameWithType.vb: CGStateLoader(Of T).ShouldBeTracked(T)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).ShouldBeTracked(T)
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.#ctor
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoader`1.#ctor
+  id: '#ctor'
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+  langs:
+  - csharp
+  - vb
+  name: CGStateLoader()
+  nameWithType: CGStateLoader<T>.CGStateLoader()
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.CGStateLoader()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueMechanics.CGs/CGStateLoader.cs
+  assemblies:
+  - DREditor.DialogueMechanics.CGs
+  namespace: DREditor.DialogueMechanics.CGs
+  syntax:
+    content: protected CGStateLoader()
+    content.vb: Protected Sub New()
+  overload: DREditor.DialogueMechanics.CGs.CGStateLoader`1.#ctor*
+  nameWithType.vb: CGStateLoader(Of T).New()
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).New()
+  name.vb: New()
+references:
+- uid: DREditor.DialogueMechanics.CGs
+  commentId: N:DREditor.DialogueMechanics.CGs
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.DialogueMechanics.CGs
+  nameWithType: DREditor.DialogueMechanics.CGs
+  fullName: DREditor.DialogueMechanics.CGs
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueMechanics
+    name: DialogueMechanics
+    isExternal: true
+    href: DREditor.DialogueMechanics.html
+  - name: .
+  - uid: DREditor.DialogueMechanics.CGs
+    name: CGs
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueMechanics
+    name: DialogueMechanics
+    isExternal: true
+    href: DREditor.DialogueMechanics.html
+  - name: .
+  - uid: DREditor.DialogueMechanics.CGs
+    name: CGs
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  commentId: T:DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  parent: DREditor.DialogueMechanics.CGs
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html
+  name: CGStateLoaderBase
+  nameWithType: CGStateLoaderBase
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.Dialogues.Loading.ILoadToLineLastingEvent
+  commentId: T:DREditor.Dialogues.Loading.ILoadToLineLastingEvent
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineLastingEvent.cs
+  name: ILoadToLineLastingEvent
+  nameWithType: ILoadToLineLastingEvent
+  fullName: DREditor.Dialogues.Loading.ILoadToLineLastingEvent
+- uid: DREditor.Dialogues.Loading.IOnPrepareLoadedLine
+  commentId: T:DREditor.Dialogues.Loading.IOnPrepareLoadedLine
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/IOnPrepareLoadedLine.cs
+  name: IOnPrepareLoadedLine
+  nameWithType: IOnPrepareLoadedLine
+  fullName: DREditor.Dialogues.Loading.IOnPrepareLoadedLine
+- uid: DREditor.Dialogues.Loading.ILoadEndState
+  commentId: T:DREditor.Dialogues.Loading.ILoadEndState
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadEndState.cs
+  name: ILoadEndState
+  nameWithType: ILoadEndState
+  fullName: DREditor.Dialogues.Loading.ILoadEndState
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.inLoadCGState
+  commentId: F:DREditor.DialogueMechanics.CGs.CGStateLoaderBase.inLoadCGState
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_inLoadCGState
+  name: inLoadCGState
+  nameWithType: CGStateLoaderBase.inLoadCGState
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.inLoadCGState
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.cachedLoaders
+  commentId: F:DREditor.DialogueMechanics.CGs.CGStateLoaderBase.cachedLoaders
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_cachedLoaders
+  name: cachedLoaders
+  nameWithType: CGStateLoaderBase.cachedLoaders
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.cachedLoaders
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearAllOtherCGLoaders
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearAllOtherCGLoaders
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ClearAllOtherCGLoaders
+  name: ClearAllOtherCGLoaders()
+  nameWithType: CGStateLoaderBase.ClearAllOtherCGLoaders()
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearAllOtherCGLoaders()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearAllOtherCGLoaders
+    name: ClearAllOtherCGLoaders
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ClearAllOtherCGLoaders
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearAllOtherCGLoaders
+    name: ClearAllOtherCGLoaders
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ClearAllOtherCGLoaders
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.SetLoadingCGState(System.Boolean)
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoaderBase.SetLoadingCGState(System.Boolean)
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_SetLoadingCGState_System_Boolean_
+  name: SetLoadingCGState(bool)
+  nameWithType: CGStateLoaderBase.SetLoadingCGState(bool)
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.SetLoadingCGState(bool)
+  nameWithType.vb: CGStateLoaderBase.SetLoadingCGState(Boolean)
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.SetLoadingCGState(Boolean)
+  name.vb: SetLoadingCGState(Boolean)
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.SetLoadingCGState(System.Boolean)
+    name: SetLoadingCGState
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_SetLoadingCGState_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.SetLoadingCGState(System.Boolean)
+    name: SetLoadingCGState
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_SetLoadingCGState_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ToTitleScreen
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ToTitleScreen
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ToTitleScreen
+  name: ToTitleScreen()
+  nameWithType: CGStateLoaderBase.ToTitleScreen()
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ToTitleScreen
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ToTitleScreen
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<CGStateLoader<T>>(CGStateLoader<T>)
+  nameWithType: ReflectionHelper.GetFieldNames<CGStateLoader<T>>(CGStateLoader<T>)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.DialogueMechanics.CGs.CGStateLoader<T>>(DREditor.DialogueMechanics.CGs.CGStateLoader<T>)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of CGStateLoader(Of T))(CGStateLoader(Of T))
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.DialogueMechanics.CGs.CGStateLoader(Of T))(DREditor.DialogueMechanics.CGs.CGStateLoader(Of T))
+  name.vb: GetFieldNames(Of CGStateLoader(Of T))(CGStateLoader(Of T))
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueMechanics.CGs.CGStateLoader{`0})
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueMechanics.CGs.CGStateLoader{`0})
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<CGStateLoader<T>>(CGStateLoader<T>)
+  nameWithType: ReflectionHelper.GetFieldValues<CGStateLoader<T>>(CGStateLoader<T>)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.DialogueMechanics.CGs.CGStateLoader<T>>(DREditor.DialogueMechanics.CGs.CGStateLoader<T>)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of CGStateLoader(Of T))(CGStateLoader(Of T))
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.DialogueMechanics.CGs.CGStateLoader(Of T))(DREditor.DialogueMechanics.CGs.CGStateLoader(Of T))
+  name.vb: GetFieldValues(Of CGStateLoader(Of T))(CGStateLoader(Of T))
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueMechanics.CGs.CGStateLoader{`0})
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueMechanics.CGs.CGStateLoader{`0})
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<CGStateLoader<T>>(CGStateLoader<T>)
+  nameWithType: DeepCopyExtensions.DeepCopy<CGStateLoader<T>>(CGStateLoader<T>)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.DialogueMechanics.CGs.CGStateLoader<T>>(DREditor.DialogueMechanics.CGs.CGStateLoader<T>)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of CGStateLoader(Of T))(CGStateLoader(Of T))
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.DialogueMechanics.CGs.CGStateLoader(Of T))(DREditor.DialogueMechanics.CGs.CGStateLoader(Of T))
+  name.vb: DeepCopy(Of CGStateLoader(Of T))(CGStateLoader(Of T))
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueMechanics.CGs.CGStateLoader{`0})
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueMechanics.CGs.CGStateLoader{`0})
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1
+    name: CGStateLoader
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Dialogues.Loading
+  commentId: N:DREditor.Dialogues.Loading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Loading
+  nameWithType: DREditor.Dialogues.Loading
+  fullName: DREditor.Dialogues.Loading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.LoadEndStates*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.LoadEndStates
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_LoadEndStates_DREditor_Dialogues_Line_
+  name: LoadEndStates
+  nameWithType: CGStateLoader<T>.LoadEndStates
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.LoadEndStates
+  nameWithType.vb: CGStateLoader(Of T).LoadEndStates
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).LoadEndStates
+- uid: DREditor.Dialogues.Loading.ILoadEndState.LoadEndStates(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.ILoadEndState.LoadEndStates(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.ILoadEndState
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadEndState.cs
+  name: LoadEndStates(Line)
+  nameWithType: ILoadEndState.LoadEndStates(Line)
+  fullName: DREditor.Dialogues.Loading.ILoadEndState.LoadEndStates(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.ILoadEndState.LoadEndStates(DREditor.Dialogues.Line)
+    name: LoadEndStates
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadEndState.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.ILoadEndState.LoadEndStates(DREditor.Dialogues.Line)
+    name: LoadEndStates
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadEndState.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLine*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLine
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_OnPrepareLoadedLine_DREditor_Dialogues_Line_
+  name: OnPrepareLoadedLine
+  nameWithType: CGStateLoader<T>.OnPrepareLoadedLine
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.OnPrepareLoadedLine
+  nameWithType.vb: CGStateLoader(Of T).OnPrepareLoadedLine
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).OnPrepareLoadedLine
+- uid: DREditor.Dialogues.Loading.IOnPrepareLoadedLine.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.IOnPrepareLoadedLine.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.IOnPrepareLoadedLine
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/IOnPrepareLoadedLine.cs
+  name: OnPrepareLoadedLine(Line)
+  nameWithType: IOnPrepareLoadedLine.OnPrepareLoadedLine(Line)
+  fullName: DREditor.Dialogues.Loading.IOnPrepareLoadedLine.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.IOnPrepareLoadedLine.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+    name: OnPrepareLoadedLine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/IOnPrepareLoadedLine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.IOnPrepareLoadedLine.OnPrepareLoadedLine(DREditor.Dialogues.Line)
+    name: OnPrepareLoadedLine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/IOnPrepareLoadedLine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLineComplete*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnPrepareLoadedLineComplete
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_OnPrepareLoadedLineComplete__0_
+  name: OnPrepareLoadedLineComplete
+  nameWithType: CGStateLoader<T>.OnPrepareLoadedLineComplete
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.OnPrepareLoadedLineComplete
+  nameWithType.vb: CGStateLoader(Of T).OnPrepareLoadedLineComplete
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).OnPrepareLoadedLineComplete
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLasting*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLasting
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_OnLoadToLineLasting_DREditor_Dialogues_Line_
+  name: OnLoadToLineLasting
+  nameWithType: CGStateLoader<T>.OnLoadToLineLasting
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.OnLoadToLineLasting
+  nameWithType.vb: CGStateLoader(Of T).OnLoadToLineLasting
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).OnLoadToLineLasting
+- uid: DREditor.Dialogues.Loading.ILoadToLineLastingEvent.OnLoadToLineLasting(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.ILoadToLineLastingEvent.OnLoadToLineLasting(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.ILoadToLineLastingEvent
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineLastingEvent.cs
+  name: OnLoadToLineLasting(Line)
+  nameWithType: ILoadToLineLastingEvent.OnLoadToLineLasting(Line)
+  fullName: DREditor.Dialogues.Loading.ILoadToLineLastingEvent.OnLoadToLineLasting(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineLastingEvent.OnLoadToLineLasting(DREditor.Dialogues.Line)
+    name: OnLoadToLineLasting
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineLastingEvent.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineLastingEvent.OnLoadToLineLasting(DREditor.Dialogues.Line)
+    name: OnLoadToLineLasting
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineLastingEvent.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLastingComplete*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.OnLoadToLineLastingComplete
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_OnLoadToLineLastingComplete__0_
+  name: OnLoadToLineLastingComplete
+  nameWithType: CGStateLoader<T>.OnLoadToLineLastingComplete
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.OnLoadToLineLastingComplete
+  nameWithType.vb: CGStateLoader(Of T).OnLoadToLineLastingComplete
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).OnLoadToLineLastingComplete
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.StartTracking*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.StartTracking
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_StartTracking__0_
+  name: StartTracking
+  nameWithType: CGStateLoader<T>.StartTracking
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.StartTracking
+  nameWithType.vb: CGStateLoader(Of T).StartTracking
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).StartTracking
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearTracking
+  commentId: M:DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearTracking
+  parent: DREditor.DialogueMechanics.CGs.CGStateLoaderBase
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ClearTracking
+  name: ClearTracking()
+  nameWithType: CGStateLoaderBase.ClearTracking()
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearTracking()
+  spec.csharp:
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearTracking
+    name: ClearTracking
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ClearTracking
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.ClearTracking
+    name: ClearTracking
+    isExternal: true
+    href: DREditor.DialogueMechanics.CGs.CGStateLoaderBase.html#DREditor_DialogueMechanics_CGs_CGStateLoaderBase_ClearTracking
+  - name: (
+  - name: )
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.ClearTracking*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.ClearTracking
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_ClearTracking
+  name: ClearTracking
+  nameWithType: CGStateLoader<T>.ClearTracking
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.ClearTracking
+  nameWithType.vb: CGStateLoader(Of T).ClearTracking
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).ClearTracking
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.SetLastEventNull*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.SetLastEventNull
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_SetLastEventNull
+  name: SetLastEventNull
+  nameWithType: CGStateLoader<T>.SetLastEventNull
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.SetLastEventNull
+  nameWithType.vb: CGStateLoader(Of T).SetLastEventNull
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).SetLastEventNull
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.ShouldBeTracked*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.ShouldBeTracked
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1_ShouldBeTracked__0_
+  name: ShouldBeTracked
+  nameWithType: CGStateLoader<T>.ShouldBeTracked
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.ShouldBeTracked
+  nameWithType.vb: CGStateLoader(Of T).ShouldBeTracked
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).ShouldBeTracked
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.DialogueMechanics.CGs.CGStateLoader`1.#ctor*
+  commentId: Overload:DREditor.DialogueMechanics.CGs.CGStateLoader`1.#ctor
+  isExternal: true
+  href: DREditor.DialogueMechanics.CGs.CGStateLoader-1.html#DREditor_DialogueMechanics_CGs_CGStateLoader_1__ctor
+  name: CGStateLoader
+  nameWithType: CGStateLoader<T>.CGStateLoader
+  fullName: DREditor.DialogueMechanics.CGs.CGStateLoader<T>.CGStateLoader
+  nameWithType.vb: CGStateLoader(Of T).New
+  fullName.vb: DREditor.DialogueMechanics.CGs.CGStateLoader(Of T).New
+  name.vb: New

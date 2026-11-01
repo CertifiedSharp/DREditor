@@ -1,0 +1,1316 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  commentId: T:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  id: ShakeCameraEvent
+  parent: DREditor.DialogueEventHandling.CameraEvents
+  children:
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.#ctor
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Awake
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered(System.Object)
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraProcess(DREditor.Dialogues.Events.ShakeObject)
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShouldWaitForTween
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Start
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.StopCameraShaking
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ToTitleScreen
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.WaitForTweenToFinish
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.dialogueCamera
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.lastPos
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.lineReader
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.protagCamera
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.stopCamReturnDuration
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.targetCamera
+  langs:
+  - csharp
+  - vb
+  name: ShakeCameraEvent
+  nameWithType: ShakeCameraEvent
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueEventHandler, ITweenWaiter, IToTitleScreen\n\n")]
+
+      public class ShakeCameraEvent : DialogueEventHandler, ITweenWaiter, IToTitleScreen
+    content.vb: >-
+      <ClassHeader("DialogueEventHandler, ITweenWaiter, IToTitleScreen" & vbLf & vbLf)>
+
+      Public Class ShakeCameraEvent Inherits DialogueEventHandler Implements ITweenWaiter, IToTitleScreen
+  inheritance:
+  - System.Object
+  - DREditor.DialogueEventHandling.DialogueEventHandler
+  implements:
+  - DREditor.Dialogues.LineReading.ITweenWaiter
+  - DREditor.Services.IToTitleScreen
+  inheritedMembers:
+  - DREditor.DialogueEventHandling.DialogueEventHandler.dialogueEventString
+  - DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+  - DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+  - DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+  - DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+  - DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+  extensionMethods:
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueEventHandler, ITweenWaiter, IToTitleScreen
+
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.dialogueCamera
+  commentId: F:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.dialogueCamera
+  id: dialogueCamera
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: dialogueCamera
+  nameWithType: ShakeCameraEvent.dialogueCamera
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.dialogueCamera
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected Camera dialogueCamera
+    return:
+      type: UnityEngine.Camera
+    content.vb: Protected dialogueCamera As Camera
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.protagCamera
+  commentId: F:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.protagCamera
+  id: protagCamera
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: protagCamera
+  nameWithType: ShakeCameraEvent.protagCamera
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.protagCamera
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected Camera protagCamera
+    return:
+      type: UnityEngine.Camera
+    content.vb: Protected protagCamera As Camera
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.stopCamReturnDuration
+  commentId: F:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.stopCamReturnDuration
+  id: stopCamReturnDuration
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: stopCamReturnDuration
+  nameWithType: ShakeCameraEvent.stopCamReturnDuration
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.stopCamReturnDuration
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected float stopCamReturnDuration
+    return:
+      type: System.Single
+    content.vb: Protected stopCamReturnDuration As Single
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.targetCamera
+  commentId: F:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.targetCamera
+  id: targetCamera
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: targetCamera
+  nameWithType: ShakeCameraEvent.targetCamera
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.targetCamera
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected Camera targetCamera
+    return:
+      type: UnityEngine.Camera
+    content.vb: Protected targetCamera As Camera
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.lastPos
+  commentId: F:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.lastPos
+  id: lastPos
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: lastPos
+  nameWithType: ShakeCameraEvent.lastPos
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.lastPos
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected Vector3 lastPos
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Protected lastPos As Vector3
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.lineReader
+  commentId: F:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.lineReader
+  id: lineReader
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: lineReader
+  nameWithType: ShakeCameraEvent.lineReader
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.lineReader
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected ILineReader lineReader
+    return:
+      type: DREditor.Dialogues.LineReading.ILineReader
+    content.vb: Protected lineReader As ILineReader
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Awake
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Awake
+  id: Awake
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: ShakeCameraEvent.Awake()
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Awake()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake()
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Awake*
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Start
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Start
+  id: Start
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ShakeCameraEvent.Start()
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Start()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start()
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Start*
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered(System.Object)
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered(System.Object)
+  id: OnDialogueEventTriggered(System.Object)
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: OnDialogueEventTriggered(object)
+  nameWithType: ShakeCameraEvent.OnDialogueEventTriggered(object)
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void OnDialogueEventTriggered(object o = null)
+    parameters:
+    - id: o
+      type: System.Object
+      description: ''
+    content.vb: Protected Overrides Sub OnDialogueEventTriggered(o As Object = Nothing)
+  overridden: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered*
+  nameWithType.vb: ShakeCameraEvent.OnDialogueEventTriggered(Object)
+  fullName.vb: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered(Object)
+  name.vb: OnDialogueEventTriggered(Object)
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraProcess(DREditor.Dialogues.Events.ShakeObject)
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraProcess(DREditor.Dialogues.Events.ShakeObject)
+  id: ShakeCameraProcess(DREditor.Dialogues.Events.ShakeObject)
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: ShakeCameraProcess(ShakeObject)
+  nameWithType: ShakeCameraEvent.ShakeCameraProcess(ShakeObject)
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraProcess(DREditor.Dialogues.Events.ShakeObject)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ShakeCameraProcess(ShakeObject data)
+    parameters:
+    - id: data
+      type: DREditor.Dialogues.Events.ShakeObject
+      description: ''
+    content.vb: Protected Overridable Sub ShakeCameraProcess(data As ShakeObject)
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraProcess*
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.StopCameraShaking
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.StopCameraShaking
+  id: StopCameraShaking
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: StopCameraShaking()
+  nameWithType: ShakeCameraEvent.StopCameraShaking()
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.StopCameraShaking()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void StopCameraShaking()
+    content.vb: Protected Overridable Sub StopCameraShaking()
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.StopCameraShaking*
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.WaitForTweenToFinish
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.WaitForTweenToFinish
+  id: WaitForTweenToFinish
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: WaitForTweenToFinish()
+  nameWithType: ShakeCameraEvent.WaitForTweenToFinish()
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.WaitForTweenToFinish()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual IEnumerator WaitForTweenToFinish()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Overridable Function WaitForTweenToFinish() As IEnumerator
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.WaitForTweenToFinish*
+  implements:
+  - DREditor.Dialogues.LineReading.ITweenWaiter.WaitForTweenToFinish
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShouldWaitForTween
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShouldWaitForTween
+  id: ShouldWaitForTween
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: ShouldWaitForTween()
+  nameWithType: ShakeCameraEvent.ShouldWaitForTween()
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShouldWaitForTween()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual bool ShouldWaitForTween()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function ShouldWaitForTween() As Boolean
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShouldWaitForTween*
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ToTitleScreen
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: ShakeCameraEvent.ToTitleScreen()
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.#ctor
+  commentId: M:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.#ctor
+  id: '#ctor'
+  parent: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+  langs:
+  - csharp
+  - vb
+  name: ShakeCameraEvent()
+  nameWithType: ShakeCameraEvent.ShakeCameraEvent()
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraEvent()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/CameraEvents/ShakeCameraEvent.cs
+  assemblies:
+  - DREditor.DialogueEventHandling
+  namespace: DREditor.DialogueEventHandling.CameraEvents
+  syntax:
+    content: public ShakeCameraEvent()
+    content.vb: Public Sub New()
+  overload: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.#ctor*
+  nameWithType.vb: ShakeCameraEvent.New()
+  fullName.vb: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.New()
+  name.vb: New()
+references:
+- uid: DREditor.DialogueEventHandling.CameraEvents
+  commentId: N:DREditor.DialogueEventHandling.CameraEvents
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.DialogueEventHandling.CameraEvents
+  nameWithType: DREditor.DialogueEventHandling.CameraEvents
+  fullName: DREditor.DialogueEventHandling.CameraEvents
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueEventHandling
+    name: DialogueEventHandling
+    isExternal: true
+    href: DREditor.DialogueEventHandling.html
+  - name: .
+  - uid: DREditor.DialogueEventHandling.CameraEvents
+    name: CameraEvents
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueEventHandling
+    name: DialogueEventHandling
+    isExternal: true
+    href: DREditor.DialogueEventHandling.html
+  - name: .
+  - uid: DREditor.DialogueEventHandling.CameraEvents
+    name: CameraEvents
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler
+  commentId: T:DREditor.DialogueEventHandling.DialogueEventHandler
+  parent: DREditor.DialogueEventHandling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: DialogueEventHandler
+  nameWithType: DialogueEventHandler
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler
+- uid: DREditor.Dialogues.LineReading.ITweenWaiter
+  commentId: T:DREditor.Dialogues.LineReading.ITweenWaiter
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ITweenWaiter.cs
+  name: ITweenWaiter
+  nameWithType: ITweenWaiter
+  fullName: DREditor.Dialogues.LineReading.ITweenWaiter
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.dialogueEventString
+  commentId: F:DREditor.DialogueEventHandling.DialogueEventHandler.dialogueEventString
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: dialogueEventString
+  nameWithType: DialogueEventHandler.dialogueEventString
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.dialogueEventString
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: TriggerEvent(object)
+  nameWithType: DialogueEventHandler.TriggerEvent(object)
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(object)
+  nameWithType.vb: DialogueEventHandler.TriggerEvent(Object)
+  fullName.vb: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(Object)
+  name.vb: TriggerEvent(Object)
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+    name: TriggerEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+    name: TriggerEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: OnEnable()
+  nameWithType: DialogueEventHandler.OnEnable()
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable()
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: OnDisable()
+  nameWithType: DialogueEventHandler.OnDisable()
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable()
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: SetDefaultEventString(string)
+  nameWithType: DialogueEventHandler.SetDefaultEventString(string)
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(string)
+  nameWithType.vb: DialogueEventHandler.SetDefaultEventString(String)
+  fullName.vb: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(String)
+  name.vb: SetDefaultEventString(String)
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+    name: SetDefaultEventString
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+    name: SetDefaultEventString
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: TriggerParameterlessEvent()
+  nameWithType: DialogueEventHandler.TriggerParameterlessEvent()
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent()
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+    name: TriggerParameterlessEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+    name: TriggerParameterlessEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ShakeCameraEvent>(ShakeCameraEvent)
+  nameWithType: ReflectionHelper.GetFieldNames<ShakeCameraEvent>(ShakeCameraEvent)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent>(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ShakeCameraEvent)(ShakeCameraEvent)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+  name.vb: GetFieldNames(Of ShakeCameraEvent)(ShakeCameraEvent)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ShakeCameraEvent>(ShakeCameraEvent)
+  nameWithType: ReflectionHelper.GetFieldValues<ShakeCameraEvent>(ShakeCameraEvent)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent>(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ShakeCameraEvent)(ShakeCameraEvent)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+  name.vb: GetFieldValues(Of ShakeCameraEvent)(ShakeCameraEvent)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ShakeCameraEvent>(ShakeCameraEvent)
+  nameWithType: DeepCopyExtensions.DeepCopy<ShakeCameraEvent>(ShakeCameraEvent)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent>(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ShakeCameraEvent)(ShakeCameraEvent)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+  name.vb: DeepCopy(Of ShakeCameraEvent)(ShakeCameraEvent)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+  - name: (
+  - uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent
+    name: ShakeCameraEvent
+    isExternal: true
+    href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.DialogueEventHandling
+  commentId: N:DREditor.DialogueEventHandling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.DialogueEventHandling
+  nameWithType: DREditor.DialogueEventHandling
+  fullName: DREditor.DialogueEventHandling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueEventHandling
+    name: DialogueEventHandling
+    isExternal: true
+    href: DREditor.DialogueEventHandling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueEventHandling
+    name: DialogueEventHandling
+    isExternal: true
+    href: DREditor.DialogueEventHandling.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: UnityEngine.Camera
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: UnityEngine.Camera
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: UnityEngine.Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: DREditor.Dialogues.LineReading.ILineReader
+  commentId: T:DREditor.Dialogues.LineReading.ILineReader
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineReader.cs
+  name: ILineReader
+  nameWithType: ILineReader
+  fullName: DREditor.Dialogues.LineReading.ILineReader
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Awake*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Awake
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent_Awake
+  name: Awake
+  nameWithType: ShakeCameraEvent.Awake
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Awake
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Start*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Start
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent_Start
+  name: Start
+  nameWithType: ShakeCameraEvent.Start
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.Start
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: OnDialogueEventTriggered(object)
+  nameWithType: DialogueEventHandler.OnDialogueEventTriggered(object)
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(object)
+  nameWithType.vb: DialogueEventHandler.OnDialogueEventTriggered(Object)
+  fullName.vb: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(Object)
+  name.vb: OnDialogueEventTriggered(Object)
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+    name: OnDialogueEventTriggered
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+    name: OnDialogueEventTriggered
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent_OnDialogueEventTriggered_System_Object_
+  name: OnDialogueEventTriggered
+  nameWithType: ShakeCameraEvent.OnDialogueEventTriggered
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.OnDialogueEventTriggered
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraProcess*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraProcess
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent_ShakeCameraProcess_DREditor_Dialogues_Events_ShakeObject_
+  name: ShakeCameraProcess
+  nameWithType: ShakeCameraEvent.ShakeCameraProcess
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraProcess
+- uid: DREditor.Dialogues.Events.ShakeObject
+  commentId: T:DREditor.Dialogues.Events.ShakeObject
+  parent: DREditor.Dialogues.Events
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs
+  name: ShakeObject
+  nameWithType: ShakeObject
+  fullName: DREditor.Dialogues.Events.ShakeObject
+- uid: DREditor.Dialogues.Events
+  commentId: N:DREditor.Dialogues.Events
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Events
+  nameWithType: DREditor.Dialogues.Events
+  fullName: DREditor.Dialogues.Events
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Events
+    name: Events
+    isExternal: true
+    href: DREditor.Dialogues.Events.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Events
+    name: Events
+    isExternal: true
+    href: DREditor.Dialogues.Events.html
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.StopCameraShaking*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.StopCameraShaking
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent_StopCameraShaking
+  name: StopCameraShaking
+  nameWithType: ShakeCameraEvent.StopCameraShaking
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.StopCameraShaking
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.WaitForTweenToFinish*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.WaitForTweenToFinish
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent_WaitForTweenToFinish
+  name: WaitForTweenToFinish
+  nameWithType: ShakeCameraEvent.WaitForTweenToFinish
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.WaitForTweenToFinish
+- uid: DREditor.Dialogues.LineReading.ITweenWaiter.WaitForTweenToFinish
+  commentId: M:DREditor.Dialogues.LineReading.ITweenWaiter.WaitForTweenToFinish
+  parent: DREditor.Dialogues.LineReading.ITweenWaiter
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ITweenWaiter.cs
+  name: WaitForTweenToFinish()
+  nameWithType: ITweenWaiter.WaitForTweenToFinish()
+  fullName: DREditor.Dialogues.LineReading.ITweenWaiter.WaitForTweenToFinish()
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ITweenWaiter.WaitForTweenToFinish
+    name: WaitForTweenToFinish
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ITweenWaiter.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ITweenWaiter.WaitForTweenToFinish
+    name: WaitForTweenToFinish
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ITweenWaiter.cs
+  - name: (
+  - name: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShouldWaitForTween*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShouldWaitForTween
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent_ShouldWaitForTween
+  name: ShouldWaitForTween
+  nameWithType: ShakeCameraEvent.ShouldWaitForTween
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShouldWaitForTween
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ToTitleScreen*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ToTitleScreen
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: ShakeCameraEvent.ToTitleScreen
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.#ctor*
+  commentId: Overload:DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.#ctor
+  isExternal: true
+  href: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.html#DREditor_DialogueEventHandling_CameraEvents_ShakeCameraEvent__ctor
+  name: ShakeCameraEvent
+  nameWithType: ShakeCameraEvent.ShakeCameraEvent
+  fullName: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.ShakeCameraEvent
+  nameWithType.vb: ShakeCameraEvent.New
+  fullName.vb: DREditor.DialogueEventHandling.CameraEvents.ShakeCameraEvent.New
+  name.vb: New

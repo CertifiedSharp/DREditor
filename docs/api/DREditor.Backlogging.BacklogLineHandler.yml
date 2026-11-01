@@ -1,0 +1,673 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Backlogging.BacklogLineHandler
+  commentId: T:DREditor.Backlogging.BacklogLineHandler
+  id: BacklogLineHandler
+  parent: DREditor.Backlogging
+  children:
+  - DREditor.Backlogging.BacklogLineHandler.#ctor
+  - DREditor.Backlogging.BacklogLineHandler.AddLineToBacklog(DREditor.Dialogues.Line)
+  - DREditor.Backlogging.BacklogLineHandler.CreateBacklogLine(DREditor.Dialogues.Line)
+  - DREditor.Backlogging.BacklogLineHandler.LineEndProcess(DREditor.Dialogues.Line)
+  langs:
+  - csharp
+  - vb
+  name: BacklogLineHandler
+  nameWithType: BacklogLineHandler
+  fullName: DREditor.Backlogging.BacklogLineHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogLineHandler.cs
+  assemblies:
+  - DREditor.Backlogging
+  namespace: DREditor.Backlogging
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("ILineEndProcess\n\n")]
+
+      public class BacklogLineHandler : DialogueComponent, ILineEndProcess
+    content.vb: >-
+      <ClassHeader("ILineEndProcess" & vbLf & vbLf)>
+
+      Public Class BacklogLineHandler Inherits DialogueComponent Implements ILineEndProcess
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  implements:
+  - DREditor.Dialogues.LineReading.ILineEndProcess
+  extensionMethods:
+  - DREditor.Backlogging.BacklogLineHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Backlogging.BacklogLineHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Backlogging.BacklogLineHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        ILineEndProcess
+
+- uid: DREditor.Backlogging.BacklogLineHandler.LineEndProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Backlogging.BacklogLineHandler.LineEndProcess(DREditor.Dialogues.Line)
+  id: LineEndProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Backlogging.BacklogLineHandler
+  langs:
+  - csharp
+  - vb
+  name: LineEndProcess(Line)
+  nameWithType: BacklogLineHandler.LineEndProcess(Line)
+  fullName: DREditor.Backlogging.BacklogLineHandler.LineEndProcess(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogLineHandler.cs
+  assemblies:
+  - DREditor.Backlogging
+  namespace: DREditor.Backlogging
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void LineEndProcess(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub LineEndProcess(currentLine As Line)
+  overload: DREditor.Backlogging.BacklogLineHandler.LineEndProcess*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+- uid: DREditor.Backlogging.BacklogLineHandler.AddLineToBacklog(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Backlogging.BacklogLineHandler.AddLineToBacklog(DREditor.Dialogues.Line)
+  id: AddLineToBacklog(DREditor.Dialogues.Line)
+  parent: DREditor.Backlogging.BacklogLineHandler
+  langs:
+  - csharp
+  - vb
+  name: AddLineToBacklog(Line)
+  nameWithType: BacklogLineHandler.AddLineToBacklog(Line)
+  fullName: DREditor.Backlogging.BacklogLineHandler.AddLineToBacklog(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogLineHandler.cs
+  assemblies:
+  - DREditor.Backlogging
+  namespace: DREditor.Backlogging
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void AddLineToBacklog(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Protected Overridable Sub AddLineToBacklog(currentLine As Line)
+  overload: DREditor.Backlogging.BacklogLineHandler.AddLineToBacklog*
+- uid: DREditor.Backlogging.BacklogLineHandler.CreateBacklogLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Backlogging.BacklogLineHandler.CreateBacklogLine(DREditor.Dialogues.Line)
+  id: CreateBacklogLine(DREditor.Dialogues.Line)
+  parent: DREditor.Backlogging.BacklogLineHandler
+  langs:
+  - csharp
+  - vb
+  name: CreateBacklogLine(Line)
+  nameWithType: BacklogLineHandler.CreateBacklogLine(Line)
+  fullName: DREditor.Backlogging.BacklogLineHandler.CreateBacklogLine(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogLineHandler.cs
+  assemblies:
+  - DREditor.Backlogging
+  namespace: DREditor.Backlogging
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual BacklogLines CreateBacklogLine(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: DREditor.Dialogues.BacklogLines
+      description: ''
+    content.vb: Protected Overridable Function CreateBacklogLine(currentLine As Line) As BacklogLines
+  overload: DREditor.Backlogging.BacklogLineHandler.CreateBacklogLine*
+- uid: DREditor.Backlogging.BacklogLineHandler.#ctor
+  commentId: M:DREditor.Backlogging.BacklogLineHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Backlogging.BacklogLineHandler
+  langs:
+  - csharp
+  - vb
+  name: BacklogLineHandler()
+  nameWithType: BacklogLineHandler.BacklogLineHandler()
+  fullName: DREditor.Backlogging.BacklogLineHandler.BacklogLineHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogLineHandler.cs
+  assemblies:
+  - DREditor.Backlogging
+  namespace: DREditor.Backlogging
+  syntax:
+    content: public BacklogLineHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Backlogging.BacklogLineHandler.#ctor*
+  nameWithType.vb: BacklogLineHandler.New()
+  fullName.vb: DREditor.Backlogging.BacklogLineHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.Backlogging
+  commentId: N:DREditor.Backlogging
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Backlogging
+  nameWithType: DREditor.Backlogging
+  fullName: DREditor.Backlogging
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Backlogging
+    name: Backlogging
+    isExternal: true
+    href: DREditor.Backlogging.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Backlogging
+    name: Backlogging
+    isExternal: true
+    href: DREditor.Backlogging.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.Dialogues.LineReading.ILineEndProcess
+  commentId: T:DREditor.Dialogues.LineReading.ILineEndProcess
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineEndProcess.cs
+  name: ILineEndProcess
+  nameWithType: ILineEndProcess
+  fullName: DREditor.Dialogues.LineReading.ILineEndProcess
+- uid: DREditor.Backlogging.BacklogLineHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<BacklogLineHandler>(BacklogLineHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<BacklogLineHandler>(BacklogLineHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Backlogging.BacklogLineHandler>(DREditor.Backlogging.BacklogLineHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of BacklogLineHandler)(BacklogLineHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Backlogging.BacklogLineHandler)(DREditor.Backlogging.BacklogLineHandler)
+  name.vb: GetFieldNames(Of BacklogLineHandler)(BacklogLineHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Backlogging.BacklogLineHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Backlogging.BacklogLineHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+- uid: DREditor.Backlogging.BacklogLineHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<BacklogLineHandler>(BacklogLineHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<BacklogLineHandler>(BacklogLineHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Backlogging.BacklogLineHandler>(DREditor.Backlogging.BacklogLineHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of BacklogLineHandler)(BacklogLineHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Backlogging.BacklogLineHandler)(DREditor.Backlogging.BacklogLineHandler)
+  name.vb: GetFieldValues(Of BacklogLineHandler)(BacklogLineHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Backlogging.BacklogLineHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Backlogging.BacklogLineHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+- uid: DREditor.Backlogging.BacklogLineHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<BacklogLineHandler>(BacklogLineHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<BacklogLineHandler>(BacklogLineHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Backlogging.BacklogLineHandler>(DREditor.Backlogging.BacklogLineHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of BacklogLineHandler)(BacklogLineHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Backlogging.BacklogLineHandler)(DREditor.Backlogging.BacklogLineHandler)
+  name.vb: DeepCopy(Of BacklogLineHandler)(BacklogLineHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Backlogging.BacklogLineHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Backlogging.BacklogLineHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Backlogging.BacklogLineHandler
+    name: BacklogLineHandler
+    isExternal: true
+    href: DREditor.Backlogging.BacklogLineHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Backlogging.BacklogLineHandler.LineEndProcess*
+  commentId: Overload:DREditor.Backlogging.BacklogLineHandler.LineEndProcess
+  isExternal: true
+  href: DREditor.Backlogging.BacklogLineHandler.html#DREditor_Backlogging_BacklogLineHandler_LineEndProcess_DREditor_Dialogues_Line_
+  name: LineEndProcess
+  nameWithType: BacklogLineHandler.LineEndProcess
+  fullName: DREditor.Backlogging.BacklogLineHandler.LineEndProcess
+- uid: DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineEndProcess
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineEndProcess.cs
+  name: LineEndProcess(Line)
+  nameWithType: ILineEndProcess.LineEndProcess(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+    name: LineEndProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineEndProcess.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineEndProcess.LineEndProcess(DREditor.Dialogues.Line)
+    name: LineEndProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineEndProcess.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: DREditor.Backlogging.BacklogLineHandler.AddLineToBacklog*
+  commentId: Overload:DREditor.Backlogging.BacklogLineHandler.AddLineToBacklog
+  isExternal: true
+  href: DREditor.Backlogging.BacklogLineHandler.html#DREditor_Backlogging_BacklogLineHandler_AddLineToBacklog_DREditor_Dialogues_Line_
+  name: AddLineToBacklog
+  nameWithType: BacklogLineHandler.AddLineToBacklog
+  fullName: DREditor.Backlogging.BacklogLineHandler.AddLineToBacklog
+- uid: DREditor.Backlogging.BacklogLineHandler.CreateBacklogLine*
+  commentId: Overload:DREditor.Backlogging.BacklogLineHandler.CreateBacklogLine
+  isExternal: true
+  href: DREditor.Backlogging.BacklogLineHandler.html#DREditor_Backlogging_BacklogLineHandler_CreateBacklogLine_DREditor_Dialogues_Line_
+  name: CreateBacklogLine
+  nameWithType: BacklogLineHandler.CreateBacklogLine
+  fullName: DREditor.Backlogging.BacklogLineHandler.CreateBacklogLine
+- uid: DREditor.Dialogues.BacklogLines
+  commentId: T:DREditor.Dialogues.BacklogLines
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Backlog.cs
+  name: BacklogLines
+  nameWithType: BacklogLines
+  fullName: DREditor.Dialogues.BacklogLines
+- uid: DREditor.Backlogging.BacklogLineHandler.#ctor*
+  commentId: Overload:DREditor.Backlogging.BacklogLineHandler.#ctor
+  isExternal: true
+  href: DREditor.Backlogging.BacklogLineHandler.html#DREditor_Backlogging_BacklogLineHandler__ctor
+  name: BacklogLineHandler
+  nameWithType: BacklogLineHandler.BacklogLineHandler
+  fullName: DREditor.Backlogging.BacklogLineHandler.BacklogLineHandler
+  nameWithType.vb: BacklogLineHandler.New
+  fullName.vb: DREditor.Backlogging.BacklogLineHandler.New
+  name.vb: New

@@ -12,25 +12,48 @@ items:
   - DREditor.Characters.Character.DefaultSprite
   - DREditor.Characters.Character.Expressions
   - DREditor.Characters.Character.FirstName
-  - DREditor.Characters.Character.FriendshipLvl
+  - DREditor.Characters.Character.GetExpressionIntValues
+  - DREditor.Characters.Character.GetExpressionMatching(System.String)
   - DREditor.Characters.Character.GetSpriteByName(System.String)
   - DREditor.Characters.Character.GetSpriteLabelByTexName(System.String)
+  - DREditor.Characters.Character.Get``1
+  - DREditor.Characters.Character.Has``1(``0@)
   - DREditor.Characters.Character.Headshot
-  - DREditor.Characters.Character.IsDead
   - DREditor.Characters.Character.LastName
   - DREditor.Characters.Character.MissingMat
   - DREditor.Characters.Character.MissingTex
   - DREditor.Characters.Character.NSDPortrait
   - DREditor.Characters.Character.Nameplate
+  - DREditor.Characters.Character.NotFTECharacter
+  - DREditor.Characters.Character.SetCharacterDatas(System.Collections.Generic.List{DREditor.Characters.ICharacterData})
+  - DREditor.Characters.Character.SetExpressions(System.Collections.Generic.List{DREditor.Characters.Expression})
+  - DREditor.Characters.Character.SetSprites(System.Collections.Generic.List{DREditor.Characters.Unlit})
+  - DREditor.Characters.Character.ShowSprites
   - DREditor.Characters.Character.Sprites
   - DREditor.Characters.Character.TrialHeight
   - DREditor.Characters.Character.TrialMaterial
   - DREditor.Characters.Character.TrialNameplate
   - DREditor.Characters.Character.TrialPortrait
   - DREditor.Characters.Character.TrialPosition
-  - DREditor.Characters.Character.getExpressionIntValues
+  - DREditor.Characters.Character.actorPrefab
+  - DREditor.Characters.Character.blackExpression
+  - DREditor.Characters.Character.datas
+  - DREditor.Characters.Character.defaultSprite
+  - DREditor.Characters.Character.firstName
+  - DREditor.Characters.Character.headshot
+  - DREditor.Characters.Character.lastName
+  - DREditor.Characters.Character.missingMat
+  - DREditor.Characters.Character.missingTex
+  - DREditor.Characters.Character.nSDPortrait
+  - DREditor.Characters.Character.nameplate
+  - DREditor.Characters.Character.notFTECharacter
   - DREditor.Characters.Character.showSprites
   - DREditor.Characters.Character.translationKey
+  - DREditor.Characters.Character.trialHeight
+  - DREditor.Characters.Character.trialMaterial
+  - DREditor.Characters.Character.trialNameplate
+  - DREditor.Characters.Character.trialPortrait
+  - DREditor.Characters.Character.trialPosition
   langs:
   - csharp
   - vb
@@ -39,7 +62,7 @@ items:
   fullName: DREditor.Characters.Character
   type: Class
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -49,9 +72,11 @@ items:
   inheritance:
   - System.Object
   derivedClasses:
-  - DREditor.Characters.Headmaster
-  - DREditor.Characters.Protagonist
   - DREditor.Characters.Student
+  extensionMethods:
+  - DREditor.Characters.Character.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Characters.Character.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Characters.Character.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
 - uid: DREditor.Characters.Character.translationKey
   commentId: F:DREditor.Characters.Character.translationKey
   id: translationKey
@@ -64,7 +89,7 @@ items:
   fullName: DREditor.Characters.Character.translationKey
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -73,132 +98,132 @@ items:
     return:
       type: System.String
     content.vb: Public translationKey As String
-- uid: DREditor.Characters.Character.LastName
-  commentId: F:DREditor.Characters.Character.LastName
-  id: LastName
+- uid: DREditor.Characters.Character.lastName
+  commentId: F:DREditor.Characters.Character.lastName
+  id: lastName
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: LastName
-  nameWithType: Character.LastName
-  fullName: DREditor.Characters.Character.LastName
+  name: lastName
+  nameWithType: Character.lastName
+  fullName: DREditor.Characters.Character.lastName
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public string LastName
+    content: public string lastName
     return:
       type: System.String
-    content.vb: Public LastName As String
-- uid: DREditor.Characters.Character.FirstName
-  commentId: F:DREditor.Characters.Character.FirstName
-  id: FirstName
+    content.vb: Public lastName As String
+- uid: DREditor.Characters.Character.firstName
+  commentId: F:DREditor.Characters.Character.firstName
+  id: firstName
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: FirstName
-  nameWithType: Character.FirstName
-  fullName: DREditor.Characters.Character.FirstName
+  name: firstName
+  nameWithType: Character.firstName
+  fullName: DREditor.Characters.Character.firstName
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public string FirstName
+    content: public string firstName
     return:
       type: System.String
-    content.vb: Public FirstName As String
-- uid: DREditor.Characters.Character.DefaultSprite
-  commentId: F:DREditor.Characters.Character.DefaultSprite
-  id: DefaultSprite
+    content.vb: Public firstName As String
+- uid: DREditor.Characters.Character.defaultSprite
+  commentId: F:DREditor.Characters.Character.defaultSprite
+  id: defaultSprite
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: DefaultSprite
-  nameWithType: Character.DefaultSprite
-  fullName: DREditor.Characters.Character.DefaultSprite
+  name: defaultSprite
+  nameWithType: Character.defaultSprite
+  fullName: DREditor.Characters.Character.defaultSprite
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Texture2D DefaultSprite
+    content: public Texture2D defaultSprite
     return:
       type: UnityEngine.Texture2D
-    content.vb: Public DefaultSprite As Texture2D
-- uid: DREditor.Characters.Character.TrialPortrait
-  commentId: F:DREditor.Characters.Character.TrialPortrait
-  id: TrialPortrait
+    content.vb: Public defaultSprite As Texture2D
+- uid: DREditor.Characters.Character.trialPortrait
+  commentId: F:DREditor.Characters.Character.trialPortrait
+  id: trialPortrait
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: TrialPortrait
-  nameWithType: Character.TrialPortrait
-  fullName: DREditor.Characters.Character.TrialPortrait
+  name: trialPortrait
+  nameWithType: Character.trialPortrait
+  fullName: DREditor.Characters.Character.trialPortrait
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Texture2D TrialPortrait
+    content: public Texture2D trialPortrait
     return:
       type: UnityEngine.Texture2D
-    content.vb: Public TrialPortrait As Texture2D
-- uid: DREditor.Characters.Character.NSDPortrait
-  commentId: F:DREditor.Characters.Character.NSDPortrait
-  id: NSDPortrait
+    content.vb: Public trialPortrait As Texture2D
+- uid: DREditor.Characters.Character.nSDPortrait
+  commentId: F:DREditor.Characters.Character.nSDPortrait
+  id: nSDPortrait
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: NSDPortrait
-  nameWithType: Character.NSDPortrait
-  fullName: DREditor.Characters.Character.NSDPortrait
+  name: nSDPortrait
+  nameWithType: Character.nSDPortrait
+  fullName: DREditor.Characters.Character.nSDPortrait
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Texture2D NSDPortrait
+    content: public Texture2D nSDPortrait
     return:
       type: UnityEngine.Texture2D
-    content.vb: Public NSDPortrait As Texture2D
-- uid: DREditor.Characters.Character.ActorPrefab
-  commentId: F:DREditor.Characters.Character.ActorPrefab
-  id: ActorPrefab
+    content.vb: Public nSDPortrait As Texture2D
+- uid: DREditor.Characters.Character.actorPrefab
+  commentId: F:DREditor.Characters.Character.actorPrefab
+  id: actorPrefab
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: ActorPrefab
-  nameWithType: Character.ActorPrefab
-  fullName: DREditor.Characters.Character.ActorPrefab
+  name: actorPrefab
+  nameWithType: Character.actorPrefab
+  fullName: DREditor.Characters.Character.actorPrefab
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public GameObject ActorPrefab
+    content: public GameObject actorPrefab
     return:
       type: UnityEngine.GameObject
-    content.vb: Public ActorPrefab As GameObject
+    content.vb: Public actorPrefab As GameObject
 - uid: DREditor.Characters.Character.showSprites
   commentId: F:DREditor.Characters.Character.showSprites
   id: showSprites
@@ -211,7 +236,7 @@ items:
   fullName: DREditor.Characters.Character.showSprites
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -220,90 +245,90 @@ items:
     return:
       type: System.Boolean
     content.vb: Public showSprites As Boolean
-- uid: DREditor.Characters.Character.BlackExpression
-  commentId: F:DREditor.Characters.Character.BlackExpression
-  id: BlackExpression
+- uid: DREditor.Characters.Character.blackExpression
+  commentId: F:DREditor.Characters.Character.blackExpression
+  id: blackExpression
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: BlackExpression
-  nameWithType: Character.BlackExpression
-  fullName: DREditor.Characters.Character.BlackExpression
+  name: blackExpression
+  nameWithType: Character.blackExpression
+  fullName: DREditor.Characters.Character.blackExpression
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Material BlackExpression
+    content: public Material blackExpression
     return:
       type: UnityEngine.Material
-    content.vb: Public BlackExpression As Material
-- uid: DREditor.Characters.Character.TrialMaterial
-  commentId: F:DREditor.Characters.Character.TrialMaterial
-  id: TrialMaterial
+    content.vb: Public blackExpression As Material
+- uid: DREditor.Characters.Character.trialMaterial
+  commentId: F:DREditor.Characters.Character.trialMaterial
+  id: trialMaterial
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: TrialMaterial
-  nameWithType: Character.TrialMaterial
-  fullName: DREditor.Characters.Character.TrialMaterial
+  name: trialMaterial
+  nameWithType: Character.trialMaterial
+  fullName: DREditor.Characters.Character.trialMaterial
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Material TrialMaterial
+    content: public Material trialMaterial
     return:
       type: UnityEngine.Material
-    content.vb: Public TrialMaterial As Material
-- uid: DREditor.Characters.Character.MissingMat
-  commentId: F:DREditor.Characters.Character.MissingMat
-  id: MissingMat
+    content.vb: Public trialMaterial As Material
+- uid: DREditor.Characters.Character.missingMat
+  commentId: F:DREditor.Characters.Character.missingMat
+  id: missingMat
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: MissingMat
-  nameWithType: Character.MissingMat
-  fullName: DREditor.Characters.Character.MissingMat
+  name: missingMat
+  nameWithType: Character.missingMat
+  fullName: DREditor.Characters.Character.missingMat
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Material MissingMat
+    content: public Material missingMat
     return:
       type: UnityEngine.Material
-    content.vb: Public MissingMat As Material
-- uid: DREditor.Characters.Character.MissingTex
-  commentId: F:DREditor.Characters.Character.MissingTex
-  id: MissingTex
+    content.vb: Public missingMat As Material
+- uid: DREditor.Characters.Character.missingTex
+  commentId: F:DREditor.Characters.Character.missingTex
+  id: missingTex
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: MissingTex
-  nameWithType: Character.MissingTex
-  fullName: DREditor.Characters.Character.MissingTex
+  name: missingTex
+  nameWithType: Character.missingTex
+  fullName: DREditor.Characters.Character.missingTex
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Sprite MissingTex
+    content: public Sprite missingTex
     return:
       type: UnityEngine.Sprite
-    content.vb: Public MissingTex As Sprite
+    content.vb: Public missingTex As Sprite
 - uid: DREditor.Characters.Character.Expressions
   commentId: F:DREditor.Characters.Character.Expressions
   id: Expressions
@@ -316,7 +341,7 @@ items:
   fullName: DREditor.Characters.Character.Expressions
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -337,7 +362,7 @@ items:
   fullName: DREditor.Characters.Character.Sprites
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -358,7 +383,7 @@ items:
   fullName: DREditor.Characters.Character.Aliases
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -367,175 +392,322 @@ items:
     return:
       type: System.Collections.Generic.List{DREditor.Characters.Alias}
     content.vb: Public Aliases As List(Of [Alias])
-- uid: DREditor.Characters.Character.Nameplate
-  commentId: F:DREditor.Characters.Character.Nameplate
-  id: Nameplate
+- uid: DREditor.Characters.Character.nameplate
+  commentId: F:DREditor.Characters.Character.nameplate
+  id: nameplate
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: Nameplate
-  nameWithType: Character.Nameplate
-  fullName: DREditor.Characters.Character.Nameplate
+  name: nameplate
+  nameWithType: Character.nameplate
+  fullName: DREditor.Characters.Character.nameplate
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Texture2D Nameplate
+    content: public Texture2D nameplate
     return:
       type: UnityEngine.Texture2D
-    content.vb: Public Nameplate As Texture2D
-- uid: DREditor.Characters.Character.Headshot
-  commentId: F:DREditor.Characters.Character.Headshot
-  id: Headshot
+    content.vb: Public nameplate As Texture2D
+- uid: DREditor.Characters.Character.headshot
+  commentId: F:DREditor.Characters.Character.headshot
+  id: headshot
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: Headshot
-  nameWithType: Character.Headshot
-  fullName: DREditor.Characters.Character.Headshot
+  name: headshot
+  nameWithType: Character.headshot
+  fullName: DREditor.Characters.Character.headshot
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Texture2D Headshot
+    content: public Texture2D headshot
     return:
       type: UnityEngine.Texture2D
-    content.vb: Public Headshot As Texture2D
-- uid: DREditor.Characters.Character.TrialNameplate
-  commentId: F:DREditor.Characters.Character.TrialNameplate
-  id: TrialNameplate
+    content.vb: Public headshot As Texture2D
+- uid: DREditor.Characters.Character.trialNameplate
+  commentId: F:DREditor.Characters.Character.trialNameplate
+  id: trialNameplate
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: TrialNameplate
-  nameWithType: Character.TrialNameplate
-  fullName: DREditor.Characters.Character.TrialNameplate
+  name: trialNameplate
+  nameWithType: Character.trialNameplate
+  fullName: DREditor.Characters.Character.trialNameplate
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public Texture2D TrialNameplate
+    content: public Texture2D trialNameplate
     return:
       type: UnityEngine.Texture2D
-    content.vb: Public TrialNameplate As Texture2D
-- uid: DREditor.Characters.Character.TrialHeight
-  commentId: F:DREditor.Characters.Character.TrialHeight
-  id: TrialHeight
+    content.vb: Public trialNameplate As Texture2D
+- uid: DREditor.Characters.Character.trialHeight
+  commentId: F:DREditor.Characters.Character.trialHeight
+  id: trialHeight
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: TrialHeight
-  nameWithType: Character.TrialHeight
-  fullName: DREditor.Characters.Character.TrialHeight
+  name: trialHeight
+  nameWithType: Character.trialHeight
+  fullName: DREditor.Characters.Character.trialHeight
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public float TrialHeight
+    content: public float trialHeight
     return:
       type: System.Single
-    content.vb: Public TrialHeight As Single
-- uid: DREditor.Characters.Character.TrialPosition
-  commentId: F:DREditor.Characters.Character.TrialPosition
-  id: TrialPosition
+    content.vb: Public trialHeight As Single
+- uid: DREditor.Characters.Character.trialPosition
+  commentId: F:DREditor.Characters.Character.trialPosition
+  id: trialPosition
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: TrialPosition
-  nameWithType: Character.TrialPosition
-  fullName: DREditor.Characters.Character.TrialPosition
+  name: trialPosition
+  nameWithType: Character.trialPosition
+  fullName: DREditor.Characters.Character.trialPosition
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public int TrialPosition
+    content: public int trialPosition
     return:
       type: System.Int32
-    content.vb: Public TrialPosition As Integer
-- uid: DREditor.Characters.Character.IsDead
-  commentId: F:DREditor.Characters.Character.IsDead
-  id: IsDead
+    content.vb: Public trialPosition As Integer
+- uid: DREditor.Characters.Character.notFTECharacter
+  commentId: F:DREditor.Characters.Character.notFTECharacter
+  id: notFTECharacter
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: IsDead
-  nameWithType: Character.IsDead
-  fullName: DREditor.Characters.Character.IsDead
+  name: notFTECharacter
+  nameWithType: Character.notFTECharacter
+  fullName: DREditor.Characters.Character.notFTECharacter
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public bool IsDead
+    content: public bool notFTECharacter
     return:
       type: System.Boolean
-    content.vb: Public IsDead As Boolean
-- uid: DREditor.Characters.Character.FriendshipLvl
-  commentId: F:DREditor.Characters.Character.FriendshipLvl
-  id: FriendshipLvl
+    content.vb: Public notFTECharacter As Boolean
+- uid: DREditor.Characters.Character.datas
+  commentId: F:DREditor.Characters.Character.datas
+  id: datas
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: FriendshipLvl
-  nameWithType: Character.FriendshipLvl
-  fullName: DREditor.Characters.Character.FriendshipLvl
+  name: datas
+  nameWithType: Character.datas
+  fullName: DREditor.Characters.Character.datas
   type: Field
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public int FriendshipLvl
+    content: >-
+      [SelectType("")]
+
+      public List<ICharacterData> datas
     return:
-      type: System.Int32
-    content.vb: Public FriendshipLvl As Integer
-- uid: DREditor.Characters.Character.getExpressionIntValues
-  commentId: M:DREditor.Characters.Character.getExpressionIntValues
-  id: getExpressionIntValues
+      type: System.Collections.Generic.List{DREditor.Characters.ICharacterData}
+    content.vb: >-
+      <SelectType("")>
+
+      Public datas As List(Of ICharacterData)
+  attributes:
+  - type: DREditor.SelectTypeAttribute
+    ctor: DREditor.SelectTypeAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ''
+- uid: DREditor.Characters.Character.SetCharacterDatas(System.Collections.Generic.List{DREditor.Characters.ICharacterData})
+  commentId: M:DREditor.Characters.Character.SetCharacterDatas(System.Collections.Generic.List{DREditor.Characters.ICharacterData})
+  id: SetCharacterDatas(System.Collections.Generic.List{DREditor.Characters.ICharacterData})
   parent: DREditor.Characters.Character
   langs:
   - csharp
   - vb
-  name: getExpressionIntValues()
-  nameWithType: Character.getExpressionIntValues()
-  fullName: DREditor.Characters.Character.getExpressionIntValues()
+  name: SetCharacterDatas(List<ICharacterData>)
+  nameWithType: Character.SetCharacterDatas(List<ICharacterData>)
+  fullName: DREditor.Characters.Character.SetCharacterDatas(System.Collections.Generic.List<DREditor.Characters.ICharacterData>)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
   syntax:
-    content: public int[] getExpressionIntValues()
+    content: public virtual void SetCharacterDatas(List<ICharacterData> datas)
+    parameters:
+    - id: datas
+      type: System.Collections.Generic.List{DREditor.Characters.ICharacterData}
+    content.vb: Public Overridable Sub SetCharacterDatas(datas As List(Of ICharacterData))
+  overload: DREditor.Characters.Character.SetCharacterDatas*
+  nameWithType.vb: Character.SetCharacterDatas(List(Of ICharacterData))
+  fullName.vb: DREditor.Characters.Character.SetCharacterDatas(System.Collections.Generic.List(Of DREditor.Characters.ICharacterData))
+  name.vb: SetCharacterDatas(List(Of ICharacterData))
+- uid: DREditor.Characters.Character.Get``1
+  commentId: M:DREditor.Characters.Character.Get``1
+  id: Get``1
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: Get<T>()
+  nameWithType: Character.Get<T>()
+  fullName: DREditor.Characters.Character.Get<T>()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: 'public virtual T Get<T>() where T : ICharacterData'
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Overridable Function [Get](Of T As ICharacterData)() As T
+  overload: DREditor.Characters.Character.Get*
+  nameWithType.vb: Character.Get(Of T)()
+  fullName.vb: DREditor.Characters.Character.Get(Of T)()
+  name.vb: Get(Of T)()
+- uid: DREditor.Characters.Character.Has``1(``0@)
+  commentId: M:DREditor.Characters.Character.Has``1(``0@)
+  id: Has``1(``0@)
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: Has<T>(out T)
+  nameWithType: Character.Has<T>(out T)
+  fullName: DREditor.Characters.Character.Has<T>(out T)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: 'public virtual bool Has<T>(out T soughtData) where T : ICharacterData'
+    parameters:
+    - id: soughtData
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function Has(Of T As ICharacterData)(soughtData As T) As Boolean
+  overload: DREditor.Characters.Character.Has*
+  nameWithType.vb: Character.Has(Of T)(T)
+  fullName.vb: DREditor.Characters.Character.Has(Of T)(T)
+  name.vb: Has(Of T)(T)
+- uid: DREditor.Characters.Character.SetExpressions(System.Collections.Generic.List{DREditor.Characters.Expression})
+  commentId: M:DREditor.Characters.Character.SetExpressions(System.Collections.Generic.List{DREditor.Characters.Expression})
+  id: SetExpressions(System.Collections.Generic.List{DREditor.Characters.Expression})
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: SetExpressions(List<Expression>)
+  nameWithType: Character.SetExpressions(List<Expression>)
+  fullName: DREditor.Characters.Character.SetExpressions(System.Collections.Generic.List<DREditor.Characters.Expression>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public void SetExpressions(List<Expression> Expressions)
+    parameters:
+    - id: Expressions
+      type: System.Collections.Generic.List{DREditor.Characters.Expression}
+    content.vb: Public Sub SetExpressions(Expressions As List(Of Expression))
+  overload: DREditor.Characters.Character.SetExpressions*
+  nameWithType.vb: Character.SetExpressions(List(Of Expression))
+  fullName.vb: DREditor.Characters.Character.SetExpressions(System.Collections.Generic.List(Of DREditor.Characters.Expression))
+  name.vb: SetExpressions(List(Of Expression))
+- uid: DREditor.Characters.Character.SetSprites(System.Collections.Generic.List{DREditor.Characters.Unlit})
+  commentId: M:DREditor.Characters.Character.SetSprites(System.Collections.Generic.List{DREditor.Characters.Unlit})
+  id: SetSprites(System.Collections.Generic.List{DREditor.Characters.Unlit})
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: SetSprites(List<Unlit>)
+  nameWithType: Character.SetSprites(List<Unlit>)
+  fullName: DREditor.Characters.Character.SetSprites(System.Collections.Generic.List<DREditor.Characters.Unlit>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public void SetSprites(List<Unlit> Sprites)
+    parameters:
+    - id: Sprites
+      type: System.Collections.Generic.List{DREditor.Characters.Unlit}
+    content.vb: Public Sub SetSprites(Sprites As List(Of Unlit))
+  overload: DREditor.Characters.Character.SetSprites*
+  nameWithType.vb: Character.SetSprites(List(Of Unlit))
+  fullName.vb: DREditor.Characters.Character.SetSprites(System.Collections.Generic.List(Of DREditor.Characters.Unlit))
+  name.vb: SetSprites(List(Of Unlit))
+- uid: DREditor.Characters.Character.GetExpressionIntValues
+  commentId: M:DREditor.Characters.Character.GetExpressionIntValues
+  id: GetExpressionIntValues
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: GetExpressionIntValues()
+  nameWithType: Character.GetExpressionIntValues()
+  fullName: DREditor.Characters.Character.GetExpressionIntValues()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public int[] GetExpressionIntValues()
     return:
       type: System.Int32[]
-    content.vb: Public Function getExpressionIntValues() As Integer()
-  overload: DREditor.Characters.Character.getExpressionIntValues*
+    content.vb: Public Function GetExpressionIntValues() As Integer()
+  overload: DREditor.Characters.Character.GetExpressionIntValues*
 - uid: DREditor.Characters.Character.GetSpriteByName(System.String)
   commentId: M:DREditor.Characters.Character.GetSpriteByName(System.String)
   id: GetSpriteByName(System.String)
@@ -548,7 +720,7 @@ items:
   fullName: DREditor.Characters.Character.GetSpriteByName(string)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -576,7 +748,7 @@ items:
   fullName: DREditor.Characters.Character.GetSpriteLabelByTexName(string)
   type: Method
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -592,6 +764,34 @@ items:
   nameWithType.vb: Character.GetSpriteLabelByTexName(String)
   fullName.vb: DREditor.Characters.Character.GetSpriteLabelByTexName(String)
   name.vb: GetSpriteLabelByTexName(String)
+- uid: DREditor.Characters.Character.GetExpressionMatching(System.String)
+  commentId: M:DREditor.Characters.Character.GetExpressionMatching(System.String)
+  id: GetExpressionMatching(System.String)
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: GetExpressionMatching(string)
+  nameWithType: Character.GetExpressionMatching(string)
+  fullName: DREditor.Characters.Character.GetExpressionMatching(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Expression GetExpressionMatching(string expressionName)
+    parameters:
+    - id: expressionName
+      type: System.String
+    return:
+      type: DREditor.Characters.Expression
+    content.vb: Public Function GetExpressionMatching(expressionName As String) As Expression
+  overload: DREditor.Characters.Character.GetExpressionMatching*
+  nameWithType.vb: Character.GetExpressionMatching(String)
+  fullName.vb: DREditor.Characters.Character.GetExpressionMatching(String)
+  name.vb: GetExpressionMatching(String)
 - uid: DREditor.Characters.Character.#ctor
   commentId: M:DREditor.Characters.Character.#ctor
   id: '#ctor'
@@ -604,7 +804,7 @@ items:
   fullName: DREditor.Characters.Character.Character()
   type: Constructor
   source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Characters/Character.cs
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
   assemblies:
   - DREditor
   namespace: DREditor.Characters
@@ -615,6 +815,397 @@ items:
   nameWithType.vb: Character.New()
   fullName.vb: DREditor.Characters.Character.New()
   name.vb: New()
+- uid: DREditor.Characters.Character.LastName
+  commentId: P:DREditor.Characters.Character.LastName
+  id: LastName
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: Character.LastName
+  fullName: DREditor.Characters.Character.LastName
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public string LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: DREditor.Characters.Character.LastName*
+- uid: DREditor.Characters.Character.FirstName
+  commentId: P:DREditor.Characters.Character.FirstName
+  id: FirstName
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: Character.FirstName
+  fullName: DREditor.Characters.Character.FirstName
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public string FirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: DREditor.Characters.Character.FirstName*
+- uid: DREditor.Characters.Character.DefaultSprite
+  commentId: P:DREditor.Characters.Character.DefaultSprite
+  id: DefaultSprite
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: DefaultSprite
+  nameWithType: Character.DefaultSprite
+  fullName: DREditor.Characters.Character.DefaultSprite
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Texture2D DefaultSprite { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: Public Property DefaultSprite As Texture2D
+  overload: DREditor.Characters.Character.DefaultSprite*
+- uid: DREditor.Characters.Character.TrialPortrait
+  commentId: P:DREditor.Characters.Character.TrialPortrait
+  id: TrialPortrait
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: TrialPortrait
+  nameWithType: Character.TrialPortrait
+  fullName: DREditor.Characters.Character.TrialPortrait
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Texture2D TrialPortrait { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: Public Property TrialPortrait As Texture2D
+  overload: DREditor.Characters.Character.TrialPortrait*
+- uid: DREditor.Characters.Character.NSDPortrait
+  commentId: P:DREditor.Characters.Character.NSDPortrait
+  id: NSDPortrait
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: NSDPortrait
+  nameWithType: Character.NSDPortrait
+  fullName: DREditor.Characters.Character.NSDPortrait
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Texture2D NSDPortrait { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: Public Property NSDPortrait As Texture2D
+  overload: DREditor.Characters.Character.NSDPortrait*
+- uid: DREditor.Characters.Character.ActorPrefab
+  commentId: P:DREditor.Characters.Character.ActorPrefab
+  id: ActorPrefab
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: ActorPrefab
+  nameWithType: Character.ActorPrefab
+  fullName: DREditor.Characters.Character.ActorPrefab
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public GameObject ActorPrefab { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public Property ActorPrefab As GameObject
+  overload: DREditor.Characters.Character.ActorPrefab*
+- uid: DREditor.Characters.Character.ShowSprites
+  commentId: P:DREditor.Characters.Character.ShowSprites
+  id: ShowSprites
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: ShowSprites
+  nameWithType: Character.ShowSprites
+  fullName: DREditor.Characters.Character.ShowSprites
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public bool ShowSprites { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ShowSprites As Boolean
+  overload: DREditor.Characters.Character.ShowSprites*
+- uid: DREditor.Characters.Character.BlackExpression
+  commentId: P:DREditor.Characters.Character.BlackExpression
+  id: BlackExpression
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: BlackExpression
+  nameWithType: Character.BlackExpression
+  fullName: DREditor.Characters.Character.BlackExpression
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Material BlackExpression { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Material
+    content.vb: Public Property BlackExpression As Material
+  overload: DREditor.Characters.Character.BlackExpression*
+- uid: DREditor.Characters.Character.TrialMaterial
+  commentId: P:DREditor.Characters.Character.TrialMaterial
+  id: TrialMaterial
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: TrialMaterial
+  nameWithType: Character.TrialMaterial
+  fullName: DREditor.Characters.Character.TrialMaterial
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Material TrialMaterial { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Material
+    content.vb: Public Property TrialMaterial As Material
+  overload: DREditor.Characters.Character.TrialMaterial*
+- uid: DREditor.Characters.Character.MissingMat
+  commentId: P:DREditor.Characters.Character.MissingMat
+  id: MissingMat
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: MissingMat
+  nameWithType: Character.MissingMat
+  fullName: DREditor.Characters.Character.MissingMat
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Material MissingMat { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Material
+    content.vb: Public Property MissingMat As Material
+  overload: DREditor.Characters.Character.MissingMat*
+- uid: DREditor.Characters.Character.MissingTex
+  commentId: P:DREditor.Characters.Character.MissingTex
+  id: MissingTex
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: MissingTex
+  nameWithType: Character.MissingTex
+  fullName: DREditor.Characters.Character.MissingTex
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Sprite MissingTex { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Property MissingTex As Sprite
+  overload: DREditor.Characters.Character.MissingTex*
+- uid: DREditor.Characters.Character.Nameplate
+  commentId: P:DREditor.Characters.Character.Nameplate
+  id: Nameplate
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: Nameplate
+  nameWithType: Character.Nameplate
+  fullName: DREditor.Characters.Character.Nameplate
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Texture2D Nameplate { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: Public Property Nameplate As Texture2D
+  overload: DREditor.Characters.Character.Nameplate*
+- uid: DREditor.Characters.Character.Headshot
+  commentId: P:DREditor.Characters.Character.Headshot
+  id: Headshot
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: Headshot
+  nameWithType: Character.Headshot
+  fullName: DREditor.Characters.Character.Headshot
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Texture2D Headshot { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: Public Property Headshot As Texture2D
+  overload: DREditor.Characters.Character.Headshot*
+- uid: DREditor.Characters.Character.TrialNameplate
+  commentId: P:DREditor.Characters.Character.TrialNameplate
+  id: TrialNameplate
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: TrialNameplate
+  nameWithType: Character.TrialNameplate
+  fullName: DREditor.Characters.Character.TrialNameplate
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public Texture2D TrialNameplate { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Texture2D
+    content.vb: Public Property TrialNameplate As Texture2D
+  overload: DREditor.Characters.Character.TrialNameplate*
+- uid: DREditor.Characters.Character.TrialHeight
+  commentId: P:DREditor.Characters.Character.TrialHeight
+  id: TrialHeight
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: TrialHeight
+  nameWithType: Character.TrialHeight
+  fullName: DREditor.Characters.Character.TrialHeight
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public float TrialHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property TrialHeight As Single
+  overload: DREditor.Characters.Character.TrialHeight*
+- uid: DREditor.Characters.Character.TrialPosition
+  commentId: P:DREditor.Characters.Character.TrialPosition
+  id: TrialPosition
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: TrialPosition
+  nameWithType: Character.TrialPosition
+  fullName: DREditor.Characters.Character.TrialPosition
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public int TrialPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TrialPosition As Integer
+  overload: DREditor.Characters.Character.TrialPosition*
+- uid: DREditor.Characters.Character.NotFTECharacter
+  commentId: P:DREditor.Characters.Character.NotFTECharacter
+  id: NotFTECharacter
+  parent: DREditor.Characters.Character
+  langs:
+  - csharp
+  - vb
+  name: NotFTECharacter
+  nameWithType: Character.NotFTECharacter
+  fullName: DREditor.Characters.Character.NotFTECharacter
+  type: Property
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Characters/Character.cs
+  assemblies:
+  - DREditor
+  namespace: DREditor.Characters
+  syntax:
+    content: public bool NotFTECharacter { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property NotFTECharacter As Boolean
+  overload: DREditor.Characters.Character.NotFTECharacter*
 references:
 - uid: DREditor.Characters
   commentId: N:DREditor.Characters
@@ -654,6 +1245,147 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: DREditor.Characters.Character.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<Character>(Character)
+  nameWithType: ReflectionHelper.GetFieldNames<Character>(Character)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Characters.Character>(DREditor.Characters.Character)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of Character)(Character)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Characters.Character)(DREditor.Characters.Character)
+  name.vb: GetFieldNames(Of Character)(Character)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Characters.Character)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Characters.Character)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
+  - name: (
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
+- uid: DREditor.Characters.Character.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<Character>(Character)
+  nameWithType: ReflectionHelper.GetFieldValues<Character>(Character)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Characters.Character>(DREditor.Characters.Character)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of Character)(Character)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Characters.Character)(DREditor.Characters.Character)
+  name.vb: GetFieldValues(Of Character)(Character)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Characters.Character)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Characters.Character)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
+  - name: (
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
+- uid: DREditor.Characters.Character.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<Character>(Character)
+  nameWithType: DeepCopyExtensions.DeepCopy<Character>(Character)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Characters.Character>(DREditor.Characters.Character)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of Character)(Character)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Characters.Character)(DREditor.Characters.Character)
+  name.vb: DeepCopy(Of Character)(Character)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Characters.Character)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Characters.Character)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
+  - name: (
+  - uid: DREditor.Characters.Character
+    name: Character
+    isExternal: true
+    href: DREditor.Characters.Character.html
+  - name: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -661,6 +1393,178 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -895,13 +1799,93 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: DREditor.Characters.Character.getExpressionIntValues*
-  commentId: Overload:DREditor.Characters.Character.getExpressionIntValues
+- uid: System.Collections.Generic.List{DREditor.Characters.ICharacterData}
+  commentId: T:System.Collections.Generic.List{DREditor.Characters.ICharacterData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ICharacterData>
+  nameWithType: List<ICharacterData>
+  fullName: System.Collections.Generic.List<DREditor.Characters.ICharacterData>
+  nameWithType.vb: List(Of ICharacterData)
+  fullName.vb: System.Collections.Generic.List(Of DREditor.Characters.ICharacterData)
+  name.vb: List(Of ICharacterData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DREditor.Characters.ICharacterData
+    name: ICharacterData
+    isExternal: true
+    href: DREditor.Characters.ICharacterData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Characters.ICharacterData
+    name: ICharacterData
+    isExternal: true
+    href: DREditor.Characters.ICharacterData.html
+  - name: )
+- uid: DREditor.Characters.Character.SetCharacterDatas*
+  commentId: Overload:DREditor.Characters.Character.SetCharacterDatas
   isExternal: true
-  href: DREditor.Characters.Character.html#DREditor_Characters_Character_getExpressionIntValues
-  name: getExpressionIntValues
-  nameWithType: Character.getExpressionIntValues
-  fullName: DREditor.Characters.Character.getExpressionIntValues
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_SetCharacterDatas_System_Collections_Generic_List_DREditor_Characters_ICharacterData__
+  name: SetCharacterDatas
+  nameWithType: Character.SetCharacterDatas
+  fullName: DREditor.Characters.Character.SetCharacterDatas
+- uid: DREditor.Characters.Character.Get*
+  commentId: Overload:DREditor.Characters.Character.Get
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_Get__1
+  name: Get
+  nameWithType: Character.Get
+  fullName: DREditor.Characters.Character.Get
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DREditor.Characters.Character.Has*
+  commentId: Overload:DREditor.Characters.Character.Has
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_Has__1___0__
+  name: Has
+  nameWithType: Character.Has
+  fullName: DREditor.Characters.Character.Has
+- uid: DREditor.Characters.Character.SetExpressions*
+  commentId: Overload:DREditor.Characters.Character.SetExpressions
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_SetExpressions_System_Collections_Generic_List_DREditor_Characters_Expression__
+  name: SetExpressions
+  nameWithType: Character.SetExpressions
+  fullName: DREditor.Characters.Character.SetExpressions
+- uid: DREditor.Characters.Character.SetSprites*
+  commentId: Overload:DREditor.Characters.Character.SetSprites
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_SetSprites_System_Collections_Generic_List_DREditor_Characters_Unlit__
+  name: SetSprites
+  nameWithType: Character.SetSprites
+  fullName: DREditor.Characters.Character.SetSprites
+- uid: DREditor.Characters.Character.GetExpressionIntValues*
+  commentId: Overload:DREditor.Characters.Character.GetExpressionIntValues
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_GetExpressionIntValues
+  name: GetExpressionIntValues
+  nameWithType: Character.GetExpressionIntValues
+  fullName: DREditor.Characters.Character.GetExpressionIntValues
 - uid: System.Int32[]
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.int32
@@ -933,7 +1917,6 @@ references:
   nameWithType: Character.GetSpriteByName
   fullName: DREditor.Characters.Character.GetSpriteByName
 - uid: UnityEngine.Texture
-  commentId: '!:UnityEngine.Texture'
   isExternal: true
   name: Texture
   nameWithType: Texture
@@ -945,6 +1928,21 @@ references:
   name: GetSpriteLabelByTexName
   nameWithType: Character.GetSpriteLabelByTexName
   fullName: DREditor.Characters.Character.GetSpriteLabelByTexName
+- uid: DREditor.Characters.Character.GetExpressionMatching*
+  commentId: Overload:DREditor.Characters.Character.GetExpressionMatching
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_GetExpressionMatching_System_String_
+  name: GetExpressionMatching
+  nameWithType: Character.GetExpressionMatching
+  fullName: DREditor.Characters.Character.GetExpressionMatching
+- uid: DREditor.Characters.Expression
+  commentId: T:DREditor.Characters.Expression
+  parent: DREditor.Characters
+  isExternal: true
+  href: DREditor.Characters.Expression.html
+  name: Expression
+  nameWithType: Expression
+  fullName: DREditor.Characters.Expression
 - uid: DREditor.Characters.Character.#ctor*
   commentId: Overload:DREditor.Characters.Character.#ctor
   isExternal: true
@@ -955,3 +1953,122 @@ references:
   nameWithType.vb: Character.New
   fullName.vb: DREditor.Characters.Character.New
   name.vb: New
+- uid: DREditor.Characters.Character.LastName*
+  commentId: Overload:DREditor.Characters.Character.LastName
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_LastName
+  name: LastName
+  nameWithType: Character.LastName
+  fullName: DREditor.Characters.Character.LastName
+- uid: DREditor.Characters.Character.FirstName*
+  commentId: Overload:DREditor.Characters.Character.FirstName
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_FirstName
+  name: FirstName
+  nameWithType: Character.FirstName
+  fullName: DREditor.Characters.Character.FirstName
+- uid: DREditor.Characters.Character.DefaultSprite*
+  commentId: Overload:DREditor.Characters.Character.DefaultSprite
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_DefaultSprite
+  name: DefaultSprite
+  nameWithType: Character.DefaultSprite
+  fullName: DREditor.Characters.Character.DefaultSprite
+- uid: DREditor.Characters.Character.TrialPortrait*
+  commentId: Overload:DREditor.Characters.Character.TrialPortrait
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_TrialPortrait
+  name: TrialPortrait
+  nameWithType: Character.TrialPortrait
+  fullName: DREditor.Characters.Character.TrialPortrait
+- uid: DREditor.Characters.Character.NSDPortrait*
+  commentId: Overload:DREditor.Characters.Character.NSDPortrait
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_NSDPortrait
+  name: NSDPortrait
+  nameWithType: Character.NSDPortrait
+  fullName: DREditor.Characters.Character.NSDPortrait
+- uid: DREditor.Characters.Character.ActorPrefab*
+  commentId: Overload:DREditor.Characters.Character.ActorPrefab
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_ActorPrefab
+  name: ActorPrefab
+  nameWithType: Character.ActorPrefab
+  fullName: DREditor.Characters.Character.ActorPrefab
+- uid: DREditor.Characters.Character.ShowSprites*
+  commentId: Overload:DREditor.Characters.Character.ShowSprites
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_ShowSprites
+  name: ShowSprites
+  nameWithType: Character.ShowSprites
+  fullName: DREditor.Characters.Character.ShowSprites
+- uid: DREditor.Characters.Character.BlackExpression*
+  commentId: Overload:DREditor.Characters.Character.BlackExpression
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_BlackExpression
+  name: BlackExpression
+  nameWithType: Character.BlackExpression
+  fullName: DREditor.Characters.Character.BlackExpression
+- uid: DREditor.Characters.Character.TrialMaterial*
+  commentId: Overload:DREditor.Characters.Character.TrialMaterial
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_TrialMaterial
+  name: TrialMaterial
+  nameWithType: Character.TrialMaterial
+  fullName: DREditor.Characters.Character.TrialMaterial
+- uid: DREditor.Characters.Character.MissingMat*
+  commentId: Overload:DREditor.Characters.Character.MissingMat
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_MissingMat
+  name: MissingMat
+  nameWithType: Character.MissingMat
+  fullName: DREditor.Characters.Character.MissingMat
+- uid: DREditor.Characters.Character.MissingTex*
+  commentId: Overload:DREditor.Characters.Character.MissingTex
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_MissingTex
+  name: MissingTex
+  nameWithType: Character.MissingTex
+  fullName: DREditor.Characters.Character.MissingTex
+- uid: DREditor.Characters.Character.Nameplate*
+  commentId: Overload:DREditor.Characters.Character.Nameplate
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_Nameplate
+  name: Nameplate
+  nameWithType: Character.Nameplate
+  fullName: DREditor.Characters.Character.Nameplate
+- uid: DREditor.Characters.Character.Headshot*
+  commentId: Overload:DREditor.Characters.Character.Headshot
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_Headshot
+  name: Headshot
+  nameWithType: Character.Headshot
+  fullName: DREditor.Characters.Character.Headshot
+- uid: DREditor.Characters.Character.TrialNameplate*
+  commentId: Overload:DREditor.Characters.Character.TrialNameplate
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_TrialNameplate
+  name: TrialNameplate
+  nameWithType: Character.TrialNameplate
+  fullName: DREditor.Characters.Character.TrialNameplate
+- uid: DREditor.Characters.Character.TrialHeight*
+  commentId: Overload:DREditor.Characters.Character.TrialHeight
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_TrialHeight
+  name: TrialHeight
+  nameWithType: Character.TrialHeight
+  fullName: DREditor.Characters.Character.TrialHeight
+- uid: DREditor.Characters.Character.TrialPosition*
+  commentId: Overload:DREditor.Characters.Character.TrialPosition
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_TrialPosition
+  name: TrialPosition
+  nameWithType: Character.TrialPosition
+  fullName: DREditor.Characters.Character.TrialPosition
+- uid: DREditor.Characters.Character.NotFTECharacter*
+  commentId: Overload:DREditor.Characters.Character.NotFTECharacter
+  isExternal: true
+  href: DREditor.Characters.Character.html#DREditor_Characters_Character_NotFTECharacter
+  name: NotFTECharacter
+  nameWithType: Character.NotFTECharacter
+  fullName: DREditor.Characters.Character.NotFTECharacter

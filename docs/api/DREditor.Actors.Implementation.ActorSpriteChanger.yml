@@ -1,0 +1,1185 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger
+  commentId: T:DREditor.Actors.Implementation.ActorSpriteChanger
+  id: ActorSpriteChanger
+  parent: DREditor.Actors.Implementation
+  children:
+  - DREditor.Actors.Implementation.ActorSpriteChanger.#ctor
+  - DREditor.Actors.Implementation.ActorSpriteChanger.ChangeLineSprites(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite(DREditor.Dialogues.Line,DREditor.Talkables.Talkable,System.Boolean)
+  - DREditor.Actors.Implementation.ActorSpriteChanger.LineProcessRoutine(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorSpriteChanger.OnLoadToLine(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorSpriteChanger.ShouldProcess(DREditor.Dialogues.Line)
+  - DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished``1(DREditor.Dialogues.Line,System.Boolean)
+  - DREditor.Actors.Implementation.ActorSpriteChanger.changer
+  - DREditor.Actors.Implementation.ActorSpriteChanger.currentActor
+  - DREditor.Actors.Implementation.ActorSpriteChanger.inFastForwardMode
+  - DREditor.Actors.Implementation.ActorSpriteChanger.isLoadingFile
+  - DREditor.Actors.Implementation.ActorSpriteChanger.isProtagSpeaking
+  langs:
+  - csharp
+  - vb
+  name: ActorSpriteChanger
+  nameWithType: ActorSpriteChanger
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueComponent, ILineProcessorRoutine, ILoadToLineable\n\n")]
+
+      public class ActorSpriteChanger : DialogueComponent, ILineProcessorRoutine, ILineRoutine, ILoadToLineable
+    content.vb: >-
+      <ClassHeader("DialogueComponent, ILineProcessorRoutine, ILoadToLineable" & vbLf & vbLf)>
+
+      Public Class ActorSpriteChanger Inherits DialogueComponent Implements ILineProcessorRoutine, ILineRoutine, ILoadToLineable
+  inheritance:
+  - System.Object
+  - DREditor.Dialogues.DialogueComponent
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  - DREditor.Dialogues.LineReading.ILineRoutine
+  - DREditor.Dialogues.Loading.ILoadToLineable
+  extensionMethods:
+  - DREditor.Actors.Implementation.ActorSpriteChanger.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Actors.Implementation.ActorSpriteChanger.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Actors.Implementation.ActorSpriteChanger.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueComponent, ILineProcessorRoutine, ILoadToLineable
+
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.changer
+  commentId: F:DREditor.Actors.Implementation.ActorSpriteChanger.changer
+  id: changer
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: changer
+  nameWithType: ActorSpriteChanger.changer
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.changer
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected WorldSpriteChanger changer
+    return:
+      type: DREditor.Actors.Implementation.WorldSpriteChanger
+    content.vb: Protected changer As WorldSpriteChanger
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.currentActor
+  commentId: F:DREditor.Actors.Implementation.ActorSpriteChanger.currentActor
+  id: currentActor
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: currentActor
+  nameWithType: ActorSpriteChanger.currentActor
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.currentActor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected SelectableObjectWithEvent currentActor
+    return:
+      type: DREditor.EventObjects.SelectableObjectWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected currentActor As SelectableObjectWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.inFastForwardMode
+  commentId: F:DREditor.Actors.Implementation.ActorSpriteChanger.inFastForwardMode
+  id: inFastForwardMode
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: inFastForwardMode
+  nameWithType: ActorSpriteChanger.inFastForwardMode
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.inFastForwardMode
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent inFastForwardMode
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected inFastForwardMode As BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.isProtagSpeaking
+  commentId: F:DREditor.Actors.Implementation.ActorSpriteChanger.isProtagSpeaking
+  id: isProtagSpeaking
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: isProtagSpeaking
+  nameWithType: ActorSpriteChanger.isProtagSpeaking
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.isProtagSpeaking
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isProtagSpeaking
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isProtagSpeaking As BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.isLoadingFile
+  commentId: F:DREditor.Actors.Implementation.ActorSpriteChanger.isLoadingFile
+  id: isLoadingFile
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: isLoadingFile
+  nameWithType: ActorSpriteChanger.isLoadingFile
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.isLoadingFile
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isLoadingFile
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isLoadingFile As BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.ShouldProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorSpriteChanger.ShouldProcess(DREditor.Dialogues.Line)
+  id: ShouldProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: ShouldProcess(Line)
+  nameWithType: ActorSpriteChanger.ShouldProcess(Line)
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.ShouldProcess(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual bool ShouldProcess(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function ShouldProcess(currentLine As Line) As Boolean
+  overload: DREditor.Actors.Implementation.ActorSpriteChanger.ShouldProcess*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.LineProcessRoutine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorSpriteChanger.LineProcessRoutine(DREditor.Dialogues.Line)
+  id: LineProcessRoutine(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: LineProcessRoutine(Line)
+  nameWithType: ActorSpriteChanger.LineProcessRoutine(Line)
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.LineProcessRoutine(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual IEnumerator LineProcessRoutine(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Overridable Function LineProcessRoutine(currentLine As Line) As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorSpriteChanger.LineProcessRoutine*
+  implements:
+  - DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeLineSprites(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorSpriteChanger.ChangeLineSprites(DREditor.Dialogues.Line)
+  id: ChangeLineSprites(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: ChangeLineSprites(Line)
+  nameWithType: ActorSpriteChanger.ChangeLineSprites(Line)
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeLineSprites(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator ChangeLineSprites(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function ChangeLineSprites(currentLine As Line) As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeLineSprites*
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished``1(DREditor.Dialogues.Line,System.Boolean)
+  commentId: M:DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished``1(DREditor.Dialogues.Line,System.Boolean)
+  id: WaitForSpriteChangeEventFinished``1(DREditor.Dialogues.Line,System.Boolean)
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: WaitForSpriteChangeEventFinished<T>(Line, bool)
+  nameWithType: ActorSpriteChanger.WaitForSpriteChangeEventFinished<T>(Line, bool)
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished<T>(DREditor.Dialogues.Line, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator WaitForSpriteChangeEventFinished<T>(Line currentLine, bool additionalCondition = true)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    - id: additionalCondition
+      type: System.Boolean
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function WaitForSpriteChangeEventFinished(Of T)(currentLine As Line, additionalCondition As Boolean = True) As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished*
+  nameWithType.vb: ActorSpriteChanger.WaitForSpriteChangeEventFinished(Of T)(Line, Boolean)
+  fullName.vb: DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished(Of T)(DREditor.Dialogues.Line, Boolean)
+  name.vb: WaitForSpriteChangeEventFinished(Of T)(Line, Boolean)
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite(DREditor.Dialogues.Line,DREditor.Talkables.Talkable,System.Boolean)
+  commentId: M:DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite(DREditor.Dialogues.Line,DREditor.Talkables.Talkable,System.Boolean)
+  id: ChangeWorldSprite(DREditor.Dialogues.Line,DREditor.Talkables.Talkable,System.Boolean)
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: ChangeWorldSprite(Line, Talkable, bool)
+  nameWithType: ActorSpriteChanger.ChangeWorldSprite(Line, Talkable, bool)
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite(DREditor.Dialogues.Line, DREditor.Talkables.Talkable, bool)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual IEnumerator ChangeWorldSprite(Line currentLine, Talkable currentActor, bool waitToFinish = true)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    - id: currentActor
+      type: DREditor.Talkables.Talkable
+      description: ''
+    - id: waitToFinish
+      type: System.Boolean
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Protected Overridable Function ChangeWorldSprite(currentLine As Line, currentActor As Talkable, waitToFinish As Boolean = True) As IEnumerator
+  overload: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite*
+  nameWithType.vb: ActorSpriteChanger.ChangeWorldSprite(Line, Talkable, Boolean)
+  fullName.vb: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite(DREditor.Dialogues.Line, DREditor.Talkables.Talkable, Boolean)
+  name.vb: ChangeWorldSprite(Line, Talkable, Boolean)
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.OnLoadToLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Actors.Implementation.ActorSpriteChanger.OnLoadToLine(DREditor.Dialogues.Line)
+  id: OnLoadToLine(DREditor.Dialogues.Line)
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: OnLoadToLine(Line)
+  nameWithType: ActorSpriteChanger.OnLoadToLine(Line)
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.OnLoadToLine(DREditor.Dialogues.Line)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnLoadToLine(Line currentLine)
+    parameters:
+    - id: currentLine
+      type: DREditor.Dialogues.Line
+      description: ''
+    content.vb: Public Overridable Sub OnLoadToLine(currentLine As Line)
+  overload: DREditor.Actors.Implementation.ActorSpriteChanger.OnLoadToLine*
+  implements:
+  - DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.#ctor
+  commentId: M:DREditor.Actors.Implementation.ActorSpriteChanger.#ctor
+  id: '#ctor'
+  parent: DREditor.Actors.Implementation.ActorSpriteChanger
+  langs:
+  - csharp
+  - vb
+  name: ActorSpriteChanger()
+  nameWithType: ActorSpriteChanger.ActorSpriteChanger()
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.ActorSpriteChanger()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Implementation/ActorSpriteChanger.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Implementation
+  syntax:
+    content: public ActorSpriteChanger()
+    content.vb: Public Sub New()
+  overload: DREditor.Actors.Implementation.ActorSpriteChanger.#ctor*
+  nameWithType.vb: ActorSpriteChanger.New()
+  fullName.vb: DREditor.Actors.Implementation.ActorSpriteChanger.New()
+  name.vb: New()
+references:
+- uid: DREditor.Actors.Implementation
+  commentId: N:DREditor.Actors.Implementation
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors.Implementation
+  nameWithType: DREditor.Actors.Implementation
+  fullName: DREditor.Actors.Implementation
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  - name: .
+  - uid: DREditor.Actors.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.Actors.Implementation.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  - name: .
+  - uid: DREditor.Actors.Implementation
+    name: Implementation
+    isExternal: true
+    href: DREditor.Actors.Implementation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Dialogues.DialogueComponent
+  commentId: T:DREditor.Dialogues.DialogueComponent
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs
+  name: DialogueComponent
+  nameWithType: DialogueComponent
+  fullName: DREditor.Dialogues.DialogueComponent
+- uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  commentId: T:DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  name: ILineProcessorRoutine
+  nameWithType: ILineProcessorRoutine
+  fullName: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+- uid: DREditor.Dialogues.LineReading.ILineRoutine
+  commentId: T:DREditor.Dialogues.LineReading.ILineRoutine
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  name: ILineRoutine
+  nameWithType: ILineRoutine
+  fullName: DREditor.Dialogues.LineReading.ILineRoutine
+- uid: DREditor.Dialogues.Loading.ILoadToLineable
+  commentId: T:DREditor.Dialogues.Loading.ILoadToLineable
+  parent: DREditor.Dialogues.Loading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  name: ILoadToLineable
+  nameWithType: ILoadToLineable
+  fullName: DREditor.Dialogues.Loading.ILoadToLineable
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ActorSpriteChanger>(ActorSpriteChanger)
+  nameWithType: ReflectionHelper.GetFieldNames<ActorSpriteChanger>(ActorSpriteChanger)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Actors.Implementation.ActorSpriteChanger>(DREditor.Actors.Implementation.ActorSpriteChanger)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ActorSpriteChanger)(ActorSpriteChanger)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Actors.Implementation.ActorSpriteChanger)(DREditor.Actors.Implementation.ActorSpriteChanger)
+  name.vb: GetFieldNames(Of ActorSpriteChanger)(ActorSpriteChanger)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.Implementation.ActorSpriteChanger)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.Implementation.ActorSpriteChanger)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ActorSpriteChanger>(ActorSpriteChanger)
+  nameWithType: ReflectionHelper.GetFieldValues<ActorSpriteChanger>(ActorSpriteChanger)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Actors.Implementation.ActorSpriteChanger>(DREditor.Actors.Implementation.ActorSpriteChanger)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ActorSpriteChanger)(ActorSpriteChanger)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Actors.Implementation.ActorSpriteChanger)(DREditor.Actors.Implementation.ActorSpriteChanger)
+  name.vb: GetFieldValues(Of ActorSpriteChanger)(ActorSpriteChanger)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.Implementation.ActorSpriteChanger)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.Implementation.ActorSpriteChanger)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ActorSpriteChanger>(ActorSpriteChanger)
+  nameWithType: DeepCopyExtensions.DeepCopy<ActorSpriteChanger>(ActorSpriteChanger)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Actors.Implementation.ActorSpriteChanger>(DREditor.Actors.Implementation.ActorSpriteChanger)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ActorSpriteChanger)(ActorSpriteChanger)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Actors.Implementation.ActorSpriteChanger)(DREditor.Actors.Implementation.ActorSpriteChanger)
+  name.vb: DeepCopy(Of ActorSpriteChanger)(ActorSpriteChanger)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.Implementation.ActorSpriteChanger)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.Implementation.ActorSpriteChanger)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Implementation.ActorSpriteChanger
+    name: ActorSpriteChanger
+    isExternal: true
+    href: DREditor.Actors.Implementation.ActorSpriteChanger.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: DREditor.Dialogues.Loading
+  commentId: N:DREditor.Dialogues.Loading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Loading
+  nameWithType: DREditor.Dialogues.Loading
+  fullName: DREditor.Dialogues.Loading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Loading
+    name: Loading
+    isExternal: true
+    href: DREditor.Dialogues.Loading.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.Actors.Implementation.WorldSpriteChanger
+  commentId: T:DREditor.Actors.Implementation.WorldSpriteChanger
+  parent: DREditor.Actors.Implementation
+  isExternal: true
+  href: DREditor.Actors.Implementation.WorldSpriteChanger.html
+  name: WorldSpriteChanger
+  nameWithType: WorldSpriteChanger
+  fullName: DREditor.Actors.Implementation.WorldSpriteChanger
+- uid: DREditor.EventObjects.SelectableObjectWithEvent
+  commentId: T:DREditor.EventObjects.SelectableObjectWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObjectWithEvent.cs
+  name: SelectableObjectWithEvent
+  nameWithType: SelectableObjectWithEvent
+  fullName: DREditor.EventObjects.SelectableObjectWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.ShouldProcess*
+  commentId: Overload:DREditor.Actors.Implementation.ActorSpriteChanger.ShouldProcess
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorSpriteChanger.html#DREditor_Actors_Implementation_ActorSpriteChanger_ShouldProcess_DREditor_Dialogues_Line_
+  name: ShouldProcess
+  nameWithType: ActorSpriteChanger.ShouldProcess
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.ShouldProcess
+- uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineRoutine
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  name: ShouldProcess(Line)
+  nameWithType: ILineRoutine.ShouldProcess(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+    name: ShouldProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineRoutine.ShouldProcess(DREditor.Dialogues.Line)
+    name: ShouldProcess
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Dialogues.Line
+  commentId: T:DREditor.Dialogues.Line
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  name: Line
+  nameWithType: Line
+  fullName: DREditor.Dialogues.Line
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.LineProcessRoutine*
+  commentId: Overload:DREditor.Actors.Implementation.ActorSpriteChanger.LineProcessRoutine
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorSpriteChanger.html#DREditor_Actors_Implementation_ActorSpriteChanger_LineProcessRoutine_DREditor_Dialogues_Line_
+  name: LineProcessRoutine
+  nameWithType: ActorSpriteChanger.LineProcessRoutine
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.LineProcessRoutine
+- uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.LineReading.ILineProcessorRoutine
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  name: LineProcessRoutine(Line)
+  nameWithType: ILineProcessorRoutine.LineProcessRoutine(Line)
+  fullName: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+    name: LineProcessRoutine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.LineReading.ILineProcessorRoutine.LineProcessRoutine(DREditor.Dialogues.Line)
+    name: LineProcessRoutine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessorRoutine.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerator
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeLineSprites*
+  commentId: Overload:DREditor.Actors.Implementation.ActorSpriteChanger.ChangeLineSprites
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorSpriteChanger.html#DREditor_Actors_Implementation_ActorSpriteChanger_ChangeLineSprites_DREditor_Dialogues_Line_
+  name: ChangeLineSprites
+  nameWithType: ActorSpriteChanger.ChangeLineSprites
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeLineSprites
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished*
+  commentId: Overload:DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorSpriteChanger.html#DREditor_Actors_Implementation_ActorSpriteChanger_WaitForSpriteChangeEventFinished__1_DREditor_Dialogues_Line_System_Boolean_
+  name: WaitForSpriteChangeEventFinished
+  nameWithType: ActorSpriteChanger.WaitForSpriteChangeEventFinished
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.WaitForSpriteChangeEventFinished
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite*
+  commentId: Overload:DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorSpriteChanger.html#DREditor_Actors_Implementation_ActorSpriteChanger_ChangeWorldSprite_DREditor_Dialogues_Line_DREditor_Talkables_Talkable_System_Boolean_
+  name: ChangeWorldSprite
+  nameWithType: ActorSpriteChanger.ChangeWorldSprite
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.ChangeWorldSprite
+- uid: DREditor.Talkables.Talkable
+  commentId: T:DREditor.Talkables.Talkable
+  parent: DREditor.Talkables
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs
+  name: Talkable
+  nameWithType: Talkable
+  fullName: DREditor.Talkables.Talkable
+- uid: DREditor.Talkables
+  commentId: N:DREditor.Talkables
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Talkables
+  nameWithType: DREditor.Talkables
+  fullName: DREditor.Talkables
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Talkables
+    name: Talkables
+    isExternal: true
+    href: DREditor.Talkables.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Talkables
+    name: Talkables
+    isExternal: true
+    href: DREditor.Talkables.html
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.OnLoadToLine*
+  commentId: Overload:DREditor.Actors.Implementation.ActorSpriteChanger.OnLoadToLine
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorSpriteChanger.html#DREditor_Actors_Implementation_ActorSpriteChanger_OnLoadToLine_DREditor_Dialogues_Line_
+  name: OnLoadToLine
+  nameWithType: ActorSpriteChanger.OnLoadToLine
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.OnLoadToLine
+- uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  commentId: M:DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  parent: DREditor.Dialogues.Loading.ILoadToLineable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  name: OnLoadToLine(Line)
+  nameWithType: ILoadToLineable.OnLoadToLine(Line)
+  fullName: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+  spec.csharp:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+    name: OnLoadToLine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+  spec.vb:
+  - uid: DREditor.Dialogues.Loading.ILoadToLineable.OnLoadToLine(DREditor.Dialogues.Line)
+    name: OnLoadToLine
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Loading/ILoadToLineable.cs
+  - name: (
+  - uid: DREditor.Dialogues.Line
+    name: Line
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Line.cs
+  - name: )
+- uid: DREditor.Actors.Implementation.ActorSpriteChanger.#ctor*
+  commentId: Overload:DREditor.Actors.Implementation.ActorSpriteChanger.#ctor
+  isExternal: true
+  href: DREditor.Actors.Implementation.ActorSpriteChanger.html#DREditor_Actors_Implementation_ActorSpriteChanger__ctor
+  name: ActorSpriteChanger
+  nameWithType: ActorSpriteChanger.ActorSpriteChanger
+  fullName: DREditor.Actors.Implementation.ActorSpriteChanger.ActorSpriteChanger
+  nameWithType.vb: ActorSpriteChanger.New
+  fullName.vb: DREditor.Actors.Implementation.ActorSpriteChanger.New
+  name.vb: New

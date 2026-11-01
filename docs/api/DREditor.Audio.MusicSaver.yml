@@ -1,0 +1,1185 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Audio.MusicSaver
+  commentId: T:DREditor.Audio.MusicSaver
+  id: MusicSaver
+  parent: DREditor.Audio
+  children:
+  - DREditor.Audio.MusicSaver.#ctor
+  - DREditor.Audio.MusicSaver.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.Audio.MusicSaver.LoadMusic(System.String)
+  - DREditor.Audio.MusicSaver.LoadValidMusic(System.String)
+  - DREditor.Audio.MusicSaver.OnDestroy
+  - DREditor.Audio.MusicSaver.OnEventRaised
+  - DREditor.Audio.MusicSaver.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - DREditor.Audio.MusicSaver.SaveMusic
+  - DREditor.Audio.MusicSaver.jukeBox
+  - DREditor.Audio.MusicSaver.loadedMusic
+  - DREditor.Audio.MusicSaver.musicManager
+  - DREditor.Audio.MusicSaver.musicSaveKey
+  - DREditor.Audio.MusicSaver.onFadingOutOfLoading
+  - DREditor.Audio.MusicSaver.registered
+  langs:
+  - csharp
+  - vb
+  name: MusicSaver
+  nameWithType: MusicSaver
+  fullName: DREditor.Audio.MusicSaver
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("IDRESaveable, IDRELoadable, ISceneEventListener\n\n")]
+
+      public class MusicSaver : MonoBehaviour, IDRESaveable, IDRELoadable, ISceneEventListener
+    content.vb: >-
+      <ClassHeader("IDRESaveable, IDRELoadable, ISceneEventListener" & vbLf & vbLf)>
+
+      Public Class MusicSaver Inherits MonoBehaviour Implements IDRESaveable, IDRELoadable, ISceneEventListener
+  inheritance:
+  - System.Object
+  implements:
+  - DREditor.Saving.IDRESaveable
+  - DREditor.Saving.IDRELoadable
+  - DREditor.EventObjects.ISceneEventListener
+  extensionMethods:
+  - DREditor.Audio.MusicSaver.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Audio.MusicSaver.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Audio.MusicSaver.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        IDRESaveable, IDRELoadable, ISceneEventListener
+
+- uid: DREditor.Audio.MusicSaver.onFadingOutOfLoading
+  commentId: F:DREditor.Audio.MusicSaver.onFadingOutOfLoading
+  id: onFadingOutOfLoading
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: onFadingOutOfLoading
+  nameWithType: MusicSaver.onFadingOutOfLoading
+  fullName: DREditor.Audio.MusicSaver.onFadingOutOfLoading
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected SceneEvent onFadingOutOfLoading
+    return:
+      type: DREditor.EventObjects.SceneEvent
+    content.vb: Protected onFadingOutOfLoading As SceneEvent
+- uid: DREditor.Audio.MusicSaver.musicManager
+  commentId: F:DREditor.Audio.MusicSaver.musicManager
+  id: musicManager
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: musicManager
+  nameWithType: MusicSaver.musicManager
+  fullName: DREditor.Audio.MusicSaver.musicManager
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected MusicManager musicManager
+    return:
+      type: DREditor.Audio.MusicManager
+    content.vb: Protected musicManager As MusicManager
+- uid: DREditor.Audio.MusicSaver.jukeBox
+  commentId: F:DREditor.Audio.MusicSaver.jukeBox
+  id: jukeBox
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: jukeBox
+  nameWithType: MusicSaver.jukeBox
+  fullName: DREditor.Audio.MusicSaver.jukeBox
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected Playlist jukeBox
+    return:
+      type: DREditor.Audio.Playlist
+    content.vb: Protected jukeBox As Playlist
+- uid: DREditor.Audio.MusicSaver.musicSaveKey
+  commentId: F:DREditor.Audio.MusicSaver.musicSaveKey
+  id: musicSaveKey
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: musicSaveKey
+  nameWithType: MusicSaver.musicSaveKey
+  fullName: DREditor.Audio.MusicSaver.musicSaveKey
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected string musicSaveKey
+    return:
+      type: System.String
+    content.vb: Protected musicSaveKey As String
+- uid: DREditor.Audio.MusicSaver.loadedMusic
+  commentId: F:DREditor.Audio.MusicSaver.loadedMusic
+  id: loadedMusic
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: loadedMusic
+  nameWithType: MusicSaver.loadedMusic
+  fullName: DREditor.Audio.MusicSaver.loadedMusic
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected string loadedMusic
+    return:
+      type: System.String
+    content.vb: Protected loadedMusic As String
+- uid: DREditor.Audio.MusicSaver.registered
+  commentId: F:DREditor.Audio.MusicSaver.registered
+  id: registered
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: registered
+  nameWithType: MusicSaver.registered
+  fullName: DREditor.Audio.MusicSaver.registered
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool registered
+    return:
+      type: System.Boolean
+    content.vb: Protected registered As Boolean
+- uid: DREditor.Audio.MusicSaver.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Audio.MusicSaver.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: Save(Dictionary<string, object>)
+  nameWithType: MusicSaver.Save(Dictionary<string, object>)
+  fullName: DREditor.Audio.MusicSaver.Save(System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Save(Dictionary<string, object> saveDatas)
+    parameters:
+    - id: saveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    content.vb: Public Overridable Sub Save(saveDatas As Dictionary(Of String, Object))
+  overload: DREditor.Audio.MusicSaver.Save*
+  implements:
+  - DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: MusicSaver.Save(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Audio.MusicSaver.Save(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Save(Dictionary(Of String, Object))
+- uid: DREditor.Audio.MusicSaver.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Audio.MusicSaver.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: Load(Dictionary<string, object>)
+  nameWithType: MusicSaver.Load(Dictionary<string, object>)
+  fullName: DREditor.Audio.MusicSaver.Load(System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void Load(Dictionary<string, object> saveDatas)
+    parameters:
+    - id: saveDatas
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: ''
+    content.vb: Public Overridable Sub Load(saveDatas As Dictionary(Of String, Object))
+  overload: DREditor.Audio.MusicSaver.Load*
+  implements:
+  - DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  nameWithType.vb: MusicSaver.Load(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Audio.MusicSaver.Load(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Load(Dictionary(Of String, Object))
+- uid: DREditor.Audio.MusicSaver.SaveMusic
+  commentId: M:DREditor.Audio.MusicSaver.SaveMusic
+  id: SaveMusic
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: SaveMusic()
+  nameWithType: MusicSaver.SaveMusic()
+  fullName: DREditor.Audio.MusicSaver.SaveMusic()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual string SaveMusic()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Protected Overridable Function SaveMusic() As String
+  overload: DREditor.Audio.MusicSaver.SaveMusic*
+- uid: DREditor.Audio.MusicSaver.LoadMusic(System.String)
+  commentId: M:DREditor.Audio.MusicSaver.LoadMusic(System.String)
+  id: LoadMusic(System.String)
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: LoadMusic(string)
+  nameWithType: MusicSaver.LoadMusic(string)
+  fullName: DREditor.Audio.MusicSaver.LoadMusic(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void LoadMusic(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: ''
+    content.vb: Protected Overridable Sub LoadMusic(name As String)
+  overload: DREditor.Audio.MusicSaver.LoadMusic*
+  nameWithType.vb: MusicSaver.LoadMusic(String)
+  fullName.vb: DREditor.Audio.MusicSaver.LoadMusic(String)
+  name.vb: LoadMusic(String)
+- uid: DREditor.Audio.MusicSaver.LoadValidMusic(System.String)
+  commentId: M:DREditor.Audio.MusicSaver.LoadValidMusic(System.String)
+  id: LoadValidMusic(System.String)
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: LoadValidMusic(string)
+  nameWithType: MusicSaver.LoadValidMusic(string)
+  fullName: DREditor.Audio.MusicSaver.LoadValidMusic(string)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void LoadValidMusic(string loadName)
+    parameters:
+    - id: loadName
+      type: System.String
+      description: ''
+    content.vb: Protected Overridable Sub LoadValidMusic(loadName As String)
+  overload: DREditor.Audio.MusicSaver.LoadValidMusic*
+  nameWithType.vb: MusicSaver.LoadValidMusic(String)
+  fullName.vb: DREditor.Audio.MusicSaver.LoadValidMusic(String)
+  name.vb: LoadValidMusic(String)
+- uid: DREditor.Audio.MusicSaver.OnEventRaised
+  commentId: M:DREditor.Audio.MusicSaver.OnEventRaised
+  id: OnEventRaised
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: OnEventRaised()
+  nameWithType: MusicSaver.OnEventRaised()
+  fullName: DREditor.Audio.MusicSaver.OnEventRaised()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void OnEventRaised()
+    content.vb: Public Overridable Sub OnEventRaised()
+  overload: DREditor.Audio.MusicSaver.OnEventRaised*
+  implements:
+  - DREditor.EventObjects.ISceneEventListener.OnEventRaised
+- uid: DREditor.Audio.MusicSaver.OnDestroy
+  commentId: M:DREditor.Audio.MusicSaver.OnDestroy
+  id: OnDestroy
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: MusicSaver.OnDestroy()
+  fullName: DREditor.Audio.MusicSaver.OnDestroy()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  syntax:
+    content: protected virtual void OnDestroy()
+    content.vb: Protected Overridable Sub OnDestroy()
+  overload: DREditor.Audio.MusicSaver.OnDestroy*
+- uid: DREditor.Audio.MusicSaver.#ctor
+  commentId: M:DREditor.Audio.MusicSaver.#ctor
+  id: '#ctor'
+  parent: DREditor.Audio.MusicSaver
+  langs:
+  - csharp
+  - vb
+  name: MusicSaver()
+  nameWithType: MusicSaver.MusicSaver()
+  fullName: DREditor.Audio.MusicSaver.MusicSaver()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Audio/MusicSaver.cs
+  assemblies:
+  - DREditor.Audio
+  namespace: DREditor.Audio
+  syntax:
+    content: public MusicSaver()
+    content.vb: Public Sub New()
+  overload: DREditor.Audio.MusicSaver.#ctor*
+  nameWithType.vb: MusicSaver.New()
+  fullName.vb: DREditor.Audio.MusicSaver.New()
+  name.vb: New()
+references:
+- uid: DREditor.Audio
+  commentId: N:DREditor.Audio
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Audio
+  nameWithType: DREditor.Audio
+  fullName: DREditor.Audio
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Audio
+    name: Audio
+    isExternal: true
+    href: DREditor.Audio.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Audio
+    name: Audio
+    isExternal: true
+    href: DREditor.Audio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.Saving.IDRESaveable
+  commentId: T:DREditor.Saving.IDRESaveable
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  name: IDRESaveable
+  nameWithType: IDRESaveable
+  fullName: DREditor.Saving.IDRESaveable
+- uid: DREditor.Saving.IDRELoadable
+  commentId: T:DREditor.Saving.IDRELoadable
+  parent: DREditor.Saving
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  name: IDRELoadable
+  nameWithType: IDRELoadable
+  fullName: DREditor.Saving.IDRELoadable
+- uid: DREditor.EventObjects.ISceneEventListener
+  commentId: T:DREditor.EventObjects.ISceneEventListener
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: ISceneEventListener
+  nameWithType: ISceneEventListener
+  fullName: DREditor.EventObjects.ISceneEventListener
+- uid: DREditor.Audio.MusicSaver.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<MusicSaver>(MusicSaver)
+  nameWithType: ReflectionHelper.GetFieldNames<MusicSaver>(MusicSaver)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Audio.MusicSaver>(DREditor.Audio.MusicSaver)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of MusicSaver)(MusicSaver)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Audio.MusicSaver)(DREditor.Audio.MusicSaver)
+  name.vb: GetFieldNames(Of MusicSaver)(MusicSaver)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Audio.MusicSaver)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Audio.MusicSaver)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+  - name: (
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+- uid: DREditor.Audio.MusicSaver.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<MusicSaver>(MusicSaver)
+  nameWithType: ReflectionHelper.GetFieldValues<MusicSaver>(MusicSaver)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Audio.MusicSaver>(DREditor.Audio.MusicSaver)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of MusicSaver)(MusicSaver)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Audio.MusicSaver)(DREditor.Audio.MusicSaver)
+  name.vb: GetFieldValues(Of MusicSaver)(MusicSaver)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Audio.MusicSaver)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Audio.MusicSaver)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+  - name: (
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+- uid: DREditor.Audio.MusicSaver.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<MusicSaver>(MusicSaver)
+  nameWithType: DeepCopyExtensions.DeepCopy<MusicSaver>(MusicSaver)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Audio.MusicSaver>(DREditor.Audio.MusicSaver)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of MusicSaver)(MusicSaver)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Audio.MusicSaver)(DREditor.Audio.MusicSaver)
+  name.vb: DeepCopy(Of MusicSaver)(MusicSaver)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Audio.MusicSaver)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Audio.MusicSaver)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+  - name: (
+  - uid: DREditor.Audio.MusicSaver
+    name: MusicSaver
+    isExternal: true
+    href: DREditor.Audio.MusicSaver.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.SceneEvent
+  commentId: T:DREditor.EventObjects.SceneEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SceneEvent.cs
+  name: SceneEvent
+  nameWithType: SceneEvent
+  fullName: DREditor.EventObjects.SceneEvent
+- uid: DREditor.Audio.MusicManager
+  commentId: T:DREditor.Audio.MusicManager
+  parent: DREditor.Audio
+  isExternal: true
+  href: DREditor.Audio.MusicManager.html
+  name: MusicManager
+  nameWithType: MusicManager
+  fullName: DREditor.Audio.MusicManager
+- uid: DREditor.Audio.Playlist
+  commentId: T:DREditor.Audio.Playlist
+  parent: DREditor.Audio
+  isExternal: true
+  href: DREditor.Audio.Playlist.html
+  name: Playlist
+  nameWithType: Playlist
+  fullName: DREditor.Audio.Playlist
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Audio.MusicSaver.Save*
+  commentId: Overload:DREditor.Audio.MusicSaver.Save
+  isExternal: true
+  href: DREditor.Audio.MusicSaver.html#DREditor_Audio_MusicSaver_Save_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: Save
+  nameWithType: MusicSaver.Save
+  fullName: DREditor.Audio.MusicSaver.Save
+- uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.IDRESaveable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  name: Save(Dictionary<string, object>)
+  nameWithType: IDRESaveable.Save(Dictionary<string, object>)
+  fullName: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: IDRESaveable.Save(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Save(Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Save
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRESaveable.Save(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Save
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRESaveable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Audio.MusicSaver.Load*
+  commentId: Overload:DREditor.Audio.MusicSaver.Load
+  isExternal: true
+  href: DREditor.Audio.MusicSaver.html#DREditor_Audio_MusicSaver_Load_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: Load
+  nameWithType: MusicSaver.Load
+  fullName: DREditor.Audio.MusicSaver.Load
+- uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: DREditor.Saving.IDRELoadable
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  name: Load(Dictionary<string, object>)
+  nameWithType: IDRELoadable.Load(Dictionary<string, object>)
+  fullName: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: IDRELoadable.Load(Dictionary(Of String, Object))
+  fullName.vb: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: Load(Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Load
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.IDRELoadable.Load(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: Load
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Saving/IDRELoadable.cs
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: DREditor.Audio.MusicSaver.SaveMusic*
+  commentId: Overload:DREditor.Audio.MusicSaver.SaveMusic
+  isExternal: true
+  href: DREditor.Audio.MusicSaver.html#DREditor_Audio_MusicSaver_SaveMusic
+  name: SaveMusic
+  nameWithType: MusicSaver.SaveMusic
+  fullName: DREditor.Audio.MusicSaver.SaveMusic
+- uid: DREditor.Audio.MusicSaver.LoadMusic*
+  commentId: Overload:DREditor.Audio.MusicSaver.LoadMusic
+  isExternal: true
+  href: DREditor.Audio.MusicSaver.html#DREditor_Audio_MusicSaver_LoadMusic_System_String_
+  name: LoadMusic
+  nameWithType: MusicSaver.LoadMusic
+  fullName: DREditor.Audio.MusicSaver.LoadMusic
+- uid: DREditor.Audio.MusicSaver.LoadValidMusic*
+  commentId: Overload:DREditor.Audio.MusicSaver.LoadValidMusic
+  isExternal: true
+  href: DREditor.Audio.MusicSaver.html#DREditor_Audio_MusicSaver_LoadValidMusic_System_String_
+  name: LoadValidMusic
+  nameWithType: MusicSaver.LoadValidMusic
+  fullName: DREditor.Audio.MusicSaver.LoadValidMusic
+- uid: DREditor.Audio.MusicSaver.OnEventRaised*
+  commentId: Overload:DREditor.Audio.MusicSaver.OnEventRaised
+  isExternal: true
+  href: DREditor.Audio.MusicSaver.html#DREditor_Audio_MusicSaver_OnEventRaised
+  name: OnEventRaised
+  nameWithType: MusicSaver.OnEventRaised
+  fullName: DREditor.Audio.MusicSaver.OnEventRaised
+- uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  commentId: M:DREditor.EventObjects.ISceneEventListener.OnEventRaised
+  parent: DREditor.EventObjects.ISceneEventListener
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  name: OnEventRaised()
+  nameWithType: ISceneEventListener.OnEventRaised()
+  fullName: DREditor.EventObjects.ISceneEventListener.OnEventRaised()
+  spec.csharp:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.EventObjects.ISceneEventListener.OnEventRaised
+    name: OnEventRaised
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ISceneEventListener.cs
+  - name: (
+  - name: )
+- uid: DREditor.Audio.MusicSaver.OnDestroy*
+  commentId: Overload:DREditor.Audio.MusicSaver.OnDestroy
+  isExternal: true
+  href: DREditor.Audio.MusicSaver.html#DREditor_Audio_MusicSaver_OnDestroy
+  name: OnDestroy
+  nameWithType: MusicSaver.OnDestroy
+  fullName: DREditor.Audio.MusicSaver.OnDestroy
+- uid: DREditor.Audio.MusicSaver.#ctor*
+  commentId: Overload:DREditor.Audio.MusicSaver.#ctor
+  isExternal: true
+  href: DREditor.Audio.MusicSaver.html#DREditor_Audio_MusicSaver__ctor
+  name: MusicSaver
+  nameWithType: MusicSaver.MusicSaver
+  fullName: DREditor.Audio.MusicSaver.MusicSaver
+  nameWithType.vb: MusicSaver.New
+  fullName.vb: DREditor.Audio.MusicSaver.New
+  name.vb: New

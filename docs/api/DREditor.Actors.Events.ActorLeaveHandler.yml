@@ -1,0 +1,1601 @@
+### YamlMime:ManagedReference
+items:
+- uid: DREditor.Actors.Events.ActorLeaveHandler
+  commentId: T:DREditor.Actors.Events.ActorLeaveHandler
+  id: ActorLeaveHandler
+  parent: DREditor.Actors.Events
+  children:
+  - DREditor.Actors.Events.ActorLeaveHandler.#ctor
+  - DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveExitProcess(DREditor.Actors.Actor)
+  - DREditor.Actors.Events.ActorLeaveHandler.ActorLeft(DREditor.Actors.Actor)
+  - DREditor.Actors.Events.ActorLeaveHandler.DialogueEnder
+  - DREditor.Actors.Events.ActorLeaveHandler.EvaluateCharacterLeave(DREditor.Dialogues.Events.CharacterLeave,DREditor.Actors.Actor)
+  - DREditor.Actors.Events.ActorLeaveHandler.ExitChar(DREditor.Actors.Actor)
+  - DREditor.Actors.Events.ActorLeaveHandler.ExitProcessShouldBeCanceled(DREditor.Actors.Actor)
+  - DREditor.Actors.Events.ActorLeaveHandler.LineReader
+  - DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered(System.Object)
+  - DREditor.Actors.Events.ActorLeaveHandler.RemoveAllEvents
+  - DREditor.Actors.Events.ActorLeaveHandler.SetDefaultEvent
+  - DREditor.Actors.Events.ActorLeaveHandler.ToTitleScreen
+  - DREditor.Actors.Events.ActorLeaveHandler.currentActor
+  - DREditor.Actors.Events.ActorLeaveHandler.delegates
+  - DREditor.Actors.Events.ActorLeaveHandler.designatedExitPosition
+  - DREditor.Actors.Events.ActorLeaveHandler.exit
+  - DREditor.Actors.Events.ActorLeaveHandler.isLoadingFile
+  - DREditor.Actors.Events.ActorLeaveHandler.isProtagSpeaking
+  - DREditor.Actors.Events.ActorLeaveHandler.lastActor
+  langs:
+  - csharp
+  - vb
+  name: ActorLeaveHandler
+  nameWithType: ActorLeaveHandler
+  fullName: DREditor.Actors.Events.ActorLeaveHandler
+  type: Class
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [ClassHeader("DialogueEventHandler\n\n")]
+
+      public class ActorLeaveHandler : ActorFadeEvent, IToTitleScreen
+    content.vb: >-
+      <ClassHeader("DialogueEventHandler" & vbLf & vbLf)>
+
+      Public Class ActorLeaveHandler Inherits ActorFadeEvent Implements IToTitleScreen
+  inheritance:
+  - System.Object
+  - DREditor.DialogueEventHandling.DialogueEventHandler
+  - DREditor.Actors.Events.ActorFadeEvent
+  implements:
+  - DREditor.Services.IToTitleScreen
+  inheritedMembers:
+  - DREditor.Actors.Events.ActorFadeEvent.spriteFader
+  - DREditor.DialogueEventHandling.DialogueEventHandler.dialogueEventString
+  - DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+  - DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+  - DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+  - DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+  - DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+  extensionMethods:
+  - DREditor.Actors.Events.ActorLeaveHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  - DREditor.Actors.Events.ActorLeaveHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  - DREditor.Actors.Events.ActorLeaveHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  attributes:
+  - type: DREditor.ClassHeaderAttribute
+    ctor: DREditor.ClassHeaderAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: >+
+        DialogueEventHandler
+
+- uid: DREditor.Actors.Events.ActorLeaveHandler.isProtagSpeaking
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.isProtagSpeaking
+  id: isProtagSpeaking
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: isProtagSpeaking
+  nameWithType: ActorLeaveHandler.isProtagSpeaking
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.isProtagSpeaking
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: >-
+      [Divider]
+
+      protected BoolWithEvent isProtagSpeaking
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: >-
+      <Divider>
+
+      Protected isProtagSpeaking As BoolWithEvent
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Actors.Events.ActorLeaveHandler.isLoadingFile
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.isLoadingFile
+  id: isLoadingFile
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: isLoadingFile
+  nameWithType: ActorLeaveHandler.isLoadingFile
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.isLoadingFile
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected BoolWithEvent isLoadingFile
+    return:
+      type: DREditor.EventObjects.BoolWithEvent
+    content.vb: Protected isLoadingFile As BoolWithEvent
+- uid: DREditor.Actors.Events.ActorLeaveHandler.currentActor
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.currentActor
+  id: currentActor
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: currentActor
+  nameWithType: ActorLeaveHandler.currentActor
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.currentActor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected SelectableObjectWithEvent currentActor
+    return:
+      type: DREditor.EventObjects.SelectableObjectWithEvent
+    content.vb: Protected currentActor As SelectableObjectWithEvent
+- uid: DREditor.Actors.Events.ActorLeaveHandler.lastActor
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.lastActor
+  id: lastActor
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: lastActor
+  nameWithType: ActorLeaveHandler.lastActor
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.lastActor
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected SelectableObjectWithEvent lastActor
+    return:
+      type: DREditor.EventObjects.SelectableObjectWithEvent
+    content.vb: Protected lastActor As SelectableObjectWithEvent
+- uid: DREditor.Actors.Events.ActorLeaveHandler.designatedExitPosition
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.designatedExitPosition
+  id: designatedExitPosition
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: designatedExitPosition
+  nameWithType: ActorLeaveHandler.designatedExitPosition
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.designatedExitPosition
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  syntax:
+    content: >-
+      [Divider]
+
+      protected Vector3 designatedExitPosition
+    return:
+      type: UnityEngine.Vector3
+    content.vb: >-
+      <Divider>
+
+      Protected designatedExitPosition As Vector3
+  attributes:
+  - type: DREditor.DividerAttribute
+    ctor: DREditor.DividerAttribute.#ctor
+    arguments: []
+- uid: DREditor.Actors.Events.ActorLeaveHandler.DialogueEnder
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.DialogueEnder
+  id: DialogueEnder
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: DialogueEnder
+  nameWithType: ActorLeaveHandler.DialogueEnder
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.DialogueEnder
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected IDialogueEnder DialogueEnder
+    return:
+      type: DREditor.Dialogues.IDialogueEnder
+    content.vb: Protected DialogueEnder As IDialogueEnder
+- uid: DREditor.Actors.Events.ActorLeaveHandler.LineReader
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.LineReader
+  id: LineReader
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: LineReader
+  nameWithType: ActorLeaveHandler.LineReader
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.LineReader
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected ILineReader LineReader
+    return:
+      type: DREditor.Dialogues.LineReading.ILineReader
+    content.vb: Protected LineReader As ILineReader
+- uid: DREditor.Actors.Events.ActorLeaveHandler.exit
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.exit
+  id: exit
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: exit
+  nameWithType: ActorLeaveHandler.exit
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.exit
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected bool exit
+    return:
+      type: System.Boolean
+    content.vb: Protected [exit] As Boolean
+- uid: DREditor.Actors.Events.ActorLeaveHandler.delegates
+  commentId: F:DREditor.Actors.Events.ActorLeaveHandler.delegates
+  id: delegates
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: delegates
+  nameWithType: ActorLeaveHandler.delegates
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.delegates
+  type: Field
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected readonly List<Action> delegates
+    return:
+      type: System.Collections.Generic.List{System.Action}
+    content.vb: Protected ReadOnly delegates As List(Of Action)
+- uid: DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered(System.Object)
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered(System.Object)
+  id: OnDialogueEventTriggered(System.Object)
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: OnDialogueEventTriggered(object)
+  nameWithType: ActorLeaveHandler.OnDialogueEventTriggered(object)
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered(object)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected override void OnDialogueEventTriggered(object o = null)
+    parameters:
+    - id: o
+      type: System.Object
+      description: ''
+    content.vb: Protected Overrides Sub OnDialogueEventTriggered(o As Object = Nothing)
+  overridden: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+  overload: DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered*
+  nameWithType.vb: ActorLeaveHandler.OnDialogueEventTriggered(Object)
+  fullName.vb: DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered(Object)
+  name.vb: OnDialogueEventTriggered(Object)
+- uid: DREditor.Actors.Events.ActorLeaveHandler.EvaluateCharacterLeave(DREditor.Dialogues.Events.CharacterLeave,DREditor.Actors.Actor)
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.EvaluateCharacterLeave(DREditor.Dialogues.Events.CharacterLeave,DREditor.Actors.Actor)
+  id: EvaluateCharacterLeave(DREditor.Dialogues.Events.CharacterLeave,DREditor.Actors.Actor)
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateCharacterLeave(CharacterLeave, Actor)
+  nameWithType: ActorLeaveHandler.EvaluateCharacterLeave(CharacterLeave, Actor)
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.EvaluateCharacterLeave(DREditor.Dialogues.Events.CharacterLeave, DREditor.Actors.Actor)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void EvaluateCharacterLeave(CharacterLeave leaveEvent, Actor actor)
+    parameters:
+    - id: leaveEvent
+      type: DREditor.Dialogues.Events.CharacterLeave
+      description: ''
+    - id: actor
+      type: DREditor.Actors.Actor
+      description: ''
+    content.vb: Protected Overridable Sub EvaluateCharacterLeave(leaveEvent As CharacterLeave, actor As Actor)
+  overload: DREditor.Actors.Events.ActorLeaveHandler.EvaluateCharacterLeave*
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ActorLeft(DREditor.Actors.Actor)
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.ActorLeft(DREditor.Actors.Actor)
+  id: ActorLeft(DREditor.Actors.Actor)
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: ActorLeft(Actor)
+  nameWithType: ActorLeaveHandler.ActorLeft(Actor)
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ActorLeft(DREditor.Actors.Actor)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ActorLeft(Actor actor)
+    parameters:
+    - id: actor
+      type: DREditor.Actors.Actor
+      description: ''
+    content.vb: Protected Overridable Sub ActorLeft(actor As Actor)
+  overload: DREditor.Actors.Events.ActorLeaveHandler.ActorLeft*
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveExitProcess(DREditor.Actors.Actor)
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveExitProcess(DREditor.Actors.Actor)
+  id: ActorLeaveExitProcess(DREditor.Actors.Actor)
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: ActorLeaveExitProcess(Actor)
+  nameWithType: ActorLeaveHandler.ActorLeaveExitProcess(Actor)
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveExitProcess(DREditor.Actors.Actor)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: protected virtual void ActorLeaveExitProcess(Actor actor)
+    parameters:
+    - id: actor
+      type: DREditor.Actors.Actor
+      description: ''
+    content.vb: Protected Overridable Sub ActorLeaveExitProcess(actor As Actor)
+  overload: DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveExitProcess*
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ExitProcessShouldBeCanceled(DREditor.Actors.Actor)
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.ExitProcessShouldBeCanceled(DREditor.Actors.Actor)
+  id: ExitProcessShouldBeCanceled(DREditor.Actors.Actor)
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: ExitProcessShouldBeCanceled(Actor)
+  nameWithType: ActorLeaveHandler.ExitProcessShouldBeCanceled(Actor)
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ExitProcessShouldBeCanceled(DREditor.Actors.Actor)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  remarks: ''
+  example: []
+  syntax:
+    content: protected virtual bool ExitProcessShouldBeCanceled(Actor actor)
+    parameters:
+    - id: actor
+      type: DREditor.Actors.Actor
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overridable Function ExitProcessShouldBeCanceled(actor As Actor) As Boolean
+  overload: DREditor.Actors.Events.ActorLeaveHandler.ExitProcessShouldBeCanceled*
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ExitChar(DREditor.Actors.Actor)
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.ExitChar(DREditor.Actors.Actor)
+  id: ExitChar(DREditor.Actors.Actor)
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: ExitChar(Actor)
+  nameWithType: ActorLeaveHandler.ExitChar(Actor)
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ExitChar(DREditor.Actors.Actor)
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void ExitChar(Actor actor)
+    parameters:
+    - id: actor
+      type: DREditor.Actors.Actor
+      description: ''
+    content.vb: Protected Overridable Sub ExitChar(actor As Actor)
+  overload: DREditor.Actors.Events.ActorLeaveHandler.ExitChar*
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ToTitleScreen
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.ToTitleScreen
+  id: ToTitleScreen
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: ToTitleScreen()
+  nameWithType: ActorLeaveHandler.ToTitleScreen()
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ToTitleScreen()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: public virtual void ToTitleScreen()
+    content.vb: Public Overridable Sub ToTitleScreen()
+  overload: DREditor.Actors.Events.ActorLeaveHandler.ToTitleScreen*
+  implements:
+  - DREditor.Services.IToTitleScreen.ToTitleScreen
+- uid: DREditor.Actors.Events.ActorLeaveHandler.RemoveAllEvents
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.RemoveAllEvents
+  id: RemoveAllEvents
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: RemoveAllEvents()
+  nameWithType: ActorLeaveHandler.RemoveAllEvents()
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.RemoveAllEvents()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: protected virtual void RemoveAllEvents()
+    content.vb: Protected Overridable Sub RemoveAllEvents()
+  overload: DREditor.Actors.Events.ActorLeaveHandler.RemoveAllEvents*
+- uid: DREditor.Actors.Events.ActorLeaveHandler.SetDefaultEvent
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.SetDefaultEvent
+  id: SetDefaultEvent
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: SetDefaultEvent()
+  nameWithType: ActorLeaveHandler.SetDefaultEvent()
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.SetDefaultEvent()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  summary: ''
+  example: []
+  syntax:
+    content: public void SetDefaultEvent()
+    content.vb: Public Sub SetDefaultEvent()
+  overload: DREditor.Actors.Events.ActorLeaveHandler.SetDefaultEvent*
+- uid: DREditor.Actors.Events.ActorLeaveHandler.#ctor
+  commentId: M:DREditor.Actors.Events.ActorLeaveHandler.#ctor
+  id: '#ctor'
+  parent: DREditor.Actors.Events.ActorLeaveHandler
+  langs:
+  - csharp
+  - vb
+  name: ActorLeaveHandler()
+  nameWithType: ActorLeaveHandler.ActorLeaveHandler()
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveHandler()
+  type: Constructor
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Actors/Events/ActorLeaveHandler.cs
+  assemblies:
+  - DREditor.Actors
+  namespace: DREditor.Actors.Events
+  syntax:
+    content: public ActorLeaveHandler()
+    content.vb: Public Sub New()
+  overload: DREditor.Actors.Events.ActorLeaveHandler.#ctor*
+  nameWithType.vb: ActorLeaveHandler.New()
+  fullName.vb: DREditor.Actors.Events.ActorLeaveHandler.New()
+  name.vb: New()
+references:
+- uid: DREditor.Actors.Events
+  commentId: N:DREditor.Actors.Events
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors.Events
+  nameWithType: DREditor.Actors.Events
+  fullName: DREditor.Actors.Events
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  - name: .
+  - uid: DREditor.Actors.Events
+    name: Events
+    isExternal: true
+    href: DREditor.Actors.Events.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  - name: .
+  - uid: DREditor.Actors.Events
+    name: Events
+    isExternal: true
+    href: DREditor.Actors.Events.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler
+  commentId: T:DREditor.DialogueEventHandling.DialogueEventHandler
+  parent: DREditor.DialogueEventHandling
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: DialogueEventHandler
+  nameWithType: DialogueEventHandler
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler
+- uid: DREditor.Actors.Events.ActorFadeEvent
+  commentId: T:DREditor.Actors.Events.ActorFadeEvent
+  parent: DREditor.Actors.Events
+  isExternal: true
+  href: DREditor.Actors.Events.ActorFadeEvent.html
+  name: ActorFadeEvent
+  nameWithType: ActorFadeEvent
+  fullName: DREditor.Actors.Events.ActorFadeEvent
+- uid: DREditor.Services.IToTitleScreen
+  commentId: T:DREditor.Services.IToTitleScreen
+  parent: DREditor.Services
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: IToTitleScreen
+  nameWithType: IToTitleScreen
+  fullName: DREditor.Services.IToTitleScreen
+- uid: DREditor.Actors.Events.ActorFadeEvent.spriteFader
+  commentId: F:DREditor.Actors.Events.ActorFadeEvent.spriteFader
+  parent: DREditor.Actors.Events.ActorFadeEvent
+  isExternal: true
+  href: DREditor.Actors.Events.ActorFadeEvent.html#DREditor_Actors_Events_ActorFadeEvent_spriteFader
+  name: spriteFader
+  nameWithType: ActorFadeEvent.spriteFader
+  fullName: DREditor.Actors.Events.ActorFadeEvent.spriteFader
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.dialogueEventString
+  commentId: F:DREditor.DialogueEventHandling.DialogueEventHandler.dialogueEventString
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: dialogueEventString
+  nameWithType: DialogueEventHandler.dialogueEventString
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.dialogueEventString
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: TriggerEvent(object)
+  nameWithType: DialogueEventHandler.TriggerEvent(object)
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(object)
+  nameWithType.vb: DialogueEventHandler.TriggerEvent(Object)
+  fullName.vb: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(Object)
+  name.vb: TriggerEvent(Object)
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+    name: TriggerEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerEvent(System.Object)
+    name: TriggerEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: OnEnable()
+  nameWithType: DialogueEventHandler.OnEnable()
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable()
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnEnable
+    name: OnEnable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: OnDisable()
+  nameWithType: DialogueEventHandler.OnDisable()
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable()
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDisable
+    name: OnDisable
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: SetDefaultEventString(string)
+  nameWithType: DialogueEventHandler.SetDefaultEventString(string)
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(string)
+  nameWithType.vb: DialogueEventHandler.SetDefaultEventString(String)
+  fullName.vb: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(String)
+  name.vb: SetDefaultEventString(String)
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+    name: SetDefaultEventString
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.SetDefaultEventString(System.String)
+    name: SetDefaultEventString
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: TriggerParameterlessEvent()
+  nameWithType: DialogueEventHandler.TriggerParameterlessEvent()
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent()
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+    name: TriggerParameterlessEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.TriggerParameterlessEvent
+    name: TriggerParameterlessEvent
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - name: )
+- uid: DREditor.Actors.Events.ActorLeaveHandler.DREditor.Saving.ReflectionHelper.GetFieldNames``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<ActorLeaveHandler>(ActorLeaveHandler)
+  nameWithType: ReflectionHelper.GetFieldNames<ActorLeaveHandler>(ActorLeaveHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<DREditor.Actors.Events.ActorLeaveHandler>(DREditor.Actors.Events.ActorLeaveHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of ActorLeaveHandler)(ActorLeaveHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of DREditor.Actors.Events.ActorLeaveHandler)(DREditor.Actors.Events.ActorLeaveHandler)
+  name.vb: GetFieldNames(Of ActorLeaveHandler)(ActorLeaveHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.Events.ActorLeaveHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(DREditor.Actors.Events.ActorLeaveHandler)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+- uid: DREditor.Actors.Events.ActorLeaveHandler.DREditor.Saving.ReflectionHelper.GetFieldValues``1
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  parent: DREditor.Saving.ReflectionHelper
+  definition: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<ActorLeaveHandler>(ActorLeaveHandler)
+  nameWithType: ReflectionHelper.GetFieldValues<ActorLeaveHandler>(ActorLeaveHandler)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<DREditor.Actors.Events.ActorLeaveHandler>(DREditor.Actors.Events.ActorLeaveHandler)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of ActorLeaveHandler)(ActorLeaveHandler)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of DREditor.Actors.Events.ActorLeaveHandler)(DREditor.Actors.Events.ActorLeaveHandler)
+  name.vb: GetFieldValues(Of ActorLeaveHandler)(ActorLeaveHandler)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.Events.ActorLeaveHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(DREditor.Actors.Events.ActorLeaveHandler)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+- uid: DREditor.Actors.Events.ActorLeaveHandler.DREditor.Utility.DeepCopyExtensions.DeepCopy``1
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  parent: DREditor.Utility.DeepCopyExtensions
+  definition: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<ActorLeaveHandler>(ActorLeaveHandler)
+  nameWithType: DeepCopyExtensions.DeepCopy<ActorLeaveHandler>(ActorLeaveHandler)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<DREditor.Actors.Events.ActorLeaveHandler>(DREditor.Actors.Events.ActorLeaveHandler)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of ActorLeaveHandler)(ActorLeaveHandler)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of DREditor.Actors.Events.ActorLeaveHandler)(DREditor.Actors.Events.ActorLeaveHandler)
+  name.vb: DeepCopy(Of ActorLeaveHandler)(ActorLeaveHandler)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.Events.ActorLeaveHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: '>'
+  - name: (
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(DREditor.Actors.Events.ActorLeaveHandler)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+  - name: (
+  - uid: DREditor.Actors.Events.ActorLeaveHandler
+    name: ActorLeaveHandler
+    isExternal: true
+    href: DREditor.Actors.Events.ActorLeaveHandler.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DREditor.DialogueEventHandling
+  commentId: N:DREditor.DialogueEventHandling
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.DialogueEventHandling
+  nameWithType: DREditor.DialogueEventHandling
+  fullName: DREditor.DialogueEventHandling
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueEventHandling
+    name: DialogueEventHandling
+    isExternal: true
+    href: DREditor.DialogueEventHandling.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.DialogueEventHandling
+    name: DialogueEventHandling
+    isExternal: true
+    href: DREditor.DialogueEventHandling.html
+- uid: DREditor.Services
+  commentId: N:DREditor.Services
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Services
+  nameWithType: DREditor.Services
+  fullName: DREditor.Services
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Services
+    name: Services
+    isExternal: true
+    href: DREditor.Services.html
+- uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  name: GetFieldNames<T>(T)
+  nameWithType: ReflectionHelper.GetFieldNames<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldNames<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldNames(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldNames(Of T)(T)
+  name.vb: GetFieldNames(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldNames``1(``0)
+    name: GetFieldNames
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Saving.ReflectionHelper
+  commentId: T:DREditor.Saving.ReflectionHelper
+  parent: DREditor.Saving
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html
+  name: ReflectionHelper
+  nameWithType: ReflectionHelper
+  fullName: DREditor.Saving.ReflectionHelper
+- uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  commentId: M:DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+  isExternal: true
+  href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  name: GetFieldValues<T>(T)
+  nameWithType: ReflectionHelper.GetFieldValues<T>(T)
+  fullName: DREditor.Saving.ReflectionHelper.GetFieldValues<T>(T)
+  nameWithType.vb: ReflectionHelper.GetFieldValues(Of T)(T)
+  fullName.vb: DREditor.Saving.ReflectionHelper.GetFieldValues(Of T)(T)
+  name.vb: GetFieldValues(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Saving.ReflectionHelper.GetFieldValues``1(``0)
+    name: GetFieldValues
+    isExternal: true
+    href: DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  commentId: M:DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  name: DeepCopy<T>(T)
+  nameWithType: DeepCopyExtensions.DeepCopy<T>(T)
+  fullName: DREditor.Utility.DeepCopyExtensions.DeepCopy<T>(T)
+  nameWithType.vb: DeepCopyExtensions.DeepCopy(Of T)(T)
+  fullName.vb: DREditor.Utility.DeepCopyExtensions.DeepCopy(Of T)(T)
+  name.vb: DeepCopy(Of T)(T)
+  spec.csharp:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: DREditor.Utility.DeepCopyExtensions.DeepCopy``1(``0)
+    name: DeepCopy
+    isExternal: true
+    href: DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: DREditor.Utility.DeepCopyExtensions
+  commentId: T:DREditor.Utility.DeepCopyExtensions
+  parent: DREditor.Utility
+  isExternal: true
+  href: DREditor.Utility.DeepCopyExtensions.html
+  name: DeepCopyExtensions
+  nameWithType: DeepCopyExtensions
+  fullName: DREditor.Utility.DeepCopyExtensions
+- uid: DREditor.Saving
+  commentId: N:DREditor.Saving
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Saving
+  nameWithType: DREditor.Saving
+  fullName: DREditor.Saving
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Saving
+    name: Saving
+    isExternal: true
+    href: DREditor.Saving.html
+- uid: DREditor.Utility
+  commentId: N:DREditor.Utility
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Utility
+  nameWithType: DREditor.Utility
+  fullName: DREditor.Utility
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Utility
+    name: Utility
+    isExternal: true
+    href: DREditor.Utility.html
+- uid: DREditor.EventObjects.BoolWithEvent
+  commentId: T:DREditor.EventObjects.BoolWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/BoolWithEvent.cs
+  name: BoolWithEvent
+  nameWithType: BoolWithEvent
+  fullName: DREditor.EventObjects.BoolWithEvent
+- uid: DREditor.EventObjects
+  commentId: N:DREditor.EventObjects
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.EventObjects
+  nameWithType: DREditor.EventObjects
+  fullName: DREditor.EventObjects
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.EventObjects
+    name: EventObjects
+    isExternal: true
+    href: DREditor.EventObjects.html
+- uid: DREditor.EventObjects.SelectableObjectWithEvent
+  commentId: T:DREditor.EventObjects.SelectableObjectWithEvent
+  parent: DREditor.EventObjects
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/SelectableObjectWithEvent.cs
+  name: SelectableObjectWithEvent
+  nameWithType: SelectableObjectWithEvent
+  fullName: DREditor.EventObjects.SelectableObjectWithEvent
+- uid: UnityEngine.Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: DREditor.Dialogues.IDialogueEnder
+  commentId: T:DREditor.Dialogues.IDialogueEnder
+  parent: DREditor.Dialogues
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/IDialogueEnder.cs
+  name: IDialogueEnder
+  nameWithType: IDialogueEnder
+  fullName: DREditor.Dialogues.IDialogueEnder
+- uid: DREditor.Dialogues
+  commentId: N:DREditor.Dialogues
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues
+  nameWithType: DREditor.Dialogues
+  fullName: DREditor.Dialogues
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+- uid: DREditor.Dialogues.LineReading.ILineReader
+  commentId: T:DREditor.Dialogues.LineReading.ILineReader
+  parent: DREditor.Dialogues.LineReading
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineReader.cs
+  name: ILineReader
+  nameWithType: ILineReader
+  fullName: DREditor.Dialogues.LineReading.ILineReader
+- uid: DREditor.Dialogues.LineReading
+  commentId: N:DREditor.Dialogues.LineReading
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.LineReading
+  nameWithType: DREditor.Dialogues.LineReading
+  fullName: DREditor.Dialogues.LineReading
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.LineReading
+    name: LineReading
+    isExternal: true
+    href: DREditor.Dialogues.LineReading.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.List{System.Action}
+  commentId: T:System.Collections.Generic.List{System.Action}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Action>
+  nameWithType: List<Action>
+  fullName: System.Collections.Generic.List<System.Action>
+  nameWithType.vb: List(Of Action)
+  fullName.vb: System.Collections.Generic.List(Of System.Action)
+  name.vb: List(Of Action)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+  commentId: M:DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+  parent: DREditor.DialogueEventHandling.DialogueEventHandler
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  name: OnDialogueEventTriggered(object)
+  nameWithType: DialogueEventHandler.OnDialogueEventTriggered(object)
+  fullName: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(object)
+  nameWithType.vb: DialogueEventHandler.OnDialogueEventTriggered(Object)
+  fullName.vb: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(Object)
+  name.vb: OnDialogueEventTriggered(Object)
+  spec.csharp:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+    name: OnDialogueEventTriggered
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: DREditor.DialogueEventHandling.DialogueEventHandler.OnDialogueEventTriggered(System.Object)
+    name: OnDialogueEventTriggered
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.DialogueEventHandling/DialogueEventHandler.cs
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_OnDialogueEventTriggered_System_Object_
+  name: OnDialogueEventTriggered
+  nameWithType: ActorLeaveHandler.OnDialogueEventTriggered
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.OnDialogueEventTriggered
+- uid: DREditor.Actors.Events.ActorLeaveHandler.EvaluateCharacterLeave*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.EvaluateCharacterLeave
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_EvaluateCharacterLeave_DREditor_Dialogues_Events_CharacterLeave_DREditor_Actors_Actor_
+  name: EvaluateCharacterLeave
+  nameWithType: ActorLeaveHandler.EvaluateCharacterLeave
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.EvaluateCharacterLeave
+- uid: DREditor.Dialogues.Events.CharacterLeave
+  commentId: T:DREditor.Dialogues.Events.CharacterLeave
+  parent: DREditor.Dialogues.Events
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CharacterLeave.cs
+  name: CharacterLeave
+  nameWithType: CharacterLeave
+  fullName: DREditor.Dialogues.Events.CharacterLeave
+- uid: DREditor.Actors.Actor
+  commentId: T:DREditor.Actors.Actor
+  parent: DREditor.Actors
+  isExternal: true
+  href: DREditor.Actors.Actor.html
+  name: Actor
+  nameWithType: Actor
+  fullName: DREditor.Actors.Actor
+- uid: DREditor.Dialogues.Events
+  commentId: N:DREditor.Dialogues.Events
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Dialogues.Events
+  nameWithType: DREditor.Dialogues.Events
+  fullName: DREditor.Dialogues.Events
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Events
+    name: Events
+    isExternal: true
+    href: DREditor.Dialogues.Events.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Dialogues
+    name: Dialogues
+    isExternal: true
+    href: DREditor.Dialogues.html
+  - name: .
+  - uid: DREditor.Dialogues.Events
+    name: Events
+    isExternal: true
+    href: DREditor.Dialogues.Events.html
+- uid: DREditor.Actors
+  commentId: N:DREditor.Actors
+  isExternal: true
+  href: DREditor.html
+  name: DREditor.Actors
+  nameWithType: DREditor.Actors
+  fullName: DREditor.Actors
+  spec.csharp:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+  spec.vb:
+  - uid: DREditor
+    name: DREditor
+    isExternal: true
+    href: DREditor.html
+  - name: .
+  - uid: DREditor.Actors
+    name: Actors
+    isExternal: true
+    href: DREditor.Actors.html
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ActorLeft*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.ActorLeft
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_ActorLeft_DREditor_Actors_Actor_
+  name: ActorLeft
+  nameWithType: ActorLeaveHandler.ActorLeft
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ActorLeft
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveExitProcess*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveExitProcess
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_ActorLeaveExitProcess_DREditor_Actors_Actor_
+  name: ActorLeaveExitProcess
+  nameWithType: ActorLeaveHandler.ActorLeaveExitProcess
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveExitProcess
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ExitProcessShouldBeCanceled*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.ExitProcessShouldBeCanceled
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_ExitProcessShouldBeCanceled_DREditor_Actors_Actor_
+  name: ExitProcessShouldBeCanceled
+  nameWithType: ActorLeaveHandler.ExitProcessShouldBeCanceled
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ExitProcessShouldBeCanceled
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ExitChar*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.ExitChar
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_ExitChar_DREditor_Actors_Actor_
+  name: ExitChar
+  nameWithType: ActorLeaveHandler.ExitChar
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ExitChar
+- uid: DREditor.Actors.Events.ActorLeaveHandler.ToTitleScreen*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.ToTitleScreen
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_ToTitleScreen
+  name: ToTitleScreen
+  nameWithType: ActorLeaveHandler.ToTitleScreen
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ToTitleScreen
+- uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+  commentId: M:DREditor.Services.IToTitleScreen.ToTitleScreen
+  parent: DREditor.Services.IToTitleScreen
+  isExternal: true
+  href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  name: ToTitleScreen()
+  nameWithType: IToTitleScreen.ToTitleScreen()
+  fullName: DREditor.Services.IToTitleScreen.ToTitleScreen()
+  spec.csharp:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: DREditor.Services.IToTitleScreen.ToTitleScreen
+    name: ToTitleScreen
+    isExternal: true
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/IToTitleScreen.cs
+  - name: (
+  - name: )
+- uid: DREditor.Actors.Events.ActorLeaveHandler.RemoveAllEvents*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.RemoveAllEvents
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_RemoveAllEvents
+  name: RemoveAllEvents
+  nameWithType: ActorLeaveHandler.RemoveAllEvents
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.RemoveAllEvents
+- uid: DREditor.Actors.Events.ActorLeaveHandler.SetDefaultEvent*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.SetDefaultEvent
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler_SetDefaultEvent
+  name: SetDefaultEvent
+  nameWithType: ActorLeaveHandler.SetDefaultEvent
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.SetDefaultEvent
+- uid: DREditor.Actors.Events.ActorLeaveHandler.#ctor*
+  commentId: Overload:DREditor.Actors.Events.ActorLeaveHandler.#ctor
+  isExternal: true
+  href: DREditor.Actors.Events.ActorLeaveHandler.html#DREditor_Actors_Events_ActorLeaveHandler__ctor
+  name: ActorLeaveHandler
+  nameWithType: ActorLeaveHandler.ActorLeaveHandler
+  fullName: DREditor.Actors.Events.ActorLeaveHandler.ActorLeaveHandler
+  nameWithType.vb: ActorLeaveHandler.New
+  fullName.vb: DREditor.Actors.Events.ActorLeaveHandler.New
+  name.vb: New
