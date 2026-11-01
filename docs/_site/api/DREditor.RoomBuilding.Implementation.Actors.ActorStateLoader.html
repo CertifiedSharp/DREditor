@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ActorStateLoader | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ActorStateLoader | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader">
+
+
+
+  <h1 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader" class="text-break">
+Class ActorStateLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.RoomBuilding.html">RoomBuilding</a>.<a class="xref" href="DREditor.RoomBuilding.Implementation.html">Implementation</a>.<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.html">Actors</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.RoomBuilding.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ClassHeader(&quot;RoomStateHandlerBase for types &lt;ActorStateData, ActorData&gt;\n\n&quot;)]
+public class ActorStateLoader : RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;, IRoomStateSaver, IRoomStateLoader</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html">RoomStateHandlerBase</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorStateData.html">ActorStateData</a>, <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</div>
+      <div><span class="xref">ActorStateLoader</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.RoomStateBuilding.IRoomStateSaver.html">IRoomStateSaver</a></div>
+      <div><a class="xref" href="DREditor.RoomStateBuilding.IRoomStateLoader.html">IRoomStateLoader</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_loadedBaseDatas">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.loadedBaseDatas</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_loadedInstances">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.loadedInstances</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.GetTypeName()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_System_Collections_Generic_List_UnityEngine_ScriptableObject__">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.LoadData(List&lt;ScriptableObject&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_System_Collections_Generic_List_UnityEngine_ScriptableObject__System_Object_">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.LoadInstance(List&lt;ScriptableObject&gt;, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_System_String__1__">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.LoadedInstanceValid(string, out ActorData)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_System_String_">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.SaveDataAsset(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.GetDataAssetName()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.SaveInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_System_Boolean_">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.Unload(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID__1_System_String_">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.GetAssetFromGUID&lt;T3&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset__1_System_Collections_Generic_List_UnityEngine_ScriptableObject__">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.GetDataAsset&lt;T4&gt;(List&lt;ScriptableObject&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.Save()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_System_Collections_Generic_List__1__System_Collections_Generic_List__1__">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.LoadAssetData(List&lt;ActorData&gt;, List&lt;ActorData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_System_Collections_Generic_List__1__">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.InitializeVisibleBaseDatas(List&lt;ActorData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_System_Collections_Generic_List__1__">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.InitializeVisibleInstanceDatas(List&lt;ActorData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase-2.html#DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_System_Collections_Generic_List__1__System_Collections_Generic_List__1__">RoomStateHandlerBase&lt;ActorStateData, ActorData&gt;.LoadAssetProcess(List&lt;ActorData&gt;, List&lt;ActorData&gt;)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader__ctor_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.#ctor*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader__ctor" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.#ctor">
+  ActorStateLoader()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActorStateLoader()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ActorPrefabs" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ActorPrefabs">
+  ActorPrefabs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;GameObject&gt; ActorPrefabs</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">GameObject</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_characterDatabase" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.characterDatabase">
+  characterDatabase
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected CharacterDatabase characterDatabase</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Characters.CharacterDatabase.html">CharacterDatabase</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyActorData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyActorData*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyActorData_DREditor_Actors_Actor_DREditor_RoomBuilding_Implementation_Actors_ActorData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyActorData(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.ActorData)">
+  ApplyActorData(Actor, ActorData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyActorData(Actor actor, ActorData actorData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actor</code> <a class="xref" href="DREditor.Actors.Actor.html">Actor</a></dt>
+    <dd></dd>
+    <dt><code>actorData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyActorMaterial_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyActorMaterial*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyActorMaterial_DREditor_Actors_Actor_UnityEngine_Material_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyActorMaterial(DREditor.Actors.Actor,UnityEngine.Material)">
+  ApplyActorMaterial(Actor, Material)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyActorMaterial(Actor actor, Material mat)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actor</code> <a class="xref" href="DREditor.Actors.Actor.html">Actor</a></dt>
+    <dd></dd>
+    <dt><code>mat</code> <span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyActorMaterialInstance_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyActorMaterialInstance*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyActorMaterialInstance_DREditor_Actors_Actor_DREditor_RoomBuilding_Implementation_Actors_ActorData_DREditor_RoomBuilding_Implementation_Actors_ActorData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyActorMaterialInstance(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.ActorData,DREditor.RoomBuilding.Implementation.Actors.ActorData)">
+  ApplyActorMaterialInstance(Actor, ActorData, ActorData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyActorMaterialInstance(Actor actor, ActorData actorData, ActorData instanceData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actor</code> <a class="xref" href="DREditor.Actors.Actor.html">Actor</a></dt>
+    <dd></dd>
+    <dt><code>actorData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+    <dt><code>instanceData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyActorSprite_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyActorSprite*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyActorSprite_DREditor_Actors_Actor_DREditor_RoomBuilding_Implementation_Actors_ActorData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyActorSprite(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.ActorData)">
+  ApplyActorSprite(Actor, ActorData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyActorSprite(Actor actor, ActorData actorData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actor</code> <a class="xref" href="DREditor.Actors.Actor.html">Actor</a></dt>
+    <dd></dd>
+    <dt><code>actorData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyBasicActorData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyBasicActorData*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyBasicActorData_DREditor_Actors_Actor_DREditor_RoomBuilding_Implementation_Actors_ActorData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyBasicActorData(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.ActorData)">
+  ApplyBasicActorData(Actor, ActorData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyBasicActorData(Actor actor, ActorData actorData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actor</code> <a class="xref" href="DREditor.Actors.Actor.html">Actor</a></dt>
+    <dd></dd>
+    <dt><code>actorData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyInstanceData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyInstanceData*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_ApplyInstanceData_DREditor_Actors_Actor_DREditor_RoomBuilding_Implementation_Actors_ActorData_DREditor_RoomBuilding_Implementation_Actors_ActorData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.ApplyInstanceData(DREditor.Actors.Actor,DREditor.RoomBuilding.Implementation.Actors.ActorData,DREditor.RoomBuilding.Implementation.Actors.ActorData)">
+  ApplyInstanceData(Actor, ActorData, ActorData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyInstanceData(Actor actor, ActorData actorData, ActorData instanceData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actor</code> <a class="xref" href="DREditor.Actors.Actor.html">Actor</a></dt>
+    <dd></dd>
+    <dt><code>actorData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+    <dt><code>instanceData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_AttemptLoadActor_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.AttemptLoadActor*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_AttemptLoadActor_System_Int32_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.AttemptLoadActor(System.Int32,System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData})">
+  AttemptLoadActor(int, List&lt;ActorData&gt;, List&lt;ActorData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AttemptLoadActor(int i, List&lt;ActorData&gt; actors, List&lt;ActorData&gt; instanceDatas = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>i</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>actors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>instanceDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_InitializeVisibleBaseDatas_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.InitializeVisibleBaseDatas*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_InitializeVisibleBaseDatas_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.InitializeVisibleBaseDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData})">
+  InitializeVisibleBaseDatas(List&lt;ActorData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InitializeVisibleBaseDatas(List&lt;ActorData&gt; baseDatas)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_InitializeVisibleInstanceDatas_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.InitializeVisibleInstanceDatas*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_InitializeVisibleInstanceDatas_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.InitializeVisibleInstanceDatas(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData})">
+  InitializeVisibleInstanceDatas(List&lt;ActorData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InitializeVisibleInstanceDatas(List&lt;ActorData&gt; instanceDatas = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instanceDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_LoadActor_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.LoadActor*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_LoadActor_UnityEngine_GameObject_DREditor_RoomBuilding_Implementation_Actors_ActorData_DREditor_RoomBuilding_Implementation_Actors_ActorData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.LoadActor(UnityEngine.GameObject,DREditor.RoomBuilding.Implementation.Actors.ActorData,DREditor.RoomBuilding.Implementation.Actors.ActorData)">
+  LoadActor(GameObject, ActorData, ActorData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LoadActor(GameObject shell, ActorData actorData, ActorData instanceData = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shell</code> <span class="xref">GameObject</span></dt>
+    <dd></dd>
+    <dt><code>actorData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+    <dt><code>instanceData</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_LoadActors_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.LoadActors*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_LoadActors_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.LoadActors(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData})">
+  LoadActors(List&lt;ActorData&gt;, List&lt;ActorData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LoadActors(List&lt;ActorData&gt; actors, List&lt;ActorData&gt; instanceDatas = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>instanceDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_LoadAssetProcess_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.LoadAssetProcess*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_LoadAssetProcess_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.LoadAssetProcess(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData},System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData})">
+  LoadAssetProcess(List&lt;ActorData&gt;, List&lt;ActorData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void LoadAssetProcess(List&lt;ActorData&gt; baseDatas, List&lt;ActorData&gt; instanceDatas = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>instanceDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_LoadedInstanceValid_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.LoadedInstanceValid*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_LoadedInstanceValid_System_String_DREditor_RoomBuilding_Implementation_Actors_ActorData__" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.LoadedInstanceValid(System.String,DREditor.RoomBuilding.Implementation.Actors.ActorData@)">
+  LoadedInstanceValid(string, out ActorData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool LoadedInstanceValid(string dataInstance, out ActorData result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dataInstance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_OnValidate_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.OnValidate*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_OnValidate" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.OnValidate">
+  OnValidate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnValidate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_PrefabReferences_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.PrefabReferences*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_PrefabReferences" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.PrefabReferences">
+  PrefabReferences()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PrefabReferences()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_Save_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.Save*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_Save" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.Save">
+  Save()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override List&lt;ActorData&gt; Save()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_Unload_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.Unload*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_Unload_System_Boolean_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.Unload(System.Boolean)">
+  Unload(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Unload(bool inEditor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inEditor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_VerifyData_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.VerifyData*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_Actors_ActorStateLoader_VerifyData_System_Collections_Generic_List_DREditor_RoomBuilding_Implementation_Actors_ActorData__System_String_" data-uid="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.VerifyData(System.Collections.Generic.List{DREditor.RoomBuilding.Implementation.Actors.ActorData},System.String)">
+  VerifyData(List&lt;ActorData&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ActorData VerifyData(List&lt;ActorData&gt; instanceDatas, string nameLook)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instanceDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>nameLook</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorData.html">ActorData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/Actors/ActorStateLoader.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

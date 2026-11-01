@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Talkable | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Talkable | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.Talkables.Talkable">
+
+
+
+  <h1 id="DREditor_Talkables_Talkable" data-uid="DREditor.Talkables.Talkable" class="text-break">
+Class Talkable  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.Talkables.html">Talkables</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.Talkables.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Talkable : SelectableObject, INameDisplayable, ISelectableObject, IDialogueProgression, IDialogueHolder, ISkipConversation</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.EventObjects.SelectableObject.html">SelectableObject</a></div>
+      <div><span class="xref">Talkable</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Processables.INameDisplayable.html">INameDisplayable</a></div>
+      <div><a class="xref" href="DREditor.EventObjects.ISelectableObject.html">ISelectableObject</a></div>
+      <div><a class="xref" href="DREditor.LocalDialogues.IDialogueProgression.html">IDialogueProgression</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.IDialogueHolder.html">IDialogueHolder</a></div>
+      <div><a class="xref" href="DREditor.LocalDialogues.ISkipConversation.html">ISkipConversation</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Actors.Actor.html">Actor</a></div>
+      <div><a class="xref" href="DREditor.Talkables.ItemActor.html">ItemActor</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_displayName">SelectableObject.displayName</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_head">SelectableObject.head</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_body">SelectableObject.body</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_selectable">SelectableObject.selectable</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_selectableCollider">SelectableObject.selectableCollider</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_SetSelectability_System_Boolean_">SelectableObject.SetSelectability(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_SetHeadAndBody_UnityEngine_Transform_UnityEngine_Transform_">SelectableObject.SetHeadAndBody(Transform, Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_EnableCollision_System_Boolean_">SelectableObject.EnableCollision(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_SelectObject">SelectableObject.SelectObject()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjects.SelectableObject.html#DREditor_EventObjects_SelectableObject_GetSaveDisplayName">SelectableObject.GetSaveDisplayName()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_Talkables_Talkable__ctor_" data-uid="DREditor.Talkables.Talkable.#ctor*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable__ctor" data-uid="DREditor.Talkables.Talkable.#ctor">
+  Talkable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Talkable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_Talkables_Talkable_conversations" data-uid="DREditor.Talkables.Talkable.conversations">
+  conversations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;LocalDialogue&gt; conversations</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.LocalDialogues/LocalDialogue.cs">LocalDialogue</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Talkables_Talkable_identified" data-uid="DREditor.Talkables.Talkable.identified">
+  identified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool identified</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Talkables_Talkable_unidentifiedDisplayName" data-uid="DREditor.Talkables.Talkable.unidentifiedDisplayName">
+  unidentifiedDisplayName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string unidentifiedDisplayName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="DREditor_Talkables_Talkable_DisplayName_" data-uid="DREditor.Talkables.Talkable.DisplayName*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_DisplayName" data-uid="DREditor.Talkables.Talkable.DisplayName">
+  DisplayName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string DisplayName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_Talkables_Talkable_AllDialogueTriggered_" data-uid="DREditor.Talkables.Talkable.AllDialogueTriggered*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_AllDialogueTriggered" data-uid="DREditor.Talkables.Talkable.AllDialogueTriggered">
+  AllDialogueTriggered()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AllDialogueTriggered()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_CheckIfSaveDialogue_" data-uid="DREditor.Talkables.Talkable.CheckIfSaveDialogue*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_CheckIfSaveDialogue" data-uid="DREditor.Talkables.Talkable.CheckIfSaveDialogue">
+  CheckIfSaveDialogue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CheckIfSaveDialogue()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_HasUnTriggeredRequiredFlags_" data-uid="DREditor.Talkables.Talkable.HasUnTriggeredRequiredFlags*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_HasUnTriggeredRequiredFlags" data-uid="DREditor.Talkables.Talkable.HasUnTriggeredRequiredFlags">
+  HasUnTriggeredRequiredFlags()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasUnTriggeredRequiredFlags()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_InvokeConversation_" data-uid="DREditor.Talkables.Talkable.InvokeConversation*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_InvokeConversation_DREditor_Dialogues_Dialogue___" data-uid="DREditor.Talkables.Talkable.InvokeConversation(DREditor.Dialogues.Dialogue[])">
+  InvokeConversation(Dialogue[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InvokeConversation(Dialogue[] conversation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conversation</code> <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs">Dialogue</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_OnDestroy_" data-uid="DREditor.Talkables.Talkable.OnDestroy*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_OnDestroy" data-uid="DREditor.Talkables.Talkable.OnDestroy">
+  OnDestroy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_Register_" data-uid="DREditor.Talkables.Talkable.Register*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_Register__1___0_" data-uid="DREditor.Talkables.Talkable.Register``1(``0)">
+  Register&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Register&lt;T&gt;(T pooledObject) where T : SelectableObject</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pooledObject</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_SkipConversation_" data-uid="DREditor.Talkables.Talkable.SkipConversation*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_SkipConversation_System_Int32_" data-uid="DREditor.Talkables.Talkable.SkipConversation(System.Int32)">
+  SkipConversation(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SkipConversation(int conversationIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conversationIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_Start_" data-uid="DREditor.Talkables.Talkable.Start*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_Start" data-uid="DREditor.Talkables.Talkable.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_SubscribeToStartConversation_" data-uid="DREditor.Talkables.Talkable.SubscribeToStartConversation*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_SubscribeToStartConversation_System_Action_DREditor_Talkables_Talkable_DREditor_Dialogues_Dialogue____" data-uid="DREditor.Talkables.Talkable.SubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})">
+  SubscribeToStartConversation(Action&lt;Talkable, Dialogue[]&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SubscribeToStartConversation(Action&lt;Talkable, Dialogue[]&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="DREditor.Talkables.Talkable.html">Talkable</a>, <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs">Dialogue</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_Unregister_" data-uid="DREditor.Talkables.Talkable.Unregister*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_Unregister__1___0_" data-uid="DREditor.Talkables.Talkable.Unregister``1(``0)">
+  Unregister&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Unregister&lt;T&gt;(T pooledObject) where T : SelectableObject</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pooledObject</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_UnsubscribeToStartConversation_" data-uid="DREditor.Talkables.Talkable.UnsubscribeToStartConversation*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_UnsubscribeToStartConversation_System_Action_DREditor_Talkables_Talkable_DREditor_Dialogues_Dialogue____" data-uid="DREditor.Talkables.Talkable.UnsubscribeToStartConversation(System.Action{DREditor.Talkables.Talkable,DREditor.Dialogues.Dialogue[]})">
+  UnsubscribeToStartConversation(Action&lt;Talkable, Dialogue[]&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UnsubscribeToStartConversation(Action&lt;Talkable, Dialogue[]&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="DREditor.Talkables.Talkable.html">Talkable</a>, <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs">Dialogue</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Talkables_Talkable_WaitForObjectPooler_" data-uid="DREditor.Talkables.Talkable.WaitForObjectPooler*"></a>
+
+  <h3 id="DREditor_Talkables_Talkable_WaitForObjectPooler__1___0_" data-uid="DREditor.Talkables.Talkable.WaitForObjectPooler``1(``0)">
+  WaitForObjectPooler&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator WaitForObjectPooler&lt;T&gt;(T pooledObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pooledObject</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="DREditor_Talkables_Talkable_StartConversation" data-uid="DREditor.Talkables.Talkable.StartConversation">
+  StartConversation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Talkable, Dialogue[]&gt; StartConversation</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="DREditor.Talkables.Talkable.html">Talkable</a>, <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Dialogue.cs">Dialogue</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Talkables/Talkable.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

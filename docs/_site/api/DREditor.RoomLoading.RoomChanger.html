@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RoomChanger | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RoomChanger | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.RoomLoading.RoomChanger">
+
+
+
+  <h1 id="DREditor_RoomLoading_RoomChanger" data-uid="DREditor.RoomLoading.RoomChanger" class="text-break">
+Class RoomChanger  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.RoomLoading.html">RoomLoading</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.RoomLoading.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ClassHeader(&quot;ServiceHolder for type: RoomChangerBase\n\n&quot;)]
+public class RoomChanger : RoomChangerBase, ISceneEventListener, IToTitleScreen</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Services/ServiceHolder.cs">ServiceHolder</a>&lt;<a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html">RoomChangerBase</a>&gt;</div>
+      <div><a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html">RoomChangerBase</a></div>
+      <div><span class="xref">RoomChanger</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.EventObjects.ISceneEventListener.html">ISceneEventListener</a></div>
+      <div><a class="xref" href="DREditor.Services.IToTitleScreen.html">IToTitleScreen</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_onStartedChangingRoom">RoomChangerBase.onStartedChangingRoom</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_startedNewGame">RoomChangerBase.startedNewGame</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_options">RoomChangerBase.options</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_destination">RoomChangerBase.destination</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_OnEnable">RoomChangerBase.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_OnDisable">RoomChangerBase.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_SetOptions_UnityEngine_ScriptableObject_">RoomChangerBase.SetOptions(ScriptableObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_GetOptions">RoomChangerBase.GetOptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_SetDestination_DREditor_Gates_Gate_">RoomChangerBase.SetDestination(Gate)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_GetDestination">RoomChangerBase.GetDestination()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_OnEventRaised">RoomChangerBase.OnEventRaised()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.RoomLoading.RoomChangerBase.html#DREditor_RoomLoading_RoomChangerBase_ToTitleScreen">RoomChangerBase.ToTitleScreen()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Services.ServiceHolder-1.html#DREditor_Services_ServiceHolder_1_registerService">ServiceHolder&lt;RoomChangerBase&gt;.registerService</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Services.ServiceHolder-1.html#DREditor_Services_ServiceHolder_1_dontDestroyOnLoad">ServiceHolder&lt;RoomChangerBase&gt;.dontDestroyOnLoad</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Services.ServiceHolder-1.html#DREditor_Services_ServiceHolder_1_Awake">ServiceHolder&lt;RoomChangerBase&gt;.Awake()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Services.ServiceHolder-1.html#DREditor_Services_ServiceHolder_1_InitializeService">ServiceHolder&lt;RoomChangerBase&gt;.InitializeService()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Services.ServiceHolder-1.html#DREditor_Services_ServiceHolder_1_AttemptDontDestroyOnLoad">ServiceHolder&lt;RoomChangerBase&gt;.AttemptDontDestroyOnLoad()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.Services.ServiceHolder-1.html#DREditor_Services_ServiceHolder_1_OnDestroy">ServiceHolder&lt;RoomChangerBase&gt;.OnDestroy()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_RoomLoading_RoomChanger__ctor_" data-uid="DREditor.RoomLoading.RoomChanger.#ctor*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger__ctor" data-uid="DREditor.RoomLoading.RoomChanger.#ctor">
+  RoomChanger()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RoomChanger()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_currentChapterIndex" data-uid="DREditor.RoomLoading.RoomChanger.currentChapterIndex">
+  currentChapterIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IntWithEvent currentChapterIndex</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.IntWithEvent.html">IntWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_currentObjectiveName" data-uid="DREditor.RoomLoading.RoomChanger.currentObjectiveName">
+  currentObjectiveName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StringWithEvent currentObjectiveName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.StringWithEvent.html">StringWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_currentState" data-uid="DREditor.RoomLoading.RoomChanger.currentState">
+  currentState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IntWithEvent currentState</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.IntWithEvent.html">IntWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_fadeToBlackOptionTime" data-uid="DREditor.RoomLoading.RoomChanger.fadeToBlackOptionTime">
+  fadeToBlackOptionTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float fadeToBlackOptionTime</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_hideUIWaitTime" data-uid="DREditor.RoomLoading.RoomChanger.hideUIWaitTime">
+  hideUIWaitTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected float hideUIWaitTime</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_inLoading" data-uid="DREditor.RoomLoading.RoomChanger.inLoading">
+  inLoading
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected BoolWithEvent inLoading</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_investigationStateIndex" data-uid="DREditor.RoomLoading.RoomChanger.investigationStateIndex">
+  investigationStateIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int investigationStateIndex</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_moveToNextNaturalObjective" data-uid="DREditor.RoomLoading.RoomChanger.moveToNextNaturalObjective">
+  moveToNextNaturalObjective
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SceneEvent moveToNextNaturalObjective</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.SceneEvent.html">SceneEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_objectiveKeepsInstanceData" data-uid="DREditor.RoomLoading.RoomChanger.objectiveKeepsInstanceData">
+  objectiveKeepsInstanceData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent objectiveKeepsInstanceData</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_playerSpawnPoint" data-uid="DREditor.RoomLoading.RoomChanger.playerSpawnPoint">
+  playerSpawnPoint
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransformWithEvent playerSpawnPoint</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.TransformWithEvent.html">TransformWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_requiredFlagsTriggered" data-uid="DREditor.RoomLoading.RoomChanger.requiredFlagsTriggered">
+  requiredFlagsTriggered
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent requiredFlagsTriggered</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_AssignDestinationPosition_" data-uid="DREditor.RoomLoading.RoomChanger.AssignDestinationPosition*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_AssignDestinationPosition" data-uid="DREditor.RoomLoading.RoomChanger.AssignDestinationPosition">
+  AssignDestinationPosition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void AssignDestinationPosition()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_ChangeObjectiveCheckInstanceData_" data-uid="DREditor.RoomLoading.RoomChanger.ChangeObjectiveCheckInstanceData*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_ChangeObjectiveCheckInstanceData" data-uid="DREditor.RoomLoading.RoomChanger.ChangeObjectiveCheckInstanceData">
+  ChangeObjectiveCheckInstanceData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ChangeObjectiveCheckInstanceData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_ChangeRoom_" data-uid="DREditor.RoomLoading.RoomChanger.ChangeRoom*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_ChangeRoom_DREditor_Gates_Gate_UnityEngine_ScriptableObject_" data-uid="DREditor.RoomLoading.RoomChanger.ChangeRoom(DREditor.Gates.Gate,UnityEngine.ScriptableObject)">
+  ChangeRoom(Gate, ScriptableObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ChangeRoom(Gate destination, ScriptableObject options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="DREditor.Gates.Gate.html">Gate</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <span class="xref">ScriptableObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_ChangeRoomRoutine_" data-uid="DREditor.RoomLoading.RoomChanger.ChangeRoomRoutine*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_ChangeRoomRoutine_DREditor_Gates_Gate_DREditor_RoomLoading_RoomLoadOptionsAsset_" data-uid="DREditor.RoomLoading.RoomChanger.ChangeRoomRoutine(DREditor.Gates.Gate,DREditor.RoomLoading.RoomLoadOptionsAsset)">
+  ChangeRoomRoutine(Gate, RoomLoadOptionsAsset)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator ChangeRoomRoutine(Gate destination, RoomLoadOptionsAsset options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destination</code> <a class="xref" href="DREditor.Gates.Gate.html">Gate</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="DREditor.RoomLoading.RoomLoadOptionsAsset.html">RoomLoadOptionsAsset</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_ChangeRoomScene_" data-uid="DREditor.RoomLoading.RoomChanger.ChangeRoomScene*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_ChangeRoomScene" data-uid="DREditor.RoomLoading.RoomChanger.ChangeRoomScene">
+  ChangeRoomScene()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator ChangeRoomScene()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_CheckChangeObjective_" data-uid="DREditor.RoomLoading.RoomChanger.CheckChangeObjective*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_CheckChangeObjective" data-uid="DREditor.RoomLoading.RoomChanger.CheckChangeObjective">
+  CheckChangeObjective()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CheckChangeObjective()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_EvaluateDestinationScene_" data-uid="DREditor.RoomLoading.RoomChanger.EvaluateDestinationScene*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_EvaluateDestinationScene" data-uid="DREditor.RoomLoading.RoomChanger.EvaluateDestinationScene">
+  EvaluateDestinationScene()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string EvaluateDestinationScene()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_EvaluateStartTransition_" data-uid="DREditor.RoomLoading.RoomChanger.EvaluateStartTransition*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_EvaluateStartTransition" data-uid="DREditor.RoomLoading.RoomChanger.EvaluateStartTransition">
+  EvaluateStartTransition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator EvaluateStartTransition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_SaveInstanceOfLeavingRoom_" data-uid="DREditor.RoomLoading.RoomChanger.SaveInstanceOfLeavingRoom*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_SaveInstanceOfLeavingRoom" data-uid="DREditor.RoomLoading.RoomChanger.SaveInstanceOfLeavingRoom">
+  SaveInstanceOfLeavingRoom()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SaveInstanceOfLeavingRoom()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_SetSpawnAtFromGate_" data-uid="DREditor.RoomLoading.RoomChanger.SetSpawnAtFromGate*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_SetSpawnAtFromGate" data-uid="DREditor.RoomLoading.RoomChanger.SetSpawnAtFromGate">
+  SetSpawnAtFromGate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetSpawnAtFromGate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_SetSpawnAtWaypoint_" data-uid="DREditor.RoomLoading.RoomChanger.SetSpawnAtWaypoint*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_SetSpawnAtWaypoint" data-uid="DREditor.RoomLoading.RoomChanger.SetSpawnAtWaypoint">
+  SetSpawnAtWaypoint()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetSpawnAtWaypoint()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomLoading_RoomChanger_SetSpawnPositionAndRotation_" data-uid="DREditor.RoomLoading.RoomChanger.SetSpawnPositionAndRotation*"></a>
+
+  <h3 id="DREditor_RoomLoading_RoomChanger_SetSpawnPositionAndRotation_UnityEngine_Vector3_UnityEngine_Vector3_" data-uid="DREditor.RoomLoading.RoomChanger.SetSpawnPositionAndRotation(UnityEngine.Vector3,UnityEngine.Vector3)">
+  SetSpawnPositionAndRotation(Vector3, Vector3)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetSpawnPositionAndRotation(Vector3 position, Vector3 rotation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>rotation</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomLoading/RoomChanger.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

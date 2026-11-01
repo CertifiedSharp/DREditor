@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OptionToggleUI | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OptionToggleUI | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.UI.Options.OptionToggleUI">
+
+
+
+  <h1 id="DREditor_UI_Options_OptionToggleUI" data-uid="DREditor.UI.Options.OptionToggleUI" class="text-break">
+Class OptionToggleUI  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.UI.html">UI</a>.<a class="xref" href="DREditor.UI.Options.html">Options</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ClassHeader(&quot;OptionWithEventListener\n\n&quot;)]
+public class OptionToggleUI : OptionWithEventListener&lt;bool, BoolEvent&gt;, IOptionEventListener, ISceneEventListener</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.EventObjectServices/ValueWithEventListener.cs">ValueWithEventListener</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/OptionWithEvent.cs">OptionWithEvent</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs">BoolEvent</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs">BoolEvent</a>&gt;</div>
+      <div><a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.EventObjectServices/OptionWithEventListener.cs">OptionWithEventListener</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/EventObjects/ValueWithEvent.cs">BoolEvent</a>&gt;</div>
+      <div><span class="xref">OptionToggleUI</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.EventObjects.IOptionEventListener.html">IOptionEventListener</a></div>
+      <div><a class="xref" href="DREditor.EventObjects.ISceneEventListener.html">ISceneEventListener</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.OptionWithEventListener-2.html#DREditor_EventObjectServices_OptionWithEventListener_2_newGameSelected">OptionWithEventListener&lt;bool, BoolEvent&gt;.newGameSelected</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.OptionWithEventListener-2.html#DREditor_EventObjectServices_OptionWithEventListener_2_displayNameText">OptionWithEventListener&lt;bool, BoolEvent&gt;.displayNameText</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.OptionWithEventListener-2.html#DREditor_EventObjectServices_OptionWithEventListener_2_Initialize_DREditor_EventObjects_IOptionEvent_">OptionWithEventListener&lt;bool, BoolEvent&gt;.Initialize(IOptionEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.OptionWithEventListener-2.html#DREditor_EventObjectServices_OptionWithEventListener_2_OnEnable">OptionWithEventListener&lt;bool, BoolEvent&gt;.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.OptionWithEventListener-2.html#DREditor_EventObjectServices_OptionWithEventListener_2_OnDisable">OptionWithEventListener&lt;bool, BoolEvent&gt;.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.OptionWithEventListener-2.html#DREditor_EventObjectServices_OptionWithEventListener_2_OnEventRaised">OptionWithEventListener&lt;bool, BoolEvent&gt;.OnEventRaised()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.ValueWithEventListener-3.html#DREditor_EventObjectServices_ValueWithEventListener_3_valueWithEvent">ValueWithEventListener&lt;OptionWithEvent&lt;bool, BoolEvent&gt;, bool, BoolEvent&gt;.valueWithEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.ValueWithEventListener-3.html#DREditor_EventObjectServices_ValueWithEventListener_3_OnValueChangedEvent">ValueWithEventListener&lt;OptionWithEvent&lt;bool, BoolEvent&gt;, bool, BoolEvent&gt;.OnValueChangedEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.ValueWithEventListener-3.html#DREditor_EventObjectServices_ValueWithEventListener_3_OnEnable">ValueWithEventListener&lt;OptionWithEvent&lt;bool, BoolEvent&gt;, bool, BoolEvent&gt;.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.ValueWithEventListener-3.html#DREditor_EventObjectServices_ValueWithEventListener_3_OnDisable">ValueWithEventListener&lt;OptionWithEvent&lt;bool, BoolEvent&gt;, bool, BoolEvent&gt;.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.ValueWithEventListener-3.html#DREditor_EventObjectServices_ValueWithEventListener_3_OnValueChanged__1_">ValueWithEventListener&lt;OptionWithEvent&lt;bool, BoolEvent&gt;, bool, BoolEvent&gt;.OnValueChanged(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.EventObjectServices.ValueWithEventListener-3.html#DREditor_EventObjectServices_ValueWithEventListener_3_UpdatedValue">ValueWithEventListener&lt;OptionWithEvent&lt;bool, BoolEvent&gt;, bool, BoolEvent&gt;.UpdatedValue</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI__ctor_" data-uid="DREditor.UI.Options.OptionToggleUI.#ctor*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI__ctor" data-uid="DREditor.UI.Options.OptionToggleUI.#ctor">
+  OptionToggleUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OptionToggleUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_isOn" data-uid="DREditor.UI.Options.OptionToggleUI.isOn">
+  isOn
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool isOn</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_offOption" data-uid="DREditor.UI.Options.OptionToggleUI.offOption">
+  offOption
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SelectableUIOption offOption</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.UI.SelectableUIOption.html">SelectableUIOption</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_offSelectable" data-uid="DREditor.UI.Options.OptionToggleUI.offSelectable">
+  offSelectable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Selectable offSelectable</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Selectable</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_onSelectable" data-uid="DREditor.UI.Options.OptionToggleUI.onSelectable">
+  onSelectable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Selectable onSelectable</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Selectable</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_optionGroup" data-uid="DREditor.UI.Options.OptionToggleUI.optionGroup">
+  optionGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected OptionUIGroup optionGroup</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.UI.Options.OptionUIGroup.html">OptionUIGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_toggleOption" data-uid="DREditor.UI.Options.OptionToggleUI.toggleOption">
+  toggleOption
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SelectableUIOption toggleOption</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.UI.SelectableUIOption.html">SelectableUIOption</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_Awake_" data-uid="DREditor.UI.Options.OptionToggleUI.Awake*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_Awake" data-uid="DREditor.UI.Options.OptionToggleUI.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_BeforeSetUp_" data-uid="DREditor.UI.Options.OptionToggleUI.BeforeSetUp*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_BeforeSetUp" data-uid="DREditor.UI.Options.OptionToggleUI.BeforeSetUp">
+  BeforeSetUp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void BeforeSetUp()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_FocusOff_" data-uid="DREditor.UI.Options.OptionToggleUI.FocusOff*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_FocusOff" data-uid="DREditor.UI.Options.OptionToggleUI.FocusOff">
+  FocusOff()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void FocusOff()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_InitializeOffPiece_" data-uid="DREditor.UI.Options.OptionToggleUI.InitializeOffPiece*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_InitializeOffPiece" data-uid="DREditor.UI.Options.OptionToggleUI.InitializeOffPiece">
+  InitializeOffPiece()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeOffPiece()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_OnDisable_" data-uid="DREditor.UI.Options.OptionToggleUI.OnDisable*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_OnDisable" data-uid="DREditor.UI.Options.OptionToggleUI.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_OnEnable_" data-uid="DREditor.UI.Options.OptionToggleUI.OnEnable*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_OnEnable" data-uid="DREditor.UI.Options.OptionToggleUI.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_SetToggleTo_" data-uid="DREditor.UI.Options.OptionToggleUI.SetToggleTo*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_SetToggleTo_System_Boolean_" data-uid="DREditor.UI.Options.OptionToggleUI.SetToggleTo(System.Boolean)">
+  SetToggleTo(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetToggleTo(bool to)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>to</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_ToggleFalse_" data-uid="DREditor.UI.Options.OptionToggleUI.ToggleFalse*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_ToggleFalse" data-uid="DREditor.UI.Options.OptionToggleUI.ToggleFalse">
+  ToggleFalse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ToggleFalse()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_ToggleTrue_" data-uid="DREditor.UI.Options.OptionToggleUI.ToggleTrue*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_ToggleTrue" data-uid="DREditor.UI.Options.OptionToggleUI.ToggleTrue">
+  ToggleTrue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ToggleTrue()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_UnSetUp_" data-uid="DREditor.UI.Options.OptionToggleUI.UnSetUp*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_UnSetUp" data-uid="DREditor.UI.Options.OptionToggleUI.UnSetUp">
+  UnSetUp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UnSetUp()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_UpdateOffDirection_" data-uid="DREditor.UI.Options.OptionToggleUI.UpdateOffDirection*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_UpdateOffDirection_UnityEngine_UI_Selectable_UnityEngine_UI_Selectable_DREditor_UI_Direction_" data-uid="DREditor.UI.Options.OptionToggleUI.UpdateOffDirection(UnityEngine.UI.Selectable,UnityEngine.UI.Selectable,DREditor.UI.Direction)">
+  UpdateOffDirection(Selectable, Selectable, Direction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateOffDirection(Selectable target, Selectable current, Direction direction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Selectable</span></dt>
+    <dd></dd>
+    <dt><code>current</code> <span class="xref">Selectable</span></dt>
+    <dd></dd>
+    <dt><code>direction</code> <a class="xref" href="DREditor.UI.Direction.html">Direction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_UpdateToggleState_" data-uid="DREditor.UI.Options.OptionToggleUI.UpdateToggleState*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_UpdateToggleState_UnityEngine_UI_Selectable_UnityEngine_UI_Selectable_" data-uid="DREditor.UI.Options.OptionToggleUI.UpdateToggleState(UnityEngine.UI.Selectable,UnityEngine.UI.Selectable)">
+  UpdateToggleState(Selectable, Selectable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateToggleState(Selectable selectable, Selectable opposite)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selectable</code> <span class="xref">Selectable</span></dt>
+    <dd></dd>
+    <dt><code>opposite</code> <span class="xref">Selectable</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_UpdateUIState_" data-uid="DREditor.UI.Options.OptionToggleUI.UpdateUIState*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_UpdateUIState_System_Boolean_" data-uid="DREditor.UI.Options.OptionToggleUI.UpdateUIState(System.Boolean)">
+  UpdateUIState(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateUIState(bool param)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>param</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_UI_Options_OptionToggleUI_ValidObjectNotSelected_" data-uid="DREditor.UI.Options.OptionToggleUI.ValidObjectNotSelected*"></a>
+
+  <h3 id="DREditor_UI_Options_OptionToggleUI_ValidObjectNotSelected_UnityEngine_UI_Selectable_" data-uid="DREditor.UI.Options.OptionToggleUI.ValidObjectNotSelected(UnityEngine.UI.Selectable)">
+  ValidObjectNotSelected(Selectable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool ValidObjectNotSelected(Selectable selectable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selectable</code> <span class="xref">Selectable</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.UI/Options/OptionToggleUI.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

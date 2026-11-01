@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TextDisplayer | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TextDisplayer | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.TextDisplaying.TextDisplayer">
+
+
+
+  <h1 id="DREditor_TextDisplaying_TextDisplayer" data-uid="DREditor.TextDisplaying.TextDisplayer" class="text-break">
+Class TextDisplayer  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.TextDisplaying.html">TextDisplaying</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.TextDisplaying.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ClassHeader(&quot;TextDisplayerBase, IToTitleScreen, ILineRoutine\n\n&quot;)]
+public class TextDisplayer : TextDisplayerBase, IToTitleScreen, ILineRoutine</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html">TextDisplayerBase</a></div>
+      <div><span class="xref">TextDisplayer</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Services.IToTitleScreen.html">IToTitleScreen</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.LineReading.ILineRoutine.html">ILineRoutine</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_box">TextDisplayerBase.box</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_isWaitingForClick">TextDisplayerBase.isWaitingForClick</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_textDisplaySpeed">TextDisplayerBase.textDisplaySpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_SetTextDisplaySpeed_System_Single_">TextDisplayerBase.SetTextDisplaySpeed(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_SetWaitingForClick_System_Boolean_">TextDisplayerBase.SetWaitingForClick(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_IsWaitingForClick">TextDisplayerBase.IsWaitingForClick()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_ResolveDisplayingText_System_String_">TextDisplayerBase.ResolveDisplayingText(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_PasteFinalDisplayText_System_String_">TextDisplayerBase.PasteFinalDisplayText(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_GetText">TextDisplayerBase.GetText()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_ToTitleScreen">TextDisplayerBase.ToTitleScreen()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.TextDisplaying.TextDisplayerBase.html#DREditor_TextDisplaying_TextDisplayerBase_ClearText">TextDisplayerBase.ClearText()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer__ctor_" data-uid="DREditor.TextDisplaying.TextDisplayer.#ctor*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer__ctor" data-uid="DREditor.TextDisplaying.TextDisplayer.#ctor">
+  TextDisplayer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextDisplayer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_bufferTextMultiplier" data-uid="DREditor.TextDisplaying.TextDisplayer.bufferTextMultiplier">
+  bufferTextMultiplier
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float bufferTextMultiplier</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_inFastForwardMode" data-uid="DREditor.TextDisplaying.TextDisplayer.inFastForwardMode">
+  inFastForwardMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent inFastForwardMode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_inTrialMode" data-uid="DREditor.TextDisplaying.TextDisplayer.inTrialMode">
+  inTrialMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent inTrialMode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_skipText" data-uid="DREditor.TextDisplaying.TextDisplayer.skipText">
+  skipText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool skipText</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_skipTextStarted" data-uid="DREditor.TextDisplaying.TextDisplayer.skipTextStarted">
+  skipTextStarted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool skipTextStarted</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_submit" data-uid="DREditor.TextDisplaying.TextDisplayer.submit">
+  submit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InputActionReference submit</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_textModifiers" data-uid="DREditor.TextDisplaying.TextDisplayer.textModifiers">
+  textModifiers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected List&lt;TextDisplayModifier&gt; textModifiers</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.TextDisplaying.TextDisplayModifier.html">TextDisplayModifier</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_ApplyTextModifications_" data-uid="DREditor.TextDisplaying.TextDisplayer.ApplyTextModifications*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_ApplyTextModifications_DREditor_Dialogues_Line_" data-uid="DREditor.TextDisplaying.TextDisplayer.ApplyTextModifications(DREditor.Dialogues.Line)">
+  ApplyTextModifications(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string ApplyTextModifications(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_DisplayText_" data-uid="DREditor.TextDisplaying.TextDisplayer.DisplayText*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_DisplayText_TMPro_TMP_Text_DREditor_Dialogues_Line_" data-uid="DREditor.TextDisplaying.TextDisplayer.DisplayText(TMPro.TMP_Text,DREditor.Dialogues.Line)">
+  DisplayText(TMP_Text, Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void DisplayText(TMP_Text textBox, Line line)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>textBox</code> <span class="xref">TMP_Text</span></dt>
+    <dd></dd>
+    <dt><code>line</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_DisplayTextAnimation_" data-uid="DREditor.TextDisplaying.TextDisplayer.DisplayTextAnimation*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_DisplayTextAnimation_System_String_" data-uid="DREditor.TextDisplaying.TextDisplayer.DisplayTextAnimation(System.String)">
+  DisplayTextAnimation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator DisplayTextAnimation(string preparedText)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>preparedText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_DisplayTextRoutine_" data-uid="DREditor.TextDisplaying.TextDisplayer.DisplayTextRoutine*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_DisplayTextRoutine_TMPro_TMP_Text_DREditor_Dialogues_Line_" data-uid="DREditor.TextDisplaying.TextDisplayer.DisplayTextRoutine(TMPro.TMP_Text,DREditor.Dialogues.Line)">
+  DisplayTextRoutine(TMP_Text, Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator DisplayTextRoutine(TMP_Text textBox, Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>textBox</code> <span class="xref">TMP_Text</span></dt>
+    <dd></dd>
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_InitializeTextBox_" data-uid="DREditor.TextDisplaying.TextDisplayer.InitializeTextBox*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_InitializeTextBox_TMPro_TMP_Text_" data-uid="DREditor.TextDisplaying.TextDisplayer.InitializeTextBox(TMPro.TMP_Text)">
+  InitializeTextBox(TMP_Text)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeTextBox(TMP_Text textBox)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>textBox</code> <span class="xref">TMP_Text</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_OnLineSkipped_" data-uid="DREditor.TextDisplaying.TextDisplayer.OnLineSkipped*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_OnLineSkipped" data-uid="DREditor.TextDisplaying.TextDisplayer.OnLineSkipped">
+  OnLineSkipped()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnLineSkipped()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_PrepareTextBox_" data-uid="DREditor.TextDisplaying.TextDisplayer.PrepareTextBox*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_PrepareTextBox_System_String_" data-uid="DREditor.TextDisplaying.TextDisplayer.PrepareTextBox(System.String)">
+  PrepareTextBox(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PrepareTextBox(string preparedText)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>preparedText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_ShouldProcess_" data-uid="DREditor.TextDisplaying.TextDisplayer.ShouldProcess*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_ShouldProcess_DREditor_Dialogues_Line_" data-uid="DREditor.TextDisplaying.TextDisplayer.ShouldProcess(DREditor.Dialogues.Line)">
+  ShouldProcess(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool ShouldProcess(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_SkipDisplayingLine_" data-uid="DREditor.TextDisplaying.TextDisplayer.SkipDisplayingLine*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_SkipDisplayingLine_DREditor_Dialogues_Line_" data-uid="DREditor.TextDisplaying.TextDisplayer.SkipDisplayingLine(DREditor.Dialogues.Line)">
+  SkipDisplayingLine(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool SkipDisplayingLine(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_SkipText_" data-uid="DREditor.TextDisplaying.TextDisplayer.SkipText*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_SkipText" data-uid="DREditor.TextDisplaying.TextDisplayer.SkipText">
+  SkipText()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator SkipText()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TextDisplaying_TextDisplayer_TextBoxIsEmpty_" data-uid="DREditor.TextDisplaying.TextDisplayer.TextBoxIsEmpty*"></a>
+
+  <h3 id="DREditor_TextDisplaying_TextDisplayer_TextBoxIsEmpty_DREditor_Dialogues_Line_" data-uid="DREditor.TextDisplaying.TextDisplayer.TextBoxIsEmpty(DREditor.Dialogues.Line)">
+  TextBoxIsEmpty(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool TextBoxIsEmpty(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TextDisplaying/TextDisplayer.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

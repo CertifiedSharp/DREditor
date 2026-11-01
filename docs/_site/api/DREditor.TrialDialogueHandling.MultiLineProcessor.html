@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MultiLineProcessor | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MultiLineProcessor | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor">
+
+
+
+  <h1 id="DREditor_TrialDialogueHandling_MultiLineProcessor" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor" class="text-break">
+Class MultiLineProcessor  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.TrialDialogueHandling.html">TrialDialogueHandling</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.TrialDialogueHandling.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ClassHeader(&quot;DialogueComponent, ILineProcessor\n\n&quot;)]
+public class MultiLineProcessor : DialogueComponent, ILineProcessor</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.DialogueComponent.html">DialogueComponent</a></div>
+      <div><span class="xref">MultiLineProcessor</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Dialogues.LineReading.ILineProcessor.html">ILineProcessor</a></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor__ctor_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.#ctor*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor__ctor" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.#ctor">
+  MultiLineProcessor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiLineProcessor()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_currentLine" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.currentLine">
+  currentLine
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Line currentLine</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_lineProcessorComponents" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.lineProcessorComponents">
+  lineProcessorComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DialogueComponent&gt; lineProcessorComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_lineProcessors" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.lineProcessors">
+  lineProcessors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;ILineProcessor&gt; lineProcessors</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs">ILineProcessor</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_multiLine" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.multiLine">
+  multiLine
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IMultiPanelHolder multiLine</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.IMultiPanelHolder.html">IMultiPanelHolder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_multiLineProcessorComponents" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.multiLineProcessorComponents">
+  multiLineProcessorComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DialogueComponent&gt; multiLineProcessorComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_multiLineProcessors" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.multiLineProcessors">
+  multiLineProcessors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;ILineProcessor&gt; multiLineProcessors</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs">ILineProcessor</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_multiPanels" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.multiPanels">
+  multiPanels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;MultiPanel&gt; multiPanels</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="DREditor.Dialogues.MultiPanel.html">MultiPanel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_Awake_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.Awake*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_Awake" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.Awake">
+  Awake()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_InitializeMultiPanels_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.InitializeMultiPanels*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_InitializeMultiPanels" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.InitializeMultiPanels">
+  InitializeMultiPanels()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeMultiPanels()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_LineIsMultiPanelHolder_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.LineIsMultiPanelHolder*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_LineIsMultiPanelHolder_DREditor_Dialogues_IMultiPanelHolder__" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.LineIsMultiPanelHolder(DREditor.Dialogues.IMultiPanelHolder@)">
+  LineIsMultiPanelHolder(out IMultiPanelHolder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool LineIsMultiPanelHolder(out IMultiPanelHolder multiLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>multiLine</code> <a class="xref" href="DREditor.Dialogues.IMultiPanelHolder.html">IMultiPanelHolder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_LineProcess_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.LineProcess*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_LineProcess_DREditor_Dialogues_Line_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.LineProcess(DREditor.Dialogues.Line)">
+  LineProcess(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void LineProcess(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_MultiPanelsHasFirstIndex_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.MultiPanelsHasFirstIndex*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_MultiPanelsHasFirstIndex" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.MultiPanelsHasFirstIndex">
+  MultiPanelsHasFirstIndex()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool MultiPanelsHasFirstIndex()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_OnFirstSpeaker_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.OnFirstSpeaker*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_OnFirstSpeaker" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.OnFirstSpeaker">
+  OnFirstSpeaker()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool OnFirstSpeaker()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessLine_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessLine*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessLine_System_Collections_Generic_IEnumerable_DREditor_Dialogues_LineReading_ILineProcessor__DREditor_Dialogues_Line_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessLine(System.Collections.Generic.IEnumerable{DREditor.Dialogues.LineReading.ILineProcessor},DREditor.Dialogues.Line)">
+  ProcessLine(IEnumerable&lt;ILineProcessor&gt;, Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ProcessLine(IEnumerable&lt;ILineProcessor&gt; processors, Line line)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>processors</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/LineReading/ILineProcessor.cs">ILineProcessor</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>line</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessLineByCondition_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessLineByCondition*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessLineByCondition_System_Boolean_DREditor_Dialogues_Line_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessLineByCondition(System.Boolean,DREditor.Dialogues.Line)">
+  ProcessLineByCondition(bool, Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ProcessLineByCondition(bool condition, Line currentLine = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessMultiLine_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessMultiLine*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessMultiLine" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessMultiLine">
+  ProcessMultiLine()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ProcessMultiLine()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessMultiPanels_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessMultiPanels*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessMultiPanels" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessMultiPanels">
+  ProcessMultiPanels()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ProcessMultiPanels()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessNormalLine_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessNormalLine*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_ProcessNormalLine" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.ProcessNormalLine">
+  ProcessNormalLine()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ProcessNormalLine()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_StalePanelsAvailable_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.StalePanelsAvailable*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_StalePanelsAvailable" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.StalePanelsAvailable">
+  StalePanelsAvailable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool StalePanelsAvailable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_TrialDialogueHandling_MultiLineProcessor_TryGetPanelMatchingSpeaker_" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.TryGetPanelMatchingSpeaker*"></a>
+
+  <h3 id="DREditor_TrialDialogueHandling_MultiLineProcessor_TryGetPanelMatchingSpeaker_DREditor_Dialogues_MultiPanel__" data-uid="DREditor.TrialDialogueHandling.MultiLineProcessor.TryGetPanelMatchingSpeaker(DREditor.Dialogues.MultiPanel@)">
+  TryGetPanelMatchingSpeaker(out MultiPanel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool TryGetPanelMatchingSpeaker(out MultiPanel foundPanel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>foundPanel</code> <a class="xref" href="DREditor.Dialogues.MultiPanel.html">MultiPanel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.TrialDialogueHandling/MultiLineProcessor.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

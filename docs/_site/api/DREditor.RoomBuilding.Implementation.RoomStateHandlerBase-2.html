@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RoomStateHandlerBase&lt;T, T2&gt; | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RoomStateHandlerBase&lt;T, T2&gt; | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2">
+
+
+
+  <h1 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2" class="text-break">
+Class RoomStateHandlerBase&lt;T, T2&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.RoomBuilding.html">RoomBuilding</a>.<a class="xref" href="DREditor.RoomBuilding.Implementation.html">Implementation</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.RoomBuilding.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class RoomStateHandlerBase&lt;T, T2&gt; : MonoBehaviour, IRoomStateSaver, IRoomStateLoader where T : StateDataAsset&lt;T2&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+    <dt><code>T2</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RoomStateHandlerBase&lt;T, T2&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.RoomStateBuilding.IRoomStateSaver.html">IRoomStateSaver</a></div>
+      <div><a class="xref" href="DREditor.RoomStateBuilding.IRoomStateLoader.html">IRoomStateLoader</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.Actors.ActorStateLoader.html">ActorStateLoader</a></div>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.DoorLoader.html">DoorLoader</a></div>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.ItemActorLoader.html">ItemActorLoader</a></div>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.MoveLoader.html">MoveLoader</a></div>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.SaveableManager.html">SaveableManager</a></div>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.SpawnableLoader.html">SpawnableLoader</a></div>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.SubAreaLoader.html">SubAreaLoader</a></div>
+      <div><a class="xref" href="DREditor.RoomBuilding.Implementation.TriggerLoader.html">TriggerLoader</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2__ctor_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.#ctor*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2__ctor" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.#ctor">
+  RoomStateHandlerBase()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RoomStateHandlerBase()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_loadedBaseDatas" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.loadedBaseDatas">
+  loadedBaseDatas
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected List&lt;T2&gt; loadedBaseDatas</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_loadedInstances" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.loadedInstances">
+  loadedInstances
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;T2&gt; loadedInstances</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetAssetFromGUID*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetAssetFromGUID__1_System_String_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetAssetFromGUID``1(System.String)">
+  GetAssetFromGUID&lt;T3&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T3 GetAssetFromGUID&lt;T3&gt;(string guid) where T3 : Object</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>guid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T3</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T3</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAssetName*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAssetName" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAssetName">
+  GetDataAssetName()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string GetDataAssetName()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAsset*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetDataAsset__1_System_Collections_Generic_List_UnityEngine_ScriptableObject__" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetDataAsset``1(System.Collections.Generic.List{UnityEngine.ScriptableObject})">
+  GetDataAsset&lt;T4&gt;(List&lt;ScriptableObject&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T4 GetDataAsset&lt;T4&gt;(List&lt;ScriptableObject&gt; scriptableObjects)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scriptableObjects</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">ScriptableObject</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T4</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T4</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetTypeName*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_GetTypeName" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.GetTypeName">
+  GetTypeName()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string GetTypeName()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleBaseDatas*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleBaseDatas_System_Collections_Generic_List__1__" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleBaseDatas(System.Collections.Generic.List{`1})">
+  InitializeVisibleBaseDatas(List&lt;T2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeVisibleBaseDatas(List&lt;T2&gt; baseDatas)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleInstanceDatas*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_InitializeVisibleInstanceDatas_System_Collections_Generic_List__1__" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.InitializeVisibleInstanceDatas(System.Collections.Generic.List{`1})">
+  InitializeVisibleInstanceDatas(List&lt;T2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeVisibleInstanceDatas(List&lt;T2&gt; instanceDatas = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instanceDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetData*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetData_System_Collections_Generic_List__1__System_Collections_Generic_List__1__" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetData(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})">
+  LoadAssetData(List&lt;T2&gt;, List&lt;T2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LoadAssetData(List&lt;T2&gt; baseDatas, List&lt;T2&gt; instanceDatas = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+    <dt><code>instanceDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetProcess*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadAssetProcess_System_Collections_Generic_List__1__System_Collections_Generic_List__1__" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadAssetProcess(System.Collections.Generic.List{`1},System.Collections.Generic.List{`1})">
+  LoadAssetProcess(List&lt;T2&gt;, List&lt;T2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void LoadAssetProcess(List&lt;T2&gt; baseDatas, List&lt;T2&gt; instanceDatas = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+    <dt><code>instanceDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadData*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadData_System_Collections_Generic_List_UnityEngine_ScriptableObject__" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadData(System.Collections.Generic.List{UnityEngine.ScriptableObject})">
+  LoadData(List&lt;ScriptableObject&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void LoadData(List&lt;ScriptableObject&gt; roomSO)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roomSO</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">ScriptableObject</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadInstance*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadInstance_System_Collections_Generic_List_UnityEngine_ScriptableObject__System_Object_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadInstance(System.Collections.Generic.List{UnityEngine.ScriptableObject},System.Object)">
+  LoadInstance(List&lt;ScriptableObject&gt;, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void LoadInstance(List&lt;ScriptableObject&gt; roomSO, object instanceData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>roomSO</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">ScriptableObject</span>&gt;</dt>
+    <dd></dd>
+    <dt><code>instanceData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadedInstanceValid*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_LoadedInstanceValid_System_String__1__" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.LoadedInstanceValid(System.String,`1@)">
+  LoadedInstanceValid(string, out T2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool LoadedInstanceValid(string dataInstance, out T2 result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dataInstance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>result</code> <span class="xref">T2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Save*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Save" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Save">
+  Save()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract List&lt;T2&gt; Save()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveDataAsset*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveDataAsset_System_String_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveDataAsset(System.String)">
+  SaveDataAsset(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ScriptableObject SaveDataAsset(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ScriptableObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveInstance*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_SaveInstance" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.SaveInstance">
+  SaveInstance()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual object SaveInstance()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Unload*"></a>
+
+  <h3 id="DREditor_RoomBuilding_Implementation_RoomStateHandlerBase_2_Unload_System_Boolean_" data-uid="DREditor.RoomBuilding.Implementation.RoomStateHandlerBase`2.Unload(System.Boolean)">
+  Unload(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Unload(bool inEditor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inEditor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.RoomBuilding/Implementation/RoomStateHandlerBase.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
