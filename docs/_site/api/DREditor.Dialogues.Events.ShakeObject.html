@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ShakeObject | DREditor API ">
       
-      <meta name="description" content="Event to shake a Camera or CG in CGPlayer and DiaCamEvents">
+      
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="DREditor_Dialogues_Events_ShakeObject" data-uid="DREditor.Dialogues.Events.ShakeObject" class="text-break">
-Class ShakeObject  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+Class ShakeObject  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,13 +97,11 @@ Class ShakeObject  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>DREditor.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Event to shake a Camera or CG in
-CGPlayer and DiaCamEvents</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ShakeObject : IDialogueEvent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ShakeObject : IDisplayableDialogueEvent, IDialogueEvent</code></pre>
   </div>
 
 
@@ -120,6 +118,7 @@ CGPlayer and DiaCamEvents</p>
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="DREditor.Dialogues.Events.IDisplayableDialogueEvent.html">IDisplayableDialogueEvent</a></div>
       <div><a class="xref" href="DREditor.Dialogues.Events.IDialogueEvent.html">IDialogueEvent</a></div>
     </dd>
   </dl>
@@ -151,6 +150,19 @@ CGPlayer and DiaCamEvents</p>
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
 
 
 
@@ -164,7 +176,7 @@ CGPlayer and DiaCamEvents</p>
 
   <h3 id="DREditor_Dialogues_Events_ShakeObject__ctor" data-uid="DREditor.Dialogues.Events.ShakeObject.#ctor">
   ShakeObject()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -186,21 +198,62 @@ CGPlayer and DiaCamEvents</p>
 
 
 
-  <h2 class="section" id="fields">Fields
-</h2>
+  <a id="DREditor_Dialogues_Events_ShakeObject__ctor_" data-uid="DREditor.Dialogues.Events.ShakeObject.#ctor*"></a>
 
-
-
-  <h3 id="DREditor_Dialogues_Events_ShakeObject__ShowHelp" data-uid="DREditor.Dialogues.Events.ShakeObject._ShowHelp">
-  _ShowHelp
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DREditor_Dialogues_Events_ShakeObject__ctor_DREditor_Dialogues_Events_SOEnum_System_Single_System_Single_System_Int32_System_Single_System_Boolean_" data-uid="DREditor.Dialogues.Events.ShakeObject.#ctor(DREditor.Dialogues.Events.SOEnum,System.Single,System.Single,System.Int32,System.Single,System.Boolean)">
+  ShakeObject(SOEnum, float, float, int, float, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool _ShowHelp</code></pre>
+    <pre><code class="lang-csharp hljs">public ShakeObject(SOEnum type, float duration, float strength, int vibrato, float randomness, bool fadeOut)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="DREditor.Dialogues.Events.SOEnum.html">SOEnum</a></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>strength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>vibrato</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>randomness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>fadeOut</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_Dialogues_Events_ShakeObject__showHelp" data-uid="DREditor.Dialogues.Events.ShakeObject._showHelp">
+  _showHelp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool _showHelp</code></pre>
   </div>
 
 
@@ -221,16 +274,16 @@ CGPlayer and DiaCamEvents</p>
 
 
 
-  <h3 id="DREditor_Dialogues_Events_ShakeObject_data" data-uid="DREditor.Dialogues.Events.ShakeObject.data">
-  data
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DREditor_Dialogues_Events_ShakeObject_duration" data-uid="DREditor.Dialogues.Events.ShakeObject.duration">
+  duration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SOTuple data</code></pre>
+    <pre><code class="lang-csharp hljs">public float duration</code></pre>
   </div>
 
 
@@ -238,7 +291,217 @@ CGPlayer and DiaCamEvents</p>
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="DREditor.Dialogues.Events.SOTuple.html">SOTuple</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_ShakeObject_fadeOut" data-uid="DREditor.Dialogues.Events.ShakeObject.fadeOut">
+  fadeOut
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool fadeOut</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_ShakeObject_protag" data-uid="DREditor.Dialogues.Events.ShakeObject.protag">
+  protag
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool protag</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_ShakeObject_randomness" data-uid="DREditor.Dialogues.Events.ShakeObject.randomness">
+  randomness
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float randomness</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_ShakeObject_snapping" data-uid="DREditor.Dialogues.Events.ShakeObject.snapping">
+  snapping
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool snapping</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_ShakeObject_strength" data-uid="DREditor.Dialogues.Events.ShakeObject.strength">
+  strength
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float strength</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_ShakeObject_type" data-uid="DREditor.Dialogues.Events.ShakeObject.type">
+  type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SOEnum type</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.Events.SOEnum.html">SOEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_ShakeObject_vibrato" data-uid="DREditor.Dialogues.Events.ShakeObject.vibrato">
+  vibrato
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int vibrato</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -258,7 +521,7 @@ CGPlayer and DiaCamEvents</p>
 
   <h3 id="DREditor_Dialogues_Events_ShakeObject_EditorUI_System_Object_" data-uid="DREditor.Dialogues.Events.ShakeObject.EditorUI(System.Object)">
   EditorUI(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -289,7 +552,7 @@ CGPlayer and DiaCamEvents</p>
 
   <h3 id="DREditor_Dialogues_Events_ShakeObject_FloatField_System_String_System_Single_System_Int32_System_Int32_" data-uid="DREditor.Dialogues.Events.ShakeObject.FloatField(System.String,System.Single,System.Int32,System.Int32)">
   FloatField(string, float, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -331,7 +594,7 @@ CGPlayer and DiaCamEvents</p>
 
   <h3 id="DREditor_Dialogues_Events_ShakeObject_IntField_System_String_System_Int32_System_Int32_System_Int32_" data-uid="DREditor.Dialogues.Events.ShakeObject.IntField(System.String,System.Int32,System.Int32,System.Int32)">
   IntField(string, int, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -373,7 +636,7 @@ CGPlayer and DiaCamEvents</p>
 
   <h3 id="DREditor_Dialogues_Events_ShakeObject_Option_System_String_System_Boolean_System_Single_" data-uid="DREditor.Dialogues.Events.ShakeObject.Option(System.String,System.Boolean,System.Single)">
   Option(string, bool, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -413,7 +676,7 @@ CGPlayer and DiaCamEvents</p>
 
   <h3 id="DREditor_Dialogues_Events_ShakeObject_ShowHelpBox" data-uid="DREditor.Dialogues.Events.ShakeObject.ShowHelpBox">
   ShowHelpBox()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -439,7 +702,7 @@ CGPlayer and DiaCamEvents</p>
 
   <h3 id="DREditor_Dialogues_Events_ShakeObject_ToggleHelpBox" data-uid="DREditor.Dialogues.Events.ShakeObject.ToggleHelpBox">
   ToggleHelpBox()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -465,7 +728,7 @@ CGPlayer and DiaCamEvents</p>
 
   <h3 id="DREditor_Dialogues_Events_ShakeObject_TriggerDialogueEvent" data-uid="DREditor.Dialogues.Events.ShakeObject.TriggerDialogueEvent">
   TriggerDialogueEvent()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -491,7 +754,7 @@ CGPlayer and DiaCamEvents</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/ShakeObject.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/ShakeObject.cs" class="edit-link">Edit this page</a>
         </div>
 
 

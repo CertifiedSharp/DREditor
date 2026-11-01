@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BacklogUI | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BacklogUI | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.Backlogging.BacklogUI">
+
+
+
+  <h1 id="DREditor_Backlogging_BacklogUI" data-uid="DREditor.Backlogging.BacklogUI" class="text-break">
+Class BacklogUI  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.Backlogging.html">Backlogging</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.Backlogging.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ClassHeader(&quot;ScrollGridUI\n\n&quot;)]
+public class BacklogUI : ScrollGridUI, IUIVisibility, IToTitleScreen</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.UI.MenuGroupBase.html">MenuGroupBase</a></div>
+      <div><a class="xref" href="DREditor.UI.ScrollGridUI.html">ScrollGridUI</a></div>
+      <div><span class="xref">BacklogUI</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.UIHandling.IUIVisibility.html">IUIVisibility</a></div>
+      <div><a class="xref" href="DREditor.Services.IToTitleScreen.html">IToTitleScreen</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_navigate">ScrollGridUI.navigate</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_reverseOrder">ScrollGridUI.reverseOrder</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_singleTapInput">ScrollGridUI.singleTapInput</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_m_gridX">ScrollGridUI.m_gridX</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_slots">ScrollGridUI.slots</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_scrollBar">ScrollGridUI.scrollBar</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_scrollBarBoundsTop">ScrollGridUI.scrollBarBoundsTop</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_scrollBarBoundsBottom">ScrollGridUI.scrollBarBoundsBottom</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_OnHover">ScrollGridUI.OnHover</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_totalObjectCount">ScrollGridUI.totalObjectCount</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_m_max">ScrollGridUI.m_max</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_m_min">ScrollGridUI.m_min</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_selectedSlotIndex">ScrollGridUI.selectedSlotIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_globalIndex">ScrollGridUI.globalIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_gridSlots">ScrollGridUI.gridSlots</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_m_lastMoveInput">ScrollGridUI.m_lastMoveInput</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_InitializeScrollGrid">ScrollGridUI.InitializeScrollGrid()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_InitializeScrollBar">ScrollGridUI.InitializeScrollBar()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_InitializeGridValues">ScrollGridUI.InitializeGridValues()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_OnUINavigated_UnityEngine_InputSystem_InputAction_CallbackContext_">ScrollGridUI.OnUINavigated(InputAction.CallbackContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_GetSingleTapIndex_UnityEngine_Vector2_">ScrollGridUI.GetSingleTapIndex(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_GetContinuousIndex_UnityEngine_Vector2_">ScrollGridUI.GetContinuousIndex(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_GetHorizontalIndex_System_Int32_">ScrollGridUI.GetHorizontalIndex(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_GetVerticalIndex_System_Int32_">ScrollGridUI.GetVerticalIndex(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_UpdateGridValues_System_Int32_">ScrollGridUI.UpdateGridValues(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_UpdateScrollBarPosition">ScrollGridUI.UpdateScrollBarPosition()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_RegenerateUI">ScrollGridUI.RegenerateUI()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_UpdateSlotState_System_Boolean_">ScrollGridUI.UpdateSlotState(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_OnSlotHovered">ScrollGridUI.OnSlotHovered()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_ClearSlotState">ScrollGridUI.ClearSlotState()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_GetSlotIndex">ScrollGridUI.GetSlotIndex()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.ScrollGridUI.html#DREditor_UI_ScrollGridUI_ChangeGroup_DREditor_UI_MenuGroupBase_">ScrollGridUI.ChangeGroup(MenuGroupBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_debugShow">MenuGroupBase.debugShow</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_isActive">MenuGroupBase.isActive</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_BeforeStart">MenuGroupBase.BeforeStart</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_StartEvents">MenuGroupBase.StartEvents</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_EndEvents">MenuGroupBase.EndEvents</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_backGroup">MenuGroupBase.backGroup</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_hasBackInput">MenuGroupBase.hasBackInput</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_OnBack">MenuGroupBase.OnBack</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_Awake">MenuGroupBase.Awake()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_OnDestroy">MenuGroupBase.OnDestroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_WaitForChangeToComplete">MenuGroupBase.WaitForChangeToComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_SetActive_System_Boolean_">MenuGroupBase.SetActive(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_AddBackInput">MenuGroupBase.AddBackInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_RemoveBackInput">MenuGroupBase.RemoveBackInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_SetBackInput_System_Boolean_">MenuGroupBase.SetBackInput(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_ToTitleScreen">MenuGroupBase.ToTitleScreen()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_DebugShow">MenuGroupBase.DebugShow()</a>
+    </div>
+    <div>
+      <a class="xref" href="DREditor.UI.MenuGroupBase.html#DREditor_UI_MenuGroupBase_Changing">MenuGroupBase.Changing</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_Backlogging_BacklogUI__ctor_" data-uid="DREditor.Backlogging.BacklogUI.#ctor*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI__ctor" data-uid="DREditor.Backlogging.BacklogUI.#ctor">
+  BacklogUI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BacklogUI()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_backInputContext" data-uid="DREditor.Backlogging.BacklogUI.backInputContext">
+  backInputContext
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InputAction.CallbackContext backInputContext</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_backlog" data-uid="DREditor.Backlogging.BacklogUI.backlog">
+  backlog
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Backlog backlog</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.Dialogues.Backlog.html">Backlog</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_backlogInput" data-uid="DREditor.Backlogging.BacklogUI.backlogInput">
+  backlogInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InputActionReference backlogInput</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_canPlayVoiceline" data-uid="DREditor.Backlogging.BacklogUI.canPlayVoiceline">
+  canPlayVoiceline
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool canPlayVoiceline</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_debugMode" data-uid="DREditor.Backlogging.BacklogUI.debugMode">
+  debugMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+[Divider]
+protected bool debugMode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_fastForward" data-uid="DREditor.Backlogging.BacklogUI.fastForward">
+  fastForward
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InputActionReference fastForward</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_fastForwardModeEnabled" data-uid="DREditor.Backlogging.BacklogUI.fastForwardModeEnabled">
+  fastForwardModeEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent fastForwardModeEnabled</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_fastForwardModeWasEnabled" data-uid="DREditor.Backlogging.BacklogUI.fastForwardModeWasEnabled">
+  fastForwardModeWasEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent fastForwardModeWasEnabled</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_hasMenuAccess" data-uid="DREditor.Backlogging.BacklogUI.hasMenuAccess">
+  hasMenuAccess
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected BoolWithEvent hasMenuAccess</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_inMenu" data-uid="DREditor.Backlogging.BacklogUI.inMenu">
+  inMenu
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent inMenu</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_inPause" data-uid="DREditor.Backlogging.BacklogUI.inPause">
+  inPause
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent inPause</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_lineCount" data-uid="DREditor.Backlogging.BacklogUI.lineCount">
+  lineCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int lineCount</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_openBacklogConditions" data-uid="DREditor.Backlogging.BacklogUI.openBacklogConditions">
+  openBacklogConditions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected EvaluateCondition openBacklogConditions</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.UIHandling.EvaluateCondition.html">EvaluateCondition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_submit" data-uid="DREditor.Backlogging.BacklogUI.submit">
+  submit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InputActionReference submit</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InputActionReference</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_visibilityComponent" data-uid="DREditor.Backlogging.BacklogUI.visibilityComponent">
+  visibilityComponent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UIVisibilityComponent visibilityComponent</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.UIHandling.UIVisibilityComponent.html">UIVisibilityComponent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Backlogging_BacklogUI_voicelineCooldown" data-uid="DREditor.Backlogging.BacklogUI.voicelineCooldown">
+  voicelineCooldown
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float voicelineCooldown</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_Backlogging_BacklogUI_AttemptShowBacklog_" data-uid="DREditor.Backlogging.BacklogUI.AttemptShowBacklog*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_AttemptShowBacklog_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="DREditor.Backlogging.BacklogUI.AttemptShowBacklog(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  AttemptShowBacklog(CallbackContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AttemptShowBacklog(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_BackGroup_" data-uid="DREditor.Backlogging.BacklogUI.BackGroup*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_BackGroup_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="DREditor.Backlogging.BacklogUI.BackGroup(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  BackGroup(CallbackContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void BackGroup(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_Hide_" data-uid="DREditor.Backlogging.BacklogUI.Hide*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_Hide" data-uid="DREditor.Backlogging.BacklogUI.Hide">
+  Hide()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Hide()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_HideProcess_" data-uid="DREditor.Backlogging.BacklogUI.HideProcess*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_HideProcess" data-uid="DREditor.Backlogging.BacklogUI.HideProcess">
+  HideProcess()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator HideProcess()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_InitializeTotalObjectCount_" data-uid="DREditor.Backlogging.BacklogUI.InitializeTotalObjectCount*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_InitializeTotalObjectCount" data-uid="DREditor.Backlogging.BacklogUI.InitializeTotalObjectCount">
+  InitializeTotalObjectCount()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override int InitializeTotalObjectCount()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_OnDisable_" data-uid="DREditor.Backlogging.BacklogUI.OnDisable*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_OnDisable" data-uid="DREditor.Backlogging.BacklogUI.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_OnEnable_" data-uid="DREditor.Backlogging.BacklogUI.OnEnable*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_OnEnable" data-uid="DREditor.Backlogging.BacklogUI.OnEnable">
+  OnEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_OnSelect_" data-uid="DREditor.Backlogging.BacklogUI.OnSelect*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_OnSelect_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="DREditor.Backlogging.BacklogUI.OnSelect(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnSelect(CallbackContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnSelect(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_ResetGroup_" data-uid="DREditor.Backlogging.BacklogUI.ResetGroup*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_ResetGroup" data-uid="DREditor.Backlogging.BacklogUI.ResetGroup">
+  ResetGroup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void ResetGroup()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_SetEvaluateSelect_" data-uid="DREditor.Backlogging.BacklogUI.SetEvaluateSelect*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_SetEvaluateSelect" data-uid="DREditor.Backlogging.BacklogUI.SetEvaluateSelect">
+  SetEvaluateSelect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetEvaluateSelect()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_Show_" data-uid="DREditor.Backlogging.BacklogUI.Show*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_Show" data-uid="DREditor.Backlogging.BacklogUI.Show">
+  Show()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Show()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_ShowProcess_" data-uid="DREditor.Backlogging.BacklogUI.ShowProcess*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_ShowProcess" data-uid="DREditor.Backlogging.BacklogUI.ShowProcess">
+  ShowProcess()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator ShowProcess()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_Start_" data-uid="DREditor.Backlogging.BacklogUI.Start*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_Start" data-uid="DREditor.Backlogging.BacklogUI.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_SubscribeControls_" data-uid="DREditor.Backlogging.BacklogUI.SubscribeControls*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_SubscribeControls" data-uid="DREditor.Backlogging.BacklogUI.SubscribeControls">
+  SubscribeControls()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SubscribeControls()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_UnsubscribeControls_" data-uid="DREditor.Backlogging.BacklogUI.UnsubscribeControls*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_UnsubscribeControls" data-uid="DREditor.Backlogging.BacklogUI.UnsubscribeControls">
+  UnsubscribeControls()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UnsubscribeControls()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Backlogging_BacklogUI_VoiceLineCooldown_" data-uid="DREditor.Backlogging.BacklogUI.VoiceLineCooldown*"></a>
+
+  <h3 id="DREditor_Backlogging_BacklogUI_VoiceLineCooldown" data-uid="DREditor.Backlogging.BacklogUI.VoiceLineCooldown">
+  VoiceLineCooldown()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator VoiceLineCooldown()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Backlog/BacklogUI.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

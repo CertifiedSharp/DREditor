@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DialogueLineReader | DREditor API </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DialogueLineReader | DREditor API ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="DREditor API">
+            DREditor API
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DREditor.Dialogues.Implementation.DialogueLineReader">
+
+
+
+  <h1 id="DREditor_Dialogues_Implementation_DialogueLineReader" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader" class="text-break">
+Class DialogueLineReader  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DREditor.html">DREditor</a>.<a class="xref" href="DREditor.Dialogues.html">Dialogues</a>.<a class="xref" href="DREditor.Dialogues.Implementation.html">Implementation</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>DREditor.Dialogues.Implementation.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ClassHeader(&quot;LineReader, ILineReader, IDRESaveable, IDRELoadable\n\n&quot;)]
+public class DialogueLineReader : LineReader, IClearDialogueSaveData, ILineReader, IDRESaveable, IDRELoadable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.DialogueComponent.html">DialogueComponent</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.LineReading.LineReader.html">LineReader</a></div>
+      <div><span class="xref">DialogueLineReader</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DREditor.Dialogues.IClearDialogueSaveData.html">IClearDialogueSaveData</a></div>
+      <div><a class="xref" href="DREditor.Dialogues.LineReading.ILineReader.html">ILineReader</a></div>
+      <div><a class="xref" href="DREditor.Saving.IDRESaveable.html">IDRESaveable</a></div>
+      <div><a class="xref" href="DREditor.Saving.IDRELoadable.html">IDRELoadable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="DREditor.Dialogues.LineReading.LineReader.html#DREditor_Dialogues_LineReading_LineReader_PlayDialogueLine__1_DREditor_Dialogues_DialogueBase___0__DREditor_Dialogues_Line_System_Action_System_Action_">LineReader.PlayDialogueLine&lt;T&gt;(DialogueBase&lt;T&gt;, Line, Action, Action)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader__ctor_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.#ctor*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader__ctor" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.#ctor">
+  DialogueLineReader()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DialogueLineReader()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_LineEndComponents" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.LineEndComponents">
+  LineEndComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DialogueComponent&gt; LineEndComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_LineLastingEventComponents" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.LineLastingEventComponents">
+  LineLastingEventComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DialogueComponent&gt; LineLastingEventComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_LinePostTextDisplayComponents" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.LinePostTextDisplayComponents">
+  LinePostTextDisplayComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DialogueComponent&gt; LinePostTextDisplayComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_LineProcessComponents" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.LineProcessComponents">
+  LineProcessComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DialogueComponent&gt; LineProcessComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_LineStartComponents" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.LineStartComponents">
+  LineStartComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected List&lt;DialogueComponent&gt; LineStartComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_LineTextDisplayComponents" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.LineTextDisplayComponents">
+  LineTextDisplayComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DialogueComponent&gt; LineTextDisplayComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_LineWaitForClickComponents" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.LineWaitForClickComponents">
+  LineWaitForClickComponents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;DialogueComponent&gt; LineWaitForClickComponents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueComponent.cs">DialogueComponent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_currentLineNumberSaveKey" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.currentLineNumberSaveKey">
+  currentLineNumberSaveKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected string currentLineNumberSaveKey</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_dialogueLoaded" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.dialogueLoaded">
+  dialogueLoaded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Divider]
+protected BoolWithEvent dialogueLoaded</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_hasMenuAccess" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.hasMenuAccess">
+  hasMenuAccess
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent hasMenuAccess</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_inFastForwardMode" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.inFastForwardMode">
+  inFastForwardMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent inFastForwardMode</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_isLoadingFile" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.isLoadingFile">
+  isLoadingFile
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolWithEvent isLoadingFile</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="DREditor.EventObjects.BoolWithEvent.html">BoolWithEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_saveLineNum" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.saveLineNum">
+  saveLineNum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int saveLineNum</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_ClearSaveData_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.ClearSaveData*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_ClearSaveData" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.ClearSaveData">
+  ClearSaveData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ClearSaveData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_ClearSaveDataOnDialogueStart_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.ClearSaveDataOnDialogueStart*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_ClearSaveDataOnDialogueStart" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.ClearSaveDataOnDialogueStart">
+  ClearSaveDataOnDialogueStart()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ClearSaveDataOnDialogueStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_DialogueLineIsEmpty_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.DialogueLineIsEmpty*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_DialogueLineIsEmpty_DREditor_Dialogues_Line_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.DialogueLineIsEmpty(DREditor.Dialogues.Line)">
+  DialogueLineIsEmpty(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool DialogueLineIsEmpty(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineEndComponents_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineEndComponents*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineEndComponents_DREditor_Dialogues_Line_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineEndComponents(DREditor.Dialogues.Line)">
+  InvokeLineEndComponents(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator InvokeLineEndComponents(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineLastingEvents_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineLastingEvents*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineLastingEvents_DREditor_Dialogues_Line_System_Action_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineLastingEvents(DREditor.Dialogues.Line,System.Action)">
+  InvokeLineLastingEvents(Line, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator InvokeLineLastingEvents(Line currentLine, Action continueLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+    <dt><code>continueLine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLinePostTextDisplayComponents_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLinePostTextDisplayComponents*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLinePostTextDisplayComponents_DREditor_Dialogues_Line_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLinePostTextDisplayComponents(DREditor.Dialogues.Line)">
+  InvokeLinePostTextDisplayComponents(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InvokeLinePostTextDisplayComponents(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineProcesses_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineProcesses*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineProcesses_DREditor_Dialogues_Line_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineProcesses(DREditor.Dialogues.Line)">
+  InvokeLineProcesses(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator InvokeLineProcesses(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineStartProcesses_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineStartProcesses*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineStartProcesses_DREditor_Dialogues_Line_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineStartProcesses(DREditor.Dialogues.Line)">
+  InvokeLineStartProcesses(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InvokeLineStartProcesses(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineTextDisplayComponents_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineTextDisplayComponents*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeLineTextDisplayComponents_DREditor_Dialogues_Line_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeLineTextDisplayComponents(DREditor.Dialogues.Line)">
+  InvokeLineTextDisplayComponents(Line)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator InvokeLineTextDisplayComponents(Line currentLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeWaitForClickComponents_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeWaitForClickComponents*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_InvokeWaitForClickComponents__1_DREditor_Dialogues_DialogueBase___0__DREditor_Dialogues_Line_System_Action_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.InvokeWaitForClickComponents``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action)">
+  InvokeWaitForClickComponents&lt;T&gt;(DialogueBase&lt;T&gt;, Line, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator InvokeWaitForClickComponents&lt;T&gt;(DialogueBase&lt;T&gt; currentDialogue, Line currentLine, Action exitParentRoutine) where T : Line</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentDialogue</code> <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs">DialogueBase</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+    <dt><code>exitParentRoutine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_Load_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.Load*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_Load_System_Collections_Generic_Dictionary_System_String_System_Object__" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.Load(System.Collections.Generic.Dictionary{System.String,System.Object})">
+  Load(Dictionary&lt;string, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Load(Dictionary&lt;string, object&gt; saveDatas)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saveDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_PlayDialogueLine_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.PlayDialogueLine*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_PlayDialogueLine__1_DREditor_Dialogues_DialogueBase___0__DREditor_Dialogues_Line_System_Action_System_Action_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.PlayDialogueLine``1(DREditor.Dialogues.DialogueBase{``0},DREditor.Dialogues.Line,System.Action,System.Action)">
+  PlayDialogueLine&lt;T2&gt;(DialogueBase&lt;T2&gt;, Line, Action, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerator PlayDialogueLine&lt;T2&gt;(DialogueBase&lt;T2&gt; currentDialogueCore, Line currentLine, Action exitParentRoutine = null, Action continueLine = null) where T2 : Line</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentDialogueCore</code> <a class="xref" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/DialogueBase.cs">DialogueBase</a>&lt;T2&gt;</dt>
+    <dd></dd>
+    <dt><code>currentLine</code> <a class="xref" href="DREditor.Dialogues.Line.html">Line</a></dt>
+    <dd></dd>
+    <dt><code>exitParentRoutine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+    <dt><code>continueLine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T2</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_Save_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.Save*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_Save_System_Collections_Generic_Dictionary_System_String_System_Object__" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.Save(System.Collections.Generic.Dictionary{System.String,System.Object})">
+  Save(Dictionary&lt;string, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Save(Dictionary&lt;string, object&gt; saveDatas)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saveDatas</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_SetSaveLineNumber_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.SetSaveLineNumber*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_SetSaveLineNumber_System_Int32_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.SetSaveLineNumber(System.Int32)">
+  SetSaveLineNumber(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetSaveLineNumber(int saveLineNum)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saveLineNum</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_UpdateAndContinueLine_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.UpdateAndContinueLine*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_UpdateAndContinueLine_System_Action_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.UpdateAndContinueLine(System.Action)">
+  UpdateAndContinueLine(Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateAndContinueLine(Action continueLine)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>continueLine</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Implementation_DialogueLineReader_WaitForGameFileToFinishLoading_" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.WaitForGameFileToFinishLoading*"></a>
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_WaitForGameFileToFinishLoading" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.WaitForGameFileToFinishLoading">
+  WaitForGameFileToFinishLoading()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerator WaitForGameFileToFinishLoading()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_OnLineEndEvent" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.OnLineEndEvent">
+  OnLineEndEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnLineEndEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Implementation_DialogueLineReader_OnLineStart" data-uid="DREditor.Dialogues.Implementation.DialogueLineReader.OnLineStart">
+  OnLineStart
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnLineStart</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor.Dialogues.Implementation/DialogueLineReader.cs" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

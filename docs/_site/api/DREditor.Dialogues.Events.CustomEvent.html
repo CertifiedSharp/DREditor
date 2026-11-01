@@ -89,7 +89,7 @@
 
 
   <h1 id="DREditor_Dialogues_Events_CustomEvent" data-uid="DREditor.Dialogues.Events.CustomEvent" class="text-break">
-Class CustomEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+Class CustomEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CustomEvent : IDialogueEvent</code></pre>
+    <pre><code class="lang-csharp hljs">public class CustomEvent : IDisplayableDialogueEvent, IDialogueEvent</code></pre>
   </div>
 
 
@@ -118,6 +118,7 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="DREditor.Dialogues.Events.IDisplayableDialogueEvent.html">IDisplayableDialogueEvent</a></div>
       <div><a class="xref" href="DREditor.Dialogues.Events.IDialogueEvent.html">IDialogueEvent</a></div>
     </dd>
   </dl>
@@ -149,6 +150,19 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
 
 
 
@@ -162,7 +176,7 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="DREditor_Dialogues_Events_CustomEvent__ctor" data-uid="DREditor.Dialogues.Events.CustomEvent.#ctor">
   CustomEvent()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -189,16 +203,16 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <h3 id="DREditor_Dialogues_Events_CustomEvent_CEValue" data-uid="DREditor.Dialogues.Events.CustomEvent.CEValue">
-  CEValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_EventName" data-uid="DREditor.Dialogues.Events.CustomEvent.EventName">
+  EventName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CETuple CEValue</code></pre>
+    <pre><code class="lang-csharp hljs">public string EventName</code></pre>
   </div>
 
 
@@ -206,7 +220,7 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="DREditor.Dialogues.Events.CETuple.html">CETuple</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -219,16 +233,106 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <h3 id="DREditor_Dialogues_Events_CustomEvent__ShowHelp" data-uid="DREditor.Dialogues.Events.CustomEvent._ShowHelp">
-  _ShowHelp
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_ExecutionOrder" data-uid="DREditor.Dialogues.Events.CustomEvent.ExecutionOrder">
+  ExecutionOrder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool _ShowHelp</code></pre>
+    <pre><code class="lang-csharp hljs">public int ExecutionOrder</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent__showHelp" data-uid="DREditor.Dialogues.Events.CustomEvent._showHelp">
+  _showHelp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool _showHelp</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_index" data-uid="DREditor.Dialogues.Events.CustomEvent.index">
+  index
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int index</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_toggleCustom" data-uid="DREditor.Dialogues.Events.CustomEvent.toggleCustom">
+  toggleCustom
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool toggleCustom</code></pre>
   </div>
 
 
@@ -252,11 +356,115 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 </h2>
 
 
+  <a id="DREditor_Dialogues_Events_CustomEvent_DisplayCustomEvent_" data-uid="DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_DisplayCustomEvent" data-uid="DREditor.Dialogues.Events.CustomEvent.DisplayCustomEvent">
+  DisplayCustomEvent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayCustomEvent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Events_CustomEvent_DisplayCustomEventData_" data-uid="DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_DisplayCustomEventData" data-uid="DREditor.Dialogues.Events.CustomEvent.DisplayCustomEventData">
+  DisplayCustomEventData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayCustomEventData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Events_CustomEvent_DisplayCustomToggle_" data-uid="DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_DisplayCustomToggle" data-uid="DREditor.Dialogues.Events.CustomEvent.DisplayCustomToggle">
+  DisplayCustomToggle()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayCustomToggle()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Events_CustomEvent_DisplayEventNamePopup_" data-uid="DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_DisplayEventNamePopup" data-uid="DREditor.Dialogues.Events.CustomEvent.DisplayEventNamePopup">
+  DisplayEventNamePopup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DisplayEventNamePopup()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="DREditor_Dialogues_Events_CustomEvent_EditorUI_" data-uid="DREditor.Dialogues.Events.CustomEvent.EditorUI*"></a>
 
   <h3 id="DREditor_Dialogues_Events_CustomEvent_EditorUI_System_Object_" data-uid="DREditor.Dialogues.Events.CustomEvent.EditorUI(System.Object)">
   EditorUI(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -283,11 +491,156 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="DREditor_Dialogues_Events_CustomEvent_OnNotUsingCustom_" data-uid="DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_OnNotUsingCustom" data-uid="DREditor.Dialogues.Events.CustomEvent.OnNotUsingCustom">
+  OnNotUsingCustom()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnNotUsingCustom()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Events_CustomEvent_OnSpawningFailed_" data-uid="DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_OnSpawningFailed_System_Exception_" data-uid="DREditor.Dialogues.Events.CustomEvent.OnSpawningFailed(System.Exception)">
+  OnSpawningFailed(Exception)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnSpawningFailed(Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Events_CustomEvent_RefreshPopupIndex_" data-uid="DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_RefreshPopupIndex" data-uid="DREditor.Dialogues.Events.CustomEvent.RefreshPopupIndex">
+  RefreshPopupIndex()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RefreshPopupIndex()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Events_CustomEvent_ReplaceList_" data-uid="DREditor.Dialogues.Events.CustomEvent.ReplaceList*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_ReplaceList_System_Collections_Generic_List_System_String__" data-uid="DREditor.Dialogues.Events.CustomEvent.ReplaceList(System.Collections.Generic.List{System.String})">
+  ReplaceList(List&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReplaceList(List&lt;string&gt; list)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="DREditor_Dialogues_Events_CustomEvent_SetIndex_" data-uid="DREditor.Dialogues.Events.CustomEvent.SetIndex*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_SetIndex_System_Int32_" data-uid="DREditor.Dialogues.Events.CustomEvent.SetIndex(System.Int32)">
+  SetIndex(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetIndex(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="DREditor_Dialogues_Events_CustomEvent_ShowHelpBox_" data-uid="DREditor.Dialogues.Events.CustomEvent.ShowHelpBox*"></a>
 
   <h3 id="DREditor_Dialogues_Events_CustomEvent_ShowHelpBox" data-uid="DREditor.Dialogues.Events.CustomEvent.ShowHelpBox">
   ShowHelpBox()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -309,11 +662,37 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="DREditor_Dialogues_Events_CustomEvent_SpawnReleventData_" data-uid="DREditor.Dialogues.Events.CustomEvent.SpawnReleventData*"></a>
+
+  <h3 id="DREditor_Dialogues_Events_CustomEvent_SpawnReleventData" data-uid="DREditor.Dialogues.Events.CustomEvent.SpawnReleventData">
+  SpawnReleventData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SpawnReleventData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="DREditor_Dialogues_Events_CustomEvent_ToggleHelpBox_" data-uid="DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox*"></a>
 
   <h3 id="DREditor_Dialogues_Events_CustomEvent_ToggleHelpBox" data-uid="DREditor.Dialogues.Events.CustomEvent.ToggleHelpBox">
   ToggleHelpBox()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -339,7 +718,7 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="DREditor_Dialogues_Events_CustomEvent_TriggerDialogueEvent" data-uid="DREditor.Dialogues.Events.CustomEvent.TriggerDialogueEvent">
   TriggerDialogueEvent()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -365,7 +744,7 @@ Class CustomEvent  <a class="header-action link-secondary" title="View source" h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/CustomEvent.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/CustomEvent.cs" class="edit-link">Edit this page</a>
         </div>
 
 

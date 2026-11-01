@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Flashback | DREditor API ">
       
-      <meta name="description" content="For Displaying Flashbacks">
+      
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="DREditor_Dialogues_Events_Flashback" data-uid="DREditor.Dialogues.Events.Flashback" class="text-break">
-Class Flashback  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
+Class Flashback  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,11 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
   <dl><dt>Assembly</dt><dd>DREditor.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>For Displaying Flashbacks</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Flashback : IDialogueEvent</code></pre>
+    <pre><code class="lang-csharp hljs">public class Flashback : IDisplayableDialogueEvent, IDialogueEvent</code></pre>
   </div>
 
 
@@ -119,6 +118,7 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="DREditor.Dialogues.Events.IDisplayableDialogueEvent.html">IDisplayableDialogueEvent</a></div>
       <div><a class="xref" href="DREditor.Dialogues.Events.IDialogueEvent.html">IDialogueEvent</a></div>
     </dd>
   </dl>
@@ -150,6 +150,19 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldNames__1___0_">ReflectionHelper.GetFieldNames&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Saving.ReflectionHelper.html#DREditor_Saving_ReflectionHelper_GetFieldValues__1___0_">ReflectionHelper.GetFieldValues&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="DREditor.Utility.DeepCopyExtensions.html#DREditor_Utility_DeepCopyExtensions_DeepCopy__1___0_">DeepCopyExtensions.DeepCopy&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
 
 
 
@@ -163,7 +176,7 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_Events_Flashback__ctor" data-uid="DREditor.Dialogues.Events.Flashback.#ctor">
   Flashback()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -190,16 +203,16 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
 
 
 
-  <h3 id="DREditor_Dialogues_Events_Flashback_FBValue" data-uid="DREditor.Dialogues.Events.Flashback.FBValue">
-  FBValue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DREditor_Dialogues_Events_Flashback_Flashbacks" data-uid="DREditor.Dialogues.Events.Flashback.Flashbacks">
+  Flashbacks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FBTuple FBValue</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Sprite&gt; Flashbacks</code></pre>
   </div>
 
 
@@ -207,7 +220,7 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="DREditor.Dialogues.Events.FBTuple.html">FBTuple</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Sprite</span>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -227,7 +240,7 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_Events_Flashback_EditorUI_System_Object_" data-uid="DREditor.Dialogues.Events.Flashback.EditorUI(System.Object)">
   EditorUI(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -258,7 +271,7 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_Events_Flashback_ShowHelpBox" data-uid="DREditor.Dialogues.Events.Flashback.ShowHelpBox">
   ShowHelpBox()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -284,7 +297,7 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_Events_Flashback_ToggleHelpBox" data-uid="DREditor.Dialogues.Events.Flashback.ToggleHelpBox">
   ToggleHelpBox()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -310,7 +323,7 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="DREditor_Dialogues_Events_Flashback_TriggerDialogueEvent" data-uid="DREditor.Dialogues.Events.Flashback.TriggerDialogueEvent">
   TriggerDialogueEvent()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/Flashback.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -336,7 +349,7 @@ Class Flashback  <a class="header-action link-secondary" title="View source" hre
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Scripts/Dialogues/Events/Flashback.cs" class="edit-link">Edit this page</a>
+          <a href="https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Dialogues/Events/Flashback.cs" class="edit-link">Edit this page</a>
         </div>
 
 
