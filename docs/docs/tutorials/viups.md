@@ -25,6 +25,7 @@ These are the steps to follow _after_ completing the process the dependency mana
 ## Import Packages and Samples
 - At this point, commit all the changes logged on your github desktop. 
 - DREditor/Import/Packages en masse . This will download all the available packages for DREditor to your project. Otherwise, you can manually add the pieces you want. Then you can import the templates from samples.
+- If Packages en masse doesn't work then mass select the packages by selecting one, holding shift, scrolling down, and selecting the last one and click install.
 - DREditor/Import/Samples via Search and click import. This should import all the samples for all installed DREditor Packages.
 
 ## Duplicate Template Scenes

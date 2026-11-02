@@ -19,6 +19,7 @@ These are things that are never directly mentioned within the engine or a tutori
   * DREditor: Load => Ch select => RTMM => Continue => data of the ch select.
 
 ## Limitation Scenarios
+- You currently can't use the prologue window during instant style dialogue.
 - If a ValueWithEvent object has been created for the purpose of updating a runtime state, then a script that implements IToTitleScreen should be made/implement OnDestroy() that resets it's value so that it's state does not carry over during RTMM.
 - There might be load inconsistency bugs between exported live builds if aspects from the previous builds dialogue has changed. As an example, if you changed which sprite is displayed in a chapter of a release build. In the new build, the old sprite will likely be shown on an older save file.
 - If DEFAULT UNLOCKED Chapter Select Scene Data does not contain the unlock data for it's own point in time, the displayed unlocked chapter selects for the save file that starts on that scene will not display unlocked chapter selects properly until it unlocks another one of the chapter selections through gameplay. (The exception to this would be prologue daily life as this should be unlocked on the first line, which means the scene data asset doesn't need to add chapter select data.)

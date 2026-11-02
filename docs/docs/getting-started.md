@@ -83,6 +83,7 @@ Please be sure to follow each section **_in order._**
 - Go back to your package manager.
 - On the left most side, at the bottom you should see "DREditor" Under "My Registries". Click it.
 - Here you can download whatever DRE packages you need, for now, download the DREditor Core.
+- If you get an error that contains "EPERM: operation not permitted" then close unity and reopen your project. 
 - On start up of the core, The Dependency system should walk you through everything.
 - [Follow this video](https://youtu.be/j9Mv78wZy8w) if you get stuck going through the dependency manager process.
 - If you did not need to watch the video, then you can move to [this guide](https://dreditor.net/docs/tutorials/viups.html) and starting from that tutorial [follow down the tutorial list in order.](https://dreditor.net/docs/tutorials.html)
