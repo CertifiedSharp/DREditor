@@ -24,11 +24,12 @@ namespace DREditor.Editor.Toolbox
         [Tooltip("")]
         [SerializeField] protected bool replaceExisting = false;
 
-
         /// <summary>
         /// 
         /// </summary>
-        protected string selectedFolderPath = null;
+        [Tooltip("")]
+        [SerializeField] protected string selectedFolderPath = null;
+
 
         /// <summary>
         /// 
@@ -50,31 +51,17 @@ namespace DREditor.Editor.Toolbox
         /// </summary>
         /// <returns></returns>
         [MenuItem(MenuPath, true)]
-        private static bool VerifyFolderSelected() => FolderUtility.SelectedObjectIsFolder();
+        public static bool VerifyFolderSelected() => FolderUtility.TryGetSelectedFolderPath(out _);
 
 
         /// <summary>
         /// 
         /// </summary>
         [MenuItem(MenuPath, false, 60)]
-        public static void OpenWizard()
-        {
-            string path = AssetDatabase.GetAssetPath(Selection.activeObject);
-
-            DuplicateScenesInFolder wizard = DisplayWizard<DuplicateScenesInFolder>("Duplicate Scenes in Folder", "Duplicate");
-
-            wizard.SetPath(path + "/");
-        }
+        public static void OpenWizard() => DisplayWizard<DuplicateScenesInFolder>("Duplicate Scenes in Folder", "Duplicate");
 
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="selectedFolderPath"></param>
-        public virtual void SetPath(string selectedFolderPath) => this.selectedFolderPath = selectedFolderPath;
-
-
-        protected override bool OnEnableWizardValid() => VerifyFolderSelected();
+        protected override bool OnEnableWizardValid() => FolderUtility.TryGetSelectedFolderPath(out selectedFolderPath);
 
         protected override bool ImportValid()
         {
