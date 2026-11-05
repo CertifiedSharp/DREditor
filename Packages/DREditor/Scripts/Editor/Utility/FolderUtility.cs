@@ -100,30 +100,33 @@ namespace DREditor.Editor.Utility
         }
 
         /// <summary>
-        ///
+        /// 
         /// </summary>
+        /// <param name="folderPath"></param>
         /// <returns></returns>
-        public static bool SelectedObjectIsFolder()
+        public static bool TryGetSelectedFolderPath(out string folderPath)
         {
-            if (Selection.activeObject == null)
-            {
-                UnityEngine.Debug.LogWarning("ALERT: No object selected.");
+            foreach (string guid in Selection.assetGUIDs)
+                if (FolderIsValidThenApply(AssetDatabase.GUIDToAssetPath(guid), out folderPath))
+                    return true;
 
-                return false;
-            }
+            folderPath = null;
 
-            string assetPath = AssetDatabase.GetAssetPath(Selection.activeObject);
-
-            if (string.IsNullOrEmpty(assetPath))
-            {
-                UnityEngine.Debug.LogWarning("ALERT: Selected object does not have a valid asset path.");
-
-                return false;
-            }
-
-            return Directory.Exists(assetPath);
+            return false;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="folderPath"></param>
+        /// <returns></returns>
+        private static bool FolderIsValidThenApply(string path, out string folderPath)
+        {
+            folderPath = path;
+
+            return AssetDatabase.IsValidFolder(path);
+        }
 
         /// <summary>
         /// 
