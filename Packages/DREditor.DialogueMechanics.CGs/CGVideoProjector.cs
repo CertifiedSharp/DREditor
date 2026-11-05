@@ -62,7 +62,7 @@ namespace DREditor.DialogueMechanics.CGs
         /// <summary>
         ///
         /// </summary>
-        [Header("")]
+        [Header("Options")]
         [Divider]
         [Tooltip("")]
         [SerializeField] protected float videoToOtherCGFadeTime = 0.5f;
@@ -72,6 +72,18 @@ namespace DREditor.DialogueMechanics.CGs
         /// </summary>
         [Tooltip("")]
         [SerializeField] protected float startVideoInCGTransitionTime = 0.5f;
+
+        /// <summary>
+        /// The default video resolution width that all videos must be so that they can be scaled to different resolutions accordingly.
+        /// </summary>
+        [Tooltip("The default video resolution width that all videos must be so that they can be scaled to different resolutions accordingly.")]
+        [SerializeField] protected int videoResolutionX = 1920;
+
+        /// <summary>
+        /// The default video resolution height that all videos must be so that they can be scaled to different resolutions accordingly.
+        /// </summary>
+        [Tooltip("The default video resolution height that all videos must be so that they can be scaled to different resolutions accordingly.")]
+        [SerializeField] protected int videoResolutionY = 1080;
 
 
         /// <summary>
@@ -123,7 +135,7 @@ namespace DREditor.DialogueMechanics.CGs
             if (otherActive)
                 videoBack.DOFade(1, 0);
 #endif
-            SetVideoPlayer(clip, isLooping, playbackSpeed, new(Screen.width, Screen.height, 32));
+            SetVideoPlayer(clip, isLooping, playbackSpeed, new(videoResolutionX, videoResolutionY, 32));
 
             videoProjector.texture = videoPlayer.targetTexture;
 #if DOTWEEN
@@ -188,11 +200,11 @@ namespace DREditor.DialogueMechanics.CGs
         {
             Debug("PlayWhileInVideo");
 
-            SetVideoPlayer(clip, isLooping, 0, new(Screen.width, Screen.height, 32));
+            SetVideoPlayer(clip, isLooping, 0, new(videoResolutionX, videoResolutionY, 32));
 
             yield return PlayOnPrepared();
 
-            RenderTexture renderTexture = new(Screen.width, Screen.height, 32);
+            RenderTexture renderTexture = new(videoResolutionX, videoResolutionY, 32);
 
             videoPlayer.targetTexture = renderTexture;
 
