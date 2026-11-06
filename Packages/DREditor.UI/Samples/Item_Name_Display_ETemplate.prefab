@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5917337155735209305}
   - component: {fileID: 5239634524744902490}
   - component: {fileID: 466865916176558238}
+  - component: {fileID: 5345741949290077081}
+  - component: {fileID: 5182227022408133409}
   m_Layer: 5
   m_Name: Item_Name_Display_ETemplate
   m_TagString: Untagged
@@ -92,6 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: {fileID: 11400000, guid: 1b1a3417101f9ac4894c415ac320bdb0, type: 2}
+  Condition: {fileID: 0}
+  conditionMustBe: 1
+  priority: 0
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -108,7 +113,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Condition: {fileID: 0}
 --- !u!114 &5239634524744902490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,12 +125,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8916053f7f426994380ccbd935ac9070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skipShowTillComplete: 0
+  skipHideTillComplete: 0
   fadeComponents:
   - {fileID: 466865916176558238}
   visibleValue: 1
   fadeInDuration: 0.15
   invisibleValue: 0
   fadeOutDuration: 0.15
+  killTweensOnShow: 0
+  killTweensOnHide: 0
   ignoreTimeScale: 0
   easeCurve: 1
   loops: 0
@@ -143,6 +151,68 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &5345741949290077081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917337155735209299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9122f094a109f78448db952c36a264a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DREditor::DREditor.EventObjects.SceneEventListener
+  Event: {fileID: 11400000, guid: 0a2b98a17cc7b34469377b380ee8c2b7, type: 2}
+  Condition: {fileID: 0}
+  conditionMustBe: 1
+  priority: 0
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: eab2355fc2967824ca27da6490b5c905, type: 2}
+        m_TargetAssemblyTypeName: DREditor.EventObjects.BoolWithEvent, DREditor
+        m_MethodName: SetValue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5182227022408133409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917337155735209299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9122f094a109f78448db952c36a264a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DREditor::DREditor.EventObjects.SceneEventListener
+  Event: {fileID: 11400000, guid: ce8771470d570c7438b99b13bb364b49, type: 2}
+  Condition: {fileID: 11400000, guid: 6476014b37bc7ed44aea40908531e07e, type: 2}
+  conditionMustBe: 0
+  priority: 0
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 88aacd5fe1fd23845940ecec407ac869, type: 2}
+        m_TargetAssemblyTypeName: DREditor.EventObjects.StringWithEvent, DREditor
+        m_MethodName: Invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5917337155775790964
 GameObject:
   m_ObjectHideFlags: 0
