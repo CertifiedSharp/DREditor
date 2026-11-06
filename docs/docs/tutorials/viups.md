@@ -25,8 +25,10 @@ These are the steps to follow _after_ completing the process the dependency mana
 ## Import Packages and Samples
 - At this point, commit all the changes logged on your github desktop. 
 - DREditor/Import/Packages en masse . This will download all the available packages for DREditor to your project. Otherwise, you can manually add the pieces you want. Then you can import the templates from samples.
+- If you are still recieving EPERM: operation not permitted then you need to close unity hub, unity, and git hub desktop and then reopen them.
 - If Packages en masse doesn't work then mass select the packages by selecting one, holding shift, scrolling down, and selecting the last one and click install.
 - DREditor/Import/Samples via Search and click import. This should import all the samples for all installed DREditor Packages.
+- You may get errors, if so, if you get more than 6 errors, clear the console (in the console window there is a clear button in the top left corner), and then do the command again. If you get 6 errors (Some packages do not have samples and therefore throw errors) then all samples should be imported and you can simply clear the console again.
 
 ## Duplicate Template Scenes
 - Go to the the Samples folder created earlier, left click on it in your project window.

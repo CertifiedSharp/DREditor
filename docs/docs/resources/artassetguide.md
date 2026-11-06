@@ -1,5 +1,6 @@
 # Art Asset Guide
 To start, it is highly recommended that **all assets on your project have their dimension sizes divisible by 4.** This is to prevent bloat in your project in the long run, as unity has a built in compressor that needs asset dimensions divisible by 4.
+Note that if you already have DREditor Set up, you can check if your assets are valid dimensions by scanning your art folders by right clicking on them in the project window and selecting DREditor/Utility/Scan/Folder for Incorrect Dimensions. This will paste to your clipboard and console what assets need to be updated.
 
 ## CG's and Fullscreen Assets
 CG's and Fullscreen assets should be 1920x1080, or whatever the default resolution you plan to have for your project. It is highly recommended though to stay within the 1920x1080 rule though.

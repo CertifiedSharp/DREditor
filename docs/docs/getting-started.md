@@ -39,6 +39,7 @@ Please be sure to follow each section **_in order._**
 - Click Universal 3D
 - To the Right, you'll create the name of your project **WHEN CREATING THE NAME THE REPO THE SAME THING AS THE PROJECT. USE THE DASHES IF YOURE USING SPACING! EXAMPLE: Project-Edens-Garden**
 - Under location, make sure it's where you want to put it on your computer. Wherever that may be.
+- Please do not put your unity project in your documents folder. Try to keep it on a separate drive or just somewhere else on your computer.
 - Click Create Project.
 - It'll give you a TOS just check the agree and click accept and continue.
 - Wait for unity to finish loading your project.
@@ -78,7 +79,8 @@ Please be sure to follow each section **_in order._**
 - Once loaded. Go to Window/Package Management/Package Manager
 - In the top left corner there should be a + symbol, click that and "Install Package from git url"
 - Paste <https://github.com/CertifiedSharp/DREditorInstaller.git> into the field, once it loads, the system will be automatically import the DREditor Registry.
-- When trying to download the installer, if you get an error "fatal: not in git directory" open command prompt and paste this and then retry installing the installer.  ```git config --global --add safe.directory "*"```
+- When trying to download the installer, if you get an error "fatal: not in git directory" open command prompt and paste this and then retry installing the installer.  
+     git config --global --add safe.directory "*"
 - It'll give you a prompt just click close.
 - You can close out the project settings window. 
 - Go back to your package manager.
