@@ -9,6 +9,11 @@ namespace DREditor.Editor.Dependencies
 {
     /// <summary>
     /// A static class for a menu item to fix a bug in the FMOD StudioEventEmitter script where it only plays the first music ever played.
+    /// <br/><br/>
+    /// The solution that this script provides is adding the following to the Play() function under the cachedParams.Clear() call:<br/>
+    /// if(hasTriggered){Lookup();}
+    /// <br/><br/>
+    /// FMOD audio should work normally after this patch is applied.
     /// </summary>
     /// <remarks>
     /// This script can be removed in the future if we end up updating the DREditor FMOD version in the future.

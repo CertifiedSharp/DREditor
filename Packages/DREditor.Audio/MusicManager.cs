@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine;
 using DREditor.Services;
+using DREditor.Dialogues;
+using FMOD.Studio;
+
 
 #if FMOD_UNITY
 using FMODUnity;
@@ -196,22 +199,14 @@ namespace DREditor.Audio
         /// </summary>
         /// <param name="eventName"></param>
         /// <param name="skip"></param>
+        /// <remarks>
+        /// Note: A FMOD bug was found where: The first music always works, <br/>
+        /// but trying to change the music like normal just ends up playing the first one.
+        /// <br/><br/>
+        /// This bug is fixed using the StudioEventEmitterPatcher.cs.
+        /// </remarks>
         public virtual void PlayValidMusic(string eventName, bool skip = false)
         {
-            /* Kill/Cure FMOD NOTE
-                 * 
-                 * Issue: Okay idk what the fuck happened, for whatever reason, the first music always works,
-                 * but trying to change the music like normal just ends up playing the first one, so I 
-                 * had to destroy the component and add a new one just so it would work. 
-                 * This is a terrible way of doing this and I have no idea whats going on. EG never had this issue
-                 * so my assumption is that the issue is internal to FMOD
-                 * SOLUTION: IT WAS FMOD, Go to StudioEventEmitter.cs on play function add this below the clear cache:
-                 * if(hasTriggered)
-                   {
-                       Lookup();
-                   }
-                 * */
-
             if (jukeBox != null)
                 SetMusicText.SetValue(jukeBox.GetTitleFromClip(eventName));
 
