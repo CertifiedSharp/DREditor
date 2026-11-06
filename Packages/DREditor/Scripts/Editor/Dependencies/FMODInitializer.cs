@@ -200,22 +200,41 @@ namespace DREditor.Editor.Dependencies
         ///
         /// </summary>
         /// <returns></returns>
-        protected bool FMODLinking() => 
-            EditorUtility.DisplayDialog("Import Instructions",
+        protected bool FMODLinking()
+        {
+            CopyFMODPathToClipboard();
+
+            EditorUtility.DisplayDialog("REPORT",
+                "For context:" +
+                "\nYou'll notice in a tutorial video that the next window will display a file path." +
+                "\nThe file path will not show up now, instead, " +
+                "I've copied it to your clipboard for you so that it doesn't fill up the message window.",
+                "Understood");
+
+            return EditorUtility.DisplayDialog("Import Instructions",
                 "PROPOSAL: Follow these steps:" +
                 "\n- After pressing the \"Import Package\" button below, select the unity package you just downloaded." +
                 "\n- After you click \"Import\", You'll be asked to replace something, just hit yes. " +
                 "\n- Afterwards, an FMOD window will appear." +
                 "\n- You are ONLY going to click on \"Linking\"." +
-                $"\n- Then, press the top most button, and paste {GetFMODPath()} into the explorer bar " +
+                $"\n- Then, press the top most button, and ctrl+v (paste) into the explorer bar " +
                 $"to move to the folder and select the FMOD project." +
                 $"\n- When you finish linking, just press the refresh button on the dependency manager.",
                 "Import Package", "Restart");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void CopyFMODPathToClipboard() => EditorGUIUtility.systemCopyBuffer = GetFMODPath();
 
         protected override void OnPostImport()
         {
+            CopyFMODPathToClipboard();
+
             if (EditorUtility.DisplayDialog("Import Instructions",
-                $"Have you finished linking {GetFMODPath()} to your FMOD project?",
+                $"Have you finished linking {GetFMODPath()} to your FMOD project?" +
+                $"\nI've re-copied it to your clipboard just in case.",
                 "Yes", "No"))
                 OnCompleted();
         }
