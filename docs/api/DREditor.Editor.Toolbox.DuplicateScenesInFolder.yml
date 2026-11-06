@@ -14,8 +14,8 @@ items:
   - DREditor.Editor.Toolbox.DuplicateScenesInFolder.OnEnableWizardValid
   - DREditor.Editor.Toolbox.DuplicateScenesInFolder.OpenWizard
   - DREditor.Editor.Toolbox.DuplicateScenesInFolder.SceneListPopulated
-  - DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath(System.String)
   - DREditor.Editor.Toolbox.DuplicateScenesInFolder.ShouldDuplicate(UnityEditor.SceneAsset)
+  - DREditor.Editor.Toolbox.DuplicateScenesInFolder.VerifyFolderSelected
   - DREditor.Editor.Toolbox.DuplicateScenesInFolder.replaceExisting
   - DREditor.Editor.Toolbox.DuplicateScenesInFolder.sceneTemplatePrefix
   - DREditor.Editor.Toolbox.DuplicateScenesInFolder.scenes
@@ -158,6 +158,31 @@ items:
     return:
       type: System.Collections.Generic.List{UnityEditor.SceneAsset}
     content.vb: Protected scenes As List(Of SceneAsset)
+- uid: DREditor.Editor.Toolbox.DuplicateScenesInFolder.VerifyFolderSelected
+  commentId: M:DREditor.Editor.Toolbox.DuplicateScenesInFolder.VerifyFolderSelected
+  id: VerifyFolderSelected
+  parent: DREditor.Editor.Toolbox.DuplicateScenesInFolder
+  langs:
+  - csharp
+  - vb
+  name: VerifyFolderSelected()
+  nameWithType: DuplicateScenesInFolder.VerifyFolderSelected()
+  fullName: DREditor.Editor.Toolbox.DuplicateScenesInFolder.VerifyFolderSelected()
+  type: Method
+  source:
+    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/DuplicateScenesInFolder.cs
+  assemblies:
+  - DREditor.Editor
+  namespace: DREditor.Editor.Toolbox
+  summary: ''
+  example: []
+  syntax:
+    content: public static bool VerifyFolderSelected()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function VerifyFolderSelected() As Boolean
+  overload: DREditor.Editor.Toolbox.DuplicateScenesInFolder.VerifyFolderSelected*
 - uid: DREditor.Editor.Toolbox.DuplicateScenesInFolder.OpenWizard
   commentId: M:DREditor.Editor.Toolbox.DuplicateScenesInFolder.OpenWizard
   id: OpenWizard
@@ -180,35 +205,6 @@ items:
     content: public static void OpenWizard()
     content.vb: Public Shared Sub OpenWizard()
   overload: DREditor.Editor.Toolbox.DuplicateScenesInFolder.OpenWizard*
-- uid: DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath(System.String)
-  commentId: M:DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath(System.String)
-  id: SetPath(System.String)
-  parent: DREditor.Editor.Toolbox.DuplicateScenesInFolder
-  langs:
-  - csharp
-  - vb
-  name: SetPath(string)
-  nameWithType: DuplicateScenesInFolder.SetPath(string)
-  fullName: DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath(string)
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Toolbox/DuplicateScenesInFolder.cs
-  assemblies:
-  - DREditor.Editor
-  namespace: DREditor.Editor.Toolbox
-  summary: ''
-  example: []
-  syntax:
-    content: public virtual void SetPath(string selectedFolderPath)
-    parameters:
-    - id: selectedFolderPath
-      type: System.String
-      description: ''
-    content.vb: Public Overridable Sub SetPath(selectedFolderPath As String)
-  overload: DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath*
-  nameWithType.vb: DuplicateScenesInFolder.SetPath(String)
-  fullName.vb: DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath(String)
-  name.vb: SetPath(String)
 - uid: DREditor.Editor.Toolbox.DuplicateScenesInFolder.OnEnableWizardValid
   commentId: M:DREditor.Editor.Toolbox.DuplicateScenesInFolder.OnEnableWizardValid
   id: OnEnableWizardValid
@@ -1428,6 +1424,13 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Editor.Toolbox.DuplicateScenesInFolder.VerifyFolderSelected*
+  commentId: Overload:DREditor.Editor.Toolbox.DuplicateScenesInFolder.VerifyFolderSelected
+  isExternal: true
+  href: DREditor.Editor.Toolbox.DuplicateScenesInFolder.html#DREditor_Editor_Toolbox_DuplicateScenesInFolder_VerifyFolderSelected
+  name: VerifyFolderSelected
+  nameWithType: DuplicateScenesInFolder.VerifyFolderSelected
+  fullName: DREditor.Editor.Toolbox.DuplicateScenesInFolder.VerifyFolderSelected
 - uid: DREditor.Editor.Toolbox.DuplicateScenesInFolder.OpenWizard*
   commentId: Overload:DREditor.Editor.Toolbox.DuplicateScenesInFolder.OpenWizard
   isExternal: true
@@ -1435,13 +1438,6 @@ references:
   name: OpenWizard
   nameWithType: DuplicateScenesInFolder.OpenWizard
   fullName: DREditor.Editor.Toolbox.DuplicateScenesInFolder.OpenWizard
-- uid: DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath*
-  commentId: Overload:DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath
-  isExternal: true
-  href: DREditor.Editor.Toolbox.DuplicateScenesInFolder.html#DREditor_Editor_Toolbox_DuplicateScenesInFolder_SetPath_System_String_
-  name: SetPath
-  nameWithType: DuplicateScenesInFolder.SetPath
-  fullName: DREditor.Editor.Toolbox.DuplicateScenesInFolder.SetPath
 - uid: DREditor.Editor.Toolbox.GenerateWizardBase.OnEnableWizardValid
   commentId: M:DREditor.Editor.Toolbox.GenerateWizardBase.OnEnableWizardValid
   parent: DREditor.Editor.Toolbox.GenerateWizardBase

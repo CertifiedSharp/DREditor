@@ -9,8 +9,8 @@ items:
   - DREditor.Editor.Utility.FolderUtility.GetAssetFolderPath(UnityEngine.Object)
   - DREditor.Editor.Utility.FolderUtility.ProjectFolderExists(System.String)
   - DREditor.Editor.Utility.FolderUtility.SelectFolderPanel(System.String,System.String,System.String@,System.Boolean)
-  - DREditor.Editor.Utility.FolderUtility.SelectedObjectIsFolder
   - DREditor.Editor.Utility.FolderUtility.TryCreateFolder(System.String@,System.String)
+  - DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath(System.String@)
   langs:
   - csharp
   - vb
@@ -166,16 +166,16 @@ items:
   nameWithType.vb: FolderUtility.CreateIntermediateFolders(String)
   fullName.vb: DREditor.Editor.Utility.FolderUtility.CreateIntermediateFolders(String)
   name.vb: CreateIntermediateFolders(String)
-- uid: DREditor.Editor.Utility.FolderUtility.SelectedObjectIsFolder
-  commentId: M:DREditor.Editor.Utility.FolderUtility.SelectedObjectIsFolder
-  id: SelectedObjectIsFolder
+- uid: DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath(System.String@)
+  commentId: M:DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath(System.String@)
+  id: TryGetSelectedFolderPath(System.String@)
   parent: DREditor.Editor.Utility.FolderUtility
   langs:
   - csharp
   - vb
-  name: SelectedObjectIsFolder()
-  nameWithType: FolderUtility.SelectedObjectIsFolder()
-  fullName: DREditor.Editor.Utility.FolderUtility.SelectedObjectIsFolder()
+  name: TryGetSelectedFolderPath(out string)
+  nameWithType: FolderUtility.TryGetSelectedFolderPath(out string)
+  fullName: DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath(out string)
   type: Method
   source:
     href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/Utility/FolderUtility.cs
@@ -185,12 +185,19 @@ items:
   summary: ''
   example: []
   syntax:
-    content: public static bool SelectedObjectIsFolder()
+    content: public static bool TryGetSelectedFolderPath(out string folderPath)
+    parameters:
+    - id: folderPath
+      type: System.String
+      description: ''
     return:
       type: System.Boolean
       description: ''
-    content.vb: Public Shared Function SelectedObjectIsFolder() As Boolean
-  overload: DREditor.Editor.Utility.FolderUtility.SelectedObjectIsFolder*
+    content.vb: Public Shared Function TryGetSelectedFolderPath(folderPath As String) As Boolean
+  overload: DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath*
+  nameWithType.vb: FolderUtility.TryGetSelectedFolderPath(String)
+  fullName.vb: DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath(String)
+  name.vb: TryGetSelectedFolderPath(String)
 - uid: DREditor.Editor.Utility.FolderUtility.SelectFolderPanel(System.String,System.String,System.String@,System.Boolean)
   commentId: M:DREditor.Editor.Utility.FolderUtility.SelectFolderPanel(System.String,System.String,System.String@,System.Boolean)
   id: SelectFolderPanel(System.String,System.String,System.String@,System.Boolean)
@@ -562,13 +569,13 @@ references:
   name: CreateIntermediateFolders
   nameWithType: FolderUtility.CreateIntermediateFolders
   fullName: DREditor.Editor.Utility.FolderUtility.CreateIntermediateFolders
-- uid: DREditor.Editor.Utility.FolderUtility.SelectedObjectIsFolder*
-  commentId: Overload:DREditor.Editor.Utility.FolderUtility.SelectedObjectIsFolder
+- uid: DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath*
+  commentId: Overload:DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath
   isExternal: true
-  href: DREditor.Editor.Utility.FolderUtility.html#DREditor_Editor_Utility_FolderUtility_SelectedObjectIsFolder
-  name: SelectedObjectIsFolder
-  nameWithType: FolderUtility.SelectedObjectIsFolder
-  fullName: DREditor.Editor.Utility.FolderUtility.SelectedObjectIsFolder
+  href: DREditor.Editor.Utility.FolderUtility.html#DREditor_Editor_Utility_FolderUtility_TryGetSelectedFolderPath_System_String__
+  name: TryGetSelectedFolderPath
+  nameWithType: FolderUtility.TryGetSelectedFolderPath
+  fullName: DREditor.Editor.Utility.FolderUtility.TryGetSelectedFolderPath
 - uid: DREditor.Editor.Utility.FolderUtility.SelectFolderPanel*
   commentId: Overload:DREditor.Editor.Utility.FolderUtility.SelectFolderPanel
   isExternal: true

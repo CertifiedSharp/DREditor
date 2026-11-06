@@ -6,20 +6,16 @@ items:
   parent: DREditor.Editor.PackageManaging
   children:
   - DREditor.Editor.PackageManaging.PackageInstallerWizard.#ctor
-  - DREditor.Editor.PackageManaging.PackageInstallerWizard.AllPackagesInstalled
-  - DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateImporter
   - DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateRequest
   - DREditor.Editor.PackageManaging.PackageInstallerWizard.DisplaySampleImporter
-  - DREditor.Editor.PackageManaging.PackageInstallerWizard.GetNextInstallRequest
+  - DREditor.Editor.PackageManaging.PackageInstallerWizard.GetPackageNamesToInstall
   - DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames
-  - DREditor.Editor.PackageManaging.PackageInstallerWizard.ImportNextPackage
   - DREditor.Editor.PackageManaging.PackageInstallerWizard.InitializePackagesToInstall
-  - DREditor.Editor.PackageManaging.PackageInstallerWizard.OnAllPackagesInstalled
+  - DREditor.Editor.PackageManaging.PackageInstallerWizard.InstallPackages
   - DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
   - DREditor.Editor.PackageManaging.PackageInstallerWizard.OnRetrievingPackagesSucceded
-  - DREditor.Editor.PackageManaging.PackageInstallerWizard.ProcessNextInstallation
-  - DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToInstall
-  - DREditor.Editor.PackageManaging.PackageInstallerWizard.packagesToInstall
+  - DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToDownload
+  - DREditor.Editor.PackageManaging.PackageInstallerWizard.packageNames
   - DREditor.Editor.PackageManaging.PackageInstallerWizard.targetSearchTerm
   langs:
   - csharp
@@ -79,16 +75,16 @@ items:
     return:
       type: System.String
     content.vb: Protected targetSearchTerm As String
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.packagesToInstall
-  commentId: F:DREditor.Editor.PackageManaging.PackageInstallerWizard.packagesToInstall
-  id: packagesToInstall
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.packageNames
+  commentId: F:DREditor.Editor.PackageManaging.PackageInstallerWizard.packageNames
+  id: packageNames
   parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
   langs:
   - csharp
   - vb
-  name: packagesToInstall
-  nameWithType: PackageInstallerWizard.packagesToInstall
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.packagesToInstall
+  name: packageNames
+  nameWithType: PackageInstallerWizard.packageNames
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.packageNames
   type: Field
   source:
     href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
@@ -98,10 +94,10 @@ items:
   summary: ''
   example: []
   syntax:
-    content: protected Queue<string> packagesToInstall
+    content: protected string[] packageNames
     return:
-      type: System.Collections.Generic.Queue{System.String}
-    content.vb: Protected packagesToInstall As Queue(Of String)
+      type: System.String[]
+    content.vb: Protected packageNames As String()
 - uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.DisplaySampleImporter
   commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.DisplaySampleImporter
   id: DisplaySampleImporter
@@ -195,16 +191,16 @@ items:
     content: protected virtual void InitializePackagesToInstall()
     content.vb: Protected Overridable Sub InitializePackagesToInstall()
   overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.InitializePackagesToInstall*
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToInstall
-  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToInstall
-  id: ThereArePackagesToInstall
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetPackageNamesToInstall
+  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.GetPackageNamesToInstall
+  id: GetPackageNamesToInstall
   parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
   langs:
   - csharp
   - vb
-  name: ThereArePackagesToInstall()
-  nameWithType: PackageInstallerWizard.ThereArePackagesToInstall()
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToInstall()
+  name: GetPackageNamesToInstall()
+  nameWithType: PackageInstallerWizard.GetPackageNamesToInstall()
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetPackageNamesToInstall()
   type: Method
   source:
     href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
@@ -214,34 +210,12 @@ items:
   summary: ''
   example: []
   syntax:
-    content: protected virtual bool ThereArePackagesToInstall()
+    content: protected virtual IEnumerable<string> GetPackageNamesToInstall()
     return:
-      type: System.Boolean
+      type: System.Collections.Generic.IEnumerable{System.String}
       description: ''
-    content.vb: Protected Overridable Function ThereArePackagesToInstall() As Boolean
-  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToInstall*
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
-  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
-  id: OnNoPackagesToInstall
-  parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
-  langs:
-  - csharp
-  - vb
-  name: OnNoPackagesToInstall()
-  nameWithType: PackageInstallerWizard.OnNoPackagesToInstall()
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
-  assemblies:
-  - DREditor.Editor
-  namespace: DREditor.Editor.PackageManaging
-  summary: ''
-  example: []
-  syntax:
-    content: protected virtual void OnNoPackagesToInstall()
-    content.vb: Protected Overridable Sub OnNoPackagesToInstall()
-  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall*
+    content.vb: Protected Overridable Function GetPackageNamesToInstall() As IEnumerable(Of String)
+  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetPackageNamesToInstall*
 - uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames
   commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames
   id: GetTargetedPackageNames
@@ -267,16 +241,16 @@ items:
       description: ''
     content.vb: Protected Overridable Function GetTargetedPackageNames() As IEnumerable(Of String)
   overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames*
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.ProcessNextInstallation
-  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.ProcessNextInstallation
-  id: ProcessNextInstallation
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToDownload
+  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToDownload
+  id: ThereArePackagesToDownload
   parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
   langs:
   - csharp
   - vb
-  name: ProcessNextInstallation()
-  nameWithType: PackageInstallerWizard.ProcessNextInstallation()
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.ProcessNextInstallation()
+  name: ThereArePackagesToDownload()
+  nameWithType: PackageInstallerWizard.ThereArePackagesToDownload()
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToDownload()
   type: Method
   source:
     href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
@@ -286,44 +260,22 @@ items:
   summary: ''
   example: []
   syntax:
-    content: protected virtual void ProcessNextInstallation()
-    content.vb: Protected Overridable Sub ProcessNextInstallation()
-  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.ProcessNextInstallation*
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.AllPackagesInstalled
-  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.AllPackagesInstalled
-  id: AllPackagesInstalled
-  parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
-  langs:
-  - csharp
-  - vb
-  name: AllPackagesInstalled()
-  nameWithType: PackageInstallerWizard.AllPackagesInstalled()
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.AllPackagesInstalled()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
-  assemblies:
-  - DREditor.Editor
-  namespace: DREditor.Editor.PackageManaging
-  summary: ''
-  example: []
-  syntax:
-    content: protected virtual bool AllPackagesInstalled()
+    content: protected virtual bool ThereArePackagesToDownload()
     return:
       type: System.Boolean
       description: ''
-    content.vb: Protected Overridable Function AllPackagesInstalled() As Boolean
-  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.AllPackagesInstalled*
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnAllPackagesInstalled
-  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.OnAllPackagesInstalled
-  id: OnAllPackagesInstalled
+    content.vb: Protected Overridable Function ThereArePackagesToDownload() As Boolean
+  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToDownload*
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.InstallPackages
+  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.InstallPackages
+  id: InstallPackages
   parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
   langs:
   - csharp
   - vb
-  name: OnAllPackagesInstalled()
-  nameWithType: PackageInstallerWizard.OnAllPackagesInstalled()
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnAllPackagesInstalled()
+  name: InstallPackages()
+  nameWithType: PackageInstallerWizard.InstallPackages()
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.InstallPackages()
   type: Method
   source:
     href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
@@ -333,19 +285,19 @@ items:
   summary: ''
   example: []
   syntax:
-    content: protected virtual void OnAllPackagesInstalled()
-    content.vb: Protected Overridable Sub OnAllPackagesInstalled()
-  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnAllPackagesInstalled*
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.ImportNextPackage
-  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.ImportNextPackage
-  id: ImportNextPackage
+    content: protected virtual void InstallPackages()
+    content.vb: Protected Overridable Sub InstallPackages()
+  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.InstallPackages*
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
+  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
+  id: OnNoPackagesToInstall
   parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
   langs:
   - csharp
   - vb
-  name: ImportNextPackage()
-  nameWithType: PackageInstallerWizard.ImportNextPackage()
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.ImportNextPackage()
+  name: OnNoPackagesToInstall()
+  nameWithType: PackageInstallerWizard.OnNoPackagesToInstall()
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall()
   type: Method
   source:
     href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
@@ -355,59 +307,9 @@ items:
   summary: ''
   example: []
   syntax:
-    content: protected virtual void ImportNextPackage()
-    content.vb: Protected Overridable Sub ImportNextPackage()
-  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.ImportNextPackage*
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateImporter
-  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateImporter
-  id: CreateImporter
-  parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
-  langs:
-  - csharp
-  - vb
-  name: CreateImporter()
-  nameWithType: PackageInstallerWizard.CreateImporter()
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateImporter()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
-  assemblies:
-  - DREditor.Editor
-  namespace: DREditor.Editor.PackageManaging
-  summary: ''
-  example: []
-  syntax:
-    content: protected virtual PackageRequester<PackageInfo> CreateImporter()
-    return:
-      type: DREditor.Editor.PackageManaging.PackageRequester{UnityEditor.PackageManager.PackageInfo}
-      description: ''
-    content.vb: Protected Overridable Function CreateImporter() As PackageRequester(Of PackageInfo)
-  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateImporter*
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetNextInstallRequest
-  commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.GetNextInstallRequest
-  id: GetNextInstallRequest
-  parent: DREditor.Editor.PackageManaging.PackageInstallerWizard
-  langs:
-  - csharp
-  - vb
-  name: GetNextInstallRequest()
-  nameWithType: PackageInstallerWizard.GetNextInstallRequest()
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetNextInstallRequest()
-  type: Method
-  source:
-    href: https://github.com/CertifiedSharp/DRETesting/blob/0f4fc9272e85a282adb54396462acfadc16bc5bf/Assets/DREditor/Packages/DREditor/Scripts/Editor/PackageManaging/PackageInstallerWizard.cs
-  assemblies:
-  - DREditor.Editor
-  namespace: DREditor.Editor.PackageManaging
-  summary: ''
-  example: []
-  syntax:
-    content: protected virtual AddRequest GetNextInstallRequest()
-    return:
-      type: UnityEditor.PackageManager.Requests.AddRequest
-      description: ''
-    content.vb: Protected Overridable Function GetNextInstallRequest() As AddRequest
-  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetNextInstallRequest*
+    content: protected virtual void OnNoPackagesToInstall()
+    content.vb: Protected Overridable Sub OnNoPackagesToInstall()
+  overload: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall*
 - uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.#ctor
   commentId: M:DREditor.Editor.PackageManaging.PackageInstallerWizard.#ctor
   id: '#ctor'
@@ -1290,106 +1192,29 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: System.Collections.Generic.Queue{System.String}
-  commentId: T:System.Collections.Generic.Queue{System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.Queue`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
-  name: Queue<string>
-  nameWithType: Queue<string>
-  fullName: System.Collections.Generic.Queue<string>
-  nameWithType.vb: Queue(Of String)
-  fullName.vb: System.Collections.Generic.Queue(Of String)
-  name.vb: Queue(Of String)
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
   spec.csharp:
-  - uid: System.Collections.Generic.Queue`1
-    name: Queue
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
-  - name: <
   - uid: System.String
     name: string
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '>'
+  - name: '['
+  - name: ']'
   spec.vb:
-  - uid: System.Collections.Generic.Queue`1
-    name: Queue
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
-  - name: (
-  - name: Of
-  - name: " "
   - uid: System.String
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-- uid: System.Collections.Generic.Queue`1
-  commentId: T:System.Collections.Generic.Queue`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
-  name: Queue<T>
-  nameWithType: Queue<T>
-  fullName: System.Collections.Generic.Queue<T>
-  nameWithType.vb: Queue(Of T)
-  fullName.vb: System.Collections.Generic.Queue(Of T)
-  name.vb: Queue(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.Queue`1
-    name: Queue
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.Queue`1
-    name: Queue
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
   - name: (
-  - name: Of
-  - name: " "
-  - name: T
   - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.DisplaySampleImporter*
   commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.DisplaySampleImporter
   isExternal: true
@@ -1474,38 +1299,13 @@ references:
   name: InitializePackagesToInstall
   nameWithType: PackageInstallerWizard.InitializePackagesToInstall
   fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.InitializePackagesToInstall
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToInstall*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToInstall
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetPackageNamesToInstall*
+  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.GetPackageNamesToInstall
   isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_ThereArePackagesToInstall
-  name: ThereArePackagesToInstall
-  nameWithType: PackageInstallerWizard.ThereArePackagesToInstall
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToInstall
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
-  isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_OnNoPackagesToInstall
-  name: OnNoPackagesToInstall
-  nameWithType: PackageInstallerWizard.OnNoPackagesToInstall
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames
-  isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_GetTargetedPackageNames
-  name: GetTargetedPackageNames
-  nameWithType: PackageInstallerWizard.GetTargetedPackageNames
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames
+  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_GetPackageNamesToInstall
+  name: GetPackageNamesToInstall
+  nameWithType: PackageInstallerWizard.GetPackageNamesToInstall
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetPackageNamesToInstall
 - uid: System.Collections.Generic.IEnumerable{System.String}
   commentId: T:System.Collections.Generic.IEnumerable{System.String}
   parent: System.Collections.Generic
@@ -1569,114 +1369,82 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.ProcessNextInstallation*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.ProcessNextInstallation
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_ProcessNextInstallation
-  name: ProcessNextInstallation
-  nameWithType: PackageInstallerWizard.ProcessNextInstallation
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.ProcessNextInstallation
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.AllPackagesInstalled*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.AllPackagesInstalled
-  isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_AllPackagesInstalled
-  name: AllPackagesInstalled
-  nameWithType: PackageInstallerWizard.AllPackagesInstalled
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.AllPackagesInstalled
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnAllPackagesInstalled*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.OnAllPackagesInstalled
-  isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_OnAllPackagesInstalled
-  name: OnAllPackagesInstalled
-  nameWithType: PackageInstallerWizard.OnAllPackagesInstalled
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnAllPackagesInstalled
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.ImportNextPackage*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.ImportNextPackage
-  isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_ImportNextPackage
-  name: ImportNextPackage
-  nameWithType: PackageInstallerWizard.ImportNextPackage
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.ImportNextPackage
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateImporter*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateImporter
-  isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_CreateImporter
-  name: CreateImporter
-  nameWithType: PackageInstallerWizard.CreateImporter
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.CreateImporter
-- uid: DREditor.Editor.PackageManaging.PackageRequester{UnityEditor.PackageManager.PackageInfo}
-  commentId: T:DREditor.Editor.PackageManaging.PackageRequester{UnityEditor.PackageManager.PackageInfo}
-  parent: DREditor.Editor.PackageManaging
-  definition: DREditor.Editor.PackageManaging.PackageRequester`1
-  href: DREditor.Editor.PackageManaging.PackageRequester-1.html
-  name: PackageRequester<PackageInfo>
-  nameWithType: PackageRequester<PackageInfo>
-  fullName: DREditor.Editor.PackageManaging.PackageRequester<UnityEditor.PackageManager.PackageInfo>
-  nameWithType.vb: PackageRequester(Of PackageInfo)
-  fullName.vb: DREditor.Editor.PackageManaging.PackageRequester(Of UnityEditor.PackageManager.PackageInfo)
-  name.vb: PackageRequester(Of PackageInfo)
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
   spec.csharp:
-  - uid: DREditor.Editor.PackageManaging.PackageRequester`1
-    name: PackageRequester
+  - uid: System
+    name: System
     isExternal: true
-    href: DREditor.Editor.PackageManaging.PackageRequester-1.html
-  - name: <
-  - uid: UnityEditor.PackageManager.PackageInfo
-    name: PackageInfo
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
     isExternal: true
-  - name: '>'
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
   spec.vb:
-  - uid: DREditor.Editor.PackageManaging.PackageRequester`1
-    name: PackageRequester
+  - uid: System
+    name: System
     isExternal: true
-    href: DREditor.Editor.PackageManaging.PackageRequester-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: UnityEditor.PackageManager.PackageInfo
-    name: PackageInfo
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
     isExternal: true
-  - name: )
-- uid: DREditor.Editor.PackageManaging.PackageRequester`1
-  commentId: T:DREditor.Editor.PackageManaging.PackageRequester`1
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames*
+  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames
   isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageRequester-1.html
-  name: PackageRequester<T>
-  nameWithType: PackageRequester<T>
-  fullName: DREditor.Editor.PackageManaging.PackageRequester<T>
-  nameWithType.vb: PackageRequester(Of T)
-  fullName.vb: DREditor.Editor.PackageManaging.PackageRequester(Of T)
-  name.vb: PackageRequester(Of T)
-  spec.csharp:
-  - uid: DREditor.Editor.PackageManaging.PackageRequester`1
-    name: PackageRequester
-    isExternal: true
-    href: DREditor.Editor.PackageManaging.PackageRequester-1.html
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: DREditor.Editor.PackageManaging.PackageRequester`1
-    name: PackageRequester
-    isExternal: true
-    href: DREditor.Editor.PackageManaging.PackageRequester-1.html
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetNextInstallRequest*
-  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.GetNextInstallRequest
+  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_GetTargetedPackageNames
+  name: GetTargetedPackageNames
+  nameWithType: PackageInstallerWizard.GetTargetedPackageNames
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetTargetedPackageNames
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToDownload*
+  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToDownload
   isExternal: true
-  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_GetNextInstallRequest
-  name: GetNextInstallRequest
-  nameWithType: PackageInstallerWizard.GetNextInstallRequest
-  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.GetNextInstallRequest
-- uid: UnityEditor.PackageManager.Requests.AddRequest
+  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_ThereArePackagesToDownload
+  name: ThereArePackagesToDownload
+  nameWithType: PackageInstallerWizard.ThereArePackagesToDownload
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.ThereArePackagesToDownload
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
-  name: AddRequest
-  nameWithType: AddRequest
-  fullName: UnityEditor.PackageManager.Requests.AddRequest
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.InstallPackages*
+  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.InstallPackages
+  isExternal: true
+  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_InstallPackages
+  name: InstallPackages
+  nameWithType: PackageInstallerWizard.InstallPackages
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.InstallPackages
+- uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall*
+  commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
+  isExternal: true
+  href: DREditor.Editor.PackageManaging.PackageInstallerWizard.html#DREditor_Editor_PackageManaging_PackageInstallerWizard_OnNoPackagesToInstall
+  name: OnNoPackagesToInstall
+  nameWithType: PackageInstallerWizard.OnNoPackagesToInstall
+  fullName: DREditor.Editor.PackageManaging.PackageInstallerWizard.OnNoPackagesToInstall
 - uid: DREditor.Editor.PackageManaging.PackageInstallerWizard.#ctor*
   commentId: Overload:DREditor.Editor.PackageManaging.PackageInstallerWizard.#ctor
   isExternal: true
