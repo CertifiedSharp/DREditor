@@ -1,4 +1,4 @@
-//Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
+//Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For DREditor
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -247,6 +247,8 @@ namespace DREditor.Editor.Dependencies
             base.OnPostImport();
 
             UpdateGitIgnore();
+
+            StudioEventEmitterPatcher.PatchStudioEventEmitter();
 
             EditorUtility.DisplayDialog("Import Instructions",
                 "REPORT: FMOD Dependency Installation should now be complete.",
