@@ -15,6 +15,7 @@ These are the steps to follow _after_ completing the process the dependency mana
 - Click the 3 dots to the right. 
 - Click "Show in explorer" 
 - You're going to look for a file called .gitignore and open it.
+- Read your .gitignore file first, if you see the words FMOD at all towards the bottom, then you can skip this step.
 - Make a new line at the very bottom of the file, and paste what you copied earlier.
 - Ctrl + s to save (or just File/Save)
 
