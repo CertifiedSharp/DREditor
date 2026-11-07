@@ -40,7 +40,7 @@ namespace DREditor.Actors
         /// <summary>
         ///
         /// </summary>
-        protected IDialogueManager dialogueManager = null;
+        protected IDialogueEnder[] dialogueEnders = null;
 
 
         /// <summary>
@@ -55,10 +55,11 @@ namespace DREditor.Actors
                 RegisterService<IObjectPooler<Talkable>>(this);
             }
 
-            dialogueManager = ServiceLocator.GetService<IDialogueManager>();
+            dialogueEnders = ServiceLocator.GetService<IDialogueManager>()?.GetComponentsInChildren<IDialogueEnder>();
 
-            if (dialogueManager != null)
-                dialogueManager.GetEnder().OnDialogueResolving += SetStartObjectNull;
+            foreach (var ender in dialogueEnders)
+                if (ender != null)
+                    ender.OnDialogueResolving += SetStartObjectNull;
         }
 
         /// <summary>
@@ -80,8 +81,9 @@ namespace DREditor.Actors
         /// </summary>
         protected virtual void OnDisable()
         {
-            if (dialogueManager != null)
-                dialogueManager.GetEnder().OnDialogueResolving -= SetStartObjectNull;
+            foreach (var ender in dialogueEnders)
+                if (ender != null)
+                    ender.OnDialogueResolving -= SetStartObjectNull;
         }
 
 

@@ -62,6 +62,8 @@ namespace DREditor.Dialogues.Implementation
 
             yield return ResolveDialogueComponents();
 
+            ResolveDialogueEventHandler();
+
             yield return InstantDialogueFinisher.FinishDialogueRoutine(finishDialogue);
 
             UnityEngine.Debug.Log($"REPORT: {ToString()}: Instant dialogue has resolved.");
