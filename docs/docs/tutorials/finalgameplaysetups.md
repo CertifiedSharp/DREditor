@@ -1,7 +1,11 @@
 # Final Gameplay Setups
 ## Set up Gates
 - In the room you wish to start your games dialogue in, go to DREditor/Gates/Auto Setup Gate.
-- Scriptable Object Assigner For the Gate Database
+- Make sure you're in your GYM_Dialogue scene.
+- DREditor/Utility/Scriptable Object Assigner
+- There will be a list field for scriptable objects. Click the + button and fill it in with your database. 
+- Click "Assign to All Components in Scenes".
+- Ctrl + s to save your scene.
 
 ## Set up Progression
 - Create a new Folder in Resources called "Progression" 
@@ -11,7 +15,11 @@
 - Create Objectives with O0_Dialogue or whatever naming convention you're comfortable with. 
 - Create a new flag with whatever naming convention. 
 - Plug the Prologue chapter into the progression database. 
-- Scriptable Object Assigner For the Progression Database
+- Make sure you're in your GYM_Dialogue scene.
+- DREditor/Utility/Scriptable Object Assigner
+- There will be a list field for scriptable objects. Click the + button and fill it in with your database. 
+- Click "Assign to All Components in Scenes".
+- Ctrl + s to save your scene.
 
 
 ## Creating the Tutorial Character
