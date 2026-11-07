@@ -23,7 +23,7 @@ These are the steps to follow _after_ completing the process the dependency mana
 - Go to: Window/TextMeshPro/Import TMP Essential Resources
 - Go to: Window/TextMeshPro/Import TMP Examples and Extras
 
-## Import Packages and Samples
+## Import Packages and Samples/Templates
 - At this point, commit all the changes logged on your github desktop. 
 - DREditor/Import/Packages en masse . This will download all the available packages for DREditor to your project. Otherwise, you can manually add the pieces you want. Then you can import the templates from samples.
 - If you are still recieving EPERM: operation not permitted then you need to close unity hub, unity, and git hub desktop and then reopen them.
@@ -43,3 +43,7 @@ These are the steps to follow _after_ completing the process the dependency mana
 ## Updating DREditor
 - At the top go to DREditor/Dependencies/Update Package Wizard 
 - Click Update
+
+## Updating DREditor Samples/Templates
+- After updating DREditor, go to DREditor/Import/Samples via Search and click import. 
+- The process should automatically update your existing samples.
