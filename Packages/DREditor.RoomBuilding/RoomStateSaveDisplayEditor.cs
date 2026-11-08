@@ -54,17 +54,7 @@ namespace DREditor.RoomBuilding
                 createAsset = true;
             }
 
-            string dataAssetPath = path.Replace(".asset", "");
-
-            UnityEngine.Debug.Log(path);
-
-            foreach (var saver in manager.savers)
-                if (saver != null &&
-                    saver.SaveDataAsset(dataAssetPath) is ScriptableObject saverDataAsset &&
-                    data.dataStates.Where(state => state.name == saverDataAsset.name).Count() == 0)
-                    data.dataStates.Add(saverDataAsset);
-
-            data.dataStates.RemoveAll(state => string.IsNullOrEmpty(state.name));
+            CreateRoomStateAssets(pValue, path, data);
 
             if (createAsset)
             {
@@ -79,6 +69,27 @@ namespace DREditor.RoomBuilding
             AssetDatabase.SaveAssets();
 
             return data;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pValue"></param>
+        /// <param name="path"></param>
+        /// <param name="data"></param>
+        protected virtual void CreateRoomStateAssets(Objective pValue, string path, RoomStateData data)
+        {
+            string dataAssetPath = path.Replace(".asset", "");
+
+            UnityEngine.Debug.Log(path);
+
+            foreach (var saver in manager.savers)
+                if (saver != null &&
+                    saver.SaveDataAsset(dataAssetPath) is ScriptableObject saverDataAsset &&
+                    data.dataStates.Where(state => state.name == saverDataAsset.name).Count() == 0)
+                    data.dataStates.Add(saverDataAsset);
+
+            data.dataStates.RemoveAll(state => string.IsNullOrEmpty(state.name));
         }
 
         /// <summary>
