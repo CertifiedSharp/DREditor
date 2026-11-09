@@ -60,10 +60,16 @@ namespace DREditor.Choices
         [SerializeField] protected ChoiceSaveHandler choiceSaveHandler = null;
 
         /// <summary>
-        ///
+        /// Time in seconds waited before displaying the choice UI.
         /// </summary>
-        [Tooltip("")]
+        [Tooltip("Time in seconds waited before displaying the choice UI.")]
         [SerializeField] protected float displayChoiceBufferTime = 0.3f;
+
+        /// <summary>
+        /// Time in seconds waited after displaying the choice UI before selecting the first choice option.
+        /// </summary>
+        [Tooltip("Time in seconds waited after displaying the choice UI before selecting the first choice option.")]
+        [SerializeField] protected float postDisplayBufferTime = 0;
 
         /// <summary>
         ///
@@ -131,6 +137,8 @@ namespace DREditor.Choices
             }
 
             OnChoiceStarted?.Invoke();
+
+            yield return new WaitForSeconds(postDisplayBufferTime);
 
             EventSystem.current.SetSelectedGameObject(choiceOptions[0].gameObject);
 
