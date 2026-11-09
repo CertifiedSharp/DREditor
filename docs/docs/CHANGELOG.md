@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.11] - 2026-11-9
+### [Added]
+- New option on ChoiceManager.cs ```postDisplayBufferTime``` indicating the: Time in seconds waited after displaying the choice UI before selecting the first choice option. In order to give more control to specifically when the First Choice UI Option is selected. To additionally help so that players don't accidentally click on a choice just trying to skip through text.
+### [Fixed]
+- Fixed an issue where importing all packages before FMOD is installed (Normally this scenario technically never even happens) would lock up the editor with an error. Issue was caused by Visual Studios Intellisense mistakenly inserting un-needed using statements on MusicManager.cs during a fix made in 0.1.10.
+- Updated the Choice_UI_Template to skip selection so that players don't accidentally click on a choice just trying to skip through text.
+
 ## [0.1.10] - 2026-11-7
 ### [Added]
 - Added StudioEventEmitterPatcher.cs to fix a bug in the FMOD StudioEventEmitter script where it only plays the first track ever played. If you installed DREditor before Version 0.1.10, then you can call this patch from: DREditor/Dependencies/FMOD/Patch StudioEventEmitter to apply this patch to your project. 
