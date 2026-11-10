@@ -1,11 +1,11 @@
 # Truth Bullets
 ## Importing Truth Bullets
-The Syntax for importing a truth bullet with its description is:
+The Syntax for importing truth bullets with its description is:
 
-TruthBulletName
+TruthBulletName <br/>
 //Description
 
-TruthBulletName
+TruthBulletName <br/>
 //Description
 
 - Menu Item: DREditor/Import/Truth Bullets
