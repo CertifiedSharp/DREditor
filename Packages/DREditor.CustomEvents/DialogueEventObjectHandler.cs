@@ -10,7 +10,7 @@ namespace DREditor.CustomEvents
     /// </summary>
     [ClassHeader(nameof(CustomDialogueEventHandler) +
         "\n\n")]
-    [CustomDialogueEvent("")]
+    [CustomDialogueEvent("SpawnObject", typeof(GameObjectCapsulate))]
     public class DialogueEventObjectHandler : CustomDialogueEventHandler
     {
         /// <inheritdoc/>

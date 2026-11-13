@@ -7,7 +7,7 @@ namespace DREditor.Maps
     /// <summary>
     ///
     /// </summary>
-    [CustomDialogueEvent("")]
+    [CustomDialogueEvent("MapEntryChange", typeof(MapEntryChange))]
     [ClassHeader(nameof(DialogueEventHandler) + 
         "\n\n")]
     public class MapEntryChanger : DialogueEventHandler

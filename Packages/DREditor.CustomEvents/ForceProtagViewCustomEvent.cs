@@ -9,7 +9,7 @@ namespace DREditor.CustomEvents
     /// <summary>
     ///
     /// </summary>
-    [CustomDialogueEvent("")]
+    [CustomDialogueEvent("ForceProtagView", typeof(BoolCapsulate), "Assert Protag Window to: ")]
     [ClassHeader(nameof(CustomDialogueEventHandler) +
         "\n\n")]
     public class ForceProtagViewCustomEvent : CustomDialogueEventHandler

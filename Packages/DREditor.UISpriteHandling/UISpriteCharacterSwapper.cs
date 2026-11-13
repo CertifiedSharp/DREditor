@@ -11,7 +11,7 @@ namespace DREditor.UISpriteHandling
     ///
     /// </summary>
     /// <remarks></remarks>
-    [CustomDialogueEvent("")]
+    [CustomDialogueEvent("SwapProtagWindowUISprite", typeof(ChangeUISpriteEventData))]
     [ClassHeader(nameof(DialogueEventHandler) + ", " + nameof(IDRESaveable) + ", " + nameof(IDRELoadable) +
         "\n\n")]
     public class UISpriteCharacterSwapper : DialogueEventHandler, IDRESaveable, IDRELoadable
