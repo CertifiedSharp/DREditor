@@ -68,8 +68,3 @@
 - Open up your newly made prefab variant. Under the Spawnable Component, to the left there are 3 dots, once clicked, you should see an option that says "Initialize Destroy Call" click it.
 - Ctrl + S to save.
 - Now you can use DRE\_Start\_Alone\_Scene in a Room Save.
-
-## Triggering a Progression Flag From Dialogue
-- Click on your dialogue asset and scroll to the very bottom. 
-- Click the "Trigger Flag" Button
-- Here you can select what flags you want to set as triggered once the dialogue ends.
