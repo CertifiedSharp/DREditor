@@ -16,6 +16,6 @@ It is suggested that you follow these in the order they are listed. There are al
 - [Selectable Items](https://dreditor.net/docs/tutorials/selectableitems.html)
 - [Starting an Investigation](https://dreditor.net/docs/tutorials/startinginvestigation.html)
 - [Triggers](https://dreditor.net/docs/tutorials/triggers.html)
-- [Trials](https://dreditor.net/docs/tutorials/trialstutorial.html)
 - [States](https://dreditor.net/docs/tutorials/states.html)
-- [Non-Stop Debate](https://dreditor.net/docs/tutorials/nsdtutorial.html)
+- [Trials](https://dreditor.net/docs/tutorials/trialstutorial.html)
+    + [Non-Stop Debate](https://dreditor.net/docs/tutorials/trials/nsdtutorial.html)
