@@ -1,4 +1,4 @@
-# Starting a Prologue
+# Room Building
 ## Setting up the Room State Manager
 - Search in the project window for the Room\_State\_Manager and put it into the scene, make sure it's position is 0,0,0.
 - Right Click Room\_State\_Manager: DREditor/Create Project Prefab Variant.
@@ -6,19 +6,6 @@
 - Select "Actor" in the hierarchy.
 - Fill out the Character Database field.
 - Ctrl + S to save.
-
-## Setting up the Starting Dialogue for a Game
-- In the project window search bar, type: DRE\_Start\_Alone\_Scene
-- Click and drag it into your first area. 
-- Create a new Folder in your Dialogues folder call it "Prologue" to keep things organized. 
-- Create a starting Dialogue with Right Click: Create/DREditor/Dialogues/Dialogue.
-- Ensure that your Dialogue's first line must start with a CG, if you do not have one, feel free to use the black screen. To make a CG Event, you can do so by using the drop down under dialogue events under a dialogue line and select "CGDisplay". To end the CG on another line, simply add a CGDisplay event and don't fill it in. 
-- Once you complete your starting dialogue. Fill out the Starting Dialogue Field on the DRE\_Start\_Alone\_Scene.
-- In the inspector, select the "Add Component" button and type "Spawnable" and add that component to the game object. 
-- Right Click DRE\_Start\_Alone\_Scene: DREditor/Create Project Prefab Variant 
-- Open up your newly made prefab variant. Under the Spawnable Component, to the left there are 3 dots, once clicked, you should see an option that says "Initialize Destroy Call" click it.
-- Ctrl + S to save.
-- Now you can use DRE\_Start\_Alone\_Scene in a Room Save.
 
 ## Building a Room Save
 - On the Room State Manager, if you haven't already, Press the "Initialize Builder" Button.
@@ -40,11 +27,6 @@
 - Confirm the Overwrite.
 - Press the "Clear All" button. 
 - Ctrl + S to save the scene. 
-
-## Triggering a Progression Flag From Dialogue
-- Click on your dialogue asset and scroll to the very bottom. 
-- Click the "Trigger Flag" Button
-- Here you can select what flags you want to set as triggered once the dialogue ends.
 
 ## Rules of Thumb for making Objectives/Progression Per Chapter
 - The first objectives being daily life, and however many flags you need.

@@ -1,4 +1,4 @@
-# Final Gameplay Setups
+# Final Gameplay Setups / Starting a Prologue
 ## Set up Gates
 - In the room you wish to start your games dialogue in, go to DREditor/Gates/Auto Setup Gate.
 - Make sure you're in your GYM_Dialogue scene.
@@ -56,3 +56,20 @@
 - Right Click Controls\_UI\_Canvas\_ETemplate: DREditor/Create Project Prefab Variant
 - Right Click FTE\_Manager\_ETemplate: DREditor/Create Project Prefab Variant
 
+## Setting up the Starting Dialogue for a Game
+- In the project window search bar, type: DRE\_Start\_Alone\_Scene
+- Click and drag it into your first area. 
+- Create a new Folder in your Dialogues folder call it "Prologue" to keep things organized. 
+- Create a starting Dialogue with Right Click: Create/DREditor/Dialogues/Dialogue.
+- Ensure that your Dialogue's first line must start with a CG, if you do not have one, feel free to use the black screen. To make a CG Event, you can do so by using the drop down under dialogue events under a dialogue line and select "CGDisplay". To end the CG on another line, simply add a CGDisplay event and don't fill it in. 
+- Once you complete your starting dialogue. Fill out the Starting Dialogue Field on the DRE\_Start\_Alone\_Scene.
+- In the inspector, select the "Add Component" button and type "Spawnable" and add that component to the game object. 
+- Right Click DRE\_Start\_Alone\_Scene: DREditor/Create Project Prefab Variant 
+- Open up your newly made prefab variant. Under the Spawnable Component, to the left there are 3 dots, once clicked, you should see an option that says "Initialize Destroy Call" click it.
+- Ctrl + S to save.
+- Now you can use DRE\_Start\_Alone\_Scene in a Room Save.
+
+## Triggering a Progression Flag From Dialogue
+- Click on your dialogue asset and scroll to the very bottom. 
+- Click the "Trigger Flag" Button
+- Here you can select what flags you want to set as triggered once the dialogue ends.
