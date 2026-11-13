@@ -38,7 +38,7 @@
 **Note: It is recommended that builds only be exported until after your main menu has been set up.**
 
 - Top left menu item: File/Build Profiles
-- Make sure that the splash screen and main menu are the correct indexes according to ("Creating your Scene List")[https://dreditor.net/docs/tutorials/creatingscenelistbuilds.html#createing-your-scene-list]
+- Make sure that the splash screen and main menu are the correct indexes according to ["Creating your Scene List"](https://dreditor.net/docs/tutorials/creatingscenelistbuilds.html#createing-your-scene-list)
 - Click the Build button at the bottom.
 - Create a folder somewhere on your computer to house the build in. 
 - Select that folder in the window and click the Select Folder button.
