@@ -3,28 +3,29 @@ Dialogue Events are usually processed at the beginning of the line unless otherw
 
 ## Simple Dialogue Events
 Because Dialogue Events vary in complexity, in order to keep this page organized, dialogue events that can be explained simply will appear on this list.
-### **Kill Character**
+### Kill Character
 Adds the filled out first name of the character to register them as dead to the system. 
-### **CG Flash**
+### CG Flash
 If CG mode is active, Flashes a white overlay on the active CG.
-### **Unlock Chapter Select Scene**
+### Unlock Chapter Select Scene
 Sends the filled out chapter select point in time to the Chapter Select System to be unlocked on the players save file. 
 
 ```ALERT: Chapter Select System Documentation Unavailable.
 REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
-### **Cam To Position**
+
+### Cam To Position
 Animates the camera to the transform position of the GameObject in the scene, that matches the name sent. With an additional check box on whether to keep the game the currently speaking actors sprite mode active.
-### **Change Item Select**
+### Change Item Select
 Changes the selectability of an object in the scene by it's Game Object name.
-### **Object To Position**
+### Object To Position
 Moves a Game Object in the scene to the specified position (and rotation if specified).
-### **Shake Object**
+### Shake Object
 Shakes the Camera or the Current CG using the options provided.
-### **Show Item**
+### Show Item
 Will display the specified image sliding in using the Show\_Item\_Canvas\_ETemplate. 
-### **Sprite Flash**
+### Sprite Flash
 The current characters sprite will flash white.
-### **Trial Tutorial**
+### Trial Tutorial
 Tutorial Assets can be made, using this event is how you display these assets during gameplay. 
 
 ## Animation Event
