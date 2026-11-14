@@ -10,8 +10,8 @@ If CG mode is active, Flashes a white overlay on the active CG.
 ### Unlock Chapter Select Scene
 Sends the filled out chapter select point in time to the Chapter Select System to be unlocked on the players save file. 
 
-```ALERT: Chapter Select System Documentation Unavailable.
-REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
+```ALERT: Chapter Select System Documentation Unavailable.```
+```REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
 
 ### Cam To Position
 Animates the camera to the transform position of the GameObject in the scene, that matches the name sent. With an additional check box on whether to keep the game the currently speaking actors sprite mode active.
@@ -32,8 +32,8 @@ Tutorial Assets can be made, using this event is how you display these assets du
 Used for calling environmental animations during dialogue. Invokes a Dialogue Event that should correspond with a game object in the scene that has a AnimationEventHandler.cs script filled out. 
 The dialogue system will wait for the animation to finish before continuing dialogue. The "View Done" field is purely for visual debugging on whether the animation was considered finished.
 
-```ALERT: Animation Event Handler Documentation Unavailable.
-REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
+```ALERT: Animation Event Handler Documentation Unavailable.```
+```REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
 
 ## CG Display
 - **CG**: The image that will be displayed as the CG. 
