@@ -33,6 +33,7 @@ Used for calling environmental animations during dialogue. Invokes a Dialogue Ev
 The dialogue system will wait for the animation to finish before continuing dialogue. The "View Done" field is purely for visual debugging on whether the animation was considered finished.
 
 ```ALERT: Animation Event Handler Documentation Unavailable.```
+
 ```REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
 
 ## CG Display
@@ -72,8 +73,9 @@ Additionally the system already has some Native Custom Dialogue Events for you t
 - **Swap Protag Window UI Sprite**: Swaps the current protagonist, using Character UI Sprite Data so that the game knows how to display that specific character as the protagonist in the protag window. 
 - **Map Entry Change**: Updates the players Map, allowing you to outline what markers are at which places on the map. This process requires the Map System to be set up. 
 
-```ALERT: Map UI System Documentation Unavailable.
-REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
+```ALERT: Map UI System Documentation Unavailable.```
+
+```REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
 
 ## Faint Anim
 Applies a fainting animation onto the currently speaking character.
@@ -95,6 +97,7 @@ Moves the specified character to the outlined position and rotation.
 
 ## Screen Transitions
 ```ALERT: This event is outdated and unused by the system, and while currently obsolete, was considered useful enough to keep within the engine. If you want to use this event, you must program a script that listens to it.```
+
 ```ANALYSIS: This process will likely be applied to the DREditor.Fading/DREditor.Fading.Handling package during a rework of the core system.```
 
 ## Toggle Blur
@@ -111,8 +114,9 @@ Nearly all aspects of Video Display are like CG Display except for:
 Invokes Flair Events from the flair system, along with settings for invoking flairs. <br/>
 Flairs are overlayed visual effects on top of or near characters. With position usually taking the current actors head position into account. 
 
-```ALERT: Flair System Documentation Unavailable.
-REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
+```ALERT: Flair System Documentation Unavailable.```
+
+```REASON: At time of writing documentation no outside user recorded project has ever made it to this point in development. If you believe that your project has, please contact the project maintainer and documentation will be prepared for you and uploaded to this page.```
 
 ## Truth Bullet Get
 Adds the specified Truth Bullet to the players Truth Bullet Inventory using Truth\_Bullet\_Get\_Canvas\_Template and Truth\_Bullet\_Get\_Event\_Handler. Displaying to the player that they've received one. You should always have the Tutorial Character speaking during the line this event is called on.
