@@ -146,7 +146,7 @@ namespace DREditor.Editor.Dialogues
 
             base.DisplayButtons();
 
-            if (!dialogue.StartInvestigation.Enabled && GUILayout.Button("End Event", GUILayout.Width(100)))
+            if (!dialogue.StartInvestigation.Enabled && GUILayout.Button("Phase Change", GUILayout.Width(100)))
                 dialogue.StartInvestigation.SetEnabled(true);
         }
 

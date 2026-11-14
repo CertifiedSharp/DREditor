@@ -30,7 +30,7 @@ namespace DREditor.Editor.Dialogues
 
         public virtual void DisplayAddButton()
         {
-            if (endEvent != null && !endEvent.Enabled && GUILayout.Button("End Event", GUILayout.Width(100)))
+            if (endEvent != null && !endEvent.Enabled && GUILayout.Button("Custom Call", GUILayout.Width(100)))
                 endEvent.SetEnabled(true);
         }
 
