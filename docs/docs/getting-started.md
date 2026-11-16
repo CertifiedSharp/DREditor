@@ -84,6 +84,7 @@ Please be sure to follow each section **_in order._**
 - It'll give you a prompt just click close.
 - You can close out the project settings window. 
 - Go back to your package manager.
+- Check if you have the cinemachine package downloaded, make sure the version number is 2.10.7.
 - On the left most side, at the bottom you should see "DREditor" Under "My Registries". Click it.
 - Here you can download whatever DRE packages you need, for now, download the DREditor Core.
 - If you get an error that contains "EPERM: operation not permitted" then close unity and reopen your project. 
