@@ -16,7 +16,7 @@
 - The system will set your player position as the position to set the player when coming from that door from another scene. 
 
 ## Create a TPFD Door
-**In order for this system to work, you MUST complete the Leave Ask Dialogue Setup Process!**
+**In order for this system to work, you MUST complete the Leave Ask Dialogue Setup Process! However, don't add the Leave Ask Dialogue to doors! It's why the Leave ask process is separate!**
 
 - In the Hierarchy, Right click: Create Empty. Name it whatever.
 - Set the game object layer to the Door layer. 
@@ -43,6 +43,7 @@
 - You can now test moving from one area to the other in play mode.
 
 ## Lock Data
+- Locked Checkbox: If this is checked, then the door will stay permanently locked. Otherwise it will be treated as if it can be opened or unlocked.
 - Unlocked Dialogues: The conversation that plays once all the flags have been triggered. 
 - Flags: List of strings, copy the names of all the flags that need to be complete in order for the door to unlock. 
 - Locked Dialogues: The conversation that plays if all the flags are NOT triggered.
