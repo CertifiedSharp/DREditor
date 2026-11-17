@@ -9,11 +9,12 @@ Please stay up to date either in the discord or our social media in the event th
 - Remove Text mesh pro's examples and extras scripts
 - Re-import TMP by: Window/Text Mesh Pro/Import TMP Essentials.
 - Remove previous DREditor through file explorer 
+- If they are present in your assets folder delete the DOTween folder and the CharTweener folder.
 - Add new DREditor (preferably through file explorer as well but the UPM should work.)
 - Let it compile, then fix any errors on your project specific scripts. (if applicable)
 - If the dependency window shows up follow it's instructions. 
-- If they are present in your assets folder delete the DOTween folder and the CharTweener folder.
-- Tools/DREditor/Dependencies/Reset Dependencies
+- Afterwards, do the DREditor/Import/Packages en masse & DREditor/Import/Samples via Search
+- After those finish compiling, DREditor/Dependencies/Reset Dependencies
 - Go through the dependency set up process.
 - Commit changes to github.
 
@@ -21,20 +22,22 @@ Please stay up to date either in the discord or our social media in the event th
 - In any scene, place the Room_State_Manager prefab.
 - Hit the drop down and select Actor.
 - Fill it in with your Character Database, the list field below it should populate.
-- Rename it to Room_State_Manager_YOURPROJECTACRONYM Example: Room_State_Manager_EG
-- Drag your now named prefab into the project window. 
-- Turn it into a prefab variant.
+- Right click the Room_State_Manager in the hierarchy: DREditor/Create Project Prefab Variant
 - Commit changes to github.
-- Tools/Convert/Convert All Room Data Builders
+- Check all of your game scenes for errors and delete any outdated or red prefabs in the hierarchy.
+- DREditor/Convert/Convert All Room Data Builders
 - Commit changes to github.
-- Tools/Convert/Convert Scene Room Managers 
-- Fill in the field with your newly made Room_State_Manager_YOURPROJECTACRONYM
+- DREditor/Convert/Convert Scene Room Managers 
+- Click and drag your newly made Room_State_Manager_YOURPROJECTACRONYM into the field.
 - Press the button below.
 - Commit changes to github.
 
 ## Convert Doors
-- Tools/Scriptable Object Assigner
+- DREditor/Utility/Scriptable Object Assigner
 - Under Components just put the Door script.
+- When selecting the door script, there's an eyeball icon you need to uncheck in order to even select the door script.
+- Uncheck: This Scene Only
+- Check: Apply to Build Scenes Only
 - Under Scriptable Objects put these:
     - InLeaveProcess
     - HasMenuAccess
@@ -49,17 +52,19 @@ Please stay up to date either in the discord or our social media in the event th
 
 ## Actors
 - Select all actor prefab variants.
-- Click Tools/Convert/Actors/Update Selected Actor Display Names.
+- Click DREditor/Convert/Actors/Update Selected Actor Display Names.
 - Select all actor prefab variants again.
-- Click Tools/Convert/Actors/Update Selected Actor Colliders.
+- Click DREditor/Convert/Actors/Update Selected Actor Colliders.
+- It's okay if you get alerts, just ignore them and continue as normal.
 
 ## Convert Triggers
-- ONLY DO AFTER ALL ROOM DATA IS CONVERTED: Tools/Convert/Triggers/Convert All Trigger Assets.
+- ONLY DO AFTER ALL ROOM DATA IS CONVERTED: DREditor/Convert/Triggers/Convert All Trigger Assets.
+- Note: Not all triggers may convert properly therefore you may have to rebuild them by overwriting your room save. (Load room, build the trigger, overwrite room)
 - AFTER ALL TRIGGERS CONVERTED CHECK ALL OF THEM to ensure subsequents are actually the class that they are, as there has been an instance where a dialogue subsequent had it's type name correct but it's class was converted to a move player subsequent.
 - If you find this to be the case and need help contact Sweden for support.
 
 ## Convert Custom Dialogue Events
-- Tools/Convert/Replace Asset Text Editor
+- DREditor/Convert/Replace Dialogue Asset Text Editor
 - The lookfor and replacewith fields should already have what's necessary: 
 "ns: , asm: Assembly-CSharp" & "ns: DREditor.CustomEvents, asm: DREditor.CustomEvents"
 - So just click Convert.
@@ -69,7 +74,7 @@ Please stay up to date either in the discord or our social media in the event th
 - Click Update Reworked Dialogue Events.
 
 ## Convert Animation Events
-- Tools/Convert/Replace Asset Text Editor
+- DREditor/Convert/Replace Asset Text Editor
 - Look For: class: AnimationEvent, ns: , asm: DREditor
 - Replace With: class: AnimationEvent, ns: DREditor.Dialogues.Events, asm: DREditor
 
