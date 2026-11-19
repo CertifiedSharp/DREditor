@@ -1,6 +1,6 @@
 # Tutorials
 
-It is suggested that you follow these in the order they are listed. There are also Tutorials on the [Youtube Channel](https://www.youtube.com/@DREditor-Tool) if you need them.
+It is suggested that you follow these in the order they are listed.
 
 However, it should be noted that each sub section in the table of contents may not need to be followed in order, as the sub section pages are processes relevant to the parent category.
 
