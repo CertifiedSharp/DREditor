@@ -1,4 +1,5 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
+using DREditor.Processables;
 using DREditor.Saving;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,6 +35,13 @@ namespace DREditor.UI.RegulationRules
         ///
         /// </summary>
         protected IRegulationsUIRepository regulationsRepository;
+
+
+        protected virtual void Start()
+        {
+            if (regulationsDatabase is IInitializable initializable)
+                initializable.Initialize();
+        }
 
 
         /// <inheritdoc/>
@@ -91,6 +99,12 @@ namespace DREditor.UI.RegulationRules
                     $"Regulations will not save or load properly until this is corrected.");
 
             return regulationsDatabase is IRegulationsUIRepository;
+        }
+
+        protected virtual void OnDestroy()
+        {
+            if (regulationsDatabase is IResolvable resolvable)
+                resolvable.Resolve();
         }
     }
 }

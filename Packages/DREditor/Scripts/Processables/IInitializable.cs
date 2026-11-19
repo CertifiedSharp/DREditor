@@ -3,12 +3,12 @@
 namespace DREditor.Processables
 {
     /// <summary>
-    ///
+    /// Interface for objects or processes that can be initialized or have it's initial configuration set up.
     /// </summary>
     public interface IInitializable
     {
         /// <summary>
-        ///
+        /// Starts up this system's process or state.
         /// </summary>
         void Initialize();
     }

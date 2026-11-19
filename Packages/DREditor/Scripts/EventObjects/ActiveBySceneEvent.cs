@@ -11,7 +11,7 @@ namespace DREditor.EventObjects
     /// </summary>
     [Serializable]
     [CreateAssetMenu(menuName = "DREditor/Events/Active By Scene Event", fileName = "ActiveBySceneEvents")]
-    public class ActiveBySceneEvent : ScriptableObject, IEventInitializable
+    public class ActiveBySceneEvent : ScriptableObject, IInitializable, IResolvable
     {
         /// <summary>
         ///

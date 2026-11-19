@@ -8,7 +8,7 @@ namespace DREditor.UI.RegulationRules
     /// <summary>
     ///
     /// </summary>
-    public interface IRegulationsUIRepository : IEventInitializable
+    public interface IRegulationsUIRepository : IInitializable, IResolvable
     {
         /// <summary>
         ///

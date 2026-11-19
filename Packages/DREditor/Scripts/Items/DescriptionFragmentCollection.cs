@@ -1,13 +1,15 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
+using DREditor.Processables;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DREditor.Processables
+namespace DREditor.Items
 {
     /// <summary>
     ///
     /// </summary>
     [System.Serializable]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, "DREditor.Processables")]
     public class DescriptionFragmentCollection : IBuildableDescription
     {
         /// <summary>
