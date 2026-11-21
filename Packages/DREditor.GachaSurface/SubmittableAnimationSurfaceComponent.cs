@@ -11,7 +11,7 @@ namespace DREditor.GachaSurface
     /// <summary>
     ///
     /// </summary>
-    public abstract class SubmittableAnimationSurfaceComponent : SubmittableFTESurfaceComponent, IStartUpable
+    public abstract class SubmittableAnimationSurfaceComponent : SubmittableFTESurfaceComponent, IStartable
     {
         /// <summary>
         ///
@@ -27,7 +27,7 @@ namespace DREditor.GachaSurface
 
 
         /// <inheritdoc/>
-        public virtual void StartUp() => uiVisibilityComponent.Hide();
+        public virtual void StartProcess() => uiVisibilityComponent.Hide();
 
 
         /// <inheritdoc/>

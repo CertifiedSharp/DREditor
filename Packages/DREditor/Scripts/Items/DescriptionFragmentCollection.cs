@@ -6,18 +6,20 @@ using UnityEngine;
 namespace DREditor.Items
 {
     /// <summary>
-    ///
+    /// A collection of descriptions that combine with the base description to combine into one full description.
     /// </summary>
     [System.Serializable]
     [UnityEngine.Scripting.APIUpdating.MovedFrom(true, "DREditor.Processables")]
     public class DescriptionFragmentCollection : IBuildableDescription
     {
         /// <summary>
-        ///
+        /// The list of data fragments that make up a description. That inherit from <see cref="IDescriptionFragment"/>.
         /// </summary>
+        [Header(nameof(IBuildableDescription) +
+            "\n\nA collection of descriptions that combine with the base description to combine into one full description.\n")]
         [SerializeReference]
         [SelectType]
-        [Tooltip("")]
+        [Tooltip("The list of data fragments that make up a description. That inherit from " + nameof(IDescriptionFragment))]
         public List<IDescriptionFragment> fragments = new();
 
 

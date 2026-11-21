@@ -3,13 +3,13 @@
 namespace DREditor.Processables
 {
     /// <summary>
-    ///
+    /// Interface for a process that can be ended.
     /// </summary>
-    public interface IStartUpable
+    public interface IEndable
     {
         /// <summary>
-        ///
+        /// The designated end process for this scripts core functionality.
         /// </summary>
-        void StartUp();
+        void EndProcess();
     }
 }

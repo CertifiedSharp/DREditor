@@ -8,7 +8,7 @@ namespace DREditor.GachaSurface
     ///
     /// </summary>
     [ClassHeader(nameof(SubmittableAnimationSurfaceComponent) + ", " +
-        nameof(ISubmittable) + ", " + nameof(IStartUpable) + ", " + nameof(IItemRollerResponse) +
+        nameof(ISubmittable) + ", " + nameof(IStartable) + ", " + nameof(IItemRollerResponse) +
         "\n\n")]
     public class ItemRolledAnimationSurface : SubmittableAnimationSurfaceComponent, IItemRollerResponse
     {

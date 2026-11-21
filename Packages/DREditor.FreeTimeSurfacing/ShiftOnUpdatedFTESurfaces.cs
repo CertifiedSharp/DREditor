@@ -15,9 +15,9 @@ namespace DREditor.FreeTimeSurfacing
         /// <inheritdoc/>
         protected override void OnIndexUpdated(int from, int to)
         {
-            surfaceService?.GetSurfaceAt(from).InvokeFamily<IClosable>((component) => component?.Close());
+            surfaceService?.GetSurfaceAt(from).InvokeFamily<IEndable>((component) => component?.EndProcess());
 
-            surfaceService?.GetSurfaceAt(to).InvokeFamily<IStartUpable>((component) => component?.StartUp());
+            surfaceService?.GetSurfaceAt(to).InvokeFamily<IStartable>((component) => component?.StartProcess());
         }
     }
 }

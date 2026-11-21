@@ -3,13 +3,13 @@
 namespace DREditor.Processables
 {
     /// <summary>
-    ///
+    /// Interface for a process that can be started.
     /// </summary>
-    public interface IClosable
+    public interface IStartable
     {
         /// <summary>
-        ///
+        /// The designated start process for this scripts core functionality.
         /// </summary>
-        void Close();
+        void StartProcess();
     }
 }

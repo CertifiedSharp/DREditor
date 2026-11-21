@@ -8,9 +8,9 @@ namespace DREditor.FreeTimeSurfacing
     /// <summary>
     ///
     /// </summary>
-    [ClassHeader(nameof(FTESurfaceComponent) + ", " + nameof(ISurfacable) +
+    [ClassHeader(nameof(FTESurfaceComponent) + ", " + nameof(IStartable) + ", " + nameof(IEndable) + 
         "\n\n")]
-    public class FTESurfaceUpdatableVisibility : FTESurfaceComponent, ISurfacable
+    public class FTESurfaceUpdatableVisibility : FTESurfaceComponent, IStartable, IEndable
     {
         /// <summary>
         ///
@@ -26,7 +26,7 @@ namespace DREditor.FreeTimeSurfacing
 
 
         /// <inheritdoc/>
-        public virtual void StartUp()
+        public virtual void StartProcess()
         {
             if (!swap)
                 Show();
@@ -35,7 +35,7 @@ namespace DREditor.FreeTimeSurfacing
         }
 
         /// <inheritdoc/>
-        public virtual void Close()
+        public virtual void EndProcess()
         {
             if (!swap)
                 Hide();

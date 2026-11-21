@@ -15,9 +15,9 @@ namespace DREditor.GachaSurface
     ///
     /// </summary>
     [ClassHeader(nameof(FTESurfaceComponent) + ", " + nameof(IItemRollerResponse) + ", " +
-        nameof(IStartUpable) + ", " + nameof(ISubmittable) +
+        nameof(IStartable) + ", " + nameof(ISubmittable) +
         "\n\n")]
-    public class ItemRolledResponse : FTESurfaceComponent, IItemRollerResponse, IStartUpable, ISubmittable
+    public class ItemRolledResponse : FTESurfaceComponent, IItemRollerResponse, IStartable, ISubmittable
     {
         /// <summary>
         ///
@@ -58,7 +58,7 @@ namespace DREditor.GachaSurface
 
 
         /// <inheritdoc/>
-        public virtual void StartUp()
+        public virtual void StartProcess()
         {
             if (itemImage != null && transparentSprite != null)
                 itemImage.sprite = transparentSprite;
