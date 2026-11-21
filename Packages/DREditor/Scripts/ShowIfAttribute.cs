@@ -15,6 +15,11 @@ namespace DREditor
         /// </summary>
         public string MethodName { get; private set; }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="methodName"></param>
         public ShowIfAttribute(string methodName) => MethodName = methodName;
     }
 }

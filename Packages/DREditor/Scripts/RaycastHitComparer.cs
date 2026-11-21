@@ -21,11 +21,11 @@ namespace DREditor
         /// <summary>
         ///
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
         /// <returns>
         ///
         /// </returns>
-        public readonly int Compare(RaycastHit x, RaycastHit y) => x.distance.CompareTo(y.distance);
+        public readonly int Compare(RaycastHit first, RaycastHit second) => first.distance.CompareTo(second.distance);
     }
 }

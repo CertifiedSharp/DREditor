@@ -1,5 +1,5 @@
-//Idea originally from the Dialogue Event List script Author: SeleniumSoul for DREditor
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For DREditor
+//I had the idea for this system after dissecting SeleniumSoul's Dialogue Event List script.
 
 #if UNITY_EDITOR
 using System;
