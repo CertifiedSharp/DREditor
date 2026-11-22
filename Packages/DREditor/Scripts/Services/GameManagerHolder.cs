@@ -3,9 +3,7 @@
 namespace DREditor.Services
 {
     /// <summary>
-    ///
+    /// Empty Service Holder intended to just hold the GameManager.
     /// </summary>
-    [ClassHeader(nameof(ServiceHolder<GameManagerHolder>) + " for type: " + nameof(GameManagerHolder) +
-        "\n\n")]
     public class GameManagerHolder : ServiceHolder<GameManagerHolder> { }
 }

@@ -14,6 +14,7 @@ namespace DREditor.SaveManaging
         /// <summary>
         ///
         /// </summary>
+        [Header("")]
         [Tooltip("")]
         [SerializeField] protected BoolWithEvent hasLoadedSaveData = null;
 

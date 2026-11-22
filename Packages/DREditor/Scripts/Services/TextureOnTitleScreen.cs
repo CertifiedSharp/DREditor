@@ -7,13 +7,13 @@ namespace DREditor.Services
     /// <summary>
     ///
     /// </summary>
-    [ClassHeader(nameof(IToTitleScreen) +
-        "\n\n")]
     public class TextureOnTitleScreen : MonoBehaviour, IToTitleScreen
     {
         /// <summary>
         ///
         /// </summary>
+        [Header(nameof(IToTitleScreen) +
+            "\n\n")]
         [Tooltip("")]
         [SerializeField] protected RawImage rawImage = null;
 

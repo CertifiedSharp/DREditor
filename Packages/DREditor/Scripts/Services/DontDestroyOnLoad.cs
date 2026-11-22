@@ -4,9 +4,8 @@ using UnityEngine;
 namespace DREditor.Services
 {
     /// <summary>
-    ///
+    /// Script to set it's GameObject to always carry over between scenes.
     /// </summary>
-	[ClassHeader("")]
     public class DontDestroyOnLoad : MonoBehaviour
     {
         protected virtual void Awake() => DontDestroyOnLoad(this);

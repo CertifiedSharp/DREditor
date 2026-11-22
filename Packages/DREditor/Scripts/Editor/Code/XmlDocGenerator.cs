@@ -8,6 +8,12 @@ namespace DREditor.Editor.Code
     /// </summary>
     public class XmlDocGenerator : AssetPostprocessor
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="content"></param>
+        /// <returns></returns>
         private static string OnGeneratedCSProject(string path, string content)
         {
             if (!content.Contains("<GenerateDocumentationFile>"))

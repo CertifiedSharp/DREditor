@@ -12,12 +12,12 @@ namespace DREditor.SaveManaging
     /// <summary>
     ///
     /// </summary>
-	[ClassHeader("")]
     public class DREGameSaver : GameSaver
     {
         /// <summary>
         ///
         /// </summary>
+        [Header("")]
         [Tooltip("")]
         [SerializeField] protected BoolWithEvent isLoadingFile = null;
 

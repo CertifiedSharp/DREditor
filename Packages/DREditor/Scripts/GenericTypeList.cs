@@ -6,7 +6,7 @@ using UnityEditor;
 namespace DREditor
 {
     /// <summary>
-    ///
+    /// Tracks a list of classes that inherit the specified type in the unity project.
     /// </summary>
     [InitializeOnLoad]
     public class GenericTypeList<T> : TypeListBase<T>

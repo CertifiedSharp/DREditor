@@ -1,6 +1,5 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
 using DREditor.Minigames.Debates;
-using DREditor.Utility;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -227,10 +226,10 @@ namespace DREditor.Minigames.RS
             };
 
             foreach (var (from, to) in lines)
-                GizmosUtility.DrawSwipeLineGizmo(position + from, position + to);
+                GizmosUtility.DrawSphereLine(position + from, position + to, Color.red, Color.red);
 
             if (Application.isPlaying)
-                GizmosUtility.DrawSphereLine(startPosition, endPosition);
+                GizmosUtility.DrawSphereLine(startPosition, endPosition, Color.green, Color.yellow);
         }
     }
 }

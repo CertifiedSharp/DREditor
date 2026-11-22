@@ -12,6 +12,10 @@ namespace DREditor.Services
         /// <summary>
         ///
         /// </summary>
+        [Header(nameof(UIHandlerBase) + ", " + nameof(ServiceHolder<UIHandlerBase>) +
+            "\n\n")]
+        [Header(nameof(UIHandlerBase) + " Settings")]
+        [Space]
         [Tooltip("")]
         public GameObject current;
 
@@ -23,18 +27,18 @@ namespace DREditor.Services
         /// <summary>
         ///
         /// </summary>
-        public bool MovingToTitleScreen 
-        {
-            get => movingToTitleScreen; 
-
-            set => movingToTitleScreen = value;
-        }
+        protected bool movingToTitleScreen = false;
 
 
         /// <summary>
         ///
         /// </summary>
-        protected bool movingToTitleScreen = false;
+        public bool MovingToTitleScreen
+        {
+            get => movingToTitleScreen;
+
+            set => movingToTitleScreen = value;
+        }
 
 
         /// <summary>

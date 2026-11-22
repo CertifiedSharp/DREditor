@@ -8,12 +8,12 @@ namespace DREditor.Services
     /// <summary>
     ///
     /// </summary>
-	[ClassHeader("")]
     public class ReturnToMenuHandler : MonoBehaviour
     {
         /// <summary>
         ///
         /// </summary>
+        [Header("")]
         [Tooltip("")]
         [SerializeField] protected string titleScreenSceneName = "GYM_MainMenu";
 

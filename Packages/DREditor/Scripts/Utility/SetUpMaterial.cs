@@ -12,7 +12,7 @@ namespace DREditor.Utility
     public class SetUpMaterial : ScriptableWizard
     {
         [Header("")]
-        [Divider]
+        [Space]
         [Tooltip("")]
         [SerializeField]
         protected List<string> materialIDs = new()

@@ -8,8 +8,6 @@ namespace DREditor.Services
     /// <summary>
     ///
     /// </summary>
-    [ClassHeader(nameof(UIHandlerBase) + ", " + nameof(ServiceHolder<UIHandlerBase>) +
-        "\n\n")]
     public class UIHandler : UIHandlerBase
     {
         /// <summary>
@@ -18,7 +16,7 @@ namespace DREditor.Services
         protected virtual void Update() => EvaluateSelectedObject();
 
         /// <summary>
-        ///
+        /// Reacts to whether the currently selected object has changed.
         /// </summary>
         protected virtual void EvaluateSelectedObject()
         {
@@ -56,9 +54,7 @@ namespace DREditor.Services
             current = EventSystem.current.currentSelectedGameObject;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
+        /// <inheritdoc/>
         public override void CallToTitle() => CallToTitleScreenInterfaces();
 
         /// <summary>
