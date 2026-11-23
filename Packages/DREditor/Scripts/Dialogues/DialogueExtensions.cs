@@ -38,8 +38,26 @@ namespace DREditor.Dialogues
 
             if (dialogue.DirectTo != null &&
                 dialogue.DirectTo.NewDialogue != null &&
-                dialogue != dialogue.DirectTo.NewDialogue)
-                ScanCharactersInDialogue(characters, dialogue.DirectTo.NewDialogue);
+                dialogue != dialogue.DirectTo.NewDialogue &&
+                dialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+                ScanCharactersInDialogue(characters, validResult);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dialogue"></param>
+        /// <param name="result"></param>
+        /// <returns></returns>
+        public static bool IsValid<T>(this DialogueCore dialogue, out DialogueBase<T> result)
+        {
+            result = null;
+
+            if (dialogue is DialogueBase<T> validResult)
+                result = validResult;
+
+            return result != null;
         }
     }
 }

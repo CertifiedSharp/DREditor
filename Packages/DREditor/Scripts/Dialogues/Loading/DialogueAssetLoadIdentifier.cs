@@ -52,8 +52,8 @@ namespace DREditor.Dialogues.Loading
 
                 if (found)
                     return found;
-                else if (dialogue.DirectTo.NewDialogue != null)
-                    return CheckDialogue<T>(dialogue.DirectTo.NewDialogue);
+                else if (dialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+                    return CheckDialogue<T>(validResult);
             }
 
             return false;

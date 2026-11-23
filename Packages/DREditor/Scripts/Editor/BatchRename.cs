@@ -192,10 +192,7 @@ namespace DREditor.Editor
                 {
                     dialogue.DirectTo.SetEnabled(true);
 
-                    if (dialogue is Dialogue)
-                        dialogue.DirectTo.SetNewDialogue(nextDialogue);
-                    else if (dialogue is TrialDialogue)
-                        dialogue.DirectTo.SetNewTrialDialogue(nextDialogue);
+                    dialogue.DirectTo.SetNewDialogue(nextDialogue);
                 }
 
                 EditorUtility.SetDirty(dialogue);

@@ -8,10 +8,8 @@ namespace DREditor.Dialogues
 {
     public abstract class DialogueCore : ScriptableObject, IConvertableDialogue
     {
-        public string translationKey;
         public string DialogueName = "";
         public Color Color = Color.white;
-        public bool ShowDialoguePanel = true;
 
         public static event Action<DialogueCore, Line> OnDebugLine;
 
@@ -23,11 +21,13 @@ namespace DREditor.Dialogues
 
         public abstract List<T> GetLines<T>();
 
-        public abstract void AddNewLine();
-
         public void SetName(string DialogueName) => this.DialogueName = DialogueName;
 
         public abstract void InvokeDialogue(ITypeCallback callback);
+
+        public abstract void ConvertEndEvents();
+
+        public abstract bool IsNested(DialogueCore dia, List<DialogueCore> history);
 
 #if UNITY_EDITOR
         [HideInInspector]

@@ -50,8 +50,8 @@ namespace DREditor.Progressing.Handling
         {
             if (!dialogue.FlagTrigger.FlagIsOptional(index) && !dialogue.FlagTrigger.FlagHasBeenTriggered(index))
                 return true;
-            else if (dialogue.DirectTo != null && dialogue.DirectTo.Enabled)
-                return dialogue.DirectTo.NewDialogue.HasUnTriggeredRequiredFlags();
+            else if (dialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+                return validResult.HasUnTriggeredRequiredFlags();
 
             return false;
         }

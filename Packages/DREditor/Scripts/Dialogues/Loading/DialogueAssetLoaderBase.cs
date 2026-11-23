@@ -227,8 +227,10 @@ namespace DREditor.Dialogues.Loading
                 return LoadNextSaveCondition(dialogueCore);
             else if (hasMadeChoices)
                 return LoadNextSaveChoice(dialogueCore);
+            else if (dialogueCore.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+                return ReturnDialogues(validResult);
             else
-                return ReturnDialogues(dialogueCore.DirectTo.NewDialogue);
+                return null;
         }
 
         /// <summary>
@@ -251,8 +253,8 @@ namespace DREditor.Dialogues.Loading
             if (directToDialogueIsValid)
                 directNum++;
 
-            if (directToDialogueIsValid)
-                return LoadThrough(dialogue.DirectTo.NewDialogue);
+            if (directToDialogueIsValid && dialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+                return LoadThrough(validResult);
             else if (conditionNumNotReached) // Pretty sure this can't be reached but putting it here to cover
                 return LoadNextSaveCondition(dialogue);
             else if (choiceNumNotReached)
@@ -274,10 +276,14 @@ namespace DREditor.Dialogues.Loading
 
             conditionNum++;
 
-            if (Conditionals[conditionNum - 1])
-                return LoadThrough(dialogue.Variable.NextDialogueTrue);
+            if (Conditionals[conditionNum - 1] && dialogue.Variable.NextDialogueTrue.IsValid(out DialogueBase<T> validResult))
+                return LoadThrough(validResult);
+            else if (dialogue.Variable.NextDialogueFalse.IsValid(out DialogueBase<T> validResultFalse))
+                return LoadThrough(validResultFalse);
             else
-                return LoadThrough(dialogue.Variable.NextDialogueFalse);
+                Debug.LogError("ALERT: THE NEXT VARIABLE DIALOGUE COULD NOT BE FOUND.");
+
+            return null;
         }
 
         /// <summary>

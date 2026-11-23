@@ -1,5 +1,4 @@
 ﻿//Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,13 +6,27 @@ using UnityEngine.Serialization;
 
 namespace DREditor.Dialogues
 {
-    public class DialogueBase<T> : DialogueCore
+    public class DialogueBase<T> : DialogueCore, IEndEventsContainer
     {
 
         [FormerlySerializedAs("Lines")]
         public List<T> lines = new();
         public List<T> Lines { get => lines; }
-        
+
+        [SelectType]
+        [SerializeReference]
+        protected List<IEndEvent> endEvents = new();
+
+        public virtual List<IEndEvent> EndEvents => endEvents;
+
+        public virtual T2 GetEndEvent<T2>()
+        {
+            foreach (var endEvent in EndEvents)
+                if (endEvent is T2 result)
+                    return result;
+
+            return default;
+        }
 
         public SceneTransition SceneTransition = new();
         
@@ -21,11 +34,8 @@ namespace DREditor.Dialogues
 
         public override int LineCount { get => Lines.Count; }
 
-        public override void InvokeDialogue(ITypeCallback callback)
-        {
-        }
+        public override void InvokeDialogue(ITypeCallback callback) { }
         
-        public void SetTranslationKey(string translationKey) => this.translationKey = translationKey;
 
         public void SetColor(Color Color) => this.Color = Color;
 
@@ -61,21 +71,15 @@ namespace DREditor.Dialogues
             return null;
         }
 
-        public override void AddNewLine()
-        {
-            if (typeof(T).IsAssignableFrom(typeof(Line)))
-                Lines.Add(Activator.CreateInstance<T>());
-        }
+        public Variable Variable = new();
+        public DirectTo DirectTo;
 
-        public Variable<T> Variable = new();
-        public DirectTo<T> DirectTo;
-
-        public void SetVariable(Variable<T> Variable) => this.Variable = Variable;
-        public void SetDirectTo(DirectTo<T> DirectTo) => this.DirectTo = DirectTo;
+        public void SetVariable(Variable Variable) => this.Variable = Variable;
+        public void SetDirectTo(DirectTo DirectTo) => this.DirectTo = DirectTo;
         public void SetSceneTransition(SceneTransition SceneTransition) => this.SceneTransition = SceneTransition;
         public void SetTriggerFlag(TriggerFlag FlagTrigger) => this.FlagTrigger = FlagTrigger;
 
-        public virtual bool IsNested(DialogueCore dia, List<DialogueCore> history)
+        public override bool IsNested(DialogueCore dia, List<DialogueCore> history)
         {
             if (DirectTo != null && DirectTo.NewDialogue != null)
             {
@@ -94,5 +98,70 @@ namespace DREditor.Dialogues
 
             return false;
         }
+
+
+
+#if UNITY_EDITOR
+        [SerializeField] protected bool converted = false;
+
+        protected void SetConverted() => converted = true;
+
+        public override void ConvertEndEvents()
+        {
+            if (converted)
+                return;
+
+            ConvertEndEventInstances();
+
+            ClearOldEndEvents();
+
+            SetConverted();
+
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+
+
+        protected virtual void ConvertEndEventInstances()
+        {
+            AddExistingEvent(SceneTransition);
+
+            AddExistingEvent(FlagTrigger);
+
+            AddExistingEvent(DirectTo);
+
+            AddExistingEvent(Variable);
+        }
+
+        protected virtual void AddExistingEvent(EndEventBase endEvent)
+        {
+            if (endEvent != null && endEvent.Enabled)
+                EndEvents.Add(endEvent);
+        }
+
+        protected virtual void ClearOldEndEvents()
+        {
+            SceneTransition = null;
+
+            FlagTrigger = null;
+
+            DirectTo = null;
+
+            Variable = null;
+        }
+#endif
+    }
+
+
+    public interface IEndEventsContainer
+    {
+        List<IEndEvent> EndEvents { get; }
+
+
+        T GetEndEvent<T>();
+    }
+
+    public interface IEndEvent
+    {
+
     }
 }

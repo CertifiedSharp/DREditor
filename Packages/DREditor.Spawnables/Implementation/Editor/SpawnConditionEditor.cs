@@ -180,7 +180,7 @@ namespace DREditor.Spawnables.Implementation.Editor
         {
             HandySplitters.UISplitter();
 
-            HandyFields.AddItemButton(conditionCapsule.Conditions, "Condition", new VariableBase(), GUILayout.Width(130));
+            HandyFields.AddItemButton(conditionCapsule.Conditions, "Condition", new Variable(), GUILayout.Width(130));
 
             HandySplitters.UISplitter();
         }

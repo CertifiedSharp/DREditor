@@ -85,9 +85,10 @@ namespace DREditor.EndEvents
         protected virtual void OnDirectToValid<T>(DialogueBase<T> currentDialogue, Action<DialogueCore[]> interruptDialogue)
             where T : Line
         {
-            DialogueBase<T>[] nextDialogueToBePlayed = new DialogueBase<T>[1];
+            if (!currentDialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+                return;
 
-            nextDialogueToBePlayed[0] = currentDialogue.DirectTo.NewDialogue;
+            DialogueBase<T>[] nextDialogueToBePlayed = new DialogueBase<T>[1] { validResult };
 
             OnEventRaised();
 

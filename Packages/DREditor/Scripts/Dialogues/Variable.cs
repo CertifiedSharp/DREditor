@@ -6,20 +6,15 @@ using UnityEngine.Serialization;
 namespace DREditor.Dialogues
 {
     [System.Serializable]
-    public class Variable<T2> : VariableBase
+    public class Variable : VariableBase
     {
         [FormerlySerializedAs("BoolVariable")]
         public BoolWithEvent boolVariable;
         public BoolWithEvent BoolVariable { get => boolVariable; set => boolVariable = value; }
 
-        public DialogueBase<T2> NextDialogueTrue;
+        public DialogueCore NextDialogueTrue;
         public int NextIndexInDialogueTrue;
-        public DialogueBase<T2> NextDialogueFalse;
+        public DialogueCore NextDialogueFalse;
         public int NextIndexInDialogueFalse;
-    }
-    [System.Serializable]
-    public class Variable : Variable<Line>
-    {
-
     }
 }

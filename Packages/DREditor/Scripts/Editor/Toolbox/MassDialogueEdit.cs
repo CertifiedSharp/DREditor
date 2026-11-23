@@ -30,7 +30,7 @@ namespace DREditor.Editor.Toolbox
         /// <summary>
         /// 
         /// </summary>
-		protected VariableEventEditor<Line> VariableEditor;
+		protected VariableEventEditor VariableEditor;
 
         /// <summary>
         /// 

@@ -104,7 +104,7 @@ namespace DREditor.Editor.Utility
         {
             if (DialogueToSplit.DirectTo.Enabled)
             {
-                currentDialogue.SetDirectTo(new DirectTo<Line>());
+                currentDialogue.SetDirectTo(new DirectTo());
 
                 currentDialogue.DirectTo.SetEnabled(true);
 

@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 namespace DREditor.Dialogues
 {
     [System.Serializable]
-    public class VariableBase : EndEventBase
+    public abstract class VariableBase : EndEventBase
     {
         [FormerlySerializedAs("Chapter")]
         public int chapter = 0; //*

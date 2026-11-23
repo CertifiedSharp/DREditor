@@ -12,7 +12,7 @@ namespace DREditor.Editor.Dialogues
     public class DialogueEndEventEditor : EndEventEditor<Line>
     {
         protected Dialogue dialogue;
-
+        protected readonly EndEventDisplayer Displayer = new();
         protected readonly CustomCallEndEventEditor CustomCallEditor = new();
 
         public DialogueEndEventEditor() : base() { }

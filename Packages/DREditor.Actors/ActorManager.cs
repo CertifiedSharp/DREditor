@@ -55,11 +55,7 @@ namespace DREditor.Actors
                 RegisterService<IObjectPooler<Talkable>>(this);
             }
 
-            dialogueEnders = ServiceLocator.GetService<IDialogueManager>()?.GetComponentsInChildren<IDialogueEnder>();
-
-            foreach (var ender in dialogueEnders)
-                if (ender != null)
-                    ender.OnDialogueResolving += SetStartObjectNull;
+            RegisterEnders(true);
         }
 
         /// <summary>
@@ -76,14 +72,33 @@ namespace DREditor.Actors
         }
 
 
+        protected virtual void OnDisable() => RegisterEnders(false);
+
         /// <summary>
-        ///
+        /// 
         /// </summary>
-        protected virtual void OnDisable()
+        /// <param name="subscribed"></param>
+        protected virtual void RegisterEnders(bool subscribed)
         {
-            foreach (var ender in dialogueEnders)
-                if (ender != null)
-                    ender.OnDialogueResolving -= SetStartObjectNull;
+            dialogueEnders ??= ServiceLocator.GetService<IDialogueManager>()?.GetComponentsInChildren<IDialogueEnder>();
+
+            if (dialogueEnders != null)
+                foreach (var ender in dialogueEnders)
+                    if (ender != null)
+                        RegisterEnder(ender, subscribed);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ender"></param>
+        /// <param name="subscribed"></param>
+        protected virtual void RegisterEnder(IDialogueEnder ender, bool subscribed)
+        {
+            if (subscribed)
+                ender.OnDialogueResolving += SetStartObjectNull;
+            else
+                ender.OnDialogueResolving -= SetStartObjectNull;
         }
 
 

@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace DREditor.Editor.Dialogues
 {
-    public class VariableEventEditor<T> : VariableConditionEditor where T : Line
+    public class VariableEventEditor : VariableConditionEditor
     {
         protected int value;
         Color Color;
@@ -15,7 +15,7 @@ namespace DREditor.Editor.Dialogues
 
         protected override void DisplayVariableCondition()
         {
-            if (variableBase is not Variable<T> Variable || !Variable.Enabled)
+            if (variableBase is not Variable Variable || !Variable.Enabled)
                 return;
 
             Color = GUI.backgroundColor;
@@ -36,7 +36,7 @@ namespace DREditor.Editor.Dialogues
             }
         }
 
-        protected virtual void DisplayVariableDialogue(string label, ref DialogueBase<T> dialogue, ref int index)
+        protected virtual void DisplayVariableDialogue(string label, ref DialogueCore dialogue, ref int index)
         {
             using (new EditorGUILayout.HorizontalScope())
             {
@@ -45,20 +45,20 @@ namespace DREditor.Editor.Dialogues
                 if (dialogue == null)
                     GUI.backgroundColor = Color.cyan;
 
-                dialogue = (DialogueBase<T>)EditorGUILayout.ObjectField(
-                    dialogue, typeof(DialogueBase<T>), false, GUILayout.Width(200));
+                dialogue = (DialogueCore)EditorGUILayout.ObjectField(
+                    dialogue, typeof(DialogueCore), false, GUILayout.Width(200));
 
                 GUI.backgroundColor = Color;
 
                 if (dialogue != null)
                 {
-                    string[] nextDialogueTexts = new string[dialogue.Lines.Count];
+                    string[] nextDialogueTexts = new string[dialogue.LineCount];
 
-                    int[] optValues2 = new int[dialogue.Lines.Count];
+                    int[] optValues2 = new int[dialogue.LineCount];
 
-                    for (int j = 0; j < dialogue.Lines.Count; j++)
+                    for (int j = 0; j < dialogue.LineCount; j++)
                     {
-                        nextDialogueTexts[j] = dialogue.Lines[j].Text;
+                        nextDialogueTexts[j] = dialogue.GetLine(j).Text;
 
                         optValues2[j] = value;
 
@@ -72,7 +72,7 @@ namespace DREditor.Editor.Dialogues
             value = 0;
         }
 
-        protected virtual void DisplayBoolCondition(Variable<T> Variable)
+        protected virtual void DisplayBoolCondition(Variable Variable)
         {
             using (new EditorGUILayout.HorizontalScope())
             {
@@ -86,7 +86,7 @@ namespace DREditor.Editor.Dialogues
             }
         }
 
-        protected virtual void DisplayRemoveButton(Variable<T> Variable)
+        protected virtual void DisplayRemoveButton(Variable Variable)
         {
             if (GUILayout.Button("Remove Condition", GUILayout.Width(130)))
             {

@@ -1,4 +1,5 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
+using DREditor.Dialogues;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
@@ -103,6 +104,44 @@ namespace DREditor.Editor.Utility.Converting
             string fullPath = Path.Combine(Application.dataPath, "..", relativePath);
 
             return Directory.Exists(fullPath);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [MenuItem("DREditor/Convert/Dialogue End Events")]
+        public static void MigrateAll()
+        {
+            ConvertEndEventByDialogueType<Dialogue>();
+
+            ConvertEndEventByDialogueType<TrialDialogue>();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        private static void ConvertEndEventByDialogueType<T>()
+        {
+            var guids = AssetDatabase.FindAssets($"t:{typeof(T).Name}");
+
+            foreach (var guid in guids)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+
+                var dialogue = AssetDatabase.LoadAssetAtPath<DialogueCore>(path);
+
+                if (dialogue != null && dialogue is DialogueBase<T> baseDialogue)
+                    baseDialogue.ConvertEndEvents();
+                else
+                    continue;
+
+                EditorUtility.SetDirty(dialogue);
+            }
+
+            AssetDatabase.SaveAssets();
+
+            Debug.Log($"REPORT: Converted {guids.Length} dialogues.");
         }
     }
 }

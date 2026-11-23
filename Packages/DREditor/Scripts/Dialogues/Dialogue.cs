@@ -86,5 +86,40 @@ namespace DREditor.Dialogues
 
             return false;
         }
+        
+
+#if UNITY_EDITOR
+        protected override void ConvertEndEventInstances()
+        {
+            if (Choices != null && Choices.Count > 0)
+            {
+                var choiceEvent = new ChoiceEvent();
+
+                foreach (var c in Choices)
+                    choiceEvent.Choices.Add(c);
+
+                EndEvents.Add(choiceEvent);
+            }
+
+            if (StartInvestigation != null && StartInvestigation.Enabled)
+                EndEvents.Add(StartInvestigation);
+
+            if (EndEvent != null && EndEvent.Enabled)
+                EndEvents.Add(EndEvent);
+
+            base.ConvertEndEventInstances();
+        }
+
+        protected override void ClearOldEndEvents()
+        {
+            Choices = null;
+
+            StartInvestigation = null;
+
+            EndEvent = null;
+
+            base.ClearOldEndEvents();
+        }
+#endif
     }
 }
