@@ -1,4 +1,5 @@
 ﻿//Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
+using DREditor.Dialogues.Events;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -17,7 +18,7 @@ namespace DREditor.Dialogues
         [SerializeReference]
         protected List<IEndEvent> endEvents = new();
 
-        public virtual List<IEndEvent> EndEvents => endEvents;
+        public virtual List<IEndEvent> EndEvents { get => endEvents; }
 
         public virtual T2 GetEndEvent<T2>()
         {
@@ -156,12 +157,20 @@ namespace DREditor.Dialogues
     {
         List<IEndEvent> EndEvents { get; }
 
-
         T GetEndEvent<T>();
     }
 
     public interface IEndEvent
     {
+        bool IsValid();
+    }
+    [System.Serializable]
+    public class DialogueEventEndEvent : EndEventBase
+    {
+        [SerializeReference]
+        protected List<IDialogueEvent> dialogueEvents = new();
 
+
+        public virtual List<IDialogueEvent> DialogueEvents => dialogueEvents;
     }
 }

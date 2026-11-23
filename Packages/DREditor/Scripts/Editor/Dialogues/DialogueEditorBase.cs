@@ -3,22 +3,75 @@
 using DREditor.Characters;
 using DREditor.Dialogues;
 using DREditor.Editor.Utility;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
 namespace DREditor.Editor.Dialogues
 {
-    public abstract class DialogueEditorBase<T> : UnityEditor.Editor where T : new()//where T : Line, new()
+    public abstract class DialogueEditorBase<T> : UnityEditor.Editor, INestedEditorCacheable where T : new()
     {
+        /// <summary>
+        /// 
+        /// </summary>
         protected bool editNameFoldout = false;
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected bool debugMode;
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected DialogueBase<T> dia;
 
+        /// <summary>
+        ///
+        /// </summary>
+        protected Dictionary<object, bool> visibilityCaches = new();
+
+        /// <summary>
+        ///
+        /// </summary>
+        protected Dictionary<object, int> indexCaches = new();
+
+        /// <summary>
+        ///
+        /// </summary>
+        protected List<object> dataCaches = new();
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         protected abstract LineEditorBase LineEditor { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected abstract DialogueDebugToolEditorBase DebugTool { get; }
+
+
+        /// <inheritdoc/>
+        public virtual Dictionary<object, bool> VisibilityCaches => visibilityCaches;
+
+        /// <inheritdoc/>
+        public virtual Dictionary<object, int> IndexCaches => indexCaches;
+
+
+        /// <inheritdoc/>
+        public virtual void AddData(object obj) => dataCaches.Add(obj);
+
+        /// <inheritdoc/>
+        public virtual bool TryGetData<T2>(out T2 data)
+        {
+            data = dataCaches.OfType<T2>().FirstOrDefault();
+
+            return data != null;
+        }
+
 
         protected virtual void SetDialogue(DialogueBase<T> dia) => this.dia = dia;
 
@@ -170,13 +223,45 @@ namespace DREditor.Editor.Dialogues
             LineEditor.DrawHoverSprite();
         }
 
-        protected virtual void DisplayFooter() => NewLineButton();
+        protected virtual void DisplayFooter()
+        {
+            NewLineButton();
+
+            DisplayEndEvents();
+        }
 
         protected virtual void NewLineButton()
         {
             using (new EditorGUILayout.HorizontalScope())
                 if (GUILayout.Button("New " + ObjectNames.NicifyVariableName(typeof(T).Name), GUILayout.Width(100)))
                     dia.Lines.Add(new T());
+        }
+
+        protected readonly InterfaceEditor<IEndEvent> EndEventEditor = new();
+
+        protected bool showEndEvents = true;
+
+        protected int endEventIndex;
+
+
+        protected virtual void DisplayEndEvents()
+        {
+            GUILayout.Space(30);
+
+            if (dia.LineCount == 0)
+                return;
+
+            EndEventEditor.Initialize(this, dia.EndEvents, showEndEvents, endEventIndex);
+
+            SerializedProperty endEventProperty = serializedObject.FindProperty("endEvents");
+
+            EndEventEditor.DisplayInterfaceInstances(endEventProperty, this, endEventProperty, EndEventEditor);
+
+            showEndEvents = EndEventEditor.showDiaEvents;
+
+            endEventIndex = EndEventEditor.currentlyPickedIndex;
+
+            GUILayout.Space(30);
         }
     }
 }

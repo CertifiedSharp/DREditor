@@ -1,21 +1,21 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For DREditor.
 using DREditor.Dialogues;
 using DREditor.EventObjects;
-using DREditor.Progressing;
 using UnityEditor;
 using UnityEngine;
 
 namespace DREditor.Editor.Dialogues
 {
+    [CustomClassEditor(typeof(Variable))]
     public class VariableEventEditor : VariableConditionEditor
     {
         protected int value;
         Color Color;
-        public VariableEventEditor(ProgressionDatabase progression = null) : base(progression) { }
+        //public VariableEventEditor(ProgressionDatabase progression = null) : base(progression) { }
 
         protected override void DisplayVariableCondition()
         {
-            if (variableBase is not Variable Variable || !Variable.Enabled)
+            if (target is not Variable Variable)
                 return;
 
             Color = GUI.backgroundColor;

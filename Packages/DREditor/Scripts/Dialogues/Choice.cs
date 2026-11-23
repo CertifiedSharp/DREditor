@@ -35,7 +35,7 @@ namespace DREditor.Dialogues
     {
         [SelectType]
         [SerializeReference]
-        protected List<IChoice> choices = new();
+        protected List<IChoice> choices = new() { new Choice(), new Choice(), new Choice() };
 
 
         public virtual List<IChoice> Choices => choices;

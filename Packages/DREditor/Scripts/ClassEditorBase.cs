@@ -21,6 +21,7 @@ namespace DREditor
 
 
         /// <summary>
+        /// Called from a Class Editor Factory through a string method name!
         /// Initializes the sent target and additional parameters and then displays the GUI.
         /// </summary>
         /// <param name="target">The target class object being edited as an object type.</param>

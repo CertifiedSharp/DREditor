@@ -11,13 +11,8 @@ namespace DREditor.Editor.Dialogues
     /// <summary>
     ///
     /// </summary>
-    public class VariableConditionEditor : ProgressionContextEditorBase
+    public class VariableConditionEditor : ProgressionContextEditorBase<VariableBase>
     {
-        /// <summary>
-        ///
-        /// </summary>
-        protected VariableBase variableBase;
-
         /// <summary>
         ///
         /// </summary>
@@ -34,18 +29,6 @@ namespace DREditor.Editor.Dialogues
         protected string activelyDisplayedItemName;
         
 
-        public VariableConditionEditor(ProgressionDatabase progression = null) : base(progression) { }
-
-
-        /// <summary>
-        ///
-        /// </summary>
-        public virtual void DisplayAddButton()
-        {
-            if (variableBase != null && !variableBase.Enabled && GUILayout.Button("Add Condition", GUILayout.Width(100)))
-                variableBase.SetEnabled(true);
-        }
-
         /// <summary>
         ///
         /// </summary>
@@ -53,17 +36,14 @@ namespace DREditor.Editor.Dialogues
         /// <returns></returns>
         public virtual VariableBase Display(VariableBase variableBase)
         {
-            this.variableBase = variableBase;
+            target = variableBase;
 
-            DisplayCondition();
+            OnInspectorGUI();
 
-            return this.variableBase;
+            return target;
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        protected virtual void DisplayCondition()
+        protected override void OnInspectorGUI()
         {
             using (new EditorGUILayout.VerticalScope("Box", GUILayout.Width(400)))
                 CustomLayoutUtility.DisplayVertical(DisplayVariableCondition);
@@ -76,7 +56,7 @@ namespace DREditor.Editor.Dialogues
         {
             GUILayout.Label("Add Condition: ");
 
-            variableBase.Chapter = HandyFields.IntField("Chapter: ", variableBase.Chapter);
+            target.Chapter = HandyFields.IntField("Chapter: ", target.Chapter, 200, 6, false);
 
             if (progression != null && progression.Chapters.Count != 0)
                 OnProgressionValid();
@@ -90,12 +70,12 @@ namespace DREditor.Editor.Dialogues
         /// </summary>
         protected virtual void OnProgressionValid()
         {
-            if (variableBase.Chapter < 0 || variableBase.Chapter > progression.Chapters.Count)
-                variableBase.Chapter = 0;
+            if (target.Chapter < 0 || target.Chapter > progression.Chapters.Count)
+                target.Chapter = 0;
 
-            chapter = progression.Chapters[variableBase.Chapter];
+            chapter = progression.Chapters[target.Chapter];
 
-            if (chapter.Objectives.Count > 0 && variableBase.Objective <= chapter.Objectives.Count)
+            if (chapter.Objectives.Count > 0 && target.Objective <= chapter.Objectives.Count)
                 OnObjectivesValid();
             else
                 OnObjectiveOutOfBounds();
@@ -111,11 +91,11 @@ namespace DREditor.Editor.Dialogues
             if (ObjectiveIsEmpty())
                 return;
 
-            DisplayFlags(variableBase.Flags, "Flag");
+            DisplayFlags(target.Flags, "Flag");
 
             GUILayout.Space(5);
 
-            DisplayFlags(variableBase.FalseFlags, "False Flag");
+            DisplayFlags(target.FalseFlags, "False Flag");
         }
 
         /// <summary>
@@ -125,13 +105,13 @@ namespace DREditor.Editor.Dialogues
         {
             using (new EditorGUILayout.HorizontalScope())
             {
-                variableBase.Objective = EditorGUILayout.Popup(variableBase.Objective, chapter.GetObjectives());
+                target.Objective = EditorGUILayout.Popup(target.Objective, chapter.GetObjectives());
 
-                conditionObjective = chapter.Objectives[variableBase.Objective];
+                conditionObjective = chapter.Objectives[target.Objective];
 
-                if (GUILayout.Button("Add All Flags of Objective") && variableBase.Flags.Count == 0)
+                if (GUILayout.Button("Add All Flags of Objective") && target.Flags.Count == 0)
                     for (int i = 0; i < conditionObjective.Flags.Count; i++)
-                        variableBase.Flags.Add(i);
+                        target.Flags.Add(i);
             }
         }
 
@@ -214,7 +194,7 @@ namespace DREditor.Editor.Dialogues
                                 "If you're still seeing this message it means the chapter has no \n" +
                                 "objectives and needs to have one.");
 
-            variableBase.Objective = chapter.Objectives.Count;
+            target.Objective = chapter.Objectives.Count;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace DREditor.Editor.Dialogues
 
         protected readonly TrialLineEditor<TrialLine> lineEditor = new();
 
-        protected readonly EndEventEditor<TrialLine> endEventEditor = new();
+        //protected readonly EndEventEditor<TrialLine> endEventEditor = new();
 
 
         protected override LineEditorBase LineEditor { get => lineEditor; }
@@ -45,16 +45,16 @@ namespace DREditor.Editor.Dialogues
                 trialDialogue.Skip = HandyFields.IntField("Skip:", trialDialogue.Skip, 20);
         }
 
-        protected override void DisplayFooter()
-        {
-            endEventEditor.DisplayEndEvents((TrialDialogue)dia);
+        //protected override void DisplayFooter()
+        //{
+        //    endEventEditor.DisplayEndEvents((TrialDialogue)dia);
 
-            base.DisplayFooter();
+        //    base.DisplayFooter();
 
-            endEventEditor.DisplayEndEventsButtons();
+        //    endEventEditor.DisplayEndEventsButtons();
 
-            GUILayout.Space(30);
-        }
+        //    GUILayout.Space(30);
+        //}
     }
     [Serializable]
     public class TrialLineEditor<T> : LineEditor<T> where T : TrialLine, new()

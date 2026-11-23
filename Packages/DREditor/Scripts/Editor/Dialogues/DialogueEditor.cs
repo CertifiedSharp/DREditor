@@ -4,7 +4,6 @@
 using DREditor.Dialogues;
 using DREditor.Editor.Utility;
 using UnityEditor;
-using UnityEngine;
 
 namespace DREditor.Editor.Dialogues
 {
@@ -30,11 +29,7 @@ namespace DREditor.Editor.Dialogues
         /// </summary>
         protected readonly LineEditor<Line> lineEditor = new();
 
-        /// <summary>
-        ///
-        /// </summary>
-        protected DialogueEndEventEditor endEventEditor = new();
-        
+
 
         protected override LineEditorBase LineEditor { get => lineEditor; }
 
@@ -90,26 +85,6 @@ namespace DREditor.Editor.Dialogues
             if (dialogue.UnlockPauseOption)
                 dialogue.PauseOptionTo = HandyFields.Option(dialogue.PauseOptionTo, "To: ", 25);
         }
-
-
-        protected override void DisplayFooter()
-        {
-            if (dialogue == null)
-                UnityEngine.Debug.LogWarning("DIALOGUE NULL");
-
-            if (endEventEditor == null)
-                UnityEngine.Debug.LogWarning("EDITOR NULL");
-
-            endEventEditor ??= new();
-
-            endEventEditor.DisplayEndEvents(dialogue);
-
-            base.DisplayFooter();
-
-            endEventEditor.DisplayEndEventsButtons();
-
-            GUILayout.Space(30);
-		}
     }
 }
 #endif

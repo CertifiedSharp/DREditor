@@ -18,9 +18,6 @@ namespace DREditor.Editor.Dialogues
 
         protected readonly MultiTrialLineEditor<MultiTrialLine> lineEditor = new();
 
-        protected readonly EndEventEditor<MultiTrialLine> endEventEditor = new();
-
-
         protected override LineEditorBase LineEditor { get => lineEditor; }
 
         protected override DialogueDebugToolEditorBase DebugTool { get => debugTool; }
@@ -41,19 +38,6 @@ namespace DREditor.Editor.Dialogues
             if (LineEditor.TestLine == -1 && dia is ITrialSequenceSkippable trialDialogue)
                 trialDialogue.Skip = HandyFields.IntField("Skip:", trialDialogue.Skip, 20);
         }
-
-        protected override void DisplayFooter()
-        {
-            endEventEditor.DisplayEndEvents((MultiTrialDialogue)dia);
-
-            base.DisplayFooter();
-
-            endEventEditor.DisplayEndEventsButtons();
-
-            GUILayout.Space(30);
-        }
-
-        
     }
 
     public class MultiTrialDialogueDebugToolEditor : TrialDialogueDebugToolEditor<MultiTrialLine>

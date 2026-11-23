@@ -85,8 +85,6 @@ namespace DREditor.Editor.Utility
 
             if (currentlyPickedIndex != -1)
                 this.currentlyPickedIndex = currentlyPickedIndex;
-
-            
         }
 
 
@@ -199,7 +197,7 @@ namespace DREditor.Editor.Utility
                 EditorGUILayout.EndHorizontal();
             }
 
-            AddInterfaceInstanceButton();
+            AddInterfaceInstancePanel();
         }
 
         /// <summary>
@@ -298,22 +296,36 @@ namespace DREditor.Editor.Utility
         {
             instances.RemoveAt(currentlyDisplayedEventIndex);
 
-            parentEditor.Repaint();
+            if (parentEditor != null)
+                parentEditor.Repaint();
         }
 
         /// <summary>
         ///
         /// </summary>
-        protected virtual void AddInterfaceInstanceButton()
+        protected virtual void AddInterfaceInstancePanel()
         {
             EditorGUILayout.BeginHorizontal("Box");
 
-            currentlyPickedIndex = EditorGUILayout.Popup(currentlyPickedIndex, choices);
+            AddInterfacePopup();
 
-            if (GUILayout.Button("Add" + InterfaceDisplayName()))
-                instances.Add((T)Activator.CreateInstance(_types[currentlyPickedIndex]));
+            AddInterfaceInstanceButton();
 
             EditorGUILayout.EndHorizontal();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void AddInterfacePopup() => currentlyPickedIndex = EditorGUILayout.Popup(currentlyPickedIndex, choices);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void AddInterfaceInstanceButton()
+        {
+            if (GUILayout.Button("Add" + InterfaceDisplayName()))
+                instances.Add((T)Activator.CreateInstance(_types[currentlyPickedIndex]));
         }
 
         /// <summary>

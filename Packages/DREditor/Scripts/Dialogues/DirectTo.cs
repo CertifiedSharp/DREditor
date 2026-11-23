@@ -12,12 +12,5 @@ namespace DREditor.Dialogues
         public void SetNewDialogueIndex(int NewDialogueIndex) => this.NewDialogueIndex = NewDialogueIndex;
 
         public void SetNewDialogue(DialogueCore NewDialogue) => this.NewDialogue = NewDialogue;
-
-        public void Disable()
-        {
-            SetEnabled(false);
-
-            SetNewDialogue(null);
-        }
     }
 }

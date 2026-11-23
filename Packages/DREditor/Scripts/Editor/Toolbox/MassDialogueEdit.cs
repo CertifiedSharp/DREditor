@@ -3,100 +3,115 @@
 using DREditor.Dialogues;
 using DREditor.Editor.Dialogues;
 using DREditor.Editor.Utility;
-using DREditor.Progressing;
 using System;
+using System.Collections.Generic;
 using UnityEditor;
+using UnityEngine;
 
 namespace DREditor.Editor.Toolbox
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MassDialogueEdit : ScriptableWizard
     {
         /// <summary>
         /// 
         /// </summary>
-        protected ProgressionDatabase progression;
+        protected SerializedObject serializedObject;
 
         /// <summary>
         /// 
         /// </summary>
-        protected Variable variable = new();
+        [SerializeReference]
+        protected List<IEndEvent> endEvents = new();
 
         /// <summary>
         /// 
         /// </summary>
-		protected EndEvent endEvent = new();
+        protected int endEventIndex;
 
 
         /// <summary>
         /// 
         /// </summary>
-		protected VariableEventEditor VariableEditor;
+        protected readonly InterfaceEditor<IEndEvent> EndEventEditor = new();
+
 
         /// <summary>
         /// 
         /// </summary>
-		protected readonly CustomCallEndEventEditor CustomCallEditor = new();
-
-
         [MenuItem("DREditor/Dialogue/Mass Edit Dialogues")]
         public static void CreateWizard() => DisplayWizard<MassDialogueEdit>("Edit Dialogue", "Apply to Dialogues");
 
-        protected virtual void OnEnable()
-        {
-            if (!DatabaseUtility.InitializeDatabase(progression, out progression) &&
-                EditorUtility.DisplayDialog("Progression was not specified.",
-                    "Please set up the progression database to " +
-                    "use this functionality!", "OK"))
-                Close();
-            else
-                VariableEditor = new(progression);
-        }
 
         protected override bool DrawWizardGUI()
         {
-            bool result = base.DrawWizardGUI();
-
             try
             {
-                DisplayGUI();
+                DisplayEndEvents();
             }
             catch (ArgumentException) { } // Skipping stupid argument exception about geting control during repaint.
 
-            return result;
+            return false;
         }
 
         /// <summary>
         /// 
         /// </summary>
-        protected virtual void DisplayGUI()
+        protected virtual void DisplayEndEvents()
         {
-            VariableEditor?.DisplayAddButton();
+            serializedObject ??= new(this);
 
-            variable = (Variable)VariableEditor?.Display(variable);
+            EndEventEditor.Initialize(null, endEvents, true, endEventIndex);
 
-            CustomCallEditor.DisplayAddButton();
+            EndEventEditor.DisplayInterfaceInstances(serializedObject.FindProperty(nameof(endEvents)));
 
-            endEvent = CustomCallEditor.Display(endEvent);
+            endEvents = EndEventEditor.instances;
+
+            endEventIndex = EndEventEditor.currentlyPickedIndex;
         }
 
 
         protected virtual void OnWizardCreate()
         {
-            foreach (UnityEngine.Object o in Selection.objects)
-            {
-                if (o is not Dialogue dialogue)
-                    continue;
-
-                if (variable.Enabled)
-                    dialogue.SetVariable(variable);
-
-                if (endEvent.Enabled)
-                    dialogue.SetEndEvent(endEvent);
-
-                EditorUtility.SetDirty(o);
-            }
+            ReplaceSelectedObjectsEndEvents();
 
             Close();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void ReplaceSelectedObjectsEndEvents()
+        {
+            foreach (UnityEngine.Object selectedObject in Selection.objects)
+                ReplaceContainer(selectedObject);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selectedObject"></param>
+        protected virtual void ReplaceContainer(UnityEngine.Object selectedObject)
+        {
+            if (selectedObject is IEndEventsContainer container)
+                ReplaceEndEventsFor(selectedObject, container);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selectedObject"></param>
+        /// <param name="container"></param>
+        protected virtual void ReplaceEndEventsFor(UnityEngine.Object selectedObject, IEndEventsContainer container)
+        {
+            container.EndEvents.Clear();
+
+            foreach (var endEvent in endEvents)
+                container.EndEvents.Add(endEvent);
+
+            EditorUtility.SetDirty(selectedObject);
         }
     }
 }

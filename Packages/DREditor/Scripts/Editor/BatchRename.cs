@@ -187,12 +187,14 @@ namespace DREditor.Editor
                 DialogueBase<T> nextDialogue = (DialogueBase<T>)Selection.objects[i + 1];
 
                 if (removeDirectTo)
-                    dialogue.DirectTo.Disable();
+                    dialogue.EndEvents.RemoveAll(i => i is DirectTo);
                 else
                 {
-                    dialogue.DirectTo.SetEnabled(true);
+                    DirectTo directTo = new();
 
-                    dialogue.DirectTo.SetNewDialogue(nextDialogue);
+                    directTo.SetNewDialogue(nextDialogue);
+
+                    dialogue.EndEvents.Add(directTo);
                 }
 
                 EditorUtility.SetDirty(dialogue);

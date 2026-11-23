@@ -227,7 +227,20 @@ namespace DREditor.Dialogues.Loading
                 return LoadNextSaveCondition(dialogueCore);
             else if (hasMadeChoices)
                 return LoadNextSaveChoice(dialogueCore);
-            else if (dialogueCore.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+            else 
+                return ReturnNextDialogueFromDirectTo(dialogueCore);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dialogueCore"></param>
+        /// <returns></returns>
+        protected virtual DialogueBase<T>[] ReturnNextDialogueFromDirectTo<T>(DialogueBase<T> dialogueCore)
+            where T : Line
+        {
+            if (dialogueCore.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
                 return ReturnDialogues(validResult);
             else
                 return null;

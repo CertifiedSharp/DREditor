@@ -8,10 +8,9 @@ using UnityEngine;
 
 namespace DREditor.Editor.Dialogues
 {
-    public class TriggerFlagEditor : ProgressionContextEditorBase
+    [CustomClassEditor(typeof(TriggerFlag))]
+    public class TriggerFlagEditor : ProgressionContextEditorBase<TriggerFlag>
     {
-        protected TriggerFlag FlagTrigger;
-
         protected Chapter chapter;
 
         protected Objective objective;
@@ -20,30 +19,19 @@ namespace DREditor.Editor.Dialogues
 
         protected int flagIndex;
 
-        public TriggerFlagEditor(ProgressionDatabase progression) : base(progression) { }
 
-        public virtual void DisplayAddButton()
+        protected override void OnInspectorGUI()
         {
-            if (FlagTrigger != null && !FlagTrigger.Enabled && HandyFields.Button("Trigger Flag"))
-                FlagTrigger.SetEnabled(true);
-        }
-
-        public virtual TriggerFlag Display(TriggerFlag FlagTrigger)
-        {
-            this.FlagTrigger = FlagTrigger;
-
             if (ShouldBeDisplayed())
                 CustomLayoutUtility.DisplayScoped(new EditorGUILayout.VerticalScope("Box", GUILayout.Width(400)),
                     DisplayTriggerFlagScoped);
-
-            return FlagTrigger;
         }
 
         protected virtual bool ShouldBeDisplayed()
         {
-            bool result = FlagTrigger.Enabled && progression != null && progression.Chapters.Count != 0;
+            bool result = progression != null && progression.Chapters.Count != 0;
 
-            if (FlagTrigger.Enabled && !result)
+            if (!result)
                 GUILayout.Label("Set up a ProgressionDatabase or add some chapters to it " +
                             "to use ProgressionDatabase functionality.");
 
@@ -51,17 +39,10 @@ namespace DREditor.Editor.Dialogues
         }
 
 
-        protected virtual void DisplayTriggerFlagScoped()
-        {
-            CustomLayoutUtility.DisplayVertical(DisplayTriggerFlag);
-
-            DisplayRemoveButton();
-        }
+        protected virtual void DisplayTriggerFlagScoped() => CustomLayoutUtility.DisplayVertical(DisplayTriggerFlag);
 
         protected virtual void DisplayTriggerFlag()
         {
-            GUILayout.Label("Trigger Flag: ");
-
             DisplayChapter();
 
             if (ObjectiveValid())
@@ -72,15 +53,17 @@ namespace DREditor.Editor.Dialogues
 
         protected virtual void DisplayChapter()
         {
-            FlagTrigger.Chapter = HandyFields.IntField("Chapter: ", FlagTrigger.Chapter);
+            target.Chapter = HandyFields.IntField("Chapter: ", target.Chapter, 200, 6, false);
 
-            if (FlagTrigger.Chapter < 0 || FlagTrigger.Chapter > progression.Chapters.Count)
-                FlagTrigger.Chapter = 0;
+            if (target.Chapter < 0 || target.Chapter > progression.Chapters.Count)
+                target.Chapter = 0;
 
-            chapter = progression.Chapters[FlagTrigger.Chapter];
+            chapter = progression.Chapters[target.Chapter];
+
+            GUILayout.Space(10);
         }
 
-        protected virtual bool ObjectiveValid() => chapter.Objectives.Count > 0 && FlagTrigger.Objective < chapter.Objectives.Count;
+        protected virtual bool ObjectiveValid() => chapter.Objectives.Count > 0 && target.Objective < chapter.Objectives.Count;
 
         protected virtual void OnObjectiveInvalid()
         {
@@ -89,7 +72,7 @@ namespace DREditor.Editor.Dialogues
                     "\nIf you're still seeing this message it means the chapter has no " +
                     "\nobjectives and needs to have one, or try pressing the remove button and try again.");
 
-            FlagTrigger.Objective = chapter.Objectives.Count - 1;
+            target.Objective = chapter.Objectives.Count - 1;
         }
 
         protected virtual void OnObjectiveValid()
@@ -104,14 +87,14 @@ namespace DREditor.Editor.Dialogues
 
         protected virtual void DisplayObjectivePopup()
         {
-            FlagTrigger.SetObjective(EditorGUILayout.Popup(FlagTrigger.Objective, chapter.GetObjectives()));
+            target.SetObjective(EditorGUILayout.Popup(target.Objective, chapter.GetObjectives()));
 
-            objective = chapter.Objectives[FlagTrigger.Objective];
+            objective = chapter.Objectives[target.Objective];
 
             flagNames = objective.GetFlagNames();
         }
 
-        protected virtual bool ShouldDisplayFlags() => FlagTrigger.Flags.Count != 0 && objective.Flags.Count != 0;
+        protected virtual bool ShouldDisplayFlags() => target.Flags.Count != 0 && objective.Flags.Count != 0;
 
         protected virtual void DisplayFlags()
         {
@@ -121,49 +104,37 @@ namespace DREditor.Editor.Dialogues
                 ForceRemoveFlags();
         }
 
-        protected virtual bool WithinObjectiveFlagCount() => FlagTrigger.Flags.Count <= objective.Flags.Count;
+        protected virtual bool WithinObjectiveFlagCount() => target.Flags.Count <= objective.Flags.Count;
 
         protected virtual void DisplayAssignedFlags()
         {
-            for (flagIndex = 0; flagIndex < FlagTrigger.Flags.Count; flagIndex++)
+            for (flagIndex = 0; flagIndex < target.Flags.Count; flagIndex++)
                 CustomLayoutUtility.DisplayHorizontal(AssertValidFlagIndex, DisplayFlagPopup, DisplayRemoveFlagButton);
         }
 
         protected virtual void AssertValidFlagIndex()
         {
-            if (FlagTrigger.Flags[flagIndex] > objective.Flags.Count)
-                FlagTrigger.Flags[flagIndex] = objective.Flags.Count - 1;
+            if (target.Flags[flagIndex] > objective.Flags.Count)
+                target.Flags[flagIndex] = objective.Flags.Count - 1;
         }
 
         protected virtual void DisplayFlagPopup() => 
-            FlagTrigger.Flags[flagIndex] = EditorGUILayout.Popup(FlagTrigger.Flags[flagIndex], flagNames);
+            target.Flags[flagIndex] = EditorGUILayout.Popup(target.Flags[flagIndex], flagNames);
 
         protected virtual void DisplayRemoveFlagButton()
         {
             if (HandyFields.Button("Remove Flag"))
-                FlagTrigger.Flags.Remove(FlagTrigger.Flags[flagIndex]);
+                target.Flags.Remove(target.Flags[flagIndex]);
         }
 
-        protected virtual void ForceRemoveFlags() => FlagTrigger.Flags.Remove(FlagTrigger.Flags.Count - 1);
+        protected virtual void ForceRemoveFlags() => target.Flags.Remove(target.Flags.Count - 1);
 
         protected virtual void DisplayAddFlagButton()
         {
             if (objective.Flags.Count == 0)
                 GUILayout.Label("The Current Objective does not have any flags, add some to continue setup.");
             else if (HandyFields.Button("Add Flag"))
-                FlagTrigger.Flags.Add(0);
-        }
-
-        protected virtual void DisplayRemoveButton()
-        {
-            if (HandyFields.Button("Remove"))
-            {
-                FlagTrigger.SetEnabled(false);
-
-                FlagTrigger.SetObjective(0);
-
-                FlagTrigger.Flags.Clear();
-            }
+                target.Flags.Add(0);
         }
     }
 }

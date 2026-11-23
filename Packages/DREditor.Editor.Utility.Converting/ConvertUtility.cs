@@ -110,18 +110,18 @@ namespace DREditor.Editor.Utility.Converting
         /// 
         /// </summary>
         [MenuItem("DREditor/Convert/Dialogue End Events")]
-        public static void MigrateAll()
+        public static void ConvertAllDialogueEndEvents()
         {
-            ConvertEndEventByDialogueType<Dialogue>();
+            ConvertEndEventsByDialogueType<Dialogue>();
 
-            ConvertEndEventByDialogueType<TrialDialogue>();
+            ConvertEndEventsByDialogueType<TrialDialogue>();
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        private static void ConvertEndEventByDialogueType<T>()
+        private static void ConvertEndEventsByDialogueType<T>() where T : DialogueCore
         {
             var guids = AssetDatabase.FindAssets($"t:{typeof(T).Name}");
 
@@ -131,7 +131,7 @@ namespace DREditor.Editor.Utility.Converting
 
                 var dialogue = AssetDatabase.LoadAssetAtPath<DialogueCore>(path);
 
-                if (dialogue != null && dialogue is DialogueBase<T> baseDialogue)
+                if (dialogue != null && dialogue is T baseDialogue)
                     baseDialogue.ConvertEndEvents();
                 else
                     continue;
