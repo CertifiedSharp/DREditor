@@ -95,7 +95,7 @@ namespace DREditor.Editor.Toolbox
         /// <param name="selectedObject"></param>
         protected virtual void ReplaceContainer(UnityEngine.Object selectedObject)
         {
-            if (selectedObject is IEndEventsContainer container)
+            if (selectedObject is IEndEventCollection container)
                 ReplaceEndEventsFor(selectedObject, container);
         }
 
@@ -104,7 +104,7 @@ namespace DREditor.Editor.Toolbox
         /// </summary>
         /// <param name="selectedObject"></param>
         /// <param name="container"></param>
-        protected virtual void ReplaceEndEventsFor(UnityEngine.Object selectedObject, IEndEventsContainer container)
+        protected virtual void ReplaceEndEventsFor(UnityEngine.Object selectedObject, IEndEventCollection container)
         {
             container.EndEvents.Clear();
 

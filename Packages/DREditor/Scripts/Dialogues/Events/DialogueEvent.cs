@@ -12,7 +12,12 @@ namespace DREditor.Dialogues.Events
 		
 	}
 
-	public interface IDisplayableDialogueEvent : IDialogueEvent
+    public interface IDialogueEventCollection
+    {
+        List<IDialogueEvent> DialogueEvents { get; }
+    }
+
+    public interface IDisplayableDialogueEvent : IDialogueEvent
 	{
 #if UNITY_EDITOR
         void EditorUI(object value = null);

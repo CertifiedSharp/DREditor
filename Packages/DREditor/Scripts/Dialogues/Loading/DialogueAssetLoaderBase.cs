@@ -1,4 +1,5 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
+using DREditor.Dialogues.Events;
 using DREditor.EventObjects;
 using DREditor.Saving;
 using DREditor.Services;
@@ -180,7 +181,22 @@ namespace DREditor.Dialogues.Loading
 
             LineLoader.LoadThroughLines(dialogue, directNum);
 
+            LoadDialogueEventEndEvent(dialogue);
+
             return ReturnNextDialogueFromEndEvents(dialogue);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dialogue"></param>
+        protected virtual void LoadDialogueEventEndEvent(DialogueCore dialogue)
+        {
+            if (dialogue is IEndEventCollection container)
+                foreach (var endEvent in container.EndEvents)
+                    if (endEvent is IDialogueEventCollection collection)
+                        foreach (var dialogueEvent in collection.DialogueEvents)
+                            dialogueEvent.TriggerDialogueEvent();
         }
 
         /// <summary>
@@ -357,13 +373,9 @@ namespace DREditor.Dialogues.Loading
         protected virtual DialogueBase<T>[] ReturnDialogues<T>(DialogueBase<T> dialogue)
             where T : Line
         {
-            UnityEngine.Debug.Log("Completed Loading Through previous dialogues, Playing Dialogue now.");
+            UnityEngine.Debug.Log("REPORT: Completed Loading Through previous dialogues, Playing Dialogue now.");
 
-            DialogueBase<T>[] dialogues = new DialogueBase<T>[1];
-
-            dialogues[0] = dialogue;
-
-            return dialogues;
+            return new DialogueBase<T>[1] { dialogue };
         }
 
         #endregion

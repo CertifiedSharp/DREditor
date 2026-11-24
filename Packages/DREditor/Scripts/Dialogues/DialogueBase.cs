@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 
 namespace DREditor.Dialogues
 {
-    public class DialogueBase<T> : DialogueCore, IEndEventsContainer
+    public class DialogueBase<T> : DialogueCore, IEndEventCollection
     {
 
         [FormerlySerializedAs("Lines")]
@@ -153,7 +153,7 @@ namespace DREditor.Dialogues
     }
 
 
-    public interface IEndEventsContainer
+    public interface IEndEventCollection
     {
         List<IEndEvent> EndEvents { get; }
 
@@ -165,7 +165,7 @@ namespace DREditor.Dialogues
         bool IsValid();
     }
     [System.Serializable]
-    public class DialogueEventEndEvent : EndEventBase
+    public class DialogueEventEndEvent : EndEventBase, IDialogueEventCollection
     {
         [SerializeReference]
         protected List<IDialogueEvent> dialogueEvents = new();

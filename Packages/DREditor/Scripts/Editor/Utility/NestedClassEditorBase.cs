@@ -152,7 +152,7 @@ namespace DREditor.Editor.Utility
         protected virtual void DisplayNestedEditor() => editor?.DisplayInterfaceInstances(nestedProp, cache);
 
         /// <summary>
-        ///
+        /// Updates the cache of data for this editors dropdown visibility and pop up indexes located on the parent editor.
         /// </summary>
         protected virtual void UpdateCache()
         {

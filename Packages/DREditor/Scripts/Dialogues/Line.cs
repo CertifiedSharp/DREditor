@@ -11,7 +11,7 @@ using UnityEngine.Serialization;
 namespace DREditor.Dialogues
 {
     [System.Serializable]
-    public class Line : LineBase
+    public class Line : LineBase, IDialogueEventCollection
     {
         public string translationKey;
         public string TranslationKey { get => translationKey; set => translationKey = value; }
@@ -66,6 +66,9 @@ namespace DREditor.Dialogues
 
         [SerializeReference]
         public List<IDialogueEvent> DiaEvents = new();
+
+
+        public virtual List<IDialogueEvent> DialogueEvents => DiaEvents;
 
         [FormerlySerializedAs("MusicChange")]
         public bool musicChange;

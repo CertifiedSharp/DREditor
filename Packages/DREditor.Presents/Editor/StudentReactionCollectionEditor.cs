@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace DREditor.Presents.Editor
 {
     /// <summary>
-    ///
+    /// The filled out Editor for the POCO class <see cref="StudentReactionCollection"/>. <br/>
+    /// Displays a dynamic list of <see cref="IReactionEntry"/>.
     /// </summary>
     [CustomClassEditor(typeof(StudentReactionCollection))]
     public class StudentReactionCollectionEditor : NestedClassEditorBase<IReactionEntry>

@@ -9,7 +9,8 @@ using UnityEngine;
 namespace DREditor.Editor.Dialogues
 {
     /// <summary>
-    /// 
+    /// The filled out Editor for the End Event POCO class <see cref="ChoiceEvent"/>. <br/>
+    /// Displays a dynamic list of <see cref="IChoice"/>.
     /// </summary>
     [CustomClassEditor(typeof(ChoiceEvent))]
     public class ChoiceEventEditor : NestedClassEditorBase<IChoice>
@@ -21,48 +22,67 @@ namespace DREditor.Editor.Dialogues
         protected override List<IChoice> Instances => ((ChoiceEvent)baseTarget).Choices;
     }
 
+    /// <summary>
+    /// Custom Class editor for the choice option <see cref="Choice"/>.
+    /// </summary>
     [CustomClassEditor(typeof(Choice))]
     public class ChoiceEditor : ClassEditorTypeBase<Choice>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         protected int value;
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected Color backgroundColor;
 
+
+        /// <inheritdoc/>
         protected override void OnInspectorGUI()
         {
             backgroundColor = GUI.backgroundColor;
 
-            using (new EditorGUILayout.HorizontalScope("Box"))
-                DisplayMainChoice(target);
+            CustomLayoutUtility.DisplayHorizontal("Box", DisplayMainChoice, DisplayToLineIndex);
 
-            DisplayLowerChoice(target);
+            DisplayChoiceCustomCall();
 
             GUI.backgroundColor = backgroundColor;
         }
 
-        protected virtual void DisplayMainChoice(Choice choice)
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void DisplayMainChoice()
         {
-            choice.ChoiceText = EditorGUILayout.TextField(
-                choice.ChoiceText, GUILayout.Width(Screen.width - 343));
+            target.ChoiceText = EditorGUILayout.TextField(
+                target.ChoiceText, GUILayout.Width(Screen.width - 343));
 
-            if (choice.NextDialogue == null)
+            if (target.NextDialogue == null)
                 GUI.backgroundColor = Color.cyan;
 
-            choice.NextDialogue =
-                (Dialogue)EditorGUILayout.ObjectField(choice.NextDialogue, typeof(Dialogue), true,
+            target.NextDialogue =
+                (Dialogue)EditorGUILayout.ObjectField(target.NextDialogue, typeof(Dialogue), true,
                     GUILayout.Width(100));
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void DisplayToLineIndex()
+        {
             GUI.backgroundColor = backgroundColor;
 
-            if (choice.NextDialogue != null)
+            if (target.NextDialogue != null)
             {
-                string[] nextDialogueTexts = new string[choice.NextDialogue.Lines.Count];
+                string[] nextDialogueTexts = new string[target.NextDialogue.Lines.Count];
 
-                int[] optValues = new int[choice.NextDialogue.Lines.Count];
+                int[] optValues = new int[target.NextDialogue.Lines.Count];
 
-                for (int j = 0; j < choice.NextDialogue.Lines.Count; j++)
+                for (int j = 0; j < target.NextDialogue.Lines.Count; j++)
                 {
-                    nextDialogueTexts[j] = choice.NextDialogue.Lines[j].Text;
+                    nextDialogueTexts[j] = target.NextDialogue.Lines[j].Text;
 
                     optValues[j] = value;
 
@@ -73,19 +93,23 @@ namespace DREditor.Editor.Dialogues
 
                 GUI.backgroundColor = Color.white;
 
-                GUI.backgroundColor = choice.NextDialogue.Color;
+                GUI.backgroundColor = target.NextDialogue.Color;
 
-                choice.NextIndexInDialogue = EditorGUILayout.IntPopup(
-                    choice.NextIndexInDialogue, nextDialogueTexts, optValues, GUILayout.Width(100));
+                target.NextIndexInDialogue = EditorGUILayout.IntPopup(
+                    target.NextIndexInDialogue, nextDialogueTexts, optValues, GUILayout.Width(100));
             }
         }
 
-        protected virtual void DisplayLowerChoice(Choice choice)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void DisplayChoiceCustomCall()
         {
-            choice.CustomCall = HandyFields.StringField("Custom Call: ", choice.CustomCall);
+            target.CustomCall = HandyFields.StringField("Custom Call: ", target.CustomCall);
 
             using (new EditorGUILayout.HorizontalScope("Box"))
-                choice.CallBreak = HandyFields.Option(choice.CallBreak, "Call Break: ", 70);
+                target.CallBreak = HandyFields.Option(target.CallBreak, "Call Break: ", 70);
 
             GUILayout.Space(5);
 
