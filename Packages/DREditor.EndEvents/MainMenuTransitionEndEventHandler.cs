@@ -32,13 +32,13 @@ namespace DREditor.EndEvents
         public virtual bool EvaluateEndEvent<T>(DialogueBase<T> dialogue, Action<DialogueCore[]> interruptDialogue)
             where T : Line
         {
-            if (dialogue is Dialogue currentDialogue &&
-                currentDialogue.SceneTransition.Enabled &&
-                currentDialogue.SceneTransition.ToMenu)
+            if (dialogue is IEndEventCollection currentDialogue &&
+                currentDialogue.GetEndEvent<SceneTransition>() is SceneTransition transition && 
+                transition.ToMenu)
             {
                 cleanUpDialogueReader.Raise();
 
-                ReturnToMenuHandler.ReturnToMenu(currentDialogue.SceneTransition.Scene);
+                ReturnToMenuHandler.ReturnToMenu(transition.Scene);
 
                 return true;
             }

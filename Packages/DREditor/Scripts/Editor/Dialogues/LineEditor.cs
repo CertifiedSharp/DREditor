@@ -66,13 +66,13 @@ namespace DREditor.Editor.Dialogues
 
         protected virtual void DisplayColoredLine() => CustomLayoutUtility.DisplayVertical(SetLineBGColor, DisplayLine);
 
-        protected override void DisplayLineNumberSplitter() => HandySplitters.LineNumSplitter(dia.Color, 1, 125);
+        protected override void DisplayLineNumberSplitter() => HandySplitters.LineNumSplitter(Color.white, 1, 125);
 
         protected virtual void ResolveColoredLine()
         {
             GUI.color = Color.white;
 
-            HandySplitters.UISplitterCustom(dia.Color);
+            HandySplitters.UISplitterCustom(Color.white);
         }
 
         protected virtual void SetLineBGColor()

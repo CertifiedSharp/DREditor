@@ -211,11 +211,7 @@ namespace DREditor.Actors.Editor
             if (chainDirectTo)
             {
                 if (previousDialogue != null)
-                {
-                    previousDialogue.DirectTo.SetEnabled(true);
-
-                    previousDialogue.DirectTo.SetNewDialogue(dialogue);
-                }
+                    previousDialogue.GetEndEvent<DirectTo>()?.SetNewDialogue(dialogue);
 
                 previousDialogue = dialogue;
             }

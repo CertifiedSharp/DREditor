@@ -43,7 +43,7 @@ namespace DREditor.EndEvents
         public virtual bool EvaluateEndEvent<T>(DialogueBase<T> currentDialogue, Action<DialogueCore[]> interruptDialogue)
             where T : Line
         {
-            if (currentDialogue.Variable.Enabled)
+            if (currentDialogue.GetEndEvent<Variable>() != null)
                 return EvaluateVarable(currentDialogue, interruptDialogue);
             else
                 return false;
@@ -61,7 +61,7 @@ namespace DREditor.EndEvents
         {
             DialogueCore[] dialogues = new DialogueCore[1];
 
-            var variable = currentDialogue.Variable;
+            var variable = currentDialogue.GetEndEvent<Variable>();
 
             bool boolVariableEvaluation = variable.BoolVariable != null && variable.BoolVariable.Resolve();
 
@@ -70,13 +70,13 @@ namespace DREditor.EndEvents
 
             if (boolVariableEvaluation || flagShouldBeTriggered)
             {
-                dialogues[0] = currentDialogue.Variable.NextDialogueTrue;
+                dialogues[0] = variable.NextDialogueTrue;
 
                 saveConditions.Add(true);
             }
             else if (variable.NextDialogueFalse != null)
             {
-                dialogues[0] = currentDialogue.Variable.NextDialogueFalse;
+                dialogues[0] = variable.NextDialogueFalse;
 
                 saveConditions.Add(false);
             }

@@ -36,10 +36,10 @@ namespace DREditor.Dialogues
                 if (!characters.Contains(line.Speaker))
                     characters.Add(line.Speaker);
 
-            if (dialogue.DirectTo != null &&
-                dialogue.DirectTo.NewDialogue != null &&
-                dialogue != dialogue.DirectTo.NewDialogue &&
-                dialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+            if (dialogue.GetEndEvent<DirectTo>() != null &&
+                dialogue.GetEndEvent<DirectTo>().NewDialogue != null &&
+                dialogue != dialogue.GetEndEvent<DirectTo>().NewDialogue &&
+                dialogue.GetEndEvent<DirectTo>().NewDialogue.IsValid(out DialogueBase<T> validResult))
                 ScanCharactersInDialogue(characters, validResult);
         }
 

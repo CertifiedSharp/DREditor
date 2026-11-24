@@ -78,9 +78,15 @@ namespace DREditor.Choices
         [SerializeField] protected List<ChoiceOptionUI> choiceOptions = new();
 
 
+        /// <summary>
+        /// 
+        /// </summary>
         [Header("")]
         [SerializeField] protected UnityEvent OnChoiceStarted = null;
 
+        /// <summary>
+        /// 
+        /// </summary>
         [Header("")]
         [SerializeField] protected UnityEvent OnChoiceConfirmed = null;
 
@@ -260,11 +266,10 @@ namespace DREditor.Choices
         /// </summary>
         protected virtual void TriggerDialogueFlag()
         {
-            if (currentDialogue.FlagTrigger.Enabled)
-                ServiceLocator.GetService<FlagTriggerHandlerBase>().TriggerFlag(
-                    currentDialogue.FlagTrigger.Chapter,
-                    currentDialogue.FlagTrigger.Objective,
-                    currentDialogue.FlagTrigger.Flags);
+            var trigger = currentDialogue.GetEndEvent<TriggerFlag>();
+
+            if (trigger != null)
+                ServiceLocator.GetService<FlagTriggerHandlerBase>().TriggerFlag(trigger.Chapter, trigger.Objective, trigger.Flags);
         }
 
 

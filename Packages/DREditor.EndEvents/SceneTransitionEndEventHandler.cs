@@ -87,7 +87,7 @@ namespace DREditor.EndEvents
         public virtual IEnumerator EvaluateEndEvent<T>(DialogueBase<T> currentDialogue, Action exitParentEarly) 
             where T : Line
         {
-            if (currentDialogue.SceneTransition.Enabled)
+            if (currentDialogue.GetEndEvent<SceneTransition>() != null)
                 yield return SceneTransitionRoutine(currentDialogue);
         }
 
@@ -99,15 +99,17 @@ namespace DREditor.EndEvents
         protected virtual IEnumerator SceneTransitionRoutine<T>(DialogueBase<T> currentDialogue) 
             where T : Line
         {
-            if (currentDialogue.SceneTransition.ToDark)
+            SceneTransition transition = currentDialogue.GetEndEvent<SceneTransition>();
+
+            if (transition.ToDark)
                 yield return ServiceLocator.GetService<GlobalFade>().FadeToRoutine(sceneTransitionToDarkFadeTime);
 
             EvaluateSceneTransitionOptions(currentDialogue);
 
-            if (!currentDialogue.SceneTransition.AtEnd && !currentDialogue.SceneTransition.ToMenu)
-                yield return MoveToScene(currentDialogue.SceneTransition.Scene);
-            else if (currentDialogue.SceneTransition.AtEnd)
-                DialogueEventSystem.TriggerEvent(moveOnEndEventString, currentDialogue.SceneTransition.AtEnd);
+            if (!transition.AtEnd && !transition.ToMenu)
+                yield return MoveToScene(transition.Scene);
+            else if (transition.AtEnd)
+                DialogueEventSystem.TriggerEvent(moveOnEndEventString, transition.AtEnd);
         }
 
         /// <summary>
@@ -118,16 +120,18 @@ namespace DREditor.EndEvents
         protected virtual void EvaluateSceneTransitionOptions<T>(DialogueBase<T> currentDialogue) 
             where T : Line
         {
-            if (!string.IsNullOrEmpty(currentDialogue.SceneTransition.MoveToObjective))
-                moveToObjective.SetValue(currentDialogue.SceneTransition.MoveToObjective);
+            SceneTransition SceneTransition = currentDialogue.GetEndEvent<SceneTransition>();
 
-            if (currentDialogue.SceneTransition.MoveToNextNaturalObjective)
+            if (!string.IsNullOrEmpty(SceneTransition.MoveToObjective))
+                moveToObjective.SetValue(SceneTransition.MoveToObjective);
+
+            if (SceneTransition.MoveToNextNaturalObjective)
                 moveToNextNaturalObjective.Raise();
 
-            if (currentDialogue.SceneTransition.OnLoadNoDark)
+            if (SceneTransition.OnLoadNoDark)
                 DialogueEventSystem.TriggerEvent(fadeOutEventString);
-
-            if (!currentDialogue.SceneTransition.ToMenu && currentDialogue.DirectTo.Enabled)
+            
+            if (!SceneTransition.ToMenu && currentDialogue.GetEndEvent<DirectTo>() != null)
                 ServiceLocator.GetService<TPFDRoomLoader>().SetMovingToTPFDMode();
         }
 

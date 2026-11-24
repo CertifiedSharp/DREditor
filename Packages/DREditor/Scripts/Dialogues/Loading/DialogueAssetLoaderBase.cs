@@ -256,7 +256,7 @@ namespace DREditor.Dialogues.Loading
         protected virtual DialogueBase<T>[] ReturnNextDialogueFromDirectTo<T>(DialogueBase<T> dialogueCore)
             where T : Line
         {
-            if (dialogueCore.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+            if (dialogueCore.GetEndEvent<DirectTo>().NewDialogue.IsValid(out DialogueBase<T> validResult))
                 return ReturnDialogues(validResult);
             else
                 return null;
@@ -273,7 +273,7 @@ namespace DREditor.Dialogues.Loading
         {
             UnityEngine.Debug.Log($"REPORT: Reached end of Load Through: Has DirectTo: {directNum} out of {DirectToNum}");
 
-            bool directToDialogueIsValid = dialogue.DirectTo.NewDialogue != null;
+            bool directToDialogueIsValid = dialogue.GetEndEvent<DirectTo>().NewDialogue != null;
 
             bool conditionNumNotReached = conditionNum != Conditionals.Count;
 
@@ -282,7 +282,7 @@ namespace DREditor.Dialogues.Loading
             if (directToDialogueIsValid)
                 directNum++;
 
-            if (directToDialogueIsValid && dialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+            if (directToDialogueIsValid && dialogue.GetEndEvent<DirectTo>().NewDialogue.IsValid(out DialogueBase<T> validResult))
                 return LoadThrough(validResult);
             else if (conditionNumNotReached) // Pretty sure this can't be reached but putting it here to cover
                 return LoadNextSaveCondition(dialogue);
@@ -305,9 +305,9 @@ namespace DREditor.Dialogues.Loading
 
             conditionNum++;
 
-            if (Conditionals[conditionNum - 1] && dialogue.Variable.NextDialogueTrue.IsValid(out DialogueBase<T> validResult))
+            if (Conditionals[conditionNum - 1] && dialogue.GetEndEvent<Variable>().NextDialogueTrue.IsValid(out DialogueBase<T> validResult))
                 return LoadThrough(validResult);
-            else if (dialogue.Variable.NextDialogueFalse.IsValid(out DialogueBase<T> validResultFalse))
+            else if (dialogue.GetEndEvent<Variable>().NextDialogueFalse.IsValid(out DialogueBase<T> validResultFalse))
                 return LoadThrough(validResultFalse);
             else
                 Debug.LogError("ALERT: THE NEXT VARIABLE DIALOGUE COULD NOT BE FOUND.");
@@ -355,7 +355,7 @@ namespace DREditor.Dialogues.Loading
 
             UnityEngine.Debug.Log("Direct Condition Num: " + conditionNum + " Condition Count: " + Conditionals.Count);
 
-            UnityEngine.Debug.Log("DirectTo New Dialogue is something?: " + (dialogue.DirectTo.NewDialogue != null));
+            UnityEngine.Debug.Log("DirectTo New Dialogue is something?: " + (dialogue.GetEndEvent<DirectTo>().NewDialogue != null));
 
             UnityEngine.Debug.Log("SaveDirectTo Num: " + DirectToNum);
 

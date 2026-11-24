@@ -117,8 +117,6 @@ namespace DREditor.Editor.Dialogues
                 debugMode = HandyFields.Option(debugMode, "Debug Mode: ", 80);
 
                 EditorGUILayout.LabelField(dia.DialogueName, EditorStyles.boldLabel);
-
-                dia.SetColor(EditorGUILayout.ColorField(dia.Color, GUILayout.Width(50)));
             }
 
             if (debugMode)
@@ -142,7 +140,7 @@ namespace DREditor.Editor.Dialogues
 
             EditorStyles.textField.wordWrap = true;
 
-            GUI.backgroundColor = dia.Color;
+            GUI.backgroundColor = Color.white;
         }
 
 

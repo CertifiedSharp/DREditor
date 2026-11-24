@@ -52,7 +52,7 @@ namespace DREditor.Dialogues.Loading
 
                 if (found)
                     return found;
-                else if (dialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+                else if (dialogue.GetEndEvent<DirectTo>().NewDialogue.IsValid(out DialogueBase<T> validResult))
                     return CheckDialogue<T>(validResult);
             }
 

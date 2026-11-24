@@ -23,7 +23,7 @@ namespace DREditor.Dialogues.Loading
         /// <inheritdoc/>
         public virtual void OnLoadedThroughDialogue(DialogueCore dialogue)
         {
-            if (dialogue is Dialogue defaultDialogue && defaultDialogue.SceneTransition.Enabled)
+            if (dialogue is IEndEventCollection defaultDialogue && defaultDialogue.GetEndEvent<SceneTransition>() != null)
                 DialogueEventSystem.TriggerEvents(dialogueEvents);
         }
     }

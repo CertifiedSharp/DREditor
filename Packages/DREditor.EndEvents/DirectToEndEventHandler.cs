@@ -65,7 +65,7 @@ namespace DREditor.EndEvents
         protected virtual bool EvaluateDirectTo<T>(DialogueBase<T> currentDialogue, Action<DialogueCore[]> interruptDialogue) 
             where T : Line
         {
-            bool isValidDirectTo = currentDialogue.DirectTo != null && currentDialogue.DirectTo.Enabled;
+            bool isValidDirectTo = currentDialogue.GetEndEvent<DirectTo>() != null;
 
             if (isValidDirectTo)
                 OnDirectToValid(currentDialogue, interruptDialogue);
@@ -85,7 +85,7 @@ namespace DREditor.EndEvents
         protected virtual void OnDirectToValid<T>(DialogueBase<T> currentDialogue, Action<DialogueCore[]> interruptDialogue)
             where T : Line
         {
-            if (!currentDialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+            if (!currentDialogue.GetEndEvent<DirectTo>().NewDialogue.IsValid(out DialogueBase<T> validResult))
                 return;
 
             DialogueBase<T>[] nextDialogueToBePlayed = new DialogueBase<T>[1] { validResult };

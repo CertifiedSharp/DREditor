@@ -1,9 +1,6 @@
 ﻿//Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For DREditor
 #if UNITY_EDITOR
 using DREditor.Dialogues;
-using DREditor.Dialogues.Events;
-using DREditor.Editor.Utility;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -35,9 +32,7 @@ namespace DREditor.Editor.Dialogues
                     background = GUI.backgroundColor;
 
                     if (target.NewDialogue == null)
-                    {
                         GUI.backgroundColor = Color.cyan;
-                    }
 
                     target.SetNewDialogue(
                         (DialogueCore)EditorGUILayout.ObjectField(target.NewDialogue, typeof(DialogueCore), false,
@@ -67,19 +62,6 @@ namespace DREditor.Editor.Dialogues
                 value = 0;
             }
         }
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    [CustomClassEditor(typeof(DialogueEventEndEvent))]
-    public class DialogueEventEndEventEditor : NestedClassEditorBase<IDialogueEvent>
-    {
-        /// <inheritdoc/>
-        protected override string TargetFieldName => "dialogueEvents";
-
-        /// <inheritdoc/>
-        protected override List<IDialogueEvent> Instances => ((DialogueEventEndEvent)baseTarget).DialogueEvents;
     }
 }
 #endif

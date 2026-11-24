@@ -24,7 +24,7 @@ namespace DREditor.EndEvents
         {
             base.OnDirectToValid(currentDialogue, interruptDialogue);
 
-            if (currentDialogue.SceneTransition.Enabled && !currentDialogue.SceneTransition.AtEnd)
+            if (!currentDialogue.GetEndEvent<SceneTransition>()?.AtEnd)
                 SceneTransitionEndEventHandler.SetSaveTransitionNum(saveDirectToNum);
         }
     }

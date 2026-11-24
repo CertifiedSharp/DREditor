@@ -1,7 +1,6 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
 using DREditor.Characters;
 using DREditor.Dialogues;
-using DREditor.Editor;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -79,6 +78,21 @@ namespace DREditor.Editor.Utility
 
             if (!foundOne)
                 UnityEngine.Debug.LogWarning("ALERT: Couldn't find a trial dialogue that fit.");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="line"></param>
+        /// <returns></returns>
+        public static bool HasEmptySceneEvents(this Line line)
+        {
+            if (line.Events.Count > 0)
+                foreach (var sceneEvent in line.Events)
+                    if (sceneEvent == null)
+                        return true;
+
+            return false;
         }
     }
 }

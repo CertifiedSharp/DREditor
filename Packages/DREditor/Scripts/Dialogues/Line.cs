@@ -19,6 +19,7 @@ namespace DREditor.Dialogues
         [TextArea]
         [FormerlySerializedAs("Text")]
         public string text;
+
         public string Text { get => text; set => text = value; }
 
 
@@ -61,7 +62,8 @@ namespace DREditor.Dialogues
         public bool AutomaticLine { get => automaticLine; set => automaticLine = value; }
 
         [FormerlySerializedAs("AliasNumber")]
-        public int aliasNumber; // additions
+        public int aliasNumber;
+
         public int AliasNumber { get => aliasNumber; set => aliasNumber = value; }
 
         [SerializeReference]
@@ -115,26 +117,18 @@ namespace DREditor.Dialogues
         
         
         public Line() { }
-        public Line(Character Speaker, int SpeakerNumber) : base(Speaker, SpeakerNumber) { }
-        public Line(string Text)
-        {
-            this.Text = Text;
-        }
 
-        public Line(Character Speaker, int SpeakerNumber, string Text) : base(Speaker, SpeakerNumber)
-        {
-            this.Text = Text;
-        }
+        public Line(Character Speaker, int SpeakerNumber) : base(Speaker, SpeakerNumber) { }
+        
+        public Line(string Text) => this.Text = Text;
+
+        public Line(Character Speaker, int SpeakerNumber, string Text) : base(Speaker, SpeakerNumber) => this.Text = Text;
 
         public Line(Character Speaker, int SpeakerNumber, Expression Expression, int ExpressionNumber) :
-            base(Speaker, SpeakerNumber, Expression, ExpressionNumber)
-        { }
+            base(Speaker, SpeakerNumber, Expression, ExpressionNumber) { }
 
         public Line(Character Speaker, int SpeakerNumber, Expression Expression, int ExpressionNumber, string Text) :
-            this(Speaker, SpeakerNumber, Expression, ExpressionNumber)
-        {
-            this.Text = Text;
-        }
+            this(Speaker, SpeakerNumber, Expression, ExpressionNumber) => this.Text = Text;
 
         public void SetText(string Text) => this.Text = Text;
 
@@ -175,15 +169,5 @@ namespace DREditor.Dialogues
         public void SetDiaEvents(List<IDialogueEvent> DiaEvents) => this.DiaEvents = DiaEvents;
 
         public virtual bool ContainsEventType<T>() => DiaEvents.OfType<T>().Any();
-
-        public virtual bool HasEmptySceneEvents()
-        {
-            if (Events.Count > 0)
-                foreach (var sceneEvent in Events)
-                    if (sceneEvent == null)
-                        return true;
-
-            return false;
-        }
     }
 }

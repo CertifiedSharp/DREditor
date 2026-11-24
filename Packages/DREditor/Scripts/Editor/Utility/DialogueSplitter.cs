@@ -102,14 +102,8 @@ namespace DREditor.Editor.Utility
         /// <param name="currentDialogue"></param>
         protected virtual void CopyDirectTo(Dialogue currentDialogue)
         {
-            if (DialogueToSplit.DirectTo.Enabled)
-            {
-                currentDialogue.SetDirectTo(new DirectTo());
-
-                currentDialogue.DirectTo.SetEnabled(true);
-
-                currentDialogue.DirectTo.SetNewDialogue(DialogueToSplit.DirectTo.NewDialogue);
-            }
+            if (DialogueToSplit.GetEndEvent<DirectTo>() is DirectTo directToEvent)
+                currentDialogue.EndEvents.Add(new DirectTo(directToEvent.NewDialogue));
         }
 
         /// <summary>

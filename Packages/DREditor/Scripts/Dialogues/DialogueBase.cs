@@ -1,5 +1,4 @@
 ﻿//Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
-using DREditor.Dialogues.Events;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,19 +6,49 @@ using UnityEngine.Serialization;
 
 namespace DREditor.Dialogues
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class DialogueBase<T> : DialogueCore, IEndEventCollection
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
         [FormerlySerializedAs("Lines")]
         public List<T> lines = new();
+
+        /// <summary>
+        /// 
+        /// </summary>
         public List<T> Lines { get => lines; }
 
-        [SelectType]
+        /// <summary>
+        /// The Collection of <see cref="IEndEvent"/>s held by the implementer.
+        /// </summary>
         [SerializeReference]
         protected List<IEndEvent> endEvents = new();
 
+        /// <inheritdoc/>
         public virtual List<IEndEvent> EndEvents { get => endEvents; }
 
+        /// <inheritdoc/>
+        public override int LineCount => Lines.Count;
+
+        /// <inheritdoc/>
+        public override void InvokeDialogue(ITypeCallback callback) { }
+
+
+        public SceneTransition SceneTransition = new();
+
+        public TriggerFlag FlagTrigger = new();
+
+        public Variable Variable = new();
+
+        public DirectTo DirectTo;
+
+
+        /// <inheritdoc/>
         public virtual T2 GetEndEvent<T2>()
         {
             foreach (var endEvent in EndEvents)
@@ -29,19 +58,7 @@ namespace DREditor.Dialogues
             return default;
         }
 
-        public SceneTransition SceneTransition = new();
-        
-        public TriggerFlag FlagTrigger = new(); //*
-
-        public override int LineCount { get => Lines.Count; }
-
-        public override void InvokeDialogue(ITypeCallback callback) { }
-        
-
-        public void SetColor(Color Color) => this.Color = Color;
-
-        
-
+        /// <inheritdoc/>
         public override Line GetLine(int index)
         {
             int lineIndex = 0;
@@ -61,6 +78,7 @@ namespace DREditor.Dialogues
             }
         }
 
+        /// <inheritdoc/>
         public override List<T2> GetLines<T2>()
         {
             if (Lines is List<T2> castedLines)
@@ -72,28 +90,21 @@ namespace DREditor.Dialogues
             return null;
         }
 
-        public Variable Variable = new();
-        public DirectTo DirectTo;
-
-        public void SetVariable(Variable Variable) => this.Variable = Variable;
-        public void SetDirectTo(DirectTo DirectTo) => this.DirectTo = DirectTo;
-        public void SetSceneTransition(SceneTransition SceneTransition) => this.SceneTransition = SceneTransition;
-        public void SetTriggerFlag(TriggerFlag FlagTrigger) => this.FlagTrigger = FlagTrigger;
-
+        /// <inheritdoc/>
         public override bool IsNested(DialogueCore dia, List<DialogueCore> history)
         {
-            if (DirectTo != null && DirectTo.NewDialogue != null)
+            if (GetEndEvent<DirectTo>() is DirectTo directTo && directTo.NewDialogue != null)
             {
-                if (history.Contains(DirectTo.NewDialogue))
+                if (history.Contains(directTo.NewDialogue))
                     return false;
 
-                if (DirectTo.NewDialogue == dia)
+                if (directTo.NewDialogue == dia)
                     return true;
                 else
                 {
                     history.Add(this);
 
-                    return DirectTo.NewDialogue.IsNested(dia, history);
+                    return directTo.NewDialogue.IsNested(dia, history);
                 }
             }
 
@@ -101,12 +112,22 @@ namespace DREditor.Dialogues
         }
 
 
-
 #if UNITY_EDITOR
+        /* ALERT: The following should be applied to this script after DREditor Ver.0.1.12 :
+         * Remove all this code. By this point End Events should now be done converting for projects.
+        */
+
+        /// <summary>
+        /// 
+        /// </summary>
         [SerializeField] protected bool converted = false;
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected void SetConverted() => converted = true;
 
+        /// <inheritdoc/>
         public override void ConvertEndEvents()
         {
             if (converted)
@@ -121,7 +142,9 @@ namespace DREditor.Dialogues
             UnityEditor.EditorUtility.SetDirty(this);
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         protected virtual void ConvertEndEventInstances()
         {
             AddExistingEvent(SceneTransition);
@@ -133,12 +156,19 @@ namespace DREditor.Dialogues
             AddExistingEvent(Variable);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="endEvent"></param>
         protected virtual void AddExistingEvent(EndEventBase endEvent)
         {
             if (endEvent != null && endEvent.Enabled)
                 EndEvents.Add(endEvent);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected virtual void ClearOldEndEvents()
         {
             SceneTransition = null;
@@ -150,27 +180,5 @@ namespace DREditor.Dialogues
             Variable = null;
         }
 #endif
-    }
-
-
-    public interface IEndEventCollection
-    {
-        List<IEndEvent> EndEvents { get; }
-
-        T GetEndEvent<T>();
-    }
-
-    public interface IEndEvent
-    {
-        bool IsValid();
-    }
-    [System.Serializable]
-    public class DialogueEventEndEvent : EndEventBase, IDialogueEventCollection
-    {
-        [SerializeReference]
-        protected List<IDialogueEvent> dialogueEvents = new();
-
-
-        public virtual List<IDialogueEvent> DialogueEvents => dialogueEvents;
     }
 }

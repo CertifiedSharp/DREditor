@@ -30,13 +30,8 @@ namespace DREditor.EndEvents
         /// <param name="currentDialogue"></param>
         protected virtual void TriggerDialogueFlag<T>(DialogueBase<T> currentDialogue)
         {
-            if (currentDialogue.FlagTrigger != null && currentDialogue.FlagTrigger.Enabled)
-            {
-                TriggerFlag triggerFlag = currentDialogue.FlagTrigger;
-
-                ServiceLocator.GetService<FlagTriggerHandlerBase>()
-                    .TriggerFlag(triggerFlag.Chapter, triggerFlag.Objective, triggerFlag.Flags);
-            }
+            if (currentDialogue.GetEndEvent<TriggerFlag>() is TriggerFlag triggerFlag)
+                ServiceLocator.GetService<FlagTriggerHandlerBase>().TriggerFlag(triggerFlag.Chapter, triggerFlag.Objective, triggerFlag.Flags);
         }
     }
 }

@@ -180,14 +180,15 @@ namespace DREditor.Editor.Toolbox
         void HasDirectToAndSceneTransition()
         {
             var assets = FindAssetsByType<Dialogue>();
+
             for (int j = 0; j < assets.Count; j++)
             {
                 Dialogue dia = assets[j];
-                if (dia.DirectTo != null && dia.SceneTransition.Enabled && !dia.SceneTransition.AtEnd && !dia.SceneTransition.ToMenu)
-                {
+
+                if (dia.GetEndEvent<DirectTo>() != null && !dia.GetEndEvent<SceneTransition>().AtEnd && !dia.GetEndEvent<SceneTransition>().ToMenu)
                     Debug.Log("Asset Found Called: " + dia.name);
-                }
             }
+
             Close();
         }
 

@@ -9,7 +9,6 @@ namespace DREditor.Dialogues
     public abstract class DialogueCore : ScriptableObject, IConvertableDialogue
     {
         public string DialogueName = "";
-        public Color Color = Color.white;
 
         public static event Action<DialogueCore, Line> OnDebugLine;
 
@@ -58,8 +57,6 @@ namespace DREditor.Dialogues
 
             return values;
         }
-
-
 #endif
     }
 }

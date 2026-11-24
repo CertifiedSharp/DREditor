@@ -189,13 +189,7 @@ namespace DREditor.Editor
                 if (removeDirectTo)
                     dialogue.EndEvents.RemoveAll(i => i is DirectTo);
                 else
-                {
-                    DirectTo directTo = new();
-
-                    directTo.SetNewDialogue(nextDialogue);
-
-                    dialogue.EndEvents.Add(directTo);
-                }
+                    dialogue.EndEvents.Add(new DirectTo(nextDialogue));
 
                 EditorUtility.SetDirty(dialogue);
             }

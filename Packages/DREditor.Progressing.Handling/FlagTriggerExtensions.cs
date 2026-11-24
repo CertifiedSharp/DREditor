@@ -19,8 +19,8 @@ namespace DREditor.Progressing.Handling
         //        dialogue.FlagTrigger.Objective == objName &&
         //        dialogue.FlagTrigger.Chapter == chap)
         //        return true;
-        //    else if (dialogue != null && dialogue.DirectTo != null && dialogue.DirectTo.Enabled)
-        //        return dialogue.DirectTo.NewDialogue.ContainsFlagTriggerFor(chap, objName);
+        //    else if (dialogue != null && dialogue.GetEndEvent<DirectTo>() != null && dialogue.GetEndEvent<DirectTo>().Enabled)
+        //        return dialogue.GetEndEvent<DirectTo>().NewDialogue.ContainsFlagTriggerFor(chap, objName);
 
         //    return false;
         //}
@@ -32,8 +32,8 @@ namespace DREditor.Progressing.Handling
         /// <returns></returns>
         public static bool HasUnTriggeredRequiredFlags<T>(this DialogueBase<T> dialogue)
         {
-            if (dialogue != null && dialogue.FlagTrigger != null && dialogue.FlagTrigger.Enabled)
-                foreach (var index in dialogue.FlagTrigger.Flags)
+            if (dialogue != null && dialogue.GetEndEvent<TriggerFlag>() is TriggerFlag trigger)
+                foreach (var index in trigger.Flags)
                     if (HasUnTriggeredRequiredFlag(dialogue, index))
                         return true;
 
@@ -48,9 +48,9 @@ namespace DREditor.Progressing.Handling
         /// <returns></returns>
         public static bool HasUnTriggeredRequiredFlag<T>(DialogueBase<T> dialogue, int index)
         {
-            if (!dialogue.FlagTrigger.FlagIsOptional(index) && !dialogue.FlagTrigger.FlagHasBeenTriggered(index))
+            if (!dialogue.GetEndEvent<TriggerFlag>().FlagIsOptional(index) && !dialogue.GetEndEvent<TriggerFlag>().FlagHasBeenTriggered(index))
                 return true;
-            else if (dialogue.DirectTo.NewDialogue.IsValid(out DialogueBase<T> validResult))
+            else if (dialogue.GetEndEvent<DirectTo>().NewDialogue.IsValid(out DialogueBase<T> validResult))
                 return validResult.HasUnTriggeredRequiredFlags();
 
             return false;
