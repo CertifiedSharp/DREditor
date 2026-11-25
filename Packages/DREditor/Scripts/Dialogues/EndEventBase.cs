@@ -3,14 +3,24 @@ using UnityEngine;
 
 namespace DREditor.Dialogues
 {
+    /* ALERT: The following should be applied to this script after DREditor Ver.0.1.12 :
+     * Insead of EndEventBase investigate just using IEndEvent.
+     * Potentially removing EndEventBase.
+    */
+    /// <summary>
+    /// 
+    /// </summary>
     [System.Serializable]
     public abstract class EndEventBase : IEndEvent
     {
+        /// <summary>
+        /// 
+        /// </summary>
         [HideInInspector]
         public bool Enabled;
 
-        public virtual bool IsValid() => true;
 
-        public virtual void SetEnabled(bool Enabled) => this.Enabled = Enabled;
+        /// <inheritdoc/>
+        public virtual bool IsValid() => true;
     }
 }

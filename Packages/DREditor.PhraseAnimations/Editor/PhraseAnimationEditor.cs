@@ -55,9 +55,9 @@ namespace DREditor.PhraseAnimations.Editor
         /// </summary>
         protected virtual void DisplaySpawnData()
         {
-            target.SetSpawnPoint(HandyFields.Vector3Field("Spawn Point: ", target.spawnPoint, 200, 7));
+            target.SetSpawnPoint(HandyFields.Vector3Field("Spawn Point: ", target.spawnPoint, 200));
 
-            target.SetSpawnAngle(HandyFields.Vector4Field("Spawn Angle: ", target.spawnAngle, 200, 7));
+            target.SetSpawnAngle(HandyFields.Vector4Field("Spawn Angle: ", target.spawnAngle, 200));
         }
 
         /// <summary>

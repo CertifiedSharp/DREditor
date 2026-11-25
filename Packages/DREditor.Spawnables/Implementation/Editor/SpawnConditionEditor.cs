@@ -135,10 +135,10 @@ namespace DREditor.Spawnables.Implementation.Editor
 
             EditorGUILayout.Space();
 
-            conditionCapsule.SetIgnoreCondition(HandyFields.BoolField(conditionCapsule.ignoreCondition, 
+            conditionCapsule.SetIgnoreCondition(HandyFields.Option(
                 new GUIContent("Ignore Condition, Just invoke events: ",
                 "Whether the condition should not be evaluated and to instead just execute the dialogue." +
-                "\nOriginally added to do Map UI Entry Spawns/Events for starts of FTE's.")));
+                "\nOriginally added to do Map UI Entry Spawns/Events for starts of FTE's."), conditionCapsule.ignoreCondition));
 
             GUILayout.Space(10);
         }

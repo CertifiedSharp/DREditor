@@ -287,7 +287,7 @@ namespace DREditor.Trials
         /// </summary>
         protected virtual void DisplayGateData()
         {
-            builder.SetEndSceneName(HandyFields.StringField("End Scene Name: ", builder.EndSceneName, 230, 130));
+            builder.SetEndSceneName(HandyFields.StringField("End Scene Name: ", builder.EndSceneName, 230));
 
             builder.SetEndGate(HandyFields.UnityField(
                     new GUIContent("End Gate: ", ""),

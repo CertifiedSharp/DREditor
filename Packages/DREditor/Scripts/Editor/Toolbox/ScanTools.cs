@@ -207,7 +207,7 @@ namespace DREditor.Editor.Toolbox
 
                 SceneTransition SceneTransition = dia.GetEndEvent<SceneTransition>();
 
-                if (SceneTransition.Enabled && !SceneTransition.ToMenu && dia.GetEndEvent<DirectTo>() != null)
+                if (SceneTransition != null && !SceneTransition.ToMenu && dia.GetEndEvent<DirectTo>() != null)
                 {
                     UnityEngine.Debug.Log("Found: " + dia.name);
 

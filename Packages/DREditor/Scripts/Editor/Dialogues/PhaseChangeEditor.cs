@@ -24,7 +24,7 @@ namespace DREditor.Editor.Dialogues
         /// </summary>
         protected virtual void DisplayPhaseChange()
         {
-            target.NextObjective = HandyFields.Option(target.NextObjective, "Next Objective: ", 100);
+            target.NextObjective = HandyFields.Option("Next Objective: ", target.NextObjective);
 
             target.NewDialogue = HandyFields.UnityField(target.NewDialogue, 120, 30);
 

@@ -85,7 +85,7 @@ namespace DREditor.Editor.Toolbox
             {
                 if (GUILayout.Button("Get Dialogues that contains \n the specified type of variable"))
                     FindTypeOfVariable();
-                fieldVariableName = HandyFields.StringField("Variable Name: ", fieldVariableName, 200, 100);
+                fieldVariableName = HandyFields.StringField("Variable Name: ", fieldVariableName, 200);
                 fieldTypeName = HandyFields.StringField("Type Name: ", fieldTypeName);
             }
         }

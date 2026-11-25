@@ -172,7 +172,7 @@ namespace DREditor.Maps
             EditorGUILayout.LabelField(place.name, GUILayout.MaxWidth(100));
 
             if (mapDB.GetPlace(place.name, place.GetID()).fastTravelable)
-                place.SetFastTravel(HandyFields.BoolField(place.enableFastTravelForThisEntryInstance, "FT: "));
+                place.SetFastTravel(HandyFields.Option("FT: ", place.enableFastTravelForThisEntryInstance));
         }
 
         /// <summary>

@@ -33,10 +33,10 @@ namespace DREditor.CustomEvents
             {
                 displayString = s;
 
-                value = HandyFields.BoolField(value, s);
+                value = HandyFields.Option(s, value);
             }
             else if (!string.IsNullOrEmpty(displayString))
-                value = HandyFields.BoolField(value, displayString);
+                value = HandyFields.Option(displayString, value);
 
         }
 #else

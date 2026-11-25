@@ -114,7 +114,7 @@ namespace DREditor.Editor.Dialogues
         {
             using (new EditorGUILayout.HorizontalScope())
             {
-                debugMode = HandyFields.Option(debugMode, "Debug Mode: ", 80);
+                debugMode = HandyFields.Option("Debug Mode: ", debugMode);
 
                 EditorGUILayout.LabelField(dia.DialogueName, EditorStyles.boldLabel);
             }
@@ -194,7 +194,7 @@ namespace DREditor.Editor.Dialogues
         {
             if (dia is IInstantAbleDialogue instantableDialogue)
                 using (new EditorGUILayout.HorizontalScope())
-                    instantableDialogue.SetInstant(HandyFields.Option(instantableDialogue.GetInstant(), "Is Instant: ", 60));
+                    instantableDialogue.SetInstant(HandyFields.Option("Is Instant: ", instantableDialogue.GetInstant()));
         }
 
         protected virtual void EditPanels()

@@ -21,9 +21,9 @@ namespace DREditor.TrackPhrase
         /// </summary>
         protected virtual void PhraseTrack()
         {
-            target.Position = HandyFields.Vector3Field("Track Position: ", target.Position, 200, 7);
+            target.Position = HandyFields.Vector3Field("Track Position: ", target.Position);
 
-            target.Rotation = HandyFields.Vector4Field("Track Angle: ", target.Rotation, 200, 7);
+            target.Rotation = HandyFields.Vector4Field("Track Angle: ", target.Rotation);
 
             DisplayTrackSpeed();
 

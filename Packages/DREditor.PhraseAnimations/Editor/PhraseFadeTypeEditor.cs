@@ -13,7 +13,7 @@ namespace DREditor.PhraseAnimations.Editor
     {
         public override string TypeName => "Fade";
 
-        public override Func<string, float, int, int, float> FieldFunc => HandyFields.FloatField;
+        public override Func<string, float, int, float> FieldFunc => HandyFields.FloatField;
     }
 }
 #endif

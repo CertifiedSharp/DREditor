@@ -225,7 +225,7 @@ namespace DREditor.Minigames.BS
 
             using (new Horizontal())
             {
-                data.SetIsAnswer(HandyFields.Option(data.isAnswer, "Is Answer: "));
+                data.SetIsAnswer(HandyFields.Option("Is Answer: ", data.isAnswer));
 
                 GUILayout.Space(10);
             }

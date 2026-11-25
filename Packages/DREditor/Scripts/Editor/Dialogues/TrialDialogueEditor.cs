@@ -309,7 +309,7 @@ namespace DREditor.Editor.Dialogues
                 {
                     if (speaker == null || !dontPan)
                     {
-                        o.SetSeat(HandyFields.FloatField("SeatFocus: ", o.seatFocus, 30, 7));
+                        o.SetSeat(HandyFields.FloatField("SeatFocus: ", o.seatFocus, 30));
                         if (speaker != null && GUILayout.Button("Use Char", GUILayout.Width(100)))
                         {
                             o.SetSeat(speaker.TrialPosition);

@@ -6,19 +6,30 @@ using UnityEngine;
 
 namespace DREditor.Editor.Dialogues
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [CustomClassEditor(typeof(Variable))]
     public class VariableEventEditor : VariableConditionEditor
     {
+        /// <summary>
+        /// 
+        /// </summary>
         protected int value;
-        Color Color;
-        //public VariableEventEditor(ProgressionDatabase progression = null) : base(progression) { }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        protected Color background;
+
+
+        /// <inheritdoc/>
         protected override void DisplayVariableCondition()
         {
             if (target is not Variable Variable)
                 return;
 
-            Color = GUI.backgroundColor;
+            background = GUI.backgroundColor;
 
             using (new EditorGUILayout.VerticalScope("Box", GUILayout.Width(400)))
             {
@@ -30,9 +41,7 @@ namespace DREditor.Editor.Dialogues
 
                 DisplayVariableDialogue("False: ", ref Variable.NextDialogueFalse, ref Variable.NextIndexInDialogueFalse);
 
-                GUI.backgroundColor = Color;
-
-                DisplayRemoveButton(Variable);
+                GUI.backgroundColor = background;
             }
         }
 
@@ -48,7 +57,7 @@ namespace DREditor.Editor.Dialogues
                 dialogue = (DialogueCore)EditorGUILayout.ObjectField(
                     dialogue, typeof(DialogueCore), false, GUILayout.Width(200));
 
-                GUI.backgroundColor = Color;
+                GUI.backgroundColor = background;
 
                 if (dialogue != null)
                 {
@@ -76,23 +85,13 @@ namespace DREditor.Editor.Dialogues
         {
             using (new EditorGUILayout.HorizontalScope())
             {
-                GUI.backgroundColor = Color;
+                GUI.backgroundColor = background;
 
                 EditorGUILayout.LabelField("If ", GUILayout.Width(80));
 
                 Variable.BoolVariable =
                     (BoolWithEvent)EditorGUILayout.ObjectField(
                         Variable.BoolVariable, typeof(BoolWithEvent), false, GUILayout.Width(200));
-            }
-        }
-
-        protected virtual void DisplayRemoveButton(Variable Variable)
-        {
-            if (GUILayout.Button("Remove Condition", GUILayout.Width(130)))
-            {
-                Variable.BoolVariable = null;
-
-                Variable.SetEnabled(false);
             }
         }
     }

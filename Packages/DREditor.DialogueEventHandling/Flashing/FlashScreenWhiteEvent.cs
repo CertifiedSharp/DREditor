@@ -39,11 +39,11 @@ namespace DREditor.DialogueEventHandling.Flashing
             if (value < 0)
                 value *= -1;
 
-            flashWhiteGraphic.SetFade(value);
+            flashWhiteGraphic.SetAlpha(value);
         }
 
         /// <inheritdoc/>
-        protected override void ResetFlash() => flashWhiteGraphic.SetFade(0);
+        protected override void ResetFlash() => flashWhiteGraphic.SetAlpha(0);
 
         /// <summary>
         /// 

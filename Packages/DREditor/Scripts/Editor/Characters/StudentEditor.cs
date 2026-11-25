@@ -70,7 +70,7 @@ namespace DREditor.Editor.Characters
             EditorGUILayout.BeginVertical("Box");
             stu.LastName = HandyFields.StringField("Last Name: ", stu.LastName);
             stu.FirstName = HandyFields.StringField("First Name: ", stu.FirstName);
-            stu.StudentCard.Color = HandyFields.ColorField(stu.StudentCard.Color);
+            stu.StudentCard.Color = HandyFields.ColorField("Color: ", stu.StudentCard.Color);
             stu.Nameplate = TextureFieldLabeledHorizontal("Default Nameplate: ", stu.Nameplate);
             stu.Headshot = TextureFieldLabeledHorizontal("Default Headshot: ", stu.Headshot);
             stu.TrialNameplate = TextureFieldLabeledHorizontal("Trial Nameplate: ", stu.TrialNameplate);
@@ -137,9 +137,7 @@ namespace DREditor.Editor.Characters
 
 
                 using (new EditorGUILayout.HorizontalScope())
-                {
-                    stu.NotFTECharacter = HandyFields.Option(stu.NotFTECharacter, "Is Not FTE Character", 130);
-                }
+                    stu.NotFTECharacter = HandyFields.Option("Is Not FTE Character", stu.NotFTECharacter);
 
                 DisplayDynamicCharacterData();
             }

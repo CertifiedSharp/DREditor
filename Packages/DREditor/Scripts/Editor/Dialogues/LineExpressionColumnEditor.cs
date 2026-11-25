@@ -107,16 +107,16 @@ namespace DREditor.Editor.Dialogues
 
         public virtual void DrawHoveredSprite() => expressionPreviewer.DrawHoveredSprite();
 
-        protected virtual void StopSFXOption() => Lines[i].StopSFX = DisplayOption(Lines[i].StopSFX, "Stop SFX:");
+        protected virtual void StopSFXOption() => Lines[i].StopSFX = DisplayOption("Stop SFX:", Lines[i].StopSFX);
 
-        protected virtual void StopEnvOption() => Lines[i].StopEnv = DisplayOption(Lines[i].StopEnv, "Stop Env:");
+        protected virtual void StopEnvOption() => Lines[i].StopEnv = DisplayOption("Stop Env:", Lines[i].StopEnv);
 
-        protected virtual void ChangeMusicOption() => Lines[i].MusicChange = DisplayOption(Lines[i].MusicChange, "Change Music:");
+        protected virtual void ChangeMusicOption() => Lines[i].MusicChange = DisplayOption("Change Music:", Lines[i].MusicChange);
 
-        protected virtual bool DisplayOption(bool option, string label)
+        protected virtual bool DisplayOption(string label, bool option)
         {
             if (Lines[i].ShowOptions || option)
-                option = HandyFields.Option(option, label);
+                option = HandyFields.Option(label, option);
 
             return option;
         }

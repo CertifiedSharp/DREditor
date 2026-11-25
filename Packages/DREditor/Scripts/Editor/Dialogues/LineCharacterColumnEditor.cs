@@ -128,7 +128,7 @@ namespace DREditor.Editor.Dialogues
             if (!Lines[i].ShowOptions && !Lines[i].DontPan)
                 return;
 
-            Lines[i].DontPan = HandyFields.Option(Lines[i].DontPan, "Don't Pan: ");
+            Lines[i].DontPan = HandyFields.Option("Don't Pan: ", Lines[i].DontPan);
         }
 
         protected virtual void PanToCharacterOption()
@@ -136,7 +136,7 @@ namespace DREditor.Editor.Dialogues
             if (!Lines[i].ShowOptions && !Lines[i].PanToChar)
                 return;
 
-            Lines[i].PanToChar = HandyFields.Option(Lines[i].PanToChar, "Pan To Character: ");
+            Lines[i].PanToChar = HandyFields.Option("Pan To Character: ", Lines[i].PanToChar);
         }
 
         protected virtual void PanToCharacterDropdown()

@@ -176,7 +176,7 @@ namespace DREditor.Minigames.RS.Editor
         /// </summary>
         protected virtual void AutoAssignPanels()
         {
-            builder.AutoAssignPanelNums = HandyFields.BoolField(builder.AutoAssignPanelNums, "Auto Assign Panel Nums: ");
+            builder.AutoAssignPanelNums = HandyFields.Option("Auto Assign Panel Nums: ", builder.AutoAssignPanelNums);
 
             for (int i = 0; i < builder.Lines.Count; i++)
             {

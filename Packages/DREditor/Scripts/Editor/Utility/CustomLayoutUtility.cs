@@ -42,7 +42,7 @@ namespace DREditor.Editor.Utility
         /// </summary>
         /// <param name="style"></param>
         /// <param name="actions"></param>
-        public static void DisplayHorizontal(string style = "", params Action[] actions) =>
+        public static void DisplayHorizontal(string style, params Action[] actions) =>
             DisplayScoped(new EditorGUILayout.HorizontalScope(style), actions);
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace DREditor.Editor.Utility
         /// </summary>
         /// <param name="style"></param>
         /// <param name="actions"></param>
-        public static void DisplayVertical(string style = "", params Action[] actions) =>
+        public static void DisplayVertical(string style, params Action[] actions) =>
             DisplayScoped(new EditorGUILayout.VerticalScope(style), actions);
 
         /// <summary>

@@ -14,7 +14,7 @@ namespace DREditor.PhraseAnimations.Editor
     {
         public override string TypeName => "Scale";
 
-        public override Func<string, Vector3, int, int, Vector3> FieldFunc => HandyFields.Vector3Field;
+        public override Func<string, Vector3, int, Vector3> FieldFunc => HandyFields.Vector3Field;
     }
 }
 #endif

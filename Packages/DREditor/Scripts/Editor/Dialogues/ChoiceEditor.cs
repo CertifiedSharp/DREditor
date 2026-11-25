@@ -92,7 +92,7 @@ namespace DREditor.Editor.Dialogues
             target.CustomCall = HandyFields.StringField("Custom Call: ", target.CustomCall);
 
             using (new EditorGUILayout.HorizontalScope("Box"))
-                target.CallBreak = HandyFields.Option(target.CallBreak, "Call Break: ", 70);
+                target.CallBreak = HandyFields.Option("Call Break: ", target.CallBreak);
 
             GUILayout.Space(5);
 

@@ -135,7 +135,7 @@ namespace DREditor.DialogueEventHandling.Flashing
             else
                 flashImage.color = flashColor;
 
-            flashImage.SetFade(0);
+            flashImage.SetAlpha(0);
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace DREditor.DialogueEventHandling.Flashing
             if (value < 0)
                 value *= -1;
 
-            flashImage.SetFade(value);
+            flashImage.SetAlpha(value);
         }
 
         /// <inheritdoc/>

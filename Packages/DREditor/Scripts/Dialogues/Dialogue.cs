@@ -101,11 +101,9 @@ namespace DREditor.Dialogues
                 EndEvents.Add(choiceEvent);
             }
 
-            if (StartInvestigation != null && StartInvestigation.Enabled)
-                EndEvents.Add(StartInvestigation);
+            AddExistingEvent(StartInvestigation);
 
-            if (EndEvent != null && EndEvent.Enabled)
-                EndEvents.Add(EndEvent);
+            AddExistingEvent(EndEvent);
 
             base.ConvertEndEventInstances();
         }

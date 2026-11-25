@@ -1,5 +1,4 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
-using DREditor.Minigames.Debates;
 using DREditor.Editor.Utility;
 using UnityEditor;
 using UnityEngine;
@@ -81,7 +80,7 @@ namespace DREditor.Minigames.Debates.Editor
         protected virtual int DisplayWordStart(int wordStart, string[] wordArray)
         {
             return HandyFields.Popup($"Start of {textName} :", wordStart,
-                HandyFields.CreateUniqueDropdownLabels(wordArray), 100, 6);
+                HandyFields.CreateUniqueDropdownLabels(wordArray), 100);
         }
 
         /// <summary>

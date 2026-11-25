@@ -156,15 +156,4 @@ namespace DREditor.Utility
             }
         }
     }
-
-    /// <summary>
-    ///
-    /// </summary>
-    public interface IComponentsCache
-    {
-        /// <summary>
-        ///
-        /// </summary>
-        MonoBehaviour[] CachedComponents { get; }
-    }
 }

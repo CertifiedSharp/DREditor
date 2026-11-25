@@ -74,7 +74,7 @@ namespace DREditor.Editor.Dialogues
 
         protected void AssignPanelNums(MultiTrialDialogue dia, List<int> p, List<int> n)
         {
-            dia.SetAutoAssign(HandyFields.BoolField(dia.autoAssignPanelNums, "Auto Assign Panel Nums: "));
+            dia.SetAutoAssign(HandyFields.Option("Auto Assign Panel Nums: ", dia.autoAssignPanelNums));
 
             if (dia.autoAssignPanelNums && p.Count >= 2)
             {

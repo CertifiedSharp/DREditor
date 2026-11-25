@@ -127,16 +127,7 @@ namespace DREditor.Editor.Utility
                 onClick?.Invoke();
         }
 
-        public static bool Button(string text, params GUILayoutOption[] options)
-        {
-            var optionList = options.ToList();
-
-            optionList.Add(CalculateWidthOption(text, 20));
-
-            return GUILayout.Button(text, optionList.ToArray());
-        }
-
-        public static bool Button(string text, string toolTip, params GUILayoutOption[] options)
+        public static bool Button(string text, string toolTip = "", params GUILayoutOption[] options)
         {
             var optionList = options.ToList();
 
@@ -236,58 +227,40 @@ namespace DREditor.Editor.Utility
             return result;
         }
 
-        public static int IntField(string name, int value, int valueWidth = 200, int labelBoxMulti = 6, bool useFlexableSpace = true)
-        {
-            return IntField(new GUIContent(name), value, valueWidth, labelBoxMulti, useFlexableSpace);
-        }
+        public static int IntField(string name, int value, int valueWidth = 200, int labelBoxMulti = 6, bool useFlexableSpace = true) =>
+            IntField(new GUIContent(name), value, valueWidth, labelBoxMulti, useFlexableSpace);
 
-        public static float FloatField(string label, float value, int textBoxWidth = 200, int labelBoxMulti = 6)//*Added int field functionality
-        {
-            GUI.backgroundColor = Color.white;
-            float result;
-            using (new EditorGUILayout.HorizontalScope())
-            {
-                GUILayout.Label(label, GUILayout.Width(label.Length * labelBoxMulti));
-                result = EditorGUILayout.FloatField(value, GUILayout.Width(textBoxWidth));
-            }
-            GUILayout.FlexibleSpace();
-            return result;
-        }
+        public static float FloatField(string label, float value, int textBoxWidth = 200) =>
+            DisplayField(label, value, EditorGUILayout.FloatField, textBoxWidth);
 
-        public static Vector3 Vector3Field(string label, Vector3 value, int textBoxWidth = 200, int labelBoxMulti = 6)//*
+        public static Vector3 Vector3Field(string label, Vector3 value, int textBoxWidth = 200) =>
+            DisplayField(label, value, EditorGUILayout.Vector3Field, textBoxWidth);
+
+        public static Vector4 Vector4Field(string label, Vector4 value, int textBoxWidth = 200) =>
+            DisplayField(label, value, EditorGUILayout.Vector4Field, textBoxWidth);
+
+        public static int Popup(string label, int value, string[] arr, int textBoxWidth = 150) =>
+            DisplayField(label, value, 
+                (label, value, options) => EditorGUILayout.Popup(value, arr, options), 
+                textBoxWidth);
+
+        
+
+        public static T DisplayField<T>(string label, T value, LabeledEditorFieldDrawer<T> display, int textBoxWidth = 200)
         {
             GUI.backgroundColor = Color.white;
-            Vector3 result;
+
+            T result;
+
             using (new EditorGUILayout.HorizontalScope())
             {
-                GUILayout.Label(label, GUILayout.Width(label.Length * labelBoxMulti));
-                result = EditorGUILayout.Vector3Field("",value, GUILayout.Width(textBoxWidth));
+                GUILayout.Label(label, CalculateWidthOption(label));
+
+                result = display("", value, GUILayout.Width(textBoxWidth));
             }
+
             GUILayout.FlexibleSpace();
-            return result;
-        }
-        public static Vector4 Vector4Field(string label, Vector4 value, int textBoxWidth = 200, int labelBoxMulti = 6)//*
-        {
-            GUI.backgroundColor = Color.white;
-            Vector3 result;
-            using (new EditorGUILayout.HorizontalScope())
-            {
-                GUILayout.Label(label, GUILayout.Width(label.Length * labelBoxMulti));
-                result = EditorGUILayout.Vector4Field("", value, GUILayout.Width(textBoxWidth));
-            }
-            GUILayout.FlexibleSpace();
-            return result;
-        }
-        public static int Popup(string label, int value, string[] arr, int textBoxWidth = 150, int labelBoxMulti = 7)//*
-        {
-            GUI.backgroundColor = Color.white;
-            int result;
-            using (new EditorGUILayout.HorizontalScope())
-            {
-                GUILayout.Label(label, GUILayout.Width(label.Length * labelBoxMulti));
-                result = EditorGUILayout.Popup(value, arr, GUILayout.Width(textBoxWidth));
-            }
-            GUILayout.FlexibleSpace();
+
             return result;
         }
 
@@ -326,26 +299,15 @@ namespace DREditor.Editor.Utility
             T result;
 
             using (new EditorGUILayout.VerticalScope())
-            {
                 result = (T)EditorGUILayout.ObjectField(data, typeof(T), false, GUILayout.Width(width), GUILayout.Height(height));
-            }
 
             return result;
         }
 
-        public static string StringField(string name, string value, int textWidth = 200, float nameWidth = 80)
-        {
-            GUI.backgroundColor = Color.white;
-            string result;
-            using (new EditorGUILayout.HorizontalScope())
-            {
-                GUILayout.Label(name, GUILayout.Width(nameWidth));
+        public static string StringField(string label, string value) => StringField(label, value, 200);
 
-                result = EditorGUILayout.TextField(value, GUILayout.Width(textWidth));
-            }
-            GUILayout.FlexibleSpace();
-            return result;
-        }
+        public static string StringField(string label, string value, int textWidth) =>
+            DisplayField(label, value, EditorGUILayout.TextField, textWidth);
 
         public static void HardPropertyField(string label, SerializedProperty prop, float width = 200, params GUILayoutOption[] options)
         {
@@ -376,7 +338,6 @@ namespace DREditor.Editor.Utility
         }
 
 
-
         public static void LabeledPropertyFieldGenericBG<T>(string name, SerializedProperty data, int width = 120, int height = 120) where T : Object
         {
             GUILayout.Label(name, GUILayout.Width(80));
@@ -387,43 +348,29 @@ namespace DREditor.Editor.Utility
             }
         }
 
-        public static Color ColorField(Color color)
-        {
-            GUI.backgroundColor = Color.white;
-            Color result;
-            using (new EditorGUILayout.HorizontalScope())
-            {
-                GUILayout.Label("Color: ");
-                result = EditorGUILayout.ColorField(color, GUILayout.Width(40));
-            }
-            return result;
-        }
+        public static Color ColorField(string label, Color color) =>
+            DisplayField(label, color, EditorGUILayout.ColorField, 40);
 
         public static string StringArea(string name, string value, float width = 200, float height = 60)
         {
             GUI.backgroundColor = Color.white;
+
             string result;
+
             using (new EditorGUILayout.HorizontalScope())
             {
                 GUILayout.Label(name, GUILayout.Width(80));
+
                 result = EditorGUILayout.TextArea(value, GUILayout.Width(width), GUILayout.Height(height));
             }
+
             GUILayout.FlexibleSpace();
+
             return result;
         }
 
         public static void PropertyTextArea(SerializedProperty property, params GUILayoutOption[] options) =>
             property.stringValue = EditorGUILayout.TextArea(property.stringValue, options);
-
-        //public static void Label(string label)
-        //{
-        //    GUI.backgroundColor = Color.white;
-        //    var labelStyle = new GUIStyle
-        //    {
-        //        fontSize = 10
-        //    };
-        //    GUILayout.Label(label, labelStyle);
-        //}
 
         public static Texture2D GetMaterialTexture(Material material)
         {
@@ -436,26 +383,9 @@ namespace DREditor.Editor.Utility
                 ) as Texture2D;
         }
 
-        public static bool Option(bool option, string label, float labelWidth = 60)
-        {
-            GUILayout.Label(label, CalculateWidthOption(label));
+        public static bool Option(string label, bool option) => DisplayField(label, option, EditorGUILayout.Toggle, 15);
 
-            return EditorGUILayout.Toggle(option, GUILayout.Width(15));
-        }
-        public static bool BoolField(bool option, string label)
-        {
-            return BoolField(option, new GUIContent(label));
-        }
-
-        public static bool BoolField(bool option, GUIContent label)
-        {
-            using (new EditorGUILayout.HorizontalScope())
-            {
-                GUILayout.Label(label, GUILayout.Width(label.text.Length * 6.5f));
-
-                return EditorGUILayout.Toggle(option, GUILayout.Width(15));
-            }
-        }
+        public static bool Option(GUIContent label, bool option) => Option(label.text, option);
 
         /// <summary>
         ///
@@ -485,5 +415,15 @@ namespace DREditor.Editor.Utility
                 items.Remove(items[index]);
         }
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="label"></param>
+    /// <param name="value"></param>
+    /// <param name="options"></param>
+    /// <returns></returns>
+    public delegate T LabeledEditorFieldDrawer<T>(string label, T value, params GUILayoutOption[] options);
 }
 #endif

@@ -14,7 +14,7 @@ namespace DREditor.PhraseAnimations.Editor
     {
         public override string TypeName => "Rotation";
 
-        public override Func<string, Vector4, int, int, Vector4> FieldFunc => HandyFields.Vector4Field;
+        public override Func<string, Vector4, int, Vector4> FieldFunc => HandyFields.Vector4Field;
     }
 }
 #endif

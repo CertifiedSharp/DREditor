@@ -40,7 +40,7 @@ namespace DREditor.RoomBuilding.Old
         {
             RoomData room = (RoomData)roomData;
 
-            room.SetPersistent(HandyFields.BoolField(room.isPersistent, "Is Persistent: "));
+            room.SetPersistent(HandyFields.Option("Is Persistent: ", room.isPersistent));
 
             if (Button("Load Actors"))
                 ActorLoader.Load(room);

@@ -176,7 +176,7 @@ namespace DREditor.RoomBuilding
         {
             RoomStateData room = (RoomStateData)RoomStateData;
 
-            room.SetPersistent(HandyFields.BoolField(room.isPersistent, "Is Persistent: "));
+            room.SetPersistent(HandyFields.Option("Is Persistent: ", room.isPersistent));
 
             foreach (IRoomStateLoader loader in manager.loaders)
                 if (GUILayout.Button("Load " + loader.GetTypeName(), GUILayout.Width(150)))

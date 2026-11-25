@@ -2,58 +2,50 @@
 #if UNITY_EDITOR
 using DREditor.Dialogues;
 using DREditor.Editor.Utility;
-using UnityEditor;
 using UnityEngine;
 
 namespace DREditor.Editor.Dialogues
 {
     /// <summary>
-    /// 
+    /// Custom Class editor for the End Event <see cref="SceneTransition"/>.
     /// </summary>
     [CustomClassEditor(typeof(SceneTransition))]
     public class SceneTransitionEditor : ClassEditorTypeBase<SceneTransition>
     {
-        protected override void OnInspectorGUI()
-        {
-            DisplaySceneTransition();
-        }
+        /// <inheritdoc/>
+        protected override void OnInspectorGUI() => CustomLayoutUtility.DisplayVertical("Box", DisplaySceneTransitionLayout);
 
+        /// <summary>
+        /// Displays the different fields for the scene transition vertically.
+        /// </summary>
+        protected virtual void DisplaySceneTransitionLayout() => CustomLayoutUtility.DisplayVertical(DisplaySceneTransition);
+
+        /// <summary>
+        /// Displays all the different fields for the scene transition.
+        /// </summary>
         protected virtual void DisplaySceneTransition()
         {
-            using (new EditorGUILayout.VerticalScope("Box", GUILayout.Width(400)))
-            {
-                using (new EditorGUILayout.VerticalScope())
-                {
-                    GUILayout.Label("Name of next Scene:", GUILayout.Width(130));
-                    using (new EditorGUILayout.HorizontalScope())
-                    {
-                        target.Scene = GUILayout.TextField(target.Scene);
-                    }
-                    using (new EditorGUILayout.HorizontalScope())
-                    {
-                        target.ToDark = HandyFields.Option(target.ToDark, "To Dark: ");
-                    }
-                    using (new EditorGUILayout.HorizontalScope())
-                    {
-                        target.ToMenu = HandyFields.Option(target.ToMenu, "To Menu: ");
-                    }
-                    using (new EditorGUILayout.HorizontalScope())
-                    {
-                        target.OnLoadNoDark = HandyFields.Option(target.OnLoadNoDark, "OnLoadNoDark: ", 100);
-                    }
-                    target.AtEnd = HandyFields.UnityField(target.AtEnd, 130, 30);
-                    using (new EditorGUILayout.HorizontalScope())
-                    {
-                        target.MoveToObjective = GUILayout.TextField(target.MoveToObjective);
-                    }
-                    using (new EditorGUILayout.HorizontalScope())
-                    {
-                        target.MoveToNextNaturalObjective =
-                            HandyFields.Option(target.MoveToNextNaturalObjective, "To Next Natural: ", 100);
-                    }
-                }
-            }
+            DisplayField<string>("Name of next Scene:", nameof(target.Scene), HandyFields.StringField);
+
+            DisplayField<bool>("To Dark: ", nameof(target.ToDark), HandyFields.Option);
+
+            DisplayField<bool>("To Menu: ", nameof(target.ToMenu), HandyFields.Option);
+
+            DisplayField<bool>("OnLoadNoDark: ", nameof(target.OnLoadNoDark), HandyFields.Option);
+
+            DisplayGate();
+
+            DisplayField<string>("Move To Objective: ", nameof(target.MoveToObjective), HandyFields.StringField);
+
+            DisplayField<bool>("To Next Natural: ", nameof(target.MoveToNextNaturalObjective), HandyFields.Option);
         }
+
+        /// <summary>
+        /// Displays the Gate to move to at the end of the dialogue.
+        /// </summary>
+        protected virtual void DisplayGate() => 
+            target.AtEnd = HandyFields.UnityField(new GUIContent("Move To At End: ", "The Gate to move to at the end of the dialogue."),
+                (Gates.Gate)target.AtEnd);
     }
 }
 #endif

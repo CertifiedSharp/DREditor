@@ -66,7 +66,7 @@ namespace DREditor.Utility
             for (int i = 0; i < materials.Count; i++)
                 PopulateMaterial(materials[i], textureGroups[i]);
 
-            UnityEngine.Debug.Log("Finished Process");
+            UnityEngine.Debug.Log("REPORT: Finished Process");
         }
 
         /// <summary>

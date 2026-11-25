@@ -64,14 +64,14 @@ namespace DREditor.Editor.Dialogues
         ///
         /// </summary>
         protected virtual void UnlockPauseMenu() => 
-            dialogue.UnlockPause = HandyFields.Option(dialogue.UnlockPause, "Unlock Pause: ", 90);
+            dialogue.UnlockPause = HandyFields.Option("Unlock Pause: ", dialogue.UnlockPause);
 
         /// <summary>
         ///
         /// </summary>
         protected virtual void UnlockSpecificPauseOption()
         {
-            dialogue.UnlockPauseOption = HandyFields.Option(dialogue.UnlockPauseOption, "Unlock Option: ", 95);
+            dialogue.UnlockPauseOption = HandyFields.Option("Unlock Option: ", dialogue.UnlockPauseOption);
 
             if (dialogue.UnlockPauseOption)
                 dialogue.PauseOptionNum = HandyFields.IntField("Option Number: ", dialogue.PauseOptionNum, 20, 7);
@@ -83,7 +83,7 @@ namespace DREditor.Editor.Dialogues
         protected virtual void UpdateAllowedPauseOption()
         {
             if (dialogue.UnlockPauseOption)
-                dialogue.PauseOptionTo = HandyFields.Option(dialogue.PauseOptionTo, "To: ", 25);
+                dialogue.PauseOptionTo = HandyFields.Option("To: ", dialogue.PauseOptionTo);
         }
     }
 }

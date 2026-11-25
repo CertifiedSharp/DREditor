@@ -22,13 +22,13 @@ namespace DREditor.PhraseAnimations.Editor
         /// <summary>
         ///
         /// </summary>
-        public abstract Func<string, T2, int, int, T2> FieldFunc { get; }
+        public abstract Func<string, T2, int, T2> FieldFunc { get; }
 
         protected override void DisplayType()
         {
-            typeTarget.SetStartValue(FieldFunc($"Starting {TypeName}: ", typeTarget.startValue, 200, 6));
+            typeTarget.SetStartValue(FieldFunc($"Starting {TypeName}: ", typeTarget.startValue, 200));
 
-            typeTarget.SetEndValue(FieldFunc($"Ending {TypeName}: ", typeTarget.endValue, 200, 6));
+            typeTarget.SetEndValue(FieldFunc($"Ending {TypeName}: ", typeTarget.endValue, 200));
         }
 
         protected override void DisplayCurves() => PopulateCurves(DisplayCurve);
