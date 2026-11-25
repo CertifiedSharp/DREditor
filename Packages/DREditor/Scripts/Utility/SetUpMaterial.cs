@@ -1,16 +1,19 @@
 //Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
 #if UNITY_EDITOR
-using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
 
 namespace DREditor.Utility
 {
     /// <summary>
-    ///
+    /// 
     /// </summary>
     public class SetUpMaterial : ScriptableWizard
     {
+        /// <summary>
+        /// 
+        /// </summary>
         [Header("")]
         [Space]
         [Tooltip("")]
@@ -18,13 +21,22 @@ namespace DREditor.Utility
         protected List<string> materialIDs = new()
         { "_BaseMap", "_ParallaxMap", "_MetallicGlossMap", "_OcclusionMap", "_BumpMap" };
 
+        /// <summary>
+        /// 
+        /// </summary>
         [Tooltip("")]
         [SerializeField] protected List<Material> materials = new();
 
+        /// <summary>
+        /// 
+        /// </summary>
         [Tooltip("")]
         [SerializeField] protected List<List<Texture>> textureGroups = new();
 
 
+        /// <summary>
+        /// 
+        /// </summary>
         [MenuItem("DREditor/Utility/Set Up Selected Materials")]
         public static void CreateWizard() => DisplayWizard<SetUpMaterial>("Set Up Selected Materials", "Set Up");
 
@@ -37,22 +49,33 @@ namespace DREditor.Utility
         protected virtual void InitializeSelectedObjects()
         {
             foreach (var obj in Selection.objects)
-            {
-                if (obj is Material mat)
-                {
-                    materials.Add(mat);
+                if (obj is Material material)
+                    AddMaterial(material);
+                else if (obj is Texture texture)
+                    AddTexture(texture);
+        }
 
-                    textureGroups.Add(new List<Texture>());
-                }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="material"></param>
+        protected virtual void AddMaterial(Material material)
+        {
+            materials.Add(material);
 
-                if (obj is Texture texture)
-                {
-                    if (textureGroups.Count == 0)
-                        textureGroups.Add(new List<Texture>());
+            textureGroups.Add(new List<Texture>());
+        }
 
-                    textureGroups[^1].Add(texture);
-                }
-            }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="texture"></param>
+        protected virtual void AddTexture(Texture texture)
+        {
+            if (textureGroups.Count == 0)
+                textureGroups.Add(new List<Texture>());
+
+            textureGroups[^1].Add(texture);
         }
 
 

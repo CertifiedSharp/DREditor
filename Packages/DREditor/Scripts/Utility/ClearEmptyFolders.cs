@@ -10,81 +10,121 @@ using UnityEngine;
 namespace DREditor.Utility
 {
     /// <summary>
-    ///
+    /// Class to Remove Empty Project folders to keep projects clean.
     /// </summary>
     public class RemoveEmptyFolders : AssetModificationProcessor
     {
         /// <summary>
-        ///
+        /// The Builder to create the log since the entire project is being scanned.
         /// </summary>
-        static readonly StringBuilder s_Log = new();
+        private static readonly StringBuilder Log = new();
 
         /// <summary>
-        ///
+        /// The list of found empty directories after scanning that will be deleted.
         /// </summary>
-        static readonly List<DirectoryInfo> s_Results = new();
+        private static readonly List<DirectoryInfo> Results = new();
+
+        /// <summary>
+        /// The string path to the projects Assets Directory.
+        /// </summary>
+        private static readonly string AssetsDirectory = Application.dataPath + Path.DirectorySeparatorChar;
 
 
         /// <summary>
-        ///
+        /// Removes Empty Project folders to keep projects clean.
         /// </summary>
-        [MenuItem("Assets/Remove Empty Folders")]
-        public static void Remove()
+        [MenuItem("DREditor/Utility/Remove Empty Project Folders")]
+        public static void RemoveEmptyProjectFolders()
         {
-            s_Results.Clear();
+            InitializeEmptyDirectoriesFrom(new DirectoryInfo(AssetsDirectory));
 
-            var assetsDir = Application.dataPath + Path.DirectorySeparatorChar;
-
-            GetEmptyDirectories(new DirectoryInfo(assetsDir), s_Results);
-
-            if (0 < s_Results.Count)
-            {
-                s_Log.Length = 0;
-
-                s_Log.AppendFormat("Remove {0} empty directories as following:\n", s_Results.Count);
-
-                foreach (var d in s_Results)
-                {
-                    s_Log.AppendFormat("- {0}\n", d.FullName.Replace(assetsDir, ""));
-
-                    FileUtil.DeleteFileOrDirectory(d.FullName);
-                    FileUtil.DeleteFileOrDirectory(d.FullName + ".meta");
-                }
-
-                s_Log.Length = Mathf.Min(s_Log.Length, 15000);
-
-                Debug.Log(s_Log.ToString());
-
-                s_Log.Length = 0;
-
-                AssetDatabase.Refresh();
-            }
+            if (ProjectHasEmptyDirectories())
+                RemoveEmptyDirectories();
         }
 
         /// <summary>
-        ///
+        /// Recursively scans <paramref name="directory"/> for empty folders, adding any to <see cref="Results"/>.
         /// </summary>
-        /// <param name="dir"></param>
-        /// <param name="results"></param>
-        /// <returns></returns>
-        private static bool GetEmptyDirectories(DirectoryInfo dir, List<DirectoryInfo> results)
+        /// <param name="directory">The directory to start from.</param>
+        /// <returns>True if <paramref name="directory"/> and all subdirectories are empty, otherwise false.</returns>
+        private static bool InitializeEmptyDirectoriesFrom(DirectoryInfo directory)
         {
+            Results.Clear();
+
             bool isEmpty = true;
 
-            try
-            {
-                isEmpty = dir.GetDirectories().Count(x => !GetEmptyDirectories(x, results)) == 0 
-                        && dir.GetFiles("*.*").All(x => x.Extension == ".meta");
-            }
-            catch
-            {
-
-            }
+            isEmpty = directory.GetDirectories().Count(directoryInfo => !InitializeEmptyDirectoriesFrom(directoryInfo)) == 0 &&
+                directory.GetFiles("*.*").All(x => x.Extension == ".meta");
 
             if (isEmpty)
-                results.Add(dir);
+                Results.Add(directory);
 
             return isEmpty;
+        }
+
+
+        /// <summary>
+        /// Checks <see cref="Results"/> has any empty directories.
+        /// </summary>
+        /// <returns>True if <see cref="Results"/>'s count is greater than Zero.</returns>
+        private static bool ProjectHasEmptyDirectories() => Results.Count > 0;
+
+        /// <summary>
+        /// Removes All Empty Directories from Initialization on <see cref="Results"/>.
+        /// </summary>
+        private static void RemoveEmptyDirectories()
+        {
+            InitializeLog();
+
+            DeleteEmptyFolders();
+
+            ResolveLog();
+
+            AssetDatabase.Refresh();
+        }
+
+        /// <summary>
+        /// Starts up the string builder for to log the removed folders to the console.
+        /// </summary>
+        private static void InitializeLog()
+        {
+            Log.Length = 0;
+
+            Log.AppendFormat("Remove {0} empty directories as following:\n", Results.Count);
+        }
+
+        /// <summary>
+        /// Records all empty directories to the log before deleting them.
+        /// </summary>
+        private static void DeleteEmptyFolders()
+        {
+            foreach (DirectoryInfo emptyDirectory in Results)
+                DeleteEmptyFolder(emptyDirectory);
+        }
+
+        /// <summary>
+        /// Records the empty directory to the log before deleting it.
+        /// </summary>
+        /// <param name="emptyDirectory">The directory to delete.</param>
+        private static void DeleteEmptyFolder(DirectoryInfo emptyDirectory)
+        {
+            Log.AppendFormat("- {0}\n", emptyDirectory.FullName.Replace(AssetsDirectory, ""));
+
+            FileUtil.DeleteFileOrDirectory(emptyDirectory.FullName);
+
+            FileUtil.DeleteFileOrDirectory(emptyDirectory.FullName + ".meta");
+        }
+
+        /// <summary>
+        /// Displays the log of what was deleted to the console and applies a minimum so that the log doesn't overflow the console.
+        /// </summary>
+        private static void ResolveLog()
+        {
+            Log.Length = Mathf.Min(Log.Length, 15000);
+
+            Debug.Log(Log.ToString());
+
+            Log.Length = 0;
         }
     }
 }
