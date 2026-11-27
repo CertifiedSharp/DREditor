@@ -6,16 +6,17 @@ using UnityEngine;
 namespace DREditor.Utility
 {
     /// <summary>
-    ///
+    /// Class for extensions on objects containing different ways to make deep copies of objects; <br/>
+    /// Since different classes may require different processes in order to properly make them.
     /// </summary>
     public static class DeepCopyExtensions
     {
         /// <summary>
-        ///
+        /// Creates a deep copy of <typeparamref name="T"/> based on whether it's a data/value type, array, or custom object.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="obj"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">The type of object to be deep copied.</typeparam>
+        /// <param name="obj">The object to be deep copied.</param>
+        /// <returns>An untethered copy of <typeparamref name="T"/>.</returns>
         public static T DeepCopy<T>(this T obj)
         {
             if (obj == null)
@@ -32,12 +33,12 @@ namespace DREditor.Utility
         }
 
         /// <summary>
-        ///
+        /// Manually creates a deep copy of the <typeparamref name="T"/> array.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        static T DeepCopyArray<T>(T obj)
+        /// <typeparam name="T">The type of object to be deep copied.</typeparam>
+        /// <param name="obj">The object to be deep copied.</param>
+        /// <returns>An untethered copy of the <typeparamref name="T"/> array.</returns>
+        private static T DeepCopyArray<T>(T obj)
         {
             Type type = obj.GetType();
 
@@ -58,12 +59,14 @@ namespace DREditor.Utility
         }
 
         /// <summary>
-        ///
+        /// Creates a deep copy of <typeparamref name="T"/> using field info to manually copy over the fields.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        static T DeepCopyObject<T>(T obj)
+        /// <typeparam name="T">The type of object to be deep copied.</typeparam>
+        /// <param name="obj">The object to be deep copied.</param>
+        /// <returns>A new untethered copy of <paramref name="obj"/>.</returns>
+        /// <remarks>ALERT: 
+        /// <see cref="Texture2D"/>'s are not allowed to be copied and will report an error while simply returning the sent object.</remarks>
+        private static T DeepCopyObject<T>(T obj)
         {
             Type type = obj.GetType();
 
@@ -98,11 +101,14 @@ namespace DREditor.Utility
 
 
         /// <summary>
-        ///
+        /// Creates a deep copy instance of an Scriptable Object using JSON.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="source"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">The type of scriptable object to make a copy of.</typeparam>
+        /// <param name="source">The Scriptable Object to make a copy of.</param>
+        /// <returns>A new untethered copy of <paramref name="source"/>.</returns>
+        /// <remarks>
+        /// ANALYSIS: It is assumed this only works if <typeparamref name="T"/> does not contain any Scriptable Object fields.
+        /// </remarks>
         public static T DeepJsonCopy<T>(this T source) where T : ScriptableObject
         {
             if (source == null) 

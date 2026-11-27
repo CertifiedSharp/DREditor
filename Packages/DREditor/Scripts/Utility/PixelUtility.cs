@@ -4,16 +4,16 @@ using UnityEngine;
 namespace DREditor.Utility
 {
     /// <summary>
-    ///
+    /// Utility class for getting pixels from sprites when hitting them with raycasts.
     /// </summary>
     public static class PixelUtility
     {
         /// <summary>
-        ///
+        /// Gets the color of a pixel from a sprite renderer that intersects with a raycasted hitpoint within world space.
         /// </summary>
-        /// <param name="worldHitPoint"></param>
-        /// <param name="spriteRenderer"></param>
-        /// <returns></returns>
+        /// <param name="worldHitPoint">The point in world space that has intersected with a sprite renderer.</param>
+        /// <param name="spriteRenderer">The sprite renderer that has been hit by a raycast.</param>
+        /// <returns>The color of a pixel from a sprite renderer that intersects with a raycasted hitpoint within world space.</returns>
         public static Color GetPixelColorUsingSpriteBounds(Vector2 worldHitPoint, SpriteRenderer spriteRenderer)
         {
             Vector2 normalized = GetNormalizedSpritePosition(worldHitPoint, spriteRenderer);
@@ -26,11 +26,11 @@ namespace DREditor.Utility
         }
 
         /// <summary>
-        ///
+        /// Takes the hit point and normalizes it relative to the bounds of the sprite renderer.
         /// </summary>
-        /// <param name="worldHitPoint"></param>
-        /// <param name="spriteRenderer"></param>
-        /// <returns></returns>
+        /// <param name="worldHitPoint">The point in world space that has intersected with a sprite renderer.</param>
+        /// <param name="spriteRenderer">The sprite renderer that has been hit by a raycast.</param>
+        /// <returns>The hit point normalized relative to the bounds of the sprite renderer.</returns>
         private static Vector2 GetNormalizedSpritePosition(Vector2 worldHitPoint, SpriteRenderer spriteRenderer)
         {
             Bounds spriteBounds = spriteRenderer.bounds;
@@ -43,11 +43,11 @@ namespace DREditor.Utility
         }
 
         /// <summary>
-        ///
+        /// Inverts a considered normalized hit point on a sprite renderer and updates it if the renderer has any flip settings checked.
         /// </summary>
-        /// <param name="normalized"></param>
-        /// <param name="spriteRenderer"></param>
-        /// <returns></returns>
+        /// <param name="normalized">The normalized point on a sprite renderer that has intersected with a world space ray cast.</param>
+        /// <param name="spriteRenderer">The sprite renderer that has been hit by a raycast.</param>
+        /// <returns>The normalized Vector2 with flipping applied to the relevant axies.</returns>
         private static Vector2 ApplyFlipping(Vector2 normalized, SpriteRenderer spriteRenderer)
         {
             float x = spriteRenderer.flipX ? 1f - normalized.x : normalized.x;
@@ -58,11 +58,11 @@ namespace DREditor.Utility
         }
 
         /// <summary>
-        ///
+        /// Takes a considered normalized hit point and converts it to pixel coordinate within a sprite renderers texture atlas.
         /// </summary>
-        /// <param name="normalized"></param>
-        /// <param name="spriteRenderer"></param>
-        /// <returns></returns>
+        /// <param name="normalized">The normalized point on a sprite renderer that has intersected with a world space ray cast.</param>
+        /// <param name="spriteRenderer">The sprite renderer get the texture atlas from.</param>
+        /// <returns>The matching Integer pixel coordinate on the sprite renderer's texture's texture atlas.</returns>
         private static Vector2Int GetAtlasPixelCoordinate(Vector2 normalized, SpriteRenderer spriteRenderer)
         {
             Texture2D sourceTexture = spriteRenderer.sprite.texture;
@@ -81,11 +81,11 @@ namespace DREditor.Utility
         }
 
         /// <summary>
-        ///
+        /// Bit block transfers the source texture to a temporary render texture so that the pixel coordinate on the texture can be returned.
         /// </summary>
-        /// <param name="sourceTexture"></param>
-        /// <param name="atlasCoordinate"></param>
-        /// <returns></returns>
+        /// <param name="sourceTexture">The texture to retrieve the pixel from.</param>
+        /// <param name="atlasCoordinate">The coordinate the targeted pixel is located at.</param>
+        /// <returns>The color of the pixel at the coordinate on the texture atlas.</returns>
         private static Color SamplePixelColor(Texture2D sourceTexture, Vector2Int atlasCoordinate)
         {
             RenderTexture renderTex = RenderTexture.GetTemporary(
@@ -112,11 +112,11 @@ namespace DREditor.Utility
         }
 
         /// <summary>
-        ///
+        /// Creates a 1 by 1 Texture using the coordinates of the Active Render Texture (ReadPixels()).
         /// </summary>
-        /// <param name="atlasX"></param>
-        /// <param name="atlasY"></param>
-        /// <returns></returns>
+        /// <param name="atlasX">The X coordinate to take from the Active Render Texture.</param>
+        /// <param name="atlasY">The Y coordinate to take from the Active Render Texture.</param>
+        /// <returns>A 1 by 1 Texture with the coordinates of the Active Render Texture at the specified axies.</returns>
         private static Texture2D CreateReadableTexture(int atlasX, int atlasY)
         {
             Texture2D readablePixel = new(1, 1, TextureFormat.RGBA32, false);
