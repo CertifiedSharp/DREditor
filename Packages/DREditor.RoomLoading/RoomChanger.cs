@@ -6,6 +6,7 @@ using DREditor.Progressing.Handling;
 using DREditor.Services;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -254,12 +255,31 @@ namespace DREditor.RoomLoading
         /// <returns></returns>
         protected virtual string EvaluateDestinationScene()
         {
-            if ((options != null && options.toInvestigation) || currentState.Value == investigationStateIndex)
-                return destination.GetInvestigationRoom(currentChapterIndex.Value);
-            else if (destination.GetVariantScene(currentChapterIndex.Value, currentObjectiveName.Value) is string validScene)
-                return validScene;
-            else
-                return destination.ToAreaName;
+            if (((options != null && options.toInvestigation) || currentState.Value == investigationStateIndex) && 
+                GetGateVariantScene(string.Empty, out string investigationScene))
+                return investigationScene;
+
+            if (GetGateVariantScene(currentObjectiveName.Value, out string variantScene))
+                return variantScene;
+
+            return destination.ToAreaName;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="objectiveName"></param>
+        /// <param name="variantScene"></param>
+        /// <returns></returns>
+        protected virtual bool GetGateVariantScene(string objectiveName, out string variantScene)
+        {
+            variantScene = null;
+
+            if (destination.GetGateVariantDuring(currentChapterIndex.Value, objectiveName) is string resultScene &&
+                !string.IsNullOrEmpty(resultScene))
+                variantScene = resultScene;
+
+            return variantScene != null;
         }
     }
 }

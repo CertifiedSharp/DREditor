@@ -159,12 +159,12 @@ namespace DREditor.DebugTesting.Editor
                 int gateIndex = EditorGUILayout.IntPopup(tester.toGateIdx, gateNames,
                     nameIndexes, GUILayout.MaxWidth(130));
 
-                tester.SetToGate(gateIndex, tester.toGateIdx == -1 ? null : gateDatabase.Areas[tester.toGateIdx]);
+                tester.SetToGate(gateIndex, tester.toGateIdx == -1 ? null : (Gate)gateDatabase.Areas[tester.toGateIdx]);
 
                 if (tester.toGate == null && serializedObject.FindProperty("GoToScene") is SerializedProperty sceneProperty)
                     HandyFields.HardPropertyField("Scene Name: ", sceneProperty);
                 else if (tester.toGateIdx < gateDatabase.Areas.Count && tester.toGateIdx > 0)
-                    tester.SetToGate(gateIndex, gateDatabase.Areas[tester.toGateIdx]);
+                    tester.SetToGate(gateIndex, (Gate)gateDatabase.Areas[tester.toGateIdx]);
 
 
                 if (tester.toGate != null && tester.toGate.isTPFD)
@@ -186,12 +186,12 @@ namespace DREditor.DebugTesting.Editor
 
             int investigationGateIndex = -1;
 
-            if (tester.toGate.invGates.Count > 0)
+            if (tester.toGate.HasMany(out List<InvestigationGate> investigationGates))
             {
                 EditorGUILayout.LabelField("Inv Gate: ", GUILayout.MaxWidth(100));
 
                 string[] investigationGateNames = ContainerUtil
-                    .PrependedList(tester.toGate.invGates.Select(invGate => invGate.sceneName).ToArray(), "None");
+                    .PrependedList(investigationGates.Select(invGate => invGate.sceneName).ToArray(), "None");
 
                 if (investigationGateNames.Length > 0)
                 {
@@ -201,7 +201,7 @@ namespace DREditor.DebugTesting.Editor
                     nameIndexes, GUILayout.MaxWidth(130));
 
                     toScene = tester.invGateIdx == -1 ?
-                        "" : tester.toGate.invGates[tester.invGateIdx].sceneName;
+                        "" : investigationGates[tester.invGateIdx].sceneName;
                 }
             }
 

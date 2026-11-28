@@ -3,133 +3,248 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.Serialization;
 
 namespace DREditor.Gates
 {
     [System.Serializable]
     [CreateAssetMenu(menuName = "DREditor/Gates/Gate", fileName = "Gateway")]
-    public class Gate : ScriptableObject
+    public class Gate : GateBase, IDynamicCollection<IGateData>
     {
         [Tooltip("")]
         public string toAreaName;
-        public string ToAreaName { get => toAreaName; set => toAreaName = value; }
-        public List<InvGate> invGates = new();
+        public override string ToAreaName { get => toAreaName; set => toAreaName = value; }
+
         public bool isTPFD = false;
 
         [FormerlySerializedAs("fromLocationList")]
         public List<GateFrom> fromLocations = new(); // Thank you Leo For the reminder ;)
-        public List<ChapterGate> chapterGates = new();
+
         public List<Waypoint> fastTravelMarkers = new();
 
-        public GateFrom GetFromLocation(string roomName)
+        /// <summary>
+        /// 
+        /// </summary>
+        [Tooltip("")]
+        [SelectType]
+        [SerializeReference] protected List<IGateData> gateDatas = new();
+
+
+        public virtual List<IGateData> DynamicDatas => gateDatas;
+
+        IEnumerable<object> IDynamicCollection.DynamicDatas => DynamicDatas;
+
+        public virtual GateFrom GetFromLocation(string roomName)
         {
             foreach (GateFrom from in fromLocations)
-            {
-                if (from.gateFrom.ToAreaName == roomName)
+                if (from.gateFrom.IsGateFor(roomName))
                     return from;
-                foreach (InvGate g in from.gateFrom.invGates)
-                    if (g.sceneName == roomName)
-                        return from;
-            }
-            UnityEngine.Debug.Log("GateFrom not found in Gate " + ToAreaName);
+
+            UnityEngine.Debug.Log($"REPORT: GateFrom for {roomName} not found in Gate {ToAreaName}");
+
             return null;
         }
-        public GateFrom GetFromLocation(Gate gate)
+
+        public virtual GateFrom GetFromLocation(Gate gate)
         {
-            var x = fromLocations.Where(n => n.gateFrom == gate);
-            if (x.Count() > 0)
-                return x.ElementAt(0);
-            UnityEngine.Debug.Log("GateFrom not found in Gate");
-            return null;
-        }
-        public string GetInvestigationRoom(int current)
-        {
-            foreach (InvGate invGate in invGates)
-            {
-                if (invGate.chapter == current)
-                    return invGate.sceneName;
-            }
-            //UnityEngine.Debug.LogWarning("Investigation Room couldn't be found, returning to default area");
-            return ToAreaName;
-        }
-        
-        public string GetVariantScene(int chapter, string objective)
-        {
-            if (chapterGates.Count == 0)
-                return ToAreaName;
-            ChapterGate chapGate = GetChapterGate(chapter);
-            if (chapGate == null)
-                return ToAreaName;
-            VariantGate variant = chapGate.GetVariantGate(objective);
-            if (variant == null)
-                return ToAreaName;
-            
-            return variant.sceneName;
-        }
-        ChapterGate GetChapterGate(int chapter)
-        {
-            foreach(ChapterGate chapterGate in chapterGates)
-            {
-                if(chapterGate.chapter == chapter) return chapterGate;
-            }
+            if (fromLocations.Where(fromLocation => fromLocation.gateFrom == gate)?.First() is GateFrom gateFrom)
+                return gateFrom;
+
+            UnityEngine.Debug.Log($"REPORT: GateFrom for {gate.name} not found in {name}");
+
             return null;
         }
         
+        public override bool IsGateFor(string scene)
+        {
+            if (base.IsGateFor(scene))
+                return true;
+
+            if (this.HasMany(out List<IGateIdentifiable> identifiables))
+                foreach (var identifiable in identifiables)
+                    if (identifiable.IsGateFor(scene))
+                        return true;
+
+            return false;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="chapter"></param>
+        /// <param name="objectiveName"></param>
+        /// <returns></returns>
+        public virtual string GetGateVariantDuring(int chapter, string objectiveName)
+        {
+            if (this.HasMany(out List<IGateVariant> variants))
+                foreach (var variant in variants)
+                    if (variant.IsVariantDuring(chapter, objectiveName, out string sceneName))
+                        return sceneName;
+
+            return null;
+        }
     }
+
     [Serializable]
     public class GateFrom
     {
-        public Gate gateFrom = null;
+        public GateBase gateFrom = null;
+
         public Vector3 position;
+
         public Vector3 rotation;
 
+
         public GateFrom() { }
-        public GateFrom(Gate gateFrom, Vector3 position, Vector3 rotation)
+
+        public GateFrom(GateBase gateFrom, Vector3 position, Vector3 rotation)
         {
             this.gateFrom = gateFrom;
+
             this.position = position;
+
             this.rotation = rotation;
         }
     }
+
     [Serializable]
     public class Waypoint
     {
         public Vector3 position;
+
         public Vector3 rotation;
     }
 
 
-
+    [MovedFrom(true, sourceClassName: "InvGate")]
     [Serializable]
-    public class InvGate
+    public class InvestigationGate : GateVariantBase
     {
         public int chapter;
-        public string sceneName;
-    }
 
-    [Serializable]
-    public class ChapterGate
-    {
-        public int chapter = 0;
-        public bool useDefault = false;
-        [SerializeField] string defaultScene;
-        public string GetDefaultScene() => defaultScene;
-        public List<VariantGate> variants = new();
-        public VariantGate GetVariantGate(string objective)
+        public string sceneName;
+
+
+
+        public override bool IsGateFor(string scene) => sceneName == scene;
+
+
+        public override bool IsVariantDuring(int chapter, string objectiveName, out string sceneName)
         {
-            foreach (VariantGate variantGate in variants)
-            {
-                if (variantGate.objectiveName == objective) return variantGate;
-            }
-            return null;
+            bool result = this.chapter == chapter;
+
+            sceneName = result ? this.sceneName : null;
+
+            return result;
         }
     }
 
     [Serializable]
-    public class VariantGate
+    public class VariantGate : GateVariantBase
     {
+        public int chapter = 0;
+
         public string objectiveName;
+
         public string sceneName;
+
+
+        
+
+        public override bool IsGateFor(string scene) => sceneName == scene;
+
+
+        public override bool IsVariantDuring(int chapter, string objectiveName, out string sceneName) =>
+            (sceneName = GetSceneFor(chapter, objectiveName)) != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="chapter"></param>
+        /// <param name="objectiveName"></param>
+        /// <returns></returns>
+        protected virtual string GetSceneFor(int chapter, string objectiveName) => 
+            SceneNameValid() && ProgressionMatches(chapter, objectiveName) ? sceneName : null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="chapter"></param>
+        /// <param name="objectiveName"></param>
+        /// <returns></returns>
+        protected virtual bool ProgressionMatches(int chapter, string objectiveName) => 
+            this.chapter == chapter && this.objectiveName == objectiveName;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        protected virtual bool SceneNameValid() => !string.IsNullOrEmpty(sceneName);
     }
+
+    [Serializable]
+    public abstract class GateVariantBase : IGateData, IGateVariant
+    {
+        public abstract bool IsGateFor(string scene);
+
+        public abstract bool IsVariantDuring(int chapter, string objective, out string sceneName);
+    }
+
+    [Serializable]
+    public abstract class GateBase : ScriptableObject, IGateIdentifiable
+    {
+        public abstract string ToAreaName { get; set; }
+
+
+        public virtual bool IsGateFor(string scene) => ToAreaName == scene;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IGateIdentifiable
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="scene"></param>
+        /// <returns></returns>
+        bool IsGateFor(string scene);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IGateData : IGateIdentifiable
+    {
+
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IGateVariant
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="chapter"></param>
+        /// <param name="objectiveName"></param>
+        /// <param name="sceneName"></param>
+        /// <returns></returns>
+        bool IsVariantDuring(int chapter, string objectiveName, out string sceneName);
+    }
+
+    ///// <summary>
+    ///// Interface for classes in the gate system to be converted.
+    ///// </summary>
+    //public interface IGateConvertable
+    //{
+    //    /// <summary>
+    //    /// Copies over any matching type of data from the gate to the class implementing <see cref="IGateConvertable"/>.
+    //    /// </summary>
+    //    /// <param name="gate">The gate to get the old data from.</param>
+    //    void Convert(Gate gate);
+    //}
 }

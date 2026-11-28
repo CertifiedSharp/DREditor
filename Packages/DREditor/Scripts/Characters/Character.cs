@@ -1,6 +1,5 @@
 ﻿//Original Author: Happy30
 //Reworked Author: Benjamin "Sweden" Jillson : Discord: sweden_gaming For Project Eden's Garden
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -8,7 +7,7 @@ using UnityEngine.Serialization;
 namespace DREditor.Characters
 {    
     [System.Serializable]
-    public class Character : ScriptableObject
+    public class Character : ScriptableObject, IDynamicCollection<ICharacterData>
     {
         public string translationKey;
 
@@ -90,33 +89,18 @@ namespace DREditor.Characters
         public bool notFTECharacter = false; 
         public bool NotFTECharacter { get => notFTECharacter; set => notFTECharacter = value; } // if false then FTE character
 
+        
+
         [SelectType]
         [SerializeReference]
         public List<ICharacterData> datas = new();
 
 
+        public virtual List<ICharacterData> DynamicDatas => datas;
+
+        IEnumerable<object> IDynamicCollection.DynamicDatas => DynamicDatas;
+
         public virtual void SetCharacterDatas(List<ICharacterData> datas) => this.datas = datas;
-
-
-        public virtual T Get<T>() where T : ICharacterData
-        {
-            foreach (var data in datas)
-                if (data is T soughtData)
-                    return soughtData;
-
-            return default;
-        }
-
-        public virtual bool Has<T>(out T soughtData) where T : ICharacterData
-        {
-            soughtData = default;
-
-            foreach (var data in datas)
-                if (data is T foundData)
-                    soughtData = foundData;
-
-            return soughtData is not null;
-        }
 
         public void SetExpressions(List<Expression> Expressions) => this.Expressions = Expressions;
 

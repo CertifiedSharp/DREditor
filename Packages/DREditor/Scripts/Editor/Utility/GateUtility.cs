@@ -29,7 +29,7 @@ namespace DREditor.Editor.Utility
 
             var gateDatabase = BuilderUtility.SetAssetByType<GateDatabase>();
 
-            return gateDatabase.GetArea(currentAreaName);
+            return (Gate)gateDatabase.GetArea(currentAreaName);
         }
 
         #region Set From Location
@@ -47,7 +47,7 @@ namespace DREditor.Editor.Utility
 
                     var holders = UnityEngine.Object.FindObjectsByType<MonoBehaviour>().OfType<IGateHolder>().ToArray().Cast<MonoBehaviour>();
 
-                    Gate closestDoorGate = ((IGateHolder)GetClosestObject(player.transform.position, holders.ToArray())).GetSetGateway();
+                    GateBase closestDoorGate = ((IGateHolder)GetClosestObject(player.transform.position, holders.ToArray())).GetSetGateway();
 
                     Gate currentArea = GateUtility.GetCurrentArea();
 
